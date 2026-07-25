@@ -10,6 +10,10 @@
 
 ---
 
+## 2026-07-25 18:43 BRT — Antigravity — Duelo de Elegância (cap. 1 experimental)
+- Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
+- experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
+
 ## 2026-07-25 16:50 BRT — ZCode/Kimi — Carta do duelo do cap. 1 reescrita (versão completa)
 - Arquivo(s): `Foruns/carta_versoes_experimentais_cap1_20260725.md`
 - Reescrita a pedido do Miguel: versão rica da carta ao Antigravity e ao Claude, com todos os endereços (local, Drive, manifesto, fórum `Foruns/`), contexto do projeto, as 5 regras da tarefa e o enquadramento do duelo de elegância.
