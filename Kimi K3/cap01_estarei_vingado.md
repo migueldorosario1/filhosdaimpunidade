@@ -14,7 +14,7 @@ O autor da frase que abre este capítulo, porém, superou Silvério e merece o t
 
 Silvério dos Reis vivia tempos muito mais sinistros. Não era representante político do povo. Não tinha assento no parlamento, não era filho de ex-presidente nem irmão de senador. Era, isso sim, um dos maiores devedores da Fazenda Real em Minas Gerais, sufocado pelos dízimos atrasados que a Coroa resolveu cobrar de uma só vez. Esperava, em troca da delação, clemência. Sem querer desculpá-lo, sua situação era realmente vulnerável.
 
-O então deputado federal Eduardo Bolsonaro não corria risco nenhum. Mesmo assim, com todo o conforto, acesso ao poder e recursos, articulou durante meses medidas capazes de causar o sofrimento de milhões de compatriotas, apenas para se sentir vingado. Decidiu trair.
+O então deputado federal Eduardo Bolsonaro não corria risco nenhum. Mesmo assim, com todo o conforto, acesso ao poder e recursos, articulou durante meses medidas capazes de causar o sofrimento de milhões de compatriotas, apenas para se sentir vingado.
 
 A entrevista estava marcada para a noite de sexta-feira, 18 de julho de 2025. Nos estúdios da CNN Brasil, ele falava por videoconferência, dos Estados Unidos, onde vivia havia quatro meses. Fazia calor em Washington. No Brasil, era o dia mais quente da crise. Horas antes, a Polícia Federal cumprira mandados contra Jair Bolsonaro. A decisão impunha tornozeleira eletrônica, recolhimento noturno e proibição de contato com embaixadores e com o próprio filho. Em Washington, o secretário de Estado Marco Rubio acabara de revogar os vistos do ministro Alexandre de Moraes e de seus familiares.
 
@@ -78,7 +78,7 @@ Alexandre de Moraes respondeu pelo processo. Ao determinar a tornozeleira em Jai
 
 ---
 
-A vitória, porém, tinha prazo de validade.
+A vitória tinha prazo de validade.
 
 Em 22 de setembro, o Escritório ampliou a lista. Entraram Viviane Barci de Moraes, mulher do ministro, e o Instituto Lex, ligado ao casal. No mesmo dia, em Brasília, a Procuradoria denunciava Eduardo Bolsonaro e Paulo Figueiredo por coação no curso do processo. A sincronia não era coincidência casual. Era a batalha sendo travada, simultaneamente, em dois fóruns e dois países.
 
@@ -87,8 +87,6 @@ Em 12 de dezembro, depois do degelo entre Trump e Lula selado num encontro na Ma
 A engenharia que ele e Figueiredo montaram desabou em silêncio, sete meses depois de anunciada como "sucesso na transmissão": a reivindicada "Tarifa-Moraes", a chancelaria paralela, as reuniões no Tesouro na mesma semana em que o ministro da Fazenda do Brasil tinha o encontro cancelado.
 
 ---
-
-Resta a pergunta que estrutura este livro.
 
 Como um escrivão da Polícia Federal de carreira discreta, um deputado de produção legislativa modesta, chegou à posição de acionar a máquina de sanções da maior potência do mundo contra o próprio país e de comemorar, em rede nacional, a perspectiva da "terra arrasada" da economia em que seus eleitores trabalham?
 
