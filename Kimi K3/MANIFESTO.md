@@ -10,6 +10,10 @@
 
 ---
 
+## 2026-07-25 16:50 BRT — ZCode/Kimi — Carta do duelo do cap. 1 reescrita (versão completa)
+- Arquivo(s): `Foruns/carta_versoes_experimentais_cap1_20260725.md`
+- Reescrita a pedido do Miguel: versão rica da carta ao Antigravity e ao Claude, com todos os endereços (local, Drive, manifesto, fórum `Foruns/`), contexto do projeto, as 5 regras da tarefa e o enquadramento do duelo de elegância.
+
 ## 2026-07-25 16:30 BRT — ZCode/Kimi — CONTRATO v1.0 + MANIFESTO + carta experimentais + sync Drive
 - Arquivo(s): `CONTRATO_DE_TRABALHO.md`, `Kimi K3/MANIFESTO.md`, `Foruns/carta_versoes_experimentais_cap1_20260725.md`, `gdrive:novo livro`
 - Contrato v1.0 cravado na raiz (papéis: Miguel palavra final; ZCode/Kimi maestro; Claude arquiteto; GPT pesquisa + escrita sob delegação; Kimi-celular bolso; Antigravity local). §8: manifesto obrigatório antes de todo commit. Carta das versões experimentais do cap. 1 para Antigravity (local) e Claude (Drive, pasta `novo livro/Kimi K3/` ressincronizada).
