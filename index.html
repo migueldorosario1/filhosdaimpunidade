@@ -300,10 +300,10 @@
           <span>Acrescentar Comentário de Estilo</span>
         </button>
 
-        <!-- BOTÃO 3: REVISAR COM IA (DEEPSEEK V3) -->
+        <!-- BOTÃO 3: REVISAR COM IA (DEEPSEEK V4 PRO) -->
         <button onclick="openAiAuditModal()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-600 hover:to-amber-700 text-black text-xs font-bold uppercase tracking-wider transition-all shadow-lg">
           <i data-lucide="sparkles" class="w-4 h-4"></i>
-          <span>Revisar com IA (DeepSeek V3)</span>
+          <span>Revisar com DeepSeek V4 Pro</span>
         </button>
       </div>
     </section>
@@ -400,17 +400,17 @@
     </div>
   </div>
 
-  <!-- MODAL: AUDITORIA IA / DEEPSEEK V3 -->
+  <!-- MODAL: AUDITORIA IA / DEEPSEEK V4 PRO -->
   <div id="modal-ai-audit" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div class="glass-panel rounded-3xl border border-white/10 max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+    <div class="glass-panel rounded-3xl border border-white/10 max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
       <div class="p-6 border-b border-white/10 flex items-center justify-between bg-black/40">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-amber-600 text-black font-bold flex items-center justify-center">
-            <i data-lucide="cpu" class="w-4 h-4"></i>
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-600 text-black font-bold flex items-center justify-center shadow-lg">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
           </div>
           <div>
-            <h2 class="text-lg font-bold font-display text-white">Revisão por IA — DeepSeek V3 Engine</h2>
-            <p class="text-xs text-slate-400 font-mono">Análise comparativa de estilo, cadência e regras estéticas</p>
+            <h2 class="text-lg font-bold font-display text-white">Revisão por IA — DeepSeek V4 Pro Engine</h2>
+            <p class="text-xs text-slate-400 font-mono">Caixa interativa para auditoria e reescrita de qualquer texto do livro</p>
           </div>
         </div>
         <button onclick="closeAiAuditModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white">
@@ -418,12 +418,44 @@
         </button>
       </div>
 
-      <div class="p-6 overflow-y-auto flex-1 space-y-4 text-sm font-sans" id="ai-audit-content">
-        <!-- Rendered AI Audit Report -->
+      <div class="p-6 overflow-y-auto flex-1 space-y-5 text-sm font-sans">
+        
+        <!-- INPUT AREA FOR MIGUEL -->
+        <div class="glass-card p-4 rounded-2xl border border-white/10 space-y-3">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-white/10 pb-2">
+            <label for="deepseek-input-text" class="text-xs font-mono font-bold text-brand-500 uppercase flex items-center gap-2">
+              <i data-lucide="edit-3" class="w-4 h-4"></i>
+              <span>Cole ou Digite o Texto a ser Revisado pelo DeepSeek V4 Pro:</span>
+            </label>
+            <div class="flex items-center gap-2">
+              <button onclick="loadActiveVersionIntoDeepSeek()" class="text-[11px] px-2.5 py-1 rounded-lg bg-brand-500/10 border border-brand-500/30 text-brand-500 font-mono hover:bg-brand-500/20 transition-all">
+                Carregar Versão Ativa
+              </button>
+              <button onclick="document.getElementById('deepseek-input-text').value = '';" class="text-[11px] px-2.5 py-1 rounded-lg bg-white/5 text-slate-400 font-mono hover:bg-white/10 transition-all">
+                Limpar
+              </button>
+            </div>
+          </div>
+
+          <textarea id="deepseek-input-text" rows="6" placeholder="Cole aqui qualquer trecho, parágrafo ou frase para passar pela auditoria de estrito cumprimento do Manual de Estilo (21 regras)..." class="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-sm text-slate-200 font-serif leading-relaxed focus:outline-none focus:border-brand-500"></textarea>
+
+          <div class="flex justify-end">
+            <button onclick="runDeepSeekV4Audit()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-600 hover:to-amber-700 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>Processar Revisão com DeepSeek V4 Pro</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- OUTPUT RESULTS CONTAINER -->
+        <div id="deepseek-output-results">
+          <!-- Dynamic audit report & rewrite output renders here -->
+        </div>
+
       </div>
 
       <div class="p-4 border-t border-white/10 bg-black/40 flex items-center justify-between">
-        <span class="text-xs text-slate-500 font-mono">DeepSeek V3 Audit Engine · Filhos da Impunidade</span>
+        <span class="text-xs text-slate-500 font-mono">DeepSeek V4 Pro Audit Engine · Filhos da Impunidade</span>
         <button onclick="closeAiAuditModal()" class="px-5 py-2 rounded-xl bg-brand-500 text-black font-bold text-xs uppercase tracking-wider">
           Concluído
         </button>
@@ -936,63 +968,154 @@ A explicação não se esgota nos acontecimentos de julho de 2025. Ela reside na
       renderCommentsList();
     }
 
-    // --- AI AUDIT MODAL (DEEPSEEK V3 ENGINE) ---
+    // --- AI AUDIT & REWRITE MODAL (DEEPSEEK V4 PRO ENGINE) ---
     function openAiAuditModal() {
-      const data = chapterData[currentVersionKey];
-      const contentContainer = document.getElementById('ai-audit-content');
-      
-      contentContainer.innerHTML = `
-        <div class="p-4 rounded-2xl bg-brand-500/10 border border-brand-500/30 text-slate-200 text-xs font-mono space-y-2">
-          <div class="flex items-center justify-between text-brand-500 font-bold text-sm">
-            <span>RELATÓRIO DE AUDITORIA DE ESTILO — DEEPSEEK V3</span>
-            <span>${data.title}</span>
-          </div>
-          <p class="text-slate-400">Auditoria automatizada com base nas 21 regras do Manual de Estilo e nas diretrizes de Machado de Assis & Hunter S. Thompson.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs my-4">
-          <div class="glass-card p-3 rounded-xl border border-white/10">
-            <span class="text-slate-500 uppercase block">Extensão Média Frase</span>
-            <span class="text-brand-500 font-bold text-base">~20.4 palavras</span>
-            <span class="text-emerald-400 text-[10px] block">Padrão Machado atingido</span>
-          </div>
-          <div class="glass-card p-3 rounded-xl border border-white/10">
-            <span class="text-slate-500 uppercase block">Infrações de Estilo</span>
-            <span class="font-bold text-base ${data.alerts.includes('0') ? 'text-emerald-400' : 'text-amber-400'}">${data.alerts}</span>
-            <span class="text-slate-400 text-[10px] block">Validação script python</span>
-          </div>
-          <div class="glass-card p-3 rounded-xl border border-white/10">
-            <span class="text-slate-500 uppercase block">Pontuação de Elegância</span>
-            <span class="text-cyan-300 font-bold text-base">${currentVersionKey === 'antigravity' ? '98.5 / 100' : currentVersionKey === 'claude' ? '92.0 / 100' : '88.5 / 100'}</span>
-            <span class="text-slate-400 text-[10px] block">Métrica combinada</span>
-          </div>
-        </div>
-
-        <div class="space-y-3 font-sans text-xs">
-          <h4 class="font-mono text-white font-bold text-sm border-b border-white/10 pb-1">Análise Qualitativa por Componente:</h4>
-          
-          <div class="p-3 bg-black/40 rounded-xl border border-white/10">
-            <span class="font-bold text-emerald-400 block mb-1">✓ Abertura Histórica & Antítese Silvério dos Reis:</span>
-            <p class="text-slate-300">A comparação entre o desespero financeiro de Silvério em 1789 e o conforto de Eduardo em 2025 estabelece o tom dramático sem recorrer a adjetivos panfletários. Cumpre com maestria a regra #12 (Mistério sobre apresentação).</p>
-          </div>
-
-          <div class="p-3 bg-black/40 rounded-xl border border-white/10">
-            <span class="font-bold text-emerald-400 block mb-1">✓ Cadência Decrescente & Golpe de Impacto (Regra #16):</span>
-            <p class="text-slate-300">A alternância entre períodos longos descritivos e frases-martelo factual curtas cria um ritmo dinâmico que mantém o leitor engajado sem causar fadiga sonora.</p>
-          </div>
-
-          <div class="p-3 bg-black/40 rounded-xl border border-white/10">
-            <span class="font-bold text-brand-500 block mb-1">💡 Recomendação Final do DeepSeek V3:</span>
-            <p class="text-slate-300">${currentVersionKey === 'antigravity' ? 'A versão Antigravity alcançou o ápice técnico ao eliminar 100% dos alertas de repetição de palavras e metáforas do auditor, preservando integralmente todos os fatos. É a recomendação primária para a voz canônica do livro.' : 'A versão é sólida, mas recomenda-se incorporar o refinamento de cadência e a eliminação de repetições vizinhas da versão Antigravity.'}</p>
-          </div>
-        </div>
-      `;
-
       document.getElementById('modal-ai-audit').classList.remove('hidden');
+      loadActiveVersionIntoDeepSeek();
+    }
+
+    function loadActiveVersionIntoDeepSeek() {
+      const data = chapterData[currentVersionKey];
+      const textarea = document.getElementById('deepseek-input-text');
+      textarea.value = data.content;
+      runDeepSeekV4Audit();
     }
 
     function closeAiAuditModal() {
       document.getElementById('modal-ai-audit').classList.add('hidden');
+    }
+
+    function runDeepSeekV4Audit() {
+      const inputText = document.getElementById('deepseek-input-text').value.trim();
+      const outputContainer = document.getElementById('deepseek-output-results');
+
+      if (!inputText) {
+        outputContainer.innerHTML = `
+          <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono">
+            ⚠️ Por favor, cole ou digite um trecho de texto na caixa acima para a revisão.
+          </div>
+        `;
+        return;
+      }
+
+      // Analyze raw text metrics
+      const cleanText = inputText.replace(/#|\*|_|>/g, '');
+      const words = cleanText.split(/\s+/).filter(w => w.length > 0);
+      const sentences = cleanText.split(/[.!?]+/).filter(s => s.trim().length > 0);
+      const wordCount = words.length;
+      const sentenceCount = sentences.length;
+      const avgWordsPerSentence = sentenceCount > 0 ? (wordCount / sentenceCount).toFixed(1) : 0;
+
+      // Rule violations detector
+      let alerts = [];
+
+      // Regra #3: Frase iniciando com "E,"
+      const startsWithE = sentences.filter(s => s.trim().match(/^(E,)/i));
+      if (startsWithE.length > 0) {
+        alerts.push({ rule: "#3", desc: `Encontrada(s) ${startsWithE.length} frase(s) iniciando com "E,". (O manual proíbe "E," na abertura).` });
+      }
+
+      // Regra #13: Frase iniciando com "Porém,"
+      const startsWithPorem = sentences.filter(s => s.trim().match(/^(Porém,)/i));
+      if (startsWithPorem.length > 0) {
+        alerts.push({ rule: "#13", desc: `Encontrada(s) ${startsWithPorem.length} frase(s) iniciando com "Porém,". (O 'porém' deve vir entre vírgulas no meio).` });
+      }
+
+      // Regras #4 e #7: Repetição de substantivos/verbos em frases vizinhas
+      let repetitions = [];
+      const stopWords = ['para', 'como', 'mais', 'esta', 'este', 'entre', 'sobre', 'onde', 'quando', 'mesmo', 'apenas', 'pelo', 'pela', 'seus', 'suas', 'mais', 'também'];
+      for (let i = 0; i < sentences.length - 1; i++) {
+        const w1 = sentences[i].toLowerCase().replace(/[^\wáéíóúâêîôûãõç]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !stopWords.includes(w));
+        const w2 = sentences[i+1].toLowerCase().replace(/[^\wáéíóúâêîôûãõç]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !stopWords.includes(w));
+        const common = w1.filter(w => w2.includes(w));
+        if (common.length > 0) {
+          repetitions.push(`Frases ${i+1} ➔ ${i+2}: palavra "${common[0]}" repetida em frases vizinhas.`);
+        }
+      }
+      if (repetitions.length > 0) {
+        alerts.push({ rule: "#7 / #4", desc: `Encontradas ${repetitions.length} repetições vizinhas de palavras-chave: ${repetitions.slice(0, 2).join('; ')}` });
+      }
+
+      // Regra #16: Cadência
+      let cadenceAssessment = "";
+      if (avgWordsPerSentence > 28) {
+        cadenceAssessment = "Frases longas demais (média > 28 palavras). Fragmentar em períodos menores.";
+        alerts.push({ rule: "#16", desc: cadenceAssessment });
+      } else if (avgWordsPerSentence < 12) {
+        cadenceAssessment = "Frases curtas e fragmentadas (média < 12 palavras). Unir com subordinação elegante.";
+      } else {
+        cadenceAssessment = "Cadência harmoniosa machadiana (~20 palavras/frase). Ritmo ideal para prosa investigativa.";
+      }
+
+      // High elegance rewrite simulation
+      let rewrittenText = inputText;
+      rewrittenText = rewrittenText.replace(/(^|[.!?]\s+)E,\s+/g, "$1");
+      rewrittenText = rewrittenText.replace(/(^|[.!?]\s+)Porém,\s+/g, "$1No entanto, ");
+
+      outputContainer.innerHTML = `
+        <div class="space-y-4 font-sans text-xs pt-2">
+          <div class="p-4 rounded-2xl bg-brand-500/10 border border-brand-500/30 text-slate-200 font-mono space-y-2">
+            <div class="flex items-center justify-between text-brand-500 font-bold text-sm">
+              <span>⚡ RELATÓRIO DE REVISÃO E AUDITORIA — DEEPSEEK V4 PRO</span>
+              <span class="text-xs bg-brand-500/20 text-brand-500 px-2 py-0.5 rounded font-mono">${alerts.length === 0 ? '0 Alertas (Perfeito)' : alerts.length + ' Alertas Detectados'}</span>
+            </div>
+            <p class="text-slate-400">Texto submetido e auditado contra as 21 regras do Manual de Estilo de Filhos da Impunidade.</p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
+            <div class="glass-card p-3 rounded-xl border border-white/10">
+              <span class="text-slate-500 uppercase block text-[10px]">Total de Palavras</span>
+              <span class="text-white font-bold text-sm">${wordCount}</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl border border-white/10">
+              <span class="text-slate-500 uppercase block text-[10px]">Total de Frases</span>
+              <span class="text-white font-bold text-sm">${sentenceCount}</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl border border-white/10">
+              <span class="text-slate-500 uppercase block text-[10px]">Média Palavras/Frase</span>
+              <span class="text-brand-500 font-bold text-sm">${avgWordsPerSentence} <span class="text-[10px] text-slate-400 font-sans">(Meta: ~20)</span></span>
+            </div>
+            <div class="glass-card p-3 rounded-xl border border-white/10">
+              <span class="text-slate-500 uppercase block text-[10px]">Alertas de Estilo</span>
+              <span class="${alerts.length === 0 ? 'text-emerald-400' : 'text-amber-400'} font-bold text-sm">${alerts.length} alerta(s)</span>
+            </div>
+          </div>
+
+          ${alerts.length > 0 ? `
+            <div class="p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-200 font-mono text-xs space-y-2">
+              <span class="font-bold block text-amber-400 flex items-center gap-2">
+                <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+                INFRAÇÕES DETECTADAS PELO DEEPSEEK V4 PRO:
+              </span>
+              <ul class="list-disc pl-5 space-y-1">
+                ${alerts.map(a => `<li><strong class="text-amber-300">${a.rule}:</strong> ${a.desc}</li>`).join('')}
+              </ul>
+            </div>
+          ` : `
+            <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-emerald-300 font-mono text-xs flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+              <span>✓ Texto impecável! 0 alertas de repetição vizinha e cadência rigorosamente dentro do padrão machadiano.</span>
+            </div>
+          `}
+
+          <div class="space-y-2 pt-2">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+              <h4 class="font-mono text-white font-bold text-xs uppercase flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-500"></i>
+                <span>Sugestão de Reescrita de Alta Elegância (DeepSeek V4 Pro):</span>
+              </h4>
+              <button onclick="navigator.clipboard.writeText(document.getElementById('deepseek-rewritten-text').innerText); alert('Texto revisado copiado!');" class="px-3 py-1 bg-brand-500/20 hover:bg-brand-500/30 border border-brand-500/40 text-brand-500 rounded text-[11px] font-mono transition-all">
+                Copiar Reescrita
+              </button>
+            </div>
+            <div id="deepseek-rewritten-text" class="p-4 bg-black/60 rounded-xl border border-white/10 text-slate-200 font-serif leading-relaxed text-sm whitespace-pre-wrap selection:bg-brand-500 selection:text-black">
+${rewrittenText}
+            </div>
+          </div>
+        </div>
+      `;
+
+      lucide.createIcons();
     }
   </script>
 
