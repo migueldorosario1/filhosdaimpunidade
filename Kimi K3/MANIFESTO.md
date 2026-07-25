@@ -10,6 +10,10 @@
 
 ---
 
+## 2026-07-25 16:30 BRT — ZCode/Kimi — CONTRATO v1.0 + MANIFESTO + carta experimentais + sync Drive
+- Arquivo(s): `CONTRATO_DE_TRABALHO.md`, `Kimi K3/MANIFESTO.md`, `Foruns/carta_versoes_experimentais_cap1_20260725.md`, `gdrive:novo livro`
+- Contrato v1.0 cravado na raiz (papéis: Miguel palavra final; ZCode/Kimi maestro; Claude arquiteto; GPT pesquisa + escrita sob delegação; Kimi-celular bolso; Antigravity local). §8: manifesto obrigatório antes de todo commit. Carta das versões experimentais do cap. 1 para Antigravity (local) e Claude (Drive, pasta `novo livro/Kimi K3/` ressincronizada).
+
 ## 2026-07-25 16:10 BRT — ZCode/Kimi — MANIFESTO criado + sync cap. 1 v4.5
 - Arquivo(s): `Kimi K3/MANIFESTO.md`, `Kimi K3/cap01_estarei_vingado.md`
 - Criado este manifesto (pedido do Miguel). Sincronizado o arquivo principal do cap. 1 com a v4.5 oficial feita pelo GPT a pedido do Miguel (regras #19–#21 aplicadas). Push `de99576`.
