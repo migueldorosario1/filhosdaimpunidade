@@ -10,6 +10,10 @@
 
 ---
 
+## 2026-07-25 19:34 BRT — ChatGPT — Duelo de elegância (cap. 1 experimental)
+- Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_gpt.md`
+- experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Reescrita integral a partir da versão oficial v4.5 e de `ONDA2_FICHAS.md`, preservando fatos, datas, números e citações. Texto revisto segundo o manual e a referência Machado/Thompson; 0 alertas no auditor `verifica_estilo.py`.
+
 ## 2026-07-25 18:43 BRT — Antigravity — Duelo de Elegância (cap. 1 experimental)
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
