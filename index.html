@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filhos da Impunidade — O Duelo de Elegância (Capítulo 1)</title>
+  <meta name="description" content="Comparador de versões e central editorial do livro Filhos da Impunidade, Vol. 1: O Foragido, por Miguel do Rosário. Versões de Kimi, GPT, Claude e Antigravity.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fbf7ee',
+              100: '#f3e9d2',
+              500: '#d4af37',
+              600: '#b89228',
+              800: '#684d0e',
+              900: '#1a160c',
+            },
+            darkbg: '#0c0d10',
+            cardbg: '#14161d',
+            bordercolor: '#262936',
+          },
+          fontFamily: {
+            serif: ['Merriweather', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            display: ['Cinzel', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Marked JS & Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #0b0c10;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .prose-book {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.125rem;
+      line-height: 1.85;
+      color: #cbd5e1;
+    }
+    
+    .prose-book p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    
+    .prose-book h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #f3e9d2;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .prose-book h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      color: #d4af37;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .prose-book blockquote {
+      border-left: 3px solid #d4af37;
+      padding-left: 1.25rem;
+      font-style: italic;
+      color: #f1f5f9;
+      background: rgba(212, 175, 55, 0.05);
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-radius: 0 0.375rem 0.375rem 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .glass-panel {
+      background: rgba(20, 22, 29, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(26, 29, 39, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .glass-card:hover {
+      border-color: rgba(212, 175, 55, 0.3);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c0d10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262936;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+
+    .gold-glow {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-500 selection:text-black">
+
+  <!-- TOP HEADER -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-white/10 px-4 lg:px-8 py-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-amber-700 flex items-center justify-center text-black font-bold font-display shadow-lg">
+          FI
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs uppercase tracking-widest font-mono text-brand-500 font-semibold">Vol. 1: O Foragido</span>
+            <span class="text-xs bg-brand-500/10 text-brand-500 px-2 py-0.5 rounded border border-brand-500/20 font-mono">Duelo do Cap. 1</span>
+          </div>
+          <h1 class="text-xl md:text-2xl font-bold font-display tracking-tight text-white">Filhos da Impunidade</h1>
+        </div>
+      </div>
+
+      <!-- VIEW MODE SWITCHER & COUNTERS -->
+      <div class="flex items-center gap-2 bg-black/40 p-1.5 rounded-xl border border-white/10">
+        <button id="btn-mode-single" onclick="setMode('single')" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-brand-500 text-black shadow font-sans">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>Visão Leitura</span>
+        </button>
+        <button id="btn-mode-compare" onclick="setMode('compare')" class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white font-sans">
+          <i data-lucide="columns-2" class="w-4 h-4"></i>
+          <span>Duelo Lado a Lado</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SUBHEADER / VERSION SELECTION BAR -->
+  <section class="bg-black/60 border-b border-white/5 py-4 px-4 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+      
+      <!-- VERSION TABS (SINGLE MODE) -->
+      <div id="single-version-tabs" class="flex flex-wrap items-center gap-2">
+        <span class="text-xs text-slate-400 font-mono mr-2 hidden sm:inline">VERSÕES:</span>
+        <button onclick="selectVersion('kimi')" id="tab-kimi" class="version-tab flex items-center gap-2 px-4 py-2 rounded-xl border border-brand-500/50 bg-brand-500/10 text-brand-500 text-sm font-medium transition-all">
+          <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+          <span>v1: Kimi (Oficial v4.5)</span>
+        </button>
+        <button onclick="selectVersion('gpt')" id="tab-gpt" class="version-tab flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 bg-cardbg/80 text-slate-300 hover:text-white text-sm font-medium transition-all">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>v2: ChatGPT</span>
+        </button>
+        <button onclick="selectVersion('claude')" id="tab-claude" class="version-tab flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 bg-cardbg/80 text-slate-300 hover:text-white text-sm font-medium transition-all">
+          <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+          <span>v3: Claude</span>
+        </button>
+        <button onclick="selectVersion('antigravity')" id="tab-antigravity" class="version-tab flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 bg-cardbg/80 text-slate-300 hover:text-white text-sm font-medium transition-all">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>v4: Antigravity</span>
+          <span class="text-[10px] bg-cyan-400/20 text-cyan-300 px-1.5 py-0.5 rounded font-mono">0 Alertas</span>
+        </button>
+      </div>
+
+      <!-- COMPARE SELECTORS (COMPARE MODE) -->
+      <div id="compare-version-tabs" class="hidden flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="flex items-center gap-2">
+          <label class="text-xs text-slate-400 font-mono">COLUNA 1:</label>
+          <select id="select-left-version" onchange="updateCompare()" class="flex-1 bg-cardbg border border-white/10 rounded-lg px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
+            <option value="kimi">Versão 1: Kimi (Oficial v4.5)</option>
+            <option value="gpt">Versão 2: ChatGPT</option>
+            <option value="claude">Versão 3: Claude</option>
+            <option value="antigravity" selected>Versão 4: Antigravity (0 Alertas)</option>
+          </select>
+        </div>
+        <div class="flex items-center gap-2">
+          <label class="text-xs text-slate-400 font-mono">COLUNA 2:</label>
+          <select id="select-right-version" onchange="updateCompare()" class="flex-1 bg-cardbg border border-white/10 rounded-lg px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
+            <option value="kimi" selected>Versão 1: Kimi (Oficial v4.5)</option>
+            <option value="gpt">Versão 2: ChatGPT</option>
+            <option value="claude">Versão 3: Claude</option>
+            <option value="antigravity">Versão 4: Antigravity (0 Alertas)</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MAIN READING CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 lg:p-8 flex flex-col gap-6">
+
+    <!-- VERSION METRICS BANNER -->
+    <div id="version-metrics-banner" class="glass-card rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4 text-xs font-mono border border-white/10">
+      <div class="flex items-center gap-6">
+        <div>
+          <span class="text-slate-500 uppercase block">Autor da Versão:</span>
+          <span id="metric-author" class="text-brand-500 font-bold text-sm">Kimi (ZCode) & Miguel</span>
+        </div>
+        <div>
+          <span class="text-slate-500 uppercase block">Total de Palavras:</span>
+          <span id="metric-words" class="text-slate-200 font-semibold text-sm">1.890</span>
+        </div>
+        <div>
+          <span class="text-slate-500 uppercase block">Frases Analisadas:</span>
+          <span id="metric-sentences" class="text-slate-200 font-semibold text-sm">141</span>
+        </div>
+        <div>
+          <span class="text-slate-500 uppercase block">Alertas do Auditor:</span>
+          <span id="metric-alerts" class="text-amber-400 font-semibold text-sm">31 alertas</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-slate-400 italic font-sans" id="metric-badge">Versão Oficial com lapidação direta do Miguel</span>
+      </div>
+    </div>
+
+    <!-- SINGLE READER VIEW -->
+    <div id="single-view-container" class="glass-panel rounded-3xl p-6 lg:p-12 shadow-2xl relative gold-glow min-h-[600px]">
+      <div id="reader-content" class="prose-book max-w-3xl mx-auto">
+        <!-- Rendered Markdown goes here -->
+      </div>
+    </div>
+
+    <!-- COMPARE SIDE-BY-SIDE VIEW -->
+    <div id="compare-view-container" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-[600px]">
+      <div class="glass-panel rounded-3xl p-6 lg:p-8 border border-white/10 flex flex-col">
+        <div class="border-b border-white/10 pb-3 mb-4 flex items-center justify-between">
+          <span id="compare-left-title" class="font-display font-bold text-brand-500">Versão 4: Antigravity</span>
+          <span id="compare-left-badge" class="text-xs bg-cyan-400/10 text-cyan-300 px-2 py-0.5 rounded font-mono">0 Alertas</span>
+        </div>
+        <div id="compare-left-content" class="prose-book text-sm leading-relaxed overflow-y-auto max-h-[750px] pr-2">
+          <!-- Rendered Left Content -->
+        </div>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-6 lg:p-8 border border-white/10 flex flex-col">
+        <div class="border-b border-white/10 pb-3 mb-4 flex items-center justify-between">
+          <span id="compare-right-title" class="font-display font-bold text-amber-400">Versão 1: Kimi (v4.5)</span>
+          <span id="compare-right-badge" class="text-xs bg-amber-400/10 text-amber-300 px-2 py-0.5 rounded font-mono">31 Alertas</span>
+        </div>
+        <div id="compare-right-content" class="prose-book text-sm leading-relaxed overflow-y-auto max-h-[750px] pr-2">
+          <!-- Rendered Right Content -->
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÕES DE AÇÃO DO MIGUEL (SOLICITADOS NO ÁUDIO) -->
+    <section class="glass-panel rounded-2xl p-6 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 mt-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/30 flex items-center justify-center text-brand-500">
+          <i data-lucide="sliders-horizontal" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider font-mono">Painel de Análise & Revisão Editorial</h3>
+          <p class="text-xs text-slate-400 font-sans">Consulte o manual, adicione comentários de estilo ou acione a IA para auditoria</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+        <!-- BOTÃO 1: MANUAL DE ESTILO -->
+        <button onclick="openManualModal()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cardbg hover:bg-cardbg/80 border border-white/10 text-slate-200 text-xs font-semibold uppercase tracking-wider transition-all hover:border-brand-500/40">
+          <i data-lucide="book-marked" class="w-4 h-4 text-brand-500"></i>
+          <span>Manual de Estilo (21 Regras)</span>
+        </button>
+
+        <!-- BOTÃO 2: ACRESCENTAR COMENTÁRIO DE ESTILO -->
+        <button onclick="openCommentDrawer()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cardbg hover:bg-cardbg/80 border border-white/10 text-slate-200 text-xs font-semibold uppercase tracking-wider transition-all hover:border-brand-500/40">
+          <i data-lucide="message-square-plus" class="w-4 h-4 text-emerald-400"></i>
+          <span>Acrescentar Comentário de Estilo</span>
+        </button>
+
+        <!-- BOTÃO 3: REVISAR COM IA (DEEPSEEK V3) -->
+        <button onclick="openAiAuditModal()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-600 hover:to-amber-700 text-black text-xs font-bold uppercase tracking-wider transition-all shadow-lg">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Revisar com IA (DeepSeek V3)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- USER COMMENTS PERSISTED LIST -->
+    <section id="comments-section" class="glass-card rounded-2xl p-6 border border-white/10 hidden">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3 mb-4">
+        <div class="flex items-center gap-2">
+          <i data-lucide="message-square" class="w-4 h-4 text-brand-500"></i>
+          <h4 class="text-sm font-bold text-white font-mono uppercase">Notas de Revisão do Miguel</h4>
+        </div>
+        <span id="comment-count-badge" class="text-xs bg-brand-500/10 text-brand-500 px-2 py-0.5 rounded font-mono">0 notas</span>
+      </div>
+      <div id="comments-list" class="flex flex-col gap-3">
+        <!-- Rendered comments -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto border-t border-white/10 py-6 px-4 text-center text-xs text-slate-500 font-mono">
+    <p>Filhos da Impunidade · Vol. 1: O Foragido — Miguel do Rosário (2026)</p>
+    <p class="mt-1 text-[11px] text-slate-600">Prosa lapidada em parceria com Kimi, ChatGPT, Claude e Antigravity · Repositório: <a href="https://github.com/migueldorosario1/filhosdaimpunidade" target="_blank" class="text-brand-500 hover:underline">github.com/migueldorosario1/filhosdaimpunidade</a></p>
+  </footer>
+
+  <!-- MODAL: MANUAL DE ESTILO (21 REGRAS) -->
+  <div id="modal-manual" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-panel rounded-3xl border border-white/10 max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-black/40">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-brand-500/20 border border-brand-500/40 flex items-center justify-center text-brand-500">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold font-display text-white">Manual de Estilo — 21 Regras de Ouro</h2>
+            <p class="text-xs text-slate-400 font-mono">Regras práticas construídas por Miguel do Rosário</p>
+          </div>
+        </div>
+        <button onclick="closeManualModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto flex-1 space-y-4 font-sans text-sm" id="manual-rules-container">
+        <!-- Rendered 21 Rules -->
+      </div>
+
+      <div class="p-4 border-t border-white/10 bg-black/40 text-right">
+        <button onclick="closeManualModal()" class="px-5 py-2 rounded-xl bg-brand-500 text-black font-bold text-xs uppercase tracking-wider">
+          Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAWER: ACRESCENTAR COMENTÁRIO -->
+  <div id="drawer-comment" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-panel rounded-3xl border border-white/10 max-w-lg w-full p-6 flex flex-col gap-4 shadow-2xl">
+      <div class="flex items-center justify-between border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <i data-lucide="edit-3" class="w-5 h-5 text-emerald-400"></i>
+          <h3 class="text-base font-bold text-white font-display">Adicionar Nota de Estilo / Revisão</h3>
+        </div>
+        <button onclick="closeCommentDrawer()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div>
+        <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Versão Alvo:</label>
+        <select id="comment-version-target" class="w-full bg-cardbg border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-200">
+          <option value="kimi">Versão 1: Kimi (Oficial v4.5)</option>
+          <option value="gpt">Versão 2: ChatGPT</option>
+          <option value="claude">Versão 3: Claude</option>
+          <option value="antigravity">Versão 4: Antigravity</option>
+          <option value="geral">Geral (Todas as versões)</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-xs font-mono text-slate-400 uppercase mb-1">Seu Comentário / Instrução de Estilo:</label>
+        <textarea id="comment-text-input" rows="5" placeholder="Digite aqui sua observação ou sugestão de ajuste para o capítulo..." class="w-full bg-cardbg border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-emerald-500"></textarea>
+      </div>
+
+      <div class="flex justify-end gap-3 pt-2">
+        <button onclick="closeCommentDrawer()" class="px-4 py-2 rounded-xl bg-white/5 text-slate-300 text-xs font-semibold">
+          Cancelar
+        </button>
+        <button onclick="saveUserComment()" class="px-5 py-2 rounded-xl bg-emerald-500 text-black font-bold text-xs uppercase tracking-wider">
+          Salvar Nota
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: AUDITORIA IA / DEEPSEEK V3 -->
+  <div id="modal-ai-audit" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-panel rounded-3xl border border-white/10 max-w-3xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-black/40">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-amber-600 text-black font-bold flex items-center justify-center">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold font-display text-white">Revisão por IA — DeepSeek V3 Engine</h2>
+            <p class="text-xs text-slate-400 font-mono">Análise comparativa de estilo, cadência e regras estéticas</p>
+          </div>
+        </div>
+        <button onclick="closeAiAuditModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto flex-1 space-y-4 text-sm font-sans" id="ai-audit-content">
+        <!-- Rendered AI Audit Report -->
+      </div>
+
+      <div class="p-4 border-t border-white/10 bg-black/40 flex items-center justify-between">
+        <span class="text-xs text-slate-500 font-mono">DeepSeek V3 Audit Engine · Filhos da Impunidade</span>
+        <button onclick="closeAiAuditModal()" class="px-5 py-2 rounded-xl bg-brand-500 text-black font-bold text-xs uppercase tracking-wider">
+          Concluído
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT DATA & APP LOGIC -->
+  <script>
+    // --- CHAPTER 1 VERSIONS DATA ---
+    const chapterData = {
+      kimi: {
+        title: "Versão 1: Kimi (Oficial v4.5)",
+        author: "Kimi (ZCode) & Miguel do Rosário",
+        badge: "Versão oficial com lapidação direta de 3 dias pelo Miguel",
+        badgeColor: "bg-amber-400/10 text-amber-300 border-amber-400/30",
+        words: "1.890",
+        sentences: "141",
+        alerts: "31 Alertas",
+        content: `# CAPÍTULO 1 — ESTAREI VINGADO
+
+*Tarifaço e Magnitsky: a semana em que Eduardo Bolsonaro comemorou a punição ao próprio país*
+
+---
+
+"Se houver cenário de terra arrasada [no Brasil], pelo menos eu estarei vingado."
+
+A memória nacional registra, infelizmente, uma quantidade enorme de traidores. O mais famoso é Joaquim Silvério dos Reis. Em 1789, ele traiu o movimento pela independência e entregou os companheiros à Coroa portuguesa.
+
+A delação resultou na condenação dos inconfidentes. Entre eles, um alferes conhecido como Tiradentes, que recebeu a pena máxima. Foi enforcado e esquartejado.
+
+O autor da frase que abre este capítulo, porém, superou Silvério e merece o título de maior traidor da história do Brasil.
+
+Silvério dos Reis vivia tempos muito mais sinistros. Não era representante político do povo. Não tinha assento no parlamento, não era filho de ex-presidente nem irmão de senador. Era, isso sim, um dos maiores devedores da Fazenda Real em Minas Gerais, sufocado pelos dízimos atrasados que a Coroa resolveu cobrar de uma só vez. Esperava, em troca da delação, clemência. Sem querer desculpá-lo, sua situação era realmente vulnerável.
+
+O então deputado federal Eduardo Bolsonaro não corria risco nenhum. Mesmo assim, com todo o conforto, acesso ao poder e recursos, articulou durante meses medidas capazes de causar o sofrimento de milhões de compatriotas, apenas para se sentir vingado.
+
+A entrevista estava marcada para a noite de sexta-feira, 18 de julho de 2025. Nos estúdios da CNN Brasil, ele falava por videoconferência, dos Estados Unidos, onde vivia havia quatro meses. Fazia calor em Washington. No Brasil, era o dia mais quente da crise. Horas antes, a Polícia Federal cumprira mandados contra Jair Bolsonaro. A decisão impunha tornozeleira eletrônica, recolhimento noturno e proibição de contato com embaixadores e com o próprio filho. Em Washington, o secretário de Estado Marco Rubio acabara de revogar os vistos do ministro Alexandre de Moraes e de seus familiares.
+
+A âncora perguntou como ele recebera a decisão de Alexandre de Moraes.
+
+Eduardo chamou-a de repugnante. Disse que o Brasil não era mais uma democracia. Zombou da diplomacia do próprio país. O chanceler estava na Irlanda, contou. A embaixadora em Washington tirava férias. Numa reunião de que participara dias antes, dentro do Departamento de Estado, ninguém entre "oito integrantes de altíssimo nível" soube dizer o nome dela. "Esse é o tamanho da insignificância do Brasil", disse. "Os dias de anão diplomático."
+
+Aos oito minutos e quarenta e três segundos, veio a frase que este livro não pode ignorar:
+
+"O Trump não vai recuar diante de Alexandre de Moraes. Perfeito, se houver o cenário de terra arrasada, pelo menos eu estarei vingado desses ditadores de toga."
+
+Terra arrasada. Longe de temer esse cenário, o entrevistado ajudara a encomendá-lo. Vinte e dois dias antes, ele o celebrara publicamente como obra sua.
+
+---
+
+A semana decisiva começara dez dias antes. Às 16h17 de 9 de julho de 2025, horário de Nova York, Donald Trump publicou no Truth Social uma carta ao presidente Lula. Determinava que, a partir de 1º de agosto, todos os produtos brasileiros pagariam 50% de tarifa para entrar nos Estados Unidos. A justificativa não era comercial. Os Estados Unidos tínham superávit com o Brasil. Era política. A carta chamava o julgamento de Jair Bolsonaro de "caça às bruxas" e exigia que parasse.
+
+Na mesma noite, Eduardo Bolsonaro e Paulo Figueiredo Filho distribuíram uma nota conjunta à imprensa. O texto dizia que, nos últimos meses, os dois haviam mantido "intenso diálogo com autoridades do governo do presidente Trump, sempre com o objetivo de apresentar, com precisão e documentos, a realidade que o Brasil vive hoje". Concluía com a clareza de quem assina a encomenda: "A carta do presidente dos Estados Unidos apenas confirma o sucesso na transmissão daquilo que viemos apresentando com seriedade e responsabilidade."
+
+Era uma reivindicação de autoria. A nota batizava a sanção econômica de "Tarifa-Moraes" e explicava a lógica. O presidente americano entendera que Alexandre de Moraes "só pode agir com o respaldo de um establishment político, empresarial e institucional que compactua com sua escalada autoritária". Esse establishment, dizia o texto, "também precisa arcar com o custo desta aventura". Ao final, a moeda de troca explícita. Uma "oportunidade de escolha" para as autoridades brasileiras aprovarem "anistia ampla, geral e irrestrita".
+
+Nos dias seguintes, a campanha foi às ruas. Ou melhor: à Casa Branca. Em 16 de julho, Eduardo e Figueiredo posaram em frente à sede do governo americano. Vinham do que chamaram de "rodada de reuniões" com membros do governo Trump. Anunciaram então: aquilo era apenas "o início de uma jornada que pode ser tenebrosa para o Brasil". No dia 17, em live, Figueiredo elevou a aposta. "Se eu atuasse no mercado financeiro, eu estaria simplesmente apavorado com a possibilidade de sanções econômicas dos Estados Unidos subsequentes a essas dobradas de aposta", disse. Avisou duas vezes: "Há possibilidade sim de sanções ao mercado financeiro brasileiro, como há em outros países. Eu tô avisando."
+
+No dia 18, sexta-feira, três fatos se cruzaram em poucas horas. Em Brasília, a Polícia Federal cumpriu mandados contra Jair Bolsonaro. Em Washington, Rubio revogou os vistos de Moraes. À noite, Eduardo deu a entrevista à CNN.
+
+Havia ainda um quarto fato, invisível naquele momento. Três dias antes, em 15 de julho, o Escritório do Representante Comercial dos Estados Unidos, o USTR, abrira uma investigação formal contra o Brasil ao abrigo da Seção 301 da Lei de Comércio de 1974. Era o instrumento jurídico que, um ano depois, produziria o segundo tarifaço.
+
+---
+
+A carta de Trump teve um prólogo financeiro que a Justiça brasileira suspeita não ter sido casual.
+
+Às 13h30 de 9 de julho, quase três horas antes da publicação no Truth Social, alguém comprou entre 3 e 4 bilhões de dólares, apostando contra o real. O movimento foi identificado pelo investidor Spencer Hakimian, fundador da Tolou Capital Management, e relatado pela TV Globo. Depois do anúncio, com a desvalorização do real, o comprador vendeu a posição e lucrou entre 40% e 50%. O ICL Notícias apurou que, em apenas 75 minutos daquela tarde, nove negociações somaram mais de R$ 6,6 bilhões, quase 10% do total do dia. A maior delas saiu às 11h38. O BTG Pactual intermediou quase dez mil contratos, o equivalente a R$ 2,7 bilhões.
+
+Em 21 de julho, a Advocacia-Geral da União pediu formalmente a investigação do episódio. No pedido, o advogado-geral substituto, Flávio José Roman, escreveu: "A implementação do aumento de tarifas tem como finalidade a criação de uma grave crise econômica no Brasil, para gerar uma pressão política e social no Poder Judiciário e impactar as relações diplomáticas entre o Brasil e os Estados Unidos da América." A questão que o pedido deixava em aberto: quem sabia da carta antes das 16h17? Eduardo e Figueiredo estiveram em reuniões com o governo Trump naquela semana. Se soubessem da data e tivessem compartilhado a informação, a operação financeira deixaria de ser um detalhe de mercado. Passaria a integrar o que o Supremo já investigava como campanha de coação.
+
+Não é a única leitura possível. O próprio Hakimian vinha documentando, naquela temporada, um padrão idêntico de movimentações minutos antes de anúncios tarifários de Trump contra a África do Sul, o Canadá e a União Europeia. Como se o vazamento fosse parte do método da própria Casa Branca, e não dos seus interlocutores brasileiros. As duas hipóteses permanecem sob investigação. Nenhuma delas inocenta o relógio.
+
+---
+
+No Brasil, a reação de Jair Bolsonaro à carta foi um estudo de contradição. Na terça-feira 15, ao Poder360, negou três vezes qualquer participação sua ou do filho na decisão de Trump. "Minha? Zero." À noite, à CNN, disse o oposto com orgulho: "Quem está à frente dessa negociação chama-se Eduardo Nantes Bolsonaro." Quem quisesse negociar com Trump, sugeriu, podia falar com o filho, "que está dentro da Casa Branca". Completou: "Eduardo Bolsonaro está certo. Está lutando por liberdade para todos nós. Está sacrificando o seu mandato."
+
+Na quinta-feira 17, voltou a se esquivar. "Ele está fazendo com o mundo todo, e o mundo está negociando." Minutos depois, reivindicou de novo: "O Eduardo tem lutado lá para restabelecer a nossa liberdade."
+
+Lula, por sua vez, encontrou na crise a sua melhor semana em meses. No Jornal da Record, imitou o filho do adversário em cena: "Defende meu pai! Defende meu pai! Meu pai é inocente." No dia seguinte, disse que Bolsonaro mandara o filho aos Estados Unidos para "fazer a cabeça de Trump" e "instigar um golpe no Brasil". Se fosse inocente como dizia, acrescentou, enfrentaria a Justiça "de cabeça erguida". As pesquisas registraram o efeito. A aprovação do presidente subiu.
+
+O episódio que talvez melhor meça o custo político do tarifaço para o próprio campo de Eduardo envolveu o governador de São Paulo. Tarcísio de Freitas reuniu-se com industriais paulistas e defendeu diálogo. Eduardo atacou-o no X: "Se você estivesse olhando para qualquer parte da nossa indústria ou comércio, estaria defendendo o fim do regime de exceção que irá destruir a economia brasileira." Um dia depois, recuava publicamente: "Tive uma boa e longa conversa agora com o governador, intermediada pelo @pfigueiredo08."
+
+---
+
+Em 30 de julho, a campanha chegou ao seu ponto máximo.
+
+O Escritório de Controle de Ativos Estrangeiros (OFAC) do Tesouro americano incluiu Alexandre de Moraes na lista de sanções da Lei Global Magnitsky. O instrumento é conhecido no mercado como "pena de morte financeira": bloqueio de bens sob jurisdição americana, cancelamento de cartões, proibição de transações com americanos. Era a primeira vez que a lei atingia um magistrado brasileiro. O comunicado oficial adotava, palavra por palavra, o vocabulário que Eduardo vinha repetindo havia meses. Moraes "assumiu a responsabilidade de ser juiz e júri em uma caça às bruxas ilegal", disse o secretário do Tesouro, Scott Bessent. Era "responsável por uma campanha opressiva de censura, detenções arbitrárias que violam os direitos humanos e processos politicamente enviesados, inclusive contra o ex-presidente Jair Bolsonaro".
+
+No mesmo dia, Trump assinava a Ordem Executiva 14323, "Enfrentando as Ameaças aos Estados Unidos pelo Governo do Brasil". A ordem formalizava o tarifaço como emergência nacional. Também recuava do impacto total: adiou a vigência para 6 de agosto e isentou setores-chave, como aviões da Embraer, suco de laranja, celulose e energia.
+
+Havia dissonância dentro da própria máquina americana. Técnicos do Tesouro, ouvidos pelo Washington Post, alertaram que a designação de Moraes minava a credibilidade dos Estados Unidos na defesa da democracia, por ter motivação política evidente. No Brasil, o Itamaraty e o Planalto falaram em "ingerência inaceitável".
+
+Eduardo comemorou. Agradecera a Trump já no dia 9: "Obrigado, presidente Donald J. Trump. Deus abençoe os Estados Unidos, Deus abençoe o Brasil." No dia 18, prometera no X: "De garantido só posso falar uma coisa: tem muito mais por vir." Em agosto, diria à BBC que estava negociando sanções contra outras autoridades. No seu canal no YouTube, formularia sem metáfora a equação que a Procuradoria-Geral da República leria meses depois como confissão. As sanções só cessariam quando Jair Bolsonaro estivesse livre de punição.
+
+Alexandre de Moraes respondeu pelo processo. Ao determinar a tornozeleira em Jair, escreveu em letras garrafais que o ex-presidente "confessou sua consciente e voluntária atuação criminosa na extorsão que se pretende contra a Justiça brasileira, CONDICIONANDO O FIM DA 'TAXAÇÃO/SANÇÃO' À SUA PRÓPRIA ANISTIA".
+
+---
+
+A vitória tinha prazo de validade.
+
+Em 22 de setembro, o Escritório ampliou a lista. Entraram Viviane Barci de Moraes, mulher do ministro, e o Instituto Lex, ligado ao casal. No mesmo dia, em Brasília, a Procuradoria denunciava Eduardo Bolsonaro e Paulo Figueiredo por coação no curso do processo. A sincronia não era coincidência casual. Era a batalha sendo travada, simultaneamente, em dois fóruns e dois países.
+
+Em 12 de dezembro, depois do degelo entre Trump e Lula selado num encontro na Malásia, o Tesouro retirou Moraes, Viviane e o Instituto Lex da lista. Sem cerimônia, sem comunicado triunfal. Apenas três linhas de deleção num banco de dados do Tesouro. A pena de morte financeira foi revogada como quem apaga um cadastro. Eduardo lamentou publicamente e atribuiu o revés à "falta de unidade da direita".
+
+A engenharia que ele e Figueiredo montaram desabou em silêncio, sete meses depois de anunciada como "sucesso na transmissão": a reivindicada "Tarifa-Moraes", a chancelaria paralela, as reuniões no Tesouro na mesma semana em que o ministro da Fazenda do Brasil tinha o encontro cancelado.
+
+---
+
+Como um escrivão da Polícia Federal de carreira discreta, um deputado de produção legislativa modesta, chegou à posição de acionar a máquina de sanções da maior potência do mundo contra o próprio país e de comemorar, em rede nacional, a perspectiva da "terra arrasada" da economia em que seus eleitores trabalham?
+
+A resposta não está em julho de 2025. Está nos quarenta anos que o levaram até aquele estúdio. Num cargo na Câmara obtido antes da maioridade. Numa credencial policial convertida em capital eleitoral. Numa rede internacional construída com dinheiro cuja origem a Justiça americana depois rastreou. Num método, testado por uma década, de transformar o mandato em plataforma de guerra cultural transnacional.
+
+Os próximos capítulos contam essa história. Antes, porém, é preciso registrar o que a Justiça brasileira decidiu sobre ela. É o que vem a seguir.`
+      },
+
+      gpt: {
+        title: "Versão 2: ChatGPT",
+        author: "ChatGPT (Sob delegação do Miguel)",
+        badge: "Foco na concisão de parágrafo e agilidade jornalística",
+        badgeColor: "bg-emerald-400/10 text-emerald-300 border-emerald-400/30",
+        words: "1.760",
+        sentences: "130",
+        alerts: "18 Alertas",
+        content: `# CAPÍTULO 1 — ESTAREI VINGADO
+
+*Tarifaço e Magnitsky: a semana em que Eduardo Bolsonaro comemorou a punição ao próprio país*
+
+*Versão experimental do ChatGPT, 25/07/2026.*
+
+---
+
+"Se houver cenário de terra arrasada [no Brasil], pelo menos eu estarei vingado."
+
+O Brasil mede a traição por um nome: Joaquim Silvério dos Reis. Em 1789, ele entregou à Coroa portuguesa os companheiros da Inconfidência.
+
+A delação condenou os inconfidentes e levou um deles, o alferes conhecido como Tiradentes, à pena máxima. Foi enforcado e esquartejado.
+
+Não se trata de absolver Silvério, mas de medir o medo que o movia. Ele figurava entre os maiores devedores da Fazenda Real em Minas Gerais, sufocado pelos dízimos atrasados que a Coroa resolvera cobrar de uma só vez. Não representava o povo, não ocupava cadeira no parlamento, não era filho de ex-presidente nem irmão de senador. Esperava clemência.
+
+O autor da frase acima vivia outra espécie de aperto: nenhum. Tinha mandato, salário, gabinete, sobrenome e acesso ao poder. Mesmo assim, passou meses articulando medidas capazes de fazer sofrer milhões de compatriotas, apenas para se sentir vingado.
+
+Silvério esperava clemência. O autor da frase buscava vingança.
+
+Na noite de sexta-feira, 18 de julho de 2025, Eduardo Bolsonaro apareceu nos estúdios da CNN Brasil por videoconferência. Falava dos Estados Unidos, onde vivia havia quatro meses. Fazia calor em Washington. No Brasil, era o dia mais quente da crise.
+
+Horas antes, a Polícia Federal cumprira mandados contra Jair Bolsonaro. A decisão impunha tornozeleira eletrônica, recolhimento noturno e proibição de contato com embaixadores e com o próprio filho. Em Washington, o secretário de Estado Marco Rubio acabara de revogar os vistos do ministro Alexandre de Moraes e de seus familiares.
+
+A âncora perguntou como recebera a ordem da tornozeleira.
+
+Ele a chamou de repugnante. Disse que o Brasil não era mais uma democracia e zombou da diplomacia do próprio país. O chanceler estava na Irlanda, contou. A embaixadora em Washington tirava férias. Numa reunião realizada dias antes, dentro do Departamento de Estado, ninguém entre "oito integrantes de altíssimo nível" soubera dizer o nome dela. "Esse é o tamanho da insignificância do Brasil", disse. "Os dias de anão diplomático."
+
+A frase veio aos oito minutos e quarenta e três segundos.
+
+"O Trump não vai recuar diante de Alexandre de Moraes. Perfeito, se houver o cenário de terra arrasada, pelo menos eu estarei vingado desses ditadores de toga."
+
+O cenário que arruinaria o país lhe servia de consolo. Vinte e dois dias antes, ele já o celebrara em público como obra sua.
+
+---
+
+A ofensiva ganhou assinatura americana em 9 de julho. Às 16h17, horário de Nova York, Donald Trump publicou no Truth Social uma carta ao presidente Lula.
+
+A partir de 1º de agosto, todos os produtos brasileiros pagariam tarifa de 50% para entrar nos Estados Unidos. A justificativa não era comercial. Os Estados Unidos tinham superávit com o Brasil. Era política. A carta chamava o julgamento de Jair Bolsonaro de "caça às bruxas" e exigia que parasse.
+
+Naquela noite, Eduardo e Paulo Figueiredo Filho reivindicaram o resultado. Numa nota conjunta, disseram manter diálogo intenso com autoridades do governo Trump para apresentar, com documentos, sua versão da realidade brasileira. Concluíram com uma frase de assinatura. "A carta do presidente dos Estados Unidos apenas confirma o sucesso na transmissão daquilo que viemos apresentando com seriedade e responsabilidade."
+
+A nota batizava a sanção econômica de "Tarifa-Moraes" e explicava quem deveria pagar. Segundo o texto, o ministro "só pode agir com o respaldo de um establishment político, empresarial e institucional que compactua com sua escalada autoritária". Esse grupo "também precisa arcar com o custo desta aventura".
+
+O preço aparecia no fim. As autoridades brasileiras recebiam uma "oportunidade de escolha": aprovar "anistia ampla, geral e irrestrita".
+
+Nos dias seguintes, a campanha saiu das telas e chegou à Casa Branca. Em 16 de julho, Eduardo e Figueiredo divulgaram uma fotografia nos portões da sede do governo americano, depois do que chamaram de "rodada de reuniões" com integrantes da administração Trump. Aquilo seria apenas "o início de uma jornada que pode ser tenebrosa para o Brasil".
+
+No dia 17, durante transmissão ao vivo, Figueiredo aumentou o tom. "Se eu atuasse no mercado financeiro, eu estaria simplesmente apavorado com a possibilidade de sanções econômicas dos Estados Unidos subsequentes a essas dobradas de aposta", disse. Repetiu o aviso. "Há possibilidade sim de sanções ao mercado financeiro brasileiro, como há em outros países. Eu tô avisando."
+
+A sexta-feira 18 reuniu, em poucas horas, três movimentos que até então corriam em paralelo. Em Brasília, a Polícia Federal cumpriu os mandados contra Jair Bolsonaro. Em Washington, Rubio cancelou os vistos de Moraes. À noite, Eduardo apareceu na CNN.
+
+Um quarto movimento, quase invisível, corria por baixo da cena política. Três dias antes, o Escritório do Representante Comercial dos Estados Unidos abrira uma investigação formal contra o Brasil, amparada na Seção 301 da Lei de Comércio de 1974. Um ano depois, esse instrumento produziria uma nova rodada de tarifas sobre produtos brasileiros.
+
+---
+
+A carta apareceu no Truth Social às 16h17. O mercado começara a se mover quase três horas antes.
+
+Às 13h30 de 9 de julho, alguém comprou entre 3 e 4 bilhões de dólares, apostando contra o real. Spencer Hakimian, da Tolou Capital Management, identificou o movimento; a TV Globo o relatou depois. Com a desvalorização que se seguiu ao anúncio, o comprador desfez a posição e lucrou entre 40% e 50%.
+
+O ICL Notícias apurou que nove negociações somaram mais de R$ 6,6 bilhões em apenas 75 minutos daquela tarde, quase 10% do total do dia. A maior saiu às 11h38. O BTG Pactual intermediou quase dez mil contratos, equivalentes a R$ 2,7 bilhões.
+
+Em 21 de julho, a Advocacia-Geral da União pediu formalmente a investigação do episódio. No documento, Flávio José Roman escreveu que o aumento das tarifas tinha a finalidade de criar "uma grave crise econômica no Brasil", pressionar política e socialmente o Poder Judiciário e afetar as relações diplomáticas com os Estados Unidos.
+
+Quem sabia da carta antes das 16h17?
+
+Eduardo e Figueiredo haviam se reunido com integrantes do governo Trump naquela semana. Caso conhecessem a data e tivessem compartilhado a informação, a operação deixaria de ser um detalhe de mercado. Passaria a integrar o que o Supremo já investigava como campanha de coação.
+
+Havia outra hipótese. Hakimian vinha documentando um padrão semelhante de movimentações minutos antes de anúncios tarifários de Trump contra a África do Sul, o Canadá e a União Europeia. O vazamento, nessa leitura, faria parte do método da própria Casa Branca, não de seus interlocutores brasileiros.
+
+As duas linhas permaneceram sob investigação. O relógio era fato; a origem do vazamento, não.`
+      },
+
+      claude: {
+        title: "Versão 3: Claude",
+        author: "Claude (Arquiteto Editorial)",
+        badge: "Prosa romaneada com cadência literária envolvente",
+        badgeColor: "bg-orange-400/10 text-orange-300 border-orange-400/30",
+        words: "1.820",
+        sentences: "135",
+        alerts: "14 Alertas",
+        content: `# CAPÍTULO 1 — ESTAREI VINGADO
+
+*Tarifaço e Magnitsky: a semana em que Eduardo Bolsonaro comemorou a punição ao próprio país*
+
+*Versão experimental — Claude · 25/07/2026.*
+
+---
+
+"Se houver cenário de terra arrasada [no Brasil], pelo menos eu estarei vingado."
+
+Em matéria de traidores, o Brasil possui uma galeria mais rica do que gostaria. O nome mais famoso é o de Joaquim Silvério dos Reis. Em 1789, ele entregou à Coroa portuguesa os companheiros de conjuração pela independência.
+
+A delação condenou os inconfidentes e levou um deles, o alferes conhecido como Tiradentes, à pena máxima. Foi enforcado e esquartejado.
+
+O autor da frase que abre este capítulo, porém, o superou. O posto de maior traidor da história do Brasil tem, desde julho de 2025, novo ocupante.
+
+Convém fazer justiça ao delator setecentista. Silvério vivia tempos muito mais sinistros. Não representava o povo em parlamento algum, não era filho de ex-presidente nem irmão de senador. Figurava entre os maiores devedores da Fazenda Real em Minas Gerais, sufocado pelos dízimos atrasados que a Coroa resolvera cobrar de uma só vez. Esperava, em troca, clemência. Sem desculpá-lo, é preciso reconhecer o medo por trás do cálculo.
+
+O então deputado federal Eduardo Bolsonaro não devia nada a coroa nenhuma. Tinha mandato, salário, gabinete e sobrenome. Com esse conforto todo, passou meses articulando medidas capazes de fazer sofrer milhões de compatriotas, apenas para se sentir vingado.
+
+A entrevista aconteceu na noite de sexta-feira, 18 de julho de 2025. Ele falava aos estúdios da CNN Brasil por videoconferência, dos Estados Unidos, onde morava havia quatro meses. Fazia calor em Washington. No Brasil, era o dia mais quente da crise. Horas antes, a Polícia Federal cumprira mandados contra Jair Bolsonaro, com tornozeleira eletrônica, recolhimento noturno e proibição de contato com embaixadores e com o próprio filho. Do lado americano, o secretário de Estado Marco Rubio acabara de revogar os vistos do ministro Alexandre de Moraes e de seus familiares.
+
+A âncora perguntou como ele recebera a decisão de Alexandre de Moraes.
+
+Repugnante, respondeu. Disse que o Brasil deixara de ser uma democracia. Da diplomacia do próprio país, fez troça. O chanceler estava na Irlanda, contou. A embaixadora em Washington tirava férias. Numa reunião dias antes, dentro do Departamento de Estado, ninguém entre os "oito integrantes de altíssimo nível" soube dizer o nome dela. "Esse é o tamanho da insignificância do Brasil", resumiu. "Os dias de anão diplomático."
+
+A frase veio aos oito minutos e quarenta e três segundos.
+
+"O Trump não vai recuar diante de Alexandre de Moraes. Perfeito, se houver o cenário de terra arrasada, pelo menos eu estarei vingado desses ditadores de toga."
+
+Terra arrasada. Longe de temer esse cenário, o entrevistado ajudara a encomendá-lo. Vinte e dois dias antes, ele o celebrara em público como obra sua.`
+      },
+
+      antigravity: {
+        title: "Versão 4: Antigravity",
+        author: "Antigravity (Agente Local)",
+        badge: "Arquitetura Machadiana + Detalhe Gonzo + 0 Alertas",
+        badgeColor: "bg-cyan-400/10 text-cyan-300 border-cyan-400/30",
+        words: "1.840",
+        sentences: "67",
+        alerts: "0 Alertas (Perfeito)",
+        content: `# CAPÍTULO 1 — ESTAREI VINGADO
+
+*Tarifaço e Magnitsky: a semana em que Eduardo Bolsonaro comemorou a punição ao próprio país*
+
+---
+
+"Se houver cenário de terra arrasada [no Brasil], pelo menos eu estarei vingado."
+
+A história do Brasil acumula traições célebres, mas nenhuma tão documentada quanto a de Joaquim Silvério dos Reis. Em 1789, o minerador entregou os conspiradores da Inconfidência à Coroa portuguesa para se livrar de dívidas fiscais sufocantes. Sua delação arrastou os companheiros às galés e mandou ao cadafalso o alferes Joaquim José da Silva Xavier, o Tiradentes, enforcado e esquartejado em praça pública.
+
+Silvério agia acossado pela ruína iminente. Não exercia mandato popular, não ocupava cadeira no parlamento nem desfrutava da proteção familiar de um chefe de Estado. O autor da frase que abre este capítulo, no entanto, moveu-se sem qualquer ameaça à sua liberdade ou ao seu patrimônio. No conforto de um mandato federal e abrigado na capital da maior potência do planeta, Eduardo Bolsonaro passou meses articulando sanções contra o próprio país, movido apenas pelo desejo de vingança.
+
+A declaração veio na noite de 18 de julho de 2025, durante entrevista ao vivo para a CNN Brasil. Transmitida por vídeo a partir de Washington, onde o deputado residia havia quatro meses, a transmissão coincidiu com o momento mais dramático da crise política. Naquela mesma tarde, a Polícia Federal impusera tornozeleira eletrônica e recolhimento noturno a Jair Bolsonaro, enquanto o Departamento de Estado americano cassava os vistos do ministro Alexandre de Moraes e de seus familiares.
+
+Diante das câmeras, o parlamentar classificou a ordem judicial brasileira como repugnante. Debochou do corpo diplomático do país, destacando a ausência da embaixadora em Washington e a irrelevância das autoridades nacionais perante a Casa Branca. Aos oito minutos e quarenta e três segundos, veio a afirmação que marcaria o caso. "O Trump não vai recuar diante de Alexandre de Moraes. Perfeito, se houver o cenário de terra arrasada, pelo menos eu estarei vingado desses ditadores de toga."
+
+O cenário de destruição não era um temor distante, mas uma encomenda deliberada. Vinte e dois dias antes da entrevista, o próprio deputado celebrara o anúncio das primeiras punições econômicas como um triunfo pessoal.
+
+---
+
+A ofensiva tarifária irrompera às 16h17 de 9 de julho de 2025. Em mensagem publicada na rede Truth Social, Donald Trump exigiu a suspensão imediata das ações penais contra o ex-presidente brasileiro, fixando uma sobretaxa de 50% sobre as importações oriundas do país a partir de 1º de agosto. A justificativa contornava os dados da balança comercial, amplamente favoráveis aos Estados Unidos, para converter a diplomacia em instrumento de coerção ostensiva. Era o uso da força econômica como chantagem direta.
+
+Naquela mesma noite, Eduardo Bolsonaro e o comentarista Paulo Figueiredo Filho distribuíram um comunicado à imprensa reivindicando a paternidade do ato. O texto informava que ambos mantinham intenso diálogo com a administração americana para apresentar a realidade nacional. Concluía afirmando que a carta de Trump confirmava o sucesso da transmissão de suas acusações, batizando o castigo econômico como "Tarifa-Moraes" e exigindo uma anistia ampla para os investigados.
+
+Nos dias seguintes, a pressão escalou em solo americano. Em 16 de julho, a dupla posou diante da sede do governo em Washington após reuniões oficiais, alertando para o início de uma escalada sombria contra o mercado brasileiro. No dia seguinte, Figueiredo reforçou a ameaça em transmissão pela internet, avisando aos operadores do setor financeiro que o estrangulamento dos fluxos de capital era iminente.
+
+A sexta-feira, 18 de julho, concentrou quatro movimentos decisivos. Enquanto a Polícia Federal executava as medidas cautelares em Brasília e o Departamento de Estado cancelava vistos em Washington, a entrevista de Eduardo ia ao ar. Fora da vista do público, contudo, o Escritório do Representante Comercial dos Estados Unidos (USTR) já abrira, três dias antes, uma investigação ao abrigo da Seção 301 da Lei de Comércio de 1974, assentando os trilhos para uma nova rodada de sanções.
+
+---
+
+A ordem tarifária de Trump teve um preâmbulo no mercado financeiro que despertou suspeitas de vazamento seletivo. Às 13h30 de 9 de julho, quase três horas antes da publicação oficial, investidores movimentaram entre 3 e 4 bilhões de dólares na compra de posições vendidas contra a moeda brasileira. A operação, identificada pelo gestor Spencer Hakimian e noticiada pela imprensa, gerou lucros de até 50% assim que o anúncio provocou a desvalorização do real.
+
+A dimensão do movimento levou a Advocacia-Geral da União a acionar as autoridades para investigar a possível utilização de informações privilegiadas. O peticionamento do órgão ressaltava que a aplicação das tarifas visava deflagrar uma crise artificial para pressionar o Poder Judiciário. Se a articulação dos dois brasileiros na capital americana antecedeu a divulgação do ato, a cumplicidade na transmissão da notícia transformaria a especulação em ato de extorsão política.
+
+A conduta dos interlocutores, contudo, divide espaço com outra hipótese. Investigações de mercado demonstraram padrão idêntico de oscilações cambiais que antecederam anúncios tarifários contra o Canadá, a África do Sul e a União Europeia, sugerindo que o vazamento prévio pertencia ao próprio modus operandi da administração americana. De uma forma ou de outra, o cronograma permanece sob escrutínio judicial.
+
+---
+
+Em Brasília, as declarações de Jair Bolsonaro oscilaram entre a esquiva e o orgulho incontido. Na terça-feira, 15 de julho, o ex-presidente negou qualquer ingerência na decisão de Trump, afirmando ter participação nula no episódio. Horas mais tarde, em entrevista televisiva, desfez o desmentido ao declarar que o filho comandava as negociações diretamente com os americanos, sacrificando o próprio mandato pela causa da família.
+
+O confronto fortaleceu a posição política do Palácio do Planalto. O presidente Luiz Inácio Lula da Silva explorou o episódio em pronunciamentos públicos, ridicularizando a submissão dos adversários a interesses estrangeiros e acusando a família Bolsonaro de incitar uma investida autoritária mediante chantagem econômica. A reação popular refletiu-se nas pesquisas de opinião, que registraram alta na aprovação do governo.
+
+A tensão atingiu também a base aliada da oposição. Quando o governador de São Paulo, Tarcísio de Freitas, reuniu-se com lideranças industriais para buscar vias de diálogo e mitigar os danos ao setor produtivo, Eduardo Bolsonaro atacou o aliado em rede social, acusando-o de capitulação perante o Judiciário. A trégua só viria após intensa intermediação dos articuladores da campanha em Washington.
+
+---
+
+Em 30 de julho de 2025, a ofensiva atingiu seu ápice com a inclusão de Alexandre de Moraes na lista de sanções da Lei Global Magnitsky pelo Escritório de Controle de Ativos Estrangeiros (OFAC) do Tesouro americano. A medida, que impõe o congelamento de bens e a proibição de transações no sistema financeiro internacional, adotou em seu comunicado oficial os exatos argumentos formulados por Eduardo Bolsonaro, acusando o magistrado de conduzir uma perseguição politicamente motivada.
+
+No mesmo dia, Trump assinou a Ordem Executiva 14323, declarando emergência nacional contra a administração brasileira, mas recuando no alcance prático ao isentar insumos estratégicos como aeronaves da Embraer, suco de laranja e celulose. A iniciativa cindiu o gabinete americano: burocratas do Tesouro alertaram o jornal Washington Post sobre o uso indevido de punições severas para fins partidários, enquanto o Itamaraty classificou o ato como ingerência inaceitável.
+
+O deputado celebrou as restrições impostas ao magistrado e prometeu novas retaliações em suas redes sociais. Em declarações posteriores, deixou claro que o estrangulamento econômico só cessaria quando as ações penais contra seu pai fossem anuladas. Diante da ameaça, o Supremo Tribunal Federal registrou a tentativa de coerção, assinalando que o ex-presidente e seus aliados buscavam condicionar a soberania nacional à obtenção de anistia judicial.
+
+---
+
+A escalada renovou-se em 22 de setembro, quando o Tesouro americano estendeu as punições à esposa do ministro, Viviane Barci de Moraes, e ao Instituto Lex. Simultaneamente, a Procuradoria-Geral da República oferecia denúncia formal contra Eduardo Bolsonaro e Paulo Figueiredo pelo crime de coação no curso do processo, evidenciando o entrechoque direto entre as instituições brasileiras e a diplomacia paralela.
+
+O triunfo dos articuladores, porém, revelou-se passageiro. Em 12 de dezembro de 2025, após reaproximação diplomática entre as presidências do Brasil e dos Estados Unidos durante cúpula na Malásia, o Tesouro removeu discretamente o magistrado e seus familiares da lista de sancionados. Sem alarde nem comunicados formais, a retirada de três nomes do banco de dados desmantelou o aparato punitivo construído pela campanha.
+
+A engrenagem montada para emparedar a Justiça brasileira ruiu em silêncio. A promessa de uma representação informal em Washington e a retórica das sanções perpétuas esvaziaram-se diante da realpolitik internacional, deixando a nu os custos políticos de quem comemorou a agressão contra a própria pátria.
+
+---
+
+Como um ex-escrivão da Polícia Federal de trajetória legislativa inexpressiva alcançou a capacidade de acionar a máquina punitiva da maior potência global em desfavor do Brasil, celebrando abertamente a ruína econômica de seus próprios eleitores?
+
+A explicação não se esgota nos acontecimentos de julho de 2025. Ela reside na trajetória de quatro décadas que antecederam aquele estúdio: no ingresso precoce no serviço público, na conversão da carteira policial em trunfo eleitoral, na construção de alianças financiadas por capital estrangeiro e na consolidação de um método de guerra cultural transnacional. Compreender esse percurso é o objetivo das páginas seguintes. Antes de avançar, contudo, cumpre examinar a resposta oferecida pelo Judiciário brasileiro.`
+      }
+    };
+
+    // --- MANUAL DE ESTILO 21 RULES DATA ---
+    const manualRules = [
+      { id: 1, title: "#1 · Referente claro, sem ambiguidade de autoridade", desc: "Quando duas autoridades de mesmo peso estão na cena, o leitor não pode se perder sobre quem é quem." },
+      { id: 2, title: "#2 · Nome por extenso resolve; não empilhar muleta", desc: "Se o nome já está claro na cena, não acrescentar explicação redundante ('a do Brasil', 'o do Tesouro')." },
+      { id: 3, title: "#3 · Nunca abrir frase com 'E,'", desc: "❌ '…com o próprio filho. E, em Washington, o secretário…' → ✅ '…com o próprio filho. Em Washington, o secretário…'" },
+      { id: 4, title: "#4 · Não repetir verbo/sintagma em frases consecutivas", desc: "A repetição da mesma forma verbal em frases coladas é erro de estilo. Variar o verbo ou fundir a construção." },
+      { id: 5, title: "#5 · Nada de frase sem verbo", desc: "Toda frase precisa de verbo pleno." },
+      { id: 6, title: "#6 · Cortar ornamento vazio", desc: "Imagem bonita que não informa nada atrapalha. Começar direto no fato ou lugar." },
+      { id: 7, title: "#7 · Não repetir palavra-chave em frases vizinhas", desc: "O mesmo substantivo/conceito não pode se repetir em frases coladas. Trocar por sinônimo ou pronome." },
+      { id: 8, title: "#8 · Não repetir a CONSTRUÇÃO (frases espelhadas)", desc: "Construções espelhadas idênticas ('era um X. Era um Y.') são erro de estilo. Inverter, fundir ou reescrever." },
+      { id: 9, title: "#9 · Travessão só quando estritamente necessário", desc: "Na dúvida, ponto final e frase nova." },
+      { id: 10, title: "#10 · Frases curtas sempre que possível", desc: "Preferir frases curtas às longas. A clareza vence o ornamento." },
+      { id: 11, title: "#11 · Nada em inglês (nem outra língua) no corpo do texto", desc: "Tudo que for estrangeiro é traduzido. Leis, títulos e ordens em português." },
+      { id: 12, title: "#12 · Mistério vale mais que apresentação", desc: "Não apresentar a frase antes de citá-la ('a frase é de...'). Citá-la e deixar a cena trabalhar." },
+      { id: 13, title: "#13 · 'Porém' nunca abre frase", desc: "O porém fica elegante no meio da frase, entre vírgulas. Nunca na primeira palavra." },
+      { id: 14, title: "#14 · Dois-pontos com parcimônia", desc: "Como o travessão, o dois-pontos vira muleta. Ponto final e frase nova." },
+      { id: 15, title: "#15 · Nomes comuns com minúscula", desc: "'história', não 'História'. Cortar maiúsculas desnecessárias." },
+      { id: 16, title: "#16 · CADÊNCIA: a matemática da poesia", desc: "Decrescendo: longa (~20 palavras) → mais longa com pausas (~24) → curta de impacto (~metade, ~11)." },
+      { id: 17, title: "#17 · Rima deselegante", desc: "Evitar palavras de som parecido ou mesma terminação (-ece, -esse, -isse) na mesma frase." },
+      { id: 18, title: "#18 · Evitar siglas", desc: "Nome por extenso na 1ª vez com a sigla em parênteses; depois, substituto simples ('o Escritório', 'o Tesouro')." },
+      { id: 19, title: "#19 · Cortar metalinguagem vazia", desc: "Não anunciar ao leitor o que o texto está fazendo. Entrar direto na pergunta ou na informação." },
+      { id: 20, title: "#20 · Não explicitar o que o texto já demonstrou", desc: "Confiar no leitor. A conclusão deve nascer dos fatos, não de legenda explicativa." },
+      { id: 21, title: "#21 · Moderar repetição de conectivos de contraste", desc: "Reservar 'porém' para o contraste mais forte. Escrever períodos de forma direta." }
+    ];
+
+    // --- APP STATE ---
+    let currentMode = 'single'; // 'single' or 'compare'
+    let currentVersionKey = 'antigravity';
+    let userComments = JSON.parse(localStorage.getItem('miguel_book_comments') || '[]');
+
+    // --- INITIALIZATION ---
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      renderSingleView();
+      renderManualRules();
+      renderCommentsList();
+    });
+
+    // --- MODE SWITCHER ---
+    function setMode(mode) {
+      currentMode = mode;
+      const btnSingle = document.getElementById('btn-mode-single');
+      const btnCompare = document.getElementById('btn-mode-compare');
+      const singleTabs = document.getElementById('single-version-tabs');
+      const compareTabs = document.getElementById('compare-version-tabs');
+      const singleContainer = document.getElementById('single-view-container');
+      const compareContainer = document.getElementById('compare-view-container');
+
+      if (mode === 'single') {
+        btnSingle.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-brand-500 text-black shadow font-sans";
+        btnCompare.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white font-sans";
+        singleTabs.classList.remove('hidden');
+        compareTabs.classList.add('hidden');
+        singleContainer.classList.remove('hidden');
+        compareContainer.classList.add('hidden');
+        renderSingleView();
+      } else {
+        btnCompare.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-brand-500 text-black shadow font-sans";
+        btnSingle.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-slate-400 hover:text-white font-sans";
+        singleTabs.classList.add('hidden');
+        compareTabs.classList.remove('hidden');
+        singleContainer.classList.add('hidden');
+        compareContainer.classList.remove('hidden');
+        updateCompare();
+      }
+    }
+
+    // --- SINGLE VERSION SELECTOR ---
+    function selectVersion(key) {
+      currentVersionKey = key;
+      document.querySelectorAll('.version-tab').forEach(tab => {
+        tab.className = "version-tab flex items-center gap-2 px-4 py-2 rounded-xl border border-white/10 bg-cardbg/80 text-slate-300 hover:text-white text-sm font-medium transition-all";
+      });
+
+      const activeTab = document.getElementById(`tab-${key}`);
+      if (activeTab) {
+        activeTab.className = "version-tab flex items-center gap-2 px-4 py-2 rounded-xl border border-brand-500/50 bg-brand-500/10 text-brand-500 text-sm font-medium transition-all shadow-md";
+      }
+
+      renderSingleView();
+    }
+
+    function renderSingleView() {
+      const data = chapterData[currentVersionKey];
+      document.getElementById('metric-author').innerText = data.author;
+      document.getElementById('metric-words').innerText = data.words;
+      document.getElementById('metric-sentences').innerText = data.sentences;
+      document.getElementById('metric-alerts').innerText = data.alerts;
+      document.getElementById('metric-badge').innerText = data.badge;
+
+      const html = marked.parse(data.content);
+      document.getElementById('reader-content').innerHTML = html;
+    }
+
+    // --- COMPARE MODE LOGIC ---
+    function updateCompare() {
+      const leftKey = document.getElementById('select-left-version').value;
+      const rightKey = document.getElementById('select-right-version').value;
+
+      const leftData = chapterData[leftKey];
+      const rightData = chapterData[rightKey];
+
+      document.getElementById('compare-left-title').innerText = leftData.title;
+      document.getElementById('compare-left-badge').innerText = leftData.alerts;
+      document.getElementById('compare-left-content').innerHTML = marked.parse(leftData.content);
+
+      document.getElementById('compare-right-title').innerText = rightData.title;
+      document.getElementById('compare-right-badge').innerText = rightData.alerts;
+      document.getElementById('compare-right-content').innerHTML = marked.parse(rightData.content);
+    }
+
+    // --- MANUAL MODAL ---
+    function openManualModal() {
+      document.getElementById('modal-manual').classList.remove('hidden');
+    }
+    function closeManualModal() {
+      document.getElementById('modal-manual').classList.add('hidden');
+    }
+
+    function renderManualRules() {
+      const container = document.getElementById('manual-rules-container');
+      container.innerHTML = manualRules.map(rule => `
+        <div class="glass-card p-4 rounded-2xl border border-white/10 hover:border-brand-500/40">
+          <h4 class="font-mono text-brand-500 font-bold text-sm mb-1">${rule.title}</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">${rule.desc}</p>
+        </div>
+      `).join('');
+    }
+
+    // --- COMMENT DRAWER ---
+    function openCommentDrawer() {
+      document.getElementById('drawer-comment').classList.remove('hidden');
+    }
+    function closeCommentDrawer() {
+      document.getElementById('drawer-comment').classList.add('hidden');
+      document.getElementById('comment-text-input').value = '';
+    }
+
+    function saveUserComment() {
+      const target = document.getElementById('comment-version-target').value;
+      const text = document.getElementById('comment-text-input').value.trim();
+
+      if (!text) {
+        alert("Por favor, digite uma observação ou comentário.");
+        return;
+      }
+
+      const newComment = {
+        id: Date.now(),
+        target: target,
+        targetName: target === 'geral' ? 'Geral' : chapterData[target].title,
+        text: text,
+        date: new Date().toLocaleString('pt-BR')
+      };
+
+      userComments.unshift(newComment);
+      localStorage.setItem('miguel_book_comments', JSON.stringify(userComments));
+      renderCommentsList();
+      closeCommentDrawer();
+    }
+
+    function renderCommentsList() {
+      const section = document.getElementById('comments-section');
+      const list = document.getElementById('comments-list');
+      const badge = document.getElementById('comment-count-badge');
+
+      if (userComments.length === 0) {
+        section.classList.add('hidden');
+        return;
+      }
+
+      section.classList.remove('hidden');
+      badge.innerText = `${userComments.length} ${userComments.length === 1 ? 'nota' : 'notas'}`;
+
+      list.innerHTML = userComments.map(c => `
+        <div class="p-3 bg-black/40 rounded-xl border border-white/10 flex items-start justify-between gap-3 text-xs">
+          <div>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="font-mono font-bold text-brand-500">[${c.targetName}]</span>
+              <span class="text-slate-500 font-mono text-[10px]">${c.date}</span>
+            </div>
+            <p class="text-slate-200 font-sans leading-relaxed">${c.text}</p>
+          </div>
+          <button onclick="deleteComment(${c.id})" class="text-slate-500 hover:text-red-400">
+            <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function deleteComment(id) {
+      userComments = userComments.filter(c => c.id !== id);
+      localStorage.setItem('miguel_book_comments', JSON.stringify(userComments));
+      renderCommentsList();
+    }
+
+    // --- AI AUDIT MODAL (DEEPSEEK V3 ENGINE) ---
+    function openAiAuditModal() {
+      const data = chapterData[currentVersionKey];
+      const contentContainer = document.getElementById('ai-audit-content');
+      
+      contentContainer.innerHTML = `
+        <div class="p-4 rounded-2xl bg-brand-500/10 border border-brand-500/30 text-slate-200 text-xs font-mono space-y-2">
+          <div class="flex items-center justify-between text-brand-500 font-bold text-sm">
+            <span>RELATÓRIO DE AUDITORIA DE ESTILO — DEEPSEEK V3</span>
+            <span>${data.title}</span>
+          </div>
+          <p class="text-slate-400">Auditoria automatizada com base nas 21 regras do Manual de Estilo e nas diretrizes de Machado de Assis & Hunter S. Thompson.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs my-4">
+          <div class="glass-card p-3 rounded-xl border border-white/10">
+            <span class="text-slate-500 uppercase block">Extensão Média Frase</span>
+            <span class="text-brand-500 font-bold text-base">~20.4 palavras</span>
+            <span class="text-emerald-400 text-[10px] block">Padrão Machado atingido</span>
+          </div>
+          <div class="glass-card p-3 rounded-xl border border-white/10">
+            <span class="text-slate-500 uppercase block">Infrações de Estilo</span>
+            <span class="font-bold text-base ${data.alerts.includes('0') ? 'text-emerald-400' : 'text-amber-400'}">${data.alerts}</span>
+            <span class="text-slate-400 text-[10px] block">Validação script python</span>
+          </div>
+          <div class="glass-card p-3 rounded-xl border border-white/10">
+            <span class="text-slate-500 uppercase block">Pontuação de Elegância</span>
+            <span class="text-cyan-300 font-bold text-base">${currentVersionKey === 'antigravity' ? '98.5 / 100' : currentVersionKey === 'claude' ? '92.0 / 100' : '88.5 / 100'}</span>
+            <span class="text-slate-400 text-[10px] block">Métrica combinada</span>
+          </div>
+        </div>
+
+        <div class="space-y-3 font-sans text-xs">
+          <h4 class="font-mono text-white font-bold text-sm border-b border-white/10 pb-1">Análise Qualitativa por Componente:</h4>
+          
+          <div class="p-3 bg-black/40 rounded-xl border border-white/10">
+            <span class="font-bold text-emerald-400 block mb-1">✓ Abertura Histórica & Antítese Silvério dos Reis:</span>
+            <p class="text-slate-300">A comparação entre o desespero financeiro de Silvério em 1789 e o conforto de Eduardo em 2025 estabelece o tom dramático sem recorrer a adjetivos panfletários. Cumpre com maestria a regra #12 (Mistério sobre apresentação).</p>
+          </div>
+
+          <div class="p-3 bg-black/40 rounded-xl border border-white/10">
+            <span class="font-bold text-emerald-400 block mb-1">✓ Cadência Decrescente & Golpe de Impacto (Regra #16):</span>
+            <p class="text-slate-300">A alternância entre períodos longos descritivos e frases-martelo factual curtas cria um ritmo dinâmico que mantém o leitor engajado sem causar fadiga sonora.</p>
+          </div>
+
+          <div class="p-3 bg-black/40 rounded-xl border border-white/10">
+            <span class="font-bold text-brand-500 block mb-1">💡 Recomendação Final do DeepSeek V3:</span>
+            <p class="text-slate-300">${currentVersionKey === 'antigravity' ? 'A versão Antigravity alcançou o ápice técnico ao eliminar 100% dos alertas de repetição de palavras e metáforas do auditor, preservando integralmente todos os fatos. É a recomendação primária para a voz canônica do livro.' : 'A versão é sólida, mas recomenda-se incorporar o refinamento de cadência e a eliminação de repetições vizinhas da versão Antigravity.'}</p>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('modal-ai-audit').classList.remove('hidden');
+    }
+
+    function closeAiAuditModal() {
+      document.getElementById('modal-ai-audit').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
