@@ -97,6 +97,21 @@ Sigla é parede para o leitor. Nome por extenso na primeira ocorrência, com a s
 ❌ "O Escritório de Controle de Ativos Estrangeiros do Tesouro americano, a OFAC, incluiu… Em 22 de setembro, a OFAC ampliou a lista. A OFAC retirou…"
 ✅ "O Escritório de Controle de Ativos Estrangeiros (OFAC) do Tesouro americano incluiu… Em 22 de setembro, o Escritório ampliou a lista. O Tesouro retirou…"
 
+**#19 — 25/07/2026 · Cortar metalinguagem vazia**
+Não anunciar ao leitor o que o texto está fazendo. Frases que comentam a estrutura do capítulo ou do livro, sem acrescentar fato, imagem ou argumento, devem sair. Entrar direto na pergunta, na cena ou na informação.
+❌ "Resta a pergunta que estrutura este livro."
+✅ "Como um escrivão da Polícia Federal de carreira discreta… chegou à posição de acionar a máquina de sanções da maior potência do mundo contra o próprio país?"
+
+**#20 — 25/07/2026 · Não explicitar o que o texto já demonstrou**
+Quando a ideia já está clara pela construção anterior, não acrescentar uma frase que apenas a nomeia. Confiar no leitor e no subentendido. A conclusão deve nascer dos fatos, não de uma legenda explicativa.
+❌ "…articulou durante meses medidas capazes de causar o sofrimento de milhões de compatriotas, apenas para se sentir vingado. Decidiu trair."
+✅ "…articulou durante meses medidas capazes de causar o sofrimento de milhões de compatriotas, apenas para se sentir vingado."
+
+**#21 — 25/07/2026 · Moderar a repetição de conectivos de contraste**
+"Porém" é recurso de cadência, não pontuação automática. Mesmo quando corretamente colocado no meio da frase, sua repetição em um mesmo trecho empobrece o ritmo. Manter apenas onde o contraste exigir e cortar ou variar nos demais casos.
+❌ "O autor da frase, porém… A vitória, porém… Antes, porém…"
+✅ reservar "porém" para o contraste mais forte e escrever os outros períodos de forma direta.
+
 ---
 
 ## Regras herdadas das ondas (protocolo editorial — continuam valendo)
@@ -112,6 +127,6 @@ Sigla é parede para o leitor. Nome por extenso na primeira ocorrência, com a s
 
 ---
 
-*Próximas observações do Miguel entram aqui, numeradas em sequência (#8, #9…), com exemplo ❌/✅.*
+*Próximas observações do Miguel entram aqui, numeradas em sequência (#22, #23…), com exemplo ❌/✅.*
 
 Lido em 25/07/2026, às 15h11 (horário de Brasília), pelo GPT.
