@@ -113,3 +113,5 @@ Sigla é parede para o leitor. Nome por extenso na primeira ocorrência, com a s
 ---
 
 *Próximas observações do Miguel entram aqui, numeradas em sequência (#8, #9…), com exemplo ❌/✅.*
+
+Lido em 25/07/2026, às 15h11 (horário de Brasília), pelo GPT.
