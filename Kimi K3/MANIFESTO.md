@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 13:20 BRT — ZCode/Kimi — Onda "só nós negociamos" executada
+- Arquivo(s): `transcrições/CPAC_EUA_2025_TRANSCRICAO.md`, `transcrições/PBS_NewsHour_2019_TRANSCRICAO.md`, `fontes_baixadas/cap2_bbc_entrevista_13082025.*`, `cap1_gazeta_15072025.*`, `cap1_gazeta_03062026.*`, `ONDA2_FICHAS.md` (fichas 17–19)
+- Baixados e transcritos: CPAC EUA 2025 (11min27s, canal do próprio Eduardo) e PBS NewsHour 2019 (4min27s). Baixadas e fichadas: BBC 13/08/2025 ("psicopata" + "certamente… sanções" = conduta 8 do acórdão ⭐), Gazeta 15/07/2025 ("só anistia primeiro") e Gazeta 03/06/2026 ("pedi pessoalmente a Trump" — a contradição com "não tenho poder sobre o Trump").
+
 ## 2026-07-25 20:30 BRT — ZCode/Kimi (+Miguel) — Duelo decidido (Kimi venceu) + cap. 1 v4.6 sem especulação
 - Arquivo(s): `Kimi K3/cap01_estarei_vingado.md`, `versoes/cap01_v4.6_*.md`
 - **Miguel julgou o duelo do cap. 1: VENCEU A VERSÃO OFICIAL (Kimi × Miguel × manual de estilo).** A v4.5 oficial segue como base.

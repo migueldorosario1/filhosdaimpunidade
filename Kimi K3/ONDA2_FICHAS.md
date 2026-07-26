@@ -130,3 +130,23 @@ Formato: o que prova / o que não prova / trechos citáveis / capítulo(s) de de
 4. Faltas na Câmara: 63/78 × 56/71 — usar o número do Ato 229.
 5. Pública cita encontro na Casa Branca "16/9" — é 16/7 (erro do veículo ou da transcrição; usar Extra Classe: 16/7).
 6. Entrevista BBC de 13/8/2025 (conduta 8): baixar/transcrever na escrita do cap. 2 (link no acórdão: c987e8znyg9o).
+
+---
+
+## ADENDO (25/07) — Onda "só nós negociamos" (fontes escritas novas)
+
+### FICHA 17 — BBC News Brasil, 13/08/2025 ("últimas consequências") ⭐ CONDUTA 8 DO ACÓRDÃO
+- Arquivo: `fontes_baixadas/cap2_bbc_entrevista_13082025.html/.md` (13,5k). Entrevista em Washington, momentos antes de reuniões com o governo americano.
+- **Frases-chave:** (a) "Estou disposto a ir às últimas consequências para retirar esse **psicopata** do poder" (sobre Moraes); (b) à pergunta sobre novas sanções: "**Certamente**… Trump segue tendo uma possibilidade muito grande sobre a sua mesa sobre a aplicação de sanções. Há a extensão da Lei Magnitsky para outras pessoas. Há, na mesa do secretário Marco Rubio, a retirada de vistos, entre outros mecanismos de pressão"; (c) a pauta da anistia como "grande batalha"; (d) crimes atribuídos a ele = "fantasiosos".
+- **Uso:** é a **conduta nº 8** do voto de Moraes ("confissão expressa") — caps. 1 e 2. Reforça o tema "só nós negociamos": ele como interlocutor direto das autoridades.
+- Cuidado: "Magnitsty" é typo da BBC (Magnitsky).
+
+### FICHA 18 — Gazeta do Povo, 15/07/2025 (Folha, 14/07)
+- Arquivo: `fontes_baixadas/cap1_gazeta_15072025.html/.md`.
+- Chaves: "Trump não vai recuar" da tarifa de 50%; **a única forma de iniciar negociação = anistia primeiro**; "tarifa Moraes"; "ele pode aplicar para cima da esposa do Moraes" (2 meses antes de acontecer); "eu não tenho poder sobre o Trump" (contradição com 3/6/2026).
+- Caps.: 1, 10.
+
+### FICHA 19 — Gazeta do Povo, 03/06/2026
+- Arquivo: `fontes_baixadas/cap1_gazeta_03062026.html/.md`.
+- Chaves: "**pedi pessoalmente** ao presidente Trump" a retomada da Magnitsky contra Moraes **e a esposa**; nega pressão para o tarifaço (dele e de Flávio); defende acordo com os EUA e compara Zelle ao Pix.
+- **A contradição central em 11 meses:** "eu não tenho poder sobre o Trump" (15/07/2025) × "pedi pessoalmente ao presidente Trump" (03/06/2026). Caps.: 1, 10, 17.
