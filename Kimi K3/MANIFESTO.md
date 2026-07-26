@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 16:45 BRT — ZCode/Kimi — Júlio César baixado (Guerra da Gália, PT completo)
+- Arquivo(s): `Kimi K3/bibliografia/cesar_guerra_da_galia_PT_wikisource.md` (467.763 chars — os 8 livros, tradução Wikisource, domínio público) + `cesar_de_bello_gallico_EN_gutenberg10657.txt` (inglês, Gutenberg)
+- Para a reflexão #1 do Miguel (IDEIAS_E_REFLEXOES.md): o método César de cooptar elites e explorar contradições internas.
+
 ## 2026-07-26 16:00 BRT — ZCode/Kimi — Carta da Trindade recebida + web app no ar
 - Arquivo(s): `Foruns/forum_filhos_da_impunidade.md` (Antigravity), `filhosdaimpunidade.vercel.app` (200 ✅)
 - Antigravity entregou o web app leitor/editor PWA (revisão por voz DeepSeek V4 Pro, selo 🔒 Oficial protegida, revisões persistentes R1/R2/R3, central de fontes AP 2782). Protocolo da Trindade registrado: Antigravity = engenharia/app · **Kimi = arquitetura de ondas, esqueleto 240k, pesquisa, versão oficial base** · Claude = lapidação fina · DeepSeek/GPT = motor de reescrita · Miguel = soberano.
