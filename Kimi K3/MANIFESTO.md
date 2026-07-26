@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-25 20:00 BRT — ZCode/Kimi — Catálogo de transcrições criado
+- Arquivo(s): `Kimi K3/CATALOGO_TRANSCRICOES.md`
+- Inventário: 3 entrevistas já transcritas (CNN completa ⭐, CNN Arena, War Room 30/04) + fila de transcrição priorizada (A: BBC 13/08 — conduta 8 do acórdão, War Room 23/04, CPAC 2025, Newsmax, Reuters TV; B: Lou Dobbs, soldado e cabo, PBS, Epoch, Leda Nagle, Tucker ×2, Peterson) + fontes escritas equivalentes.
+
 ## 2026-07-25 19:00 BRT — ZCode/Kimi — Experimentais Antigravity + Claude integradas
 - Arquivo(s): `Kimi K3/cap01_experimental_antigravity.md`, `Kimi K3/cap01_experimental_claude.md`, `Foruns/resposta_claude_experimental.md`
 - Versão do Antigravity veio do local; a do Claude foi puxada do Drive (com a resposta dele). Tudo no GitHub; versão do Antigravity também espelhada no Drive. Nomes com sufixo por agente — nada sobreposto.
