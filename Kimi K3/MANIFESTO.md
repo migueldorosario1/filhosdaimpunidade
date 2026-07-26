@@ -18,6 +18,11 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-25 20:30 BRT — ZCode/Kimi (+Miguel) — Duelo decidido (Kimi venceu) + cap. 1 v4.6 sem especulação
+- Arquivo(s): `Kimi K3/cap01_estarei_vingado.md`, `versoes/cap01_v4.6_*.md`
+- **Miguel julgou o duelo do cap. 1: VENCEU A VERSÃO OFICIAL (Kimi × Miguel × manual de estilo).** A v4.5 oficial segue como base.
+- Reformulação pedida pelo Miguel: removida a seção de especulação financeira (Hakimian/AGU/insider trading — "nada foi provado"); foco nas falas dos próprios (Eduardo, Figueiredo, Flávio). A fala de Figueiredo sobre "empresários grandes virem conversar comigo e com Eduardo" foi realocada para a seção da live de 17/7. Cap. 1 em v4.6.
+
 ## 2026-07-25 20:00 BRT — ZCode/Kimi — Catálogo de transcrições criado
 - Arquivo(s): `Kimi K3/CATALOGO_TRANSCRICOES.md`
 - Inventário: 3 entrevistas já transcritas (CNN completa ⭐, CNN Arena, War Room 30/04) + fila de transcrição priorizada (A: BBC 13/08 — conduta 8 do acórdão, War Room 23/04, CPAC 2025, Newsmax, Reuters TV; B: Lou Dobbs, soldado e cabo, PBS, Epoch, Leda Nagle, Tucker ×2, Peterson) + fontes escritas equivalentes.
