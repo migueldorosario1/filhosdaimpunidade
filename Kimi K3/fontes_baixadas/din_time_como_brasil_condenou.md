@@ -1,0 +1,77 @@
+# How Brazil Tried and Convicted Jair Bolsonaro
+
+Fonte: din_time_como_brasil_condenou.html
+
+Follow this section to personalize your feed and get instant alerts.
+
+Follow this tag to personalize your feed and get instant alerts.
+
+Follow this author to personalize your feed and get instant alerts.
+
+Jair Bolsonaro, Brazil's former president, arrives at the Supreme Federal Court in Brasilia, Brazil, on Monday, June 9, 2025.
+
+Follow this author to personalize your feed and get instant alerts.
+
+On Thursday, the Supreme Court of Brazil convicted Jair Bolsonaro, the former president, for attempting a coup to hold onto power after losing elections in October 2022, and sentenced him to prison for 27 years and three months. The trial and the conviction of Bolsonaro and several members of his inner circle—mostly former military officers like him—is the first time a Brazilian president was convicted of a coup attempt.
+
+The trial was accompanied by an aggressive campaign by President Donald Trump against Brazil to help Bolsonaro, a far-right populist and former Army captain, escape justice. The trial and prosecution of Bolsonaro became a test for the independence of Brazilian judiciary, which did not buckle under domestic or international political pressure.
+
+More than 40 years have passed since Brazil's military dictatorship ended in 1985. The military regime passed an Amnesty Law in 1979, and Brazil has never prosecuted any of the military officials responsible for crimes committed during the regime—kidnapping, torture, and murders. For a country still reckoning with the brutality of its dark past, the trial of several high ranking military officers in a civilian court is a singular achievement.
+
+The trial of Bolsonaro and many others, including his top aides, came about after a two-year investigation by Brazil’s federal police after Bolsonaro lost the Oct. 2022 election and his supporters violently stormed government buildings in Brasilia on Jan. 8, 2023. In February, Prosecutor General Paulo Gonet, charged Bolsonaro and other accused, with leading a criminal organization, plotting a coup d’état, and violent abolition of the democratic rule of law. The alleged plot, according to the prosecutors, included a plan to poison Luiz Inácio Lula da Silva, who won the election and succeeded Bolsonaro as the President of Brazil, and Alexandre de Moraes, a Brazilian Supreme Court judge.
+
+When charges against Bolsonaro were filed in February, Trump had already returned to the White House after successfully dodging criminal prosecution for attempting to overturn the results of the 2020 U.S. election. During his time in office and throughout his re-election campaign in 2022, Bolsonaro had diligently followed the Trump playbook. He poisoned trust in Brazil’s democratic institutions, and the very electoral system that had elected him. The violent storming of government buildings in Brasilia on Jan. 8, 2023 by the supporters of Bolsonaro echoed the Jan. 6, 2021 Capitol riots in Washington following Trump’s inflammatory rhetoric, his repeated false claims of voting fraud, and his refusal to concede losing the elections.
+
+Bolsonaro hoped for a similar dismissal of legal proceedings against him and dreamed of winning back the presidency when Brazil held elections in 2026. “If the United States did that with President Trump, we can do that with President Bolsonaro in the election of 2026,” said Eduardo Bolsonaro, the former president’s son, as he stood with Steve Bannon in Washington in January.
+
+On March 26, the Supreme Court unanimously accepted charges against Bolsonaro and ordered him to stand trial. Over the next five months, as the court advanced with the legal proceedings and heard the closing submissions of the defense lawyers and the attorney general, political tensions in the country escalated.
+
+As the legal proceedings moved along, Bolsonaro’s son, Eduardo Bolsonaro and Paulo Figueiredo, a grandson of the country’s last military dictator and a far-right political commentator, lobbied President Trump’s allies to convince him to intervene in favor of Bolsonaro. Two Republican representatives wrote a letter to Trump and Secretary of State Marco Rubio urging them to use the Magnitsky Law to sanction Justice Moraes, who had become a target for MAGA and the global far right after he clashed with X, Rumble, and Trump Media Group over misinformation.
+
+With Bolsonaro facing trial, Eduardo stepped back from his duties as a Congressman in Brazil and spent months in the U.S. to “seek justice” for his father. Eduardo and Figueiredo intensified their lobbying efforts. The two men became frequent guests in Steve Bannon’s War Room and appeared on Matt Gaetz’s One America News, Tucker Carlson’s YouTube channel and podcast. They met several Republican representatives and, eventually, members of the Trump cabinet.
+
+Would an American President intervene to help a foreign politician escape the legal process in his country? It seems unthinkable. Shockingly, on July 9., President Trump announced plans to impose 50% tariffs on imports from Brazil—despite the U.S. having a trade surplus with the Latin American country. And Trump called on Brazil’s government to end the “witch hunt” against Bolsonaro. Economist Paul Krugman mocked the tariffs as “Trump’s Dictator Protection Program.”
+
+Even Bolsonaro’s closest allies publicly denounced Eduardo for conspiring against his own country.
+
+On August 1, the Trump tariffs on Brazil came into effect, starting a trade war with Latin America’s biggest economy. President Lula was defiant. The Trump Administration also revoked the U.S. visas of seven Brazilian Supreme Court justices and the attorney general of the country, and applied the Magnitsky Act against Justice Moraes. On Aug. 13, Fernando Haddad, the finance minister of Brazil, was in Washington to discuss U.S. tariffs on Brazil with Treasury Secretary Scott Bessent, who cancelled the meeting. Two days later, Eduardo posted a photo with Bessent, claiming they had met the same day Bessent bailed on Haddad.
+
+On Sept. 2, the Supreme Court building in Brasilia was abuzz: A panel of five judges gathered to deliberate the case and arrive at a verdict in the Bolsonaro trial. More than 3,000 Brazilians registered to attend the sessions in the courtroom. A large screen was set up outside the Supreme Court building to enable crowds to watch the trial, which was broadcast live on the court’s official public television, radio, and YouTube channels. Some opponents of Bolsonaro posted online photos of themselves sitting on sofas and watching the trial with bowls of popcorn. Millions of Brazilians prepared to watch the trial of their former president with a fervor reserved for the final episodes of a superhit telenovela.
+
+The prosecution had a crucial state witness: Lieutenant Colonel Mauro Cid, who had been Bolsonaro’s personal secretary and turned in exchange for a lighter sentence. He had testified during the trial that Bolsonaro had “received and read” a draft decree for declaring a state of emergency, calling for the arrest of the head of the Senate and three Supreme Court judges. Versions of the document were found on his smartphone, at the home of Anderson Torres, who served as minister of Justice and Public Security under Bolsonaro, and at the headquarters of Bolsonaro’s Liberal Party. Lt. Col. Cid alleged that Bolsonaro had “edited” the document to ensure that only Justice Moraes would be arrested. Another document found with Cid contained a list of attacks with grenade launchers and assault rifles planned in Brasília and São Paulo.
+
+And there was an alleged assassination plot! Federal police had discovered a document detailing a plan to assassinate President Lula and Justice Moraes on a computer belonging to General Mario Fernandes, a top aide of Bolsonaro. General Fernandes had printed the assassination plan document in the Presidential Palace just before meeting with Bolsonaro. Fernandes, who was arrested and testified to the court through a video link, claimed that the document was merely a “digitized thought,” a “risk analysis” not shown to anyone else. Attorney General Gonet argued that Bolsonaro knew of those assassination plans.
+
+The coup attempt did not fail because the plotters lacked intention or planning; they failed because the commanders of the Brazilian army and air force refused to participate. The commanders testified to the Federal Police and confirmed that Bolsonaro personally discussed the proposal with them. In his detailed closing argument before a panel of five Supreme Court judges, Gonet referred to the accused as a “criminal organization” that had documented almost all of its actions through recordings, handwritten notes, digital files, spreadsheets, and exchanges of electronic messages.
+
+Brazil held its breath as the judges deliberated on the verdict. For the first time in Brazilian history, a former president accused of plotting a coup against democratic rule and numerous high-ranking military officers close to him stood trial. Bolsonaro was made to wear an ankle tag and placed under house arrest for attempting to obstruct justice; he decided not to attend the trial. In a show of support, some of Bolsonaro’s voters held vigils at the gated and highly-secured condominium where the former president lives in Brasília. Security was reinforced on the streets of the capital with extra contingents of the military and judicial police, sniffer dogs, and intelligence officers.
+
+Jair Bolsonaro, Brazil's former president, center, points to his ankle monitor after departing meetings at the National Congress in Brasilia, Brazil, on Monday, July, 2025. Arthur Menescal—Bloomberg/Getty Images
+
+Justice Moraes, the case rapporteur, cast the first vote to convict Bolsonaro and seven other defendants charged with forming the central command of the alleged attempted coup. He observed that Bolsonaro was “the leader of a criminal structure and received extensive contributions from members of the government and the armed forces, using the structure of the Brazilian state to implement his authoritarian power project.”
+
+Warning that Brazil had come close to returning to dictatorship, Justice Moraes observed that “the mere attempt—especially because the completion will not allow anyone to be held responsible—consummates the crime of a coup.” Justice Flávio Dino followed with a second conviction vote, bringing the five-member panel one vote away from the majority needed to find Bolsonaro guilty.
+
+The case took a dramatic turn on Sept. 10: Another member of the Supreme Court panel, Justice Luiz Fux, delivered a stunning 13-hour dissenting judgement and voted to acquit Bolsonaro and the other defendants on all charges—providing Bolsonaro’s defense with a strong ground for appeal. Bolsonaro’s defense argued that planning a coup is not the execution of a coup and alleged that Justice Moraes, who led the proceedings, was biased against their client. Bolsonaro consistently denied all allegations and claimed the investigators were engaged in “political persecution” and dismissed the charges as a fabricated “telenovela.”
+
+Eduardo Bolsonaro and Paulo Figueiredo seemed to have convinced the Trump Administration that Brazil was “no longer a democracy” and was under a “judicial dictatorship.” Yet the most significant revelation of the Bolsonaro trial has been that Brazil’s democratic institutions—especially its judiciary—are functioning, independent, and strong enough to withstand domestic and international pressure.
+
+The Supreme Court and its judges are not infallible or above criticism. Brazilians have been quite critical. Bolsonaro, his sons, and his allies have openly criticized Justice Moraes. On Sept. 2, as the judges began weighing the case, Senator Flávio Bolsonaro, the other son of the former president, a federal lawmaker in Brazil, held a parallel session with Mike Benz, a former Trump Administration official, who spread the conspiracy theory that the Central Intelligence Agency used the U.S. Agency for International Development and civil society organizations supported by it to “interfere in the elections” in Brazil in 2022 to ensure Bolsonaro’s defeat.
+
+A military dictatorship ruled Brazil between 1964 and 1985. Three years after the country returned to civilian rule, Brazil adopted a new constitution in 1988, which strengthened the Brazilian judiciary, particularly the Supreme Court. The Brazilian Supreme Court has broader powers than its counterpart in the United States, combining the roles of a constitutional court, an appeals court, and a first-instance court for politicians. Its judges can call for investigations and issue rulings on urgent matters during proceedings, which are subject to review by the full court.
+
+Yet no single judge has the power to condemn or absolve a defendant alone.
+
+To say Brazil is a “judicial dictatorship,” as Eduardo Bolsonaro claims, is simply false. The Bolsonaro trial did revive a public debate about the need for reforming the court, and several projects are in discussion in the legislature. The judges of the Brazilian Supreme Court have often disagreed and demonstrated their independence. For instance, Justice Fux, who was nominated to the court by Dilma Rousseff, the leftist former president, voted to absolve Bolsonaro.
+
+In the past, a majority of the Supreme Court judges who ruled on the Bolsonaro case have delivered verdicts that hurt Lula and favoured Bolsonaro. Justice Carmen Lucia, Justice Moraes, and Justice Fux were among the Supreme Court judges who declined Lula a habeas corpus in 2018, enabling the electoral court to bar him from the ballot against Bolsonaro. In a sense, Brazil’s Supreme Court has proven itself to be more independent and non-partisan than the U.S. Supreme Court.
+
+On Thursday, opening the fifth day of the coup trial deliberations, Justice Carmén Lúcia voted to convict Bolsonaro. “The Attorney General’s Office provided conclusive proof that the group, led by Jair Messias Bolsonaro, composed of key figures from the government, the Armed Forces, and intelligence agencies, developed and implemented a progressive and systematic plan to attack democratic institutions,” she stated.
+
+“Terrible,” Trump remarked on Bolsonaro's sentencing, and Rubio threatened Brazil with new sanctions. In the meantime, Bolsonaro’s allies promise to increase pressure to push a bill in the Congress granting amnesty to the former president and to his supporters convicted for their roles in the Jan.8, 2023 attacks in Brasília. Contenders for the leadership of Brazil’s right wing coalition are already emerging and are bargaining for Bolsonaro’s endorsement for being presidential candidates in the 2026 elections. Some have signaled they would pardon Bolsonaro if elected.
+
+The historic trial offers us a reminder: democracy is not given or guaranteed.
+
+“Nowhere in the world, and even less so here, is there absolute immunity against the virus of authoritarianism," Justice Carmén Lúcia said. “Democracy is not a whim, it’s an achievement.”
+
+TIME Ideas hosts the world's leading voices, providing commentary on events in news, society, and culture. We welcome outside contributions. Opinions expressed do not necessarily reflect the views of TIME editors.
