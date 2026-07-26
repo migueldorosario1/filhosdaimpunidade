@@ -265,6 +265,12 @@
       </div>
 
       <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+        <!-- BOTÃO 0: BASE DE DADOS & FONTES DO REPOSITÓRIO -->
+        <button onclick="openDatabaseModal()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cardbg hover:bg-cardbg/80 border border-purple-500/30 text-purple-300 text-xs font-semibold uppercase tracking-wider transition-all hover:border-purple-500/60 shadow">
+          <i data-lucide="database" class="w-4 h-4 text-purple-400"></i>
+          <span>Base de Dados & Fontes (STF AP 2782)</span>
+        </button>
+
         <!-- BOTÃO 1: MANUAL DE ESTILO -->
         <button onclick="openManualModal()" class="flex-1 md:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cardbg hover:bg-cardbg/80 border border-white/10 text-slate-200 text-xs font-semibold uppercase tracking-wider transition-all hover:border-brand-500/40">
           <i data-lucide="book-marked" class="w-4 h-4 text-brand-500"></i>
@@ -337,6 +343,117 @@
     </div>
   </div>
 
+  <!-- MODAL: BASE DE DADOS & FONTES DE PESQUISA DO LIVRO -->
+  <div id="modal-database" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-panel rounded-3xl border border-white/10 max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-black/40">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400">
+            <i data-lucide="database" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold font-display text-white">Base de Dados, Fontes & Integridade Factual</h2>
+            <p class="text-xs text-slate-400 font-mono">Processos Oficiais, Dossiês do Repositório e Regras Factuais</p>
+          </div>
+        </div>
+        <button onclick="closeDatabaseModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-6 overflow-y-auto flex-1 space-y-6 font-sans text-sm">
+        
+        <!-- SECTION 1: STF AP 2782/DF -->
+        <div class="glass-card p-5 rounded-2xl border border-purple-500/30 space-y-3">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2">
+            <h3 class="font-mono font-bold text-purple-400 text-sm flex items-center gap-2">
+              <i data-lucide="scale" class="w-4 h-4"></i>
+              <span>SUPREMO TRIBUNAL FEDERAL — AÇÃO PENAL AP 2782/DF</span>
+            </h3>
+            <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded font-mono font-bold">16/06/2026</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Réu & Julgamento:</span>
+              <p class="text-slate-200 font-medium">Eduardo Nantes Bolsonaro · 1ª Turma do STF (Moraes, Zanin, Cármen Lúcia, Dino) — <strong>Unanimidade (4 x 0)</strong>.</p>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Pena e Tipificação:</span>
+              <p class="text-slate-200 font-medium"><strong>4 anos e 2 meses de reclusão</strong> (regime semiaberto) + 50 dias-multa · <em>Art. 344 c/c Art. 71 do CP (Coação no curso do processo — 9 condutas)</em>.</p>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Efeitos Secundários:</span>
+              <p class="text-slate-200 font-medium">Perda do cargo de escrivão da PF + Comunicação ao TSE para <strong>inelegibilidade (LC 135/2010 - Ficha Limpa)</strong>.</p>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Status Processual:</span>
+              <p class="text-slate-200 font-medium">Embargos de Declaração pendentes · Sem trânsito em julgado na data do fechamento do livro.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: DADOS FINANCEIROS E SWIFT -->
+        <div class="glass-card p-5 rounded-2xl border border-emerald-500/30 space-y-3">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2">
+            <h3 class="font-mono font-bold text-emerald-400 text-sm flex items-center gap-2">
+              <i data-lucide="dollar-sign" class="w-4 h-4"></i>
+              <span>INVESTIGAÇÕES FINANCEIRAS & FLUXOS DOCUMENTADOS</span>
+            </h3>
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold">Texas / SDNY / DF</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Filme "Dark Horse":</span>
+              <p class="text-slate-200 font-medium">Contrato de 30/01/2024 · R$ 134 milhões negociados com Banco Master / Vorcaro · Eduardo como produtor-executivo.</p>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Montante no Havengate (Texas):</span>
+              <p class="text-slate-200 font-medium"><strong>US$ 10,6 milhões documentados</strong> (SWIFT via BS2/JPMorgan) ≠ US$ 24 milhões negociados na proposta inicial.</p>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Movimentação Cambial (09/07/2025):</span>
+              <p class="text-slate-200 font-medium">AGU investigou compra de US$ 3 a 4 bilhões às 13h30 (3 horas antes do anúncio da tarifa por Trump).</p>
+            </div>
+            <div class="bg-black/40 p-3 rounded-xl border border-white/5 space-y-1">
+              <span class="text-slate-400 font-mono block">Fraude Guo Wengui & Gettr:</span>
+              <p class="text-slate-200 font-medium">Condenação por US$ 1 bi no SDNY (29/06/2026). Paulo Figueiredo (ITG) e Miller citados em clawbacks civis.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: AS 10 REGRAS DE INTEGRIDADE FACTUAL -->
+        <div class="glass-card p-5 rounded-2xl border border-amber-500/30 space-y-3">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2">
+            <h3 class="font-mono font-bold text-amber-400 text-sm flex items-center gap-2">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i>
+              <span>10 DIRECTRIZES DE INTEGRIDADE FACTUAL DO REPOSITÓRIO</span>
+            </h3>
+            <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono font-bold">Checklist Factual</span>
+          </div>
+          <ol class="list-decimal list-inside space-y-2 text-xs text-slate-300 font-sans leading-relaxed">
+            <li><strong>"Foragido":</strong> Utilizado exclusivamente como título editorial do livro; nunca como status processual formal.</li>
+            <li><strong>Status Penal:</strong> Condenação no STF é qualificada como <em>"sujeita a recursos"</em> até o trânsito em julgado.</li>
+            <li><strong>Destino das Verbas:</strong> R$ 61 milhões / US$ 10,6 mi documentados chegaram ao fundo Havengate, não a contas pessoais de Eduardo.</li>
+            <li><strong>Custas de Southlake:</strong> Custei de aluguel/mansão no Texas é tratado como <em>pergunta sob investigação</em>, não fato provado.</li>
+            <li><strong>Rigor Numérico:</strong> Distinguir expressamente US$ 24 milhões (negociados) de US$ 10,6 milhões (efetivamente documentados).</li>
+            <li><strong>Causalidade Externa:</strong> Relação entre a fala de Eduardo e o tarifaço chinês/EUA é tratada como atribuição de fontes e diplomatas.</li>
+            <li><strong>Processo Guo Wengui:</strong> Excluir qualquer afirmação de que Eduardo conhecia a fraude de Guo (não há prova).</li>
+            <li><strong>Demissão da PF:</strong> Mencionar o encerramento do PAD, mas vincular o desligamento formal à publicação do ato ministerial.</li>
+            <li><strong>Linguagem Impessoal:</strong> Vedar rótulos tipo <em>"funcionário fantasma"</em> ou <em>"gabinete do ódio"</em> na voz direta do narrador.</li>
+            <li><strong>Capitulação Penal:</strong> O crime da condenação é coação no curso do processo (Art. 344 CP), não "traição da Pátria".</li>
+          </ol>
+        </div>
+
+      </div>
+
+      <div class="p-4 border-t border-white/10 bg-black/40 text-right">
+        <button onclick="closeDatabaseModal()" class="px-5 py-2 rounded-xl bg-purple-500 text-white font-bold text-xs uppercase tracking-wider">
+          Fechar Base de Dados
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- DRAWER: ACRESCENTAR COMENTÁRIO -->
   <div id="drawer-comment" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
     <div class="glass-panel rounded-3xl border border-white/10 max-w-lg w-full p-6 flex flex-col gap-4 shadow-2xl">
@@ -400,6 +517,18 @@
 
       <div class="p-6 overflow-y-auto flex-1 space-y-5 text-sm font-sans">
         
+        <!-- DATA & STYLE CONTEXT BADGES FOR DEEPSEEK -->
+        <div class="p-3.5 bg-purple-950/40 border border-purple-500/30 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs font-mono shadow">
+          <div class="flex items-center gap-2 text-purple-200">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>Base de Dados & Pesquisas Ativas: <strong>STF AP 2782/DF</strong> + <strong>Manual (21 Regras)</strong> + <strong>10 Regras Factuais</strong></span>
+          </div>
+          <button onclick="openDatabaseModal()" class="px-3 py-1.5 rounded-lg bg-purple-500/20 hover:bg-purple-500/30 border border-purple-500/40 text-purple-300 hover:text-white transition-all font-sans text-xs flex items-center gap-1.5">
+            <i data-lucide="database" class="w-3.5 h-3.5"></i>
+            <span>Ver Dados do Repositório</span>
+          </button>
+        </div>
+
         <!-- EMPTY INSTRUCTION BOX FOR MIGUEL -->
         <div class="glass-card p-5 rounded-2xl border border-white/10 space-y-4">
           <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
@@ -1191,6 +1320,22 @@ A explicação não se esgota nos acontecimentos de julho de 2025. Ela reside na
             <p class="text-slate-300 font-sans"><strong class="font-mono text-purple-400">Sua Instrução:</strong> "${instruction}"</p>
           </div>
 
+          <!-- FACT-CHECK & INTEGRITY AUDIT BLOCK FROM REPOSITORY DATA -->
+          <div class="p-4 rounded-2xl bg-black/60 border border-purple-500/30 space-y-2.5 text-xs">
+            <div class="flex items-center justify-between text-purple-300 font-bold font-mono">
+              <span class="flex items-center gap-2">
+                <i data-lucide="database" class="w-4 h-4 text-purple-400"></i>
+                🛡️ CHECAGEM DE DADOS DO REPOSITÓRIO (STF AP 2782 & DOSSIÊS)
+              </span>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold">✓ Fatos Auditados</span>
+            </div>
+            <ul class="text-slate-300 font-sans space-y-1.5 pl-4 list-disc text-xs leading-relaxed">
+              <li><strong>Supremo Tribunal Federal (AP 2782/DF):</strong> Condenação por 4x0 (Moraes, Zanin, Cármen Lúcia, Dino) a 4 anos e 2 meses de reclusão (Art. 344 CP - Coação no curso do processo).</li>
+              <li><strong>Investigação Financeira:</strong> Rigor na diferenciação entre montantes negociados (US$ 24M) e documentados (US$ 10,6M recebidos no Havengate via BS2/JPMorgan).</li>
+              <li><strong>Integridade Editorial:</strong> Isenção de adjetivações não comprovadas e conformidade com as 10 regras de integridade factual do livro.</li>
+            </ul>
+          </div>
+
           <!-- REWRITTEN PREVIEW -->
           <div class="space-y-2">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/10 pb-2 gap-2">
@@ -1229,6 +1374,13 @@ ${revisedText}
       `;
 
       lucide.createIcons();
+    }
+
+    function openDatabaseModal() {
+      document.getElementById('modal-database').classList.remove('hidden');
+    }
+    function closeDatabaseModal() {
+      document.getElementById('modal-database').classList.add('hidden');
     }
 
     function saveDeepSeekRevision() {
