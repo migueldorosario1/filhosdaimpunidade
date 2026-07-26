@@ -27,29 +27,42 @@ Este fórum é o ponto focal de comunicação, versionamento e controle arquitet
 - **Dossiês & Reportagens de Investigação:** [`Fontes/Reportagens/`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Fontes/Reportagens/)
 
 ### 📝 Capítulos e Versões da Prosa
-- **Capítulo 1 (Versão Oficial v4.5 - Kimi/Miguel):** [`Kimi K3/cap01_estarei_vingado.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_estarei_vingado.md)
-- **Capítulo 1 (Experimental Antigravity - 0 Alertas):** [`Kimi K3/cap01_experimental_antigravity.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_experimental_antigravity.md)
-- **Capítulo 1 (Experimental Claude):** [`Kimi K3/cap01_experimental_claude.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_experimental_claude.md)
-- **Capítulo 1 (Experimental GPT):** [`Kimi K3/cap01_experimental_gpt.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_experimental_gpt.md)
-- **Capítulo 2 (Quatro a Zero):** [`Kimi K3/cap02_quatro_a_zero.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap02_quatro_a_zero.md)
-
----
-
-## 3. CONTRATO DE PARCERIA DA TRINDADE (PROTOCOLO DE COMUNICAÇÃO)
-
-Para garantir a harmonia e a máxima elegância do livro, estabelece-se o presente protocolo dinâmico entre o autor **Miguel do Rosário** e os agentes da **Trindade (Antigravity, Kimi, Claude, GPT/DeepSeek)**:
-
-### 📜 Cláusulas de Colaboração Dinâmica:
-1. **Preservação da Versão Oficial:** A versão oficial de cada capítulo (ex: `v1: Kimi v4.5`) é imutável e blindada. Nenhuma IA pode sobrescrever o texto oficial diretamente.
-2. **Versionamento Autônomo (R1, R2, R3...):** Todas as edições e reescritas solicitadas pelo autor são gravadas como revisões isoladas e nomeadas sequencialmente, preservando o histórico de instruções e o texto original.
-3. **Divisão de Responsabilidades:**
-   - 🛠️ **Antigravity:** Engenharia de software, PWA/web app, integridade da interface, local storage, git push, deploys Vercel e manutenção dos fóruns do cérebro.
-   - 🖋️ **Kimi:** Arquitetura narrativa por ondas, organização do esqueleto do livro (240k carats), pesquisa documental e redação da versão oficial base.
-   - ✂️ **Claude:** Lapidação estilística, cortes cirúrgicos, verificação de cadência poética e eliminação de rimas/redundâncias.
-   - ⚡ **DeepSeek V4 Pro / ChatGPT:** Motor de reescrita em tempo real no web app via comandos de voz/texto e checagem factual cruzada.
-   - 👑 **Miguel do Rosário (Autor/Editor Geral):** Direção criativa, comando de ditado, definição de diretrizes políticas e validação soberana final.
-4. **Respeito às 10 Regras Factuais:** Nenhuma revisão pode ferir a verdade documental (ex: a condenação no STF na AP 2782 foi por 4x0, 4 anos e 2 meses, Art. 344 CP; os valores no Havengate são US$ 10,6 mi documentados vs US$ 24 mi negociados; o termo "Foragido" é título editorial e não status processual).
-5. **Comunicação por Fórum:** Toda grande evolução na estrutura do livro ou no leitor deve ser registrada neste Fórum Central.
+30: - **Capítulo 1 (Versão Oficial v4.6 - Kimi/Miguel):** [`Kimi K3/Kimi_v4.6_Cap01_20260726_1253.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/Kimi_v4.6_Cap01_20260726_1253.md)
+31: - **Capítulo 1 (Experimental Antigravity - 0 Alertas):** [`Kimi K3/cap01_experimental_antigravity.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_experimental_antigravity.md)
+32: - **Capítulo 1 (Experimental Claude):** [`Kimi K3/cap01_experimental_claude.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_experimental_claude.md)
+33: - **Capítulo 1 (Experimental GPT):** [`Kimi K3/cap01_experimental_gpt.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap01_experimental_gpt.md)
+34: - **Capítulo 2 (Quatro a Zero):** [`Kimi K3/cap02_quatro_a_zero.md`](file:///home/migueldorosario/Downloads/Antigravity%20Google/Outros/novo%20livro/Kimi%20K3/cap02_quatro_a_zero.md)
+35: 
+36: ---
+37: 
+38: ## 3. CONTRATO DE PARCERIA DA TRINDADE (PROTOCOLO DE COMUNICAÇÃO)
+39: 
+40: Para garantir a harmonia e a máxima elegância do livro, estabelece-se o presente protocolo dinâmico entre o autor **Miguel do Rosário** e os agentes da **Trindade (Antigravity, Kimi, Claude, GPT/DeepSeek)**:
+41: 
+42: ### 📜 Cláusulas de Colaboração Dinâmica:
+43: 1. **Preservação da Versão Oficial:** A versão oficial de cada capítulo (ex: `Versão Oficial: Kimi v4.6`) é imutável e blindada. Nenhuma IA pode sobrescrever o texto oficial diretamente.
+44: 2. **Versionamento Autônomo (R1, R2, R3...):** Todas as edições e reescritas solicitadas pelo autor são gravadas como revisões isoladas e nomeadas sequencialmente, preservando o histórico de instruções e o texto original.
+45: 3. **Divisão de Responsabilidades:**
+46:    - 🛠️ **Antigravity:** Engenharia de software, PWA/web app, integridade da interface, local storage, git push, deploys Vercel e manutenção dos fóruns do cérebro.
+47:    - 🖋️ **Kimi:** Arquitetura narrativa por ondas, organização do esqueleto do livro (240k carats), pesquisa documental e redação da versão oficial base.
+48:    - ✂️ **Claude:** Lapidação estilística, cortes cirúrgicos, verificação de cadência poética e eliminação de rimas/redundâncias.
+49:    - ⚡ **DeepSeek V4 Pro / ChatGPT:** Motor de reescrita em tempo real no web app via comandos de voz/texto e checagem factual cruzada.
+50:    - 👑 **Miguel do Rosário (Autor/Editor Geral):** Direção criativa, comando de ditado, definição de diretrizes políticas e validação soberana final.
+51: 4. **Respeito às 10 Regras Factuais:** Nenhuma revisão pode ferir a verdade documental (ex: a condenação no STF na AP 2782 foi por 4x0, 4 anos e 2 meses, Art. 344 CP; os valores no Havengate são US$ 10,6 mi documentados vs US$ 24 mi negociados; o termo "Foragido" é título editorial e não status processual).
+52: 5. **Comunicação por Fórum:** Toda grande evolução na estrutura do livro ou no leitor deve ser registrada neste Fórum Central.
+53: 6. **Nomenclatura, Titulação Indexada & Manifesto de Edição (NOVO):**
+54:    - 🏷️ **Prefixo de LLM no Nome de Arquivo:** Todo arquivo de capítulo editado por uma LLM DEVE ter o nome iniciado pelo prefixo da LLM + Versão + Capítulo + Data/Hora. Exemplo: `Kimi_v4.6_Cap01_20260726_1253.md`, `DeepSeek_v4_Cap01_R1_20260726_1730.md`.
+55:    - 🔢 **Titulação Indexada dos Capítulos:** Todos os títulos exibidos na interface ou salvos devem seguir a estrutura: `Capítulo X · Versão Y.Z.W — [Título] ([LLM] - AAAA-MM-DD HH:mm)`.
+56:    - 📜 **Manifesto de Edição no Rodapé:** Todo trecho/capítulo gerado ou reescrito DEVE ser finalizado com o bloco de manifesto de auditoria:
+57:      ```markdown
+58:      ---
+59:      **📜 MANIFESTO DE EDIÇÃO & AUDITORIA DE PROSA**
+60:      - **Arquivo de Origem:** [Nome do arquivo com prefixo LLM]
+61:      - **Editor / LLM:** [Nome da LLM + versão]
+62:      - **Indexação:** Capítulo X · Versão Y.Z.W
+63:      - **Data/Hora:** AAAA-MM-DD HH:mm:ss
+64:      - **Status:** 0 Alertas (Manual 21 Regras) · Fatos Auditados
+65:      ```
 
 ---
 
