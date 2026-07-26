@@ -540,7 +540,7 @@
             <!-- VOICE / AUDIO DITADO BUTTON (WHISPER/SPEECH) -->
             <button id="btn-voice-input" onclick="toggleVoiceInput()" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono hover:bg-emerald-500/20 transition-all shadow">
               <i data-lucide="mic" class="w-4 h-4"></i>
-              <span>Ditado por Áudio (Voz)</span>
+              <span>Ditado por Áudio (Até 10 min)</span>
             </button>
           </div>
 
@@ -1207,64 +1207,150 @@ A explicação não se esgota nos acontecimentos de julho de 2025. Ela reside na
 
     function closeAiAuditModal() {
       document.getElementById('modal-ai-audit').classList.add('hidden');
-      if (window.activeRecognition) {
-        window.activeRecognition.stop();
-        window.activeRecognition = null;
+      stopVoiceInput();
+    }
+
+    // --- VOICE DITADO ENGINE (10 MINUTES CONTINUOUS DICTATION WITH AUTO-RESTART) ---
+    let isVoiceRecording = false;
+    let voiceBaseText = '';
+    let voiceSecondsElapsed = 0;
+    let voiceTimerInterval = null;
+    const MAX_VOICE_SECONDS = 600; // 10 minutes max (600 seconds)
+    let speechRecognitionInstance = null;
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function toggleVoiceInput() {
+      if (isVoiceRecording) {
+        stopVoiceInput();
+      } else {
+        startVoiceInput();
       }
     }
 
-    // --- VOICE DITADO (SPEECH / AUDIO RECOGNITION) ---
-    function toggleVoiceInput() {
-      const btn = document.getElementById('btn-voice-input');
-      const textarea = document.getElementById('deepseek-instruction-input');
-      
+    function startVoiceInput() {
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SpeechRecognition) {
         alert("O recurso de gravação/ditado por áudio não é suportado neste navegador. Digite sua instrução no campo.");
         return;
       }
 
-      if (window.activeRecognition) {
-        window.activeRecognition.stop();
-        window.activeRecognition = null;
-        btn.innerHTML = `<i data-lucide="mic" class="w-4 h-4 text-emerald-400"></i><span>Ditado por Áudio (Voz)</span>`;
-        btn.classList.remove('bg-red-500/20', 'border-red-500/50', 'text-red-400');
-        lucide.createIcons();
-        return;
+      const textarea = document.getElementById('deepseek-instruction-input');
+      voiceBaseText = textarea.value ? textarea.value.trim() : '';
+      isVoiceRecording = true;
+      voiceSecondsElapsed = 0;
+
+      // Start timer
+      clearInterval(voiceTimerInterval);
+      voiceTimerInterval = setInterval(() => {
+        voiceSecondsElapsed++;
+        updateVoiceButtonUI();
+        if (voiceSecondsElapsed >= MAX_VOICE_SECONDS) {
+          stopVoiceInput();
+          alert("✓ Ditado por voz concluído (limite máximo de 10 minutos atingido).");
+        }
+      }, 1000);
+
+      initSpeechRecognition();
+      updateVoiceButtonUI();
+    }
+
+    function initSpeechRecognition() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition || !isVoiceRecording) return;
+
+      try {
+        if (speechRecognitionInstance) {
+          speechRecognitionInstance.onend = null;
+          speechRecognitionInstance.onerror = null;
+          try { speechRecognitionInstance.stop(); } catch(e) {}
+        }
+
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'pt-BR';
+        recognition.continuous = true;
+        recognition.interimResults = true;
+
+        recognition.onstart = function() {
+          updateVoiceButtonUI();
+        };
+
+        recognition.onresult = function(event) {
+          const textarea = document.getElementById('deepseek-instruction-input');
+          let currentSessionTranscript = '';
+
+          for (let i = 0; i < event.results.length; i++) {
+            currentSessionTranscript += event.results[i][0].transcript;
+          }
+
+          const combinedText = voiceBaseText 
+            ? `${voiceBaseText} ${currentSessionTranscript.trim()}`
+            : currentSessionTranscript.trim();
+
+          textarea.value = combinedText;
+          textarea.scrollTop = textarea.scrollHeight; // Auto-scroll
+        };
+
+        recognition.onerror = function(event) {
+          console.warn("Speech recognition warning/error:", event.error);
+          if (isVoiceRecording && event.error !== 'aborted' && event.error !== 'not-allowed') {
+            setTimeout(() => {
+              if (isVoiceRecording) initSpeechRecognition();
+            }, 300);
+          }
+        };
+
+        recognition.onend = function() {
+          // AUTO-RESTART LOOP: If browser stopped due to silence, instantly restart if user is still recording!
+          if (isVoiceRecording && voiceSecondsElapsed < MAX_VOICE_SECONDS) {
+            const textarea = document.getElementById('deepseek-instruction-input');
+            voiceBaseText = textarea.value ? textarea.value.trim() : '';
+            setTimeout(() => {
+              if (isVoiceRecording) initSpeechRecognition();
+            }, 250);
+          } else {
+            updateVoiceButtonUI();
+          }
+        };
+
+        speechRecognitionInstance = recognition;
+        recognition.start();
+      } catch (err) {
+        console.error("Error initializing speech recognition:", err);
+      }
+    }
+
+    function stopVoiceInput() {
+      isVoiceRecording = false;
+      clearInterval(voiceTimerInterval);
+      voiceTimerInterval = null;
+
+      if (speechRecognitionInstance) {
+        speechRecognitionInstance.onend = null;
+        try { speechRecognitionInstance.stop(); } catch(e) {}
+        speechRecognitionInstance = null;
       }
 
-      const recognition = new SpeechRecognition();
-      recognition.lang = 'pt-BR';
-      recognition.continuous = true;
-      recognition.interimResults = true;
+      updateVoiceButtonUI();
+    }
 
-      recognition.onstart = function() {
-        btn.innerHTML = `<i data-lucide="mic-off" class="w-4 h-4 text-red-400 animate-pulse"></i><span>Gravando Áudio... (Clique p/ Parar)</span>`;
-        btn.classList.add('bg-red-500/20', 'border-red-500/50', 'text-red-400');
-        lucide.createIcons();
-      };
+    function updateVoiceButtonUI() {
+      const btn = document.getElementById('btn-voice-input');
+      if (!btn) return;
 
-      recognition.onresult = function(event) {
-        let transcript = '';
-        for (let i = event.resultIndex; i < event.results.length; i++) {
-          transcript += event.results[i][0].transcript;
-        }
-        textarea.value = transcript;
-      };
-
-      recognition.onerror = function(event) {
-        console.error("Erro no áudio/ditado:", event.error);
-      };
-
-      recognition.onend = function() {
-        btn.innerHTML = `<i data-lucide="mic" class="w-4 h-4 text-emerald-400"></i><span>Ditado por Áudio (Voz)</span>`;
-        btn.classList.remove('bg-red-500/20', 'border-red-500/50', 'text-red-400');
-        window.activeRecognition = null;
-        lucide.createIcons();
-      };
-
-      window.activeRecognition = recognition;
-      recognition.start();
+      if (isVoiceRecording) {
+        const timeStr = formatTime(voiceSecondsElapsed);
+        btn.innerHTML = `<i data-lucide="mic-off" class="w-4 h-4 text-red-400 animate-pulse"></i><span>🔴 Gravando Áudio (${timeStr} / 10:00) · Concluir</span>`;
+        btn.className = "flex items-center gap-2 px-3 py-1.5 rounded-xl bg-red-500/20 border border-red-500/50 text-red-400 text-xs font-mono transition-all shadow shadow-red-500/20 font-bold";
+      } else {
+        btn.innerHTML = `<i data-lucide="mic" class="w-4 h-4 text-emerald-400"></i><span>Ditado por Áudio (Até 10 min)</span>`;
+        btn.className = "flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono hover:bg-emerald-500/20 transition-all shadow";
+      }
+      lucide.createIcons();
     }
 
     // --- PROCESS DEEPSEEK V4 PRO INSTRUCTION ---
