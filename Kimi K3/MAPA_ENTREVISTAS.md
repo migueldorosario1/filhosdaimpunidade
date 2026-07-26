@@ -56,3 +56,40 @@ Legenda: ✅ transcrito e na pasta `transcrições/` · ⏳ mapeado, a baixar/tr
 2. **Lote B1–B6** (Fox/Dobbs, Epoch 2019-20, Tucker 2021-22, Lindell): ~1 sessão.
 3. **Caça manual:** War Room EP 753 (Rumble), Newsmax, OAN, Leda Nagle, "soldado e um cabo" — links que o YouTube esconde; se preciso, pedimos ao GPT/Claude com websearch.
 4. Cada transcrição sai com cabeçalho (fonte/data/duração) + citações-chave com timestamps → `transcrições/` → MANIFESTO.
+
+---
+
+## 📱 ADENDO (26/07) — Paulo Figueiredo (YouTube) e as redes do Eduardo
+
+### PAULO FIGUEIREDO — vídeos mapeados (baixáveis sob demanda)
+
+| # | Vídeo | Canal | ID | Tema |
+|---|---|---|---|---|
+| F1 | **"Eduardo Bolsonaro opens up in interview with Paulo Figueiredo"** | EDUARDO BOLSONARO | kUehf_xO8co | Entrevista conjunta (os dois juntos) |
+| F2 | **LIVE ESPECIAL: Eduardo Bolsonaro e Paulo Figueiredo** | EDUARDO BOLSONARO | JhlBZeR7W7M | Live conjunta |
+| F3 | "Marco Rubio Blames Lula for Tariff Hike… THEY NEGOTIATED IN BAD FAITH" | Paulo Figueiredo Show | H67X_Et9_eU | Defesa da tese do tarifaço |
+| F4 | "This Is the Detail That Could Cost Flávio the Election" | Paulo Figueiredo Show | v1oaRPkyjZw | Figueiredo × Flávio (cap. 17) |
+| F5 | Lives conjuntas "DIRETO DO EUA" (espelhos) | Lenilberto Miranda | aAMtnmvkHs4 · VZ_LJgLwXBc | A dupla ao vivo |
+
+### REDES DO EDUARDO — YouTube (lives/discursos do canal próprio)
+
+| # | Vídeo | Data | ID |
+|---|---|---|---|
+| E1 | CPAC EUA 2025 (✅ já transcrito) | 20/02/2025 | ip7zRMwr7FM |
+| E2 | "Expondo ao mundo no CPAC todo o sistema de perseguição" | 2025 | 96JUnifysMU |
+| E3 | CPAC Hungria | 2024–25 | c8Ar4I6bIB0 |
+| E4 | Entrevista com Paulo Figueiredo (F1/F2 acima) | 2025 | kUehf_xO8co · JhlBZeR7W7M |
+| E5 | Entrevista Fox em inglês (sem legenda) | 2018–19 | SpQzpZZodmA |
+| E6 | CPAC Latino / Epoch (espelho canal dele) | — | w8EcCSFTqIw |
+
+### X (TWITTER) — o que dá para fazer
+
+**Já endereçados pelo acórdão (condutas 4–6, prova do STF):**
+- x.com/BolsonaroSP/status/1943104895105798524 — conclamação pela Magnitsky
+- x.com/pfigueiredo08/status/1943094648290902092 — a nota conjunta "Tarifa-Moraes"
+- x.com/BolsonaroSP/status/1946354443009552560 — "tem muito mais por vir"
+
+**Capacidades e limites (franco):**
+1. **Baixar vídeo de post específico do X: SIM** — yt-dlp baixa vídeos de status públicos (dou a URL, ele baixa e transcrevo).
+2. **Mapear a timeline inteira dele: depende.** O X fechou a API gratuita. Opções: (a) você me passa uma chave de API do X (se tiver); (b) exporto via ferramenta logada sua (baixar os "Seus dados" do X dele não dá — a conta é dele, não sua); (c) uso as ferramentas com login do Cérebro, se houver (verificar no Cofre); (d) mapeamento manual dos posts relevantes por busca (eu marco os que já estão nas ondas/acórdão — são ~15).
+3. **Proposta pragmática:** começo pelos posts já documentados (acórdão + ondas) e, se você conseguir uma chave de API do X, faço a timeline completa.

@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 13:55 BRT — ZCode/Kimi — Mapa ampliado: Figueiredo (YouTube) + redes do Eduardo + X
+- Arquivo(s): `Kimi K3/MAPA_ENTREVISTAS.md`
+- Adicionados: 5 vídeos de Paulo Figueiredo (2 conjuntos com Eduardo no canal dele), 6 do canal do Eduardo (lives/CPAC), e seção X/Twitter: posts-chave já endereçados pelo acórdão + capacidades (vídeo de post específico = sim; timeline completa = depende de chave API). Teste feito: post 1946354443009552560 é texto (sem vídeo) — conteúdo já no acórdão.
+
 ## 2026-07-26 13:40 BRT — ZCode/Kimi — Mapa de entrevistas criado
 - Arquivo(s): `Kimi K3/MAPA_ENTREVISTAS.md`
 - Mapeamento completo das entrevistas de Eduardo Bolsonaro: 5 já transcritas (CNN ×2, War Room, CPAC 2025, PBS 2019) + 9 prioridade A (2025–26) + 12 prioridade B (2018–24) + secundárias. Plano de execução em lotes. Transcrição local custo zero (yt-dlp + faster-whisper) — sem chaves.
