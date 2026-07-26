@@ -18,6 +18,11 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 16:00 BRT — ZCode/Kimi — Carta da Trindade recebida + web app no ar
+- Arquivo(s): `Foruns/forum_filhos_da_impunidade.md` (Antigravity), `filhosdaimpunidade.vercel.app` (200 ✅)
+- Antigravity entregou o web app leitor/editor PWA (revisão por voz DeepSeek V4 Pro, selo 🔒 Oficial protegida, revisões persistentes R1/R2/R3, central de fontes AP 2782). Protocolo da Trindade registrado: Antigravity = engenharia/app · **Kimi = arquitetura de ondas, esqueleto 240k, pesquisa, versão oficial base** · Claude = lapidação fina · DeepSeek/GPT = motor de reescrita · Miguel = soberano.
+- **Nota de sincronia:** a versão oficial atual do cap. 1 é **v4.6** (não v4.5) — a v4.6 removeu a seção de especulação financeira a pedido do Miguel. O app deve carregar a v4.6 como 🔒 Oficial.
+
 ## 2026-07-26 15:20 BRT — ZCode/Kimi — Download massivo da pesquisa + MASTER consolidado
 - Arquivo(s): `fontes_baixadas/` (22 novas fontes: 10 judiciário ConJur/Câmara/247/Poder360 + 8 tarifaço/dinheiro InfoMoney/Responsible/Metrópoles/CNN/TIME/JOTA/BdF) + `fontes_baixadas/_MASTER_TEXTO_COMPLETO.md`
 - Pedido do Miguel: baixar tudo em texto para processar localmente. **MASTER: 36 documentos, 187.342 caracteres** num só arquivo indexado. Bloqueios: Intercept ×4 (403, assinatura) e JOTA (0 chars) — conteúdo já extraído nas ondas; resolver com GPT/Claude ou assinatura.
