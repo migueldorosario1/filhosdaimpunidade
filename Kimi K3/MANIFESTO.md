@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 14:50 BRT — ZCode/Kimi — BANCO_DE_LINKS.md criado (memória geral)
+- Arquivo(s): `Kimi K3/BANCO_DE_LINKS.md`
+- Índice mestre com ~70 itens em 7 seções: A) Judiciário (acórdão + ConJur + Câmara) · B) EUA primários (EO, OFAC, USTR) · C) Entrevistas/vídeos · D) Reportagens do tarifaço · E) Reportagens do dinheiro · F) posts-prova do X · G) a caçar. Cada item: data, sinopse, link, status (baixado × link × caçar). Regra: citação no manuscrito só com fonte local preservada.
+
 ## 2026-07-26 14:20 BRT — ZCode/Kimi — Mapa de entrevistas com SINOPSES por período
 - Arquivo(s): `Kimi K3/MAPA_ENTREVISTAS.md` (v2)
 - Reorganizado por 5 períodos (persona 2018-24 / fuga fev-jun 2025 / TARIFAÇO 50% jul-ago 2025 ⭐ / denúncia set-dez 2025 / julgamento+25% 2026), cada item com data + sinopse (da metadata, custo zero). Destaques: entrevista Eduardo×Figueiredo DO BAHREIN (18/05/2026, 57m49s, defesa sobre Vorcaro/filme) e Jovem Pan no dia do julgamento (16/06/2026).
