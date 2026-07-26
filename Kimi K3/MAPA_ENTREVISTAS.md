@@ -120,6 +120,27 @@ Legenda: ✅ transcrito · ⏳ mapeado (baixar sob demanda) · 📝 fonte escrit
 | EN6 | OAN / Matt Gaetz | EN | 2025 | ⚠️ A localizar |
 | EN7 | Epoch Times (EN) — CPAC 2025 | EN | fev/2025 | Espelho EN da A1 (temos a versão BR) |
 
+
+
+---
+
+## 🏛️ ADENDO 2 (26/07) — AUTORIDADES AMERICANAS sobre o Brasil/Eduardo ⭐ "ouro puro"
+
+| # | Quem | O quê | Data | Status |
+|---|---|---|---|---|
+| US1 | **Scott Bessent (Tesouro)** | Falas nos press releases OFAC: "juiz e júri em caça às bruxas ilegal" (sb0211) e "rede de apoio ao ministro" (sb0257) | 30/07 e 22/09/2025 | ✅ TEMOS os 2 press releases na íntegra (`fontes_baixadas/ofac_pr_sb*.md`) |
+| US2 | **Marco Rubio (Estado)** | Revogação dos vistos de Moraes e familiares | 18/07/2025 | 📝 via Migalhas — caçar o comunicado oficial do Depto. de Estado |
+| US3 | **Marco Rubio** | "NEGOCIARAM DE MÁ-FÉ" — culpa Lula pelo tarifaço de 25% | ~16/07/2026 | ⏳ Vídeo citado no canal Figueiredo (H67X_Et9_eU) — caçar a fonte primária |
+| US4 | **Donald Trump** | Carta de 50% a Lula ("witch hunt") | 09/07/2025 | 📝 conteúdo fichado (Aos Fatos/EO 14323) |
+| US5 | **Donald Trump** | Post no Truth Social com **foto inédita do encontro com Flávio E Eduardo** | maio/2026 | ⏳ Caçar o post exato (prova visual do cap. 20) |
+| US6 | **Karoline Leavitt (porta-voz da Casa Branca)** | Responde a jornalista brasileiro sobre Lula "aberto a negociar" | jul/2025 | ⏳ Citada na entrevista CNN transcrita — caçar o briefing |
+| US7 | **JD Vance / Rubio** | Reuniões com Flávio (relatadas por ele à Itatiaia: "três reuniões, com Trump, Vance e Rubio") | out/2025–2026 | 📝 via Fórum/Itatiaia |
+| US8 | **Audiências USTR (Seção 301)** | Depoimentos de Flávio (painel 8, 07/07/2026) e Figueiredo (painel 4, 06/07/2026) + submissão escrita de 86 páginas de Flávio | 6–7/07/2026 | ⏳ Transcrições oficiais do USTR prometidas — caçar no ustr.gov |
+| US9 | **DOJ** | Guo Wengui: 30 anos por fraude de ~US$ 1 bi (contexto Gettr/Bannon) | 29/06/2026 | 📝 via dossiê interno + USA v. Kwok (temos PDFs) |
+| US10 | **Congresso (Tom Lantos Commission?)** | Depoimento de Paulo Figueiredo sobre "repressão transnacional" (citando Eduardo, Zambelli, Filipe Martins, Allan dos Santos, Musk) | 2024–25 | ⚠️ Caçar data/comissão exata (Congressional Record/vídeo) |
+
+**Por que é ouro:** quando Bessent escreve "caça às bruxas" num papel do Tesouro, o capítulo mostra a palavra de Eduardo virando palavra de Estado americano — sem o narrador precisar adjetivar nada.
+
 ## Plano de execução
 1. **Lote F1+A4** (Bahrein 57min + Jovem Pan 16/06): as duas entrevistas do núcleo 2026 — baixar e transcrever já.
 2. **Lote A1–A3** (Epoch fev–jul 2025): o buildup narrado por ele.
