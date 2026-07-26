@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 17:25 BRT — ZCode/Kimi — Livros de referência centralizados em `referencia/`
+- Arquivo(s): `referencia/cesar_guerra_da_galia_PT_wikisource.md`, `cesar_de_bello_gallico_EN_gutenberg10657.txt`, `maquiavel_comentarios_tito_livio_PT_archive.{txt,pdf}`, `maquiavel_comentarios_tito_livio_EN_gutenberg10827.txt`
+- Pedido do Miguel: César e Maquiavel movidos de `Kimi K3/bibliografia/` para junto do Machado e do Thompson, em `referencia/` (ficam fora do GitHub por tamanho; vão no sync do Drive).
+
 ## 2026-07-26 17:10 BRT — ZCode/Kimi (+Miguel) — CANÔNICO V5 + Maquiavel baixado + regra #22 + ideias #2–#4
 - **CANÔNICO V5 marcado:**  — o cap. 1 atual (v4.6) vira o marco de retorno. Mudanças futuras em versões numeradas datadas; o canônico só muda por decisão do Miguel.
 - **Bibliografia:** Maquiavel, Comentários sobre a Primeira Década de Tito Lívio, PT (Editora UnB, archive.org, 751k txt + PDF) + EN (Gutenberg 10827). Júlio César (Wikisource PT, 467k) já na bibliografia.

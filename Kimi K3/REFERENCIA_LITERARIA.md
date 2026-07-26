@@ -68,7 +68,7 @@ O adjetivo em rajada (25/mil). Nosso registro fica entre os dois mestres: **arqu
 
 ---
 
-## 4. JÚLIO CÉSAR — Comentários sobre a Guerra da Gália (bibliografia/cesar_guerra_da_galia_PT_wikisource.md)
+## 4. JÚLIO CÉSAR — Comentários sobre a Guerra da Gália (`referencia/cesar_guerra_da_galia_PT_wikisource.md`)
 
 ### O estilo
 A prosa de César é a do comandante que escreve seu próprio atestado: **terceira pessoa sobre si mesmo** ("César fez uma ponte no Arar e por ela passou o exército"), frase direta, verbos de ação, geografia concreta. Nenhuma adjetivação de si; a vitória é descrita como logística. Lição: a frieza documental é a maior forma de eloquência — nosso livro trata Eduardo com a mesma distância com que César trata a si.
@@ -82,7 +82,7 @@ A prosa de César é a do comandante que escreve seu próprio atestado: **tercei
 - Eduardo explorou as **duas facções da América**: o trumpismo × o establishment, a guerra cultural × a burocracia judicial. O método César aplicado a Washington.
 - A conjuração de Orgetórix = o modelo de como narrar a montagem da campanha Eduardo+Figueiredo (nomes, datas, promessas, o SWIFT em vez do juramento).
 
-## 5. MAQUIAVEL — Comentários sobre a Primeira Década de Tito Lívio (bibliografia/maquiavel_comentarios_tito_livio_PT_archive.txt/pdf)
+## 5. MAQUIAVEL — Comentários sobre a Primeira Década de Tito Lívio (`referencia/maquiavel_comentarios_tito_livio_PT_archive.txt` + `.pdf`)
 
 ### O estilo
 Maquiavel comenta história para extrair **regra prática**: um episódio romano vira uma máxima sobre poder. Nunca uma história sem uma lição, nunca uma lição sem uma história. Essa é a estrutura que o Miguel pediu: cada capítulo do nosso livro responde a UMA pergunta e a responde fundo — fato + mecanismo + regra.
