@@ -65,3 +65,32 @@ O adjetivo em rajada (25/mil). Nosso registro fica entre os dois mestres: **arqu
 | Mistério | Revelar pela cena, não pela legenda (regra #12) |
 
 **Teste final de cada parágrafo antes de fechar:** contar as sílabas das últimas três frases. Se forem quase iguais, reescrever. Se o adjetivo puder sair sem perda, sai. Se o detalhe mais concreto estiver ausente, buscar na fonte.
+
+---
+
+## 4. JÚLIO CÉSAR — Comentários sobre a Guerra da Gália (bibliografia/cesar_guerra_da_galia_PT_wikisource.md)
+
+### O estilo
+A prosa de César é a do comandante que escreve seu próprio atestado: **terceira pessoa sobre si mesmo** ("César fez uma ponte no Arar e por ela passou o exército"), frase direta, verbos de ação, geografia concreta. Nenhuma adjetivação de si; a vitória é descrita como logística. Lição: a frieza documental é a maior forma de eloquência — nosso livro trata Eduardo com a mesma distância com que César trata a si.
+
+### A organização das ideias (o que roubar)
+1. **Dividir o território antes de conquistá-lo:** o livro I abre com "A Gália está toda dividida em três partes" — o mapa antes da ação. César só vence porque os gauleses vivem "em duas facções dividida a Gália toda" (Livro I, discurso de Diviciaco). **A contradição interna do inimigo é a arma do conquistador.**
+2. **A conjuração do adversário narrada com precisão:** a conspiração de Orgetórix (Livro I, caps. II-IV) é contada com nomes, casamentos, promessas e juramentos — a anatomia de uma traição de elite antes da traição consumada.
+3. **Clementia como instrumento:** César poupa, alimenta e protege os vencidos — e registra isso. O vencedor escreve a própria lenda de tolerância (como os persas da reflexão do Miguel).
+
+### Exemplos para O Foragido
+- Eduardo explorou as **duas facções da América**: o trumpismo × o establishment, a guerra cultural × a burocracia judicial. O método César aplicado a Washington.
+- A conjuração de Orgetórix = o modelo de como narrar a montagem da campanha Eduardo+Figueiredo (nomes, datas, promessas, o SWIFT em vez do juramento).
+
+## 5. MAQUIAVEL — Comentários sobre a Primeira Década de Tito Lívio (bibliografia/maquiavel_comentarios_tito_livio_PT_archive.txt/pdf)
+
+### O estilo
+Maquiavel comenta história para extrair **regra prática**: um episódio romano vira uma máxima sobre poder. Nunca uma história sem uma lição, nunca uma lição sem uma história. Essa é a estrutura que o Miguel pediu: cada capítulo do nosso livro responde a UMA pergunta e a responde fundo — fato + mecanismo + regra.
+
+### A organização das ideias (o que roubar)
+1. **Fato romano → mecanismo → máxima:** o bloco indivisível do comentário maquiavélico. Usaremos nos capítulos-ensaio (19) e nas aberturas de Parte.
+2. **As facções como motor:** para Maquiavel, a república vive das tensões entre ordens — a análise fria de como elites traem, calculam e se realinham. O repertório para ler Eduardo e o clã sem moralismo.
+3. **Os fundadores e os corrompidos:** Maquiavel mede homens pelo que fazem pela república — o contraste pronto para o arco do "emissário que vendeu a república dos outros".
+
+### Nota de uso
+Os paralelos históricos (César, Pérsia, Efialtes, Silvério) entram como **molduras curtas** — como a abertura do cap. 1 já fez com Silvério — nunca como desvio do assunto do capítulo (regra #22).

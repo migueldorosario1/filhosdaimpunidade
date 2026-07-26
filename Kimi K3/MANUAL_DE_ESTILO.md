@@ -112,6 +112,12 @@ Quando a ideia já está clara pela construção anterior, não acrescentar uma 
 ❌ "O autor da frase, porém… A vitória, porém… Antes, porém…"
 ✅ reservar "porém" para o contraste mais forte e escrever os outros períodos de forma direta.
 
+
+**#22 — 26/07/2026 · UM CAPÍTULO, UM ASSUNTO (profundidade, não amplitude)**
+Cada capítulo responde a uma pergunta só e a responde fundo. Desviar para temas laterais (ex.: sair de "traição e tarifaço" para especulação de mercado/conspiração) deixa o capítulo caótico e confunde o leitor. A pergunta-guia: "por que uma traição? qual o aspecto profundo, histórico, desta traição?" — e tudo no capítulo serve a ela. As molduras históricas (César, Efialtes, Silvério) entram curtas e a serviço do tema, nunca como segundo assunto.
+❌ o cap. 1 abrindo uma seção inteira de especulação financeira no meio do tema traição/tarifaço
+✅ a semana do tarifaço contada fundo: a carta, a autoria reivindicada, as falas dos próprios
+
 ---
 
 ## Regras herdadas das ondas (protocolo editorial — continuam valendo)

@@ -18,6 +18,13 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 17:10 BRT — ZCode/Kimi (+Miguel) — CANÔNICO V5 + Maquiavel baixado + regra #22 + ideias #2–#4
+- **CANÔNICO V5 marcado:**  — o cap. 1 atual (v4.6) vira o marco de retorno. Mudanças futuras em versões numeradas datadas; o canônico só muda por decisão do Miguel.
+- **Bibliografia:** Maquiavel, Comentários sobre a Primeira Década de Tito Lívio, PT (Editora UnB, archive.org, 751k txt + PDF) + EN (Gutenberg 10827). Júlio César (Wikisource PT, 467k) já na bibliografia.
+- **REFERENCIA_LITERARIA.md** ganhou as seções 4 (César: frieza documental, "Gália dividida em facções", conjuração de Orgetórix, clementia) e 5 (Maquiavel: fato→mecanismo→máxima, facções, fundadores × corrompidos).
+- **Regra #22 no manual:** UM CAPÍTULO, UM ASSUNTO — profundidade, não amplitude (o corte da especulação vira princípio geral).
+- **IDEIAS_E_REFLEXOES #2** (traidores apagados pela História — Silvério/Judas: a tese do livro), **#3** (Efialtes de Traquis, Heródoto VII — o traidor de dentro; nota de precisão: era maliano, não espartano), **#4** (a regra do canônico).
+
 ## 2026-07-26 16:45 BRT — ZCode/Kimi — Júlio César baixado (Guerra da Gália, PT completo)
 - Arquivo(s): `Kimi K3/bibliografia/cesar_guerra_da_galia_PT_wikisource.md` (467.763 chars — os 8 livros, tradução Wikisource, domínio público) + `cesar_de_bello_gallico_EN_gutenberg10657.txt` (inglês, Gutenberg)
 - Para a reflexão #1 do Miguel (IDEIAS_E_REFLEXOES.md): o método César de cooptar elites e explorar contradições internas.
