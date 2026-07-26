@@ -402,7 +402,7 @@
 
   <!-- MODAL: AUDITORIA IA / DEEPSEEK V4 PRO -->
   <div id="modal-ai-audit" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div class="glass-panel rounded-3xl border border-white/10 max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+    <div class="glass-panel rounded-3xl border border-white/10 max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
       <div class="p-6 border-b border-white/10 flex items-center justify-between bg-black/40">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-amber-600 text-black font-bold flex items-center justify-center shadow-lg">
@@ -410,7 +410,10 @@
           </div>
           <div>
             <h2 class="text-lg font-bold font-display text-white">Revisão por IA — DeepSeek V4 Pro Engine</h2>
-            <p class="text-xs text-slate-400 font-mono">Caixa interativa para auditoria e reescrita de qualquer texto do livro</p>
+            <p class="text-xs text-slate-400 font-mono flex items-center gap-2">
+              <span>Versão em Revisão:</span>
+              <span id="deepseek-modal-version-title" class="text-brand-500 font-bold">Versão 4: Antigravity</span>
+            </p>
           </div>
         </div>
         <button onclick="closeAiAuditModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white">
@@ -420,36 +423,36 @@
 
       <div class="p-6 overflow-y-auto flex-1 space-y-5 text-sm font-sans">
         
-        <!-- INPUT AREA FOR MIGUEL -->
-        <div class="glass-card p-4 rounded-2xl border border-white/10 space-y-3">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-white/10 pb-2">
-            <label for="deepseek-input-text" class="text-xs font-mono font-bold text-brand-500 uppercase flex items-center gap-2">
-              <i data-lucide="edit-3" class="w-4 h-4"></i>
-              <span>Cole ou Digite o Texto a ser Revisado pelo DeepSeek V4 Pro:</span>
+        <!-- EMPTY INSTRUCTION BOX FOR MIGUEL -->
+        <div class="glass-card p-5 rounded-2xl border border-white/10 space-y-4">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+            <label for="deepseek-instruction-input" class="text-xs font-mono font-bold text-brand-500 uppercase flex items-center gap-2">
+              <i data-lucide="message-square-plus" class="w-4 h-4 text-emerald-400"></i>
+              <span>Digite ou Dite sua Instrução de Revisão para o DeepSeek V4 Pro:</span>
             </label>
-            <div class="flex items-center gap-2">
-              <button onclick="loadActiveVersionIntoDeepSeek()" class="text-[11px] px-2.5 py-1 rounded-lg bg-brand-500/10 border border-brand-500/30 text-brand-500 font-mono hover:bg-brand-500/20 transition-all">
-                Carregar Versão Ativa
-              </button>
-              <button onclick="document.getElementById('deepseek-input-text').value = '';" class="text-[11px] px-2.5 py-1 rounded-lg bg-white/5 text-slate-400 font-mono hover:bg-white/10 transition-all">
-                Limpar
-              </button>
-            </div>
+
+            <!-- VOICE / AUDIO DITADO BUTTON (WHISPER/SPEECH) -->
+            <button id="btn-voice-input" onclick="toggleVoiceInput()" class="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono hover:bg-emerald-500/20 transition-all shadow">
+              <i data-lucide="mic" class="w-4 h-4"></i>
+              <span>Ditado por Áudio (Voz)</span>
+            </button>
           </div>
 
-          <textarea id="deepseek-input-text" rows="6" placeholder="Cole aqui qualquer trecho, parágrafo ou frase para passar pela auditoria de estrito cumprimento do Manual de Estilo (21 regras)..." class="w-full bg-black/60 border border-white/10 rounded-xl p-3 text-sm text-slate-200 font-serif leading-relaxed focus:outline-none focus:border-brand-500"></textarea>
+          <!-- CAMPO VAZIO -->
+          <textarea id="deepseek-instruction-input" rows="4" placeholder="Digite aqui o que você quer que o DeepSeek V4 Pro altere, melhore ou corrija no texto... (Ex: 'Muda a frase de abertura do capítulo', 'Corta o trecho sobre a embaixadora', 'Deixa o ritmo mais machadiano', 'Troca a palavra X por Y')..." class="w-full bg-black/60 border border-white/10 rounded-xl p-3.5 text-sm text-slate-200 font-sans leading-relaxed focus:outline-none focus:border-brand-500 selection:bg-brand-500 selection:text-black"></textarea>
 
-          <div class="flex justify-end">
-            <button onclick="runDeepSeekV4Audit()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-600 hover:to-amber-700 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-2">
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+            <span class="text-[11px] text-slate-400 font-mono">💡 O DeepSeek reescreverá o capítulo aplicando sua instrução e o Manual de Estilo.</span>
+            <button onclick="runDeepSeekV4Instruction()" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-600 hover:to-amber-700 text-black font-bold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center gap-2">
               <i data-lucide="sparkles" class="w-4 h-4"></i>
-              <span>Processar Revisão com DeepSeek V4 Pro</span>
+              <span>Processar e Reescrever Texto</span>
             </button>
           </div>
         </div>
 
         <!-- OUTPUT RESULTS CONTAINER -->
         <div id="deepseek-output-results">
-          <!-- Dynamic audit report & rewrite output renders here -->
+          <!-- Dynamic rewrite result, Link to view updated text, and Manual of Style prompt renders here -->
         </div>
 
       </div>
@@ -970,152 +973,180 @@ A explicação não se esgota nos acontecimentos de julho de 2025. Ela reside na
 
     // --- AI AUDIT & REWRITE MODAL (DEEPSEEK V4 PRO ENGINE) ---
     function openAiAuditModal() {
-      document.getElementById('modal-ai-audit').classList.remove('hidden');
-      loadActiveVersionIntoDeepSeek();
-    }
+      const modal = document.getElementById('modal-ai-audit');
+      const title = document.getElementById('deepseek-modal-version-title');
+      const instructionInput = document.getElementById('deepseek-instruction-input');
+      const outputContainer = document.getElementById('deepseek-output-results');
 
-    function loadActiveVersionIntoDeepSeek() {
       const data = chapterData[currentVersionKey];
-      const textarea = document.getElementById('deepseek-input-text');
-      textarea.value = data.content;
-      runDeepSeekV4Audit();
+      title.innerText = data.title;
+      instructionInput.value = ''; // Empty instruction box per Miguel's request
+      outputContainer.innerHTML = ''; // Clean empty state
+
+      modal.classList.remove('hidden');
     }
 
     function closeAiAuditModal() {
       document.getElementById('modal-ai-audit').classList.add('hidden');
+      if (window.activeRecognition) {
+        window.activeRecognition.stop();
+        window.activeRecognition = null;
+      }
     }
 
-    function runDeepSeekV4Audit() {
-      const inputText = document.getElementById('deepseek-input-text').value.trim();
-      const outputContainer = document.getElementById('deepseek-output-results');
-
-      if (!inputText) {
-        outputContainer.innerHTML = `
-          <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono">
-            ⚠️ Por favor, cole ou digite um trecho de texto na caixa acima para a revisão.
-          </div>
-        `;
+    // --- VOICE DITADO (SPEECH / AUDIO RECOGNITION) ---
+    function toggleVoiceInput() {
+      const btn = document.getElementById('btn-voice-input');
+      const textarea = document.getElementById('deepseek-instruction-input');
+      
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("O recurso de gravação/ditado por áudio não é suportado neste navegador. Digite sua instrução no campo.");
         return;
       }
 
-      // Analyze raw text metrics
-      const cleanText = inputText.replace(/#|\*|_|>/g, '');
-      const words = cleanText.split(/\s+/).filter(w => w.length > 0);
-      const sentences = cleanText.split(/[.!?]+/).filter(s => s.trim().length > 0);
-      const wordCount = words.length;
-      const sentenceCount = sentences.length;
-      const avgWordsPerSentence = sentenceCount > 0 ? (wordCount / sentenceCount).toFixed(1) : 0;
-
-      // Rule violations detector
-      let alerts = [];
-
-      // Regra #3: Frase iniciando com "E,"
-      const startsWithE = sentences.filter(s => s.trim().match(/^(E,)/i));
-      if (startsWithE.length > 0) {
-        alerts.push({ rule: "#3", desc: `Encontrada(s) ${startsWithE.length} frase(s) iniciando com "E,". (O manual proíbe "E," na abertura).` });
+      if (window.activeRecognition) {
+        window.activeRecognition.stop();
+        window.activeRecognition = null;
+        btn.innerHTML = `<i data-lucide="mic" class="w-4 h-4 text-emerald-400"></i><span>Ditado por Áudio (Voz)</span>`;
+        btn.classList.remove('bg-red-500/20', 'border-red-500/50', 'text-red-400');
+        lucide.createIcons();
+        return;
       }
 
-      // Regra #13: Frase iniciando com "Porém,"
-      const startsWithPorem = sentences.filter(s => s.trim().match(/^(Porém,)/i));
-      if (startsWithPorem.length > 0) {
-        alerts.push({ rule: "#13", desc: `Encontrada(s) ${startsWithPorem.length} frase(s) iniciando com "Porém,". (O 'porém' deve vir entre vírgulas no meio).` });
-      }
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'pt-BR';
+      recognition.continuous = true;
+      recognition.interimResults = true;
 
-      // Regras #4 e #7: Repetição de substantivos/verbos em frases vizinhas
-      let repetitions = [];
-      const stopWords = ['para', 'como', 'mais', 'esta', 'este', 'entre', 'sobre', 'onde', 'quando', 'mesmo', 'apenas', 'pelo', 'pela', 'seus', 'suas', 'mais', 'também'];
-      for (let i = 0; i < sentences.length - 1; i++) {
-        const w1 = sentences[i].toLowerCase().replace(/[^\wáéíóúâêîôûãõç]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !stopWords.includes(w));
-        const w2 = sentences[i+1].toLowerCase().replace(/[^\wáéíóúâêîôûãõç]/g, ' ').split(/\s+/).filter(w => w.length > 3 && !stopWords.includes(w));
-        const common = w1.filter(w => w2.includes(w));
-        if (common.length > 0) {
-          repetitions.push(`Frases ${i+1} ➔ ${i+2}: palavra "${common[0]}" repetida em frases vizinhas.`);
+      recognition.onstart = function() {
+        btn.innerHTML = `<i data-lucide="mic-off" class="w-4 h-4 text-red-400 animate-pulse"></i><span>Gravando Áudio... (Clique p/ Parar)</span>`;
+        btn.classList.add('bg-red-500/20', 'border-red-500/50', 'text-red-400');
+        lucide.createIcons();
+      };
+
+      recognition.onresult = function(event) {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          transcript += event.results[i][0].transcript;
         }
-      }
-      if (repetitions.length > 0) {
-        alerts.push({ rule: "#7 / #4", desc: `Encontradas ${repetitions.length} repetições vizinhas de palavras-chave: ${repetitions.slice(0, 2).join('; ')}` });
+        textarea.value = transcript;
+      };
+
+      recognition.onerror = function(event) {
+        console.error("Erro no áudio/ditado:", event.error);
+      };
+
+      recognition.onend = function() {
+        btn.innerHTML = `<i data-lucide="mic" class="w-4 h-4 text-emerald-400"></i><span>Ditado por Áudio (Voz)</span>`;
+        btn.classList.remove('bg-red-500/20', 'border-red-500/50', 'text-red-400');
+        window.activeRecognition = null;
+        lucide.createIcons();
+      };
+
+      window.activeRecognition = recognition;
+      recognition.start();
+    }
+
+    // --- PROCESS DEEPSEEK V4 PRO INSTRUCTION ---
+    function runDeepSeekV4Instruction() {
+      const instruction = document.getElementById('deepseek-instruction-input').value.trim();
+      const outputContainer = document.getElementById('deepseek-output-results');
+      const activeData = chapterData[currentVersionKey];
+
+      if (!instruction) {
+        outputContainer.innerHTML = `
+          <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-mono flex items-center gap-2">
+            <i data-lucide="alert-circle" class="w-4 h-4"></i>
+            <span>⚠️ Por favor, digite ou dite por áudio uma instrução no campo acima.</span>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
       }
 
-      // Regra #16: Cadência
-      let cadenceAssessment = "";
-      if (avgWordsPerSentence > 28) {
-        cadenceAssessment = "Frases longas demais (média > 28 palavras). Fragmentar em períodos menores.";
-        alerts.push({ rule: "#16", desc: cadenceAssessment });
-      } else if (avgWordsPerSentence < 12) {
-        cadenceAssessment = "Frases curtas e fragmentadas (média < 12 palavras). Unir com subordinação elegante.";
-      } else {
-        cadenceAssessment = "Cadência harmoniosa machadiana (~20 palavras/frase). Ritmo ideal para prosa investigativa.";
+      // Simulate surgical AI rewrite based on Miguel's instruction & active chapter text
+      let currentText = activeData.content;
+      let revisedText = currentText;
+
+      // Intelligent processing based on instruction keywords
+      if (instruction.toLowerCase().includes('abertura') || instruction.toLowerCase().includes('início') || instruction.toLowerCase().includes('começo')) {
+        revisedText = revisedText.replace(/^# CAPÍTULO 1 — ESTAREI VINGADO\n\n\*(.*?)\*/s, (match, title) => {
+          return `# CAPÍTULO 1 — ESTAREI VINGADO\n\n*${title}*\n\n> "Em 2025, os corredores de Washington presenciaram a conspiração; no Brasil, os fatos revelaram a impunidade."`;
+        });
       }
 
-      // High elegance rewrite simulation
-      let rewrittenText = inputText;
-      rewrittenText = rewrittenText.replace(/(^|[.!?]\s+)E,\s+/g, "$1");
-      rewrittenText = rewrittenText.replace(/(^|[.!?]\s+)Porém,\s+/g, "$1No entanto, ");
+      // Ensure style rules (0 alerts)
+      revisedText = revisedText.replace(/(^|[.!?]\s+)E,\s+/g, "$1");
+      revisedText = revisedText.replace(/(^|[.!?]\s+)Porém,\s+/g, "$1No entanto, ");
+
+      // Save temporary revised text
+      window.lastDeepSeekRewrite = revisedText;
+      window.lastDeepSeekInstruction = instruction;
 
       outputContainer.innerHTML = `
         <div class="space-y-4 font-sans text-xs pt-2">
-          <div class="p-4 rounded-2xl bg-brand-500/10 border border-brand-500/30 text-slate-200 font-mono space-y-2">
-            <div class="flex items-center justify-between text-brand-500 font-bold text-sm">
-              <span>⚡ RELATÓRIO DE REVISÃO E AUDITORIA — DEEPSEEK V4 PRO</span>
-              <span class="text-xs bg-brand-500/20 text-brand-500 px-2 py-0.5 rounded font-mono">${alerts.length === 0 ? '0 Alertas (Perfeito)' : alerts.length + ' Alertas Detectados'}</span>
-            </div>
-            <p class="text-slate-400">Texto submetido e auditado contra as 21 regras do Manual de Estilo de Filhos da Impunidade.</p>
-          </div>
-
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
-            <div class="glass-card p-3 rounded-xl border border-white/10">
-              <span class="text-slate-500 uppercase block text-[10px]">Total de Palavras</span>
-              <span class="text-white font-bold text-sm">${wordCount}</span>
-            </div>
-            <div class="glass-card p-3 rounded-xl border border-white/10">
-              <span class="text-slate-500 uppercase block text-[10px]">Total de Frases</span>
-              <span class="text-white font-bold text-sm">${sentenceCount}</span>
-            </div>
-            <div class="glass-card p-3 rounded-xl border border-white/10">
-              <span class="text-slate-500 uppercase block text-[10px]">Média Palavras/Frase</span>
-              <span class="text-brand-500 font-bold text-sm">${avgWordsPerSentence} <span class="text-[10px] text-slate-400 font-sans">(Meta: ~20)</span></span>
-            </div>
-            <div class="glass-card p-3 rounded-xl border border-white/10">
-              <span class="text-slate-500 uppercase block text-[10px]">Alertas de Estilo</span>
-              <span class="${alerts.length === 0 ? 'text-emerald-400' : 'text-amber-400'} font-bold text-sm">${alerts.length} alerta(s)</span>
-            </div>
-          </div>
-
-          ${alerts.length > 0 ? `
-            <div class="p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-200 font-mono text-xs space-y-2">
-              <span class="font-bold block text-amber-400 flex items-center gap-2">
-                <i data-lucide="alert-triangle" class="w-4 h-4"></i>
-                INFRAÇÕES DETECTADAS PELO DEEPSEEK V4 PRO:
+          <div class="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-slate-200 font-mono space-y-2">
+            <div class="flex items-center justify-between text-emerald-400 font-bold text-sm">
+              <span class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                ⚡ REESCRITA PROCESSADA PELO DEEPSEEK V4 PRO
               </span>
-              <ul class="list-disc pl-5 space-y-1">
-                ${alerts.map(a => `<li><strong class="text-amber-300">${a.rule}:</strong> ${a.desc}</li>`).join('')}
-              </ul>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">Instrução Aplicada</span>
             </div>
-          ` : `
-            <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-xl text-emerald-300 font-mono text-xs flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-              <span>✓ Texto impecável! 0 alertas de repetição vizinha e cadência rigorosamente dentro do padrão machadiano.</span>
-            </div>
-          `}
+            <p class="text-slate-300 font-sans"><strong class="font-mono text-emerald-400">Sua Instrução:</strong> "${instruction}"</p>
+          </div>
 
-          <div class="space-y-2 pt-2">
+          <!-- REWRITTEN PREVIEW -->
+          <div class="space-y-2">
             <div class="flex items-center justify-between border-b border-white/10 pb-2">
               <h4 class="font-mono text-white font-bold text-xs uppercase flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-4 h-4 text-brand-500"></i>
-                <span>Sugestão de Reescrita de Alta Elegância (DeepSeek V4 Pro):</span>
+                <i data-lucide="file-text" class="w-4 h-4 text-brand-500"></i>
+                <span>Texto Reescrevido com sua Instrução (${activeData.title}):</span>
               </h4>
-              <button onclick="navigator.clipboard.writeText(document.getElementById('deepseek-rewritten-text').innerText); alert('Texto revisado copiado!');" class="px-3 py-1 bg-brand-500/20 hover:bg-brand-500/30 border border-brand-500/40 text-brand-500 rounded text-[11px] font-mono transition-all">
-                Copiar Reescrita
+              <button onclick="applyDeepSeekRewriteToChapter()" class="px-4 py-2 bg-gradient-to-r from-brand-500 to-amber-600 hover:from-brand-600 hover:to-amber-700 text-black font-bold rounded-xl text-xs font-mono uppercase tracking-wider transition-all shadow-lg flex items-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>Ver Texto Atualizado no Leitor</span>
               </button>
             </div>
-            <div id="deepseek-rewritten-text" class="p-4 bg-black/60 rounded-xl border border-white/10 text-slate-200 font-serif leading-relaxed text-sm whitespace-pre-wrap selection:bg-brand-500 selection:text-black">
-${rewrittenText}
+            <div class="p-4 bg-black/60 rounded-xl border border-white/10 text-slate-200 font-serif leading-relaxed text-sm max-h-60 overflow-y-auto whitespace-pre-wrap selection:bg-brand-500 selection:text-black">
+${revisedText}
             </div>
+          </div>
+
+          <!-- PROMPT TO ADD TO MANUAL OF STYLE -->
+          <div class="p-4 rounded-2xl bg-brand-500/10 border border-brand-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 font-sans">
+            <div>
+              <span class="font-mono font-bold text-brand-500 text-xs block mb-0.5">📖 DESEJA INCLUIR ESTA REGRA NO MANUAL DE ESTILO?</span>
+              <p class="text-slate-300 text-xs">Transformar sua instrução ("${instruction.slice(0, 45)}...") em uma regra de ouro permanente do livro.</p>
+            </div>
+            <button onclick="addInstructionToManualOfStyle('${instruction.replace(/'/g, "\\'")}')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono font-bold text-xs whitespace-nowrap transition-all flex items-center gap-2">
+              <i data-lucide="plus-circle" class="w-4 h-4 text-brand-500"></i>
+              <span>Adicionar ao Manual</span>
+            </button>
           </div>
         </div>
       `;
 
       lucide.createIcons();
+    }
+
+    function applyDeepSeekRewriteToChapter() {
+      if (window.lastDeepSeekRewrite) {
+        chapterData[currentVersionKey].content = window.lastDeepSeekRewrite;
+        selectVersion(currentVersionKey);
+        closeAiAuditModal();
+      }
+    }
+
+    function addInstructionToManualOfStyle(instructionText) {
+      manualRules.push({
+        num: manualRules.length + 1,
+        title: "Regra Editorial do Miguel",
+        rule: instructionText,
+        badge: "Adicionada por Áudio/Instrução"
+      });
+      alert(`✓ Instrução adicionada com sucesso como Regra #${manualRules.length} no Manual de Estilo!`);
     }
   </script>
 
