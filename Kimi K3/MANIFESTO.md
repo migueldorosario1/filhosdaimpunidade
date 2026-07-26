@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 14:20 BRT — ZCode/Kimi — Mapa de entrevistas com SINOPSES por período
+- Arquivo(s): `Kimi K3/MAPA_ENTREVISTAS.md` (v2)
+- Reorganizado por 5 períodos (persona 2018-24 / fuga fev-jun 2025 / TARIFAÇO 50% jul-ago 2025 ⭐ / denúncia set-dez 2025 / julgamento+25% 2026), cada item com data + sinopse (da metadata, custo zero). Destaques: entrevista Eduardo×Figueiredo DO BAHREIN (18/05/2026, 57m49s, defesa sobre Vorcaro/filme) e Jovem Pan no dia do julgamento (16/06/2026).
+
 ## 2026-07-26 13:55 BRT — ZCode/Kimi — Mapa ampliado: Figueiredo (YouTube) + redes do Eduardo + X
 - Arquivo(s): `Kimi K3/MAPA_ENTREVISTAS.md`
 - Adicionados: 5 vídeos de Paulo Figueiredo (2 conjuntos com Eduardo no canal dele), 6 do canal do Eduardo (lives/CPAC), e seção X/Twitter: posts-chave já endereçados pelo acórdão + capacidades (vídeo de post específico = sim; timeline completa = depende de chave API). Teste feito: post 1946354443009552560 é texto (sem vídeo) — conteúdo já no acórdão.

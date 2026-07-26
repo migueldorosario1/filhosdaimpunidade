@@ -1,95 +1,101 @@
-# 🎙️ MAPA DE ENTREVISTAS — Eduardo Bolsonaro (YouTube e veículos americanos)
+# 🎙️ MAPA DE ENTREVISTAS — Eduardo Bolsonaro (com datas e sinopses)
 
-**Levantado em 26/07/2026 · ZCode/Kimi.** Método de transcrição: yt-dlp + faster-whisper local — **custo zero, sem chaves**.
-Legenda: ✅ transcrito e na pasta `transcrições/` · ⏳ mapeado, a baixar/transcrever · ⚪ secundário.
+**Atualizado em 26/07/2026 · ZCode/Kimi.** Sinopses geradas da metadata (título+descrição) — custo zero. Transcrição só das prioritárias (yt-dlp + whisper local, também zero).
+Legenda: ✅ transcrito · ⏳ mapeado (baixar sob demanda) · 📝 fonte escrita fichada.
+**Nota X API:** o app @ocafezinho está no nível gratuito (postar ✓, ler ✗ 401). Timeline do X segue documentada via acórdão + ondas.
 
 ---
 
 ## ✅ JÁ TRANSCRITAS (5)
 
-| # | Entrevista | Data | Duração | ID YouTube |
-|---|---|---|---|---|
-| 1 | CNN Brasil completa ⭐ | 18/07/2025 | 22m50s | b2ceIvX7Sr4 |
-| 2 | CNN Arena (corte) | 18/07/2025 | 2m51s | aUOotzrw4ek |
-| 3 | War Room / Steve Bannon | 30/04/2025 | 16m | wiqyLYtADFY |
-| 4 | CPAC EUA 2025 (discurso) | 20/02/2025 | 11m27s | ip7zRMwr7FM |
-| 5 | PBS NewsHour (defesa do pai) | 12/07/2019 | 4m27s | D_GoaiPo9T8 |
-
-## ⏳ PRIORIDADE A — o arco da fuga/pressão (2025–2026)
-
-| # | Entrevista | Data provável | Veículo | ID | Cap. V2 |
-|---|---|---|---|---|---|
-| A1 | Epoch Times CPAC 2025 (Trump, Moraes, OEA) | 21/02/2025 | Epoch Times Brasil | ZfLeUthL-6g | 3, 10 |
-| A2 | "Por dentro dos esforços de Eduardo nos EUA" | 01/07/2025 | Epoch Times Brasil | t5mbWUANxu8 | 10 |
-| A3 | Entrevista nos EUA "denuncia perseguição" | 27/02/2025 | EDUARDO (canal) | odMXvTSc8l8 | 10 |
-| A4 | Condenação fortalece Flávio, diz Eduardo | 16/06/2026 | Jovem Pan News | BypQ-qtpdrg | 17, 20 |
-| A5 | Pânico (2 entrevistas) | 30/04/2021 e 10/06/2022 | Pânico/Jovem Pan | Fiv3YFdhKAM · boCeNQYp0lQ | 10 |
-| A6 | War Room EP 753 (2º episódio) | 23/04/2025 | warroom.org (Rumble) | localizar | 3, 10 |
-| A7 | Newsmax "Trump, Jair and Brazil" | 28/06/2025 | Newsmax | localizar | 10 |
-| A8 | OAN / Matt Gaetz | 2025 | OAN | localizar | 10 |
-| A9 | BBC 13/08/2025 (vídeo, se houver) | 13/08/2025 | BBC Brasil | artigo já fichado ✅ | 2 |
-
-## ⏳ PRIORIDADE B — a construção da persona americana (2018–2024)
-
-| # | Entrevista | Data | Veículo | ID | Cap. V2 |
-|---|---|---|---|---|---|
-| B1 | Lou Dobbs, Fox (1ª persona anglófona) | 01/12/2018 | Fox/canal dele | SpQzpZZodmA | 12 |
-| B2 | Epoch Times "Purging Brazil of Socialism" | 19/03/2019 | Epoch Times | cWt6fwzyaCY | 12, 14 |
-| B3 | Epoch Times CPAC 2020 (China/Huawei) | 06/03/2020 | Epoch Times | Zv2H7MeW-AU | 15 |
-| B4 | Tucker Carlson Tonight (1ª) | 22/09/2021 | Fox | tv8qjnvPxKQ | 6, 12 |
-| B5 | Cyber Symposium (Mike Lindell) | 09/08/2021 | RSBN/espelho | Wzaq_DvTwJY | 11 |
-| B6 | Tucker Carlson (2ª, armas) | 01/07/2022 | Fox | Mfbv9dEQ0GM / 1prwTHsSq3k | 12 |
-| B7 | CPAC México pós-derrota | nov/2022 | CPAC/espelho | localizar | 11 |
-| B8 | Tucker Carlson Network (8 de janeiro) | 01/03/2024 | TCN | 4z7JZFpMUSA | 6, 11 |
-| B9 | Jordan B. Peterson EP 498 | 14/11/2024 | JBP | HBYbkMervk0 | 6 |
-| B10 | CPAC Hungria | 21/03/2026 | canal dele | c8Ar4I6bIB0 | 6 |
-| B11 | Leda Nagle ("novo AI-5", integral) | out/2019 | Leda Nagle | localizar | 13 |
-| B12 | Palestra "soldado e um cabo" (íntegra) | 2018 | a localizar | — | 13 |
-
-## ⚪ SECUNDÁRIAS / avaliar
-- Epoch Times CPAC Latino (w8EcCSFTqIw) · No filters/Jovem Pan (np245ZiAlI4) · "Jair was stabbed" com legenda EN (QsV4QhBZ3dg) · Flow Podcast #312 (2021, perfil) · Roda Viva (a localizar).
-
----
-
-## Plano de execução (fazemos junto)
-1. **Lote A1–A5** (Epoch 2025 + Jovem Pan 2026 + canal dele): download + transcrição — ~1 sessão.
-2. **Lote B1–B6** (Fox/Dobbs, Epoch 2019-20, Tucker 2021-22, Lindell): ~1 sessão.
-3. **Caça manual:** War Room EP 753 (Rumble), Newsmax, OAN, Leda Nagle, "soldado e um cabo" — links que o YouTube esconde; se preciso, pedimos ao GPT/Claude com websearch.
-4. Cada transcrição sai com cabeçalho (fonte/data/duração) + citações-chave com timestamps → `transcrições/` → MANIFESTO.
-
----
-
-## 📱 ADENDO (26/07) — Paulo Figueiredo (YouTube) e as redes do Eduardo
-
-### PAULO FIGUEIREDO — vídeos mapeados (baixáveis sob demanda)
-
-| # | Vídeo | Canal | ID | Tema |
-|---|---|---|---|---|
-| F1 | **"Eduardo Bolsonaro opens up in interview with Paulo Figueiredo"** (18/05/2026) | EDUARDO BOLSONARO | kUehf_xO8co | Entrevista conjunta (os dois juntos) |
-| F2 | **LIVE ESPECIAL: Eduardo Bolsonaro e Paulo Figueiredo** (06/03/2024) | EDUARDO BOLSONARO | JhlBZeR7W7M | Live conjunta |
-| F3 | "Marco Rubio Blames Lula for Tariff Hike… THEY NEGOTIATED IN BAD FAITH" (16/07/2026) | Paulo Figueiredo Show | H67X_Et9_eU | Defesa da tese do tarifaço |
-| F4 | "This Is the Detail That Could Cost Flávio the Election" (15/07/2026) | Paulo Figueiredo Show | v1oaRPkyjZw | Figueiredo × Flávio (cap. 17) |
-| F5 | Lives conjuntas "DIRETO DO EUA" (espelhos) | Lenilberto Miranda | aAMtnmvkHs4 · VZ_LJgLwXBc | A dupla ao vivo |
-
-### REDES DO EDUARDO — YouTube (lives/discursos do canal próprio)
-
-| # | Vídeo | Data | ID |
+| # | Entrevista | Data | Sinopse |
 |---|---|---|---|
-| E1 | CPAC EUA 2025 (✅ já transcrito) | 20/02/2025 | ip7zRMwr7FM |
-| E2 | "Expondo ao mundo no CPAC todo o sistema de perseguição" | 27/03/2026 | 96JUnifysMU |
-| E3 | CPAC Hungria | 21/03/2026 | c8Ar4I6bIB0 |
-| E4 | Entrevista com Paulo Figueiredo (F1/F2 acima) | 2025 | kUehf_xO8co · JhlBZeR7W7M |
-| E5 | Entrevista Fox em inglês (sem legenda) | 01/12/2018 | SpQzpZZodmA |
-| E6 | CPAC Latino / Epoch (espelho canal dele) | — | w8EcCSFTqIw |
+| 1 | **CNN Brasil completa** ⭐ | 18/07/2025 | A entrevista-mãe do cap. 1: "se houver terra arrasada, estarei vingado" (08:43) + "nós restaremos vingados" no fecho. Mofa da diplomacia brasileira, defesa das sanções |
+| 2 | CNN Arena (corte) | 18/07/2025 | O corte de 2m51s veiculado no dia: "decisão repugnante", "ditadura", "anão diplomático" |
+| 3 | **War Room/Bannon** | 30/04/2025 | No palco-matriz: Moraes como "radical judge", pedido de sanções via Capitol Hill, a detenção de Jason Miller em 2021 |
+| 4 | **CPAC EUA 2025** (discurso) | 20/02/2025 | O discurso de apresentação por Bannon: "um homem chamado Alexandre de Moraes", a tática americana espelhada no Brasil |
+| 5 | **PBS NewsHour** | 12/07/2019 | Semana da oferta da embaixada: defende as falas do pai ("ela atacou primeiro"), comparações com Trump |
 
-### X (TWITTER) — o que dá para fazer
+---
+
+## ⏳ PERÍODO 1 — A construção da persona americana (2018–2024)
+
+| # | Entrevista | Data | Duração | Sinopse | Cap. V2 | ID |
+|---|---|---|---|---|---|---|
+| B1 | Fox/Lou Dobbs (canal dele, sem legenda) | 01/12/2018 | — | A primeira persona anglófona: "we will no longer be a socialist country", Moro, Guedes, alinhamento com Trump | 12 | SpQzpZZodmA |
+| B2 | **Epoch Times — "Purging Brazil of Socialism"** | 19/03/2019 | longa | A autoimagem ideológica completa: a "batalha para expurgar o socialismo", Olavo, a nova direita | 12, 14 | cWt6fwzyaCY |
+| B3 | Epoch Times CPAC 2020 | 06/03/2020 | — | China, Huawei e covid: a linha que meses depois vira crise diplomática | 15 | Zv2H7MeW-AU |
+| B4 | **Tucker Carlson Tonight (1ª)** | 22/09/2021 | — | "Liberdade individual e os perigos do marxismo"; o primeiro grande palco Fox | 6, 12 | tv8qjnvPxKQ |
+| B5 | Cyber Symposium (Mike Lindell) | 09/08/2021 | — | Palco de Bannon: a eleição brasileira como "a segunda mais importante do mundo" | 11 | Wzaq_DvTwJY |
+| B6 | Tucker Carlson (2ª, armas) | 01/07/2022 | — | Armas no Brasil; a pauta como ponte Brasil-EUA | 12 | Mfbv9dEQ0GM |
+| B7 | CPAC México pós-derrota | nov/2022 | — | A contestação da eleição do pai oferecida a plateia estrangeira (a localizar) | 11 | — |
+| B8 | **Tucker Carlson Network — "January 6th"** | 01/03/2024 | 10m12s | Compara o 8 de Janeiro ao Capitólio; a semente da narrativa internacional de 2025 | 6, 11 | 4z7JZFpMUSA |
+| B9 | **Jordan Peterson EP 498** | 14/11/2024 | **1h56m** | A grande entrevista anglófona: história do pai, a facada, censura, Musk × STF, "o Brasil vira Cuba?" | 6 | HBYbkMervk0 |
+| B10 | CPAC Hungria | 21/03/2026 | — | "Perseguição global" na franquia europeia da CPAC | 6 | c8Ar4I6bIB0 |
+| B11 | Leda Nagle ("novo AI-5", integral) | out/2019 | — | A referência ao AI-5 em contexto integral (a localizar) | 13 | — |
+| B12 | Palestra "soldado e um cabo" (íntegra) | 2018 | — | A fala original sobre fechar o STF (a localizar) | 13 | — |
+
+---
+
+## ⏳ PERÍODO 2 — A preparação da fuga (fev–jun 2025)
+
+| # | Entrevista | Data | Duração | Sinopse | Cap. V2 | ID |
+|---|---|---|---|---|---|---|
+| A3 | "Denuncia perseguição no Brasil" (Epoch, canal dele) | 27/02/2025 | 16m08s | Uma semana após a denúncia do pai (18/02): a decisão de sair se formando | 9, 10 | odMXvTSc8l8 |
+| A1 | **Epoch Times CPAC 2025** | 21/02/2025 | 18m45s | No corredor do CPAC: a denúncia da PGR contra Jair, a volta de Trump, o processo Rumble × Moraes | 3, 10 | ZfLeUthL-6g |
+| B4' | War Room EP 753 (2º ep.) | 23/04/2025 | — | A localizar (Rumble/warroom.org) | 3, 10 | — |
+| A7 | **Newsmax — "Trump, Jair and Brazil"** | 28/06/2025 | — | 10 dias antes do tarifaço: os pedidos a Trump em TV americana (a localizar) | 10 | — |
+| A8 | OAN / Matt Gaetz | 2025 | — | A localizar | 10 | — |
+
+---
+
+## ⏳ PERÍODO 3 — O tarifaço de 50% (jul–ago 2025) ⭐ O FOCO
+
+| # | Entrevista | Data | Duração | Sinopse | Cap. V2 | ID |
+|---|---|---|---|---|---|---|
+| A2 | **Epoch — "Por dentro dos esforços nos EUA"** | 01/07/2025 | 12m29s | **8 dias antes da carta**: os "esforços" em Washington narrados por ele mesmo — a campanha antes do estouro | 1, 10 | t5mbWUANxu8 |
+| 1✅ | **CNN Brasil completa** | 18/07/2025 | 22m50s | (transcrita — a frase canônica aos 08:43) | 1 | b2ceIvX7Sr4 |
+| 📝 | Gazeta/Folha (escrita, fichada) | 14–15/07/2025 | — | "Só anistia primeiro"; "ele pode aplicar para cima da esposa do Moraes"; "eu não tenho poder sobre o Trump" | 1, 10 | — |
+| 📝 | BBC (escrita, fichada) | 13/08/2025 | — | "Psicopata"; "Certamente… sanções" — conduta 8 do acórdão | 1, 2 | — |
+| 📝 | Reuters (escrita) | 14–15/08/2025 | — | "Mais sanções, talvez tarifas"; a reunião com Bessent no Tesouro | 10 | — |
+
+---
+
+## ⏳ PERÍODO 4 — Denúncia, cassação e degelo (set–dez 2025)
+
+| # | Entrevista | Data | Sinopse | Cap. V2 |
+|---|---|---|---|---|
+| 📝 | Reuters pós-condenação de Jair | 11/09/2025 | "Novas sanções prováveis" após a condenação do pai | 10 |
+| 📝 | War Room (volta como réu) | 24/11/2025 | 10 dias após virar réu: pede endurecimento das sanções a Bannon (via Gazeta) | 10, 2 |
+
+---
+
+## ⏳ PERÍODO 5 — Julgamento, green card e tarifaço de 25% (2026)
+
+| # | Entrevista | Data | Duração | Sinopse | Cap. V2 | ID |
+|---|---|---|---|---|---|---|
+| E2 | "Expondo ao mundo no CPAC" (canal dele) | 27/03/2026 | 6m31s | O sistema de perseguição narrado ao mundo na véspera da instrução da AP | 2 | 96JUnifysMU |
+| **F1** | **"Abre o jogo" com Paulo Figueiredo — DO BAHREIN** | **18/05/2026** | **57m49s** | **1 mês antes do julgamento**: a defesa da dupla sobre Vorcaro, o filme e "as mentiras da grande mídia" — a versão deles, completa | 2, 7 | kUehf_xO8co |
+| 📝 | Gazeta — "pedi pessoalmente a Trump" | 03/06/2026 | — | A admissão do pedido de Magnitsky contra Moraes e a esposa; nega pressão do tarifaço | 1, 17 | — |
+| A4 | **Jovem Pan — "Condenação fortalece Flávio"** | **16/06/2026** | 5m38s | **No dia do julgamento**: o STF condena e ele já transforma em palanque do irmão ("único capaz de reverter") | 2, 17 | BypQ-qtpdrg |
+| F4 | Figueiredo — "O detalhe que pode tirar a eleição de Flávio" | 15/07/2026 | 15m32s | O sócio avaliando a candidatura na semana do 2º tarifaço | 17 | v1oaRPkyjZw |
+| F3 | Figueiredo — "Rubio: NEGOCIARAM DE MÁ-FÉ" | 16/07/2026 | 21m21s | A defesa da tese do tarifaço de 25% pelo canal do sócio | 17 | H67X_Et9_eU |
+
+---
+
+## X (TWITTER) — o que dá para fazer
 
 **Já endereçados pelo acórdão (condutas 4–6, prova do STF):**
 - x.com/BolsonaroSP/status/1943104895105798524 — conclamação pela Magnitsky
 - x.com/pfigueiredo08/status/1943094648290902092 — a nota conjunta "Tarifa-Moraes"
 - x.com/BolsonaroSP/status/1946354443009552560 — "tem muito mais por vir"
 
-**Capacidades e limites (franco):**
-1. **Baixar vídeo de post específico do X: SIM** — yt-dlp baixa vídeos de status públicos (dou a URL, ele baixa e transcrevo).
-2. **Mapear a timeline inteira dele: depende.** O X fechou a API gratuita. Opções: (a) você me passa uma chave de API do X (se tiver); (b) exporto via ferramenta logada sua (baixar os "Seus dados" do X dele não dá — a conta é dele, não sua); (c) uso as ferramentas com login do Cérebro, se houver (verificar no Cofre); (d) mapeamento manual dos posts relevantes por busca (eu marco os que já estão nas ondas/acórdão — são ~15).
-3. **Proposta pragmática:** começo pelos posts já documentados (acórdão + ondas) e, se você conseguir uma chave de API do X, faço a timeline completa.
+**Capacidades:** vídeo de post específico do X = baixo e transcrevo (yt-dlp). Timeline completa = API no nível gratuito não lê (401); os posts relevantes já estão documentados no acórdão e nas ondas.
+
+---
+
+## Plano de execução
+1. **Lote F1+A4** (Bahrein 57min + Jovem Pan 16/06): as duas entrevistas do núcleo 2026 — baixar e transcrever já.
+2. **Lote A1–A3** (Epoch fev–jul 2025): o buildup narrado por ele.
+3. **Lote B** (Dobbs, Epoch 2019-20, Tucker ×3, Peterson): a persona.
+4. Caça: Newsmax 28/06/2025, War Room EP753, OAN, Leda Nagle, "soldado e um cabo" — com reforço GPT/Claude se o YouTube esconder.
