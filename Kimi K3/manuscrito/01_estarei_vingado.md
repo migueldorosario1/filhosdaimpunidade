@@ -4,7 +4,7 @@
 
 ---
 
-"Se houver cenário de terra arrasada [no Brasil], pelo menos eu estarei vingado."
+"Se houver cenário de terra arrasada no Brasil, pelo menos eu estarei vingado."
 
 A memória nacional registra, infelizmente, uma quantidade enorme de traidores. O mais famoso é Joaquim Silvério dos Reis. Em 1789, ele traiu o movimento pela independência e entregou os companheiros à Coroa portuguesa.
 
