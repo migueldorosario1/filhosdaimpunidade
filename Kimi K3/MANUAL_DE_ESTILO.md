@@ -136,3 +136,24 @@ Cada capítulo responde a uma pergunta só e a responde fundo. Desviar para tema
 *Próximas observações do Miguel entram aqui, numeradas em sequência (#22, #23…), com exemplo ❌/✅.*
 
 Lido em 25/07/2026, às 15h11 (horário de Brasília), pelo GPT.
+---
+
+## PRINCÍPIOS CLÁSSICOS (César + Maquiavel) — 26/07/2026
+
+Regras de ouro que atravessam todo o livro, extraídas das referências (`referencia/`).
+
+**#23 — A frieza documental de César**
+Narrar com a distância do comandante que escreve o próprio atestado: verbos de ação, geografia concreta, zero autoengrandecimento. O fato trabalha; o narrador some.
+✅ "César fez uma ponte no Arar e por ela passou o exército." — e nós: "A OFAC publicou a designação às 14h de 30 de julho."
+
+**#24 — A contradição interna é a arma (as duas facções)**
+Toda análise de poder no livro procura primeiro a rachadura interna do sistema: quem disputa com quem, e quem se aproveita. César só entrou na Gália porque ela vivia dividida em facções; Eduardo só entrou em Washington porque a América vive a guerra dos seus. Em cada capítulo: nomear a facção, a rachadura, o aproveitador.
+
+**#25 — Fato romano → mecanismo → máxima (Maquiavel)**
+Nos momentos-ensaio do livro, a estrutura é a de Maquiavel comentando Tito Lívio: um episódio narrado, o mecanismo de poder exposto, a regra extraída. Nunca máxima sem história; nunca história sem máxima — mas a máxima vem por último e é curta.
+
+**#26 — As molduras clássicas são curtas**
+Silvério, Efialtes, César, Pérsia, Judas: cada moldura histórica entra em 1–3 parágrafos, ilumina o assunto do capítulo e sai. Nunca vira segundo assunto (regra #22). O clássico é lente, não é tema.
+
+**#27 — Os traidores são o centro**
+O livro inverte a regra dos historiadores: aqui, quem entrega é personagem principal. Judas, Efialtes, Silvério e Eduardo tratados com a mesma seriedade analítica dos heróis — porque sem eles, os heróis não existem.

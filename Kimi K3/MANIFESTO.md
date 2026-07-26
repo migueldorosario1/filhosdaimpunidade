@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 17:50 BRT — ZCode/Kimi (+Miguel) — LIVRO INTEIRO V1: fundamento + caps. 1-3 escritos
+- Pedido do Miguel: escrever o livro inteiro (240k, primeira versão, com calma). Fundamento: MANUAL enriquecido (#23-#27 clássicos), TESE_CENTRAL.md, ARQUITETURA_V3.md (20 caps. com pergunta + moldura).
+- Escritos em `manuscrito/`: 00_frontmatter (folha de rosto, epígrafe de César, ficha técnica, sumário) + cap. 1 Estarei vingado v5.1 (Efialtes + César + Maquiavel no corpo) + cap. 2 Quatro a zero v1.1 (moldura Orgetórix + Fortuna) + cap. 3 Washington é aqui v1.0 (clientela romana/Diviciaco). Cada cap. fecha com bloco de produção (falta pesquisar/transcrever, notas, bibliografia, links).
+
 ## 2026-07-26 17:25 BRT — ZCode/Kimi — Livros de referência centralizados em `referencia/`
 - Arquivo(s): `referencia/cesar_guerra_da_galia_PT_wikisource.md`, `cesar_de_bello_gallico_EN_gutenberg10657.txt`, `maquiavel_comentarios_tito_livio_PT_archive.{txt,pdf}`, `maquiavel_comentarios_tito_livio_EN_gutenberg10827.txt`
 - Pedido do Miguel: César e Maquiavel movidos de `Kimi K3/bibliografia/` para junto do Machado e do Thompson, em `referencia/` (ficam fora do GitHub por tamanho; vão no sync do Drive).
