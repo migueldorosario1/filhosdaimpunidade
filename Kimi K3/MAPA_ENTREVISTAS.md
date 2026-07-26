@@ -94,6 +94,32 @@ Legenda: ✅ transcrito · ⏳ mapeado (baixar sob demanda) · 📝 fonte escrit
 
 ---
 
+
+
+---
+
+## 🗓️ ADENDO (26/07) — OS TRÊS TARIFAÇOS, DOCUMENTADOS (e onde a "terra arrasada" se encaixa)
+
+| # | Data | O quê | Status |
+|---|---|---|---|
+| **T1** | 02/04/2025 | Tarifa global de Trump ("Liberation Day") — 10% sobre o Brasil, sem motivo político declarado | Parcialmente revertida dias depois |
+| **T2** | **09/07/2025** | **A carta de 50% citando o julgamento de Jair ("witch hunt")** — formalizada pela EO 14323 (30/07), vigência 06/08 com isenções setoriais | **A frase da "terra arrasada" é de 18/07/2025 — 9 DIAS DEPOIS DESTA** ✅ |
+| **T3** | 15/07/2026 → 22/07/2026 | 25% via USTR (Seção 301): confirmada 15/07, em vigor 22/07/2026 | Em vigor |
+
+**Resposta à pergunta do Miguel:** a entrevista da "terra arrasada" (CNN, 18/07/2025) vem **na esteira do T2** — o tarifaço politizado de 50%. Não é de abril (T1) nem de agora (T3).
+
+## 🎙️ ENTREVISTAS EM INGLÊS na janela do T2 (jul–out 2025) — prioridade da caça
+
+| # | Entrevista | Idioma | Data | Status |
+|---|---|---|---|---|
+| EN1 | **Tucker Carlson Network — "ditadura judicial"** (>4 mi views, cita TIME) | EN | 2025 | ⚠️ NÃO está no YouTube — caçar na TCN/Rumble (pedir GPT/Claude com websearch) |
+| EN2 | **Newsmax — "Trump, Jair and Brazil"** | EN | 28/06/2025 | ⚠️ Caçar no site da Newsmax |
+| EN3 | Reuters — "warns more sanctions, maybe tariffs" | EN (texto) | 14/08/2025 | 📝 fichada nas ondas |
+| EN4 | Reuters — reunião no Tesouro (Bessent) | EN (texto) | 15/08/2025 | 📝 fichada nas ondas |
+| EN5 | War Room — volta como réu pedindo endurecimento | EN | 24/11/2025 | ⚠️ Caçar episódio exato no Rumble |
+| EN6 | OAN / Matt Gaetz | EN | 2025 | ⚠️ A localizar |
+| EN7 | Epoch Times (EN) — CPAC 2025 | EN | fev/2025 | Espelho EN da A1 (temos a versão BR) |
+
 ## Plano de execução
 1. **Lote F1+A4** (Bahrein 57min + Jovem Pan 16/06): as duas entrevistas do núcleo 2026 — baixar e transcrever já.
 2. **Lote A1–A3** (Epoch fev–jul 2025): o buildup narrado por ele.
