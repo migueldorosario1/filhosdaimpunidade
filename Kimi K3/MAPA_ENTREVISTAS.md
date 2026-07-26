@@ -19,11 +19,11 @@ Legenda: ✅ transcrito e na pasta `transcrições/` · ⏳ mapeado, a baixar/tr
 
 | # | Entrevista | Data provável | Veículo | ID | Cap. V2 |
 |---|---|---|---|---|---|
-| A1 | Epoch Times CPAC 2025 (Trump, Moraes, OEA) | fev/2025 | Epoch Times Brasil | ZfLeUthL-6g | 3, 10 |
-| A2 | "Por dentro dos esforços de Eduardo nos EUA" | 2025 | Epoch Times Brasil | t5mbWUANxu8 | 10 |
-| A3 | Entrevista nos EUA "denuncia perseguição" | 2025 | EDUARDO (canal) | odMXvTSc8l8 | 10 |
-| A4 | Condenação fortalece Flávio, diz Eduardo | 2026 | Jovem Pan News | BypQ-qtpdrg | 17, 20 |
-| A5 | Pânico (2 entrevistas) | 2025–26 | Pânico/Jovem Pan | Fiv3YFdhKAM · boCeNQYp0lQ | 10 |
+| A1 | Epoch Times CPAC 2025 (Trump, Moraes, OEA) | 21/02/2025 | Epoch Times Brasil | ZfLeUthL-6g | 3, 10 |
+| A2 | "Por dentro dos esforços de Eduardo nos EUA" | 01/07/2025 | Epoch Times Brasil | t5mbWUANxu8 | 10 |
+| A3 | Entrevista nos EUA "denuncia perseguição" | 27/02/2025 | EDUARDO (canal) | odMXvTSc8l8 | 10 |
+| A4 | Condenação fortalece Flávio, diz Eduardo | 16/06/2026 | Jovem Pan News | BypQ-qtpdrg | 17, 20 |
+| A5 | Pânico (2 entrevistas) | 30/04/2021 e 10/06/2022 | Pânico/Jovem Pan | Fiv3YFdhKAM · boCeNQYp0lQ | 10 |
 | A6 | War Room EP 753 (2º episódio) | 23/04/2025 | warroom.org (Rumble) | localizar | 3, 10 |
 | A7 | Newsmax "Trump, Jair and Brazil" | 28/06/2025 | Newsmax | localizar | 10 |
 | A8 | OAN / Matt Gaetz | 2025 | OAN | localizar | 10 |
@@ -33,16 +33,16 @@ Legenda: ✅ transcrito e na pasta `transcrições/` · ⏳ mapeado, a baixar/tr
 
 | # | Entrevista | Data | Veículo | ID | Cap. V2 |
 |---|---|---|---|---|---|
-| B1 | Lou Dobbs, Fox (1ª persona anglófona) | nov/2018 | Fox/canal dele | SpQzpZZodmA | 12 |
-| B2 | Epoch Times "Purging Brazil of Socialism" | 2019 | Epoch Times | cWt6fwzyaCY | 12, 14 |
-| B3 | Epoch Times CPAC 2020 (China/Huawei) | 2020 | Epoch Times | Zv2H7MeW-AU | 15 |
-| B4 | Tucker Carlson Tonight (1ª) | set/2021 | Fox | tv8qjnvPxKQ | 6, 12 |
-| B5 | Cyber Symposium (Mike Lindell) | ago/2021 | RSBN/espelho | Wzaq_DvTwJY | 11 |
-| B6 | Tucker Carlson (2ª, armas) | jun/2022 | Fox | Mfbv9dEQ0GM / 1prwTHsSq3k | 12 |
+| B1 | Lou Dobbs, Fox (1ª persona anglófona) | 01/12/2018 | Fox/canal dele | SpQzpZZodmA | 12 |
+| B2 | Epoch Times "Purging Brazil of Socialism" | 19/03/2019 | Epoch Times | cWt6fwzyaCY | 12, 14 |
+| B3 | Epoch Times CPAC 2020 (China/Huawei) | 06/03/2020 | Epoch Times | Zv2H7MeW-AU | 15 |
+| B4 | Tucker Carlson Tonight (1ª) | 22/09/2021 | Fox | tv8qjnvPxKQ | 6, 12 |
+| B5 | Cyber Symposium (Mike Lindell) | 09/08/2021 | RSBN/espelho | Wzaq_DvTwJY | 11 |
+| B6 | Tucker Carlson (2ª, armas) | 01/07/2022 | Fox | Mfbv9dEQ0GM / 1prwTHsSq3k | 12 |
 | B7 | CPAC México pós-derrota | nov/2022 | CPAC/espelho | localizar | 11 |
-| B8 | Tucker Carlson Network (8 de janeiro) | 2024 | TCN | 4z7JZFpMUSA | 6, 11 |
-| B9 | Jordan B. Peterson EP 498 | 2024 | JBP | HBYbkMervk0 | 6 |
-| B10 | CPAC Hungria | 2024–25 | canal dele | c8Ar4I6bIB0 | 6 |
+| B8 | Tucker Carlson Network (8 de janeiro) | 01/03/2024 | TCN | 4z7JZFpMUSA | 6, 11 |
+| B9 | Jordan B. Peterson EP 498 | 14/11/2024 | JBP | HBYbkMervk0 | 6 |
+| B10 | CPAC Hungria | 21/03/2026 | canal dele | c8Ar4I6bIB0 | 6 |
 | B11 | Leda Nagle ("novo AI-5", integral) | out/2019 | Leda Nagle | localizar | 13 |
 | B12 | Palestra "soldado e um cabo" (íntegra) | 2018 | a localizar | — | 13 |
 
@@ -65,10 +65,10 @@ Legenda: ✅ transcrito e na pasta `transcrições/` · ⏳ mapeado, a baixar/tr
 
 | # | Vídeo | Canal | ID | Tema |
 |---|---|---|---|---|
-| F1 | **"Eduardo Bolsonaro opens up in interview with Paulo Figueiredo"** | EDUARDO BOLSONARO | kUehf_xO8co | Entrevista conjunta (os dois juntos) |
-| F2 | **LIVE ESPECIAL: Eduardo Bolsonaro e Paulo Figueiredo** | EDUARDO BOLSONARO | JhlBZeR7W7M | Live conjunta |
-| F3 | "Marco Rubio Blames Lula for Tariff Hike… THEY NEGOTIATED IN BAD FAITH" | Paulo Figueiredo Show | H67X_Et9_eU | Defesa da tese do tarifaço |
-| F4 | "This Is the Detail That Could Cost Flávio the Election" | Paulo Figueiredo Show | v1oaRPkyjZw | Figueiredo × Flávio (cap. 17) |
+| F1 | **"Eduardo Bolsonaro opens up in interview with Paulo Figueiredo"** (18/05/2026) | EDUARDO BOLSONARO | kUehf_xO8co | Entrevista conjunta (os dois juntos) |
+| F2 | **LIVE ESPECIAL: Eduardo Bolsonaro e Paulo Figueiredo** (06/03/2024) | EDUARDO BOLSONARO | JhlBZeR7W7M | Live conjunta |
+| F3 | "Marco Rubio Blames Lula for Tariff Hike… THEY NEGOTIATED IN BAD FAITH" (16/07/2026) | Paulo Figueiredo Show | H67X_Et9_eU | Defesa da tese do tarifaço |
+| F4 | "This Is the Detail That Could Cost Flávio the Election" (15/07/2026) | Paulo Figueiredo Show | v1oaRPkyjZw | Figueiredo × Flávio (cap. 17) |
 | F5 | Lives conjuntas "DIRETO DO EUA" (espelhos) | Lenilberto Miranda | aAMtnmvkHs4 · VZ_LJgLwXBc | A dupla ao vivo |
 
 ### REDES DO EDUARDO — YouTube (lives/discursos do canal próprio)
@@ -76,10 +76,10 @@ Legenda: ✅ transcrito e na pasta `transcrições/` · ⏳ mapeado, a baixar/tr
 | # | Vídeo | Data | ID |
 |---|---|---|---|
 | E1 | CPAC EUA 2025 (✅ já transcrito) | 20/02/2025 | ip7zRMwr7FM |
-| E2 | "Expondo ao mundo no CPAC todo o sistema de perseguição" | 2025 | 96JUnifysMU |
-| E3 | CPAC Hungria | 2024–25 | c8Ar4I6bIB0 |
+| E2 | "Expondo ao mundo no CPAC todo o sistema de perseguição" | 27/03/2026 | 96JUnifysMU |
+| E3 | CPAC Hungria | 21/03/2026 | c8Ar4I6bIB0 |
 | E4 | Entrevista com Paulo Figueiredo (F1/F2 acima) | 2025 | kUehf_xO8co · JhlBZeR7W7M |
-| E5 | Entrevista Fox em inglês (sem legenda) | 2018–19 | SpQzpZZodmA |
+| E5 | Entrevista Fox em inglês (sem legenda) | 01/12/2018 | SpQzpZZodmA |
 | E6 | CPAC Latino / Epoch (espelho canal dele) | — | w8EcCSFTqIw |
 
 ### X (TWITTER) — o que dá para fazer
