@@ -18,6 +18,11 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 18:30 BRT — ZCode/Kimi — Manuscrito: Parte II completa (caps. 4-6) + etiquetas Kimi
+- `manuscrito/04_o_neto_do_ditador.md` (Kimi 4.10 — Figueiredo: linhagem, Trump Hotel, ITG/Guo, USTR) · `05_o_lobista.md` (Kimi 4.11 — Miller: Gettr, Guo, mercenários de Maquiavel) · `06_a_internacional_fascista.md` (Kimi 4.12 — o triunvirato doutrina/dinheiro/poder e o método "guerra cultural como negócio transnacional").
+- Etiquetas de versão aplicadas: cap. 1 = Kimi 4.7, cap. 2 = Kimi 4.8, cap. 3 = Kimi 4.9, e por diante. Manuscrito acumulado: ~60k chars de 240k.
+- Carta à Trindade (leitura crítica do manuscrito) publicada em Foruns/.
+
 ## 2026-07-26 17:50 BRT — ZCode/Kimi (+Miguel) — LIVRO INTEIRO V1: fundamento + caps. 1-3 escritos
 - Pedido do Miguel: escrever o livro inteiro (240k, primeira versão, com calma). Fundamento: MANUAL enriquecido (#23-#27 clássicos), TESE_CENTRAL.md, ARQUITETURA_V3.md (20 caps. com pergunta + moldura).
 - Escritos em `manuscrito/`: 00_frontmatter (folha de rosto, epígrafe de César, ficha técnica, sumário) + cap. 1 Estarei vingado v5.1 (Efialtes + César + Maquiavel no corpo) + cap. 2 Quatro a zero v1.1 (moldura Orgetórix + Fortuna) + cap. 3 Washington é aqui v1.0 (clientela romana/Diviciaco). Cada cap. fecha com bloco de produção (falta pesquisar/transcrever, notas, bibliografia, links).
