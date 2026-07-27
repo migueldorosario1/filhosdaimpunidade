@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 12:00 BRT — ZCode/Kimi — Lote T4: Epoch ×2 + CPAC Hungria transcritos
+- Arquivo(s): `transcrições/EPOCH_CPAC_21022025_TRANSCRICAO.md`, `EPOCH_perseguicao_27022025_TRANSCRICAO.md`, `CPAC_HUNGRIA_21032026_TRANSCRICAO.md`
+- Ouro: CPAC 2025 — "têm que ser mais rápidos do que a perseguição que ocorreu contra o Trump" (a lição americana aplicada ao Brasil) + a anistia pela senhora de 71 anos. Hungria 2026 (em inglês): "unfair election in 2022 with a lot of censorship" + "thanks God we have Trump". Restam: T5 (Dobbs, Leda, Epoch 2019) e T6 (Peterson).
+
 ## 2026-07-27 11:30 BRT — ZCode/Kimi — Lote T3: Tucker ×3 transcritos
 - Arquivo(s): `transcrições/TUCKER_22092021_TRANSCRICAO.md`, `TUCKER_01072022_TRANSCRICAO.md`, `TUCKER_TCN_01032024_TRANSCRICAO.md`
 - Ouro: Tucker 2022 (01/07/2022): "Brazil has the last pro-American government in Latin America… single most important ally in the Western Hemisphere" — a voz do patrono explicando por que o Brasil importava. Tucker 2024: "he's in jail for criticizing the Supreme Court" — a narrativa do "STF vilão global" sendo plantada. Próximo: T4 (Epoch extras).
