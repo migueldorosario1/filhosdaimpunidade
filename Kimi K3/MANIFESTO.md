@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 20:00 BRT — ZCode/Kimi — Manuscrito: Parte IV completa (caps. 9-16, Kimi 4.15-4.22)
+- Caps. 9 (Aqui estou livre — o estatuto medido em papéis) · 10 (Campanha de pressão — a fábrica de casus belli) · 11 (2022 — a derrota como ensaio geral) · 12 (Chanceler informal — a dupla diplomacia) · 13 (2018 — o recorde medido contra a produção) · 14 (Olavo/armas — as 3 esteiras do guerreiro) · 15 (Clã como sistema — a casa romana tropical) · 16 (O filho 03 — a lacuna honesta).
+- Manuscrito acumulado: ~95k chars de 240k (40%). Falta: Parte V (17-20) + aparatos.
+
 ## 2026-07-26 19:00 BRT — ZCode/Kimi — Manuscrito: Parte III completa (caps. 7-8) ⭐ exclusivos
 - `manuscrito/07_dark_horse.md` (Kimi 4.13 — o filme que não houve: R$ 134 mi pedidos, US$ 10,6 mi no Havengate, o SWIFT "Filme!", 72% nos EUA, Freeway/Budapeste, Vorcaro e a linha da PF) e `manuscrito/08_o_laboratorio_do_texas.md` (Kimi 4.14 — a colônia fundada 4 anos antes: Havengate 2020, as 3 entidades de 2023, Salarly/Faria Lima, Southlake e os 23 dias de fev/2026).
 - Manuscrito acumulado: ~66k chars de 240k (27%).
