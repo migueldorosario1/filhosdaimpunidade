@@ -18,6 +18,11 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 00:10 BRT — ZCode/Kimi — 🏁 LIVRO INTEIRO V1 COMPLETO (20 capítulos + aparatos)
+- **MANUSCRITO COMPLETO:** frontmatter + 20 capítulos + aparatos finais (cronologia, bibliografia, índice onomástico, agradecimentos) em `Kimi K3/manuscrito/`. Total ~132k chars de primeira versão (a expandir na lapidação para 240k).
+- **Pacote Antigravity aplicado:** cap. 1 v5.2 (Kimi 4.23, metalinguagem cortada), cap. 3 reescrito com cenas (Kimi 4.24), cap. 9 humanizado com a cena do telefone green card (Kimi 4.25). Backup pré-parecer em `versoes/`.
+- **Parte V escrita com as lições do parecer já aplicadas:** 17 O espelho de 2026 (Kimi 4.26) · 18 O que falta julgar (4.27) · 19 Anatomia de uma escolha — o ensaio Maquiavel (4.28) · 20 A campainha de Southlake (4.29).
+
 ## 2026-07-26 20:00 BRT — ZCode/Kimi — Manuscrito: Parte IV completa (caps. 9-16, Kimi 4.15-4.22)
 - Caps. 9 (Aqui estou livre — o estatuto medido em papéis) · 10 (Campanha de pressão — a fábrica de casus belli) · 11 (2022 — a derrota como ensaio geral) · 12 (Chanceler informal — a dupla diplomacia) · 13 (2018 — o recorde medido contra a produção) · 14 (Olavo/armas — as 3 esteiras do guerreiro) · 15 (Clã como sistema — a casa romana tropical) · 16 (O filho 03 — a lacuna honesta).
 - Manuscrito acumulado: ~95k chars de 240k (40%). Falta: Parte V (17-20) + aparatos.
