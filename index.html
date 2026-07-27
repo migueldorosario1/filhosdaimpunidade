@@ -1148,7 +1148,7 @@
       }
 
       const input = document.getElementById('manual-proposal-input');
-      voiceManualBaseText = input.value ? input.value.trim() + ' ' : '';
+      voiceManualAccumulatedText = input.value ? input.value.trim() : '';
 
       voiceManualRecognition = new SpeechRecognition();
       voiceManualRecognition.continuous = true;
@@ -1162,15 +1162,27 @@
       };
 
       voiceManualRecognition.onresult = function(event) {
-        let transcript = '';
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          transcript += event.results[i][0].transcript;
+        let currentSessionTranscript = '';
+        for (let i = 0; i < event.results.length; ++i) {
+          currentSessionTranscript += event.results[i][0].transcript;
         }
-        input.value = voiceManualBaseText + transcript;
+        if (voiceManualAccumulatedText.length > 0) {
+          input.value = voiceManualAccumulatedText + ' ' + currentSessionTranscript.trim();
+        } else {
+          input.value = currentSessionTranscript.trim();
+        }
+      };
+
+      voiceManualRecognition.onerror = function(event) {
+        console.warn('Voice manual error:', event.error);
       };
 
       voiceManualRecognition.onend = function() {
         if (voiceManualIsRecording) {
+          const input = document.getElementById('manual-proposal-input');
+          if (input) {
+            voiceManualAccumulatedText = input.value.trim();
+          }
           try { voiceManualRecognition.start(); } catch(e) {}
         }
       };
@@ -1573,7 +1585,7 @@
       document.getElementById('modal-ai-audit').classList.add('hidden');
     }
 
-    // Voice Dictation Routine for AI Audit
+    // Voice Dictation Routine for AI Audit (Robust Accumulation for Long Sessions)
     function toggleVoiceInput() {
       if (voiceIsRecording) {
         stopVoiceInput();
@@ -1590,7 +1602,7 @@
       }
       
       const textarea = document.getElementById('deepseek-instruction-input');
-      voiceBaseText = textarea.value ? textarea.value.trim() + ' ' : '';
+      voiceAccumulatedText = textarea.value ? textarea.value.trim() : '';
       
       voiceRecognition = new SpeechRecognition();
       voiceRecognition.continuous = true;
@@ -1604,11 +1616,15 @@
       };
 
       voiceRecognition.onresult = function(event) {
-        let transcript = '';
-        for (let i = event.resultIndex; i < event.results.length; ++i) {
-          transcript += event.results[i][0].transcript;
+        let currentSessionTranscript = '';
+        for (let i = 0; i < event.results.length; ++i) {
+          currentSessionTranscript += event.results[i][0].transcript;
         }
-        textarea.value = voiceBaseText + transcript;
+        if (voiceAccumulatedText.length > 0) {
+          textarea.value = voiceAccumulatedText + ' ' + currentSessionTranscript.trim();
+        } else {
+          textarea.value = currentSessionTranscript.trim();
+        }
       };
 
       voiceRecognition.onerror = function(event) {
@@ -1617,6 +1633,10 @@
 
       voiceRecognition.onend = function() {
         if (voiceIsRecording) {
+          const textarea = document.getElementById('deepseek-instruction-input');
+          if (textarea) {
+            voiceAccumulatedText = textarea.value.trim();
+          }
           try { voiceRecognition.start(); } catch(e) {}
         }
       };
