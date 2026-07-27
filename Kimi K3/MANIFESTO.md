@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 09:00 BRT — ZCode/Kimi — Lote T1 de transcrições concluído
+- Arquivo(s): `transcrições/EPOCH_esforcos_01072025_TRANSCRICAO.md` + `JOVEMPAN_16062026_TRANSCRICAO.md`
+- Epoch 01/07/2025 (12m29s): "a eleição de 2026 vai passar por sancionar o Alexandre de Moraes" — a campanha na voz dele, 8 dias antes da carta. Jovem Pan 16/06/2026 (5m38s, dia do julgamento): Rocky Balboa, "Flávio é o único capaz de conceder/lutar pela anistia", "sou exilado porque não tem condição de retornar" e a tese "condenado sem sequer ser citado" (que o acórdão desmonta: edital validado). Próximo: T2 (Bahrein, 57m49s).
+
 ## 2026-07-27 00:10 BRT — ZCode/Kimi — 🏁 LIVRO INTEIRO V1 COMPLETO (20 capítulos + aparatos)
 - **MANUSCRITO COMPLETO:** frontmatter + 20 capítulos + aparatos finais (cronologia, bibliografia, índice onomástico, agradecimentos) em `Kimi K3/manuscrito/`. Total ~132k chars de primeira versão (a expandir na lapidação para 240k).
 - **Pacote Antigravity aplicado:** cap. 1 v5.2 (Kimi 4.23, metalinguagem cortada), cap. 3 reescrito com cenas (Kimi 4.24), cap. 9 humanizado com a cena do telefone green card (Kimi 4.25). Backup pré-parecer em `versoes/`.
