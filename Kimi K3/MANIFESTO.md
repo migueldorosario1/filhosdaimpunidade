@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-26 19:00 BRT — ZCode/Kimi — Manuscrito: Parte III completa (caps. 7-8) ⭐ exclusivos
+- `manuscrito/07_dark_horse.md` (Kimi 4.13 — o filme que não houve: R$ 134 mi pedidos, US$ 10,6 mi no Havengate, o SWIFT "Filme!", 72% nos EUA, Freeway/Budapeste, Vorcaro e a linha da PF) e `manuscrito/08_o_laboratorio_do_texas.md` (Kimi 4.14 — a colônia fundada 4 anos antes: Havengate 2020, as 3 entidades de 2023, Salarly/Faria Lima, Southlake e os 23 dias de fev/2026).
+- Manuscrito acumulado: ~66k chars de 240k (27%).
+
 ## 2026-07-26 18:30 BRT — ZCode/Kimi — Manuscrito: Parte II completa (caps. 4-6) + etiquetas Kimi
 - `manuscrito/04_o_neto_do_ditador.md` (Kimi 4.10 — Figueiredo: linhagem, Trump Hotel, ITG/Guo, USTR) · `05_o_lobista.md` (Kimi 4.11 — Miller: Gettr, Guo, mercenários de Maquiavel) · `06_a_internacional_fascista.md` (Kimi 4.12 — o triunvirato doutrina/dinheiro/poder e o método "guerra cultural como negócio transnacional").
 - Etiquetas de versão aplicadas: cap. 1 = Kimi 4.7, cap. 2 = Kimi 4.8, cap. 3 = Kimi 4.9, e por diante. Manuscrito acumulado: ~60k chars de 240k.
