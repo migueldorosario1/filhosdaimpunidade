@@ -19,6 +19,7 @@
 - **Campo de Proposta de Regras (`textarea` + Voz):** Agora há um painel fixo no topo do Manual de Estilo onde você pode ditar por voz ou digitar novas diretrizes (ex: *#28 — Sempre que citar valores em dólares, incluir a conversão em R$*).
 - **Ditado por Voz Nativo:** Botão `🎤 Ditar Regra por Voz` com escuta contínua via Web Speech API.
 - **Persistência Local:** As novas regras são salvas no `localStorage` e exibidas em uma seção destacada no modal: **`Regras Adicionadas pelo Miguel (#28+)`**.
+- **Fix de Ditado Contínuo (Até 10 Minutos):** Resolvido o comportamento da Web Speech API do Chrome onde a detecção de silêncio a cada ~3 segundos resetava o estado da gravação e sobrescrevia o texto anterior. Agora o acumulador (`voiceAccumulatedText`) preserva todos os parágrafos já ditados no `onend`, permitindo gravações contínuas e acumulação de texto fluida por até 10 minutos tanto no DeepSeek V4 Pro quanto no Manual de Estilo.
 
 ---
 
