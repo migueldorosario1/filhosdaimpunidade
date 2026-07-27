@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 11:00 BRT — ZCode/Kimi (+Miguel) — Arquitetura V1 do VOL. 2 (O Malandro) preparada
+- Criado `Kimi K3/ARQUITETURA_VOL2_O_MALANDRO.md`: 5 partes, ~20 caps. curtos (espelhando a V3 do Vol. 1). Tese de trabalho: "o malandro é o sistema imunológico do clã — o que aprendeu a passar por tudo sem ser pego". Acervo mapeado por capítulo (Método do Primogênito 120k como espinha, Herdeiro V2, Dal Piva, ICL, Paes Manso, Intercept/Vorcaro/USTR compartilhados com o Vol. 1). Lacuna registrada: ondas 1–3 do Flávio (fazer na retomada).
+- Lote T3 (Tucker ×3) baixado e transcrevendo em background.
+
 ## 2026-07-27 10:30 BRT — ZCode/Kimi (+Miguel) — REDIVISÃO DO LIVRO EM 23 CAPÍTULOS CURTOS
 - **Decisão do Miguel:** capítulos menores ("ninguém está conseguindo ler muito"). Cap. 1 → caps. 1–3 (Estarei vingado / Tarifa-Moraes / Pena de morte financeira, Kimi 4.30–4.32). Cap. 2 → caps. 4–5 (Quatro a zero / Nove condutas, Kimi 4.33–4.34). Demais renumerados 6–23. Referências internas e sumário atualizados. ARQUITETURA_V3 ganhou nota V3.1.
 - **Aviso ao site (Antigravity):** a estrutura mudou — o leitor deve carregar 23 capítulos, não 20. Arquivo de aviso em `Foruns/aviso_reestruturacao_23_capitulos.md`.
