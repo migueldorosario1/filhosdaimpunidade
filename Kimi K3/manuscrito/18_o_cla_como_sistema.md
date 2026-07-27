@@ -38,7 +38,7 @@ O que se pode dizer da casa sem imputar nada a ninguém: ela transformava vida p
 
 César, ao descrever as casas nobres da Gália, notou que elas forneciam a ele tanto os aliados quanto os conjurados — a mesma estrutura, dois usos. A casa Bolsonaro forneceu ao Brasil um presidente, um senador, um vereador e um deputado recorde de votos. E forneceu a Eduardo o kit completo da facção: o sobrenome, a estrutura, o método e a certeza de que o público e o doméstico são a mesma coisa.
 
-A pergunta que o capítulo 19 vai responder é a que fica desta: quando a casa confunde o público com o doméstico, vender o país passa a ser, na lógica da casa, apenas um negócio de família.
+A pergunta que o capítulo 22 vai responder é a que fica desta: quando a casa confunde o público com o doméstico, vender o país passa a ser, na lógica da casa, apenas um negócio de família.
 
 ---
 

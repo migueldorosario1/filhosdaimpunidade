@@ -43,3 +43,9 @@
 | 20 | **A campainha de Southlake** | O que ele continuará fazendo enquanto não volta — e em nome de quem? | O relógio de Roma |
 
 **Cada capítulo fecha com um bloco de produção:** "o que falta pesquisar · notas · bibliografia · links · o que falta transcrever".
+
+---
+
+## NOTA V3.1 — Divisão em 23 capítulos curtos (27/07/2026, decisão do Miguel)
+
+O livro passa de 20 para **23 capítulos**: o antigo cap. 1 (14,7k) virou os caps. **1 Estarei vingado · 2 Tarifa-Moraes · 3 Pena de morte financeira**; o antigo cap. 2 (12,3k) virou os caps. **4 Quatro a zero · 5 Nove condutas**. Racional (Miguel): capítulo curto é o formato que se lê hoje — ninguém aguenta capítulo grande. Demais capítulos redivididos: 6–23. O alvo de 240k passa a ser atingido com ~10,4k/cap. de corpo + aparatos, e as expansões da lapidação entram como acréscimo por capítulo, não como inchaço.

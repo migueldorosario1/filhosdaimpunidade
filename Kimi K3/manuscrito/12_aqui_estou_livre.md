@@ -40,7 +40,7 @@ O green card merece um capítulo dentro do capítulo, porque ele é a peça mais
 
 A categoria EB-1A exige "habilidade extraordinária" demonstrada por prêmios, reconhecimento público, repercussão internacional ou contribuições relevantes — e, notoriamente, não exige investimento nem empregador. Fernando Boscardin, que afirma ter recebido o mesmo visto em 2017 com um processo de cerca de 760 páginas de documentos, pergunta o óbvio: quais realizações concretas de Eduardo preencheriam os requisitos, se atividade política não é categoria autônoma? E nota um detalhe da foto do documento divulgada: o campo da categoria migratória foi ocultado. São perguntas dele, não fatos — e este livro as reproduz como perguntas, porque o arquivo migratório de Eduardo não é público.
 
-O que é público: um advogado especializado em imigração por investimento, Paulo Calixto, o gestor do Havengate, orbitava a estrutura de Eduardo desde 2020. Quem preparou a petição EB-1A, com que evidências, e quem pagou os honorários? São as perguntas que este capítulo deixa abertas na mesa — e que o capítulo 18, o do contencioso, retoma.
+O que é público: um advogado especializado em imigração por investimento, Paulo Calixto, o gestor do Havengate, orbitava a estrutura de Eduardo desde 2020. Quem preparou a petição EB-1A, com que evidências, e quem pagou os honorários? São as perguntas que este capítulo deixa abertas na mesa — e que o capítulo 21, o do contencioso, retoma.
 
 ---
 

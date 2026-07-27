@@ -40,7 +40,7 @@ A sofisticação da fábrica estava no revestimento jurídico. Nada era "pedido 
 
 César registrou seu pretexto com a mesma naturalidade com que registrou os rios que cruzava. Eduardo registrou o dele em entrevistas, lives e tuítes — a fábrica não precisava de sigilo porque operava à vista, confiante de que a linguagem de guerra cultural era camuflagem suficiente.
 
-A Justiça brasileira leu a fábrica inteira e deu a ela um nome jurídico: coação no curso do processo, em nove ocasiões. O capítulo 2 já contou o veredito. Este capítulo contou a montagem. O próximo conta de onde vinha a matéria-prima: a derrota que não acabou.
+A Justiça brasileira leu a fábrica inteira e deu a ela um nome jurídico: coação no curso do processo, em nove ocasiões. Os capítulos 4 e 5 já contaram o veredito. Este capítulo contou a montagem. O próximo conta de onde vinha a matéria-prima: a derrota que não acabou.
 
 ---
 

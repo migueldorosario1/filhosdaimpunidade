@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 10:30 BRT — ZCode/Kimi (+Miguel) — REDIVISÃO DO LIVRO EM 23 CAPÍTULOS CURTOS
+- **Decisão do Miguel:** capítulos menores ("ninguém está conseguindo ler muito"). Cap. 1 → caps. 1–3 (Estarei vingado / Tarifa-Moraes / Pena de morte financeira, Kimi 4.30–4.32). Cap. 2 → caps. 4–5 (Quatro a zero / Nove condutas, Kimi 4.33–4.34). Demais renumerados 6–23. Referências internas e sumário atualizados. ARQUITETURA_V3 ganhou nota V3.1.
+- **Aviso ao site (Antigravity):** a estrutura mudou — o leitor deve carregar 23 capítulos, não 20. Arquivo de aviso em `Foruns/aviso_reestruturacao_23_capitulos.md`.
+
 ## 2026-07-27 09:30 BRT — ZCode/Kimi — Lote T2: Bahrein transcrito (57m49s, 1.684 linhas)
 - Arquivo(s): `transcrições/BAHREIN_eduardo_figueiredo_18052026_TRANSCRICAO.md`
 - A defesa da dupla sobre Vorcaro/filme: Eduardo nega conversas com Vorcaro ("não há qualquer possibilidade… nem no contexto do filme") e delega a Flávio a conversa "monotemática, só sobre o filme". Próximo: T3 (Tucker ×3).

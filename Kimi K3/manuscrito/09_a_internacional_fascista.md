@@ -40,7 +40,7 @@ O que essa estrutura produziu de mais duradouro não foi a tarifa, nem a sançã
 
 O método é simples de nomear, e este livro o nomeia assim: a guerra cultural como negócio transnacional. Você transforma o conflito doméstico em mercadoria internacional — censura, perseguição, civilização em risco; exporta para uma rede que o recicla em pauta, doação e pressão de Estado; e importa de volta o resultado como poder: tarifa, sanção, palanque eleitoral. Eduardo não inventou o método. Bannon, Guo e o circuito CPAC já operavam variações dele na Hungria, na Espanha, na Itália. Eduardo foi o franqueado brasileiro que o levou mais longe: o primeiro a converter a exportação em sanção real contra o próprio país.
 
-César, ao voltar das Gálias, encontrou a República dividida e soube o que fazer com ela. O triunvirato de Eduardo voltou ao Brasil de 2026 com a mesma certeza. O capítulo 17 conta o que aconteceu quando os dois sócios da liga tiveram de escolher, em público, entre a tarifa e a eleição.
+César, ao voltar das Gálias, encontrou a República dividida e soube o que fazer com ela. O triunvirato de Eduardo voltou ao Brasil de 2026 com a mesma certeza. O capítulo 20 conta o que aconteceu quando os dois sócios da liga tiveram de escolher, em público, entre a tarifa e a eleição.
 
 ---
 
