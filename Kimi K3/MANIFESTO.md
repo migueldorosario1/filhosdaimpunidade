@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 09:30 BRT — ZCode/Kimi — Lote T2: Bahrein transcrito (57m49s, 1.684 linhas)
+- Arquivo(s): `transcrições/BAHREIN_eduardo_figueiredo_18052026_TRANSCRICAO.md`
+- A defesa da dupla sobre Vorcaro/filme: Eduardo nega conversas com Vorcaro ("não há qualquer possibilidade… nem no contexto do filme") e delega a Flávio a conversa "monotemática, só sobre o filme". Próximo: T3 (Tucker ×3).
+
 ## 2026-07-27 09:00 BRT — ZCode/Kimi — Lote T1 de transcrições concluído
 - Arquivo(s): `transcrições/EPOCH_esforcos_01072025_TRANSCRICAO.md` + `JOVEMPAN_16062026_TRANSCRICAO.md`
 - Epoch 01/07/2025 (12m29s): "a eleição de 2026 vai passar por sancionar o Alexandre de Moraes" — a campanha na voz dele, 8 dias antes da carta. Jovem Pan 16/06/2026 (5m38s, dia do julgamento): Rocky Balboa, "Flávio é o único capaz de conceder/lutar pela anistia", "sou exilado porque não tem condição de retornar" e a tese "condenado sem sequer ser citado" (que o acórdão desmonta: edital validado). Próximo: T2 (Bahrein, 57m49s).
