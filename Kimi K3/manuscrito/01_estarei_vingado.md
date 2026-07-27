@@ -2,6 +2,8 @@
 
 *Por que um deputado comemorou a punição econômica ao próprio país?*
 
+*Versão de produção: Kimi 4.7*
+
 ---
 
 "Se houver cenário de terra arrasada no Brasil, pelo menos eu estarei vingado."

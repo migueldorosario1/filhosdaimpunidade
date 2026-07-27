@@ -2,6 +2,8 @@
 
 *Quem abriu as portas do poder americano para Eduardo Bolsonaro?*
 
+*Versão de produção: Kimi 4.9*
+
 ---
 
 Roma não governava a Gália com legiões em cada aldeia. Governava com clientelas: o chefe local que jurava amizade ao povo romano, e em troca recebia título, proteção e acesso. O rei sequano Diviciaco ganhou do Senado o título de "amigo" e usou-o durante anos — até o dia em que o jugo apertou. A clientela é a invenção mais barata do império: em vez de ocupar, coopta.

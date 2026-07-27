@@ -2,6 +2,8 @@
 
 *O que a Justiça brasileira decidiu sobre a campanha de Eduardo Bolsonaro*
 
+*Versão de produção: Kimi 4.8*
+
 ---
 
 No primeiro livro dos Comentários, Júlio César conta como descobriu uma conspiração contra si dentro da Gália. O chefe helvécio Orgetórix, "o maior potentado por sua linhagem e riquezas", convocou a nobreza e a persuadiu com uma promessa simples: juntos, os três povos mais fortes dominariam toda a Gália. A conjuração foi denunciada antes do golpe. Orgetórix morreu — na versão dos compatriotas, por suicídio. César não celebra a descoberta; apenas a registra, com a frieza de quem sabe que conspiradores também têm linhagem, riqueza e razões próprias.
