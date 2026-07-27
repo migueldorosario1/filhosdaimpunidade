@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 11:30 BRT — ZCode/Kimi — Lote T3: Tucker ×3 transcritos
+- Arquivo(s): `transcrições/TUCKER_22092021_TRANSCRICAO.md`, `TUCKER_01072022_TRANSCRICAO.md`, `TUCKER_TCN_01032024_TRANSCRICAO.md`
+- Ouro: Tucker 2022 (01/07/2022): "Brazil has the last pro-American government in Latin America… single most important ally in the Western Hemisphere" — a voz do patrono explicando por que o Brasil importava. Tucker 2024: "he's in jail for criticizing the Supreme Court" — a narrativa do "STF vilão global" sendo plantada. Próximo: T4 (Epoch extras).
+
 ## 2026-07-27 11:00 BRT — ZCode/Kimi (+Miguel) — Arquitetura V1 do VOL. 2 (O Malandro) preparada
 - Criado `Kimi K3/ARQUITETURA_VOL2_O_MALANDRO.md`: 5 partes, ~20 caps. curtos (espelhando a V3 do Vol. 1). Tese de trabalho: "o malandro é o sistema imunológico do clã — o que aprendeu a passar por tudo sem ser pego". Acervo mapeado por capítulo (Método do Primogênito 120k como espinha, Herdeiro V2, Dal Piva, ICL, Paes Manso, Intercept/Vorcaro/USTR compartilhados com o Vol. 1). Lacuna registrada: ondas 1–3 do Flávio (fazer na retomada).
 - Lote T3 (Tucker ×3) baixado e transcrevendo em background.
