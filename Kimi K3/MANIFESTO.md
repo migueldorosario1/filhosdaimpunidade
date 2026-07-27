@@ -18,6 +18,10 @@
 - Arquivo(s) tocado(s): `Kimi K3/cap01_experimental_antigravity.md`, `Foruns/resposta_antigravity_experimental.md`
 - experimental: cap. 1 — versão própria para o duelo de elegância (pedido do Miguel). Capítulo reescrito do início ao fim com arquitetura de frase machadiana (média ~20 palavras/frase, cadência decrescente com golpe de impacto), ironia por factualidade e detalhe gonzo disciplinado (Thompson), 0 alertas no auditor de estilo `verifica_estilo.py` e manutenção estrita de 100% dos fatos, datas e cotações das fichas.
 
+## 2026-07-27 12:30 BRT — ZCode/Kimi — Lote T5: Dobbs + Epoch Purging + Leda AI-5 + Leda 2021
+- Arquivo(s): `transcrições/DOBBS_FOX_01122018_TRANSCRICAO.md`, `EPOCH_purging_19032019_TRANSCRICAO.md`, `LEDA_AI5_CONTEXTO_TRANSCRICAO.md`, `LEDA_NAGLE_21052021_TRANSCRICAO.md`
+- **A joia do lote:** o corte do AI-5 com a PRÓPRIA LEDA NAGLE contando o contexto — a pergunta era hipotética (Chile/Argentina), a resposta tinha condicional ("ele não defendeu"), e o pavor dela com a repercussão. O contraditório completo do cap. 16. Resta: T6 (Peterson, 1h56m).
+
 ## 2026-07-27 12:00 BRT — ZCode/Kimi — Lote T4: Epoch ×2 + CPAC Hungria transcritos
 - Arquivo(s): `transcrições/EPOCH_CPAC_21022025_TRANSCRICAO.md`, `EPOCH_perseguicao_27022025_TRANSCRICAO.md`, `CPAC_HUNGRIA_21032026_TRANSCRICAO.md`
 - Ouro: CPAC 2025 — "têm que ser mais rápidos do que a perseguição que ocorreu contra o Trump" (a lição americana aplicada ao Brasil) + a anistia pela senhora de 71 anos. Hungria 2026 (em inglês): "unfair election in 2022 with a lot of censorship" + "thanks God we have Trump". Restam: T5 (Dobbs, Leda, Epoch 2019) e T6 (Peterson).
