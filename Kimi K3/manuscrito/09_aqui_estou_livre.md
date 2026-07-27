@@ -2,7 +2,7 @@
 
 *O que é viver fora do país sem mandado e sem volta?*
 
-*Versão de produção: Kimi 4.15*
+*Versão de produção: Kimi 4.25 (cena humana — parecer Antigravity)*
 
 ---
 
@@ -18,7 +18,9 @@ Em 18 de março de 2025, Eduardo pediu licença de 120 dias do mandato e anuncio
 
 Em 2 de janeiro de 2026, a Polícia Federal ordenou o "retorno imediato" de Eduardo ao cargo de escrivão — sem mandato, a licença da função policial caducara. Ele não se apresentou. Em 21 de julho de 2026, a PF concluiu o processo disciplinar pela demissão por abandono. O ato dependia da assinatura do ministro da Justiça e da publicação.
 
-Em 20 de julho de 2026, Eduardo telefonou para a Reuters com a notícia: o governo americano concedera-lhe a residência permanente na categoria EB-1A, reservada a pessoas de "habilidade extraordinária". O processo, disse, começara um ano antes — quando ele ainda era deputado e dizia em vídeo que voltaria. Ao fim da ligação, a frase que resume o estatuto: "At least here I am free".
+Em 20 de julho de 2026, uma segunda-feira, o telefone de Eduardo tocou do outro lado da linha com o número da Reuters. Ele atendeu de dentro da casa de Southlake — o subúrbio planejado de Dallas onde os gramados são regados por lei e as bandeiras americanas enfeitam as fachadas como decoração padrão. Do outro lado, o repórter perguntou se era verdade. Era, ele disse. O governo americano concedera-lhe a residência permanente na categoria EB-1A, reservada a pessoas de "habilidade extraordinária". O processo, contou, começara um ano antes — quando ele ainda era deputado e dizia em vídeo que voltaria. A conversa foi curta. Antes de desligar, ele resumiu o estatuto novo numa frase em inglês, a língua em que vivia agora: "At least here I am free".
+
+Pelo menos aqui estou livre.
 
 Pelo menos aqui estou livre.
 

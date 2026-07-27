@@ -2,7 +2,7 @@
 
 *Por que um deputado comemorou a punição econômica ao próprio país?*
 
-*Versão de produção: Kimi 4.7*
+*Versão de produção: Kimi 4.23 (revisão do pacote Antigravity)*
 
 ---
 
@@ -30,7 +30,7 @@ A âncora perguntou como ele recebera a decisão de Alexandre de Moraes.
 
 Eduardo chamou-a de repugnante. Disse que o Brasil não era mais uma democracia. Zombou da diplomacia do próprio país. O chanceler estava na Irlanda, contou. A embaixadora em Washington tirava férias. Numa reunião de que participara dias antes, dentro do Departamento de Estado, ninguém entre "oito integrantes de altíssimo nível" soube dizer o nome dela. "Esse é o tamanho da insignificância do Brasil", disse. "Os dias de anão diplomático."
 
-Aos oito minutos e quarenta e três segundos, veio a frase que este livro não pode ignorar:
+Aos oito minutos e quarenta e três segundos, veio a frase:
 
 "O Trump não vai recuar diante de Alexandre de Moraes. Perfeito, se houver o cenário de terra arrasada, pelo menos eu estarei vingado desses ditadores de toga."
 
@@ -98,7 +98,7 @@ A engenharia que ele e Figueiredo montaram desabou em silêncio, sete meses depo
 
 ---
 
-Os próximos capítulos contam essa história. Antes, porém, é preciso registrar o que a Justiça brasileira decidiu sobre ela. É o que vem a seguir.
+Antes, porém, é preciso registrar o que a Justiça brasileira decidiu sobre ela.
 
 ---
 
