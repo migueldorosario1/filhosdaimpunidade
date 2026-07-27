@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Filhos da Impunidade — Central Editorial (Vol. 1: 23 Caps + Vol. 2: O Malandro)</title>
-  <meta name="description" content="Central editorial e revisor do livro Filhos da Impunidade, por Miguel do Rosário. Leitor V7 com 23 capítulos do Vol. 1 e estrutura canônica do Vol. 2 (O Malandro).">
+  <title>Filhos da Impunidade — Central Editorial (V8 Inteligente + Manual de Estilo Interativo)</title>
+  <meta name="description" content="Central editorial e revisor do livro Filhos da Impunidade, por Miguel do Rosário. Leitor V8 com 23 capítulos do Vol. 1, estrutura do Vol. 2 e Manual de Estilo Interativo com propostas por voz.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,17 +68,17 @@
     
     .prose-book h1 {
       font-family: 'Cinzel', serif;
-      font-size: 2.25rem;
+      font-size: 2rem;
       font-weight: 700;
       color: #f3e9d2;
       margin-top: 1rem;
       margin-bottom: 1rem;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
     }
     
     .prose-book h2 {
       font-family: 'Cinzel', serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #d4af37;
       margin-top: 2rem;
       margin-bottom: 1rem;
@@ -86,7 +86,7 @@
 
     .prose-book h3 {
       font-family: 'Cinzel', serif;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #e2e8f0;
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
@@ -107,6 +107,51 @@
     .prose-book hr {
       border-color: rgba(212, 175, 55, 0.2);
       margin: 2.5rem 0;
+    }
+
+    /* CUSTOM STYLES FOR MANUAL DE ESTILO MODAL (ELEGANT TYPOGRAPHY & NO OVERFLOW) */
+    .prose-manual {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .prose-manual h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem !important;
+      font-weight: 700;
+      color: #f3e9d2;
+      line-height: 1.35 !important;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      padding-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .prose-manual h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem !important;
+      color: #d4af37;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3 !important;
+    }
+
+    .prose-manual p {
+      font-size: 0.925rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 0.75rem;
+      text-align: left;
+    }
+
+    .prose-manual blockquote {
+      border-left: 3px solid #a855f7;
+      background: rgba(168, 85, 247, 0.08);
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: #e9d5ff;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin-bottom: 1.25rem;
     }
 
     .glass-panel {
@@ -161,7 +206,7 @@
         <div>
           <div class="flex items-center gap-2">
             <span class="text-xs uppercase tracking-widest font-mono text-brand-500 font-semibold">Filhos da Impunidade</span>
-            <span id="volume-badge-tag" class="text-xs bg-amber-400/10 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30 font-mono">Vol. 1 V7 (23 Caps)</span>
+            <span id="volume-badge-tag" class="text-xs bg-amber-400/10 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30 font-mono">Vol. 1 V8 (23 Caps)</span>
           </div>
           <h1 id="volume-title-display" class="text-lg md:text-xl font-bold font-display tracking-tight text-white">Vol. 1: O Foragido (Eduardo)</h1>
         </div>
@@ -169,7 +214,7 @@
         <!-- VOLUME SELECTION SWITCHER -->
         <div class="ml-2 flex items-center gap-1 bg-black/60 p-1 rounded-xl border border-white/10 text-xs font-mono">
           <button id="btn-vol1-v7" onclick="switchVolume('vol1_v7')" class="px-3 py-1.5 rounded-lg transition font-semibold bg-brand-500 text-black shadow">
-            Vol. 1 (23 Caps • V7)
+            Vol. 1 (23 Caps • V8)
           </button>
           <button id="btn-vol2-v1" onclick="switchVolume('vol2_v1')" class="px-3 py-1.5 rounded-lg transition font-medium text-slate-400 hover:text-emerald-400">
             Vol. 2: O Malandro 📌
@@ -196,9 +241,9 @@
           <span class="hidden sm:inline">Central de Fontes</span>
         </button>
 
-        <button onclick="openManualModal()" class="flex items-center gap-1.5 px-3 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-medium text-slate-200 transition">
+        <button onclick="openManualModal()" class="flex items-center gap-1.5 px-3 py-2 bg-purple-950/80 hover:bg-purple-900 border border-purple-500/50 rounded-xl text-xs font-medium text-purple-200 transition shadow">
           <i data-lucide="book-marked" class="w-4 h-4 text-purple-400"></i>
-          <span class="hidden sm:inline">Manual de Estilo</span>
+          <span class="hidden sm:inline">Manual de Estilo (#1-#27+)</span>
         </button>
       </div>
 
@@ -370,6 +415,14 @@
           <textarea id="deepseek-instruction-input" rows="3" class="w-full bg-cardbg border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Ex: 'Aplique a regra #19 para cortar metalinguagem vazia no parágrafo 3', ou dite a reescrita por voz..."></textarea>
         </div>
 
+        <!-- MANUAL UPDATE CHECKBOX PROMPT -->
+        <div class="flex items-center gap-2 bg-purple-950/40 p-3 rounded-xl border border-purple-500/30">
+          <input type="checkbox" id="chk-update-manual-style" class="w-4 h-4 rounded border-purple-500 text-purple-600 focus:ring-purple-500 bg-cardbg cursor-pointer">
+          <label for="chk-update-manual-style" class="text-xs text-purple-200 font-medium cursor-pointer">
+            💡 <strong>Site Inteligente:</strong> Se esta reescrita alterar uma norma de escrita, registrar também como nova diretriz no Manual de Estilo.
+          </label>
+        </div>
+
         <div class="flex items-center justify-end gap-3">
           <button onclick="runDeepSeekV4Instruction()" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-xl text-xs font-semibold flex items-center gap-2 shadow-lg">
             <i data-lucide="play" class="w-4 h-4"></i>
@@ -381,10 +434,16 @@
         <div id="deepseek-output-results" class="hidden border-t border-white/10 pt-6 space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-xs font-mono uppercase text-purple-300 font-bold">Resultado da Revisão:</span>
-            <button onclick="saveDeepSeekRevision()" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow">
-              <i data-lucide="save" class="w-4 h-4"></i>
-              <span>Salvar como Nova Revisão R#</span>
-            </button>
+            <div class="flex items-center gap-2">
+              <button id="btn-save-as-manual-rule" onclick="convertLastAiToManualRule()" class="hidden px-3.5 py-1.5 bg-purple-800 hover:bg-purple-700 text-purple-200 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow">
+                <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+                <span>Adicionar ao Manual de Estilo</span>
+              </button>
+              <button onclick="saveDeepSeekRevision()" class="px-4 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow">
+                <i data-lucide="save" class="w-4 h-4"></i>
+                <span>Salvar como Nova Revisão R#</span>
+              </button>
+            </div>
           </div>
           <div id="deepseek-preview-box" class="glass-card rounded-2xl p-6 prose-book text-sm max-h-[350px] overflow-y-auto">
             <!-- Output Preview -->
@@ -420,17 +479,19 @@
     </div>
   </div>
 
-  <!-- MODAL DE MANUAL DE ESTILO -->
-  <div id="modal-manual" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div class="glass-panel border border-purple-500/30 rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
-      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-purple-950/30">
+  <!-- MODAL DE MANUAL DE ESTILO INTERATIVO & CORRIGIDO -->
+  <div id="modal-manual" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="glass-panel border border-purple-500/40 rounded-3xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <!-- MODAL HEADER -->
+      <div class="p-5 border-b border-white/10 flex items-center justify-between bg-purple-950/40">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-400">
+          <div class="w-10 h-10 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300">
             <i data-lucide="book-marked" class="w-6 h-6"></i>
           </div>
           <div>
-            <h3 class="text-lg font-bold font-display text-white">Manual de Estilo (#1 ao #27)</h3>
-            <p class="text-xs text-purple-300">Regras canônicas vigentes para a escrita do Miguel do Rosário</p>
+            <h3 class="text-lg font-bold font-display text-white">Manual de Estilo & Diretrizes de Escrita</h3>
+            <p class="text-xs text-purple-300">Regras canônicas vigentes (#1 ao #27) + Propostas do Miguel (#28+)</p>
           </div>
         </div>
         <button onclick="closeManualModal()" class="text-slate-400 hover:text-white p-1">
@@ -439,9 +500,43 @@
       </div>
 
       <div class="p-6 overflow-y-auto space-y-6 flex-1">
-        <div id="manual-estilo-content" class="prose-book text-sm max-w-none">
-          <!-- Rendered Manual de Estilo -->
+        
+        <!-- INTERACTIVE PROPOSAL CARD -->
+        <div class="glass-panel border border-purple-500/40 rounded-2xl p-5 bg-purple-950/20 space-y-4 shadow-lg">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-purple-300 uppercase tracking-wider flex items-center gap-2">
+              <i data-lucide="plus-circle" class="w-4 h-4 text-purple-400"></i> 💡 Propor Nova Regra ou Alteração de Estilo (#28+)
+            </span>
+            <button id="btn-voice-manual" onclick="toggleVoiceManualProposal()" class="px-3 py-1.5 bg-purple-800 hover:bg-purple-700 text-purple-200 rounded-lg text-xs font-mono flex items-center gap-1.5 transition">
+              <i data-lucide="mic" class="w-3.5 h-3.5"></i>
+              <span id="voice-manual-btn-text">Ditar Regra por Voz</span>
+            </button>
+          </div>
+          <textarea id="manual-proposal-input" rows="2" class="w-full bg-cardbg border border-purple-500/30 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-purple-400 font-sans" placeholder="Ex: '#28 — 27/07/2026 · Sempre que citar valores em dólares, acrescentar a conversão aproximada em R$ entre parênteses.'"></textarea>
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] text-slate-400 italic">As novas regras ficam salvas no sistema e incorporadas à IA DeepSeek.</span>
+            <button onclick="saveManualProposal()" class="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-xl text-xs font-semibold shadow transition flex items-center gap-1.5">
+              <i data-lucide="save" class="w-3.5 h-3.5"></i>
+              <span>Acrescentar ao Manual de Estilo</span>
+            </button>
+          </div>
         </div>
+
+        <!-- DYNAMIC CUSTOM RULES SECTION -->
+        <div id="manual-custom-rules-container" class="hidden space-y-3">
+          <h4 class="text-xs font-mono font-bold uppercase text-purple-300 tracking-wider flex items-center gap-2 border-b border-purple-500/30 pb-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i> Regras Adicionadas pelo Miguel (#28+)
+          </h4>
+          <div id="manual-custom-rules-list" class="space-y-2">
+            <!-- Rendered custom rules -->
+          </div>
+        </div>
+
+        <!-- CANONICAL MANUAL CONTENT (FORMATTED & CORRECTED) -->
+        <div id="manual-estilo-content" class="prose-manual text-sm space-y-4">
+          <!-- Rendered Canonical Manual de Estilo -->
+        </div>
+
       </div>
     </div>
   </div>
@@ -942,24 +1037,155 @@
     let currentViewMode = 'single'; // 'single' or 'compare'
     let lastGeneratedRevision = null;
 
-    // Speech Recognition state
+    // Speech Recognition state for AI Audit
     let voiceRecognition = null;
     let voiceIsRecording = false;
     let voiceBaseText = '';
     let voiceSecondsElapsed = 0;
     let voiceTimerInterval = null;
 
+    // Speech Recognition state for Manual Proposals
+    let voiceManualRecognition = null;
+    let voiceManualIsRecording = false;
+    let voiceManualBaseText = '';
+
     document.addEventListener('DOMContentLoaded', () => {
       switchVolume('vol1_v7');
       
       // Render static modals content
       document.getElementById('banco-links-content').innerHTML = marked.parse(bancoLinksMarkdown);
-      document.getElementById('manual-estilo-content').innerHTML = marked.parse(manualEstiloMarkdown);
+      renderCanonicalManual();
+      renderCustomManualRules();
 
       if (window.lucide) {
         lucide.createIcons();
       }
     });
+
+    function renderCanonicalManual() {
+      // Clean typography parsing for Manual de Estilo to prevent title overlap
+      let html = marked.parse(manualEstiloMarkdown);
+      document.getElementById('manual-estilo-content').innerHTML = html;
+    }
+
+    function getCustomManualRules() {
+      try {
+        const raw = localStorage.getItem('miguel_manual_de_estilo_custom_rules');
+        return raw ? JSON.parse(raw) : [];
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function saveCustomManualRules(rules) {
+      localStorage.setItem('miguel_manual_de_estilo_custom_rules', JSON.stringify(rules));
+      renderCustomManualRules();
+    }
+
+    function renderCustomManualRules() {
+      const rules = getCustomManualRules();
+      const container = document.getElementById('manual-custom-rules-container');
+      const list = document.getElementById('manual-custom-rules-list');
+
+      if (rules.length === 0) {
+        container.classList.add('hidden');
+        list.innerHTML = '';
+        return;
+      }
+
+      container.classList.remove('hidden');
+      list.innerHTML = '';
+
+      rules.forEach((ruleText, idx) => {
+        const div = document.createElement('div');
+        div.className = "p-3 bg-purple-950/30 border border-purple-500/30 rounded-xl text-xs text-purple-200 flex items-start justify-between gap-3 shadow";
+        div.innerHTML = `
+          <div class="flex-1">
+            <span class="font-mono font-bold text-purple-400">#${28 + idx}</span> — ${ruleText}
+          </div>
+          <button onclick="deleteCustomManualRule(${idx})" class="text-slate-500 hover:text-red-400 text-xs font-mono px-1">✕</button>
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    function saveManualProposal() {
+      const input = document.getElementById('manual-proposal-input');
+      const text = input.value.trim();
+      if (!text) {
+        alert("Por favor digite ou dite a nova regra para o Manual de Estilo.");
+        return;
+      }
+
+      const rules = getCustomManualRules();
+      rules.push(text);
+      saveCustomManualRules(rules);
+
+      input.value = '';
+      if (voiceManualIsRecording) stopVoiceManualProposal();
+      alert(`Nova regra #${27 + rules.length} adicionada com sucesso ao Manual de Estilo!`);
+    }
+
+    function deleteCustomManualRule(idx) {
+      const rules = getCustomManualRules();
+      rules.splice(idx, 1);
+      saveCustomManualRules(rules);
+    }
+
+    function toggleVoiceManualProposal() {
+      if (voiceManualIsRecording) {
+        stopVoiceManualProposal();
+      } else {
+        startVoiceManualProposal();
+      }
+    }
+
+    function startVoiceManualProposal() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("O seu navegador não suporta a Web Speech API.");
+        return;
+      }
+
+      const input = document.getElementById('manual-proposal-input');
+      voiceManualBaseText = input.value ? input.value.trim() + ' ' : '';
+
+      voiceManualRecognition = new SpeechRecognition();
+      voiceManualRecognition.continuous = true;
+      voiceManualRecognition.interimResults = true;
+      voiceManualRecognition.lang = 'pt-BR';
+
+      voiceManualRecognition.onstart = function() {
+        voiceManualIsRecording = true;
+        document.getElementById('voice-manual-btn-text').textContent = "Gravando...";
+        document.getElementById('btn-voice-manual').className = "px-3 py-1.5 bg-red-600 hover:bg-red-500 text-white rounded-lg text-xs font-mono flex items-center gap-1.5 animate-pulse";
+      };
+
+      voiceManualRecognition.onresult = function(event) {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          transcript += event.results[i][0].transcript;
+        }
+        input.value = voiceManualBaseText + transcript;
+      };
+
+      voiceManualRecognition.onend = function() {
+        if (voiceManualIsRecording) {
+          try { voiceManualRecognition.start(); } catch(e) {}
+        }
+      };
+
+      try { voiceManualRecognition.start(); } catch(e) {}
+    }
+
+    function stopVoiceManualProposal() {
+      voiceManualIsRecording = false;
+      if (voiceManualRecognition) {
+        try { voiceManualRecognition.stop(); } catch(e) {}
+      }
+      document.getElementById('voice-manual-btn-text').textContent = "Ditar Regra por Voz";
+      document.getElementById('btn-voice-manual').className = "px-3 py-1.5 bg-purple-800 hover:bg-purple-700 text-purple-200 rounded-lg text-xs font-mono flex items-center gap-1.5 transition";
+    }
 
     function getCurrentVolumeDataset() {
       return (currentVolume === 'vol2_v1') ? bookVol2V1 : bookVol1V7;
@@ -977,7 +1203,7 @@
         btn1.className = "px-3 py-1.5 rounded-lg transition font-semibold bg-brand-500 text-black shadow";
         btn2.className = "px-3 py-1.5 rounded-lg transition font-medium text-slate-400 hover:text-emerald-400";
         titleDisplay.textContent = "Vol. 1: O Foragido (Eduardo)";
-        badgeTag.textContent = "Vol. 1 V7 (23 Caps)";
+        badgeTag.textContent = "Vol. 1 V8 (23 Caps)";
         badgeTag.className = "text-xs bg-amber-400/10 text-amber-300 px-2 py-0.5 rounded border border-amber-400/30 font-mono";
         currentChapterKey = '01_estarei_vingado';
       } else {
@@ -1329,7 +1555,10 @@
 
     // Modal controls
     function openManualModal() { document.getElementById('modal-manual').classList.remove('hidden'); }
-    function closeManualModal() { document.getElementById('modal-manual').classList.add('hidden'); }
+    function closeManualModal() {
+      if (voiceManualIsRecording) stopVoiceManualProposal();
+      document.getElementById('modal-manual').classList.add('hidden');
+    }
     function openDatabaseModal() { document.getElementById('modal-database').classList.remove('hidden'); }
     function closeDatabaseModal() { document.getElementById('modal-database').classList.add('hidden'); }
 
@@ -1344,7 +1573,7 @@
       document.getElementById('modal-ai-audit').classList.add('hidden');
     }
 
-    // Voice Dictation Routine
+    // Voice Dictation Routine for AI Audit
     function toggleVoiceInput() {
       if (voiceIsRecording) {
         stopVoiceInput();
@@ -1388,7 +1617,6 @@
 
       voiceRecognition.onend = function() {
         if (voiceIsRecording) {
-          // Auto-restart dictation unless explicitly stopped
           try { voiceRecognition.start(); } catch(e) {}
         }
       };
@@ -1464,11 +1692,32 @@
         author: 'Miguel & DeepSeek V4 Pro',
         versionTag: `R-Edit (${now})`,
         badge: `Revisado por Voz/Texto em ${now}`,
-        content: newContent
+        content: newContent,
+        instruction: instruction
       };
 
       document.getElementById('deepseek-output-results').classList.remove('hidden');
       document.getElementById('deepseek-preview-box').innerHTML = marked.parse(newContent);
+
+      const chkUpdateManual = document.getElementById('chk-update-manual-style');
+      const btnManualAdd = document.getElementById('btn-save-as-manual-rule');
+
+      if (chkUpdateManual && chkUpdateManual.checked) {
+        btnManualAdd.classList.remove('hidden');
+        convertLastAiToManualRule();
+      } else {
+        btnManualAdd.classList.remove('hidden');
+      }
+    }
+
+    function convertLastAiToManualRule() {
+      if (!lastGeneratedRevision || !lastGeneratedRevision.instruction) return;
+      const rules = getCustomManualRules();
+      const now = new Date().toISOString().slice(0,10);
+      const newRuleText = `${now} · ${lastGeneratedRevision.instruction}`;
+      rules.push(newRuleText);
+      saveCustomManualRules(rules);
+      alert(`Diretriz registrada com sucesso no Manual de Estilo como Regra #${27 + rules.length}!`);
     }
 
     function saveDeepSeekRevision() {
