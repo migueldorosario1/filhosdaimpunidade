@@ -475,7 +475,7 @@
           </label>
 
           <label for="chk-consult-canonical-memory" class="flex items-center gap-2 text-xs text-amber-200 font-semibold cursor-pointer bg-amber-950/50 px-3 py-1.5 rounded-lg border border-amber-500/30 hover:border-amber-400">
-            <input type="checkbox" id="chk-consult-canonical-memory" checked class="w-4 h-4 rounded border-amber-500 text-amber-600 focus:ring-amber-500 bg-cardbg">
+            <input type="checkbox" id="chk-consult-canonical-memory" class="w-4 h-4 rounded border-amber-500 text-amber-600 focus:ring-amber-500 bg-cardbg">
             <i data-lucide="database" class="w-3.5 h-3.5 text-amber-400"></i>
             <span>🧠 Consultar Memória & Banco de Fontes Canônicas</span>
           </label>
@@ -2216,7 +2216,7 @@
     }
 
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
-    function runDeepSeekV4Instruction() {
+    async function runDeepSeekV4Instruction() {
       const instructionInput = document.getElementById('deepseek-instruction-input');
       const instruction = instructionInput ? instructionInput.value.trim() : '';
       if (!instruction) {
@@ -2235,14 +2235,65 @@
       };
       const currentEngineName = engineNames[currentSelectedEngine] || 'GPT 5.6 / o3-Pro';
 
+      // Check if memory consultation checkbox is enabled
+      const chkMemory = document.getElementById('chk-consult-canonical-memory');
+      const consultMemory = chkMemory ? chkMemory.checked : false;
+
+      // 1. DISPLAY VISUAL PROCESSING INDICATOR & LOADING MESSAGE
+      const resultsDiv = document.getElementById('deepseek-output-results');
+      resultsDiv.classList.remove('hidden');
+
+      const titleAi = document.getElementById('conversational-ai-title');
+      const textAi = document.getElementById('conversational-ai-text');
+      const btnRun = document.getElementById('btn-run-ai-text');
+
+      if (titleAi) titleAi.textContent = `⏳ Consultando & Processando (${currentEngineName})...`;
+
+      if (btnRun) {
+        btnRun.innerHTML = consultMemory 
+          ? `<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-amber-300"></i> Consultando Memória...` 
+          : `<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-purple-300"></i> Processando IA...`;
+      }
+
+      if (textAi) {
+        if (consultMemory) {
+          textAi.innerHTML = `
+            <div class="p-4 bg-amber-950/70 border border-amber-500/50 rounded-xl text-xs text-amber-200 font-mono space-y-2 animate-pulse shadow-xl">
+              <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
+                <i data-lucide="database" class="w-5 h-5 animate-spin text-amber-400"></i>
+                <span>🧠 Consultando a Memória Canônica do Livro (PROJECT_MEMORY.md)...</span>
+              </div>
+              <div class="pl-7 space-y-1 text-slate-300 text-xs">
+                <div>• Indexando Regras #1 a #27 do Manual de Estilo...</div>
+                <div>• Verificando acervo STF/OFAC & Referências de César/Maquiavel...</div>
+                <div>• Processando raciocínio com <strong>${currentEngineName}</strong>...</div>
+              </div>
+            </div>
+          `;
+        } else {
+          textAi.innerHTML = `
+            <div class="p-4 bg-purple-950/70 border border-purple-500/50 rounded-xl text-xs text-purple-200 font-mono space-y-2 animate-pulse shadow-xl">
+              <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
+                <i data-lucide="sparkles" class="w-5 h-5 animate-spin text-purple-400"></i>
+                <span>⚡ Processando Reescrita Cirúrgica com <strong>${currentEngineName}</strong>...</span>
+              </div>
+              <div class="pl-7 text-slate-300 text-xs">
+                • Analisando estrutura do parágrafo e aplicando concordância...
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      if (window.lucide) lucide.createIcons();
+
+      // Simulate realistic processing delay (3.2 seconds for memory, 2.2 seconds for normal)
+      await new Promise(resolve => setTimeout(resolve, consultMemory ? 3200 : 2200));
+
       // Perform targeted rewriting focused strictly on the user's specific request
       const rewrittenText = performSurgicalRewriting(origContent, instruction);
       const now = new Date().toISOString().slice(0, 10);
       const summaryRule = summarizeInstructionToStyleRule(instruction);
-
-      // Check if memory consultation checkbox is enabled
-      const chkMemory = document.getElementById('chk-consult-canonical-memory');
-      const consultMemory = chkMemory ? chkMemory.checked : false;
 
       // Append concise revision footnote
       const revNote = `
@@ -2262,15 +2313,12 @@
         summarizedRule: summaryRule
       };
 
-      // Display results in editable textarea & conversational response box
-      document.getElementById('deepseek-output-results').classList.remove('hidden');
+      // Update UI with generated content
       const editableRes = document.getElementById('deepseek-editable-result');
       if (editableRes) editableRes.value = finalContent;
       
-      const titleAi = document.getElementById('conversational-ai-title');
       if (titleAi) titleAi.textContent = `💬 Resposta do Editor Assistente (${currentEngineName}):`;
 
-      const textAi = document.getElementById('conversational-ai-text');
       if (textAi) {
         textAi.innerHTML = generateHumanizedAiFeedback(currentSelectedEngine, instruction, summaryRule, consultMemory);
       }
@@ -2278,6 +2326,10 @@
       const badgeElem = document.getElementById('output-engine-badge');
       if (badgeElem) {
         badgeElem.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span>Resultado da Revisão (${currentEngineName}):</span>`;
+      }
+
+      if (btnRun) {
+        btnRun.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> Executar Reescrita Inteligente`;
       }
 
       if (window.lucide) lucide.createIcons();
