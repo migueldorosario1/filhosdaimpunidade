@@ -2139,6 +2139,53 @@
       }
     }
 
+    function analyzeInstructionAndGenerateObjectiveReport(instruction, summaryRule, engineName) {
+      const lower = instruction.toLowerCase().trim();
+      let actionDetail = '';
+
+      // Pattern 1: "tirar X e colocar Y"
+      const matchTirarColocar = instruction.match(/(?:tirar|remover|excluir)\s+(?:o|a|os|as|o trecho|a expressão|o termo|palavra|a palavra)?\s*["'‘“]?(.*?)["'’”]?\s+(?:e|para)\s+(?:colocar|botar|usar|substituir por|trocar por)\s+["'‘“]?(.*?)["'’”]?$/i);
+      
+      // Pattern 2: "trocar X por Y"
+      const matchTrocarPor = instruction.match(/(?:trocar|substituir|mudar)\s+(?:o|a|os|as|o trecho|a expressão|o termo|palavra|a palavra)?\s*["'‘“]?(.*?)["'’”]?\s+(?:por|para|em)\s+["'‘“]?(.*?)["'’”]?$/i);
+
+      // Pattern 3: "em vez de X usar Y"
+      const matchEmVezDe = instruction.match(/em vez de\s+["'‘“]?(.*?)["'’”]?\s+(?:usar|colocar|botar|trocar por|substituir por)?\s+["'‘“]?(.*?)["'’”]?$/i);
+
+      // Pattern 4: "tirar X"
+      const matchTirar = instruction.match(/(?:tirar|remover|excluir|apagar)\s+(?:o|a|os|as|o trecho|a expressão|o termo|palavra|a palavra)?\s*["'‘“]?(.*?)["'’”]?$/i);
+
+      if (matchTirarColocar && matchTirarColocar[1] && matchTirarColocar[2]) {
+        actionDetail = `Removi o trecho <strong>"${matchTirarColocar[1].trim()}"</strong> e inseri <strong>"${matchTirarColocar[2].trim()}"</strong> no parágrafo correspondente.`;
+      } else if (matchTrocarPor && matchTrocarPor[1] && matchTrocarPor[2]) {
+        actionDetail = `Substituí a expressão <strong>"${matchTrocarPor[1].trim()}"</strong> por <strong>"${matchTrocarPor[2].trim()}"</strong>, ajustando a concordância de gênero/número.`;
+      } else if (matchEmVezDe && matchEmVezDe[1] && matchEmVezDe[2]) {
+        actionDetail = `Substituí <strong>"${matchEmVezDe[1].trim()}"</strong> por <strong>"${matchEmVezDe[2].trim()}"</strong> para melhorar o ritmo e a clareza da frase.`;
+      } else if (matchTirar && matchTirar[1]) {
+        actionDetail = `Localizei o trecho <strong>"${matchTirar[1].trim()}"</strong> e o apaguei do capítulo para eliminar a redundância.`;
+      } else if (lower.includes('repeti') || lower.includes('repetido')) {
+        actionDetail = `Identifiquei a repetição apontada no seu pedido e reestruturei o trecho para eliminar o eco ou redundância em frases vizinhas.`;
+      } else {
+        actionDetail = `Executei a reescrita cirúrgica com base exata no seu comando: <em>"${instruction}"</em>, preservando todo o restante do capítulo intocado.`;
+      }
+
+      return `
+        <div class="space-y-2 font-sans">
+          <div class="flex items-center justify-between text-amber-300 font-bold text-xs border-b border-white/10 pb-1.5">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+              <span>Relatório Objetivo de Alteração (${engineName}):</span>
+            </span>
+          </div>
+          <div class="bg-black/40 p-3.5 rounded-xl border border-white/10 space-y-2 text-xs text-slate-200">
+            <div><strong class="text-purple-300">1. Entendimento do Pedido:</strong> "${instruction}"</div>
+            <div><strong class="text-emerald-300">2. Ação Objetiva Executada:</strong> ${actionDetail}</div>
+            <div><strong class="text-amber-300">3. Diretriz de Estilo Registrada:</strong> <em>"${summaryRule}"</em></div>
+          </div>
+        </div>
+      `;
+    }
+
     function generateHumanizedAiFeedback(engine, instruction, summaryRule, consultMemory=false) {
       const engineNames = {
         gpt56: 'GPT 5.6 / o3-Pro (OpenAI Frontier)',
@@ -2150,7 +2197,7 @@
 
       let memoryCitation = '';
       if (consultMemory) {
-        memoryCitation = `<br/><br/><div class="p-3 bg-amber-950/50 border border-amber-500/40 rounded-xl text-xs text-amber-200 font-mono space-y-1.5 shadow-lg">
+        memoryCitation = `<div class="mt-3 p-3 bg-amber-950/50 border border-amber-500/40 rounded-xl text-xs text-amber-200 font-mono space-y-1.5 shadow-lg">
           <div class="font-bold flex items-center gap-1.5 text-amber-300 uppercase tracking-wider text-[11px]">
             <i data-lucide="database" class="w-4 h-4"></i>
             <span>🧠 Fontes & Memória Canônica Consultadas (PROJECT_MEMORY.md):</span>
@@ -2163,30 +2210,9 @@
         </div>`;
       }
 
-      const lowerInst = instruction.toLowerCase().trim();
-      const isSimpleSwap = lowerInst.startsWith('trocar') || lowerInst.startsWith('substituir') || lowerInst.startsWith('mudar') || lowerInst.startsWith('tirar') || lowerInst.length < 35;
+      const report = analyzeInstructionAndGenerateObjectiveReport(instruction, summaryRule, currentEngineName);
 
-      if (isSimpleSwap && !lowerInst.includes('por que') && !lowerInst.includes('qual') && !lowerInst.includes('como') && !lowerInst.includes('analis')) {
-        return `<strong>✅ OK Miguel, corrigido e substituído com sucesso!</strong> (${currentEngineName})<br/>"Entendi perfeitamente. O trecho reescrito já está atualizado no campo 1 superior."${memoryCitation}`;
-      }
-
-      if (engine === 'gpt56') {
-        return `<strong>Ó, Miguel! Resposta do GPT 5.6 / o3-Pro (Frontier): Entendi perfeitamente!</strong><br/><br/>
-        Realizei a substituição cirúrgica no texto completo no campo 1 acima. Também registrei esta orientação no Manual de Estilo: <em>"${summaryRule}"</em>.<br/><br/>
-        O trecho reescrito está 100% pronto no campo editável superior.${memoryCitation}`;
-      } else if (engine === 'opus5') {
-        return `<strong>Saudações, Miguel! Aqui é o Claude Opus 5.0 (Frontier da Anthropic).</strong><br/><br/>
-        Analisei a métrica da frase e a elegância narrativa do parágrafo. Fiz a cirurgia perfeita no trecho indicado. A norma de estilo <em>"${summaryRule}"</em> foi consolidada no nosso guia canônico.<br/><br/>
-        Confira a versão impecável no painel editável acima e salve como nova revisão R#!${memoryCitation}`;
-      } else if (engine === 'deepseek') {
-        return `<strong>Ó, Miguel! Resposta do DeepSeek V4/V5 Pro (Frontier)!</strong><br/><br/>
-        Entendi perfeitamente a sua instrução. Realizei o ajuste direto no texto completo e registrei a diretriz <em>"${summaryRule}"</em> no Manual de Estilo.<br/><br/>
-        O trecho reescrito está disponível acima no campo 1 para sua aprovação final!${memoryCitation}`;
-      } else {
-        return `<strong>Oi Miguel! Leitura crítica do Kimi 3.5 Frontier com foco total na experiência de leitura.</strong><br/><br/>
-        Ajuste cirúrgico efetuado com sucesso! O texto flui de forma irretocável e a regra <em>"${summaryRule}"</em> foi incorporada ao Manual de Estilo.<br/><br/>
-        Pode conferir e salvar como nova revisão R# no campo superior!${memoryCitation}`;
-      }
+      return `${report}${memoryCitation}`;
     }
 
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
