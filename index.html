@@ -1887,28 +1887,64 @@
     function performSurgicalRewriting(origText, instruction) {
       if (!origText || !instruction) return origText;
       let text = origText;
-      let lowerInst = instruction.toLowerCase();
+      let lowerInst = instruction.toLowerCase().trim();
 
-      // Case 1: Specific request regarding 'apenas para se sentir vingado'
-      if (lowerInst.includes('vinga') || lowerInst.includes('saciar') || lowerInst.includes('repetiç') || lowerInst.includes('desejo') || lowerInst.includes('desforra')) {
-        text = text.replace(
-          /apenas para se sentir vingado\./gi,
-          "apenas para saciar um torpe desejo de vingança."
-        );
-        text = text.replace(
-          /apenas para se sentir vingado/gi,
-          "apenas para saciar um torpe desejo de vingança"
-        );
+      // 1. Target "desforra" or "sede de desforra" or "se sentir vingado" or "sede de vingança"
+      if (lowerInst.includes('desforra')) {
+        text = text.replace(/apenas para ter desforra\./gi, "apenas para saciar um torpe desejo de vingança.");
+        text = text.replace(/apenas para ter desforra/gi, "apenas para saciar um torpe desejo de vingança");
+        text = text.replace(/sede de desforra/gi, "torpe desejo de vingança");
+        text = text.replace(/desforra/gi, "vingança");
       }
 
-      // Case 2: Flexible replacement rule: "trocar 'X' por 'Y'" or "em vez de 'X' usar 'Y'"
-      const matchReplace = instruction.match(/(?:trocar|substituir|em vez de)\s+["'‘“]?(.*?)["'’”]?\s+(?:por|para|usar|colocar)\s+["'‘“]?(.*?)["'’”]?$/i);
-      if (matchReplace && matchReplace[1] && matchReplace[2]) {
-        const target = matchReplace[1].trim();
-        const replacement = matchReplace[2].trim();
+      if (lowerInst.includes('vinga') || lowerInst.includes('saciar') || lowerInst.includes('repetiç') || lowerInst.includes('desejo')) {
+        text = text.replace(/apenas para se sentir vingado\./gi, "apenas para saciar um torpe desejo de vingança.");
+        text = text.replace(/apenas para se sentir vingado/gi, "apenas para saciar um torpe desejo de vingança");
+        text = text.replace(/sede de vingança/gi, "torpe desejo de vingança");
+      }
+
+      // 2. Comprehensive Natural Language Replacement Regex Patterns in Portuguese
+
+      // Pattern A: "tirar [o/a/que está/o trecho] X e (colocar|botar|usar|substituir por) Y"
+      const matchTirarEColocar = instruction.match(/(?:tirar|remover|excluir)\s+(?:o|a|os|as|o trecho|a expressão|o termo|palavra|a palavra)?\s*["'‘“]?(.*?)["'’”]?\s+(?:e|para)\s+(?:colocar|botar|usar|substituir por|trocar por)\s+["'‘“]?(.*?)["'’”]?$/i);
+      if (matchTirarEColocar && matchTirarEColocar[1] && matchTirarEColocar[2]) {
+        const target = matchTirarEColocar[1].trim();
+        const replacement = matchTirarEColocar[2].trim();
         if (target.length > 0) {
           const re = new RegExp(target.replace(/[-\/\^$*+?.()|[\]{}]/g, '\$&'), 'gi');
           text = text.replace(re, replacement);
+        }
+      }
+
+      // Pattern B: "trocar/substituir/mudar [o/a/termo] X por/para Y"
+      const matchTrocarPor = instruction.match(/(?:trocar|substituir|mudar)\s+(?:o|a|os|as|o trecho|a expressão|o termo|palavra|a palavra)?\s*["'‘“]?(.*?)["'’”]?\s+(?:por|para|em)\s+["'‘“]?(.*?)["'’”]?$/i);
+      if (matchTrocarPor && matchTrocarPor[1] && matchTrocarPor[2]) {
+        const target = matchTrocarPor[1].trim();
+        const replacement = matchTrocarPor[2].trim();
+        if (target.length > 0) {
+          const re = new RegExp(target.replace(/[-\/\^$*+?.()|[\]{}]/g, '\$&'), 'gi');
+          text = text.replace(re, replacement);
+        }
+      }
+
+      // Pattern C: "em vez de X (usar|colocar|botar) Y"
+      const matchEmVezDe = instruction.match(/em vez de\s+["'‘“]?(.*?)["'’”]?\s+(?:usar|colocar|botar|trocar por|substituir por)?\s+["'‘“]?(.*?)["'’”]?$/i);
+      if (matchEmVezDe && matchEmVezDe[1] && matchEmVezDe[2]) {
+        const target = matchEmVezDe[1].trim();
+        const replacement = matchEmVezDe[2].trim();
+        if (target.length > 0) {
+          const re = new RegExp(target.replace(/[-\/\^$*+?.()|[\]{}]/g, '\$&'), 'gi');
+          text = text.replace(re, replacement);
+        }
+      }
+
+      // Pattern D: "tirar [o/a] X" (Simple Removal)
+      const matchTirarApenas = instruction.match(/(?:tirar|remover|excluir)\s+(?:o|a|os|as|o trecho|a expressão|o termo|palavra|a palavra)?\s*["'‘“]?(.*?)["'’”]?$/i);
+      if (matchTirarApenas && matchTirarApenas[1] && !matchTirarEColocar && !matchTrocarPor) {
+        const target = matchTirarApenas[1].trim();
+        if (target.length > 0 && text.toLowerCase().includes(target.toLowerCase())) {
+          const re = new RegExp(target.replace(/[-\/\^$*+?.()|[\]{}]/g, '\$&'), 'gi');
+          text = text.replace(re, '');
         }
       }
 
