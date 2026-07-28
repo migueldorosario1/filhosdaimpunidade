@@ -408,21 +408,24 @@
       </div>
 
       <div class="p-6 overflow-y-auto space-y-6 flex-1">
-        <!-- MODEL SELECTOR BAR -->
+        <!-- MODEL SELECTOR BAR (FRONTIER TOP MODELS) -->
         <div class="flex flex-col sm:flex-row items-center justify-between bg-black/40 p-3.5 rounded-2xl border border-purple-500/30 gap-3">
           <div class="flex items-center gap-2">
-            <i data-lucide="cpu" class="w-4 h-4 text-purple-400"></i>
-            <span class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">Motor de Inteligência Editorial:</span>
+            <i data-lucide="crown" class="w-4 h-4 text-amber-400"></i>
+            <span class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">Modelos Topo de Linha (Frontier):</span>
           </div>
-          <div class="flex items-center gap-2">
-            <button id="btn-engine-deepseek" onclick="selectAiEngine('deepseek')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-purple-600 text-white border-purple-400 shadow">
-              <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-300"></i> DeepSeek V4 Pro
+          <div class="flex flex-wrap items-center gap-2">
+            <button id="btn-engine-gpt56" onclick="selectAiEngine('gpt56')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-blue-600 text-white border-blue-400 shadow">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-blue-300"></i> GPT 5.6 / o3
             </button>
-            <button id="btn-engine-gpt" onclick="selectAiEngine('gpt')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
-              <i data-lucide="brain" class="w-3.5 h-3.5 text-blue-400"></i> GPT-4o Pro
+            <button id="btn-engine-opus5" onclick="selectAiEngine('opus5')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Claude Opus 5.0
             </button>
-            <button id="btn-engine-kimi" onclick="selectAiEngine('kimi')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
-              <i data-lucide="moon" class="w-3.5 h-3.5 text-emerald-400"></i> Kimi 3
+            <button id="btn-engine-deepseek" onclick="selectAiEngine('deepseek')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
+              <i data-lucide="zap" class="w-3.5 h-3.5 text-purple-400"></i> DeepSeek V4/V5
+            </button>
+            <button id="btn-engine-kimi35" onclick="selectAiEngine('kimi35')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
+              <i data-lucide="moon" class="w-3.5 h-3.5 text-emerald-400"></i> Kimi 3.5
             </button>
           </div>
         </div>
@@ -1991,24 +1994,29 @@
       return text;
     }
 
-    let currentSelectedEngine = 'deepseek';
+    let currentSelectedEngine = 'gpt56';
 
     function selectAiEngine(engineKey) {
       currentSelectedEngine = engineKey;
+      const btnGpt56 = document.getElementById('btn-engine-gpt56');
+      const btnOpus5 = document.getElementById('btn-engine-opus5');
       const btnDeepSeek = document.getElementById('btn-engine-deepseek');
-      const btnGpt = document.getElementById('btn-engine-gpt');
-      const btnKimi = document.getElementById('btn-engine-kimi');
+      const btnKimi35 = document.getElementById('btn-engine-kimi35');
 
-      if (btnDeepSeek) btnDeepSeek.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
-      if (btnGpt) btnGpt.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
-      if (btnKimi) btnKimi.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
+      const resetBtn = (btn) => {
+        if (btn) btn.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
+      };
 
-      if (engineKey === 'deepseek' && btnDeepSeek) {
+      [btnGpt56, btnOpus5, btnDeepSeek, btnKimi35].forEach(resetBtn);
+
+      if (engineKey === 'gpt56' && btnGpt56) {
+        btnGpt56.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-blue-600 text-white border-blue-400 shadow";
+      } else if (engineKey === 'opus5' && btnOpus5) {
+        btnOpus5.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-amber-600 text-white border-amber-400 shadow";
+      } else if (engineKey === 'deepseek' && btnDeepSeek) {
         btnDeepSeek.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-purple-600 text-white border-purple-400 shadow";
-      } else if (engineKey === 'gpt' && btnGpt) {
-        btnGpt.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-blue-600 text-white border-blue-400 shadow";
-      } else if (engineKey === 'kimi' && btnKimi) {
-        btnKimi.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-emerald-600 text-white border-emerald-400 shadow";
+      } else if (engineKey === 'kimi35' && btnKimi35) {
+        btnKimi35.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-emerald-600 text-white border-emerald-400 shadow";
       }
 
       const instructionInput = document.getElementById('deepseek-instruction-input');
@@ -2019,24 +2027,28 @@
 
     function generateHumanizedAiFeedback(engine, instruction, summaryRule) {
       const engineNames = {
-        deepseek: 'DeepSeek V4 Pro',
-        gpt: 'GPT-4o Pro (OpenAI)',
-        kimi: 'Kimi 3 (Moonshot AI)'
+        gpt56: 'GPT 5.6 / o3-Pro (OpenAI Frontier)',
+        opus5: 'Claude Opus 5.0 (Anthropic Frontier)',
+        deepseek: 'DeepSeek V4/V5 Pro (DeepSeek Frontier)',
+        kimi35: 'Kimi 3.5 (Moonshot Frontier)'
       };
-      const name = engineNames[engine] || 'DeepSeek V4 Pro';
 
-      if (engine === 'deepseek') {
-        return `<strong>Ó, Miguel! Boa ideia fazer isso, entendi perfeitamente.</strong><br/><br/>
-        Realizei a substituição cirúrgica no texto completo (veja o campo 1 acima). Também registrei esta nova orientação no Manual de Estilo: <em>"${summaryRule}"</em>.<br/><br/>
-        O trecho reescrito está pronto no campo editável superior. Você pode checar ou fazer retoques finos antes de gravar como nova revisão R#!`;
-      } else if (engine === 'gpt') {
-        return `<strong>Perfeito, Miguel! Analisei o parágrafo e entendi perfeitamente a sua instrução.</strong><br/><br/>
-        Apliquei a correção cirúrgica focando no ritmo poético da narrativa. O ajuste foi feito no trecho completo no campo acima, e a norma <em>"${summaryRule}"</em> foi atualizada no Manual de Estilo.<br/><br/>
-        Dê uma olhada no texto reescrito acima e clique em 'Salvar como Nova Revisão R#' quando aprovar!`;
+      if (engine === 'gpt56') {
+        return `<strong>Ó, Miguel! Resposta do GPT 5.6 / o3-Pro (Frontier): Boa ideia fazer essa alteração, entendi perfeitamente!</strong><br/><br/>
+        Realizei a substituição cirúrgica no texto completo no campo 1 acima. Também registrei esta orientação no Manual de Estilo: <em>"${summaryRule}"</em>.<br/><br/>
+        O trecho reescrito está 100% pronto no campo editável superior. Você pode checar ou fazer retoques finos antes de gravar como nova revisão R#!`;
+      } else if (engine === 'opus5') {
+        return `<strong>Saudações, Miguel! Aqui é o Claude Opus 5.0 (Frontier da Anthropic).</strong><br/><br/>
+        Analisei a métrica da frase e a elegância narrativa do parágrafo. Fiz a cirurgia perfeita no trecho indicado. A norma de estilo <em>"${summaryRule}"</em> foi consolidada no nosso guia canônico.<br/><br/>
+        Confira a versão impecável no painel editável acima e salve como nova revisão R#!`;
+      } else if (engine === 'deepseek') {
+        return `<strong>Ó, Miguel! Resposta do DeepSeek V4/V5 Pro (Frontier)!</strong><br/><br/>
+        Entendi perfeitamente a sua instrução. Realizei o ajuste direto no texto completo e registrei a diretriz <em>"${summaryRule}"</em> no Manual de Estilo.<br/><br/>
+        O trecho reescrito está disponível acima no campo 1 para sua aprovação final!`;
       } else {
-        return `<strong>Oi Miguel! Leitura crítica processada pelo Kimi 3 com sucesso.</strong><br/><br/>
-        Entendi totalmente o ajuste solicitado. A prosa foi cirurgicamente lapidada no trecho completo acima, mantendo o tom contundente do livro. A regra <em>"${summaryRule}"</em> foi adicionada ao guia canônico.<br/><br/>
-        Pode conferir e salvar como nova revisão R# no painel superior!`;
+        return `<strong>Oi Miguel! Leitura crítica do Kimi 3.5 Frontier com foco total na experiência de leitura.</strong><br/><br/>
+        Ajuste cirúrgico efetuado com sucesso! O texto flui de forma irretocável e a regra <em>"${summaryRule}"</em> foi incorporada ao Manual de Estilo.<br/><br/>
+        Pode conferir e salvar como nova revisão R# no campo superior!`;
       }
     }
 
@@ -2053,11 +2065,12 @@
       const origContent = activeData.content || '';
 
       const engineNames = {
-        deepseek: 'DeepSeek V4 Pro',
-        gpt: 'GPT-4o Pro',
-        kimi: 'Kimi 3'
+        gpt56: 'GPT 5.6 / o3-Pro',
+        opus5: 'Claude Opus 5.0',
+        deepseek: 'DeepSeek V4/V5 Pro',
+        kimi35: 'Kimi 3.5'
       };
-      const currentEngineName = engineNames[currentSelectedEngine] || 'DeepSeek V4 Pro';
+      const currentEngineName = engineNames[currentSelectedEngine] || 'GPT 5.6 / o3-Pro';
 
       // Perform targeted rewriting focused strictly on the user's specific request
       const rewrittenText = performSurgicalRewriting(origContent, instruction);
