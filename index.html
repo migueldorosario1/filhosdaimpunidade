@@ -1722,6 +1722,20 @@
       const ch = dataset[currentChapterKey];
       document.getElementById('deepseek-modal-subtitle').textContent = `Auditando e Editando: ${ch.title} (${ch.versionTag})`;
       renderInstructionHistory();
+
+      // Automatically restore cached draft revision if present
+      try {
+        const cachedDraft = localStorage.getItem('miguel_book_draft_revision_' + currentChapterKey);
+        if (cachedDraft) {
+          lastGeneratedRevision = JSON.parse(cachedDraft);
+          document.getElementById('deepseek-output-results').classList.remove('hidden');
+          const editableRes = document.getElementById('deepseek-editable-result');
+          if (editableRes && lastGeneratedRevision.content) {
+            editableRes.value = lastGeneratedRevision.content;
+          }
+        }
+      } catch(e) {}
+
       document.getElementById('modal-ai-audit').classList.remove('hidden');
     }
 
@@ -1933,18 +1947,27 @@
       let lowerInst = instruction.toLowerCase().trim();
 
       // 1. Target "desforra" or "sede de desforra" or "se sentir vingado" or "sede de vingança"
-      if (lowerInst.includes('desforra')) {
+      if (lowerInst.includes('desforra') || lowerInst.includes('vinga') || lowerInst.includes('saciar') || lowerInst.includes('desejo')) {
+        // Fix article gender agreement: "sua sede..." -> "seu torpe desejo..."
+        text = text.replace(/sua sede de desforra/gi, "seu torpe desejo de vingança");
+        text = text.replace(/uma sede de desforra/gi, "um torpe desejo de vingança");
+        text = text.replace(/sua sede de vingança/gi, "seu torpe desejo de vingança");
+        text = text.replace(/uma sede de vingança/gi, "um torpe desejo de vingança");
         text = text.replace(/apenas para ter desforra\./gi, "apenas para saciar um torpe desejo de vingança.");
         text = text.replace(/apenas para ter desforra/gi, "apenas para saciar um torpe desejo de vingança");
+        text = text.replace(/apenas para se sentir vingado\./gi, "apenas para saciar um torpe desejo de vingança.");
+        text = text.replace(/apenas para se sentir vingado/gi, "apenas para saciar um torpe desejo de vingança");
         text = text.replace(/sede de desforra/gi, "torpe desejo de vingança");
+        text = text.replace(/sede de vingança/gi, "torpe desejo de vingança");
         text = text.replace(/desforra/gi, "vingança");
       }
 
-      if (lowerInst.includes('vinga') || lowerInst.includes('saciar') || lowerInst.includes('repetiç') || lowerInst.includes('desejo')) {
-        text = text.replace(/apenas para se sentir vingado\./gi, "apenas para saciar um torpe desejo de vingança.");
-        text = text.replace(/apenas para se sentir vingado/gi, "apenas para saciar um torpe desejo de vingança");
-        text = text.replace(/sede de vingança/gi, "torpe desejo de vingança");
-      }
+      // Cleanup duplicate articles or gender mismatch
+      text = text.replace(/sua\s+sua/gi, 'sua');
+      text = text.replace(/seu\s+seu/gi, 'seu');
+      text = text.replace(/sua\s+seu/gi, 'seu');
+      text = text.replace(/seu\s+sua/gi, 'seu');
+      text = text.replace(/sua\s+torpe/gi, 'seu torpe');
 
       // 2. Comprehensive Natural Language Replacement Regex Patterns in Portuguese
 
@@ -1990,6 +2013,11 @@
           text = text.replace(re, '');
         }
       }
+
+      // Final Gender Agreement Guard
+      text = text.replace(/sua\s+sua/gi, 'sua');
+      text = text.replace(/seu\s+seu/gi, 'seu');
+      text = text.replace(/sua\s+torpe/gi, 'seu torpe');
 
       return text;
     }
@@ -2114,6 +2142,13 @@
       }
 
       if (window.lucide) lucide.createIcons();
+
+      // Auto-save generated revision draft into localStorage immediately so no dictation is ever lost
+      try {
+        localStorage.setItem('miguel_book_draft_revision_' + currentChapterKey, JSON.stringify(lastGeneratedRevision));
+      } catch(e) {
+        console.error("Auto-save draft failed", e);
+      }
 
       // Save raw instruction to chapter history log right away
       saveInstructionToHistory(instruction);
