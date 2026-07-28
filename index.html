@@ -410,9 +410,29 @@
           <p class="text-xs text-slate-400 text-right">Ditado contínuo com autorreinício automático (até 10 minutos por sessão)</p>
         </div>
 
-        <div>
-          <label class="block text-xs font-mono text-slate-300 uppercase mb-2">Instruções Editoriais / Comandos de Estilo:</label>
-          <textarea id="deepseek-instruction-input" rows="3" class="w-full bg-cardbg border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Ex: 'Aplique a regra #19 para cortar metalinguagem vazia no parágrafo 3', ou dite a reescrita por voz..."></textarea>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block text-xs font-mono text-slate-300 uppercase">Instruções Editoriais / Comandos de Estilo:</label>
+            <div class="flex items-center gap-2">
+              <button onclick="toggleInstructionHistory()" class="text-xs font-mono text-purple-400 hover:text-purple-300 flex items-center gap-1">
+                <i data-lucide="history" class="w-3.5 h-3.5"></i>
+                <span id="history-toggle-text">📜 Ver Histórico de Instruções</span>
+              </button>
+              <button onclick="clearInstructionInput()" class="text-xs font-mono text-amber-400 hover:text-amber-300 flex items-center gap-1 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
+                <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
+                <span>🧹 Limpar Campo</span>
+              </button>
+            </div>
+          </div>
+          <textarea id="deepseek-instruction-input" rows="3" oninput="onInstructionInputChanged()" class="w-full bg-cardbg border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Ex: 'Aplique a regra #19 para cortar metalinguagem vazia no parágrafo 3', ou dite a reescrita por voz..."></textarea>
+        </div>
+
+        <!-- COLLAPSIBLE INSTRUCTION HISTORY LOG -->
+        <div id="deepseek-history-panel" class="hidden bg-black/40 border border-purple-500/20 rounded-xl p-3 space-y-2">
+          <div class="text-xs font-mono text-purple-300 font-bold uppercase">Histórico de Instruções Ditas/Salvas neste Capítulo:</div>
+          <div id="deepseek-history-list" class="space-y-1 max-h-36 overflow-y-auto text-xs font-mono text-slate-300">
+            <!-- Dynamic history items -->
+          </div>
         </div>
 
         <!-- MANUAL UPDATE CHECKBOX PROMPT -->
@@ -1578,14 +1598,89 @@
       const dataset = getCurrentVolumeDataset();
       const ch = dataset[currentChapterKey];
       document.getElementById('deepseek-modal-subtitle').textContent = `Auditando e Editando: ${ch.title} (${ch.versionTag})`;
+      renderInstructionHistory();
       document.getElementById('modal-ai-audit').classList.remove('hidden');
     }
+
     function closeAiAuditModal() {
       if (voiceIsRecording) stopVoiceInput();
       document.getElementById('modal-ai-audit').classList.add('hidden');
     }
 
-    // Voice Dictation Routine for AI Audit (Robust Accumulation for Long Sessions)
+    function getInstructionHistory() {
+      try {
+        const raw = localStorage.getItem('miguel_instruction_history_' + currentChapterKey);
+        return raw ? JSON.parse(raw) : [];
+      } catch(e) {
+        return [];
+      }
+    }
+
+    function saveInstructionToHistory(text) {
+      if (!text) return;
+      const history = getInstructionHistory();
+      const now = new Date().toISOString().slice(0, 16).replace('T', ' ');
+      history.unshift({ time: now, text: text });
+      localStorage.setItem('miguel_instruction_history_' + currentChapterKey, JSON.stringify(history));
+      renderInstructionHistory();
+    }
+
+    function renderInstructionHistory() {
+      const history = getInstructionHistory();
+      const list = document.getElementById('deepseek-history-list');
+      if (!list) return;
+      if (history.length === 0) {
+        list.innerHTML = `<div class="italic text-slate-500">Nenhuma instrução salva anteriormente neste capítulo.</div>`;
+        return;
+      }
+      list.innerHTML = history.map((item, idx) => `
+        <div class="p-2 bg-purple-950/30 border border-purple-500/20 rounded-lg flex items-start justify-between gap-2">
+          <div>
+            <span class="text-purple-400 font-bold">[${item.time}]</span>
+            <span>${item.text}</span>
+          </div>
+          <button onclick="useHistoryInstruction(${idx})" class="text-amber-400 hover:underline text-[10px] whitespace-nowrap">Usar esta</button>
+        </div>
+      `).join('');
+    }
+
+    function toggleInstructionHistory() {
+      const panel = document.getElementById('deepseek-history-panel');
+      if (panel.classList.contains('hidden')) {
+        panel.classList.remove('hidden');
+        document.getElementById('history-toggle-text').textContent = '📜 Ocultar Histórico';
+      } else {
+        panel.classList.add('hidden');
+        document.getElementById('history-toggle-text').textContent = '📜 Ver Histórico de Instruções';
+      }
+    }
+
+    function useHistoryInstruction(idx) {
+      const history = getInstructionHistory();
+      if (history[idx]) {
+        const textarea = document.getElementById('deepseek-instruction-input');
+        if (textarea) {
+          textarea.value = history[idx].text;
+          voiceAccumulatedText = history[idx].text;
+        }
+      }
+    }
+
+    function clearInstructionInput() {
+      const textarea = document.getElementById('deepseek-instruction-input');
+      if (textarea) textarea.value = '';
+      voiceAccumulatedText = '';
+      if (voiceIsRecording) stopVoiceInput();
+    }
+
+    function onInstructionInputChanged() {
+      const textarea = document.getElementById('deepseek-instruction-input');
+      if (textarea) {
+        voiceAccumulatedText = textarea.value.trim();
+      }
+    }
+
+    // Voice Dictation Routine for AI Audit (Robust Accumulation & Reset Support)
     function toggleVoiceInput() {
       if (voiceIsRecording) {
         stopVoiceInput();
@@ -1693,20 +1788,15 @@
     // Helper to summarize raw voice instructions into concise style rules
     function summarizeInstructionToStyleRule(instruction) {
       let text = instruction.toLowerCase();
-      // Detect repetition requests
+      if (text.includes('vinga') || text.includes('vingado')) {
+        return "Evitar repetição da palavra 'vingado' no mesmo capítulo; preferir alternativas como 'saciar um torpe desejo de vingança'.";
+      }
       if (text.includes('repetiç') || text.includes('repetir') || text.includes('repete')) {
-        if (text.includes('vinga')) {
-          return "Evitar repetição excessiva da palavra 'vingado' ou 'vingança' no mesmo trecho; utilizar equivalentes como 'saciar seu desejo' ou reestruturar.";
-        }
         return "Evitar repetição desnecessária de termos próximos; buscar sinônimos ou reestruturação de frase.";
       }
       if (text.includes('dólar') || text.includes('dolar')) {
         return "Sempre que citar valores em dólares, incluir a conversão aproximada em R$ entre parênteses.";
       }
-      if (text.includes('data') || text.includes('ano')) {
-        return "Manter rigor e clareza na cronologia dos fatos históricos citados.";
-      }
-      // General fall-back concise summary
       let cleaned = instruction.replace(/^(ó|bom|veja bem|então|olha|tipo)\s+/i, '').trim();
       if (cleaned.length > 120) {
         cleaned = cleaned.substring(0, 117) + '...';
@@ -1720,23 +1810,15 @@
       let text = origText;
       let lowerInst = instruction.toLowerCase();
 
-      // Case 1: Specific request regarding 'apenas para se sentir vingado' or repetition of 'vingado'
-      if (lowerInst.includes('apenas para se sentir vingado') || (lowerInst.includes('repetiç') && lowerInst.includes('vinga'))) {
+      // Case 1: Specific request regarding 'apenas para se sentir vingado'
+      if (lowerInst.includes('vinga') || lowerInst.includes('saciar') || lowerInst.includes('repetiç')) {
         text = text.replace(
           /apenas para se sentir vingado\./gi,
-          "apenas para saciar sua sede de desforra."
+          "apenas para saciar um torpe desejo de vingança."
         );
         text = text.replace(
           /apenas para se sentir vingado/gi,
-          "apenas para saciar sua sede de desforra"
-        );
-      }
-
-      // Case 2: General replacement of repeated 'vingado' if requested
-      if (lowerInst.includes('saciar') && lowerInst.includes('vingan')) {
-        text = text.replace(
-          /apenas para se sentir vingado/gi,
-          "apenas para saciar seu desejo de desforra"
+          "apenas para saciar um torpe desejo de vingança"
         );
       }
 
@@ -1823,9 +1905,17 @@
       revs[rKey] = lastGeneratedRevision;
       localStorage.setItem('miguel_book_revisions_' + currentChapterKey, JSON.stringify(revs));
 
+      // Save instruction to chapter history log
+      if (lastGeneratedRevision.rawInstruction) {
+        saveInstructionToHistory(lastGeneratedRevision.rawInstruction);
+      }
+
+      // Clear instruction input field and state for fresh dictation
+      clearInstructionInput();
+
       closeAiAuditModal();
       switchVersion(rKey);
-      alert(`Revisão ${rKey} salva com sucesso com o texto reescrito focado no seu pedido!`);
+      alert(`Revisão ${rKey} salva com sucesso! O campo de anotações foi limpo para novos ditados.`);
     }
   </script>
 </body>
