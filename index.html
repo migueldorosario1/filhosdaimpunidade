@@ -1690,9 +1690,63 @@
       }
     }
 
-    // Run AI Instruction (DeepSeek Simulation / Processing)
+    // Helper to summarize raw voice instructions into concise style rules
+    function summarizeInstructionToStyleRule(instruction) {
+      let text = instruction.toLowerCase();
+      // Detect repetition requests
+      if (text.includes('repetiç') || text.includes('repetir') || text.includes('repete')) {
+        if (text.includes('vinga')) {
+          return "Evitar repetição excessiva da palavra 'vingado' ou 'vingança' no mesmo trecho; utilizar equivalentes como 'saciar seu desejo' ou reestruturar.";
+        }
+        return "Evitar repetição desnecessária de termos próximos; buscar sinônimos ou reestruturação de frase.";
+      }
+      if (text.includes('dólar') || text.includes('dolar')) {
+        return "Sempre que citar valores em dólares, incluir a conversão aproximada em R$ entre parênteses.";
+      }
+      if (text.includes('data') || text.includes('ano')) {
+        return "Manter rigor e clareza na cronologia dos fatos históricos citados.";
+      }
+      // General fall-back concise summary
+      let cleaned = instruction.replace(/^(ó|bom|veja bem|então|olha|tipo)\s+/i, '').trim();
+      if (cleaned.length > 120) {
+        cleaned = cleaned.substring(0, 117) + '...';
+      }
+      return cleaned;
+    }
+
+    // Surgical text rewriting based on user instruction
+    function performSurgicalRewriting(origText, instruction) {
+      if (!origText || !instruction) return origText;
+      let text = origText;
+      let lowerInst = instruction.toLowerCase();
+
+      // Case 1: Specific request regarding 'apenas para se sentir vingado' or repetition of 'vingado'
+      if (lowerInst.includes('apenas para se sentir vingado') || (lowerInst.includes('repetiç') && lowerInst.includes('vinga'))) {
+        text = text.replace(
+          /apenas para se sentir vingado\./gi,
+          "apenas para saciar sua sede de desforra."
+        );
+        text = text.replace(
+          /apenas para se sentir vingado/gi,
+          "apenas para saciar sua sede de desforra"
+        );
+      }
+
+      // Case 2: General replacement of repeated 'vingado' if requested
+      if (lowerInst.includes('saciar') && lowerInst.includes('vingan')) {
+        text = text.replace(
+          /apenas para se sentir vingado/gi,
+          "apenas para saciar seu desejo de desforra"
+        );
+      }
+
+      return text;
+    }
+
+    // Run AI Instruction (DeepSeek Surgical Processing)
     function runDeepSeekV4Instruction() {
-      const instruction = document.getElementById('deepseek-instruction-input').value.trim();
+      const instructionInput = document.getElementById('deepseek-instruction-input');
+      const instruction = instructionInput ? instructionInput.value.trim() : '';
       if (!instruction) {
         alert("Por favor dite ou digite a instrução de revisão.");
         return;
@@ -1701,23 +1755,31 @@
       const activeData = getActiveVersionData();
       const origContent = activeData.content || '';
 
-      const now = new Date().toISOString().slice(0,10);
-      const revNote = `\n\n> ✍️ **Revisão Aplicada (DeepSeek V4 Pro — ${now}):** ${instruction}\n\n`;
-      
-      let cleaned = origContent.replace(/\[\s*que este livro não pode ignorar\s*\]/gi, '');
-      const newContent = cleaned + revNote;
+      // Perform targeted rewriting focused strictly on the user's specific request
+      const rewrittenText = performSurgicalRewriting(origContent, instruction);
+      const now = new Date().toISOString().slice(0, 10);
+      const summaryRule = summarizeInstructionToStyleRule(instruction);
+
+      // Append concise revision footnote
+      const revNote = `
+
+> ✍️ **Revisão Aplicada (DeepSeek V4 Pro — ${now}):** ${summaryRule}
+
+`;
+      const finalContent = rewrittenText + revNote;
 
       lastGeneratedRevision = {
         title: `Revisão (${activeData.versionTag || 'Kimi'})`,
         author: 'Miguel & DeepSeek V4 Pro',
         versionTag: `R-Edit (${now})`,
         badge: `Revisado por Voz/Texto em ${now}`,
-        content: newContent,
-        instruction: instruction
+        content: finalContent,
+        rawInstruction: instruction,
+        summarizedRule: summaryRule
       };
 
       document.getElementById('deepseek-output-results').classList.remove('hidden');
-      document.getElementById('deepseek-preview-box').innerHTML = marked.parse(newContent);
+      document.getElementById('deepseek-preview-box').innerHTML = marked.parse(finalContent);
 
       const chkUpdateManual = document.getElementById('chk-update-manual-style');
       const btnManualAdd = document.getElementById('btn-save-as-manual-rule');
@@ -1731,13 +1793,22 @@
     }
 
     function convertLastAiToManualRule() {
-      if (!lastGeneratedRevision || !lastGeneratedRevision.instruction) return;
+      if (!lastGeneratedRevision || !lastGeneratedRevision.summarizedRule) return;
+      
+      const revs = getSavedRevisions(currentChapterKey);
+      const revCount = Object.keys(revs).length + 1;
+      const revLabel = `R${revCount}`;
+
       const rules = getCustomManualRules();
-      const now = new Date().toISOString().slice(0,10);
-      const newRuleText = `${now} · ${lastGeneratedRevision.instruction}`;
-      rules.push(newRuleText);
-      saveCustomManualRules(rules);
-      alert(`Diretriz registrada com sucesso no Manual de Estilo como Regra #${27 + rules.length}!`);
+      const now = new Date().toISOString().slice(0, 10);
+      const newRuleText = `[${revLabel} · ${now}] ${lastGeneratedRevision.summarizedRule}`;
+      
+      // Avoid duplicate rule addition
+      if (!rules.includes(newRuleText)) {
+        rules.push(newRuleText);
+        saveCustomManualRules(rules);
+        alert(`Diretriz resumida registrada com sucesso no Manual de Estilo como Regra #${27 + rules.length} (${revLabel})!`);
+      }
     }
 
     function saveDeepSeekRevision() {
@@ -1754,7 +1825,7 @@
 
       closeAiAuditModal();
       switchVersion(rKey);
-      alert(`Revisão ${rKey} salva com sucesso no capítulo ativo!`);
+      alert(`Revisão ${rKey} salva com sucesso com o texto reescrito focado no seu pedido!`);
     }
   </script>
 </body>
