@@ -508,27 +508,27 @@
           </div>
 
           <div class="space-y-4">
-            <!-- BOX 1: EDITABLE TEXTAREA -->
-            <div class="space-y-1.5">
-              <label class="block text-[11px] font-mono text-purple-300 uppercase tracking-wider flex items-center justify-between">
-                <span>📝 1. Trecho Reescrito Completo (Editável antes de gravar):</span>
-                <span class="text-slate-500 text-[10px]">Texto final para salvar como R#</span>
-              </label>
-              <textarea id="deepseek-editable-result" rows="6" class="w-full bg-cardbg border border-purple-500/40 rounded-2xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-400 font-serif leading-relaxed" placeholder="O texto reescrito aparecerá aqui..."></textarea>
-            </div>
-
-            <!-- BOX 2: CONVERSATIONAL HUMANIZED AI FEEDBACK -->
-            <div class="p-4 bg-gradient-to-r from-purple-950/60 to-slate-900/80 border border-purple-500/40 rounded-2xl space-y-2 shadow-inner">
+            <!-- BOX 1 (TOP): CONVERSATIONAL HUMANIZED AI FEEDBACK (DESTAQUE SUPERIOR) -->
+            <div class="p-4 bg-gradient-to-r from-purple-950/70 to-slate-900/90 border border-amber-500/40 rounded-2xl space-y-2 shadow-xl">
               <div class="flex items-center justify-between text-xs font-mono font-bold text-amber-300">
                 <span class="flex items-center gap-2">
                   <i data-lucide="message-square" class="w-4 h-4 text-amber-400"></i>
-                  <span id="conversational-ai-title">💬 Resposta do Editor Assistente (DeepSeek V4 Pro):</span>
+                  <span id="conversational-ai-title">💬 Resposta do Editor Assistente (IA):</span>
                 </span>
-                <span class="text-[10px] text-purple-300 font-mono bg-purple-900/50 px-2 py-0.5 rounded border border-purple-500/30">IA Conversacional Humana</span>
+                <span class="text-[10px] text-purple-300 font-mono bg-purple-900/60 px-2 py-0.5 rounded border border-purple-500/30">IA Conversacional Humana</span>
               </div>
               <div id="conversational-ai-text" class="text-xs text-slate-200 leading-relaxed font-sans prose-invert p-1">
                 <!-- Dynamic Conversational Feedback -->
               </div>
+            </div>
+
+            <!-- BOX 2 (BOTTOM): EDITABLE TEXTAREA (CAPÍTULO INTEIRO REESCRITO) -->
+            <div class="space-y-1.5">
+              <label class="block text-[11px] font-mono text-purple-300 uppercase tracking-wider flex items-center justify-between">
+                <span>📝 Texto Reescrito do Capítulo Completo (Editável antes de gravar):</span>
+                <span class="text-slate-500 text-[10px]">Edite manualmente se quiser antes de gravar a Revisão R#</span>
+              </label>
+              <textarea id="deepseek-editable-result" rows="7" class="w-full bg-cardbg border border-purple-500/40 rounded-2xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-400 font-serif leading-relaxed" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
             </div>
           </div>
         </div>
@@ -1518,54 +1518,134 @@
       };
     }
 
+    function getCanonicalVersionKey(chapKey) {
+      return localStorage.getItem('miguel_book_canonical_' + chapKey) || 'oficial';
+    }
+
+    function setCanonicalVersion(vKey) {
+      localStorage.setItem('miguel_book_canonical_' + currentChapterKey, vKey);
+      renderVersionTabs();
+      renderMetrics();
+      renderSingleView();
+      alert(`👑 A versão "${vKey}" foi definida como a VERSÃO CANÔNICA OFICIAL do capítulo! Nenhuma outra versão foi apagada.`);
+    }
+
     function renderVersionTabs() {
       const container = document.getElementById('single-version-tabs');
+      if (!container) return;
       container.innerHTML = '';
 
       const dataset = getCurrentVolumeDataset();
       const chapter = dataset[currentChapterKey];
+      const canonicalKey = getCanonicalVersionKey(currentChapterKey);
+      const isCurrentCanonical = (currentVersionKey === canonicalKey);
 
-      // Official tab
-      const officialBtn = document.createElement('button');
-      officialBtn.onclick = () => switchVersion('oficial');
-      const isOfficialActive = (currentVersionKey === 'oficial');
-      officialBtn.className = `px-3.5 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 ${
-        isOfficialActive 
-          ? 'bg-amber-500 text-black border-amber-400 shadow-md font-bold' 
-          : 'bg-cardbg text-amber-300 border-amber-500/30 hover:border-amber-500/60'
-      }`;
-      officialBtn.innerHTML = `<i data-lucide="lock" class="w-3.5 h-3.5"></i> <span>🔒 Oficial (${chapter.versionTag})</span>`;
-      container.appendChild(officialBtn);
+      // Collect all versions for this chapter
+      const revs = getSavedRevisions(currentChapterKey);
+      const allVersionKeys = [];
 
-      // Experimental tabs for Cap 1 (Vol 1)
+      // Add R# versions in reverse chronological order (newest first: R5, R4, R3...)
+      const rKeys = Object.keys(revs).reverse();
+      rKeys.forEach(rk => allVersionKeys.push({ key: rk, label: revs[rk].versionTag || rk, type: 'revision' }));
+
+      // Add experimental versions if cap 1
       if (currentVolume === 'vol1_v7' && currentChapterKey === '01_estarei_vingado') {
         ['antigravity', 'claude', 'gpt'].forEach(k => {
-          const btn = document.createElement('button');
-          btn.onclick = () => switchVersion(k);
-          const isActive = (currentVersionKey === k);
-          btn.className = `px-3.5 py-1.5 rounded-xl text-xs font-medium border transition ${
-            isActive ? 'bg-cyan-500 text-black border-cyan-400 font-bold' : 'bg-cardbg text-slate-300 border-white/10 hover:border-cyan-400/40'
-          }`;
-          btn.textContent = expVersionsCap1[k].title;
-          container.appendChild(btn);
+          allVersionKeys.push({ key: k, label: expVersionsCap1[k].title, type: 'exp' });
         });
       }
 
-      // Revisions R1, R2...
-      const revs = getSavedRevisions(currentChapterKey);
-      Object.keys(revs).forEach(rKey => {
-        const rev = revs[rKey];
-        const btn = document.createElement('button');
-        btn.onclick = () => switchVersion(rKey);
-        const isActive = (currentVersionKey === rKey);
-        btn.className = `px-3.5 py-1.5 rounded-xl text-xs font-medium border transition flex items-center gap-1.5 ${
-          isActive 
-            ? 'bg-purple-600 text-white border-purple-400 shadow-md font-bold' 
-            : 'bg-cardbg text-purple-300 border-purple-500/40 hover:border-purple-400'
-        }`;
-        btn.innerHTML = `<i data-lucide="file-edit" class="w-3.5 h-3.5"></i> <span>${rev.versionTag || rKey}</span>`;
-        container.appendChild(btn);
+      // Add base official version
+      allVersionKeys.push({ key: 'oficial', label: `Oficial (${chapter.versionTag})`, type: 'official' });
+
+      // Active label for main dropdown button
+      let activeLabel = 'Oficial';
+      allVersionKeys.forEach(v => {
+        if (v.key === currentVersionKey) activeLabel = v.label;
       });
+
+      // 1. VERTICAL DROPDOWN BUTTON (Escadinha Vertical)
+      const dropdownWrapper = document.createElement('div');
+      dropdownWrapper.className = 'relative inline-block text-left';
+
+      const isCanonBadge = isCurrentCanonical ? '👑 Canônica: ' : '📌 Versão: ';
+      
+      dropdownWrapper.innerHTML = `
+        <button id="btn-version-dropdown-toggle" onclick="toggleVersionDropdown()" class="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-900/80 to-slate-900/90 border border-purple-400/40 hover:border-purple-400 rounded-xl text-xs font-semibold text-white shadow-lg transition">
+          <i data-lucide="${isCurrentCanonical ? 'crown' : 'layers'}" class="w-4 h-4 ${isCurrentCanonical ? 'text-amber-400' : 'text-purple-300'}"></i>
+          <span>${isCanonBadge}${activeLabel}</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 text-purple-300"></i>
+        </button>
+
+        <!-- VERTICAL DROPDOWN MENU (ESCADA REVERSA DE CIMA PRA BAIXO) -->
+        <div id="version-dropdown-menu" class="hidden absolute left-0 mt-2 w-64 rounded-2xl bg-slate-900 border border-purple-500/40 shadow-2xl z-50 overflow-hidden py-1 max-h-80 overflow-y-auto">
+          <div class="px-3 py-2 border-b border-white/10 text-[10px] uppercase font-mono font-bold text-slate-400 tracking-wider flex items-center justify-between">
+            <span>📜 Histórico de Versões</span>
+            <span class="text-amber-400 font-mono">👑 = Canônica</span>
+          </div>
+          <div id="version-dropdown-list" class="divide-y divide-white/5"></div>
+        </div>
+      `;
+
+      container.appendChild(dropdownWrapper);
+
+      // Populate vertical dropdown items
+      const listEl = dropdownWrapper.querySelector('#version-dropdown-list');
+      allVersionKeys.forEach(v => {
+        const itemBtn = document.createElement('button');
+        const isSelected = (v.key === currentVersionKey);
+        const isCanonical = (v.key === canonicalKey);
+
+        itemBtn.onclick = () => {
+          switchVersion(v.key);
+          closeVersionDropdown();
+        };
+
+        itemBtn.className = `w-full text-left px-4 py-2.5 text-xs font-medium flex items-center justify-between transition ${
+          isSelected 
+            ? 'bg-purple-900/60 text-white font-bold border-l-4 border-purple-400' 
+            : 'text-slate-300 hover:bg-slate-800/80 hover:text-white'
+        }`;
+
+        const iconHtml = isCanonical 
+          ? `<i data-lucide="crown" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>` 
+          : (isSelected ? `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>` : `<i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-500 flex-shrink-0"></i>`);
+
+        const canonicalLabel = isCanonical ? `<span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 px-1.5 py-0.5 rounded text-[10px] font-mono font-bold">👑 Canônica</span>` : '';
+
+        itemBtn.innerHTML = `
+          <div class="flex items-center gap-2 truncate">
+            ${iconHtml}
+            <span class="truncate">${v.label}</span>
+          </div>
+          ${canonicalLabel}
+        `;
+        listEl.appendChild(itemBtn);
+      });
+
+      // 2. BUTTON: TORNAR CANÔNICA (Make Canonical)
+      const canonicalBtn = document.createElement('button');
+      if (isCurrentCanonical) {
+        canonicalBtn.className = "flex items-center gap-1.5 px-3.5 py-2 bg-amber-500/20 text-amber-300 border border-amber-500/50 rounded-xl text-xs font-bold shadow cursor-default";
+        canonicalBtn.innerHTML = `<i data-lucide="crown" class="w-4 h-4 text-amber-400"></i> <span>👑 Versão Canônica Atual</span>`;
+      } else {
+        canonicalBtn.onclick = () => setCanonicalVersion(currentVersionKey);
+        canonicalBtn.className = "flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-500 text-black border border-amber-400 rounded-xl text-xs font-bold shadow transition cursor-pointer";
+        canonicalBtn.innerHTML = `<i data-lucide="crown" class="w-4 h-4 text-black"></i> <span>Tornar Canônica</span>`;
+      }
+      container.appendChild(canonicalBtn);
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function toggleVersionDropdown() {
+      const menu = document.getElementById('version-dropdown-menu');
+      if (menu) menu.classList.toggle('hidden');
+    }
+
+    function closeVersionDropdown() {
+      const menu = document.getElementById('version-dropdown-menu');
+      if (menu) menu.classList.add('hidden');
     }
 
     function switchVersion(vKey) {
@@ -2237,9 +2317,9 @@
       revs[rKey] = lastGeneratedRevision;
       localStorage.setItem('miguel_book_revisions_' + currentChapterKey, JSON.stringify(revs));
 
-      closeAiAuditModal();
+      // Do NOT close modal, keep user inside editing window for further changes
       switchVersion(rKey);
-      alert(`Revisão ${rKey} salva com sucesso! O texto reescrito foi atualizado no leitor.`);
+      alert(`✅ Nova Revisão ${rKey} gravada com sucesso! Você continua nesta janela para realizar mais alterações se desejar.`);
     }
 
     function openGitSyncModal() {
