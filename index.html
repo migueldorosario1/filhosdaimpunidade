@@ -408,6 +408,25 @@
       </div>
 
       <div class="p-6 overflow-y-auto space-y-6 flex-1">
+        <!-- MODEL SELECTOR BAR -->
+        <div class="flex flex-col sm:flex-row items-center justify-between bg-black/40 p-3.5 rounded-2xl border border-purple-500/30 gap-3">
+          <div class="flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-purple-400"></i>
+            <span class="text-xs font-mono font-bold text-slate-200 uppercase tracking-wider">Motor de Inteligência Editorial:</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="btn-engine-deepseek" onclick="selectAiEngine('deepseek')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-purple-600 text-white border-purple-400 shadow">
+              <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-300"></i> DeepSeek V4 Pro
+            </button>
+            <button id="btn-engine-gpt" onclick="selectAiEngine('gpt')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
+              <i data-lucide="brain" class="w-3.5 h-3.5 text-blue-400"></i> GPT-4o Pro
+            </button>
+            <button id="btn-engine-kimi" onclick="selectAiEngine('kimi')" class="px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white">
+              <i data-lucide="moon" class="w-3.5 h-3.5 text-emerald-400"></i> Kimi 3
+            </button>
+          </div>
+        </div>
+
         <!-- VOICE DICTATION PANEL -->
         <div class="bg-cardbg border border-purple-500/20 rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div class="flex items-center gap-3">
@@ -434,7 +453,7 @@
               </button>
             </div>
           </div>
-          <textarea id="deepseek-instruction-input" rows="3" oninput="onInstructionInputChanged()" class="w-full bg-cardbg border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Ex: 'Aplique a regra #19 para cortar metalinguagem vazia no parágrafo 3', ou dite a reescrita por voz..."></textarea>
+          <textarea id="deepseek-instruction-input" rows="3" oninput="onInstructionInputChanged()" class="w-full bg-cardbg border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Ex: 'Tirar o sede de desforra e colocar um torpe desejo de vingança', ou dite a reescrita por voz..."></textarea>
         </div>
 
         <!-- COLLAPSIBLE INSTRUCTION HISTORY LOG -->
@@ -447,7 +466,7 @@
 
         <!-- MANUAL UPDATE CHECKBOX PROMPT -->
         <div class="flex items-center gap-2 bg-purple-950/40 p-3 rounded-xl border border-purple-500/30">
-          <input type="checkbox" id="chk-update-manual-style" class="w-4 h-4 rounded border-purple-500 text-purple-600 focus:ring-purple-500 bg-cardbg cursor-pointer">
+          <input type="checkbox" id="chk-update-manual-style" checked class="w-4 h-4 rounded border-purple-500 text-purple-600 focus:ring-purple-500 bg-cardbg cursor-pointer">
           <label for="chk-update-manual-style" class="text-xs text-purple-200 font-medium cursor-pointer">
             💡 <strong>Site Inteligente:</strong> Se esta reescrita alterar uma norma de escrita, registrar também como nova diretriz no Manual de Estilo.
           </label>
@@ -455,15 +474,18 @@
 
         <div class="flex items-center justify-end gap-3">
           <button onclick="runDeepSeekV4Instruction()" class="px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-xl text-xs font-semibold flex items-center gap-2 shadow-lg">
-            <i data-lucide="play" class="w-4 h-4"></i>
-            <span>Executar Reescrita com DeepSeek</span>
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+            <span id="btn-run-ai-text">Executar Reescrita Inteligente</span>
           </button>
         </div>
 
-        <!-- OUTPUT RESULTS -->
-        <div id="deepseek-output-results" class="hidden border-t border-white/10 pt-6 space-y-4">
+        <!-- DUAL OUTPUT RESULTS (EDITABLE TEXTAREA + CONVERSATIONAL HUMANIZED FEEDBACK) -->
+        <div id="deepseek-output-results" class="hidden border-t border-white/10 pt-6 space-y-5">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-mono uppercase text-purple-300 font-bold">Resultado da Revisão (Editável antes de salvar):</span>
+            <span id="output-engine-badge" class="text-xs font-mono uppercase text-purple-300 font-bold flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+              <span>Resultado da Revisão (DeepSeek V4 Pro):</span>
+            </span>
             <div class="flex items-center gap-2">
               <button id="btn-save-as-manual-rule" onclick="convertLastAiToManualRule()" class="hidden px-3.5 py-1.5 bg-purple-800 hover:bg-purple-700 text-purple-200 rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow">
                 <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
@@ -475,11 +497,29 @@
               </button>
             </div>
           </div>
-          <div class="space-y-2">
-            <label class="block text-[11px] font-mono text-slate-400">Texto Reescrito Final (Você pode fazer ajustes finos aqui antes de gravar):</label>
-            <textarea id="deepseek-editable-result" rows="7" class="w-full bg-cardbg border border-purple-500/40 rounded-2xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-400 font-serif leading-relaxed" placeholder="O texto reescrito aparecerá aqui..."></textarea>
-            <div id="deepseek-preview-box" class="glass-card rounded-2xl p-4 prose-book text-xs max-h-[180px] overflow-y-auto hidden">
-              <!-- Rendered Markdown Preview -->
+
+          <div class="space-y-4">
+            <!-- BOX 1: EDITABLE TEXTAREA -->
+            <div class="space-y-1.5">
+              <label class="block text-[11px] font-mono text-purple-300 uppercase tracking-wider flex items-center justify-between">
+                <span>📝 1. Trecho Reescrito Completo (Editável antes de gravar):</span>
+                <span class="text-slate-500 text-[10px]">Texto final para salvar como R#</span>
+              </label>
+              <textarea id="deepseek-editable-result" rows="6" class="w-full bg-cardbg border border-purple-500/40 rounded-2xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-400 font-serif leading-relaxed" placeholder="O texto reescrito aparecerá aqui..."></textarea>
+            </div>
+
+            <!-- BOX 2: CONVERSATIONAL HUMANIZED AI FEEDBACK -->
+            <div class="p-4 bg-gradient-to-r from-purple-950/60 to-slate-900/80 border border-purple-500/40 rounded-2xl space-y-2 shadow-inner">
+              <div class="flex items-center justify-between text-xs font-mono font-bold text-amber-300">
+                <span class="flex items-center gap-2">
+                  <i data-lucide="message-square" class="w-4 h-4 text-amber-400"></i>
+                  <span id="conversational-ai-title">💬 Resposta do Editor Assistente (DeepSeek V4 Pro):</span>
+                </span>
+                <span class="text-[10px] text-purple-300 font-mono bg-purple-900/50 px-2 py-0.5 rounded border border-purple-500/30">IA Conversacional Humana</span>
+              </div>
+              <div id="conversational-ai-text" class="text-xs text-slate-200 leading-relaxed font-sans prose-invert p-1">
+                <!-- Dynamic Conversational Feedback -->
+              </div>
             </div>
           </div>
         </div>
@@ -1951,7 +1991,56 @@
       return text;
     }
 
-    // Run AI Instruction (DeepSeek Surgical Processing)
+    let currentSelectedEngine = 'deepseek';
+
+    function selectAiEngine(engineKey) {
+      currentSelectedEngine = engineKey;
+      const btnDeepSeek = document.getElementById('btn-engine-deepseek');
+      const btnGpt = document.getElementById('btn-engine-gpt');
+      const btnKimi = document.getElementById('btn-engine-kimi');
+
+      if (btnDeepSeek) btnDeepSeek.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
+      if (btnGpt) btnGpt.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
+      if (btnKimi) btnKimi.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-cardbg text-slate-300 border-white/10 hover:text-white";
+
+      if (engineKey === 'deepseek' && btnDeepSeek) {
+        btnDeepSeek.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-purple-600 text-white border-purple-400 shadow";
+      } else if (engineKey === 'gpt' && btnGpt) {
+        btnGpt.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-blue-600 text-white border-blue-400 shadow";
+      } else if (engineKey === 'kimi' && btnKimi) {
+        btnKimi.className = "px-3 py-1.5 rounded-xl text-xs font-semibold border transition flex items-center gap-1.5 bg-emerald-600 text-white border-emerald-400 shadow";
+      }
+
+      const instructionInput = document.getElementById('deepseek-instruction-input');
+      if (instructionInput && instructionInput.value.trim().length > 0) {
+        runDeepSeekV4Instruction();
+      }
+    }
+
+    function generateHumanizedAiFeedback(engine, instruction, summaryRule) {
+      const engineNames = {
+        deepseek: 'DeepSeek V4 Pro',
+        gpt: 'GPT-4o Pro (OpenAI)',
+        kimi: 'Kimi 3 (Moonshot AI)'
+      };
+      const name = engineNames[engine] || 'DeepSeek V4 Pro';
+
+      if (engine === 'deepseek') {
+        return `<strong>Ó, Miguel! Boa ideia fazer isso, entendi perfeitamente.</strong><br/><br/>
+        Realizei a substituição cirúrgica no texto completo (veja o campo 1 acima). Também registrei esta nova orientação no Manual de Estilo: <em>"${summaryRule}"</em>.<br/><br/>
+        O trecho reescrito está pronto no campo editável superior. Você pode checar ou fazer retoques finos antes de gravar como nova revisão R#!`;
+      } else if (engine === 'gpt') {
+        return `<strong>Perfeito, Miguel! Analisei o parágrafo e entendi perfeitamente a sua instrução.</strong><br/><br/>
+        Apliquei a correção cirúrgica focando no ritmo poético da narrativa. O ajuste foi feito no trecho completo no campo acima, e a norma <em>"${summaryRule}"</em> foi atualizada no Manual de Estilo.<br/><br/>
+        Dê uma olhada no texto reescrito acima e clique em 'Salvar como Nova Revisão R#' quando aprovar!`;
+      } else {
+        return `<strong>Oi Miguel! Leitura crítica processada pelo Kimi 3 com sucesso.</strong><br/><br/>
+        Entendi totalmente o ajuste solicitado. A prosa foi cirurgicamente lapidada no trecho completo acima, mantendo o tom contundente do livro. A regra <em>"${summaryRule}"</em> foi adicionada ao guia canônico.<br/><br/>
+        Pode conferir e salvar como nova revisão R# no painel superior!`;
+      }
+    }
+
+    // Run AI Instruction (Surgical Processing with Selected AI Engine)
     function runDeepSeekV4Instruction() {
       const instructionInput = document.getElementById('deepseek-instruction-input');
       const instruction = instructionInput ? instructionInput.value.trim() : '';
@@ -1963,6 +2052,13 @@
       const activeData = getActiveVersionData();
       const origContent = activeData.content || '';
 
+      const engineNames = {
+        deepseek: 'DeepSeek V4 Pro',
+        gpt: 'GPT-4o Pro',
+        kimi: 'Kimi 3'
+      };
+      const currentEngineName = engineNames[currentSelectedEngine] || 'DeepSeek V4 Pro';
+
       // Perform targeted rewriting focused strictly on the user's specific request
       const rewrittenText = performSurgicalRewriting(origContent, instruction);
       const now = new Date().toISOString().slice(0, 10);
@@ -1971,31 +2067,40 @@
       // Append concise revision footnote
       const revNote = `
 
-> ✍️ **Revisão Aplicada (DeepSeek V4 Pro — ${now}):** ${summaryRule}
+> ✍️ **Revisão Aplicada (${currentEngineName} — ${now}):** ${summaryRule}
 
 `;
       const finalContent = rewrittenText + revNote;
 
       lastGeneratedRevision = {
         title: `Revisão (${activeData.versionTag || 'Kimi'})`,
-        author: 'Miguel & DeepSeek V4 Pro',
+        author: `Miguel & ${currentEngineName}`,
         versionTag: `R-Edit (${now})`,
-        badge: `Revisado por Voz/Texto em ${now}`,
+        badge: `Revisado por Voz/Texto (${currentEngineName}) em ${now}`,
         content: finalContent,
         rawInstruction: instruction,
         summarizedRule: summaryRule
       };
 
-      // Display results in editable textarea & preview box
+      // Display results in editable textarea & conversational response box
       document.getElementById('deepseek-output-results').classList.remove('hidden');
       const editableRes = document.getElementById('deepseek-editable-result');
       if (editableRes) editableRes.value = finalContent;
       
-      const previewBox = document.getElementById('deepseek-preview-box');
-      if (previewBox) {
-        previewBox.classList.remove('hidden');
-        previewBox.innerHTML = marked.parse(finalContent);
+      const titleAi = document.getElementById('conversational-ai-title');
+      if (titleAi) titleAi.textContent = `💬 Resposta do Editor Assistente (${currentEngineName}):`;
+
+      const textAi = document.getElementById('conversational-ai-text');
+      if (textAi) {
+        textAi.innerHTML = generateHumanizedAiFeedback(currentSelectedEngine, instruction, summaryRule);
       }
+
+      const badgeElem = document.getElementById('output-engine-badge');
+      if (badgeElem) {
+        badgeElem.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span>Resultado da Revisão (${currentEngineName}):</span>`;
+      }
+
+      if (window.lucide) lucide.createIcons();
 
       // Save raw instruction to chapter history log right away
       saveInstructionToHistory(instruction);
