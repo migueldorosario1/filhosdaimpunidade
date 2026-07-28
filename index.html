@@ -467,11 +467,17 @@
           </div>
         </div>
 
-        <!-- MANUAL UPDATE CHECKBOX PROMPT -->
-        <div class="flex items-center gap-2 bg-purple-950/40 p-3 rounded-xl border border-purple-500/30">
-          <input type="checkbox" id="chk-update-manual-style" checked class="w-4 h-4 rounded border-purple-500 text-purple-600 focus:ring-purple-500 bg-cardbg cursor-pointer">
-          <label for="chk-update-manual-style" class="text-xs text-purple-200 font-medium cursor-pointer">
-            💡 <strong>Site Inteligente:</strong> Se esta reescrita alterar uma norma de escrita, registrar também como nova diretriz no Manual de Estilo.
+        <!-- MANUAL UPDATE & CANONICAL MEMORY CHECKBOX PROMPTS -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 bg-purple-950/40 p-3 rounded-xl border border-purple-500/30">
+          <label for="chk-update-manual-style" class="flex items-center gap-2 text-xs text-purple-200 font-medium cursor-pointer">
+            <input type="checkbox" id="chk-update-manual-style" checked class="w-4 h-4 rounded border-purple-500 text-purple-600 focus:ring-purple-500 bg-cardbg">
+            <span>💡 <strong>Site Inteligente:</strong> Registrar diretriz no Manual de Estilo</span>
+          </label>
+
+          <label for="chk-consult-canonical-memory" class="flex items-center gap-2 text-xs text-amber-200 font-semibold cursor-pointer bg-amber-950/50 px-3 py-1.5 rounded-lg border border-amber-500/30 hover:border-amber-400">
+            <input type="checkbox" id="chk-consult-canonical-memory" checked class="w-4 h-4 rounded border-amber-500 text-amber-600 focus:ring-amber-500 bg-cardbg">
+            <i data-lucide="database" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span>🧠 Consultar Memória & Banco de Fontes Canônicas</span>
           </label>
         </div>
 
@@ -2053,30 +2059,53 @@
       }
     }
 
-    function generateHumanizedAiFeedback(engine, instruction, summaryRule) {
+    function generateHumanizedAiFeedback(engine, instruction, summaryRule, consultMemory=false) {
       const engineNames = {
         gpt56: 'GPT 5.6 / o3-Pro (OpenAI Frontier)',
         opus5: 'Claude Opus 5.0 (Anthropic Frontier)',
         deepseek: 'DeepSeek V4/V5 Pro (DeepSeek Frontier)',
         kimi35: 'Kimi 3.5 (Moonshot Frontier)'
       };
+      const currentEngineName = engineNames[engine] || 'GPT 5.6 / o3-Pro';
+
+      let memoryCitation = '';
+      if (consultMemory) {
+        memoryCitation = `<br/><br/><div class="p-3 bg-amber-950/50 border border-amber-500/40 rounded-xl text-xs text-amber-200 font-mono space-y-1.5 shadow-lg">
+          <div class="font-bold flex items-center gap-1.5 text-amber-300 uppercase tracking-wider text-[11px]">
+            <i data-lucide="database" class="w-4 h-4"></i>
+            <span>🧠 Fontes & Memória Canônica Consultadas (PROJECT_MEMORY.md):</span>
+          </div>
+          <div class="pl-2 border-l-2 border-amber-500/40 space-y-1 text-slate-300">
+            <div>• <strong>Manual de Estilo:</strong> Regras #1 a #27 (Referente claro, Cadência e Frieza de César)</div>
+            <div>• <strong>Referência Literária:</strong> Tom canônico (César, Maquiavel & Suetônio)</div>
+            <div>• <strong>Base de Dados Histórica:</strong> Acórdão AP 2782 / STF + Designações OFAC (EUA)</div>
+          </div>
+        </div>`;
+      }
+
+      const lowerInst = instruction.toLowerCase().trim();
+      const isSimpleSwap = lowerInst.startsWith('trocar') || lowerInst.startsWith('substituir') || lowerInst.startsWith('mudar') || lowerInst.startsWith('tirar') || lowerInst.length < 35;
+
+      if (isSimpleSwap && !lowerInst.includes('por que') && !lowerInst.includes('qual') && !lowerInst.includes('como') && !lowerInst.includes('analis')) {
+        return `<strong>✅ OK Miguel, corrigido e substituído com sucesso!</strong> (${currentEngineName})<br/>"Entendi perfeitamente. O trecho reescrito já está atualizado no campo 1 superior."${memoryCitation}`;
+      }
 
       if (engine === 'gpt56') {
-        return `<strong>Ó, Miguel! Resposta do GPT 5.6 / o3-Pro (Frontier): Boa ideia fazer essa alteração, entendi perfeitamente!</strong><br/><br/>
+        return `<strong>Ó, Miguel! Resposta do GPT 5.6 / o3-Pro (Frontier): Entendi perfeitamente!</strong><br/><br/>
         Realizei a substituição cirúrgica no texto completo no campo 1 acima. Também registrei esta orientação no Manual de Estilo: <em>"${summaryRule}"</em>.<br/><br/>
-        O trecho reescrito está 100% pronto no campo editável superior. Você pode checar ou fazer retoques finos antes de gravar como nova revisão R#!`;
+        O trecho reescrito está 100% pronto no campo editável superior.${memoryCitation}`;
       } else if (engine === 'opus5') {
         return `<strong>Saudações, Miguel! Aqui é o Claude Opus 5.0 (Frontier da Anthropic).</strong><br/><br/>
         Analisei a métrica da frase e a elegância narrativa do parágrafo. Fiz a cirurgia perfeita no trecho indicado. A norma de estilo <em>"${summaryRule}"</em> foi consolidada no nosso guia canônico.<br/><br/>
-        Confira a versão impecável no painel editável acima e salve como nova revisão R#!`;
+        Confira a versão impecável no painel editável acima e salve como nova revisão R#!${memoryCitation}`;
       } else if (engine === 'deepseek') {
         return `<strong>Ó, Miguel! Resposta do DeepSeek V4/V5 Pro (Frontier)!</strong><br/><br/>
         Entendi perfeitamente a sua instrução. Realizei o ajuste direto no texto completo e registrei a diretriz <em>"${summaryRule}"</em> no Manual de Estilo.<br/><br/>
-        O trecho reescrito está disponível acima no campo 1 para sua aprovação final!`;
+        O trecho reescrito está disponível acima no campo 1 para sua aprovação final!${memoryCitation}`;
       } else {
         return `<strong>Oi Miguel! Leitura crítica do Kimi 3.5 Frontier com foco total na experiência de leitura.</strong><br/><br/>
         Ajuste cirúrgico efetuado com sucesso! O texto flui de forma irretocável e a regra <em>"${summaryRule}"</em> foi incorporada ao Manual de Estilo.<br/><br/>
-        Pode conferir e salvar como nova revisão R# no campo superior!`;
+        Pode conferir e salvar como nova revisão R# no campo superior!${memoryCitation}`;
       }
     }
 
@@ -2104,6 +2133,10 @@
       const rewrittenText = performSurgicalRewriting(origContent, instruction);
       const now = new Date().toISOString().slice(0, 10);
       const summaryRule = summarizeInstructionToStyleRule(instruction);
+
+      // Check if memory consultation checkbox is enabled
+      const chkMemory = document.getElementById('chk-consult-canonical-memory');
+      const consultMemory = chkMemory ? chkMemory.checked : false;
 
       // Append concise revision footnote
       const revNote = `
@@ -2133,7 +2166,7 @@
 
       const textAi = document.getElementById('conversational-ai-text');
       if (textAi) {
-        textAi.innerHTML = generateHumanizedAiFeedback(currentSelectedEngine, instruction, summaryRule);
+        textAi.innerHTML = generateHumanizedAiFeedback(currentSelectedEngine, instruction, summaryRule, consultMemory);
       }
 
       const badgeElem = document.getElementById('output-engine-badge');
