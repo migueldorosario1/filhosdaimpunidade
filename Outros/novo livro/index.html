@@ -593,7 +593,7 @@
     <div class="w-full px-6 py-6 flex-1 flex flex-col lg:flex-row gap-6 items-start">
       
       <!-- LEFT COLUMN: PAINEL CONVERSACIONAL DE DITADO & COMANDOS IA (SIDEBAR DE COMANDOS) -->
-      <div id="studio-left-column" class="w-full lg:w-4/12 flex flex-col gap-6 lg:sticky lg:top-24">
+      <div id="studio-left-column" class="w-full lg:w-4/12 flex flex-col gap-6 lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto pr-1">
         <div class="bg-white border border-slate-200 rounded-3xl p-6 space-y-5 shadow-md">
           <div class="flex items-center justify-between border-b border-slate-200 pb-4">
             <div class="flex items-center gap-3">
@@ -601,27 +601,27 @@
                 <i data-lucide="mic" class="w-6 h-6"></i>
               </div>
               <div>
-                <h4 class="text-base font-extrabold font-display text-slate-900">Comando & Ditado por Voz</h4>
-                <p class="text-xs text-purple-900 font-semibold">Fale ou digite a instrução de revisão desejada</p>
+                <h4 class="text-base font-extrabold font-display text-slate-900">Comando e ditado por voz</h4>
+                <p class="text-xs text-purple-950 font-semibold">Fale ou digite a instrução de revisão desejada</p>
               </div>
             </div>
 
             <button id="btn-voice-input" onclick="toggleVoiceInput()" class="px-4 py-2.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm transition cursor-pointer">
               <i data-lucide="mic" class="w-4 h-4"></i>
-              <span id="voice-btn-text">Iniciar Ditado</span>
+              <span id="voice-btn-text">Iniciar ditado</span>
             </button>
             <span id="voice-timer-display" class="hidden font-mono text-sm text-purple-950 font-extrabold bg-purple-100 px-3 py-1 rounded-lg border border-purple-300">00:00</span>
           </div>
 
           <div class="space-y-2">
             <div class="flex items-center justify-between">
-              <label class="block text-xs font-mono font-bold text-slate-700 uppercase">Instrução Editorial Dita / Escrita:</label>
+              <label class="block text-xs font-mono font-bold text-slate-700 uppercase">Instrução editorial dita ou escrita:</label>
               <div class="flex items-center gap-2">
                 <button onclick="toggleInstructionHistory()" class="text-xs font-mono font-bold text-purple-700 hover:text-purple-900 flex items-center gap-1">
                   <i data-lucide="history" class="w-3.5 h-3.5"></i>
                   <span id="history-toggle-text">📜 Histórico</span>
                 </button>
-                <button onclick="clearInstructionInput()" class="text-xs font-mono font-bold text-amber-900 hover:text-amber-950 flex items-center gap-1 bg-amber-100 px-2 py-0.5 rounded border border-amber-300">
+                <button onclick="clearInstructionInput()" class="text-xs font-mono font-bold text-amber-950 hover:text-amber-950 flex items-center gap-1 bg-amber-100 px-2 py-0.5 rounded border border-amber-300">
                   <i data-lucide="trash-2" class="w-3.5 h-3.5"></i>
                   <span>Limpar</span>
                 </button>
@@ -632,7 +632,7 @@
 
           <!-- COLLAPSIBLE INSTRUCTION HISTORY LOG -->
           <div id="deepseek-history-panel" class="hidden bg-slate-50 border border-purple-200 rounded-xl p-3 space-y-2">
-            <div class="text-xs font-mono text-purple-900 font-extrabold uppercase">Histórico de Instruções neste Capítulo:</div>
+            <div class="text-xs font-mono text-purple-950 font-extrabold uppercase">Histórico de instruções neste capítulo:</div>
             <div id="deepseek-history-list" class="space-y-1 max-h-36 overflow-y-auto text-xs font-mono font-semibold text-slate-800">
               <!-- Dynamic history items -->
             </div>
@@ -642,33 +642,33 @@
           <div class="flex flex-col gap-3 bg-purple-50 p-4 rounded-xl border border-purple-200">
             <label for="chk-update-manual-style" class="flex items-center gap-2.5 text-xs text-purple-950 font-bold cursor-pointer">
               <input type="checkbox" id="chk-update-manual-style" checked class="w-4 h-4 rounded border-purple-400 text-purple-700 focus:ring-purple-600 bg-white">
-              <span>💡 <strong>Site Inteligente:</strong> Registrar diretriz no Manual de Estilo</span>
+              <span>💡 <strong>Site inteligente:</strong> Registrar diretriz no Manual de Estilo</span>
             </label>
 
             <label for="chk-consult-canonical-memory" class="flex items-center gap-2.5 text-xs text-amber-950 font-bold cursor-pointer bg-amber-100/80 px-3 py-2 rounded-lg border border-amber-300 hover:border-amber-400">
               <input type="checkbox" id="chk-consult-canonical-memory" class="w-4 h-4 rounded border-amber-500 text-amber-700 focus:ring-amber-600 bg-white">
               <i data-lucide="database" class="w-4 h-4 text-amber-700"></i>
-              <span>🧠 Consultar Memória & Banco de Fontes Canônicas</span>
+              <span>🧠 Consultar memória e banco de fontes canônicas</span>
             </label>
           </div>
 
           <button onclick="runDeepSeekV4Instruction()" class="w-full py-4 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 text-white rounded-xl text-sm font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer">
             <i data-lucide="sparkles" class="w-4.5 h-4.5 text-amber-300"></i>
-            <span id="btn-run-ai-text">Executar Reescrita Inteligente</span>
+            <span id="btn-run-ai-text">Executar reescrita inteligente</span>
           </button>
         </div>
 
         <!-- CONVERSATIONAL HUMANIZED AI FEEDBACK (DESTAQUE DE ALTERAÇÃO NA SIDEBAR) -->
         <div id="deepseek-output-results" class="hidden">
-          <div class="p-5 bg-amber-50 border-2 border-amber-300 rounded-3xl space-y-3 shadow-md">
-            <div class="flex items-center justify-between text-xs font-mono font-extrabold text-amber-950">
+          <div class="p-5 bg-white border-2 border-amber-300 rounded-3xl space-y-4 shadow-md text-slate-900">
+            <div class="flex items-center justify-between text-xs font-mono font-extrabold text-slate-900 border-b border-amber-200 pb-2.5">
               <span class="flex items-center gap-2">
                 <i data-lucide="message-square" class="w-4 h-4 text-amber-700"></i>
-                <span id="conversational-ai-title">💬 Resposta do Editor Assistente (IA):</span>
+                <span id="conversational-ai-title" class="text-slate-900 font-extrabold">Resposta do editor assistente (IA):</span>
               </span>
-              <span class="text-[10px] text-purple-950 font-mono font-bold bg-purple-100 px-2 py-0.5 rounded border border-purple-300">IA Conversacional</span>
+              <span class="text-[11px] text-purple-950 font-mono font-bold bg-purple-100 px-2 py-0.5 rounded border border-purple-300">IA conversacional</span>
             </div>
-            <div id="conversational-ai-text" class="text-sm text-slate-900 font-medium leading-relaxed font-sans p-1">
+            <div id="conversational-ai-text" class="text-sm text-slate-900 font-medium leading-relaxed font-sans space-y-3">
               <!-- Dynamic Conversational Feedback -->
             </div>
           </div>
@@ -3865,17 +3865,23 @@
       }
 
       return `
-        <div class="space-y-2 font-sans">
-          <div class="flex items-center justify-between text-amber-300 font-bold text-xs border-b border-white/10 pb-1.5">
-            <span class="flex items-center gap-1.5">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
-              <span>Relatório Objetivo de Alteração (${engineName}):</span>
+        <div class="space-y-3 font-sans text-sm text-slate-900">
+          <div class="flex items-center justify-between text-slate-900 font-bold text-sm border-b border-amber-300 pb-2">
+            <span class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-700"></i>
+              <span class="text-slate-900 font-extrabold">Relatório objetivo de alteração (${engineName}):</span>
             </span>
           </div>
-          <div class="bg-black/40 p-3.5 rounded-xl border border-white/10 space-y-2 text-xs text-slate-200">
-            <div><strong class="text-purple-300">1. Entendimento do Pedido:</strong> "${instruction}"</div>
-            <div><strong class="text-emerald-300">2. Ação Objetiva Executada:</strong> ${actionDetail}</div>
-            <div><strong class="text-amber-300">3. Diretriz de Estilo Registrada:</strong> <em>"${summaryRule}"</em></div>
+          <div class="bg-amber-50/80 p-4 rounded-2xl border border-amber-300 space-y-2.5 text-sm text-slate-900 leading-relaxed shadow-sm">
+            <div><strong class="text-purple-950 font-extrabold">1. Entendimento do pedido:</strong> "${instruction}"</div>
+            <div><strong class="text-emerald-950 font-extrabold">2. Ação objetiva executada:</strong> ${actionDetail}</div>
+            <div><strong class="text-amber-950 font-extrabold">3. Diretriz de estilo registrada:</strong> <em>"${summaryRule}"</em></div>
+          </div>
+          <div class="pt-1">
+            <button onclick="scrollToAndHighlightRewrittenText()" class="w-full py-2.5 px-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow transition cursor-pointer">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-200"></i>
+              <span>✅ Alteração aplicada no texto (Re-ler agora)</span>
+            </button>
           </div>
         </div>
       `;
@@ -3894,15 +3900,15 @@
 
       let memoryCitation = '';
       if (consultMemory) {
-        memoryCitation = `<div class="mt-3 p-3 bg-amber-950/50 border border-amber-500/40 rounded-xl text-xs text-amber-200 font-mono space-y-1.5 shadow-lg">
-          <div class="font-bold flex items-center gap-1.5 text-amber-300 uppercase tracking-wider text-[11px]">
-            <i data-lucide="database" class="w-4 h-4"></i>
-            <span>🧠 Fontes & Memória Canônica Consultadas (PROJECT_MEMORY.md):</span>
+        memoryCitation = `<div class="mt-3 p-4 bg-amber-100/90 border border-amber-400 rounded-2xl text-sm text-slate-900 font-sans space-y-2 shadow-sm">
+          <div class="font-extrabold flex items-center gap-2 text-slate-900 text-sm">
+            <i data-lucide="database" class="w-4 h-4 text-amber-800"></i>
+            <span>🧠 Fontes e memória canônica consultadas (PROJECT_MEMORY.md):</span>
           </div>
-          <div class="pl-2 border-l-2 border-amber-500/40 space-y-1 text-slate-300">
-            <div>• <strong>Manual de Estilo:</strong> Regras #1 a #27 (Referente claro, Cadência e Frieza de César)</div>
-            <div>• <strong>Referência Literária:</strong> Tom canônico (César, Maquiavel & Suetônio)</div>
-            <div>• <strong>Base de Dados Histórica:</strong> Acórdão AP 2782 / STF + Designações OFAC (EUA)</div>
+          <div class="pl-2 border-l-2 border-amber-500 space-y-1 text-slate-900 text-xs font-medium">
+            <div>• <strong>Manual de estilo:</strong> Regras #1 a #27 (Referente claro, cadência e frieza de César)</div>
+            <div>• <strong>Referência literária:</strong> Tom canônico (César, Maquiavel e Suetônio)</div>
+            <div>• <strong>Base de dados histórica:</strong> Acórdão AP 2782 / STF + Designações OFAC (EUA)</div>
           </div>
         </div>`;
       }
@@ -3910,6 +3916,15 @@
       const report = analyzeInstructionAndGenerateObjectiveReport(instruction, summaryRule, currentEngineName);
 
       return `${report}${memoryCitation}`;
+    }
+
+    function scrollToAndHighlightRewrittenText() {
+      const target = document.getElementById('deepseek-rendered-full-chapter');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.classList.add('ring-4', 'ring-emerald-400', 'transition-all');
+        setTimeout(() => target.classList.remove('ring-4', 'ring-emerald-400'), 2500);
+      }
     }
 
     async function callRealLlmApi(engineKey, instruction, originalText, consultMemory) {
@@ -4191,7 +4206,7 @@ ${prompt}` }] }]
       if (editableRes) editableRes.value = finalContent;
       updateRenderedFullChapterFromTextarea();
       
-      if (titleAi) titleAi.textContent = `💬 Resposta do Editor Assistente (${currentEngineName}):`;
+      if (titleAi) titleAi.textContent = `Resposta do editor assistente (${currentEngineName}):`;
 
       if (textAi) {
         textAi.innerHTML = generateHumanizedAiFeedback(currentSelectedEngine, instruction, summaryRule, consultMemory);
@@ -4199,11 +4214,11 @@ ${prompt}` }] }]
 
       const badgeElem = document.getElementById('output-engine-badge');
       if (badgeElem) {
-        badgeElem.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span>Resultado da Revisão (${currentEngineName}):</span>`;
+        badgeElem.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-700"></i> <span>Resultado da revisão (${currentEngineName}):</span>`;
       }
 
       if (btnRun) {
-        btnRun.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> Executar Reescrita Inteligente`;
+        btnRun.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> Executar reescrita inteligente`;
       }
 
       if (window.lucide) lucide.createIcons();
