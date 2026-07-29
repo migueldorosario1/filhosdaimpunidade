@@ -3807,7 +3807,6 @@ Regras:
 
       // Fallback to local surgical engine if API call fails or no API key is provided
       if (!rewrittenText) {
-        await new Promise(resolve => setTimeout(resolve, consultMemory ? 2000 : 1200));
         rewrittenText = performSurgicalRewriting(origContent, instruction);
       }
       const dateObj = new Date();
