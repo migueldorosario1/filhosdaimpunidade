@@ -626,7 +626,7 @@ html_template = """<!DOCTYPE html>
   <!-- MODAL DE ESTÚDIO EDITORIAL (FULL BLEED FULLVIEW EDGE-TO-EDGE LIGHT E-READER THEME) -->
   <div id="modal-ai-audit" class="fixed inset-0 z-[9999] bg-[#f8f6f0] hidden flex flex-col w-screen h-screen min-h-screen overflow-y-auto text-slate-900 font-sans">
     <!-- FULL VIEW TOP HEADER BAR (STRETCHES 100% FULL WIDTH) -->
-    <div class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm w-full">
+    <div id="studio-modal-header" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm w-full">
       <!-- LEFT ACTION BUTTONS & CHAPTER TITLE -->
       <div class="flex items-center gap-4">
         <button onclick="closeAiAuditModal()" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 rounded-xl text-sm font-extrabold flex items-center gap-2 transition shadow-sm cursor-pointer">
@@ -649,6 +649,11 @@ html_template = """<!DOCTYPE html>
 
       <!-- RIGHT MODEL SELECTOR DROPDOWN & SETTINGS -->
       <div class="flex items-center gap-3">
+        <button onclick="toggleStudioFullView()" title="Full View: Ocultar Painéis e Ver Só o Texto" class="flex items-center gap-1.5 px-4 py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition shadow-md cursor-pointer">
+          <i data-lucide="eye" class="w-4 h-4"></i>
+          <span>👁️ Full View</span>
+        </button>
+
         <!-- VERTICAL MODEL DROPDOWN MENU -->
         <div class="relative inline-block text-left">
           <button id="btn-model-dropdown-toggle" onclick="toggleModelDropdown()" class="flex items-center gap-2.5 px-4.5 py-2.5 bg-white hover:bg-slate-50 border-2 border-indigo-500 rounded-xl text-xs font-extrabold text-indigo-950 shadow-sm transition cursor-pointer">
@@ -719,7 +724,7 @@ html_template = """<!DOCTYPE html>
     <div class="w-full px-6 py-6 flex-1 flex flex-col lg:flex-row gap-6 items-start">
       
       <!-- LEFT COLUMN: PAINEL CONVERSACIONAL DE DITADO & COMANDOS IA (SIDEBAR DE COMANDOS) -->
-      <div class="w-full lg:w-4/12 flex flex-col gap-6 lg:sticky lg:top-24">
+      <div id="studio-left-column" class="w-full lg:w-4/12 flex flex-col gap-6 lg:sticky lg:top-24">
         <div class="bg-white border border-slate-200 rounded-3xl p-6 space-y-5 shadow-md">
           <div class="flex items-center justify-between border-b border-slate-200 pb-4">
             <div class="flex items-center gap-3">
@@ -1211,10 +1216,23 @@ html_template = """<!DOCTYPE html>
     </button>
   </div>
 
+  <!-- FLOATING WIDGET FOR ESTÚDIO EDITORIAL FULL VIEW -->
+  <div id="floating-studio-fullview-widget" class="fixed top-4 right-4 z-[10000] hidden flex items-center gap-2.5 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-2 rounded-full shadow-2xl">
+    <!-- ICON 1: CONFIGURAÇÕES DE IA / ESTÚDIO -->
+    <button onclick="openSettingsModal()" title="Configurações de IA & Modelos" class="w-11 h-11 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-purple-300 cursor-pointer">
+      <i data-lucide="sparkles" class="w-5 h-5 text-amber-300"></i>
+    </button>
+    <!-- ICON 2: OLHO (VOLTAR MENU / RESTABLECER PAINÉIS DO ESTÚDIO) -->
+    <button onclick="toggleStudioFullView()" title="Voltar Menu / Restabelecer Painel de Comandos" class="w-11 h-11 rounded-full bg-amber-600 hover:bg-amber-500 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-amber-300 cursor-pointer">
+      <i data-lucide="eye" class="w-5.5 h-5.5"></i>
+    </button>
+  </div>
+
   <!-- DATA & JAVASCRIPT LOGIC -->
   <script>
     let isFullViewActive = false;
     let isCentralFullViewActive = false;
+    let isStudioFullViewActive = false;
 
     function toggleFullView() {
       isFullViewActive = !isFullViewActive;
@@ -1260,6 +1278,33 @@ html_template = """<!DOCTYPE html>
           modalContainer.classList.remove('w-full', 'h-full', 'max-w-none', 'max-h-none', 'rounded-none', 'p-0');
         }
         if (floatingCentralWidget) floatingCentralWidget.classList.add('hidden');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function toggleStudioFullView() {
+      isStudioFullViewActive = !isStudioFullViewActive;
+      const studioHeader = document.getElementById('studio-modal-header');
+      const studioLeftCol = document.getElementById('studio-left-column');
+      const studioRightCol = document.getElementById('deepseek-full-chapter-publication');
+      const floatingStudioWidget = document.getElementById('floating-studio-fullview-widget');
+
+      if (isStudioFullViewActive) {
+        if (studioHeader) studioHeader.classList.add('hidden');
+        if (studioLeftCol) studioLeftCol.classList.add('hidden');
+        if (studioRightCol) {
+          studioRightCol.classList.remove('lg:w-8/12');
+          studioRightCol.classList.add('w-full', 'max-w-4xl', 'mx-auto');
+        }
+        if (floatingStudioWidget) floatingStudioWidget.classList.remove('hidden');
+      } else {
+        if (studioHeader) studioHeader.classList.remove('hidden');
+        if (studioLeftCol) studioLeftCol.classList.remove('hidden');
+        if (studioRightCol) {
+          studioRightCol.classList.add('lg:w-8/12');
+          studioRightCol.classList.remove('w-full', 'max-w-4xl', 'mx-auto');
+        }
+        if (floatingStudioWidget) floatingStudioWidget.classList.add('hidden');
       }
       if (window.lucide) lucide.createIcons();
     }
