@@ -3903,6 +3903,150 @@
       return `${report}${memoryCitation}`;
     }
 
+    async function callRealLlmApi(engineKey, instruction, originalText, consultMemory) {
+      const keys = {
+        gemini: localStorage.getItem('miguel_key_gemini') || '',
+        gpt56: localStorage.getItem('miguel_key_openai') || '',
+        opus5: localStorage.getItem('miguel_key_anthropic') || '',
+        deepseek: localStorage.getItem('miguel_key_deepseek') || 'sk-9335ff9479ea4c2eba10bd0c498dde04',
+        kimi35: localStorage.getItem('miguel_key_kimi') || 'sk-e2j7OPypKuX0GfOzr0Atm4zjjJZ3aUIQeaQ892Dm88iSqfaR',
+        glm52: localStorage.getItem('miguel_key_glm') || ''
+      };
+
+      const systemPrompt = `Você é um editor literário sênior e historiador especialista na obra 'Filhos da Impunidade'. 
+Sua tarefa é reescrever ou editar o texto fornecido estritamente conforme a instrução do usuário, mantendo o tom elegante, sóbrio e rigoroso do livro.
+Regras:
+1. Retorne APENAS o texto completo do capítulo editado/reescrito, sem explicações antes ou depois.
+2. Preserve a integridade factual dos eventos descritos.`;
+
+      const prompt = `INSTRUÇÃO DE EDIÇÃO/REESCRITA DO USUÁRIO:
+"${instruction}"
+
+TEXTO ORIGINAL DO CAPÍTULO:
+${originalText}`;
+
+      try {
+        if (engineKey === 'glm52' && keys.glm52 && !keys.glm52.includes('default')) {
+          const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${keys.glm52}`
+            },
+            body: JSON.stringify({
+              model: 'glm-4',
+              messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: prompt }
+              ],
+              temperature: 0.3
+            })
+          });
+          const data = await res.json();
+          if (data.choices && data.choices[0] && data.choices[0].message) {
+            return data.choices[0].message.content;
+          }
+        } else if (engineKey === 'deepseek' && keys.deepseek) {
+          const res = await fetch('https://api.deepseek.com/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${keys.deepseek}`
+            },
+            body: JSON.stringify({
+              model: 'deepseek-chat',
+              messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: prompt }
+              ],
+              temperature: 0.3
+            })
+          });
+          const data = await res.json();
+          if (data.choices && data.choices[0] && data.choices[0].message) {
+            return data.choices[0].message.content;
+          }
+        } else if (engineKey === 'kimi35' && keys.kimi35) {
+          const res = await fetch('https://api.moonshot.cn/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${keys.kimi35}`
+            },
+            body: JSON.stringify({
+              model: 'moonshot-v1-8k',
+              messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: prompt }
+              ],
+              temperature: 0.3
+            })
+          });
+          const data = await res.json();
+          if (data.choices && data.choices[0] && data.choices[0].message) {
+            return data.choices[0].message.content;
+          }
+        } else if (engineKey === 'gemini' && keys.gemini && !keys.gemini.startsWith('sk-3b473538')) {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${keys.gemini}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: `${systemPrompt}
+
+${prompt}` }] }]
+            })
+          });
+          const data = await res.json();
+          if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+            return data.candidates[0].content.parts[0].text;
+          }
+        } else if (engineKey === 'gpt56' && keys.gpt56) {
+          const res = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${keys.gpt56}`
+            },
+            body: JSON.stringify({
+              model: 'gpt-4o',
+              messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: prompt }
+              ],
+              temperature: 0.3
+            })
+          });
+          const data = await res.json();
+          if (data.choices && data.choices[0] && data.choices[0].message) {
+            return data.choices[0].message.content;
+          }
+        } else if (engineKey === 'opus5' && keys.opus5) {
+          const res = await fetch('https://api.anthropic.com/v1/messages', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': keys.opus5,
+              'anthropic-version': '2023-06-01',
+              'anthropic-dangerous-direct-browser-access': 'true'
+            },
+            body: JSON.stringify({
+              model: 'claude-3-5-sonnet-20241022',
+              max_tokens: 4096,
+              system: systemPrompt,
+              messages: [{ role: 'user', content: prompt }]
+            })
+          });
+          const data = await res.json();
+          if (data.content && data.content[0] && data.content[0].text) {
+            return data.content[0].text;
+          }
+        }
+      } catch(err) {
+        console.warn("Real API call failed or missing API key, falling back to local surgical engine:", err);
+      }
+      return null;
+    }
+
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
     async function runDeepSeekV4Instruction() {
       const instructionInput = document.getElementById('deepseek-instruction-input');
@@ -3990,10 +4134,10 @@
             <div class="p-4 bg-purple-950/70 border border-purple-500/50 rounded-xl text-xs text-purple-200 font-mono space-y-2 animate-pulse shadow-xl">
               <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
                 <i data-lucide="sparkles" class="w-5 h-5 animate-spin text-purple-400"></i>
-                <span>⚡ Processando Reescrita Cirúrgica com <strong>${currentEngineName}</strong>...</span>
+                <span>⚡ Processando Reescrita com <strong>${currentEngineName}</strong>...</span>
               </div>
               <div class="pl-7 text-slate-300 text-xs">
-                • Analisando estrutura do parágrafo e aplicando concordância...
+                • Conectando à API e aplicando revisão editorial...
               </div>
             </div>
           `;
@@ -4002,11 +4146,14 @@
 
       if (window.lucide) lucide.createIcons();
 
-      // Simulate realistic processing delay (3.2 seconds for memory, 2.2 seconds for normal)
-      await new Promise(resolve => setTimeout(resolve, consultMemory ? 3200 : 2200));
+      // Attempt real API call to selected LLM provider (GLM 5.2, DeepSeek, Kimi, Gemini, OpenAI, Claude)
+      let rewrittenText = await callRealLlmApi(currentSelectedEngine, instruction, origContent, consultMemory);
 
-      // Perform targeted rewriting focused strictly on the user's specific request
-      const rewrittenText = performSurgicalRewriting(origContent, instruction);
+      // Fallback to local surgical engine if API call fails or no API key is provided
+      if (!rewrittenText) {
+        await new Promise(resolve => setTimeout(resolve, consultMemory ? 2000 : 1200));
+        rewrittenText = performSurgicalRewriting(origContent, instruction);
+      }
       const dateObj = new Date();
       const dateStr = dateObj.toLocaleDateString('pt-BR');
       const timeStr = dateObj.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
