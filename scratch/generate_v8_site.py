@@ -2242,7 +2242,7 @@ html_template = """<!DOCTYPE html>
         source: 'O Cafezinho / Miguel do Rosário',
         title: 'Dossiê HAVENGATE & Braz Global Holding',
         summary: 'Dossiê investigativo de 40+ páginas com relatórios de companhias no Texas, participações de Eduardo Bolsonaro, Paulo Generoso e Vorcaro.',
-        link: 'https://github.com/migueldorosario/filhosdaimpunidade',
+        link: 'https://github.com/migueldorosario1/filhosdaimpunidade/raw/main/Fontes/PDFs/Paulo/01_Dossie_Final_Havengate_Eduardo_Bolsonaro.pdf',
         status: '📚 PDF no Acervo',
         badge: 'Dossiê Exclusivo'
       },
@@ -2253,7 +2253,7 @@ html_template = """<!DOCTYPE html>
         source: 'Miguel do Rosário & Equipe',
         title: 'Book Ilustrado: "O Sonho dos Loucos" (13 Páginas)',
         summary: 'Apresentação comercial e literária ilustrada do projeto jornalístico, incluindo inserções de repercussão na GloboNews.',
-        link: 'https://github.com/migueldorosario/filhosdaimpunidade',
+        link: 'https://github.com/migueldorosario1/filhosdaimpunidade',
         status: '📚 PDF no Acervo',
         badge: 'Book Ilustrado'
       },
@@ -2275,7 +2275,7 @@ html_template = """<!DOCTYPE html>
         source: 'SEC / Texas State',
         title: 'Form ADV — Calixsan Capital Management',
         summary: 'Fichamento financeiro e societário regulatório arquivado no Estado do Texas.',
-        link: 'https://github.com/migueldorosario/filhosdaimpunidade',
+        link: 'https://github.com/migueldorosario1/filhosdaimpunidade/raw/main/Fontes/PDFs/Paulo/03_Calixsan_Capital_Management_Annual_Report_2024_Paulo_Calixto.pdf',
         status: '📚 PDF no Acervo',
         badge: 'SEC Filing'
       },
@@ -2286,7 +2286,7 @@ html_template = """<!DOCTYPE html>
         source: 'Secretary of State of Texas',
         title: 'Certificado de Formação Societária — Braz Global Holding LLC',
         summary: 'Registro da abertura da holding com participação de Eduardo Bolsonaro e Paulo Generoso.',
-        link: 'https://github.com/migueldorosario/filhosdaimpunidade',
+        link: 'https://github.com/migueldorosario1/filhosdaimpunidade/raw/main/Fontes/PDFs/Paulo/04_Braz_Global_Holding_Certificate_Formation_Eduardo_Bolsonaro_Paulo_Generoso.pdf',
         status: '📚 PDF no Acervo',
         badge: 'Registro do Texas'
       },
@@ -2297,7 +2297,7 @@ html_template = """<!DOCTYPE html>
         source: 'Datafolha / CNT / MDA',
         title: 'Pesquisas Eleitorais 2026 (Datafolha & CNT/MDA)',
         summary: 'Relatórios de avaliação do governo Lula, intenção de voto e rejeição ao tarifaço no eleitorado.',
-        link: 'https://github.com/migueldorosario/filhosdaimpunidade',
+        link: 'https://github.com/migueldorosario1/filhosdaimpunidade',
         status: '📚 PDF no Acervo',
         badge: 'Conjuntura 2026'
       },
