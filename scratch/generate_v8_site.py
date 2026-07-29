@@ -3922,6 +3922,15 @@ Regras:
 
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
     async function runDeepSeekV4Instruction() {
+      const engineNames = {
+        glm52: 'GLM 5.2 (Zhipu AI)',
+        deepseek: 'DeepSeek-V3 / V4 (Oficial)',
+        kimi35: 'Kimi 3.5 (Moonshot)',
+        gemini: 'Gemini 2.5 Flash / 3.0',
+        gpt56: 'ChatGPT-5 / GPT-4o-mini',
+        opus5: 'Claude 3.5 Sonnet (Anthropic)'
+      };
+      const currentEngineName = engineNames[currentSelectedEngine] || 'LLM';
       const inputElem = document.getElementById('deepseek-instruction-input');
       const instruction = inputElem ? inputElem.value.trim() : '';
 
