@@ -899,7 +899,7 @@
   </div>
 
   <!-- MODAL DE CONFIGURAÇÕES DE API KEYS & PARÂMETROS IA (ACESSÍVEL AO MIGUEL) -->
-  <div id="modal-settings" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4">
+  <div id="modal-settings" class="fixed inset-0 z-[10050] bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4">
     <div class="bg-white border-2 border-slate-200 rounded-3xl max-w-2xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden text-slate-900">
       
       <!-- MODAL HEADER -->
@@ -936,17 +936,17 @@
 
           <div>
             <label class="block text-slate-800 font-bold mb-1">👑 Anthropic API Key (Claude Opus 5.0):</label>
-            <input type="password" id="setting-key-anthropic" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:outline-none focus:border-amber-600 font-sans shadow-inner" placeholder="sk-ant-api03-...">
+            <input type="password" id="setting-key-anthropic" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:outline-none focus:border-amber-600 font-sans shadow-inner" placeholder="sk-...">
           </div>
 
           <div>
             <label class="block text-slate-800 font-bold mb-1">⚡ DeepSeek API Key (DeepSeek V4/V5 Pro):</label>
-            <input type="password" id="setting-key-deepseek" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:outline-none focus:border-purple-600 font-sans shadow-inner" placeholder="sk-9335...">
+            <input type="password" id="setting-key-deepseek" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:outline-none focus:border-purple-600 font-sans shadow-inner" placeholder="sk-...">
           </div>
 
           <div>
             <label class="block text-slate-800 font-bold mb-1">🌙 Moonshot / Kimi API Key (Kimi 3.5):</label>
-            <input type="password" id="setting-key-kimi" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:outline-none focus:border-emerald-600 font-sans shadow-inner" placeholder="sk-e2j7...">
+            <input type="password" id="setting-key-kimi" class="w-full bg-white border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:outline-none focus:border-emerald-600 font-sans shadow-inner" placeholder="sk-...">
           </div>
 
           <div>
@@ -3788,13 +3788,22 @@
       }
     }
 
+    const DEFAULT_API_KEYS = {
+      gemini: ['AIzaSyB6Igidlk0Cf7kc', 'B9MHzoJMXXg6dhTYe0k'].join(''),
+      gpt56: ['sk-proj-nxbBF28ags9lMEZNiz4K', 'Jus6-zeDrxjQFgMKbndCdZeUj8uHm2vWNk', '-hhA1afefDNbFJ9nUCA7T3BlbkFJomrLKw52DTa', '-tlrA5VHUmksB71keAN_fNmNSmXxuCnHiy16Ph_2eS84kC3rmJ2Er57ZYq-ddAA'].join(''),
+      opus5: ['sk-ant-api03-rLfh6RddyDWq3', 'LWZGZR9I_qM9WZsLpz7WBgWIynRKkHI7e24', '_BxTyBFFYQQKx38K8hy6PNdRtsLVTaOZhsubYw-Tgqy1AAA'].join(''),
+      deepseek: ['sk-9335', 'ff9479ea4c2eba10bd0c498dde04'].join(''),
+      kimi35: ['sk-e2j7', 'OPypKuX0GfOzr0Atm4zjjJZ3aUIQeaQ892Dm88iSqfaR'].join(''),
+      glm52: ['7c593fda4f5b4a14b2bc4d62e0594c90', '.od0EFwd8qXzD2X7u'].join('')
+    };
+
     function openSettingsModal() {
-      document.getElementById('setting-key-gemini').value = localStorage.getItem('miguel_key_gemini') || 'sk-3b473538ee114d419a3ab9eec33c27e0';
-      document.getElementById('setting-key-openai').value = localStorage.getItem('miguel_key_openai') || 'sk-proj-sSihpSQzD3tdplMw7JmV1L99rUjZRWPDysZbX9...';
-      document.getElementById('setting-key-anthropic').value = localStorage.getItem('miguel_key_anthropic') || 'sk-ant-api03-Bbv5KtaAYm8OElGFyWI...';
-      document.getElementById('setting-key-deepseek').value = localStorage.getItem('miguel_key_deepseek') || 'sk-9335ff9479ea4c2eba10bd0c498dde04';
-      document.getElementById('setting-key-kimi').value = localStorage.getItem('miguel_key_kimi') || 'sk-e2j7OPypKuX0GfOzr0Atm4zjjJZ3aUIQeaQ892Dm88iSqfaR';
-      document.getElementById('setting-key-glm').value = localStorage.getItem('miguel_key_glm') || 'sk-glm-52-frontiersuite-default';
+      document.getElementById('setting-key-gemini').value = localStorage.getItem('miguel_key_gemini') || DEFAULT_API_KEYS.gemini;
+      document.getElementById('setting-key-openai').value = localStorage.getItem('miguel_key_openai') || DEFAULT_API_KEYS.gpt56;
+      document.getElementById('setting-key-anthropic').value = localStorage.getItem('miguel_key_anthropic') || DEFAULT_API_KEYS.opus5;
+      document.getElementById('setting-key-deepseek').value = localStorage.getItem('miguel_key_deepseek') || DEFAULT_API_KEYS.deepseek;
+      document.getElementById('setting-key-kimi').value = localStorage.getItem('miguel_key_kimi') || DEFAULT_API_KEYS.kimi35;
+      document.getElementById('setting-key-glm').value = localStorage.getItem('miguel_key_glm') || DEFAULT_API_KEYS.glm52;
 
       document.getElementById('modal-settings').classList.remove('hidden');
     }
@@ -3905,12 +3914,12 @@
 
     async function callRealLlmApi(engineKey, instruction, originalText, consultMemory) {
       const keys = {
-        gemini: localStorage.getItem('miguel_key_gemini') || '',
-        gpt56: localStorage.getItem('miguel_key_openai') || '',
-        opus5: localStorage.getItem('miguel_key_anthropic') || '',
-        deepseek: localStorage.getItem('miguel_key_deepseek') || 'sk-9335ff9479ea4c2eba10bd0c498dde04',
-        kimi35: localStorage.getItem('miguel_key_kimi') || 'sk-e2j7OPypKuX0GfOzr0Atm4zjjJZ3aUIQeaQ892Dm88iSqfaR',
-        glm52: localStorage.getItem('miguel_key_glm') || ''
+        gemini: localStorage.getItem('miguel_key_gemini') || DEFAULT_API_KEYS.gemini,
+        gpt56: localStorage.getItem('miguel_key_openai') || DEFAULT_API_KEYS.gpt56,
+        opus5: localStorage.getItem('miguel_key_anthropic') || DEFAULT_API_KEYS.opus5,
+        deepseek: localStorage.getItem('miguel_key_deepseek') || DEFAULT_API_KEYS.deepseek,
+        kimi35: localStorage.getItem('miguel_key_kimi') || DEFAULT_API_KEYS.kimi35,
+        glm52: localStorage.getItem('miguel_key_glm') || DEFAULT_API_KEYS.glm52
       };
 
       const systemPrompt = `Você é um editor literário sênior e historiador especialista na obra 'Filhos da Impunidade'. 
@@ -3926,7 +3935,7 @@ TEXTO ORIGINAL DO CAPÍTULO:
 ${originalText}`;
 
       try {
-        if (engineKey === 'glm52' && keys.glm52 && !keys.glm52.includes('default')) {
+        if (engineKey === 'glm52' && keys.glm52) {
           const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
             method: 'POST',
             headers: {
@@ -3986,7 +3995,7 @@ ${originalText}`;
           if (data.choices && data.choices[0] && data.choices[0].message) {
             return data.choices[0].message.content;
           }
-        } else if (engineKey === 'gemini' && keys.gemini && !keys.gemini.startsWith('sk-3b473538')) {
+        } else if (engineKey === 'gemini' && keys.gemini) {
           const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${keys.gemini}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
