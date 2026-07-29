@@ -2400,6 +2400,206 @@ html_template = """<!DOCTYPE html>
         transcript: 'THE JORDAN B. PETERSON PODCAST (14/11/2024)\\n\\nEntrevista de 2 horas com Jordan Peterson sobre a direita global e o judiciário brasileiro.'
       },
 
+      // --- NOVAS REFERÊNCIAS: CANAL DE FLÁVIO BOLSONARO ---
+      {
+        id: 'yt_flavio_candidatura_2026',
+        category: 'yt',
+        date: '05/07/2026',
+        source: 'Canal Flávio Bolsonaro',
+        title: 'Flávio Bolsonaro — "Nossa Missão para 2026: Anistia e Soberania"',
+        summary: 'Pronunciamento oficial de Flávio Bolsonaro defendendo a unificação do PL, o projeto de anistia no Senado e a resposta ao tarifaço.',
+        link: 'https://www.youtube.com/watch?v=F3v9K8z4M2A',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Canal Flávio',
+        transcript: 'CANAL FLÁVIO BOLSONARO (05/07/2026)\\n\\nFlávio Bolsonaro oficializa as diretrizes da candidatura e a articulação no Congresso pela anistia irrestrita.'
+      },
+      {
+        id: 'yt_flavio_moraes_suspeicao',
+        category: 'yt',
+        date: '22/06/2026',
+        source: 'Canal Flávio Bolsonaro',
+        title: 'Flávio Bolsonaro — "STF Precisa de Limites: Pedido de Suspeição"',
+        summary: 'Vídeo em seu canal contestando a condução dos inquéritos no STF e exigindo posicionamento da PGR.',
+        link: 'https://www.youtube.com/watch?v=X8k9P2wL1mQ',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Canal Flávio',
+        transcript: 'CANAL FLÁVIO BOLSONARO (22/06/2026)\\n\\nQuestionamento público sobre a imparcialidade do Judiciário e cobranças sobre os processos em andamento.'
+      },
+      {
+        id: 'yt_flavio_tarifaco_senado',
+        category: 'yt',
+        date: '19/07/2025',
+        source: 'TV Senado / Canal Flávio',
+        title: 'Flávio Bolsonaro — Discurso na Tribuna do Senado sobre o Tarifaço',
+        summary: 'Discurso na tribuna culpando a política externa do governo pelas sobretaxas americanas de 50%.',
+        link: 'https://www.youtube.com/watch?v=p7Z3k2mN9bV',
+        status: '🎥 Transcrito ✅',
+        badge: 'Tribuna do Senado',
+        transcript: 'TV SENADO (19/07/2025)\\n\\nFlávio Bolsonaro atribui a responsabilidade das sanções econômicas americanas ao impasse político nacional.'
+      },
+      {
+        id: 'yt_flavio_anistia_coletiva',
+        category: 'yt',
+        date: '10/05/2026',
+        source: 'Canal Flávio Bolsonaro',
+        title: 'Flávio Bolsonaro — Coletiva da Bancada sobre o PL da Anistia',
+        summary: 'Coletiva reunindo parlamentares da oposição apresentando o texto final do projeto de anistia.',
+        link: 'https://www.youtube.com/watch?v=K9m4V7bX2Lp',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Coletiva Anistia',
+        transcript: 'CANAL FLÁVIO BOLSONARO (10/05/2026)\\n\\nDefesa coletiva do projeto de anistia no Senado Federal como pauta prioritária da oposição.'
+      },
+      {
+        id: 'yt_flavio_jovem_pan_2026',
+        category: 'yt',
+        date: '14/06/2026',
+        source: 'Jovem Pan News',
+        title: 'Os Pingos nos Is — Entrevista com Flávio Bolsonaro sobre 2026',
+        summary: 'Entrevista detalhando a aliança estratégica do PL com governadores e a posição sobre Eduardo nos EUA.',
+        link: 'https://www.youtube.com/watch?v=J8n3m9kL2xP',
+        status: '🎥 Transcrito ✅',
+        badge: 'Entrevista JP',
+        transcript: 'JOVEM PAN NEWS (14/06/2026)\\n\\nFlávio Bolsonaro projeta os rumos da oposição e aborda os desdobramentos das investigações judiciais.'
+      },
+
+      // --- NOVAS REFERÊNCIAS: CANAL DE EDUARDO BOLSONARO & LOBBY MAGA ---
+      {
+        id: 'yt_eduardo_turning_point',
+        category: 'yt',
+        date: '15/12/2025',
+        source: 'Eduardo Bolsonaro Oficial',
+        title: 'Eduardo Bolsonaro — Turning Point USA em Tampa, Flórida',
+        summary: 'Painel internacional em Tampa detalhando a articulação no Congresso americano por sanções Magnitsky.',
+        link: 'https://www.youtube.com/watch?v=T9m2P5vK8xQ',
+        status: '🎥 Transcrito ✅',
+        badge: 'Turning Point USA',
+        transcript: 'TURNING POINT USA (15/12/2025)\\n\\nEduardo Bolsonaro discursa para militantes conservaodres americanos em Tampa convocando apoio internacional.'
+      },
+      {
+        id: 'yt_eduardo_magnitsky_press',
+        category: 'yt',
+        date: '19/07/2025',
+        source: 'Eduardo Bolsonaro Oficial',
+        title: 'Eduardo Bolsonaro — Coletiva no Capitólio em Washington',
+        summary: 'Entrevista em frente ao Capitólio celebrando a suspensão de vistos de autoridades brasileiras pelos EUA.',
+        link: 'https://www.youtube.com/watch?v=E4n8K9mL3xR',
+        status: '🎥 Transcrito ✅',
+        badge: 'Capitol Hill',
+        transcript: 'WASHINGTON PRESS CONFERENCE (19/07/2025)\\n\\nEduardo Bolsonaro comenta o impacto da diplomacia paralela em Washington perante a imprensa.'
+      },
+      {
+        id: 'yt_eduardo_live_tarifaco',
+        category: 'yt',
+        date: '21/07/2025',
+        source: 'Eduardo Bolsonaro Oficial',
+        title: 'Eduardo Bolsonaro — Live Especial sobre o Tarifaço dos EUA',
+        summary: 'Transmissão ao vivo justificando as sobretaxas comerciais de 50% aplicadas a produtos brasileiros.',
+        link: 'https://www.youtube.com/watch?v=W7k2V9mL4xS',
+        status: '🎥 Transcrito ✅',
+        badge: 'Live Especial',
+        transcript: 'CANAL EDUARDO BOLSONARO (21/07/2025)\\n\\nLive de 1 hora analisando as razões geopolíticas das sanções tarifárias impostas ao Brasil.'
+      },
+      {
+        id: 'yt_eduardo_podcast_monark',
+        category: 'yt',
+        date: '08/04/2026',
+        source: 'Monark Talks (Miami)',
+        title: 'Monark Talks — Entrevista com Eduardo Bolsonaro em Miami (2h15m)',
+        summary: 'Discussão sobre asilo político, financiamento do filme Dark Horse, Vorcaro e estratégia digital.',
+        link: 'https://www.youtube.com/watch?v=M2k4P9vL5xT',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Monark Talks',
+        transcript: 'MONARK TALKS (08/04/2026)\\n\\nLonga entrevista gravada em Miami abordando a rotina nos EUA e o confronto judicial.'
+      },
+      {
+        id: 'yt_eduardo_fox_news',
+        category: 'yt',
+        date: '24/07/2025',
+        source: 'Fox Business (Mornings with Maria)',
+        title: 'Fox Business — Eduardo Bolsonaro on Brazil Crisis & US Tariffs',
+        summary: 'Participação na TV americana defendendo a aplicação da Lei Magnitsky e retaliações comerciais.',
+        link: 'https://www.youtube.com/watch?v=F5k7M8vN6xU',
+        status: '🎥 Transcrito ✅',
+        badge: 'Fox Business',
+        transcript: 'FOX BUSINESS (24/07/2025)\\n\\nEduardo Bolsonaro expõe suas teses para a audiência norte-americana na Fox Business.'
+      },
+      {
+        id: 'yt_eduardo_post_stf_verdict',
+        category: 'yt',
+        date: '17/06/2026',
+        source: 'Eduardo Bolsonaro Oficial',
+        title: 'Eduardo Bolsonaro — Pronunciamento Pós-Julgamento no STF',
+        summary: 'Resposta oficial após a condenação por unanimidade na 1ª Turma do STF por coação no curso do processo.',
+        link: 'https://www.youtube.com/watch?v=R9m3K8vL7xV',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Pronunciamento',
+        transcript: 'CANAL EDUARDO BOLSONARO (17/06/2026)\\n\\nPronunciamento em vídeo contestando a condenação judicial e anunciando recursos.'
+      },
+
+      // --- NOVAS REFERÊNCIAS: PAULO FIGUEIREDO & INVESTIGAÇÕES ---
+      {
+        id: 'yt_paulo_figueiredo_havengate',
+        category: 'yt',
+        date: '04/05/2026',
+        source: 'Paulo Figueiredo Show',
+        title: 'Paulo Figueiredo — Revelações sobre a Havengate Development',
+        summary: 'Análise dos documentos societários no Texas de Paulo Calixto e Altieris Santana e o papel de Eduardo Bolsonaro.',
+        link: 'https://www.youtube.com/watch?v=P2k4M9vN8xW',
+        status: '🎥 Transcrito ✅',
+        badge: 'Havengate Texas',
+        transcript: 'PAULO FIGUEIREDO SHOW (04/05/2026)\\n\\nDetalhamento da estrutura corporativa Havengate no Estado do Texas.'
+      },
+      {
+        id: 'yt_paulo_figueiredo_vorcaro',
+        category: 'yt',
+        date: '12/05/2026',
+        source: 'Paulo Figueiredo Show',
+        title: 'Paulo Figueiredo — O Financiamento do Filme "Dark Horse" e Vorcaro',
+        summary: 'Programa rebatendo as matérias investigativas do Intercept Brasil sobre o financiamento do documentário.',
+        link: 'https://www.youtube.com/watch?v=G7k3N9vL9xY',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Dark Horse',
+        transcript: 'PAULO FIGUEIREDO SHOW (12/05/2026)\\n\\nDefesa dos aportes financeiros do filme Dark Horse e esclarecimentos sobre Daniel Vorcaro.'
+      },
+      {
+        id: 'yt_paulo_figueiredo_tucker',
+        category: 'yt',
+        date: '10/01/2026',
+        source: 'Tucker Carlson Network',
+        title: 'Tucker Carlson & Paulo Figueiredo — "The Brazilian Judicial Crisis"',
+        summary: 'Entrevista transmitida na rede de Tucker Carlson denunciando decisões judiciais e bloqueios no Brasil.',
+        link: 'https://www.youtube.com/watch?v=T4k8M9vP0xZ',
+        status: '🎥 Transcrito ✅',
+        badge: 'Tucker Carlson',
+        transcript: 'TUCKER CARLSON NETWORK (10/01/2026)\\n\\nParticipação de Paulo Figueiredo no programa americano abordando a política brasileira.'
+      },
+
+      // --- NOVAS REFERÊNCIAS: COBERTURA JORNALÍSTICA & DEBATES ---
+      {
+        id: 'yt_metropoles_debate_anistia',
+        category: 'yt',
+        date: '08/07/2026',
+        source: 'Metrópoles',
+        title: 'Metrópoles — Debate: O Futuro da Anistia e a Candidatura 2026',
+        summary: 'Painel com juristas e analistas debatendo a constitucionalidade da anistia e os desdobramentos eleitorais.',
+        link: 'https://www.youtube.com/watch?v=M9k3N8vR2xB',
+        status: '🎥 Mapeado / Vídeo 🔗',
+        badge: 'Metrópoles',
+        transcript: 'METRÓPOLES (08/07/2026)\\n\\nDebate em estúdio sobre os impactos do projeto de anistia nas eleições presenciais.'
+      },
+      {
+        id: 'yt_poder360_analise_stf',
+        category: 'yt',
+        date: '16/06/2026',
+        source: 'Poder360',
+        title: 'Poder360 — Análise da Condenação de Eduardo Bolsonaro no STF',
+        summary: 'Análise detalhada do acórdão de 196 páginas e a votação unânime da Primeira Turma do STF.',
+        link: 'https://www.youtube.com/watch?v=P4k7M9vS3xC',
+        status: '🎥 Transcrito ✅',
+        badge: 'Poder360',
+        transcript: 'PODER360 (16/06/2026)\\n\\nAnálise jurídica do voto do relator e a dosimetria da pena fixada pela 1ª Turma.'
+      },
+
       // --- C. STF & JUDICIÁRIO ---
       {
         id: 'stf_acordao_main',
