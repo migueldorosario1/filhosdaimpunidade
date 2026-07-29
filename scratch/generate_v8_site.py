@@ -1217,12 +1217,8 @@ html_template = """<!DOCTYPE html>
   </div>
 
   <!-- FLOATING WIDGET FOR ESTÚDIO EDITORIAL FULL VIEW -->
-  <div id="floating-studio-fullview-widget" class="fixed top-4 right-4 z-[10000] hidden flex items-center gap-2.5 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-2 rounded-full shadow-2xl">
-    <!-- ICON 1: CONFIGURAÇÕES DE IA / ESTÚDIO -->
-    <button onclick="openSettingsModal()" title="Configurações de IA & Modelos" class="w-11 h-11 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-purple-300 cursor-pointer">
-      <i data-lucide="sparkles" class="w-5 h-5 text-amber-300"></i>
-    </button>
-    <!-- ICON 2: OLHO (VOLTAR MENU / RESTABLECER PAINÉIS DO ESTÚDIO) -->
+  <div id="floating-studio-fullview-widget" class="fixed top-4 right-4 z-[10000] hidden flex items-center bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-1.5 rounded-full shadow-2xl">
+    <!-- ICON: OLHO (VOLTAR MENU / RESTABLECER PAINÉIS DO ESTÚDIO) -->
     <button onclick="toggleStudioFullView()" title="Voltar Menu / Restabelecer Painel de Comandos" class="w-11 h-11 rounded-full bg-amber-600 hover:bg-amber-500 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-amber-300 cursor-pointer">
       <i data-lucide="eye" class="w-5.5 h-5.5"></i>
     </button>
