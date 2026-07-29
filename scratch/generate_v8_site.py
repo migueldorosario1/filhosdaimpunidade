@@ -3917,8 +3917,10 @@ Regras:
                     messages: [
                       { role: 'system', content: systemPrompt },
                       { role: 'user', content: prompt }
-                    ],
-                    temperature: 0.3
+                    ]
+                    // QA-FIX 6 (Kimi 3, 2026-07-29): sem campo temperature — kimi-k3
+                    // só aceita temperature=1 (erro "invalid temperature" com 0.3)
+                    // e moonshot-v1 já usa 0.3 como padrão de provedor.
                   })
                 });
                 if (res.status === 404 && route === '/api/kimi') {
