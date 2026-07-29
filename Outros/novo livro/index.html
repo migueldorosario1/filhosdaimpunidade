@@ -691,6 +691,10 @@
 
             <!-- ACTION BUTTONS: SALVAR E TORNAR CANÔNICA -->
             <div class="flex flex-wrap items-center gap-2.5">
+              <button onclick="resetChapterToCanonicalOriginal()" class="px-3.5 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-extrabold flex items-center gap-1.5 shadow-sm cursor-pointer" title="Descartar rascunhos salvos e restaurar o texto canônico original">
+                <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                <span>Resetar Original</span>
+              </button>
               <button id="btn-save-as-manual-rule" onclick="convertLastAiToManualRule()" class="hidden px-4 py-2.5 bg-purple-100 hover:bg-purple-200 text-purple-950 border border-purple-300 rounded-xl text-xs font-extrabold flex items-center gap-1.5 shadow-sm">
                 <i data-lucide="plus-circle" class="w-4 h-4 text-purple-700"></i>
                 <span>+ Manual</span>
@@ -4105,95 +4109,53 @@ ${prompt}` }] }]
 
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
     async function runDeepSeekV4Instruction() {
-      const instructionInput = document.getElementById('deepseek-instruction-input');
-      const instruction = instructionInput ? instructionInput.value.trim() : '';
+      const inputElem = document.getElementById('deepseek-instruction-input');
+      const instruction = inputElem ? inputElem.value.trim() : '';
+
       if (!instruction) {
-        alert("Por favor dite ou digite a instrução de revisão.");
+        alert("Por favor, digite ou dite uma instrução de reescrita antes de executar.");
         return;
       }
 
       const activeData = getActiveVersionData();
       const origContent = activeData.content || '';
-
-      const engineNames = {
-        gemini: 'Gemini 3.6 Ultra / Flash',
-        gpt56: 'GPT 5.6 / o3-Pro',
-        opus5: 'Claude Opus 5.0',
-        deepseek: 'DeepSeek V4 Pro',
-        kimi35: 'Kimi 3.5',
-        glm52: 'GLM 5.2 / Zhipu'
-      };
-      const currentEngineName = engineNames[currentSelectedEngine] || 'Gemini 3.6 Ultra';
-
-      // Extra Confirmation Prompt for Full Book processing
-      if (currentChapterKey === 'full_book') {
-        const fullData = getCompiledFullBookData();
-        const estTokens = Math.round(fullData.totalWords * 1.35);
-        const confirmProcess = confirm(
-          `⚠️ CONFIRMAÇÃO DE PROCESSAMENTO GLOBAL (LIVRO INTEIRO):
-
-` +
-          `Tem certeza que deseja processar e reescrever o LIVRO INTEIRO de uma vez só?
-
-` +
-          `• Total de Capítulos: ${fullData.totalChapters} capítulos canônicos
-` +
-          `• Contagem de Palavras: ~${fullData.totalWords.toLocaleString('pt-BR')} palavras
-` +
-          `• Consumo Estimado: ~${estTokens.toLocaleString('pt-BR')} tokens
-` +
-          `• Modelo Selecionado: ${currentEngineName}
-
-` +
-          `Esta ação consumirá uma quantidade significativa de tokens. Clique em OK para confirmar o processamento.`
-        );
-        if (!confirmProcess) return;
+      const btnRun = document.getElementById('btn-run-ai-text');
+      if (btnRun) {
+        btnRun.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-amber-300"></i> Executando (${currentEngineName})...`;
       }
 
-      // Check if memory consultation checkbox is enabled
-      const chkMemory = document.getElementById('chk-consult-canonical-memory');
-      const consultMemory = chkMemory ? chkMemory.checked : false;
-
-      // 1. DISPLAY VISUAL PROCESSING INDICATOR & LOADING MESSAGE
-      const resultsDiv = document.getElementById('deepseek-output-results');
-      resultsDiv.classList.remove('hidden');
+      const resultsContainer = document.getElementById('deepseek-output-results');
+      if (resultsContainer) resultsContainer.classList.remove('hidden');
 
       const titleAi = document.getElementById('conversational-ai-title');
       const textAi = document.getElementById('conversational-ai-text');
-      const btnRun = document.getElementById('btn-run-ai-text');
+      const chkConsultMemory = document.getElementById('chk-consult-canonical-memory');
+      const consultMemory = chkConsultMemory ? chkConsultMemory.checked : false;
 
-      if (titleAi) titleAi.textContent = `⏳ Consultando & Processando (${currentEngineName})...`;
-
-      if (btnRun) {
-        btnRun.innerHTML = consultMemory 
-          ? `<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-amber-300"></i> Consultando Memória...` 
-          : `<i data-lucide="loader-2" class="w-4 h-4 animate-spin text-purple-300"></i> Processando IA...`;
-      }
-
+      if (titleAi) titleAi.textContent = `Editor assistente (${currentEngineName}):`;
       if (textAi) {
         if (consultMemory) {
           textAi.innerHTML = `
-            <div class="p-4 bg-amber-950/70 border border-amber-500/50 rounded-xl text-xs text-amber-200 font-mono space-y-2 animate-pulse shadow-xl">
-              <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
-                <i data-lucide="database" class="w-5 h-5 animate-spin text-amber-400"></i>
-                <span>🧠 Consultando a Memória Canônica do Livro (PROJECT_MEMORY.md)...</span>
+            <div class="p-4 bg-amber-50 border border-amber-300 rounded-xl text-xs text-amber-950 font-sans space-y-2 animate-pulse">
+              <div class="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                <i data-lucide="database" class="w-4 h-4 animate-spin text-amber-600"></i>
+                <span>🧠 Consultando a Memória Canônica do Livro...</span>
               </div>
-              <div class="pl-7 space-y-1 text-slate-300 text-xs">
-                <div>• Indexando Regras #1 a #27 do Manual de Estilo...</div>
-                <div>• Verificando acervo STF/OFAC & Referências de César/Maquiavel...</div>
-                <div>• Processando raciocínio com <strong>${currentEngineName}</strong>...</div>
+              <div class="pl-6 space-y-1 text-slate-700 text-xs font-mono">
+                <div>• Indexando regras do Manual de Estilo e acervo canônico...</div>
+                <div>• Processando instrução com <strong>${currentEngineName}</strong>...</div>
               </div>
             </div>
           `;
         } else {
           textAi.innerHTML = `
-            <div class="p-4 bg-purple-950/70 border border-purple-500/50 rounded-xl text-xs text-purple-200 font-mono space-y-2 animate-pulse shadow-xl">
-              <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
-                <i data-lucide="sparkles" class="w-5 h-5 animate-spin text-purple-400"></i>
-                <span>⚡ Processando Reescrita com <strong>${currentEngineName}</strong>...</span>
+            <div class="p-4 bg-purple-50 border border-purple-300 rounded-xl text-xs text-purple-950 font-sans space-y-2 animate-pulse">
+              <div class="flex items-center gap-2 text-purple-900 font-bold text-sm">
+                <i data-lucide="sparkles" class="w-4 h-4 animate-spin text-purple-600"></i>
+                <span>⚡ Processando reescrita com <strong>${currentEngineName}</strong>...</span>
               </div>
-              <div class="pl-7 text-slate-300 text-xs">
-                • Conectando à API e aplicando revisão editorial...
+              <div class="pl-6 text-slate-700 text-xs font-mono">
+                • Conectando ao modelo e aplicando revisão editorial...
               </div>
             </div>
           `;
@@ -4202,23 +4164,23 @@ ${prompt}` }] }]
 
       if (window.lucide) lucide.createIcons();
 
-      // Attempt strict API call to selected LLM provider (No failover, no silent fallback)
+      // Execute strict API call (No failover, explicit error reporting)
       const apiResult = await callRealLlmApi(currentSelectedEngine, instruction, origContent, consultMemory);
 
       if (apiResult.error || !apiResult.text) {
         if (titleAi) titleAi.textContent = `⚠️ Falha na execução (${currentEngineName})`;
         if (textAi) {
           textAi.innerHTML = `
-            <div class="p-5 bg-rose-50 border-2 border-rose-400 rounded-2xl space-y-3 text-rose-950 font-sans shadow-sm">
+            <div class="p-5 bg-rose-50 border-2 border-rose-300 rounded-2xl space-y-3 text-rose-950 font-sans shadow-sm">
               <div class="flex items-center gap-2 font-black text-base text-rose-900">
                 <i data-lucide="alert-triangle" class="w-5 h-5 text-rose-600"></i>
-                <span>Falhou o modelo selecionado (${currentEngineName}):</span>
+                <span>Falha na resposta (${currentEngineName}):</span>
               </div>
               <p class="text-sm font-medium leading-relaxed">
-                ${apiResult.error || 'A API do modelo não retornou uma resposta válida.'}
+                ${apiResult.error || 'O provedor selecionado não retornou uma resposta válida.'}
               </p>
               <div class="p-3 bg-white border border-rose-200 rounded-xl text-xs font-bold text-slate-800">
-                📌 <strong>Nenhuma alteração foi efetuada no texto.</strong> Selecione outro modelo na lista acima para tentar novamente.
+                📌 <strong>Nenhuma alteração foi realizada no manuscrito.</strong> Escolha outro modelo ou verifique a chave de API nas configurações.
               </div>
             </div>
           `;
@@ -4235,56 +4197,24 @@ Nenhuma alteração foi realizada no capítulo.`);
         return;
       }
 
-      let rewrittenText = apiResult.text;e="database" class="w-5 h-5 animate-spin text-amber-400"></i>
-                <span>🧠 Consultando a Memória Canônica do Livro (PROJECT_MEMORY.md)...</span>
-              </div>
-              <div class="pl-7 space-y-1 text-slate-300 text-xs">
-                <div>• Indexando Regras #1 a #27 do Manual de Estilo...</div>
-                <div>• Verificando acervo STF/OFAC & Referências de César/Maquiavel...</div>
-                <div>• Processando raciocínio com <strong>${currentEngineName}</strong>...</div>
-              </div>
-            </div>
-          `;
-        } else {
-          textAi.innerHTML = `
-            <div class="p-4 bg-purple-950/70 border border-purple-500/50 rounded-xl text-xs text-purple-200 font-mono space-y-2 animate-pulse shadow-xl">
-              <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
-                <i data-lucide="sparkles" class="w-5 h-5 animate-spin text-purple-400"></i>
-                <span>⚡ Processando Reescrita com <strong>${currentEngineName}</strong>...</span>
-              </div>
-              <div class="pl-7 text-slate-300 text-xs">
-                • Conectando à API e aplicando revisão editorial...
-              </div>
-            </div>
-          `;
-        }
-      }
+      let rewrittenText = apiResult.text;
 
-      if (window.lucide) lucide.createIcons();
-
-      // Attempt real API call to selected LLM provider (GLM 5.2, DeepSeek, Kimi, Gemini, OpenAI, Claude)
-      let rewrittenText = await callRealLlmApi(currentSelectedEngine, instruction, origContent, consultMemory);
-
-      // Fallback to local surgical engine if API call fails or no API key is provided
-      if (!rewrittenText) {
-        rewrittenText = performSurgicalRewriting(origContent, instruction);
-      }
       const dateObj = new Date();
       const dateStr = dateObj.toLocaleDateString('pt-BR');
       const timeStr = dateObj.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
       const nowISO = dateObj.toISOString().slice(0, 10);
       const summaryRule = summarizeInstructionToStyleRule(instruction);
 
-      // Clean footer signature line (no AI metalanguage in body)
-      const cleanFooter = '
-
----
-*Atualizado em ' + dateStr + ' às ' + timeStr + ' por ' + currentEngineName + '*
-';
-      const cleanBody = rewrittenText.replace(/[
+      // Clean footer signature lines and unescaped placeholders from body text
+      let finalContent = rewrittenText
+        .replace(/[
 ]*---[
-]*\*Atualizado em[\s\S]*$/, '').trim();
-      const finalContent = cleanBody + cleanFooter;
+]*\*Atualizado em[\s\S]*$/, '')
+        .replace(/\$\{dateStr\}/g, dateStr)
+        .replace(/\$\{timeStr\}/g, timeStr)
+        .replace(/\$\{currentEngineName\}/g, currentEngineName)
+        .replace(/---\s*\*Atualizado em \$\{dateStr\}[\s\S]*$/g, '')
+        .trim();
 
       const engineSlug = getCleanEngineSlug(currentSelectedEngine);
 
@@ -4299,11 +4229,12 @@ Nenhuma alteração foi realizada no capítulo.`);
         summarizedRule: summaryRule
       };
 
-      // Update active volume dataset content in memory immediately
+      // Update active volume dataset content in memory
       const dataset = getCurrentVolumeDataset();
       if (dataset && dataset[currentChapterKey]) {
         if (typeof dataset[currentChapterKey] === 'object') {
           dataset[currentChapterKey].content = finalContent;
+          dataset[currentChapterKey].mainContent = finalContent;
         } else {
           dataset[currentChapterKey] = finalContent;
         }
@@ -4316,14 +4247,13 @@ Nenhuma alteração foi realizada no capítulo.`);
       updateRenderedFullChapterFromTextarea();
       
       if (titleAi) titleAi.textContent = `Resposta do editor assistente (${currentEngineName}):`;
-
       if (textAi) {
         textAi.innerHTML = generateHumanizedAiFeedback(currentSelectedEngine, instruction, summaryRule, consultMemory);
       }
 
       const badgeElem = document.getElementById('output-engine-badge');
       if (badgeElem) {
-        badgeElem.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-700"></i> <span>Resultado da revisão (${currentEngineName}):</span>`;
+        badgeElem.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i> <span>Resultado da revisão (${currentEngineName}):</span>`;
       }
 
       if (btnRun) {
@@ -4332,17 +4262,11 @@ Nenhuma alteração foi realizada no capítulo.`);
 
       if (window.lucide) lucide.createIcons();
 
-      // Auto-save generated revision draft into localStorage immediately so no dictation is ever lost
       try {
         localStorage.setItem('miguel_book_draft_revision_' + currentChapterKey, JSON.stringify(lastGeneratedRevision));
-      } catch(e) {
-        console.error("Auto-save draft failed", e);
-      }
+      } catch(e) {}
 
-      // Save raw instruction to chapter history log right away
       saveInstructionToHistory(instruction);
-
-      // Immediately clear the input field ("gravar e apagar") as requested by Miguel
       clearInstructionInput();
 
       const chkUpdateManual = document.getElementById('chk-update-manual-style');
@@ -4494,6 +4418,12 @@ Nenhuma alteração foi realizada no capítulo.`);
           const savedContent = localStorage.getItem('miguel_book_persistent_content_' + currentVolume + '_' + chapKey);
           const savedTag = localStorage.getItem('miguel_book_persistent_tag_' + currentVolume + '_' + chapKey);
           if (savedContent && savedContent.trim().length > 0) {
+            // Sanitize and ignore corrupted draft strings from legacy test runs
+            if (savedContent.includes('Revisão Aplicada') || savedContent.includes('${dateStr}') || savedContent.includes('${currentEngineName}')) {
+              localStorage.removeItem('miguel_book_persistent_content_' + currentVolume + '_' + chapKey);
+              localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + chapKey);
+              return;
+            }
             if (typeof dataset[chapKey] === 'object') {
               dataset[chapKey].mainContent = savedContent;
               dataset[chapKey].content = savedContent;
@@ -4503,6 +4433,15 @@ Nenhuma alteração foi realizada no capítulo.`);
         });
       } catch(e) {
         console.error("Load persistent state error:", e);
+      }
+    }
+
+    function resetChapterToCanonicalOriginal() {
+      if (confirm("Deseja descartar edições de rascunho e restaurar o capítulo canônico original?")) {
+        localStorage.removeItem('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey);
+        localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + currentChapterKey);
+        selectChapter(currentChapterKey);
+        if (typeof openStudioModal === 'function') openStudioModal();
       }
     }
 
