@@ -3511,6 +3511,17 @@
       }
     }
 
+    // QA-FIX (Kimi 3, 2026-07-29): função era chamada por makeLastRevisionCanonical()
+    // mas nunca existiu — ReferenceError interrompia o fluxo de "Tornar Canônico"
+    // antes da persistência e do feedback visual.
+    function saveCustomChapters() {
+      const dataset = getCurrentVolumeDataset();
+      const ch = dataset && dataset[currentChapterKey];
+      if (ch && ch.mainContent) {
+        saveChapterPersistentState(currentChapterKey, ch.mainContent, ch.versionTag || 'Canônica');
+      }
+    }
+
     function makeLastRevisionCanonical() {
       const editableRes = document.getElementById('deepseek-editable-result');
       const finalTxt = editableRes && editableRes.value.trim().length > 0
@@ -4085,11 +4096,14 @@ ${originalText}`;
           return { error: lastErr || 'Resposta inválida da API DeepSeek V4 Pro' };
         } else if (engineKey === 'kimi35') {
           if (!keys.kimi35) return { error: 'Chave de API do Kimi 3 não configurada.' };
-          const kimiModels = ['kimi-3', 'moonshot-v1-128k', 'moonshot-v1-32k', 'moonshot-v1-8k'];
+          // QA-FIX (Kimi 3, 2026-07-29): a chave embutida autentica na plataforma
+          // internacional api.moonshot.ai (HTTP 200); api.moonshot.cn retorna 401.
+          // Modelo correto na conta: 'kimi-k3' ('kimi-3' não existe → caía no fallback).
+          const kimiModels = ['kimi-k3', 'moonshot-v1-128k', 'moonshot-v1-32k', 'moonshot-v1-8k'];
           let lastErr = '';
           for (const m of kimiModels) {
             try {
-              const res = await fetch('https://api.moonshot.cn/v1/chat/completions', {
+              const res = await fetch('https://api.moonshot.ai/v1/chat/completions', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -4111,7 +4125,13 @@ ${originalText}`;
               if (data.error && data.error.message) lastErr = data.error.message;
             } catch(e) { lastErr = e.message; }
           }
-          return { error: lastErr || 'Resposta inválida da API Kimi 3' };
+          // QA-FIX (Kimi 3, 2026-07-29): Moonshot não envia headers CORS (preflight 204
+          // sem access-control-allow-*) — falha de rede no navegador é quase certamente
+          // bloqueio de CORS, não erro de payload. Solução definitiva: proxy serverless.
+          const kimiCorsHint = /failed to fetch|networkerror|load failed/i.test(lastErr || '')
+            ? ' — Provável bloqueio de CORS: a api.moonshot.ai não libera chamada direta do navegador (requer proxy serverless).'
+            : '';
+          return { error: (lastErr || 'Resposta inválida da API Kimi 3') + kimiCorsHint };
         } else if (engineKey === 'gemini') {
           if (!keys.gemini) return { error: 'Chave de API do Gemini não configurada.' };
           const candidateModels = [
@@ -4213,13 +4233,15 @@ ${prompt}` }] }]
 
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
     async function runDeepSeekV4Instruction() {
+      // QA-FIX (Kimi 3, 2026-07-29): labels unificados com os modelos primários
+      // reais de cada cascata (antes o badge exibia modelos que não eram os usados).
       const engineNames = {
         glm52: 'GLM 5.2 (Zhipu AI)',
-        deepseek: 'DeepSeek-V3 / V4 (Oficial)',
-        kimi35: 'Kimi 3.5 (Moonshot)',
-        gemini: 'Gemini 3.1 Pro / 2.5 Pro Ultra (Google DeepMind)',
-        gpt56: 'ChatGPT-5 / GPT-4o-mini',
-        opus5: 'Claude 3.5 Sonnet (Anthropic)'
+        deepseek: 'DeepSeek V4 Pro',
+        kimi35: 'Kimi 3 (Moonshot AI)',
+        gemini: 'Gemini 3.1 Pro / 3.6 Flash (Google DeepMind)',
+        gpt56: 'GPT 5.6 (OpenAI)',
+        opus5: 'Claude Opus 5 (Anthropic)'
       };
       const currentEngineName = engineNames[currentSelectedEngine] || 'LLM';
       const inputElem = document.getElementById('deepseek-instruction-input');
@@ -4487,6 +4509,13 @@ Nenhuma alteração foi realizada no capítulo.`);
       revs[rKey] = lastGeneratedRevision;
       localStorage.setItem('miguel_book_revisions_' + currentChapterKey, JSON.stringify(revs));
 
+      // QA-FIX (Kimi 3, 2026-07-29): manter o rascunho cacheado sincronizado com a
+      // última revisão salva — evita que um draft obsoleto sobrescreva edições
+      // manuais mais recentes ao reabrir o Estúdio.
+      try {
+        localStorage.setItem('miguel_book_draft_revision_' + currentChapterKey, JSON.stringify(lastGeneratedRevision));
+      } catch(e) {}
+
       if (dataset && dataset[currentChapterKey]) {
         if (typeof dataset[currentChapterKey] === 'object') {
           dataset[currentChapterKey].content = lastGeneratedRevision.content;
@@ -4530,7 +4559,11 @@ Nenhuma alteração foi realizada no capítulo.`);
           const savedTag = localStorage.getItem('miguel_book_persistent_tag_' + currentVolume + '_' + chapKey);
           if (savedContent && savedContent.trim().length > 0) {
             // Sanitize and ignore corrupted draft strings from legacy test runs
-            if (savedContent.includes('Revisão Aplicada') || savedContent.includes('${dateStr}') || savedContent.includes('${currentEngineName}')) {
+            // QA-FIX (Kimi 3, 2026-07-29): removido o filtro 'Revisão Aplicada' —
+            // texto legítimo do livro podia conter a expressão e ter o rascunho
+            // APAGADO no reload. Apenas placeholders não-resolvidos denunciam
+            // corrupção real de template.
+            if (savedContent.includes('${dateStr}') || savedContent.includes('${timeStr}') || savedContent.includes('${currentEngineName}')) {
               localStorage.removeItem('miguel_book_persistent_content_' + currentVolume + '_' + chapKey);
               localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + chapKey);
               return;
@@ -4551,6 +4584,9 @@ Nenhuma alteração foi realizada no capítulo.`);
       if (confirm("Deseja descartar edições de rascunho e restaurar o capítulo canônico original?")) {
         localStorage.removeItem('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey);
         localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + currentChapterKey);
+        // QA-FIX (Kimi 3, 2026-07-29): descartar também o rascunho cacheado,
+        // que antes sobrevivia ao reset e mascarava o texto canônico restaurado.
+        localStorage.removeItem('miguel_book_draft_revision_' + currentChapterKey);
         selectChapter(currentChapterKey);
         if (typeof openStudioModal === 'function') openStudioModal();
       }
