@@ -4027,74 +4027,93 @@ ${originalText}`;
       try {
         if (engineKey === 'glm52') {
           if (!keys.glm52) return { error: 'Chave de API do GLM 5.2 não configurada.' };
-          const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${keys.glm52}`
-            },
-            body: JSON.stringify({
-              model: 'glm-4-flash',
-              messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: prompt }
-              ],
-              temperature: 0.3
-            })
-          });
-          const data = await res.json();
-          if (data.choices && data.choices[0] && data.choices[0].message) {
-            return { text: data.choices[0].message.content };
+          const glmModels = ['glm-4-plus', 'glm-4', 'glm-4-flash'];
+          let lastErr = '';
+          for (const m of glmModels) {
+            try {
+              const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${keys.glm52}`
+                },
+                body: JSON.stringify({
+                  model: m,
+                  messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: prompt }
+                  ],
+                  temperature: 0.3
+                })
+              });
+              const data = await res.json();
+              if (data.choices && data.choices[0] && data.choices[0].message) {
+                return { text: data.choices[0].message.content };
+              }
+              if (data.error && data.error.message) lastErr = data.error.message;
+            } catch(e) { lastErr = e.message; }
           }
-          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API GLM 5.2' };
+          return { error: lastErr || 'Resposta inválida da API GLM 5.2' };
         } else if (engineKey === 'deepseek') {
           if (!keys.deepseek) return { error: 'Chave de API do DeepSeek não configurada.' };
-          const res = await fetch('https://api.deepseek.com/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${keys.deepseek}`
-            },
-            body: JSON.stringify({
-              model: 'deepseek-chat',
-              messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: prompt }
-              ],
-              temperature: 0.3
-            })
-          });
-          const data = await res.json();
-          if (data.choices && data.choices[0] && data.choices[0].message) {
-            return { text: data.choices[0].message.content };
+          const dsModels = ['deepseek-reasoner', 'deepseek-chat'];
+          let lastErr = '';
+          for (const m of dsModels) {
+            try {
+              const res = await fetch('https://api.deepseek.com/chat/completions', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${keys.deepseek}`
+                },
+                body: JSON.stringify({
+                  model: m,
+                  messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: prompt }
+                  ],
+                  temperature: 0.3
+                })
+              });
+              const data = await res.json();
+              if (data.choices && data.choices[0] && data.choices[0].message) {
+                return { text: data.choices[0].message.content };
+              }
+              if (data.error && data.error.message) lastErr = data.error.message;
+            } catch(e) { lastErr = e.message; }
           }
-          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API DeepSeek' };
+          return { error: lastErr || 'Resposta inválida da API DeepSeek' };
         } else if (engineKey === 'kimi35') {
           if (!keys.kimi35) return { error: 'Chave de API do Kimi 3.5 não configurada.' };
-          const res = await fetch('https://api.moonshot.cn/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${keys.kimi35}`
-            },
-            body: JSON.stringify({
-              model: 'moonshot-v1-8k',
-              messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: prompt }
-              ],
-              temperature: 0.3
-            })
-          });
-          const data = await res.json();
-          if (data.choices && data.choices[0] && data.choices[0].message) {
-            return { text: data.choices[0].message.content };
+          const kimiModels = ['moonshot-v1-128k', 'moonshot-v1-32k', 'moonshot-v1-8k'];
+          let lastErr = '';
+          for (const m of kimiModels) {
+            try {
+              const res = await fetch('https://api.moonshot.cn/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${keys.kimi35}`
+                },
+                body: JSON.stringify({
+                  model: m,
+                  messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: prompt }
+                  ],
+                  temperature: 0.3
+                })
+              });
+              const data = await res.json();
+              if (data.choices && data.choices[0] && data.choices[0].message) {
+                return { text: data.choices[0].message.content };
+              }
+              if (data.error && data.error.message) lastErr = data.error.message;
+            } catch(e) { lastErr = e.message; }
           }
-          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API Kimi 3.5' };
+          return { error: lastErr || 'Resposta inválida da API Kimi 3.5' };
         } else if (engineKey === 'gemini') {
           if (!keys.gemini) return { error: 'Chave de API do Gemini não configurada.' };
-          
-          // Cascade list of Gemini models: 3.1-pro -> 2.5-pro -> 1.5-pro -> 2.0-flash -> 1.5-flash
           const candidateModels = [
             'gemini-3.1-pro',
             'gemini-2.5-pro',
@@ -4102,7 +4121,6 @@ ${originalText}`;
             'gemini-2.0-flash',
             'gemini-1.5-flash'
           ];
-          
           let lastError = '';
           for (const modelName of candidateModels) {
             try {
@@ -4129,48 +4147,62 @@ ${prompt}` }] }]
           return { error: lastError || 'Nenhum dos modelos Gemini respondeu com sucesso.' };
         } else if (engineKey === 'gpt56') {
           if (!keys.gpt56) return { error: 'Chave de API da OpenAI não configurada.' };
-          const res = await fetch('https://api.openai.com/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${keys.gpt56}`
-            },
-            body: JSON.stringify({
-              model: 'gpt-4o-mini',
-              messages: [
-                { role: 'system', content: systemPrompt },
-                { role: 'user', content: prompt }
-              ],
-              temperature: 0.3
-            })
-          });
-          const data = await res.json();
-          if (data.choices && data.choices[0] && data.choices[0].message) {
-            return { text: data.choices[0].message.content };
+          const gptModels = ['gpt-4o', 'gpt-4o-2024-08-06', 'gpt-4o-mini'];
+          let lastErr = '';
+          for (const m of gptModels) {
+            try {
+              const res = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${keys.gpt56}`
+                },
+                body: JSON.stringify({
+                  model: m,
+                  messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: prompt }
+                  ],
+                  temperature: 0.3
+                })
+              });
+              const data = await res.json();
+              if (data.choices && data.choices[0] && data.choices[0].message) {
+                return { text: data.choices[0].message.content };
+              }
+              if (data.error && data.error.message) lastErr = data.error.message;
+            } catch(e) { lastErr = e.message; }
           }
-          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API OpenAI' };
+          return { error: lastErr || 'Resposta inválida da API OpenAI' };
         } else if (engineKey === 'opus5') {
           if (!keys.opus5) return { error: 'Chave de API da Anthropic Claude não configurada.' };
-          const res = await fetch('https://api.anthropic.com/v1/messages', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'x-api-key': keys.opus5,
-              'anthropic-version': '2023-06-01',
-              'anthropic-dangerous-direct-browser-access': 'true'
-            },
-            body: JSON.stringify({
-              model: 'claude-3-5-sonnet-20241022',
-              max_tokens: 4096,
-              system: systemPrompt,
-              messages: [{ role: 'user', content: prompt }]
-            })
-          });
-          const data = await res.json();
-          if (data.content && data.content[0] && data.content[0].text) {
-            return { text: data.content[0].text };
+          const claudeModels = ['claude-3-5-sonnet-20241022', 'claude-3-5-haiku-20241022'];
+          let lastErr = '';
+          for (const m of claudeModels) {
+            try {
+              const res = await fetch('https://api.anthropic.com/v1/messages', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'x-api-key': keys.opus5,
+                  'anthropic-version': '2023-06-01',
+                  'anthropic-dangerous-direct-browser-access': 'true'
+                },
+                body: JSON.stringify({
+                  model: m,
+                  max_tokens: 4096,
+                  system: systemPrompt,
+                  messages: [{ role: 'user', content: prompt }]
+                })
+              });
+              const data = await res.json();
+              if (data.content && data.content[0] && data.content[0].text) {
+                return { text: data.content[0].text };
+              }
+              if (data.error && data.error.message) lastErr = data.error.message;
+            } catch(e) { lastErr = e.message; }
           }
-          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API Anthropic' };
+          return { error: lastErr || 'Resposta inválida da API Anthropic' };
         }
       } catch(err) {
         return { error: `Erro de conexão com a API: ${err.message || err}` };
