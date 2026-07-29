@@ -3601,7 +3601,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       closeModelDropdown();
 
       const labels = {
-        gemini: '♊ Gemini 1.5 Pro / 2.5 Pro',
+        gemini: '♊ Gemini 3.1 Pro / 2.5 Pro Ultra',
         gpt56: '🤖 GPT 5.6 / o3-Pro',
         opus5: '👑 Claude Opus 5.0',
         deepseek: '⚡ DeepSeek V4/V5 Pro',
@@ -3728,7 +3728,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
 
     function generateHumanizedAiFeedback(engine, instruction, summaryRule, consultMemory=false) {
       const engineNames = {
-        gemini: 'Gemini 1.5 Pro / 2.5 Pro (Google DeepMind)',
+        gemini: 'Gemini 3.1 Pro / 2.5 Pro Ultra (Google DeepMind)',
         gpt56: 'GPT 5.6 / o3-Pro (OpenAI Frontier)',
         opus5: 'Claude Opus 5.0 (Anthropic Frontier)',
         deepseek: 'DeepSeek V4/V5 Pro (DeepSeek Frontier)',
@@ -3858,32 +3858,37 @@ Regras:
         } else if (engineKey === 'gemini') {
           if (!keys.gemini) return { error: 'Chave de API do Gemini não configurada.' };
           
-          // Primary: Try Gemini 1.5 Pro (Top-tier Pro model)
-          let res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${keys.gemini}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: `${systemPrompt}\n\n${prompt}` }] }]
-            })
-          });
-          let data = await res.json();
-          if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-            return { text: data.candidates[0].content.parts[0].text };
-          }
+          // Cascade list of Gemini models: 3.1-pro -> 2.5-pro -> 1.5-pro -> 2.0-flash -> 1.5-flash
+          const candidateModels = [
+            'gemini-3.1-pro',
+            'gemini-2.5-pro',
+            'gemini-1.5-pro',
+            'gemini-2.0-flash',
+            'gemini-1.5-flash'
+          ];
           
-          // Fallback to gemini-2.0-flash / gemini-1.5-flash if Pro model quota is busy
-          res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${keys.gemini}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: `${systemPrompt}\n\n${prompt}` }] }]
-            })
-          });
-          data = await res.json();
-          if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-            return { text: data.candidates[0].content.parts[0].text };
+          let lastError = '';
+          for (const modelName of candidateModels) {
+            try {
+              const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${keys.gemini}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  contents: [{ parts: [{ text: `${systemPrompt}\n\n${prompt}` }] }]
+                })
+              });
+              const data = await res.json();
+              if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts[0].text) {
+                return { text: data.candidates[0].content.parts[0].text };
+              }
+              if (data.error && data.error.message) {
+                lastError = data.error.message;
+              }
+            } catch(err) {
+              lastError = err.message || String(err);
+            }
           }
-          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API Gemini Pro' };
+          return { error: lastError || 'Nenhum dos modelos Gemini respondeu com sucesso.' };
         } else if (engineKey === 'gpt56') {
           if (!keys.gpt56) return { error: 'Chave de API da OpenAI não configurada.' };
           const res = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -3941,7 +3946,7 @@ Regras:
         glm52: 'GLM 5.2 (Zhipu AI)',
         deepseek: 'DeepSeek-V3 / V4 (Oficial)',
         kimi35: 'Kimi 3.5 (Moonshot)',
-        gemini: 'Gemini 1.5 Pro / 2.5 Pro (Google DeepMind)',
+        gemini: 'Gemini 3.1 Pro / 2.5 Pro Ultra (Google DeepMind)',
         gpt56: 'ChatGPT-5 / GPT-4o-mini',
         opus5: 'Claude 3.5 Sonnet (Anthropic)'
       };
