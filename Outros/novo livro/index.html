@@ -3354,11 +3354,11 @@
       }
 
       // Cleanup duplicate articles or gender mismatch
-      text = text.replace(/sua\s+sua/gi, 'sua');
-      text = text.replace(/seu\s+seu/gi, 'seu');
-      text = text.replace(/sua\s+seu/gi, 'seu');
-      text = text.replace(/seu\s+sua/gi, 'seu');
-      text = text.replace(/sua\s+torpe/gi, 'seu torpe');
+      text = text.replace(/\bsua\s+sua\b/gi, 'sua');
+      text = text.replace(/\bseu\s+seu\b/gi, 'seu');
+      text = text.replace(/\bsua\s+seu\b/gi, 'seu');
+      text = text.replace(/\bseu\s+sua\b/gi, 'seu');
+      text = text.replace(/\bsua\s+torpe\b/gi, 'seu torpe');
 
       // 2. Comprehensive Natural Language Replacement Regex Patterns in Portuguese
 
@@ -3406,9 +3406,9 @@
       }
 
       // Final Gender Agreement Guard
-      text = text.replace(/sua\s+sua/gi, 'sua');
-      text = text.replace(/seu\s+seu/gi, 'seu');
-      text = text.replace(/sua\s+torpe/gi, 'seu torpe');
+      text = text.replace(/\bsua\s+sua\b/gi, 'sua');
+      text = text.replace(/\bseu\s+seu\b/gi, 'seu');
+      text = text.replace(/\bsua\s+torpe\b/gi, 'seu torpe');
 
       return text;
     }
