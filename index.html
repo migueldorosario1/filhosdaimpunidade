@@ -1593,8 +1593,9 @@
     document.addEventListener('DOMContentLoaded', () => {
       switchVolume('vol1_v7');
       
-      // Render static modals content
-      document.getElementById('banco-links-content').innerHTML = marked.parse(bancoLinksMarkdown);
+      // Render static modals content if elements exist
+      const bancoEl = document.getElementById('banco-links-content');
+      if (bancoEl) bancoEl.innerHTML = marked.parse(bancoLinksMarkdown);
       renderCanonicalManual();
       renderCustomManualRules();
 
@@ -2041,23 +2042,24 @@
 
     function renderMetrics() {
       const dataset = getCurrentVolumeDataset();
+      const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
       if (currentChapterKey === 'full_book') {
         const fullData = getCompiledFullBookData();
-        document.getElementById('metric-author').textContent = fullData.author;
-        document.getElementById('metric-version-tag').textContent = fullData.versionTag;
-        document.getElementById('metric-words').textContent = fullData.totalWords.toLocaleString('pt-BR');
-        document.getElementById('metric-sentences').textContent = `${fullData.totalChapters} Caps`;
-        document.getElementById('metric-badge').textContent = `Compilado Canônico (${fullData.totalChapters} Capítulos)`;
+        setEl('metric-author', fullData.author);
+        setEl('metric-version-tag', fullData.versionTag);
+        setEl('metric-words', fullData.totalWords.toLocaleString('pt-BR'));
+        setEl('metric-sentences', `${fullData.totalChapters} Caps`);
+        setEl('metric-badge', `Compilado Canônico (${fullData.totalChapters} Capítulos)`);
         return;
       }
       const activeData = getActiveVersionData();
       const metrics = calculateMetrics(activeData.content);
       
-      document.getElementById('metric-author').textContent = activeData.author || 'Kimi (ZCode) & Miguel';
-      document.getElementById('metric-version-tag').textContent = activeData.versionTag || dataset[currentChapterKey].versionTag;
-      document.getElementById('metric-words').textContent = metrics.words.toLocaleString('pt-BR');
-      document.getElementById('metric-sentences').textContent = metrics.sentences.toLocaleString('pt-BR');
-      document.getElementById('metric-badge').textContent = activeData.badge || 'Oficial Protegida 🔒';
+      setEl('metric-author', activeData.author || 'Kimi (ZCode) & Miguel');
+      setEl('metric-version-tag', activeData.versionTag || dataset[currentChapterKey].versionTag);
+      setEl('metric-words', metrics.words.toLocaleString('pt-BR'));
+      setEl('metric-sentences', metrics.sentences.toLocaleString('pt-BR'));
+      setEl('metric-badge', activeData.badge || 'Oficial Protegida 🔒');
     }
 
     function getActiveVersionData() {
