@@ -3604,7 +3604,7 @@ html_template = """<!DOCTYPE html>
       }
     }
 
-    async function callRealLlmApi(engineKey, instruction, originalText, consultMemory) {
+    async function callRealLlmApi(engineKey, instruction, originalText, consultMemory=false) {
       const keys = {
         gemini: localStorage.getItem('miguel_key_gemini') || DEFAULT_API_KEYS.gemini,
         gpt56: localStorage.getItem('miguel_key_openai') || DEFAULT_API_KEYS.gpt56,
@@ -3623,7 +3623,8 @@ Regras:
       const prompt = `INSTRUÇÃO DE EDIÇÃO/REESCRITA DO USUÁRIO:\n"${instruction}"\n\nTEXTO ORIGINAL DO CAPÍTULO:\n${originalText}`;
 
       try {
-        if (engineKey === 'glm52' && keys.glm52) {
+        if (engineKey === 'glm52') {
+          if (!keys.glm52) return { error: 'Chave de API do GLM 5.2 não configurada.' };
           const res = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
             method: 'POST',
             headers: {
@@ -3641,9 +3642,11 @@ Regras:
           });
           const data = await res.json();
           if (data.choices && data.choices[0] && data.choices[0].message) {
-            return data.choices[0].message.content;
+            return { text: data.choices[0].message.content };
           }
-        } else if (engineKey === 'deepseek' && keys.deepseek) {
+          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API GLM 5.2' };
+        } else if (engineKey === 'deepseek') {
+          if (!keys.deepseek) return { error: 'Chave de API do DeepSeek não configurada.' };
           const res = await fetch('https://api.deepseek.com/chat/completions', {
             method: 'POST',
             headers: {
@@ -3661,9 +3664,11 @@ Regras:
           });
           const data = await res.json();
           if (data.choices && data.choices[0] && data.choices[0].message) {
-            return data.choices[0].message.content;
+            return { text: data.choices[0].message.content };
           }
-        } else if (engineKey === 'kimi35' && keys.kimi35) {
+          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API DeepSeek' };
+        } else if (engineKey === 'kimi35') {
+          if (!keys.kimi35) return { error: 'Chave de API do Kimi 3.5 não configurada.' };
           const res = await fetch('https://api.moonshot.cn/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -3681,9 +3686,11 @@ Regras:
           });
           const data = await res.json();
           if (data.choices && data.choices[0] && data.choices[0].message) {
-            return data.choices[0].message.content;
+            return { text: data.choices[0].message.content };
           }
-        } else if (engineKey === 'gemini' && keys.gemini) {
+          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API Kimi 3.5' };
+        } else if (engineKey === 'gemini') {
+          if (!keys.gemini) return { error: 'Chave de API do Gemini não configurada.' };
           const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${keys.gemini}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -3693,9 +3700,11 @@ Regras:
           });
           const data = await res.json();
           if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-            return data.candidates[0].content.parts[0].text;
+            return { text: data.candidates[0].content.parts[0].text };
           }
-        } else if (engineKey === 'gpt56' && keys.gpt56) {
+          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API Gemini' };
+        } else if (engineKey === 'gpt56') {
+          if (!keys.gpt56) return { error: 'Chave de API da OpenAI não configurada.' };
           const res = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -3713,9 +3722,11 @@ Regras:
           });
           const data = await res.json();
           if (data.choices && data.choices[0] && data.choices[0].message) {
-            return data.choices[0].message.content;
+            return { text: data.choices[0].message.content };
           }
-        } else if (engineKey === 'opus5' && keys.opus5) {
+          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API OpenAI' };
+        } else if (engineKey === 'opus5') {
+          if (!keys.opus5) return { error: 'Chave de API da Anthropic Claude não configurada.' };
           const res = await fetch('https://api.anthropic.com/v1/messages', {
             method: 'POST',
             headers: {
@@ -3733,33 +3744,14 @@ Regras:
           });
           const data = await res.json();
           if (data.content && data.content[0] && data.content[0].text) {
-            return data.content[0].text;
+            return { text: data.content[0].text };
           }
+          return { error: data.error ? (data.error.message || JSON.stringify(data.error)) : 'Resposta inválida da API Anthropic' };
         }
       } catch(err) {
-        console.warn("Primary LLM API call failed, attempting Gemini 2.5 Flash neural failover:", err);
+        return { error: `Erro de conexão com a API: ${err.message || err}` };
       }
-
-      // High-Reliability Neural Failover to Gemini 2.5 Flash if primary engine call failed or hit CORS
-      if (keys.gemini) {
-        try {
-          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${keys.gemini}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: `${systemPrompt}\n\n${prompt}` }] }]
-            })
-          });
-          const data = await res.json();
-          if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-            return data.candidates[0].content.parts[0].text;
-          }
-        } catch(errGemini) {
-          console.error("Gemini failover error:", errGemini);
-        }
-      }
-
-      return null;
+      return { error: 'Modelo de IA não reconhecido.' };
     }
 
     // Run AI Instruction (Surgical Processing with Selected AI Engine)
@@ -3826,6 +3818,62 @@ Regras:
             <div class="p-4 bg-amber-950/70 border border-amber-500/50 rounded-xl text-xs text-amber-200 font-mono space-y-2 animate-pulse shadow-xl">
               <div class="flex items-center gap-2 text-amber-300 font-bold text-sm">
                 <i data-lucide="database" class="w-5 h-5 animate-spin text-amber-400"></i>
+                <span>🧠 Consultando a Memória Canônica do Livro (PROJECT_MEMORY.md)...</span>
+              </div>
+              <div class="pl-7 space-y-1 text-slate-300 text-xs">
+                <div>• Indexando Regras #1 a #27 do Manual de Estilo...</div>
+                <div>• Verificando acervo STF/OFAC & Referências de César/Maquiavel...</div>
+                <div>• Processando raciocínio com <strong>${currentEngineName}</strong>...</div>
+              </div>
+            </div>
+          `;
+        } else {
+          textAi.innerHTML = `
+            <div class="p-4 bg-purple-950/70 border border-purple-500/50 rounded-xl text-xs text-purple-200 font-mono space-y-2 animate-pulse shadow-xl">
+              <div class="flex items-center gap-2 text-purple-300 font-bold text-sm">
+                <i data-lucide="sparkles" class="w-5 h-5 animate-spin text-purple-400"></i>
+                <span>⚡ Processando Reescrita com <strong>${currentEngineName}</strong>...</span>
+              </div>
+              <div class="pl-7 text-slate-300 text-xs">
+                • Conectando à API e aplicando revisão editorial...
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      if (window.lucide) lucide.createIcons();
+
+      // Attempt strict API call to selected LLM provider (No failover, no silent fallback)
+      const apiResult = await callRealLlmApi(currentSelectedEngine, instruction, origContent, consultMemory);
+
+      if (apiResult.error || !apiResult.text) {
+        if (titleAi) titleAi.textContent = `⚠️ Falha na execução (${currentEngineName})`;
+        if (textAi) {
+          textAi.innerHTML = `
+            <div class="p-5 bg-rose-50 border-2 border-rose-400 rounded-2xl space-y-3 text-rose-950 font-sans shadow-sm">
+              <div class="flex items-center gap-2 font-black text-base text-rose-900">
+                <i data-lucide="alert-triangle" class="w-5 h-5 text-rose-600"></i>
+                <span>Falhou o modelo selecionado (${currentEngineName}):</span>
+              </div>
+              <p class="text-sm font-medium leading-relaxed">
+                ${apiResult.error || 'A API do modelo não retornou uma resposta válida.'}
+              </p>
+              <div class="p-3 bg-white border border-rose-200 rounded-xl text-xs font-bold text-slate-800">
+                📌 <strong>Nenhuma alteração foi efetuada no texto.</strong> Selecione outro modelo na lista acima para tentar novamente.
+              </div>
+            </div>
+          `;
+        }
+        if (btnRun) {
+          btnRun.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> Executar reescrita inteligente`;
+        }
+        if (window.lucide) lucide.createIcons();
+        alert(`⚠️ Falhou o modelo ${currentEngineName}.\n\nMotivo: ${apiResult.error || 'Sem resposta'}\n\nNenhuma alteração foi realizada no capítulo.`);
+        return;
+      }
+
+      let rewrittenText = apiResult.text;e="database" class="w-5 h-5 animate-spin text-amber-400"></i>
                 <span>🧠 Consultando a Memória Canônica do Livro (PROJECT_MEMORY.md)...</span>
               </div>
               <div class="pl-7 space-y-1 text-slate-300 text-xs">
