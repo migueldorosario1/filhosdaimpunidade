@@ -1538,6 +1538,7 @@
 
     let currentVolume = 'vol1_v7'; // 'vol1_v7', 'vol2_v1'
     let currentChapterKey = '01_estarei_vingado';
+    let currentVersionKey = 'oficial';
     // Theme Mode Toggle (Modo Dia vs Modo Noite)
     function toggleThemeMode() {
       const isDark = document.documentElement.classList.toggle('dark');
@@ -3013,8 +3014,8 @@
     function openTranscriptById(itemId) {
       const item = sourcesDatabase.find(s => s.id === itemId);
       if (!item) return;
-      const formattedContent = (item.transcript || '').replace(/
-/g, '<br>');
+      const formattedContent = (item.transcript || '').split('
+').join('<br>');
       openTranscriptModal(item.title, `${item.source} · ${item.date}`, formattedContent, item.link);
     }
 
@@ -3675,9 +3676,9 @@
 ---
 *Atualizado em ${dateStr} às ${timeStr} por ${currentEngineName}*
 `;
-      const cleanBody = rewrittenText.replace(/
-*---
-\*Atualizado em.*?\*$/s, '');
+      const cleanBody = rewrittenText.replace(/[
+]*---?
+\*Atualizado em[\s\S]*$/, '');
       const finalContent = cleanBody + cleanFooter;
 
       const engineSlug = getCleanEngineSlug(currentSelectedEngine);

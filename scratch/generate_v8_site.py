@@ -1213,6 +1213,7 @@ html_template = """<!DOCTYPE html>
 
     let currentVolume = 'vol1_v7'; // 'vol1_v7', 'vol2_v1'
     let currentChapterKey = '01_estarei_vingado';
+    let currentVersionKey = 'oficial';
     // Theme Mode Toggle (Modo Dia vs Modo Noite)
     function toggleThemeMode() {
       const isDark = document.documentElement.classList.toggle('dark');
@@ -2675,7 +2676,7 @@ html_template = """<!DOCTYPE html>
     function openTranscriptById(itemId) {
       const item = sourcesDatabase.find(s => s.id === itemId);
       if (!item) return;
-      const formattedContent = (item.transcript || '').replace(/\n/g, '<br>');
+      const formattedContent = (item.transcript || '').split('\n').join('<br>');
       openTranscriptModal(item.title, `${item.source} · ${item.date}`, formattedContent, item.link);
     }
 
@@ -3323,7 +3324,7 @@ html_template = """<!DOCTYPE html>
 
       // Clean footer signature line (no AI metalanguage in body)
       const cleanFooter = `\n\n---\n*Atualizado em ${dateStr} às ${timeStr} por ${currentEngineName}*\n`;
-      const cleanBody = rewrittenText.replace(/\n*---\n\*Atualizado em.*?\*$/s, '');
+      const cleanBody = rewrittenText.replace(/[\r\n]*---\r?\n\*Atualizado em[\s\S]*$/, '');
       const finalContent = cleanBody + cleanFooter;
 
       const engineSlug = getCleanEngineSlug(currentSelectedEngine);
