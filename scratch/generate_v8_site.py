@@ -1064,6 +1064,9 @@ html_template = """<!DOCTYPE html>
         <div class="p-4 bg-indigo-50 rounded-2xl border border-indigo-200 text-xs text-indigo-950 font-semibold leading-relaxed">
           💡 <strong>Controle Total e Permanência:</strong> Caso alguma chave de API desatualize ou se você quiser personalizar os parâmetros sem precisar de mim, você pode editar e salvar manualmente todas as chaves abaixo!
         </div>
+        <div class="p-4 bg-amber-50 rounded-2xl border border-amber-300 text-xs text-amber-950 font-semibold leading-relaxed">
+          🔐 <strong>Segurança (QA 29/07/2026):</strong> as chaves não são mais distribuídas embutidas no código do site. Cole aqui as suas chaves ativas (Cofre de Chaves do Cérebro) e clique em <strong>Salvar Configurações</strong> — elas ficam gravadas <strong>somente neste navegador</strong> (localStorage). As chaves antigas que estavam embutidas devem ser rotacionadas nos consoles dos provedores.
+        </div>
 
         <div class="space-y-4 font-mono text-xs">
           <div>
@@ -1099,7 +1102,7 @@ html_template = """<!DOCTYPE html>
 
         <div class="pt-2 flex items-center justify-between border-t border-slate-200">
           <button onclick="restoreDefaultApiKeys()" class="px-3.5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-extrabold border border-slate-300 cursor-pointer">
-            🔄 Restaurar Chaves Padrão
+            🗑️ Limpar Chaves Salvas
           </button>
 
           <button onclick="saveSettingsModal()" class="px-5 py-2.5 bg-indigo-700 hover:bg-indigo-800 text-white rounded-xl text-xs font-extrabold shadow flex items-center gap-2 cursor-pointer">
@@ -1654,9 +1657,30 @@ html_template = """<!DOCTYPE html>
       }
     }
 
+    // QA-FIX 5 (Kimi 3, 2026-07-29): chaves de revisão/rascunho/canônico/histórico
+    // passam a ser prefixadas por volume (ex.: miguel_book_revisions_vol1_v7_01_...),
+    // eliminando a colisão futura Vol.1 × Vol.2. Leitura com fallback legado +
+    // migração copy-on-read — a chave legada é PRESERVADA como backup (nada é apagado).
+    function storageKeyVol(base, chapKey) {
+      return base + '_' + currentVolume + '_' + chapKey;
+    }
+    function storageGetMigrated(base, chapKey) {
+      try {
+        const newKey = storageKeyVol(base, chapKey);
+        const val = localStorage.getItem(newKey);
+        if (val !== null) return val;
+        const legacy = localStorage.getItem(base + '_' + chapKey);
+        if (legacy !== null) {
+          try { localStorage.setItem(newKey, legacy); } catch(e) {}
+          return legacy;
+        }
+        return null;
+      } catch(e) { return null; }
+    }
+
     function getSavedRevisions(chapKey) {
       try {
-        const raw = localStorage.getItem('miguel_book_revisions_' + chapKey);
+        const raw = storageGetMigrated('miguel_book_revisions', chapKey);
         return raw ? JSON.parse(raw) : {};
       } catch (e) {
         return {};
@@ -1726,7 +1750,7 @@ html_template = """<!DOCTYPE html>
         const ch = dataset[k];
         let chContent = ch.mainContent || '';
         try {
-          const storedCanonicalKey = localStorage.getItem('miguel_book_canonical_' + k);
+          const storedCanonicalKey = storageGetMigrated('miguel_book_canonical', k);
           if (storedCanonicalKey && storedCanonicalKey !== 'oficial') {
             const revs = getSavedRevisions(k);
             if (revs[storedCanonicalKey] && revs[storedCanonicalKey].content) {
@@ -1904,11 +1928,11 @@ html_template = """<!DOCTYPE html>
     }
 
     function getCanonicalVersionKey(chapKey) {
-      return localStorage.getItem('miguel_book_canonical_' + chapKey) || 'oficial';
+      return storageGetMigrated('miguel_book_canonical', chapKey) || 'oficial';
     }
 
     function setCanonicalVersion(vKey) {
-      localStorage.setItem('miguel_book_canonical_' + currentChapterKey, vKey);
+      localStorage.setItem(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
       renderVersionTabs();
       renderMetrics();
       renderSingleView();
@@ -3242,7 +3266,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
 
       // Automatically restore cached draft revision if present
       try {
-        const cachedDraft = localStorage.getItem('miguel_book_draft_revision_' + currentChapterKey);
+        const cachedDraft = storageGetMigrated('miguel_book_draft_revision', currentChapterKey);
         if (cachedDraft) {
           lastGeneratedRevision = JSON.parse(cachedDraft);
           document.getElementById('deepseek-output-results').classList.remove('hidden');
@@ -3319,7 +3343,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
 
     function getInstructionHistory() {
       try {
-        const raw = localStorage.getItem('miguel_instruction_history_' + currentChapterKey);
+        const raw = storageGetMigrated('miguel_instruction_history', currentChapterKey);
         return raw ? JSON.parse(raw) : [];
       } catch(e) {
         return [];
@@ -3331,7 +3355,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       const history = getInstructionHistory();
       const now = new Date().toISOString().slice(0, 16).replace('T', ' ');
       history.unshift({ time: now, text: text });
-      localStorage.setItem('miguel_instruction_history_' + currentChapterKey, JSON.stringify(history));
+      localStorage.setItem(storageKeyVol('miguel_instruction_history', currentChapterKey), JSON.stringify(history));
       renderInstructionHistory();
     }
 
@@ -3623,19 +3647,25 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       const activeLabel = document.getElementById('active-model-label');
       if (activeLabel) activeLabel.textContent = labels[engineKey] || '♊ Gemini 3.1 Pro / 3.6 Flash';
 
-      const instructionInput = document.getElementById('deepseek-instruction-input');
-      if (instructionInput && instructionInput.value.trim().length > 0) {
-        runDeepSeekV4Instruction();
-      }
+      // QA-FIX 3 (Kimi 3, 2026-07-29): removida a auto-execução de
+      // runDeepSeekV4Instruction() ao trocar de modelo com texto na caixa —
+      // disparava chamada PAGA de API sem clique explícito em "Executar".
+      // A reescrita agora só ocorre por ação direta do usuário.
     }
 
+    // QA-FIX 4 (Kimi 3, 2026-07-29): chaves-padrão REMOVIDAS do código — ficavam
+    // expostas no HTML público do site (e no histórico git). As chaves ativas vivem
+    // apenas no localStorage do navegador do Miguel (configurar no modal ⚙️) e/ou
+    // em variáveis de ambiente do servidor (MOONSHOT_API_KEY para o proxy Kimi).
+    // ATENÇÃO: as chaves antigas devem ser ROTACIONADAS nos consoles dos provedores
+    // (estiveram públicas). Localização das credenciais: Cofre de Chaves do Cérebro.
     const DEFAULT_API_KEYS = {
-      gemini: ['AIzaSyB6Igidlk0Cf7kc', 'B9MHzoJMXXg6dhTYe0k'].join(''),
-      gpt56: ['sk-proj-nxbBF28ags9lMEZNiz4K', 'Jus6-zeDrxjQFgMKbndCdZeUj8uHm2vWNk', '-hhA1afefDNbFJ9nUCA7T3BlbkFJomrLKw52DTa', '-tlrA5VHUmksB71keAN_fNmNSmXxuCnHiy16Ph_2eS84kC3rmJ2Er57ZYq-ddAA'].join(''),
-      opus5: ['sk-ant-api03-rLfh6RddyDWq3', 'LWZGZR9I_qM9WZsLpz7WBgWIynRKkHI7e24', '_BxTyBFFYQQKx38K8hy6PNdRtsLVTaOZhsubYw-Tgqy1AAA'].join(''),
-      deepseek: ['sk-9335', 'ff9479ea4c2eba10bd0c498dde04'].join(''),
-      kimi35: ['sk-e2j7', 'OPypKuX0GfOzr0Atm4zjjJZ3aUIQeaQ892Dm88iSqfaR'].join(''),
-      glm52: ['7c593fda4f5b4a14b2bc4d62e0594c90', '.od0EFwd8qXzD2X7u'].join('')
+      gemini: '',
+      gpt56: '',
+      opus5: '',
+      deepseek: '',
+      kimi35: '',
+      glm52: ''
     };
 
     function openSettingsModal() {
@@ -3863,31 +3893,51 @@ Regras:
           // QA-FIX (Kimi 3, 2026-07-29): a chave embutida autentica na plataforma
           // internacional api.moonshot.ai (HTTP 200); api.moonshot.cn retorna 401.
           // Modelo correto na conta: 'kimi-k3' ('kimi-3' não existe → caía no fallback).
+          // QA-FIX 2 (Kimi 3, 2026-07-29): a Moonshot não envia headers CORS → rota
+          // preferencial via proxy same-origin /api/kimi (serverless Vercel, ver
+          // api/kimi.js). Se o proxy não existir (preview antigo/dev local), cai
+          // na chamada direta (que o navegador pode bloquear — hint de CORS abaixo).
           const kimiModels = ['kimi-k3', 'moonshot-v1-128k', 'moonshot-v1-32k', 'moonshot-v1-8k'];
           let lastErr = '';
+          let kimiProxyMissing = false;
           for (const m of kimiModels) {
-            try {
-              const res = await fetch('https://api.moonshot.ai/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': `Bearer ${keys.kimi35}`
-                },
-                body: JSON.stringify({
-                  model: m,
-                  messages: [
-                    { role: 'system', content: systemPrompt },
-                    { role: 'user', content: prompt }
-                  ],
-                  temperature: 0.3
-                })
-              });
-              const data = await res.json();
-              if (data.choices && data.choices[0] && data.choices[0].message) {
-                return { text: data.choices[0].message.content };
+            const kimiRoutes = kimiProxyMissing
+              ? ['https://api.moonshot.ai/v1/chat/completions']
+              : ['/api/kimi', 'https://api.moonshot.ai/v1/chat/completions'];
+            for (const route of kimiRoutes) {
+              try {
+                const res = await fetch(route, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${keys.kimi35}`
+                  },
+                  body: JSON.stringify({
+                    model: m,
+                    messages: [
+                      { role: 'system', content: systemPrompt },
+                      { role: 'user', content: prompt }
+                    ],
+                    temperature: 0.3
+                  })
+                });
+                if (res.status === 404 && route === '/api/kimi') {
+                  kimiProxyMissing = true;
+                  break; // proxy não implantado neste ambiente → tenta rota direta
+                }
+                const data = await res.json();
+                if (data.choices && data.choices[0] && data.choices[0].message) {
+                  return { text: data.choices[0].message.content };
+                }
+                if (data.error && data.error.message) {
+                  lastErr = data.error.message;
+                  break; // erro real da API (auth/modelo) → próximo modelo da cascata
+                }
+              } catch(e) {
+                if (route === '/api/kimi') { kimiProxyMissing = true; }
+                else { lastErr = e.message; }
               }
-              if (data.error && data.error.message) lastErr = data.error.message;
-            } catch(e) { lastErr = e.message; }
+            }
           }
           // QA-FIX (Kimi 3, 2026-07-29): Moonshot não envia headers CORS (preflight 204
           // sem access-control-allow-*) — falha de rede no navegador é quase certamente
@@ -4154,7 +4204,7 @@ Regras:
       if (window.lucide) lucide.createIcons();
 
       try {
-        localStorage.setItem('miguel_book_draft_revision_' + currentChapterKey, JSON.stringify(lastGeneratedRevision));
+        localStorage.setItem(storageKeyVol('miguel_book_draft_revision', currentChapterKey), JSON.stringify(lastGeneratedRevision));
       } catch(e) {}
 
       saveInstructionToHistory(instruction);
@@ -4265,13 +4315,13 @@ Regras:
       lastGeneratedRevision.engineSlug = engineSlug;
 
       revs[rKey] = lastGeneratedRevision;
-      localStorage.setItem('miguel_book_revisions_' + currentChapterKey, JSON.stringify(revs));
+      localStorage.setItem(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
 
       // QA-FIX (Kimi 3, 2026-07-29): manter o rascunho cacheado sincronizado com a
       // última revisão salva — evita que um draft obsoleto sobrescreva edições
       // manuais mais recentes ao reabrir o Estúdio.
       try {
-        localStorage.setItem('miguel_book_draft_revision_' + currentChapterKey, JSON.stringify(lastGeneratedRevision));
+        localStorage.setItem(storageKeyVol('miguel_book_draft_revision', currentChapterKey), JSON.stringify(lastGeneratedRevision));
       } catch(e) {}
 
       if (dataset && dataset[currentChapterKey]) {
@@ -4344,7 +4394,8 @@ Regras:
         localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + currentChapterKey);
         // QA-FIX (Kimi 3, 2026-07-29): descartar também o rascunho cacheado,
         // que antes sobrevivia ao reset e mascarava o texto canônico restaurado.
-        localStorage.removeItem('miguel_book_draft_revision_' + currentChapterKey);
+        localStorage.removeItem(storageKeyVol('miguel_book_draft_revision', currentChapterKey));
+        localStorage.removeItem('miguel_book_draft_revision_' + currentChapterKey); // chave legada (pré-prefixo de volume)
         selectChapter(currentChapterKey);
         if (typeof openStudioModal === 'function') openStudioModal();
       }
@@ -4359,7 +4410,7 @@ Regras:
           Object.keys(revData).forEach(chapKey => {
             const localRevs = getSavedRevisions(chapKey);
             const merged = { ...revData[chapKey], ...localRevs };
-            localStorage.setItem('miguel_book_revisions_' + chapKey, JSON.stringify(merged));
+            localStorage.setItem(storageKeyVol('miguel_book_revisions', chapKey), JSON.stringify(merged));
           });
         }
       } catch (e) {
