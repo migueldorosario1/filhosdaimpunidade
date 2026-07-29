@@ -1620,9 +1620,11 @@ html_template = """<!DOCTYPE html>
 
     function selectChapter(key, skipHashUpdate) {
       currentChapterKey = key;
+      initChapterSelect();
       if (key === 'full_book') {
         currentVersionKey = 'oficial';
         loadChapter('full_book');
+        if (!skipHashUpdate) updateUrlHashRoute();
         return;
       }
       const revs = getSavedRevisions(key);
@@ -1633,6 +1635,7 @@ html_template = """<!DOCTYPE html>
         currentVersionKey = 'oficial';
       }
       loadChapter(key);
+      if (!skipHashUpdate) updateUrlHashRoute();
     }
 
     function navigateChapter(delta) {
@@ -3073,22 +3076,12 @@ html_template = """<!DOCTYPE html>
       try {
         const hash = window.location.hash || window.location.search || '';
         const isStudio = hash.includes('estudio') || window.location.pathname.includes('estudio');
-        if (!hash && !isStudio) return false;
 
         const matchVol = hash.match(/vol=([^&]+)/);
         const matchCap = hash.match(/cap=([^&]+)/);
 
         if (matchVol && matchVol[1]) {
           currentVolume = matchVol[1];
-          const btnVol = document.getElementById('btn-vol-' + currentVolume);
-          if (btnVol) {
-            document.querySelectorAll('.vol-tab-btn').forEach(b => {
-              b.classList.remove('bg-amber-600', 'text-white');
-              b.classList.add('bg-slate-800', 'text-slate-300');
-            });
-            btnVol.classList.remove('bg-slate-800', 'text-slate-300');
-            btnVol.classList.add('bg-amber-600', 'text-white');
-          }
         }
 
         if (matchCap && matchCap[1]) {
@@ -3103,6 +3096,8 @@ html_template = """<!DOCTYPE html>
         if (isStudio) {
           openAiAuditModal();
           return true;
+        } else {
+          closeAiAuditModal(true);
         }
       } catch(e) {
         console.error("Hash route error:", e);
