@@ -137,3 +137,21 @@ Pedimos ao **Kimi 3** que realize uma auditoria completa nos seguintes pontos:
 
 **Validação pós-fix:** `node --check` OK · `index.html` ≡ espelho (md5) · live na Vercel com os marcadores do fix.
 📄 Log técnico completo: `Cerebro/MEMORIA/memoria_qa_kimi3_estudio_filhos_impunidade_20260729.md`
+
+---
+
+## 🚀 6. KIMI 3 — FASE 2 ENTREGUE (29/07/2026, aprovado pelo Miguel)
+
+**Commits:** `8a4bb159` + `edefb641` (deploy-main → main) · **Status:** AO VIVO e testado E2E
+
+### Os 4 flags aprovados foram implementados:
+
+1. **✅ Proxy serverless Kimi (`/api/kimi`)** — a Moonshot não envia headers CORS; agora o Estúdio chama a rota same-origin `/api/kimi` (nova `api/kimi.js`), que repassa no servidor. **Teste E2E real ao vivo: `kimi-k3` respondeu com sucesso através do proxy** (118 tokens). Precedência de chave: `MOONSHOT_API_KEY` (env Vercel — opcional, mais seguro) → header Authorization do cliente (chave do localStorage). Fallback automático para chamada direta se o proxy não existir no ambiente.
+   - 🐛 **Bug extra encontrado no teste E2E:** `kimi-k3` rejeita `temperature ≠ 1` ("invalid temperature") → campo removido do payload Kimi (moonshot-v1 já usa 0.3 por padrão).
+2. **✅ Fim da auto-execução paga** — trocar de modelo no seletor não dispara mais reescrita automática; só por clique explícito em "Executar".
+3. **✅ Chaves fora do código** — `DEFAULT_API_KEYS` esvaziado; **0 chaves no HTML público** (verificado ao vivo). Modal ganhou aviso de segurança; botão virou "🗑️ Limpar Chaves Salvas". ⚠️ **Ação manual pendente (só o Miguel pode fazer): ROTACIONAR as 6 chaves antigas** nos consoles dos provedores (ficaram expostas no HTML/git) e salvar as novas no modal ⚙️ (ficam só no navegador dele). Localização das credenciais: `Cerebro/CEREBRO_NODE_COFRE_CHAVES.md`.
+4. **✅ Prefixo de volume no localStorage** — `revisions`/`draft`/`canonical`/`instruction_history` agora são `..._<vol>_<cap>` (sem colisão Vol.1 × Vol.2). Leitura com fallback legado + **migração copy-on-read** (nada é apagado; o legado vira backup).
+
+### Validação final
+- `node --check` OK (site + `api/kimi.js`) · site live com os novos marcadores · proxy: OPTIONS 204 com CORS correto, POST sem chave → 401 com mensagem clara, POST com chave → **200 com resposta do kimi-k3**.
+- 🔒 Nenhum valor de chave foi exposto neste processo (extrações mascaradas, variáveis descartadas).
