@@ -4138,7 +4138,14 @@ Regras:
           btnRun.innerHTML = `<i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i> Executar reescrita inteligente`;
         }
         if (window.lucide) lucide.createIcons();
-        alert(`⚠️ Falhou o modelo ${currentEngineName}.\n\nMotivo: ${apiResult.error || 'Sem resposta'}\n\nNenhuma alteração foi realizada no capítulo.`);
+        const isMissingApiKey = (apiResult.error || '').indexOf('não configurada') !== -1;
+        if (isMissingApiKey) {
+          if (confirm(`⚠️ Falhou o modelo ${currentEngineName}.\n\nMotivo: ${apiResult.error}\n\nNenhuma alteração foi realizada no capítulo.\n\n👉 Clique em OK para abrir as ⚙️ Configurações e salvar a chave agora (ela fica somente neste navegador).`)) {
+            openSettingsModal();
+          }
+        } else {
+          alert(`⚠️ Falhou o modelo ${currentEngineName}.\n\nMotivo: ${apiResult.error || 'Sem resposta'}\n\nNenhuma alteração foi realizada no capítulo.`);
+        }
         return;
       }
 
