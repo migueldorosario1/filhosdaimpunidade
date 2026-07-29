@@ -1942,7 +1942,7 @@
       selectChapter('00_frontmatter');
     }
 
-    function selectChapter(key) {
+    function selectChapter(key, skipHashUpdate) {
       currentChapterKey = key;
       if (key === 'full_book') {
         currentVersionKey = 'oficial';
@@ -3394,7 +3394,7 @@
       if (window.lucide) lucide.createIcons();
     }
 
-        function updateUrlHashRoute() {
+            function updateUrlHashRoute() {
       try {
         const studioModal = document.getElementById('modal-ai-audit');
         const isStudioOpen = studioModal && !studioModal.classList.contains('hidden');
@@ -3408,10 +3408,10 @@
 
     function parseUrlHashRoute() {
       try {
-        const hash = window.location.hash || '';
-        if (!hash) return false;
+        const hash = window.location.hash || window.location.search || '';
+        const isStudio = hash.includes('estudio') || window.location.pathname.includes('estudio');
+        if (!hash && !isStudio) return false;
 
-        const isStudio = hash.includes('estudio');
         const matchVol = hash.match(/vol=([^&]+)/);
         const matchCap = hash.match(/cap=([^&]+)/);
 
@@ -3435,20 +3435,17 @@
           }
         }
 
-        selectChapter(currentChapterKey);
+        selectChapter(currentChapterKey, true);
 
         if (isStudio) {
           openAiAuditModal();
           return true;
-        } else {
-          closeAiAuditModal(true);
         }
       } catch(e) {
         console.error("Hash route error:", e);
       }
       return false;
     }
-
 
     function openAiAuditModal() {
       const appHeader = document.getElementById('app-header');

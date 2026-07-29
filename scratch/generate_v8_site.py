@@ -6,6 +6,7 @@ VOL2_ARCH_PATH = 'Outros/novo livro/Kimi K3/ARQUITETURA_VOL2_O_MALANDRO.md'
 BANCO_LINKS_PATH = 'Outros/novo livro/Kimi K3/BANCO_DE_LINKS.md'
 MANUAL_ESTILO_PATH = 'Outros/novo livro/Kimi K3/MANUAL_DE_ESTILO.md'
 TARGET_INDEX = 'Outros/novo livro/index.html'
+ROOT_INDEX = 'index.html'
 
 version_map_v7 = {
     '00_frontmatter.md': 'Kimi 4.0',
@@ -1617,7 +1618,7 @@ html_template = """<!DOCTYPE html>
       selectChapter('00_frontmatter');
     }
 
-    function selectChapter(key) {
+    function selectChapter(key, skipHashUpdate) {
       currentChapterKey = key;
       if (key === 'full_book') {
         currentVersionKey = 'oficial';
@@ -3056,7 +3057,7 @@ html_template = """<!DOCTYPE html>
       if (window.lucide) lucide.createIcons();
     }
 
-        function updateUrlHashRoute() {
+            function updateUrlHashRoute() {
       try {
         const studioModal = document.getElementById('modal-ai-audit');
         const isStudioOpen = studioModal && !studioModal.classList.contains('hidden');
@@ -3070,10 +3071,10 @@ html_template = """<!DOCTYPE html>
 
     function parseUrlHashRoute() {
       try {
-        const hash = window.location.hash || '';
-        if (!hash) return false;
+        const hash = window.location.hash || window.location.search || '';
+        const isStudio = hash.includes('estudio') || window.location.pathname.includes('estudio');
+        if (!hash && !isStudio) return false;
 
-        const isStudio = hash.includes('estudio');
         const matchVol = hash.match(/vol=([^&]+)/);
         const matchCap = hash.match(/cap=([^&]+)/);
 
@@ -3097,20 +3098,17 @@ html_template = """<!DOCTYPE html>
           }
         }
 
-        selectChapter(currentChapterKey);
+        selectChapter(currentChapterKey, true);
 
         if (isStudio) {
           openAiAuditModal();
           return true;
-        } else {
-          closeAiAuditModal(true);
         }
       } catch(e) {
         console.error("Hash route error:", e);
       }
       return false;
     }
-
 
     function openAiAuditModal() {
       const appHeader = document.getElementById('app-header');
@@ -4229,5 +4227,30 @@ Regras:
 
 with open(TARGET_INDEX, 'w', encoding='utf-8') as f:
     f.write(html_template)
+with open(ROOT_INDEX, 'w', encoding='utf-8') as f:
+    f.write(html_template)
 
-print(f"Successfully generated updated V8 web app at {TARGET_INDEX} ({os.path.getsize(TARGET_INDEX)} bytes)")
+estudio_html_content = """<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=./#estudio">
+  <script>
+    window.location.href = './#estudio' + window.location.search + window.location.hash;
+  </script>
+  <title>Estúdio Editorial — Filhos da Impunidade</title>
+</head>
+<body style="background:#0f172a; color:#f8fafc; font-family:sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; margin:0;">
+  <div style="text-align:center;">
+    <h2 style="margin-bottom:8px; font-weight:700;">Estúdio Editorial — Filhos da Impunidade</h2>
+    <p style="color:#94a3b8; font-size:14px;">Redirecionando para o ambiente de edição...</p>
+  </div>
+</body>
+</html>"""
+
+with open('Outros/novo livro/estudio.html', 'w', encoding='utf-8') as f:
+    f.write(estudio_html_content)
+with open('estudio.html', 'w', encoding='utf-8') as f:
+    f.write(estudio_html_content)
+
+print(f"Successfully generated updated V8 web app at {TARGET_INDEX} and {ROOT_INDEX} ({os.path.getsize(ROOT_INDEX)} bytes)")
