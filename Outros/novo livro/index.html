@@ -362,6 +362,10 @@
           <i data-lucide="columns-2" class="w-4 h-4"></i>
           <span>Duelo Lado a Lado</span>
         </button>
+        <button onclick="toggleFullView()" title="Modo Full View (Ver Só o Texto)" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-black transition-all bg-slate-900 hover:bg-slate-800 text-white shadow-md font-sans cursor-pointer">
+          <i data-lucide="eye" class="w-4 h-4 text-amber-400"></i>
+          <span>👁️ Full View</span>
+        </button>
       </div>
 
     </div>
@@ -730,10 +734,10 @@
 
   <!-- MODAL DE CENTRAL DE FONTES & BANCO DE LINKS INTERATIVO -->
   <div id="modal-database" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-md hidden flex items-center justify-center p-3 md:p-6">
-    <div class="bg-white dark:bg-slate-900 border-2 border-amber-400 dark:border-amber-700/60 rounded-3xl max-w-6xl w-full max-h-[94vh] flex flex-col shadow-2xl overflow-hidden text-slate-900 dark:text-slate-100">
+    <div id="database-modal-container" class="bg-white dark:bg-slate-900 border-2 border-amber-400 dark:border-amber-700/60 rounded-3xl max-w-6xl w-full max-h-[94vh] flex flex-col shadow-2xl overflow-hidden text-slate-900 dark:text-slate-100 transition-all duration-300">
       
       <!-- MODAL HEADER -->
-      <div class="p-5 border-b border-amber-200 dark:border-slate-800 flex items-center justify-between bg-amber-100/80 dark:bg-slate-800/80">
+      <div id="database-modal-header" class="p-5 border-b border-amber-200 dark:border-slate-800 flex items-center justify-between bg-amber-100/80 dark:bg-slate-800/80">
         <div class="flex items-center gap-3">
           <div class="w-11 h-11 rounded-2xl bg-amber-600 text-white flex items-center justify-center font-bold shadow-md shrink-0">
             <i data-lucide="database" class="w-6 h-6"></i>
@@ -743,13 +747,19 @@
             <p class="text-xs text-amber-950 dark:text-amber-300 font-extrabold">Mapa interativo de acórdãos STF, relatórios OFAC/EUA, entrevistas no YouTube e matérias primárias</p>
           </div>
         </div>
-        <button onclick="closeDatabaseModal()" class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl transition text-slate-700 dark:text-slate-300 cursor-pointer">
-          <i data-lucide="x" class="w-6 h-6"></i>
-        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="toggleCentralFullView()" title="Full View: Ocultar Filtros e Ver Só o Conteúdo" class="flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer">
+            <i data-lucide="eye" class="w-4 h-4"></i>
+            <span>👁️ Full View Conteúdo</span>
+          </button>
+          <button onclick="closeDatabaseModal()" class="p-2 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-xl transition text-slate-700 dark:text-slate-300 cursor-pointer">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
       </div>
 
       <!-- FILTER TABS & SEARCH BAR -->
-      <div class="p-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex flex-col gap-3">
+      <div id="database-modal-filters" class="p-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 flex flex-col gap-3">
         <!-- Live Search -->
         <div class="relative w-full">
           <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-slate-400"></i>
@@ -1046,8 +1056,82 @@
     </div>
   </div>
 
+  <!-- FLOATING WIDGET FOR MAIN READER FULL VIEW -->
+  <div id="floating-fullview-widget" class="fixed top-4 right-4 z-50 hidden flex items-center gap-2.5 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-2 rounded-full shadow-2xl">
+    <!-- ICON 1: ESTÚDIO EDITORIAL -->
+    <button onclick="openAiAuditModal()" title="Abrir Estúdio Editorial" class="w-11 h-11 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-purple-300 cursor-pointer">
+      <i data-lucide="sparkles" class="w-5 h-5 text-amber-300"></i>
+    </button>
+    <!-- ICON 2: OLHO (VOLTAR MENU / EXIBIR TUDO) -->
+    <button onclick="toggleFullView()" title="Voltar Menu / Sair do Full View" class="w-11 h-11 rounded-full bg-amber-600 hover:bg-amber-500 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-amber-300 cursor-pointer">
+      <i data-lucide="eye" class="w-5.5 h-5.5"></i>
+    </button>
+  </div>
+
+  <!-- FLOATING WIDGET FOR CENTRAL DE CONTEÚDO FULL VIEW -->
+  <div id="floating-central-fullview-widget" class="fixed top-4 right-4 z-50 hidden flex items-center gap-2.5 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-2 rounded-full shadow-2xl">
+    <!-- ICON 1: ESTÚDIO EDITORIAL -->
+    <button onclick="openAiAuditModal()" title="Abrir Estúdio Editorial" class="w-11 h-11 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-purple-300 cursor-pointer">
+      <i data-lucide="sparkles" class="w-5 h-5 text-amber-300"></i>
+    </button>
+    <!-- ICON 2: OLHO (VOLTAR MENU / RESTAURAR UI DA CENTRAL) -->
+    <button onclick="toggleCentralFullView()" title="Voltar Menu / Restaurar Central de Conteúdo" class="w-11 h-11 rounded-full bg-amber-600 hover:bg-amber-500 hover:scale-110 text-white flex items-center justify-center transition shadow-md border border-amber-300 cursor-pointer">
+      <i data-lucide="eye" class="w-5.5 h-5.5"></i>
+    </button>
+  </div>
+
   <!-- DATA & JAVASCRIPT LOGIC -->
   <script>
+    let isFullViewActive = false;
+    let isCentralFullViewActive = false;
+
+    function toggleFullView() {
+      isFullViewActive = !isFullViewActive;
+      const appHeader = document.getElementById('app-header');
+      const appSubheader = document.getElementById('app-subheader');
+      const metricsBanner = document.getElementById('version-metrics-banner');
+      const floatingWidget = document.getElementById('floating-fullview-widget');
+
+      if (isFullViewActive) {
+        if (appHeader) appHeader.classList.add('hidden');
+        if (appSubheader) appSubheader.classList.add('hidden');
+        if (metricsBanner) metricsBanner.classList.add('hidden');
+        if (floatingWidget) floatingWidget.classList.remove('hidden');
+      } else {
+        if (appHeader) appHeader.classList.remove('hidden');
+        if (appSubheader) appSubheader.classList.remove('hidden');
+        if (metricsBanner) metricsBanner.classList.remove('hidden');
+        if (floatingWidget) floatingWidget.classList.add('hidden');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function toggleCentralFullView() {
+      isCentralFullViewActive = !isCentralFullViewActive;
+      const modalHeader = document.getElementById('database-modal-header');
+      const modalFilters = document.getElementById('database-modal-filters');
+      const modalContainer = document.getElementById('database-modal-container');
+      const floatingCentralWidget = document.getElementById('floating-central-fullview-widget');
+
+      if (isCentralFullViewActive) {
+        if (modalHeader) modalHeader.classList.add('hidden');
+        if (modalFilters) modalFilters.classList.add('hidden');
+        if (modalContainer) {
+          modalContainer.classList.remove('max-w-6xl', 'max-h-[94vh]', 'rounded-3xl');
+          modalContainer.classList.add('w-full', 'h-full', 'max-w-none', 'max-h-none', 'rounded-none', 'p-0');
+        }
+        if (floatingCentralWidget) floatingCentralWidget.classList.remove('hidden');
+      } else {
+        if (modalHeader) modalHeader.classList.remove('hidden');
+        if (modalFilters) modalFilters.classList.remove('hidden');
+        if (modalContainer) {
+          modalContainer.classList.add('max-w-6xl', 'max-h-[94vh]', 'rounded-3xl');
+          modalContainer.classList.remove('w-full', 'h-full', 'max-w-none', 'max-h-none', 'rounded-none', 'p-0');
+        }
+        if (floatingCentralWidget) floatingCentralWidget.classList.add('hidden');
+      }
+      if (window.lucide) lucide.createIcons();
+    }
     // Embedded Volume Datasets
     const bookVol1V7 = {
   "00_frontmatter": {
