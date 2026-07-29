@@ -840,7 +840,7 @@ html_template = """<!DOCTYPE html>
           </div>
 
           <!-- RENDERED FULL CHAPTER IN BEAUTIFUL BOOK TYPOGRAPHY (NO MAXIMUM WIDTH CONSTRAINTS, BIGGER FONTS) -->
-          <div class="bg-[#faf8f4] border border-amber-200/80 rounded-2xl p-6 md:p-10 space-y-6 w-full shadow-inner">
+          <div class="bg-white border-2 border-amber-300 rounded-2xl p-6 md:p-10 space-y-6 w-full shadow-md">
             <div class="flex items-center justify-between border-b border-amber-200 pb-3">
               <span class="text-xs font-mono font-bold text-amber-900 uppercase tracking-wider flex items-center gap-2">
                 <i data-lucide="eye" class="w-4 h-4"></i> Leitura em Tempo Real do Capítulo Reescrito:
@@ -861,7 +861,7 @@ html_template = """<!DOCTYPE html>
             </summary>
             <div class="space-y-3 pt-3">
               <p class="text-xs text-slate-700 font-sans font-bold">Altere o texto abaixo manualmente e clique no botão verde para aplicar e salvar o ajuste no capítulo:</p>
-              <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea()" class="w-full bg-slate-50 border-2 border-slate-300 rounded-xl p-4 text-base font-mono text-slate-900 focus:outline-none focus:border-purple-600 focus:bg-white leading-relaxed shadow-inner" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
+              <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea()" class="w-full bg-white border-2 border-purple-400 rounded-xl p-4 text-base font-mono text-slate-950 focus:outline-none focus:border-purple-600 leading-relaxed shadow-sm" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
               <button onclick="saveManualTextareaEdits()" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>💾 Salvar alteração manual no capítulo</span>
@@ -3138,6 +3138,7 @@ html_template = """<!DOCTYPE html>
         ch.versionTag = `Kimi Canônica (${now})`;
         
         saveCustomChapters();
+        saveChapterPersistentState(currentChapterKey, finalTxt, "Canônica");
         renderSingleView();
         updateRenderedFullChapterFromTextarea();
         alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
@@ -3605,13 +3606,17 @@ html_template = """<!DOCTYPE html>
     }
 
     async function callRealLlmApi(engineKey, instruction, originalText, consultMemory=false) {
+      const getKey = (storageKey, defaultKey) => {
+        const val = localStorage.getItem(storageKey);
+        return (val && val.trim().length > 0) ? val.trim() : defaultKey;
+      };
       const keys = {
-        gemini: localStorage.getItem('miguel_key_gemini') || DEFAULT_API_KEYS.gemini,
-        gpt56: localStorage.getItem('miguel_key_openai') || DEFAULT_API_KEYS.gpt56,
-        opus5: localStorage.getItem('miguel_key_anthropic') || DEFAULT_API_KEYS.opus5,
-        deepseek: localStorage.getItem('miguel_key_deepseek') || DEFAULT_API_KEYS.deepseek,
-        kimi35: localStorage.getItem('miguel_key_kimi') || DEFAULT_API_KEYS.kimi35,
-        glm52: localStorage.getItem('miguel_key_glm') || DEFAULT_API_KEYS.glm52
+        gemini: getKey('miguel_key_gemini', DEFAULT_API_KEYS.gemini),
+        gpt56: getKey('miguel_key_openai', DEFAULT_API_KEYS.gpt56),
+        opus5: getKey('miguel_key_anthropic', DEFAULT_API_KEYS.opus5),
+        deepseek: getKey('miguel_key_deepseek', DEFAULT_API_KEYS.deepseek),
+        kimi35: getKey('miguel_key_kimi', DEFAULT_API_KEYS.kimi35),
+        glm52: getKey('miguel_key_glm', DEFAULT_API_KEYS.glm52)
       };
 
       const systemPrompt = `Você é um editor literário sênior e historiador especialista na obra 'Filhos da Impunidade'. 
@@ -3940,6 +3945,7 @@ Regras:
           dataset[currentChapterKey] = finalContent;
         }
       }
+      saveChapterPersistentState(currentChapterKey, finalContent, lastGeneratedRevision.versionTag);
 
       // Update UI with generated content
       const editableRes = document.getElementById('deepseek-editable-result');
@@ -4040,6 +4046,7 @@ Regras:
           dataset[currentChapterKey] = newText;
         }
       }
+      saveChapterPersistentState(currentChapterKey, newText, "Manual");
 
       // Update rendered view
       updateRenderedFullChapterFromTextarea();
@@ -4089,6 +4096,7 @@ Regras:
           dataset[currentChapterKey] = lastGeneratedRevision.content;
         }
       }
+      saveChapterPersistentState(currentChapterKey, lastGeneratedRevision.content, lastGeneratedRevision.versionTag);
 
       switchVersion(rKey);
       alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
@@ -4102,7 +4110,41 @@ Regras:
       document.getElementById('modal-git-sync').classList.add('hidden');
     }
 
+    
+    function saveChapterPersistentState(chapKey, content, versionTag) {
+      if (!chapKey || !content) return;
+      try {
+        localStorage.setItem('miguel_book_persistent_content_' + currentVolume + '_' + chapKey, content);
+        if (versionTag) {
+          localStorage.setItem('miguel_book_persistent_tag_' + currentVolume + '_' + chapKey, versionTag);
+        }
+      } catch(e) {
+        console.error("Save persistent state error:", e);
+      }
+    }
+
+    function loadChapterPersistentState() {
+      try {
+        const dataset = getCurrentVolumeDataset();
+        if (!dataset) return;
+        Object.keys(dataset).forEach(chapKey => {
+          const savedContent = localStorage.getItem('miguel_book_persistent_content_' + currentVolume + '_' + chapKey);
+          const savedTag = localStorage.getItem('miguel_book_persistent_tag_' + currentVolume + '_' + chapKey);
+          if (savedContent && savedContent.trim().length > 0) {
+            if (typeof dataset[chapKey] === 'object') {
+              dataset[chapKey].mainContent = savedContent;
+              dataset[chapKey].content = savedContent;
+              if (savedTag) dataset[chapKey].versionTag = savedTag;
+            }
+          }
+        });
+      } catch(e) {
+        console.error("Load persistent state error:", e);
+      }
+    }
+
     async function syncWithGitHubRepository() {
+
       try {
         const resRev = await fetch('./revisions.json?t=' + Date.now());
         if (resRev.ok) {
@@ -4129,6 +4171,7 @@ Regras:
         console.log('Offline: mantendo regras do localStorage.');
       }
 
+      loadChapterPersistentState();
       selectChapter(currentChapterKey);
     }
 
