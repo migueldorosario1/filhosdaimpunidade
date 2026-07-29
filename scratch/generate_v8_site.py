@@ -2678,7 +2678,7 @@ html_template = """<!DOCTYPE html>
     function openTranscriptById(itemId) {
       const item = sourcesDatabase.find(s => s.id === itemId);
       if (!item) return;
-      const formattedContent = (item.transcript || '').split('\n').join('<br>');
+      const formattedContent = (item.transcript || '').split('\\n').join('<br>');
       openTranscriptModal(item.title, `${item.source} · ${item.date}`, formattedContent, item.link);
     }
 
@@ -3325,8 +3325,8 @@ html_template = """<!DOCTYPE html>
       const summaryRule = summarizeInstructionToStyleRule(instruction);
 
       // Clean footer signature line (no AI metalanguage in body)
-      const cleanFooter = `\n\n---\n*Atualizado em ${dateStr} às ${timeStr} por ${currentEngineName}*\n`;
-      const cleanBody = rewrittenText.replace(/[\r\n]*---\r?\n\*Atualizado em[\s\S]*$/, '');
+      const cleanFooter = `\\n\\n---\\n*Atualizado em \${dateStr} às \${timeStr} por \${currentEngineName}*\\n`;
+      const cleanBody = rewrittenText.replace(/[\\\\r\\\\n]*---\\\\r?\\\\n\\\\*Atualizado em[\\\\s\\\\S]*$/, '');
       const finalContent = cleanBody + cleanFooter;
 
       const engineSlug = getCleanEngineSlug(currentSelectedEngine);
