@@ -723,12 +723,18 @@
           </div>
 
           <!-- COLLAPSIBLE EDITABLE RAW TEXTAREA FOR MANUAL TWEAKS BEFORE SAVING -->
-          <details class="bg-slate-50 border border-slate-300 rounded-2xl p-4 w-full">
-            <summary class="text-xs font-mono font-bold text-purple-900 uppercase tracking-wider cursor-pointer flex items-center gap-2">
-              <i data-lucide="edit-3" class="w-4 h-4"></i>
-              <span>📝 Editar Texto Bruto / Código Fonte do Capítulo (Ajuste Manual Opcional)</span>
+          <details class="bg-white border-2 border-purple-300 rounded-2xl p-5 w-full space-y-3 shadow-sm">
+            <summary class="text-xs font-mono font-bold text-purple-950 uppercase tracking-wider cursor-pointer flex items-center gap-2 select-none">
+              <i data-lucide="edit-3" class="w-4 h-4 text-purple-700"></i>
+              <span>📝 Editar texto bruto do capítulo (Ajuste manual opcional)</span>
             </summary>
-              <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea()" class="w-full bg-white border border-slate-300 rounded-xl p-4 text-base font-mono text-slate-900 focus:outline-none focus:border-purple-600 leading-relaxed shadow-inner" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
+            <div class="space-y-3 pt-3">
+              <p class="text-xs text-slate-700 font-sans font-bold">Altere o texto abaixo manualmente e clique no botão verde para aplicar e salvar o ajuste no capítulo:</p>
+              <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea()" class="w-full bg-slate-50 border-2 border-slate-300 rounded-xl p-4 text-base font-mono text-slate-900 focus:outline-none focus:border-purple-600 focus:bg-white leading-relaxed shadow-inner" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
+              <button onclick="saveManualTextareaEdits()" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
+                <i data-lucide="save" class="w-4 h-4"></i>
+                <span>💾 Salvar alteração manual no capítulo</span>
+              </button>
             </div>
           </details>
         </div>
@@ -3865,21 +3871,30 @@
       }
 
       return `
-        <div class="space-y-3 font-sans text-sm text-slate-900">
-          <div class="flex items-center justify-between text-slate-900 font-bold text-sm border-b border-amber-300 pb-2">
+        <div class="space-y-4 font-sans text-base text-slate-900">
+          <div class="flex items-center justify-between text-slate-900 font-extrabold text-base border-b-2 border-amber-400 pb-2.5">
             <span class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-700"></i>
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-700"></i>
               <span class="text-slate-900 font-extrabold">Relatório objetivo de alteração (${engineName}):</span>
             </span>
           </div>
-          <div class="bg-amber-50/80 p-4 rounded-2xl border border-amber-300 space-y-2.5 text-sm text-slate-900 leading-relaxed shadow-sm">
-            <div><strong class="text-purple-950 font-extrabold">1. Entendimento do pedido:</strong> "${instruction}"</div>
-            <div><strong class="text-emerald-950 font-extrabold">2. Ação objetiva executada:</strong> ${actionDetail}</div>
-            <div><strong class="text-amber-950 font-extrabold">3. Diretriz de estilo registrada:</strong> <em>"${summaryRule}"</em></div>
+          <div class="bg-amber-50 p-5 rounded-2xl border-2 border-amber-300 space-y-3 text-base text-slate-900 leading-relaxed shadow-sm">
+            <div class="p-3 bg-purple-100/90 border border-purple-300 rounded-xl">
+              <strong class="text-purple-950 font-black block text-xs uppercase mb-1">1. Entendimento do pedido:</strong>
+              <span class="text-slate-900 font-bold text-base">"${instruction}"</span>
+            </div>
+            <div class="p-3 bg-emerald-100/90 border border-emerald-300 rounded-xl">
+              <strong class="text-emerald-950 font-black block text-xs uppercase mb-1">2. Ação objetiva executada:</strong>
+              <span class="text-slate-900 font-bold text-base">${actionDetail}</span>
+            </div>
+            <div class="p-3 bg-amber-100/90 border border-amber-300 rounded-xl">
+              <strong class="text-amber-950 font-black block text-xs uppercase mb-1">3. Diretriz de estilo registrada:</strong>
+              <span class="text-slate-900 font-bold text-base">"${summaryRule}"</span>
+            </div>
           </div>
           <div class="pt-1">
-            <button onclick="scrollToAndHighlightRewrittenText()" class="w-full py-2.5 px-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow transition cursor-pointer">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-200"></i>
+            <button onclick="scrollToAndHighlightRewrittenText()" class="w-full py-3 px-4 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-sm font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition cursor-pointer">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-200"></i>
               <span>✅ Alteração aplicada no texto (Re-ler agora)</span>
             </button>
           </div>
@@ -3958,7 +3973,7 @@ ${originalText}`;
               'Authorization': `Bearer ${keys.glm52}`
             },
             body: JSON.stringify({
-              model: 'glm-4',
+              model: 'glm-4-flash',
               messages: [
                 { role: 'system', content: systemPrompt },
                 { role: 'user', content: prompt }
@@ -4011,7 +4026,7 @@ ${originalText}`;
             return data.choices[0].message.content;
           }
         } else if (engineKey === 'gemini' && keys.gemini) {
-          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${keys.gemini}`, {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${keys.gemini}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -4032,7 +4047,7 @@ ${prompt}` }] }]
               'Authorization': `Bearer ${keys.gpt56}`
             },
             body: JSON.stringify({
-              model: 'gpt-4o',
+              model: 'gpt-4o-mini',
               messages: [
                 { role: 'system', content: systemPrompt },
                 { role: 'user', content: prompt }
@@ -4066,8 +4081,30 @@ ${prompt}` }] }]
           }
         }
       } catch(err) {
-        console.warn("Real API call failed or missing API key, falling back to local surgical engine:", err);
+        console.warn("Primary LLM API call failed, attempting Gemini 2.5 Flash neural failover:", err);
       }
+
+      // High-Reliability Neural Failover to Gemini 2.5 Flash if primary engine call failed or hit CORS
+      if (keys.gemini) {
+        try {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${keys.gemini}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: `${systemPrompt}
+
+${prompt}` }] }]
+            })
+          });
+          const data = await res.json();
+          if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+            return data.candidates[0].content.parts[0].text;
+          }
+        } catch(errGemini) {
+          console.error("Gemini failover error:", errGemini);
+        }
+      }
+
       return null;
     }
 
@@ -4184,8 +4221,14 @@ ${prompt}` }] }]
       const summaryRule = summarizeInstructionToStyleRule(instruction);
 
       // Clean footer signature line (no AI metalanguage in body)
-      const cleanFooter = `\n\n---\n*Atualizado em \${dateStr} às \${timeStr} por \${currentEngineName}*\n`;
-      const cleanBody = rewrittenText.replace(/[\\r\\n]*---\\r?\\n\\*Atualizado em[\\s\\S]*$/, '');
+      const cleanFooter = '
+
+---
+*Atualizado em ' + dateStr + ' às ' + timeStr + ' por ' + currentEngineName + '*
+';
+      const cleanBody = rewrittenText.replace(/[
+]*---[
+]*\*Atualizado em[\s\S]*$/, '').trim();
       const finalContent = cleanBody + cleanFooter;
 
       const engineSlug = getCleanEngineSlug(currentSelectedEngine);
@@ -4200,6 +4243,16 @@ ${prompt}` }] }]
         rawInstruction: instruction,
         summarizedRule: summaryRule
       };
+
+      // Update active volume dataset content in memory immediately
+      const dataset = getCurrentVolumeDataset();
+      if (dataset && dataset[currentChapterKey]) {
+        if (typeof dataset[currentChapterKey] === 'object') {
+          dataset[currentChapterKey].content = finalContent;
+        } else {
+          dataset[currentChapterKey] = finalContent;
+        }
+      }
 
       // Update UI with generated content
       const editableRes = document.getElementById('deepseek-editable-result');
@@ -4266,13 +4319,68 @@ ${prompt}` }] }]
       }
     }
 
-    function saveDeepSeekRevision() {
-      if (!lastGeneratedRevision) return;
+    function saveManualTextareaEdits() {
+      const textarea = document.getElementById('deepseek-editable-result');
+      if (!textarea) return;
+      const newText = textarea.value.trim();
+      if (!newText) {
+        alert("O texto do capítulo está vazio.");
+        return;
+      }
 
-      // Read edited content from editable textarea if available
+      const nowISO = new Date().toISOString().slice(0, 10);
+      if (!lastGeneratedRevision) {
+        lastGeneratedRevision = {
+          title: `Revisão Manual`,
+          author: `Miguel do Rosário`,
+          versionTag: `R-Manual (${nowISO})`,
+          badge: `Ajustado manualmente em ${nowISO}`,
+          content: newText,
+          engineSlug: 'manual',
+          rawInstruction: 'Ajuste manual direto no texto bruto',
+          summarizedRule: 'Edição manual do editor'
+        };
+      } else {
+        lastGeneratedRevision.content = newText;
+      }
+
+      // Update dataset in memory
+      const dataset = getCurrentVolumeDataset();
+      if (dataset && dataset[currentChapterKey]) {
+        if (typeof dataset[currentChapterKey] === 'object') {
+          dataset[currentChapterKey].content = newText;
+        } else {
+          dataset[currentChapterKey] = newText;
+        }
+      }
+
+      // Update rendered view
+      updateRenderedFullChapterFromTextarea();
+
+      // Trigger saveDeepSeekRevision
+      saveDeepSeekRevision();
+    }
+
+    function saveDeepSeekRevision() {
       const editableRes = document.getElementById('deepseek-editable-result');
-      if (editableRes && editableRes.value.trim().length > 0) {
-        lastGeneratedRevision.content = editableRes.value.trim();
+      const currentText = editableRes ? editableRes.value.trim() : '';
+
+      if (!lastGeneratedRevision) {
+        const activeData = getActiveVersionData();
+        const contentToSave = currentText || activeData.content || '';
+        const nowISO = new Date().toISOString().slice(0, 10);
+        lastGeneratedRevision = {
+          title: `Revisão Editorial`,
+          author: `Miguel do Rosário`,
+          versionTag: `R-Edit (${nowISO})`,
+          badge: `Gravado em ${nowISO}`,
+          content: contentToSave,
+          engineSlug: getCleanEngineSlug(currentSelectedEngine),
+          rawInstruction: 'Gravação manual de revisão',
+          summarizedRule: 'Revisão salva pelo editor'
+        };
+      } else if (currentText.length > 0) {
+        lastGeneratedRevision.content = currentText;
       }
 
       const dataset = getCurrentVolumeDataset();
@@ -4287,9 +4395,16 @@ ${prompt}` }] }]
       revs[rKey] = lastGeneratedRevision;
       localStorage.setItem('miguel_book_revisions_' + currentChapterKey, JSON.stringify(revs));
 
-      // Do NOT close modal, keep user inside editing window for further changes
+      if (dataset && dataset[currentChapterKey]) {
+        if (typeof dataset[currentChapterKey] === 'object') {
+          dataset[currentChapterKey].content = lastGeneratedRevision.content;
+        } else {
+          dataset[currentChapterKey] = lastGeneratedRevision.content;
+        }
+      }
+
       switchVersion(rKey);
-      alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! Você continua nesta janela para realizar mais alterações se desejar.`);
+      alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
     }
 
     function openGitSyncModal() {
