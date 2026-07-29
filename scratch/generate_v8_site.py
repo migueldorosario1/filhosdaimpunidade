@@ -1815,6 +1815,7 @@ html_template = """<!DOCTYPE html>
       renderMetrics();
       renderSingleView();
       window.scrollTo(0, 0);
+      updateUrlHashRoute();
     }
 
     function triggerAiAuditWithTokenWarning() {
@@ -3055,6 +3056,62 @@ html_template = """<!DOCTYPE html>
       if (window.lucide) lucide.createIcons();
     }
 
+        function updateUrlHashRoute() {
+      try {
+        const studioModal = document.getElementById('modal-ai-audit');
+        const isStudioOpen = studioModal && !studioModal.classList.contains('hidden');
+        const routePrefix = isStudioOpen ? '#estudio' : '#leitor';
+        const newHash = routePrefix + '?vol=' + currentVolume + '&cap=' + currentChapterKey;
+        if (window.location.hash !== newHash) {
+          history.replaceState(null, '', newHash);
+        }
+      } catch(e) {}
+    }
+
+    function parseUrlHashRoute() {
+      try {
+        const hash = window.location.hash || '';
+        if (!hash) return false;
+
+        const isStudio = hash.includes('estudio');
+        const matchVol = hash.match(/vol=([^&]+)/);
+        const matchCap = hash.match(/cap=([^&]+)/);
+
+        if (matchVol && matchVol[1]) {
+          currentVolume = matchVol[1];
+          const btnVol = document.getElementById('btn-vol-' + currentVolume);
+          if (btnVol) {
+            document.querySelectorAll('.vol-tab-btn').forEach(b => {
+              b.classList.remove('bg-amber-600', 'text-white');
+              b.classList.add('bg-slate-800', 'text-slate-300');
+            });
+            btnVol.classList.remove('bg-slate-800', 'text-slate-300');
+            btnVol.classList.add('bg-amber-600', 'text-white');
+          }
+        }
+
+        if (matchCap && matchCap[1]) {
+          const dataset = getCurrentVolumeDataset();
+          if (dataset && dataset[matchCap[1]]) {
+            currentChapterKey = matchCap[1];
+          }
+        }
+
+        selectChapter(currentChapterKey);
+
+        if (isStudio) {
+          openAiAuditModal();
+          return true;
+        } else {
+          closeAiAuditModal(true);
+        }
+      } catch(e) {
+        console.error("Hash route error:", e);
+      }
+      return false;
+    }
+
+
     function openAiAuditModal() {
       const appHeader = document.getElementById('app-header');
       const appSubheader = document.getElementById('app-subheader');
@@ -3066,6 +3123,7 @@ html_template = """<!DOCTYPE html>
       const studioModal = document.getElementById('modal-ai-audit');
       if (studioModal) studioModal.classList.remove('hidden');
       window.scrollTo(0, 0);
+      updateUrlHashRoute();
 
       const dataset = getCurrentVolumeDataset();
       const ch = currentChapterKey === 'full_book' ? getCompiledFullBookData() : dataset[currentChapterKey];
@@ -3112,6 +3170,7 @@ html_template = """<!DOCTYPE html>
       if (appSubheader) appSubheader.classList.remove('hidden');
       if (appMain) appMain.classList.remove('hidden');
       window.scrollTo(0, 0);
+      updateUrlHashRoute();
     }
 
     function updateRenderedFullChapterFromTextarea() {
@@ -4124,7 +4183,11 @@ Regras:
       }
 
       loadChapterPersistentState();
-      selectChapter(currentChapterKey);
+      const handled = parseUrlHashRoute();
+      if (!handled) {
+        selectChapter(currentChapterKey);
+      }
+      window.addEventListener('hashchange', parseUrlHashRoute);
     }
 
     function forceFetchGitHubSync() {
