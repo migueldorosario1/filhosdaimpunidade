@@ -130,6 +130,21 @@ exp_antigravity = read_file_if_exists('Outros/novo livro/Kimi K3/cap01_experimen
 exp_claude = read_file_if_exists('Outros/novo livro/Kimi K3/cap01_experimental_claude.md')
 exp_gpt = read_file_if_exists('Outros/novo livro/Kimi K3/cap01_experimental_gpt.md')
 
+# QA-FEATURE (Kimi 3, 2026-08-04): banco de fontes MODULAR para injeção seletiva
+# no prompt (pedido do Miguel: partes separadas com "marcar todos" ou individuais).
+# 4 partes: transcrições de vídeo / reportagens / histórico / resumo.
+catalogo_transcricoes_content = read_file_if_exists('Outros/novo livro/Kimi K3/CATALOGO_TRANSCRICOES.md')
+onda2_fichas_content = read_file_if_exists('Outros/novo livro/Kimi K3/ONDA2_FICHAS.md')
+arquitetura_v3_content = read_file_if_exists('Outros/novo livro/Kimi K3/ARQUITETURA_V3.md')
+
+fontes_transcricoes_content = ""
+if catalogo_transcricoes_content:
+    fontes_transcricoes_content += catalogo_transcricoes_content
+if mapa_entrevistas_content:
+    fontes_transcricoes_content += "\n\n---\n\n" + mapa_entrevistas_content
+fontes_historico_content = onda2_fichas_content
+fontes_resumo_content = arquitetura_v3_content
+
 html_template = """<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -778,10 +793,35 @@ html_template = """<!DOCTYPE html>
             </label>
 
             <label for="chk-consult-canonical-memory" class="flex items-center gap-2.5 text-xs text-amber-950 font-bold cursor-pointer bg-amber-100/80 px-3 py-2 rounded-lg border border-amber-300 hover:border-amber-400">
-              <input type="checkbox" id="chk-consult-canonical-memory" class="w-4 h-4 rounded border-amber-500 text-amber-700 focus:ring-amber-600 bg-white">
+              <input type="checkbox" id="chk-consult-canonical-memory" onchange="toggleFontesSubpanel()" class="w-4 h-4 rounded border-amber-500 text-amber-700 focus:ring-amber-600 bg-white">
               <i data-lucide="database" class="w-4 h-4 text-amber-700"></i>
               <span>🧠 Consultar memória e banco de fontes canônicas</span>
             </label>
+
+            <!-- QA-FEATURE (Kimi 3, 2026-08-04): BANCO DE FONTES MODULAR — o editor escolhe
+                 as partes que entram no prompt: "marcar todos" ou individuais (pedido do Miguel). -->
+            <div id="fontes-subpanel" class="hidden flex flex-col gap-2 bg-amber-50 p-3 rounded-xl border border-amber-200 ml-2 border-l-4 border-l-amber-400">
+              <label for="chk-fontes-todas" class="flex items-center gap-2.5 text-xs text-amber-950 font-extrabold cursor-pointer">
+                <input type="checkbox" id="chk-fontes-todas" checked onchange="fontesToggleAll(this)" class="w-4 h-4 rounded border-amber-500 text-amber-700 bg-white">
+                <span>☑️ Marcar todos</span>
+              </label>
+              <label for="chk-fonte-transcricoes" class="flex items-center gap-2.5 text-xs text-slate-800 font-bold cursor-pointer">
+                <input type="checkbox" id="chk-fonte-transcricoes" checked onchange="fontesSyncFromParts()" class="w-4 h-4 rounded border-amber-500 text-amber-700 bg-white chk-fonte-parte">
+                <span>🎬 Transcrições de vídeo <span class="font-normal text-slate-500">(catálogo + mapa de entrevistas)</span></span>
+              </label>
+              <label for="chk-fonte-reportagens" class="flex items-center gap-2.5 text-xs text-slate-800 font-bold cursor-pointer">
+                <input type="checkbox" id="chk-fonte-reportagens" checked onchange="fontesSyncFromParts()" class="w-4 h-4 rounded border-amber-500 text-amber-700 bg-white chk-fonte-parte">
+                <span>📰 Reportagens <span class="font-normal text-slate-500">(banco de links canônico + judiciário)</span></span>
+              </label>
+              <label for="chk-fonte-historico" class="flex items-center gap-2.5 text-xs text-slate-800 font-bold cursor-pointer">
+                <input type="checkbox" id="chk-fonte-historico" checked onchange="fontesSyncFromParts()" class="w-4 h-4 rounded border-amber-500 text-amber-700 bg-white chk-fonte-parte">
+                <span>🏛️ Histórico <span class="font-normal text-slate-500">(fichas de pesquisa — provas e trechos citáveis)</span></span>
+              </label>
+              <label for="chk-fonte-resumo" class="flex items-center gap-2.5 text-xs text-slate-800 font-bold cursor-pointer">
+                <input type="checkbox" id="chk-fonte-resumo" checked onchange="fontesSyncFromParts()" class="w-4 h-4 rounded border-amber-500 text-amber-700 bg-white chk-fonte-parte">
+                <span>📋 Resumo <span class="font-normal text-slate-500">(arquitetura do livro — perguntas e molduras)</span></span>
+              </label>
+            </div>
           </div>
 
           <button onclick="runDeepSeekV4Instruction()" class="w-full py-4 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-800 hover:to-indigo-800 text-white rounded-xl text-sm font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer">
@@ -1385,6 +1425,9 @@ html_template = """<!DOCTYPE html>
 
     const bancoLinksMarkdown = """ + json.dumps(banco_links_content, ensure_ascii=False) + """;
     const manualEstiloMarkdown = """ + json.dumps(manual_estilo_content, ensure_ascii=False) + """;
+    const fonteTranscricoes = """ + json.dumps(fontes_transcricoes_content, ensure_ascii=False) + """;
+    const fonteHistorico = """ + json.dumps(fontes_historico_content, ensure_ascii=False) + """;
+    const fonteResumo = """ + json.dumps(fontes_resumo_content, ensure_ascii=False) + """;
 
     let currentVolume = 'vol1_v7'; // 'vol1_v7', 'vol2_v1'
     let currentChapterKey = '01_estarei_vingado';
@@ -3993,6 +4036,77 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       }
     }
 
+    // QA-FEATURE (Kimi 3, 2026-08-04): banco de fontes MODULAR — seleção por partes.
+    // Pedido do Miguel: "marcar todos" ou partes individuais; só o marcado entra
+    // no prompt. Seleção persistida no navegador (miguel_fontes_banco_selection).
+    const FONTES_SELECTION_KEY = 'miguel_fontes_banco_selection';
+
+    function toggleFontesSubpanel() {
+      const master = document.getElementById('chk-consult-canonical-memory');
+      const panel = document.getElementById('fontes-subpanel');
+      if (panel) panel.classList.toggle('hidden', !(master && master.checked));
+      saveFontesSelection();
+    }
+
+    function fontesToggleAll(masterAll) {
+      document.querySelectorAll('.chk-fonte-parte').forEach(cb => { cb.checked = masterAll.checked; });
+      saveFontesSelection();
+    }
+
+    function fontesSyncFromParts() {
+      const parts = Array.from(document.querySelectorAll('.chk-fonte-parte'));
+      const todas = document.getElementById('chk-fontes-todas');
+      if (todas) {
+        const checkedCount = parts.filter(cb => cb.checked).length;
+        todas.checked = checkedCount === parts.length;
+        todas.indeterminate = checkedCount > 0 && checkedCount < parts.length;
+      }
+      saveFontesSelection();
+    }
+
+    function getSelectedFontesParts() {
+      const master = document.getElementById('chk-consult-canonical-memory');
+      if (!master || !master.checked) return null;
+      const get = id => { const el = document.getElementById(id); return !!(el && el.checked); };
+      return {
+        transcricoes: get('chk-fonte-transcricoes'),
+        reportagens: get('chk-fonte-reportagens'),
+        historico: get('chk-fonte-historico'),
+        resumo: get('chk-fonte-resumo')
+      };
+    }
+
+    function saveFontesSelection() {
+      try {
+        const master = document.getElementById('chk-consult-canonical-memory');
+        const get = id => { const el = document.getElementById(id); return !!(el && el.checked); };
+        safeLocalSet(FONTES_SELECTION_KEY, JSON.stringify({
+          master: !!(master && master.checked),
+          transcricoes: get('chk-fonte-transcricoes'),
+          reportagens: get('chk-fonte-reportagens'),
+          historico: get('chk-fonte-historico'),
+          resumo: get('chk-fonte-resumo')
+        }));
+      } catch(e) {}
+    }
+
+    function initFontesSelection() {
+      try {
+        const raw = localStorage.getItem(FONTES_SELECTION_KEY);
+        if (!raw) return;
+        const state = JSON.parse(raw);
+        const set = (id, val) => { const el = document.getElementById(id); if (el && typeof val === 'boolean') el.checked = val; };
+        set('chk-consult-canonical-memory', state.master);
+        set('chk-fonte-transcricoes', state.transcricoes);
+        set('chk-fonte-reportagens', state.reportagens);
+        set('chk-fonte-historico', state.historico);
+        set('chk-fonte-resumo', state.resumo);
+        const panel = document.getElementById('fontes-subpanel');
+        if (panel) panel.classList.toggle('hidden', !state.master);
+        fontesSyncFromParts();
+      } catch(e) {}
+    }
+
     async function callRealLlmApi(engineKey, instruction, originalText, consultMemory=false) {
       const getKey = (storageKey, defaultKey) => {
         const val = localStorage.getItem(storageKey);
@@ -4018,9 +4132,24 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
         ? `\n\n=== DIRETRIZES PERSONALIZADAS DO EDITOR (PRIORIDADE ALTA — CUMPRIR SEMPRE) ===\n${customStyleRules.map((r, i) => `${i + 1}. ${r}`).join(`\n`)}\n=== FIM DAS DIRETRIZES ===`
         : '';
 
+      // QA-FEATURE (Kimi 3, 2026-08-04): banco de fontes MODULAR — só as partes
+      // marcadas pelo editor entram no prompt (transcrições/reportagens/histórico/resumo).
+      const fontesSel = consultMemory ? getSelectedFontesParts() : null;
+      let fontesBlock = '';
+      if (fontesSel) {
+        const fonteParts = [];
+        if (fontesSel.transcricoes && typeof fonteTranscricoes === 'string' && fonteTranscricoes.trim().length > 0) fonteParts.push(`--- 🎬 TRANSCRIÇÕES DE VÍDEO (catálogo + mapa de entrevistas) ---\n${fonteTranscricoes.trim()}`);
+        if (fontesSel.reportagens && typeof bancoLinksMarkdown === 'string' && bancoLinksMarkdown.trim().length > 0) fonteParts.push(`--- 📰 REPORTAGENS (banco de links canônico + judiciário) ---\n${bancoLinksMarkdown.trim()}`);
+        if (fontesSel.historico && typeof fonteHistorico === 'string' && fonteHistorico.trim().length > 0) fonteParts.push(`--- 🏛️ HISTÓRICO (fichas de pesquisa — provas e trechos citáveis) ---\n${fonteHistorico.trim()}`);
+        if (fontesSel.resumo && typeof fonteResumo === 'string' && fonteResumo.trim().length > 0) fonteParts.push(`--- 📋 RESUMO (arquitetura do livro — perguntas e molduras) ---\n${fonteResumo.trim()}`);
+        if (fonteParts.length > 0) {
+          fontesBlock = `\n\n=== BANCO DE FONTES CANÔNICAS SELECIONADO PELO EDITOR (memória factual da obra — fundamentar a reescrita NESTAS fontes; nunca inventar fato que as contradiga) ===\n${fonteParts.join(`\n\n`)}\n=== FIM DO BANCO DE FONTES ===`;
+        }
+      }
+
       const systemPrompt = `Você é um editor literário sênior e historiador especialista na obra 'Filhos da Impunidade'. 
 Sua tarefa é reescrever ou editar o texto fornecido estritamente conforme a instrução do usuário, mantendo o tom elegante, sóbrio e rigoroso do livro.
-Antes de escrever qualquer linha, leia e aplique integralmente o MANUAL DE ESTILO e as DIRETRIZES DO EDITOR abaixo — eles têm precedência sobre seus hábitos padrão de escrita.${manualEstiloBlock}${customRulesBlock}
+Antes de escrever qualquer linha, leia e aplique integralmente o MANUAL DE ESTILO e as DIRETRIZES DO EDITOR abaixo — eles têm precedência sobre seus hábitos padrão de escrita.${manualEstiloBlock}${customRulesBlock}${fontesBlock}
 Regras:
 1. Retorne APENAS o texto completo do capítulo editado/reescrito, sem explicações antes ou depois.
 2. Preserve a integridade factual dos eventos descritos.
@@ -4806,6 +4935,7 @@ Regras:
 
     // Auto-sync from GitHub repository on bootup
     document.addEventListener('DOMContentLoaded', () => {
+      initFontesSelection(); // QA-FEATURE (Kimi 3): restaura a seleção do banco de fontes modular
       syncWithGitHubRepository();
     });
   </script>
