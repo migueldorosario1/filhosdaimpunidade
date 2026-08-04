@@ -2083,6 +2083,7 @@ html_template = """<!DOCTYPE html>
       renderMetrics();
       renderSingleView();
       if (currentViewMode === 'compare') updateCompare();
+      updateUrlHashRoute(); // QA-FIX ACOPLAMENTO (Kimi 3): URL acompanha a versão vista no leitor
     }
 
     function saveRoteiroObs() {
@@ -3194,7 +3195,9 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
         const studioModal = document.getElementById('modal-ai-audit');
         const isStudioOpen = studioModal && !studioModal.classList.contains('hidden');
         const routePrefix = isStudioOpen ? '#estudio' : '#leitor';
-        const newHash = routePrefix + '?vol=' + currentVolume + '&cap=' + currentChapterKey;
+        // QA-FIX ACOPLAMENTO (Kimi 3): a versão ativa viaja na URL (&ver=) para
+        // sobreviver a F5 e deep-link, mantendo leitor e estúdio na mesma versão.
+        const newHash = routePrefix + '?vol=' + currentVolume + '&cap=' + currentChapterKey + '&ver=' + encodeURIComponent(currentVersionKey || 'oficial');
         if (window.location.hash !== newHash) {
           history.replaceState(null, '', newHash);
         }
@@ -3208,6 +3211,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
 
         const matchVol = hash.match(/vol=([^&]+)/);
         const matchCap = hash.match(/cap=([^&]+)/);
+        const matchVer = hash.match(/ver=([^&]+)/);
 
         if (matchVol && matchVol[1]) {
           currentVolume = matchVol[1];
@@ -3221,6 +3225,22 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
         }
 
         selectChapter(currentChapterKey, true);
+
+        // QA-FIX ACOPLAMENTO (Kimi 3): aplica a versão da URL DEPOIS do selectChapter
+        // (que reseta currentVersionKey), validando contra as versões existentes.
+        if (matchVer && matchVer[1]) {
+          try {
+            const requestedVer = decodeURIComponent(matchVer[1]);
+            const revsForVer = getSavedRevisions(currentChapterKey);
+            const isExpVer = currentVolume === 'vol1_v7' && currentChapterKey === '01_estarei_vingado' && !!expVersionsCap1[requestedVer];
+            if (requestedVer === 'oficial' || !!revsForVer[requestedVer] || isExpVer) {
+              currentVersionKey = requestedVer;
+              renderVersionTabs();
+              renderMetrics();
+              renderSingleView();
+            }
+          } catch(e2) {}
+        }
 
         if (isStudio) {
           openAiAuditModal();
@@ -3252,7 +3272,15 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       const activeData = currentChapterKey === 'full_book' ? { content: ch.mainContent } : getActiveVersionData();
 
       const titleElem = document.getElementById('studio-chapter-title');
-      if (titleElem) titleElem.textContent = `📖 Estúdio Editorial — ${ch.title} (${ch.versionTag || 'Canônico'})`;
+      if (titleElem) {
+        // QA-FIX ACOPLAMENTO (Kimi 3): o título reflete a VERSÃO ATIVA vista no leitor,
+        // não mais sempre a tag canônica do capítulo.
+        const isExpActive = currentVolume === 'vol1_v7' && currentChapterKey === '01_estarei_vingado' && !!expVersionsCap1[currentVersionKey];
+        const activeVersionLabel = (currentChapterKey === 'full_book' || currentVersionKey === 'oficial')
+          ? (ch.versionTag || 'Canônico')
+          : (isExpActive ? (activeData.title || activeData.versionTag) : (activeData.versionTag || activeData.title || currentVersionKey));
+        titleElem.textContent = `📖 Estúdio Editorial — ${ch.title} (${activeVersionLabel})`;
+      }
 
       renderInstructionHistory();
 
@@ -3264,16 +3292,14 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       const renderedContainer = document.getElementById('deepseek-rendered-full-chapter');
       if (renderedContainer) renderedContainer.innerHTML = marked.parse(initialContent);
 
-      // Automatically restore cached draft revision if present
+      // QA-FIX ACOPLAMENTO (Kimi 3): o Estúdio abre SEMPRE na versão que o leitor
+      // estava visualizando. O rascunho de IA em cache é restaurado apenas como
+      // contexto (lastGeneratedRevision) e NÃO sobrescreve mais a textarea nem o
+      // preview — antes ele mascarava a versão ativa com texto derivado da canônica.
       try {
         const cachedDraft = storageGetMigrated('miguel_book_draft_revision', currentChapterKey);
         if (cachedDraft) {
           lastGeneratedRevision = JSON.parse(cachedDraft);
-          document.getElementById('deepseek-output-results').classList.remove('hidden');
-          if (editableRes && lastGeneratedRevision.content) {
-            editableRes.value = lastGeneratedRevision.content;
-            if (renderedContainer) renderedContainer.innerHTML = marked.parse(lastGeneratedRevision.content);
-          }
         }
       } catch(e) {}
 
