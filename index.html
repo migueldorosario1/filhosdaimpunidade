@@ -2180,6 +2180,47 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       el.textContent = (ok ? '✅ ' : '⚠️ ') + msg;
     }
 
+    // QA-FEATURE (Kimi 3, 2026-08-04): TOAST flutuante no topo — o "sinalzinho"
+    // impossível de perder (pedido do Miguel: "entrar uma plaquinha gravado a
+    // versão nova"). Some sozinho após ~4s. Não depende de alert/confirm.
+    function showStudioToast(ok, msg) {
+      try {
+        const old = document.getElementById('studio-toast');
+        if (old) old.remove();
+        const toast = document.createElement('div');
+        toast.id = 'studio-toast';
+        toast.textContent = (ok ? '✅ ' : '⚠️ ') + msg;
+        toast.className = 'px-5 py-3 rounded-2xl shadow-2xl border-2 text-sm font-extrabold ' + (ok
+          ? 'bg-emerald-600 border-emerald-300 text-white'
+          : 'bg-rose-600 border-rose-300 text-white');
+        toast.style.cssText = 'position:fixed; top:16px; left:50%; z-index:99999; transform:translate(-50%,-140%); opacity:0; transition:transform .35s ease, opacity .35s ease; max-width:90vw; text-align:center;';
+        document.body.appendChild(toast);
+        requestAnimationFrame(() => {
+          toast.style.transform = 'translate(-50%, 0)';
+          toast.style.opacity = '1';
+        });
+        setTimeout(() => {
+          toast.style.transform = 'translate(-50%, -140%)';
+          toast.style.opacity = '0';
+          setTimeout(() => { try { toast.remove(); } catch(e) {} }, 400);
+        }, 4200);
+      } catch(e) {}
+    }
+
+    // QA-FEATURE (Kimi 3, 2026-08-04): pulso verde no título do Estúdio quando a
+    // versão muda — reforço visual de "estamos na versão nova" (pedido do Miguel).
+    function pulseStudioTitle() {
+      try {
+        const t = document.getElementById('studio-chapter-title');
+        if (!t) return;
+        t.style.transition = 'background-color .45s ease';
+        t.style.borderRadius = '0.75rem';
+        t.style.padding = '0.25rem 0.75rem';
+        t.style.backgroundColor = 'rgba(16,185,129,0.22)';
+        setTimeout(() => { t.style.backgroundColor = 'transparent'; }, 1800);
+      } catch(e) {}
+    }
+
     // QA-FEATURE (Kimi 3, 2026-08-04): título do Estúdio sempre sincronizado com a
     // versão ativa — após gravar, o número muda na hora (R24 → R25), sem F5.
     function refreshStudioTitle() {
@@ -2457,6 +2498,7 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       const canonRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
       if (!canonRes.ok) {
         flashButtonFeedback(sourceBtn, false, canonRes.reason === 'quota' ? 'Falha: armazenamento cheio' : 'Falha: gravação bloqueada');
+        showStudioToast(false, 'Falha ao definir a canônica');
         alert(storageFullHelpMessage(canonRes.reason));
         return;
       }
@@ -2464,6 +2506,7 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       renderMetrics();
       renderSingleView();
       flashButtonFeedback(sourceBtn, true, 'Canônica definida!');
+      showStudioToast(true, `"${vKey}" agora é a versão CANÔNICA!`);
       alert(`👑 A versão "${vKey}" foi definida como a VERSÃO CANÔNICA OFICIAL do capítulo! Nenhuma outra versão foi apagada.`);
     }
 
@@ -2698,6 +2741,7 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
 
       const restam = Object.keys(revs).length;
       setStudioSaveStatus(true, `Versão "${deletedTag}" apagada. Restam ${restam} ${restam === 1 ? 'revisão' : 'revisões'} neste capítulo.`);
+      showStudioToast(true, `Versão "${deletedTag}" apagada — restam ${restam}.`);
     }
 
     function saveRoteiroObs() {
@@ -3868,12 +3912,16 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
         updateRenderedFullChapterFromTextarea();
         if (canonWriteRes.ok) {
           refreshStudioTitle();
+          pulseStudioTitle();
           flashButtonFeedback(sourceBtn, true, 'Canônica atualizada!');
           setStudioSaveStatus(true, `O capítulo foi atualizado e tornado CANÔNICO (${ch.versionTag}).`);
+          showStudioToast(true, 'Versão canônica atualizada!');
+          try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch(e) {}
           alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
         } else {
           flashButtonFeedback(sourceBtn, false, 'Falha ao gravar canônica');
           setStudioSaveStatus(false, 'Falha ao gravar a canônica — aplicada apenas nesta sessão.');
+          showStudioToast(false, 'Falha ao gravar a canônica');
           alert(storageFullHelpMessage(canonWriteRes.reason) + `
 
 (A versão canônica ficou aplicada apenas nesta sessão e se perderá ao recarregar.)`);
@@ -4991,6 +5039,7 @@ Nenhuma alteração foi realizada no capítulo.`);
       if (card) card.classList.add('hidden');
       flashButtonFeedback(sourceBtn, true, `Regra #${27 + rules.length} registrada!`);
       setStudioSaveStatus(true, `Diretriz registrada como Regra #${27 + rules.length} no Manual de Estilo — já vale para todas as próximas reescritas, de qualquer IA.`);
+      showStudioToast(true, `Regra #${27 + rules.length} no Manual de Estilo!`);
       alert(`📝 Diretriz registrada com sucesso como Regra #${27 + rules.length} (${revLabel})!
 
 Ela já vale para todas as próximas reescritas, de qualquer IA.`);
@@ -5082,6 +5131,7 @@ Ela já vale para todas as próximas reescritas, de qualquer IA.`);
       if (!revSaveRes.ok) {
         flashButtonFeedback(sourceBtn, false, revSaveRes.reason === 'quota' ? 'Falha: armazenamento cheio' : 'Falha: gravação bloqueada');
         setStudioSaveStatus(false, revSaveRes.reason === 'quota' ? 'Armazenamento cheio — a revisão NÃO foi gravada. Libere espaço e tente de novo.' : 'Gravação bloqueada pelo navegador — a revisão NÃO foi gravada.');
+        showStudioToast(false, revSaveRes.reason === 'quota' ? 'Armazenamento cheio — NÃO gravou' : 'Gravação bloqueada — NÃO gravou');
         alert(storageFullHelpMessage(revSaveRes.reason));
         return;
       }
@@ -5104,8 +5154,11 @@ Ela já vale para todas as próximas reescritas, de qualquer IA.`);
 
       switchVersion(rKey);
       refreshStudioTitle(); // o número da versão muda na hora no topo do Estúdio
+      pulseStudioTitle(); // pulso verde no título: "estamos na versão nova"
       flashButtonFeedback(sourceBtn, true, `${rKey} gravada!`);
       setStudioSaveStatus(true, `Revisão ${rKey} gravada com sucesso (${engineSlug}) — o Estúdio agora está nesta versão.`);
+      showStudioToast(true, `Versão ${rKey} gravada — você está nela agora!`);
+      try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch(e) {} // "mexe um pouquinho a página"
       alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
     }
 
