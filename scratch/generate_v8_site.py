@@ -847,6 +847,11 @@ html_template = """<!DOCTYPE html>
                 <span>📋 Copiar Texto</span>
               </button>
             </div>
+
+            <!-- QA-FEATURE (Kimi 3): faixa de status persistente — o "sinalzinho" visível
+                 de que a gravação aconteceu (pedido do Miguel: não depender de alert nem
+                 de sair e voltar ao Estúdio para confirmar). -->
+            <div id="studio-save-status" class="hidden mt-3 text-xs font-bold rounded-xl px-4 py-2.5 border"></div>
           </div>
 
           <!-- RENDERED FULL CHAPTER IN BEAUTIFUL BOOK TYPOGRAPHY (NO MAXIMUM WIDTH CONSTRAINTS, BIGGER FONTS) -->
@@ -1767,6 +1772,34 @@ html_template = """<!DOCTYPE html>
         btn.innerHTML = originalHtml;
         if (window.lucide) lucide.createIcons();
       }, 2800);
+    }
+
+    // QA-FEATURE (Kimi 3, 2026-08-04): faixa de status persistente no Estúdio.
+    // Pedido do Miguel: "ele tem que dar um sinalzinho" — confirmação visível e
+    // duradoura da gravação, sem depender de alert e sem sair/voltar à página.
+    function setStudioSaveStatus(ok, msg) {
+      const el = document.getElementById('studio-save-status');
+      if (!el) return;
+      el.className = 'mt-3 text-xs font-bold rounded-xl px-4 py-2.5 border ' + (ok
+        ? 'bg-emerald-50 border-emerald-300 text-emerald-900'
+        : 'bg-rose-50 border-rose-300 text-rose-900');
+      el.textContent = (ok ? '✅ ' : '⚠️ ') + msg;
+    }
+
+    // QA-FEATURE (Kimi 3, 2026-08-04): título do Estúdio sempre sincronizado com a
+    // versão ativa — após gravar, o número muda na hora (R24 → R25), sem F5.
+    function refreshStudioTitle() {
+      const titleElem = document.getElementById('studio-chapter-title');
+      if (!titleElem) return;
+      const dataset = getCurrentVolumeDataset();
+      const ch = currentChapterKey === 'full_book' ? getCompiledFullBookData() : dataset[currentChapterKey];
+      if (!ch) return;
+      const activeData = currentChapterKey === 'full_book' ? { content: ch.mainContent } : getActiveVersionData();
+      const isExpActive = currentVolume === 'vol1_v7' && currentChapterKey === '01_estarei_vingado' && !!expVersionsCap1[currentVersionKey];
+      const activeVersionLabel = (currentChapterKey === 'full_book' || currentVersionKey === 'oficial')
+        ? (ch.versionTag || 'Canônico')
+        : (isExpActive ? (activeData.title || activeData.versionTag) : (activeData.versionTag || activeData.title || currentVersionKey));
+      titleElem.textContent = `📖 Estúdio Editorial — ${ch.title} (${activeVersionLabel})`;
     }
 
     function loadChapter(chapKey) {
@@ -3360,15 +3393,7 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       const activeData = currentChapterKey === 'full_book' ? { content: ch.mainContent } : getActiveVersionData();
 
       const titleElem = document.getElementById('studio-chapter-title');
-      if (titleElem) {
-        // QA-FIX ACOPLAMENTO (Kimi 3): o título reflete a VERSÃO ATIVA vista no leitor,
-        // não mais sempre a tag canônica do capítulo.
-        const isExpActive = currentVolume === 'vol1_v7' && currentChapterKey === '01_estarei_vingado' && !!expVersionsCap1[currentVersionKey];
-        const activeVersionLabel = (currentChapterKey === 'full_book' || currentVersionKey === 'oficial')
-          ? (ch.versionTag || 'Canônico')
-          : (isExpActive ? (activeData.title || activeData.versionTag) : (activeData.versionTag || activeData.title || currentVersionKey));
-        titleElem.textContent = `📖 Estúdio Editorial — ${ch.title} (${activeVersionLabel})`;
-      }
+      refreshStudioTitle(); // QA-FIX ACOPLAMENTO (Kimi 3): título reflete a VERSÃO ATIVA vista no leitor
 
       renderInstructionHistory();
 
@@ -3454,10 +3479,13 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
         renderSingleView();
         updateRenderedFullChapterFromTextarea();
         if (canonWriteRes.ok) {
+          refreshStudioTitle();
           flashButtonFeedback(sourceBtn, true, 'Canônica atualizada!');
+          setStudioSaveStatus(true, `O capítulo foi atualizado e tornado CANÔNICO (${ch.versionTag}).`);
           alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
         } else {
           flashButtonFeedback(sourceBtn, false, 'Falha ao gravar canônica');
+          setStudioSaveStatus(false, 'Falha ao gravar a canônica — aplicada apenas nesta sessão.');
           alert(storageFullHelpMessage(canonWriteRes.reason) + `\n\n(A versão canônica ficou aplicada apenas nesta sessão e se perderá ao recarregar.)`);
         }
       }
@@ -4460,6 +4488,7 @@ Regras:
       const revSaveRes = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
       if (!revSaveRes.ok) {
         flashButtonFeedback(sourceBtn, false, revSaveRes.reason === 'quota' ? 'Falha: armazenamento cheio' : 'Falha: gravação bloqueada');
+        setStudioSaveStatus(false, revSaveRes.reason === 'quota' ? 'Armazenamento cheio — a revisão NÃO foi gravada. Libere espaço e tente de novo.' : 'Gravação bloqueada pelo navegador — a revisão NÃO foi gravada.');
         alert(storageFullHelpMessage(revSaveRes.reason));
         return;
       }
@@ -4481,7 +4510,9 @@ Regras:
       saveChapterPersistentState(currentChapterKey, lastGeneratedRevision.content, lastGeneratedRevision.versionTag);
 
       switchVersion(rKey);
+      refreshStudioTitle(); // o número da versão muda na hora no topo do Estúdio
       flashButtonFeedback(sourceBtn, true, `${rKey} gravada!`);
+      setStudioSaveStatus(true, `Revisão ${rKey} gravada com sucesso (${engineSlug}) — o Estúdio agora está nesta versão.`);
       alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
     }
 
