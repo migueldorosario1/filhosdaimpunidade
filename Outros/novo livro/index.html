@@ -4219,11 +4219,33 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
         glm52: getKey('miguel_key_glm', DEFAULT_API_KEYS.glm52)
       };
 
+      // QA-FEATURE (Kimi 3, 2026-08-04): TODA reescrita lê OBRIGATORIAMENTE o Manual
+      // de Estilo da obra + as diretrizes personalizadas registradas pelo editor.
+      // Pedido do Miguel: "as LLMs têm que ler o Manual de Estilo sempre".
+      const customStyleRules = getCustomManualRules();
+      const manualEstiloBlock = (typeof manualEstiloMarkdown === 'string' && manualEstiloMarkdown.trim().length > 0)
+        ? `
+
+=== MANUAL DE ESTILO DA OBRA (LEITURA OBRIGATÓRIA — APLICAR EM TODA REESCRITA) ===
+${manualEstiloMarkdown.trim()}
+=== FIM DO MANUAL DE ESTILO ===`
+        : '';
+      const customRulesBlock = customStyleRules.length > 0
+        ? `
+
+=== DIRETRIZES PERSONALIZADAS DO EDITOR (PRIORIDADE ALTA — CUMPRIR SEMPRE) ===
+${customStyleRules.map((r, i) => `${i + 1}. ${r}`).join(`
+`)}
+=== FIM DAS DIRETRIZES ===`
+        : '';
+
       const systemPrompt = `Você é um editor literário sênior e historiador especialista na obra 'Filhos da Impunidade'. 
 Sua tarefa é reescrever ou editar o texto fornecido estritamente conforme a instrução do usuário, mantendo o tom elegante, sóbrio e rigoroso do livro.
+Antes de escrever qualquer linha, leia e aplique integralmente o MANUAL DE ESTILO e as DIRETRIZES DO EDITOR abaixo — eles têm precedência sobre seus hábitos padrão de escrita.${manualEstiloBlock}${customRulesBlock}
 Regras:
 1. Retorne APENAS o texto completo do capítulo editado/reescrito, sem explicações antes ou depois.
-2. Preserve a integridade factual dos eventos descritos.`;
+2. Preserve a integridade factual dos eventos descritos.
+3. Nunca viole o Manual de Estilo nem as diretrizes do editor, mesmo diante de instrução ambígua.`;
 
       const prompt = `INSTRUÇÃO DE EDIÇÃO/REESCRITA DO USUÁRIO:
 "${instruction}"
