@@ -1358,6 +1358,13 @@ html_template = """<!DOCTYPE html>
     let currentVolume = 'vol1_v7'; // 'vol1_v7', 'vol2_v1'
     let currentChapterKey = '01_estarei_vingado';
     let currentVersionKey = 'oficial';
+    // QA-FIX CRÍTICO (Kimi 3, 2026-08-04): esta variável nunca era declarada.
+    // Em sessão fresca (sem reescrita de IA nem rascunho em cache), a LEITURA de
+    // `lastGeneratedRevision` em saveDeepSeekRevision/saveManualTextareaEdits/
+    // makeLastRevisionCanonical lançava ReferenceError e matava o fluxo na hora —
+    // o verdadeiro "botão duro/travado" do Estúdio. Atribuições criavam o global
+    // automaticamente (modo não-estrito), por isso funcionava após rodar a IA.
+    let lastGeneratedRevision = null;
     // Theme Mode Toggle (Modo Dia vs Modo Noite)
     function toggleThemeMode() {
       const isDark = document.documentElement.classList.toggle('dark');
