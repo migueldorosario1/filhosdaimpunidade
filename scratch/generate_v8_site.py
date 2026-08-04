@@ -832,12 +832,12 @@ html_template = """<!DOCTYPE html>
                 <span>+ Manual</span>
               </button>
 
-              <button onclick="makeLastRevisionCanonical()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm border border-amber-600 cursor-pointer">
+              <button onclick="makeLastRevisionCanonical(this)" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm border border-amber-600 cursor-pointer">
                 <i data-lucide="crown" class="w-4 h-4 text-slate-950"></i>
                 <span>👑 Tornar Canônica</span>
               </button>
 
-              <button onclick="saveDeepSeekRevision()" class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm cursor-pointer">
+              <button onclick="saveDeepSeekRevision(this)" class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm cursor-pointer">
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>💾 Gravar Revisão R#</span>
               </button>
@@ -872,7 +872,7 @@ html_template = """<!DOCTYPE html>
             <div class="space-y-3 pt-3">
               <p class="text-xs text-slate-700 font-sans font-bold">Altere o texto abaixo manualmente e clique no botão verde para aplicar e salvar o ajuste no capítulo:</p>
               <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea()" class="w-full bg-white border-2 border-purple-400 rounded-xl p-4 text-base font-mono text-slate-950 focus:outline-none focus:border-purple-600 leading-relaxed shadow-sm" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
-              <button onclick="saveManualTextareaEdits()" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
+              <button onclick="saveManualTextareaEdits(this)" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>💾 Salvar alteração manual no capítulo</span>
               </button>
@@ -1748,6 +1748,20 @@ html_template = """<!DOCTYPE html>
         : `⚠️ O navegador BLOQUEOU a gravação local (localStorage indisponível).\n\nSolução: ative cookies/dados de sites para este endereço e tente de novo. A edição atual NÃO foi gravada.`;
     }
 
+    // QA-FIX FEEDBACK (Kimi 3, 2026-08-04): mostra o resultado da ação no PRÓPRIO
+    // botão clicado. Webviews e navegadores embutidos podem suprimir alert() —
+    // sem feedback no botão, a ação parecia "travada/dura". Funciona em qualquer
+    // ambiente (Chrome desktop, in-app browser, mobile).
+    function flashButtonFeedback(btn, ok, msg) {
+      if (!btn) return;
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span>${ok ? '✅' : '⚠️'} ${msg}</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+        if (window.lucide) lucide.createIcons();
+      }, 2800);
+    }
+
     function loadChapter(chapKey) {
       const prodContainer = document.getElementById('prod-block-container');
       if (chapKey === 'full_book') {
@@ -1992,15 +2006,17 @@ html_template = """<!DOCTYPE html>
       return storageGetMigrated('miguel_book_canonical', chapKey) || 'oficial';
     }
 
-    function setCanonicalVersion(vKey) {
+    function setCanonicalVersion(vKey, sourceBtn) {
       const canonRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
       if (!canonRes.ok) {
+        flashButtonFeedback(sourceBtn, false, canonRes.reason === 'quota' ? 'Falha: armazenamento cheio' : 'Falha: gravação bloqueada');
         alert(storageFullHelpMessage(canonRes.reason));
         return;
       }
       renderVersionTabs();
       renderMetrics();
       renderSingleView();
+      flashButtonFeedback(sourceBtn, true, 'Canônica definida!');
       alert(`👑 A versão "${vKey}" foi definida como a VERSÃO CANÔNICA OFICIAL do capítulo! Nenhuma outra versão foi apagada.`);
     }
 
@@ -2123,7 +2139,7 @@ html_template = """<!DOCTYPE html>
         canonicalBtn.className = "flex items-center gap-1.5 px-3.5 py-2 bg-amber-100 text-amber-950 border border-amber-300 dark:bg-amber-500/20 dark:text-amber-300 dark:border-amber-500/50 rounded-xl text-xs font-extrabold shadow cursor-default";
         canonicalBtn.innerHTML = `<i data-lucide="crown" class="w-4 h-4 text-amber-600 dark:text-amber-400"></i> <span>👑 Versão Canônica Atual</span>`;
       } else {
-        canonicalBtn.onclick = () => setCanonicalVersion(currentVersionKey);
+        canonicalBtn.onclick = () => setCanonicalVersion(currentVersionKey, canonicalBtn);
         canonicalBtn.className = "flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white border border-amber-500 rounded-xl text-xs font-extrabold shadow transition cursor-pointer";
         canonicalBtn.innerHTML = `<i data-lucide="crown" class="w-4 h-4 text-white"></i> <span>Tornar Canônica</span>`;
       }
@@ -3405,13 +3421,14 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
       }
     }
 
-    function makeLastRevisionCanonical() {
+    function makeLastRevisionCanonical(sourceBtn) {
       const editableRes = document.getElementById('deepseek-editable-result');
       const finalTxt = editableRes && editableRes.value.trim().length > 0
         ? editableRes.value.trim()
         : (lastGeneratedRevision ? lastGeneratedRevision.content : '');
 
       if (!finalTxt) {
+        flashButtonFeedback(sourceBtn, false, 'Gere uma reescrita primeiro');
         alert("Por favor execute primeiro uma reescrita ou dite a instrução para gerar o texto do capítulo.");
         return;
       }
@@ -3430,8 +3447,10 @@ Nota conjunta conclamando a liderança conservadora americana a condicionar qual
         renderSingleView();
         updateRenderedFullChapterFromTextarea();
         if (canonWriteRes.ok) {
+          flashButtonFeedback(sourceBtn, true, 'Canônica atualizada!');
           alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
         } else {
+          flashButtonFeedback(sourceBtn, false, 'Falha ao gravar canônica');
           alert(storageFullHelpMessage(canonWriteRes.reason) + `\n\n(A versão canônica ficou aplicada apenas nesta sessão e se perderá ao recarregar.)`);
         }
       }
@@ -4355,11 +4374,12 @@ Regras:
       }
     }
 
-    function saveManualTextareaEdits() {
+    function saveManualTextareaEdits(sourceBtn) {
       const textarea = document.getElementById('deepseek-editable-result');
       if (!textarea) return;
       const newText = textarea.value.trim();
       if (!newText) {
+        flashButtonFeedback(sourceBtn, false, 'Texto vazio');
         alert("O texto do capítulo está vazio.");
         return;
       }
@@ -4391,14 +4411,14 @@ Regras:
       }
       saveChapterPersistentState(currentChapterKey, newText, "Manual");
 
-      // Update rendered view
-      updateRenderedFullChapterFromTextarea();
+      // Update rendered view (não pode bloquear a gravação se a renderização falhar)
+      try { updateRenderedFullChapterFromTextarea(); } catch(e) { console.error('Render pós-edição falhou:', e); }
 
-      // Trigger saveDeepSeekRevision
-      saveDeepSeekRevision();
+      // Trigger saveDeepSeekRevision (repassa o botão para o feedback visual)
+      saveDeepSeekRevision(sourceBtn);
     }
 
-    function saveDeepSeekRevision() {
+    function saveDeepSeekRevision(sourceBtn) {
       const editableRes = document.getElementById('deepseek-editable-result');
       const currentText = editableRes ? editableRes.value.trim() : '';
 
@@ -4432,6 +4452,7 @@ Regras:
       revs[rKey] = lastGeneratedRevision;
       const revSaveRes = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
       if (!revSaveRes.ok) {
+        flashButtonFeedback(sourceBtn, false, revSaveRes.reason === 'quota' ? 'Falha: armazenamento cheio' : 'Falha: gravação bloqueada');
         alert(storageFullHelpMessage(revSaveRes.reason));
         return;
       }
@@ -4453,6 +4474,7 @@ Regras:
       saveChapterPersistentState(currentChapterKey, lastGeneratedRevision.content, lastGeneratedRevision.versionTag);
 
       switchVersion(rKey);
+      flashButtonFeedback(sourceBtn, true, `${rKey} gravada!`);
       alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
     }
 
@@ -4503,6 +4525,7 @@ Regras:
           }, 2000);
         }
       } else {
+        flashButtonFeedback(btn, false, 'Falhou — selecione e use Ctrl+C');
         alert(`⚠️ Não foi possível copiar automaticamente.\n\nAbra "📝 Editar texto bruto do capítulo", selecione o texto (Ctrl+A) e copie manualmente (Ctrl+C).`);
       }
     }
