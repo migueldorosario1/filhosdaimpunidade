@@ -155,3 +155,129 @@ Pedimos ao **Kimi 3** que realize uma auditoria completa nos seguintes pontos:
 ### Validação final
 - `node --check` OK (site + `api/kimi.js`) · site live com os novos marcadores · proxy: OPTIONS 204 com CORS correto, POST sem chave → 401 com mensagem clara, POST com chave → **200 com resposta do kimi-k3**.
 - 🔒 Nenhum valor de chave foi exposto neste processo (extrações mascaradas, variáveis descartadas).
+
+---
+
+## 🔧 7. KIMI 3 — SESSÃO 04/08/2026: chave Gemini + acoplamento Leitor→Estúdio
+
+**Commits:** `0c2b288e` + `e0830c45` (deploy-main → main) · **Status:** AO VIVO (md5 live ≡ local, 440.847 bytes) · Push autorizado pelo Miguel
+
+### 7.1 "Chave de API do Gemini não configurada" — não era bug
+- Causa: Fase 2 esvaziou `DEFAULT_API_KEYS` (segurança) e o navegador do Miguel nunca salvou as chaves no modal ⚙️. Fluxo de código auditado e íntegro (`saveSettingsModal` → `getKey` → botões).
+- **6/6 chaves certificadas ao vivo (GET /models, HTTP 200)** e fontes mapeadas: Gemini/OpenAI/Anthropic/DeepSeek no cofre canônico `.env.unificado`; Kimi = `kimi_paygo.env` (a `KIMI_API_KEY` do cofre está morta, 401); GLM = `chaves_riocarta.env` (`ZHIPU_API_KEY`, órfã do cofre — copiar depois).
+- Patch `0c2b288e`: erro de chave ausente agora oferece abrir ⚙️ Configurações via confirm (sem beco sem saída).
+
+### 7.2 Acoplamento Leitor→Estúdio (`e0830c45`) — 3 elos corrigidos
+1. **Rascunho de IA em cache sobrescrevia a versão vista** ao abrir o Estúdio → não sobrescreve mais (fica só como contexto interno).
+2. **Título do Estúdio sempre canônico** → agora reflete a versão ativa ("Versão 4: Antigravity").
+3. **Versão fora da URL** → hash ganha `&ver=` (F5 mantém a versão; `ver` inválido rejeitado); `switchVersion` do leitor sincroniza a URL.
+- Validação: regen limpo, espelhos md5-idênticos, `node --check` OK, simulação E2E do fluxo do Miguel 5/5.
+
+📄 Log técnico: `Cerebro/MEMORIA/memoria_qa_kimi3_estudio_acoplamento_chaves_20260804.md`
+⏳ Pendente (Miguel): salvar as 6 chaves no ⚙️ Configurações (instrução de 3 cliques entregue no chat).
+
+---
+
+## 🔧 8. KIMI 3 — SESSÃO 04/08/2026 (parte 2): botões de gravar destravados + botão Copiar Texto + chave OpenAI
+
+**Commit:** `468293e9` (deploy-main → main) · **Status:** AO VIVO (md5 live ≡ local, 446.603 bytes)
+
+### 8.1 Chaves (rodada 2)
+- OpenAI nova (`sk-proj-...`, sha8 `adb3b7a9`): **200 ✅**. Com ela, 6/6 chaves do Miguel certificadas.
+- ⚠️ Governança: chaves foram coladas em texto puro no chat — recomendada rotação; nenhum valor salvo em Cérebro/fórum (só sha8).
+
+### 8.2 Bug "botão travado" (Gravar Revisão R# + Salvar alteração manual + Tornar Canônica)
+- **Reproduzido ao vivo no navegador:** clique sem diálogo e sem mudança de estado.
+- **Causa raiz:** `localStorage.setItem` **sem proteção** na cadeia de gravação — ao lançar exceção (quota cheia / storage bloqueado), o fluxo morria em silêncio antes do feedback.
+- **Cura (`safeLocalSet`):** 6 escritas críticas protegidas (revisões, canônica, histórico, chaves do ⚙️, persistente); em erro de quota, **poda automática das chaves legadas duplicadas** da migração de volume (backup redundante; dados novos preservados) + 1 retry; **feedback garantido** (sucesso ou mensagem instrutiva — nunca mais silêncio).
+- Validação: `node --check` OK, espelhos md5-idênticos, simulação 4/4 (normal / quota com poda / quota sem saída / bloqueado).
+
+### 8.3 Feature: botão "📋 Copiar Texto"
+- Na barra de ações do Estúdio: copia o texto inteiro do capítulo (textarea → fallback renderizado; Clipboard API → fallback execCommand); feedback no próprio botão ("✅ Copiado! (N car.)"). Pedido do Miguel: colar em outra IA para pesquisa.
+
+📄 Log técnico: `Cerebro/MEMORIA/memoria_qa_kimi3_estudio_acoplamento_chaves_20260804.md` (seção 4)
+
+---
+
+## 🔧 9. KIMI 3 — SESSÃO 04/08/2026 (parte 3): CAUSA RAIZ do "botão duro" (ReferenceError) + feedback no botão
+
+**Commits:** `675808eb` + `9bf69296` (deploy-main → main) · **Status:** AO VIVO
+
+### 9.1 A causa raiz definitiva (commit 9bf69296)
+- **`lastGeneratedRevision` NUNCA foi declarado** no script (grep: 0 declarações `let/var/const`). Em modo não-estrito, ATRIBUIR criava o global (por isso os botões funcionavam DEPOIS de rodar uma reescrita de IA), mas **LER** a variável antes de qualquer atribuição lançava **ReferenceError** — matando `saveDeepSeekRevision`/`saveManualTextareaEdits`/`makeLastRevisionCanonical` na primeira linha, em qualquer navegador, em sessão fresca (sem IA rodada, sem rascunho em cache). Era o verdadeiro "botão duro/travado" do Miguel no Chrome.
+- **Prova ao vivo (IAB):** leitura da variável na página → `ReferenceError: lastGeneratedRevision is not defined`; após o fix → `=== null` ✓.
+- **Cura:** 1 linha — `let lastGeneratedRevision = null;` junto às declarações de estado.
+- Lição: a hipótese inicial (quota/storage) era secundária — a morte acontecia ANTES de qualquer escrita. As blindagens `safeLocalSet`/`flashButtonFeedback` permanecem válidas como defesa.
+
+### 9.2 Feedback no próprio botão (commit 675808eb)
+- `alert()` é suprimido em webviews (comprovado no in-app browser: alertas não aparecem). Novo helper `flashButtonFeedback(btn, ok, msg)`: todo botão de ação (Gravar R#, Salvar manual, Tornar Canônica ×2, Copiar Texto) pisca ✅/⚠️ nele mesmo por ~3s. Render pós-edição embrulhado em try/catch (não bloqueia gravação).
+
+### 9.3 Limitação ambiental documentada
+- O in-app browser do ZCode **não sintetiza eventos de clique** nesta página (probe de ponteiro falha; Enter não ativa botão focado; digitação em input funciona). O E2E físico final cabe ao Chrome do Miguel: 1 clique deve mostrar "✅ R1 gravada!" ou aviso ⚠️ explicativo.
+
+📄 Log técnico: `Cerebro/MEMORIA/memoria_qa_kimi3_estudio_acoplamento_chaves_20260804.md` (seção 5)
+
+---
+
+## 🔧 10. KIMI 3 — SESSÃO 04/08/2026 (parte 4): sinal visível de gravação + R# atualiza na hora
+
+**Commit:** `efb8e22d` (deploy-main → main) · **Status:** AO VIVO (md5 live ≡ local, 451.033 bytes)
+
+**Pedido Miguel:** ao gravar no Estúdio, nada mudava na tela — ele só confirmava a gravação saindo e voltando. Pediu: "dar um sinalzinho", a nova versão aparecer já e o número atualizar (R24 → R25) sem sair da página.
+
+**Entregue:**
+1. **Faixa de status persistente `#studio-save-status`** logo abaixo da barra de ações: "✅ Revisão R25 gravada com sucesso (engine) — o Estúdio agora está nesta versão." (verde) ou o motivo da falha (vermelho). Persiste até a próxima ação — não some sozinha.
+2. **Título do Estúdio atualiza na hora** — helper `refreshStudioTitle()` (fonte única, reutilizado por `openAiAuditModal`): após gravar, o cabeçalho passa a mostrar a nova versão (R25) imediatamente. Também aplicado no "👑 Tornar Canônica".
+3. Mantidos: flash de 3s no botão + alert (Chrome).
+
+---
+
+## 🔧 11. KIMI 3 — SESSÃO 04/08/2026 (parte 5): Manual de Estilo lido por TODAS as LLMs em toda reescrita
+
+**Commit:** `61ead147` (deploy-main → main) · **Status:** AO VIVO (md5 ≡ local, 452.209 bytes)
+
+**Pedido Miguel:** "todas as LLMs têm que ler o Manual de Estilo sempre que fizerem reescrita".
+
+**Diagnóstico prévio:** o `systemPrompt` era fixo — o Manual de Estilo (`manualEstiloMarkdown`, ~12,9 KB) e as diretrizes custom (`miguel_manual_de_estilo_custom_rules`) **não eram injetados**; o checkbox "🧠 Consultar memória" só mudava o texto do spinner (teatro de UI).
+
+**Entregue:** `callRealLlmApi` agora monta o `systemPrompt` com:
+1. `=== MANUAL DE ESTILO DA OBRA (LEITURA OBRIGATÓRIA) ===` completo (build-time, `Outros/novo livro/Kimi K3/MANUAL_DE_ESTILO.md`);
+2. `=== DIRETRIZES PERSONALIZADAS DO EDITOR (PRIORIDADE ALTA) ===` — as regras registradas via checkbox "Registrar diretriz" (que agora PASSAM a valer de verdade);
+3. Nova regra 3: "Nunca viole o Manual de Estilo nem as diretrizes, mesmo diante de instrução ambígua".
+Cobre as 6 engines (mesmo systemPrompt). Blocos omitidos se vazios. Validação: node --check OK, espelhos md5-idênticos, simulação de montagem 3/3. Custo: +~3-4k tokens/chamada (~12,9 KB de manual).
+⚠️ Nota: o checkbox "🧠 Consultar memória" segue teatro de UI (só spinner) — injeção real do banco de fontes (`bancoLinksMarkdown`) disponível se o Miguel quiser (custo de tokens maior).
+
+---
+
+## 🔧 12. KIMI 3 — SESSÃO 04/08/2026 (parte 6): confirmação de diretriz de estilo ("sim ou não?")
+
+**Commit:** `42a5412a` (deploy-main → main) · **Status:** AO VIVO (md5 ≡ local, 458.271 bytes)
+
+**Pedido Miguel:** a captação de diretrizes estava confusa; ele quer: o Estúdio processa/entende a diretriz, PROPÕE a regra e pergunta "é isso mesmo, sim ou não?" — só registra após o "Sim".
+
+**Antes:** após cada reescrita, `convertLastAiToManualRule()` registrava AUTOMATICAMENTE um resumo mecânico (fallback genérico "Evitar repetição ou redundância no trecho citado: ..." — confuso).
+
+**Entregue — fluxo novo:**
+1. Pós-reescrita (checkbox "Registrar diretriz" marcado): aparece o **cartão de confirmação** `#style-rule-confirm-card` — "📝 Nova diretriz de estilo — o Estúdio entendeu assim:" com a proposta em **textarea editável** (o editor ajusta a redação antes de confirmar).
+2. **Proposta mais limpa:** regra específica do resumidor é preservada; o fallback confuso agora usa a instrução original higienizada (remove interjeições tipo "ó,", "então —" e capitaliza), prefixada "Aplicar a seguinte diretriz editorial:".
+3. Botões: **"✅ Sim, acrescentar a regra"** (`confirmAddStyleRule` — grava via `safeLocalSet`, renderiza no Manual, flash + faixa de status + alert; mostra o número da nova Regra #N) e **"❌ Não, descartar"** (`dismissStyleRuleCard` — esconde o cartão, status explica que nada foi registrado).
+4. O botão "+ Manual" agora abre o mesmo cartão (não registra mais direto).
+Validação: node --check OK, espelhos md5-idênticos, simulação de proposta 3/3 (específica preservada / fallback limpo / sem resumo usa instrução).
+
+---
+
+## 🔧 13. KIMI 3 — SESSÃO 04/08/2026 (parte 7): MANUAL_DE_ESTILO.md reorganizado e simplificado
+
+**Commit:** `642ecdbd` (deploy-main → main) · **Status:** AO VIVO (md5 ≡ local, 459.942 bytes)
+
+**Pedido Miguel:** "o manual de estilo deve tá confuso — dá uma olhada boa e corrige, organiza e simplifica".
+
+**Diagnóstico:** conteúdo ótimo (27 regras + 8 herdadas), organização confusa — numeração quebrada (#1–#22, 8 regras sem número, aviso obsoleto "#22, #23…" contradizendo #22 existente, depois #23–#27), detrito no meio ("Lido em 25/07/2026, às 15h11, pelo GPT."), famílias temáticas espalhadas.
+
+**Entregue (backup em `MANUAL_DE_ESTILO.md.bak_20260804_pre_reorganizacao`):**
+1. **6 famílias temáticas:** (1) Clareza e Precisão Factual, (2) Economia, (3) Anti-Repetição, (4) Pontuação e Forma, (5) Ritmo, (6) Arquitetura.
+2. **Renumeração limpa #1–#34** (datas/origem preservadas; referências cruzadas internas atualizadas; 2 regras financeiras herdadas fundidas em #12).
+3. **⚡ Síntese Operacional** no topo (8 linhas — leitura de 30s, ideal para o consumo das LLMs no prompt injetado).
+4. Detritos removidos; instrução de crescimento corrigida (**#35 em diante**).
+5. **Nenhuma regra perdida:** 27→34 (35 itens contando fusão declarada), 24 ❌ exemplos = 24 ✓.
+Efeito imediato: o manual reorganizado é o que vai injetado em TODA reescrita de qualquer IA (feature `61ead147`).
