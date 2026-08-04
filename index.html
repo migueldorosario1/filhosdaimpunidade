@@ -709,6 +709,11 @@
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>💾 Gravar Revisão R#</span>
               </button>
+
+              <button id="btn-copy-full-chapter" onclick="copyEntireChapterText()" title="Copiar o texto inteiro do capítulo para colar em outra IA ou documento" class="px-4 py-2.5 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm border border-sky-500 cursor-pointer">
+                <i data-lucide="clipboard-copy" class="w-4 h-4"></i>
+                <span>📋 Copiar Texto</span>
+              </button>
             </div>
           </div>
 
@@ -2011,6 +2016,66 @@
       }
     }
 
+    // QA-FIX SAVE (Kimi 3, 2026-08-04): escrita segura em localStorage.
+    // Antes: qualquer setItem que lançasse exceção (armazenamento cheio/bloqueado)
+    // matava o fluxo de gravação SEM feedback — o "botão travado" do Estúdio.
+    // Agora: toda gravação crítica passa por safeLocalSet, que (1) tenta gravar,
+    // (2) em erro de quota poda as chaves legadas duplicadas da migração de volume
+    // (backup redundante — a cópia nova com prefixo de volume é preservada) e tenta
+    // de novo, (3) devolve status para o chamador dar feedback garantido.
+    function pruneLegacyStorageDuplicates() {
+      let freed = 0;
+      try {
+        const bases = ['miguel_book_revisions_', 'miguel_book_draft_revision_', 'miguel_book_canonical_', 'miguel_instruction_history_'];
+        const toDelete = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const k = localStorage.key(i);
+          if (!k) continue;
+          for (const b of bases) {
+            if (k.startsWith(b) && !k.startsWith(b + currentVolume + '_')) {
+              const chapKey = k.slice(b.length);
+              if (localStorage.getItem(b + currentVolume + '_' + chapKey) !== null) {
+                toDelete.push(k);
+              }
+              break;
+            }
+          }
+        }
+        toDelete.forEach(k => { try { localStorage.removeItem(k); freed++; } catch(e) {} });
+      } catch(e) {}
+      return freed;
+    }
+
+    function safeLocalSet(key, value) {
+      try {
+        localStorage.setItem(key, value);
+        return { ok: true };
+      } catch(e) {
+        const isQuota = e && (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED' || e.code === 22 || e.code === 1014);
+        if (isQuota) {
+          const freed = pruneLegacyStorageDuplicates();
+          if (freed > 0) {
+            try {
+              localStorage.setItem(key, value);
+              return { ok: true, pruned: freed };
+            } catch(e2) {}
+          }
+          return { ok: false, reason: 'quota' };
+        }
+        return { ok: false, reason: 'blocked' };
+      }
+    }
+
+    function storageFullHelpMessage(reason) {
+      return reason === 'quota'
+        ? `⚠️ O armazenamento local do navegador está CHEIO e a limpeza automática não bastou.
+
+Solução: abra Configurações do navegador → Privacidade → Dados de sites e libere espaço, ou apague revisões antigas. A edição atual NÃO foi gravada.`
+        : `⚠️ O navegador BLOQUEOU a gravação local (localStorage indisponível).
+
+Solução: ative cookies/dados de sites para este endereço e tente de novo. A edição atual NÃO foi gravada.`;
+    }
+
     function loadChapter(chapKey) {
       const prodContainer = document.getElementById('prod-block-container');
       if (chapKey === 'full_book') {
@@ -2269,7 +2334,11 @@
     }
 
     function setCanonicalVersion(vKey) {
-      localStorage.setItem(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
+      const canonRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
+      if (!canonRes.ok) {
+        alert(storageFullHelpMessage(canonRes.reason));
+        return;
+      }
       renderVersionTabs();
       renderMetrics();
       renderSingleView();
@@ -3590,12 +3659,19 @@
         ch.mainContent = finalTxt;
         ch.content = finalTxt;
         ch.versionTag = `Kimi Canônica (${now})`;
-        
+
+        const canonWriteRes = safeLocalSet('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey, finalTxt);
         saveCustomChapters();
         saveChapterPersistentState(currentChapterKey, finalTxt, "Canônica");
         renderSingleView();
         updateRenderedFullChapterFromTextarea();
-        alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
+        if (canonWriteRes.ok) {
+          alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
+        } else {
+          alert(storageFullHelpMessage(canonWriteRes.reason) + `
+
+(A versão canônica ficou aplicada apenas nesta sessão e se perderá ao recarregar.)`);
+        }
       }
     }
 
@@ -3613,7 +3689,7 @@
       const history = getInstructionHistory();
       const now = new Date().toISOString().slice(0, 16).replace('T', ' ');
       history.unshift({ time: now, text: text });
-      localStorage.setItem(storageKeyVol('miguel_instruction_history', currentChapterKey), JSON.stringify(history));
+      safeLocalSet(storageKeyVol('miguel_instruction_history', currentChapterKey), JSON.stringify(history));
       renderInstructionHistory();
     }
 
@@ -3942,12 +4018,22 @@
     }
 
     function saveSettingsModal() {
-      localStorage.setItem('miguel_key_gemini', document.getElementById('setting-key-gemini').value.trim());
-      localStorage.setItem('miguel_key_openai', document.getElementById('setting-key-openai').value.trim());
-      localStorage.setItem('miguel_key_anthropic', document.getElementById('setting-key-anthropic').value.trim());
-      localStorage.setItem('miguel_key_deepseek', document.getElementById('setting-key-deepseek').value.trim());
-      localStorage.setItem('miguel_key_kimi', document.getElementById('setting-key-kimi').value.trim());
-      localStorage.setItem('miguel_key_glm', document.getElementById('setting-key-glm').value.trim());
+      const keyPairs = [
+        ['miguel_key_gemini', 'setting-key-gemini'],
+        ['miguel_key_openai', 'setting-key-openai'],
+        ['miguel_key_anthropic', 'setting-key-anthropic'],
+        ['miguel_key_deepseek', 'setting-key-deepseek'],
+        ['miguel_key_kimi', 'setting-key-kimi'],
+        ['miguel_key_glm', 'setting-key-glm']
+      ];
+      for (const [storageKey, inputId] of keyPairs) {
+        const el = document.getElementById(inputId);
+        const res = safeLocalSet(storageKey, el ? el.value.trim() : '');
+        if (!res.ok) {
+          alert(storageFullHelpMessage(res.reason));
+          return;
+        }
+      }
 
       closeSettingsModal();
       alert('✅ Configurações e Chaves de API salvas com sucesso no seu dispositivo!');
@@ -4598,7 +4684,11 @@ Nenhuma alteração foi realizada no capítulo.`);
       lastGeneratedRevision.engineSlug = engineSlug;
 
       revs[rKey] = lastGeneratedRevision;
-      localStorage.setItem(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
+      const revSaveRes = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
+      if (!revSaveRes.ok) {
+        alert(storageFullHelpMessage(revSaveRes.reason));
+        return;
+      }
 
       // QA-FIX (Kimi 3, 2026-07-29): manter o rascunho cacheado sincronizado com a
       // última revisão salva — evita que um draft obsoleto sobrescreva edições
@@ -4618,6 +4708,59 @@ Nenhuma alteração foi realizada no capítulo.`);
 
       switchVersion(rKey);
       alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
+    }
+
+    // QA-FEATURE (Kimi 3, 2026-08-04): copia o texto inteiro do capítulo ativo
+    // (pedido do Miguel: colar em outra IA para pesquisa/revisão externa).
+    // Fonte: textarea de edição; fallback: visualização renderizada.
+    // Clipboard API com fallback execCommand; feedback no próprio botão.
+    async function copyEntireChapterText() {
+      const btn = document.getElementById('btn-copy-full-chapter');
+      const editableRes = document.getElementById('deepseek-editable-result');
+      let text = editableRes && editableRes.value.trim().length > 0 ? editableRes.value : '';
+      if (!text) {
+        const rendered = document.getElementById('deepseek-rendered-full-chapter');
+        text = rendered ? rendered.innerText.trim() : '';
+      }
+      if (!text) {
+        alert('⚠️ Não há texto do capítulo para copiar.');
+        return;
+      }
+
+      let copied = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      } catch(e) {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          copied = document.execCommand('copy');
+          document.body.removeChild(ta);
+        } catch(e2) {}
+      }
+
+      if (copied) {
+        if (btn) {
+          const originalHtml = btn.innerHTML;
+          btn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i> <span>✅ Copiado! (${text.length.toLocaleString('pt-BR')} car.)</span>`;
+          if (window.lucide) lucide.createIcons();
+          setTimeout(() => {
+            btn.innerHTML = originalHtml;
+            if (window.lucide) lucide.createIcons();
+          }, 2000);
+        }
+      } else {
+        alert(`⚠️ Não foi possível copiar automaticamente.
+
+Abra "📝 Editar texto bruto do capítulo", selecione o texto (Ctrl+A) e copie manualmente (Ctrl+C).`);
+      }
     }
 
     function openGitSyncModal() {
