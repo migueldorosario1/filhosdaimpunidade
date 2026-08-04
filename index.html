@@ -2082,6 +2082,18 @@
       }
     }
 
+    // QA-FEATURE (Kimi 3, 2026-08-04): próxima chave de revisão por MÁXIMO+1 —
+    // antes era por contagem (Object.keys().length + 1), o que colidiria após
+    // exclusões de versões (apagar R3 do meio faria a próxima gravação reutilizar
+    // um R# já existente).
+    function nextRevisionKey(revs) {
+      const maxN = Object.keys(revs || {}).reduce((m, k) => {
+        const n = parseInt(String(k).replace(/^R/, ''), 10);
+        return isNaN(n) ? m : Math.max(m, n);
+      }, 0);
+      return 'R' + (maxN + 1);
+    }
+
     // QA-FIX SAVE (Kimi 3, 2026-08-04): escrita segura em localStorage.
     // Antes: qualquer setItem que lançasse exceção (armazenamento cheio/bloqueado)
     // matava o fluxo de gravação SEM feedback — o "botão travado" do Estúdio.
@@ -2542,18 +2554,24 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       // Populate vertical dropdown items
       const listEl = dropdownWrapper.querySelector('#version-dropdown-list');
       allVersionKeys.forEach(v => {
-        const itemBtn = document.createElement('button');
         const isSelected = (v.key === currentVersionKey);
         const isCanonical = (v.key === canonicalKey);
 
+        // QA-FEATURE (Kimi 3, 2026-08-04): linha = botão de selecionar + botão 🗑️
+        // de apagar (só em revisões não-canônicas; oficial/canônica/experimentais
+        // não podem ser apagadas). Pedido do Miguel: limpar a lista de versões.
+        const row = document.createElement('div');
+        row.className = 'w-full flex items-stretch';
+
+        const itemBtn = document.createElement('button');
         itemBtn.onclick = () => {
           switchVersion(v.key);
           closeVersionDropdown();
         };
 
-        itemBtn.className = `w-full text-left px-4 py-2.5 text-xs font-semibold flex items-center justify-between transition cursor-pointer ${
-          isSelected 
-            ? 'bg-purple-100 text-purple-950 font-extrabold dark:bg-purple-900/60 dark:text-purple-200' 
+        itemBtn.className = `flex-1 text-left px-4 py-2.5 text-xs font-semibold flex items-center justify-between transition cursor-pointer ${
+          isSelected
+            ? 'bg-purple-100 text-purple-950 font-extrabold dark:bg-purple-900/60 dark:text-purple-200'
             : 'text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
         }`;
 
@@ -2565,7 +2583,22 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
           ${isCanonical ? '<span class="bg-amber-100 text-amber-900 dark:bg-amber-500/20 dark:text-amber-300 border border-amber-300 dark:border-amber-500/40 px-1.5 py-0.5 rounded text-[10px] font-mono font-bold">Canônica</span>' : ''}
         `;
 
-        listEl.appendChild(itemBtn);
+        row.appendChild(itemBtn);
+
+        const deletable = (v.type === 'revision') && !isCanonical;
+        if (deletable) {
+          const delBtn = document.createElement('button');
+          delBtn.className = 'px-3 text-rose-600 hover:bg-rose-100 dark:hover:bg-rose-900/40 transition cursor-pointer flex items-center';
+          delBtn.title = `Apagar a versão "${v.label}" (2 toques: clicar e confirmar)`;
+          delBtn.innerHTML = '<i data-lucide="trash-2" class="w-4 h-4"></i>';
+          delBtn.onclick = (ev) => {
+            ev.stopPropagation();
+            deleteRevisionVersion(v.key, delBtn);
+          };
+          row.appendChild(delBtn);
+        }
+
+        listEl.appendChild(row);
       });
 
       // 2. BUTTON: TORNAR CANÔNICA (Make Canonical)
@@ -2600,6 +2633,71 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       renderSingleView();
       if (currentViewMode === 'compare') updateCompare();
       updateUrlHashRoute(); // QA-FIX ACOPLAMENTO (Kimi 3): URL acompanha a versão vista no leitor
+    }
+
+    // QA-FEATURE (Kimi 3, 2026-08-04): apagar uma versão de revisão.
+    // Pedido do Miguel: "uma opção para marcar e apagar, para limpar; apagar a
+    // versão e sair do menu". Confirmação em 2 toques no próprio botão (não
+    // depende de confirm(), suprimido em webviews). Canônica/oficial/experimentais
+    // não podem ser apagadas (o botão 🗑️ nem aparece nelas). Se a versão apagada
+    // era a ativa, cai para a revisão mais recente restante (ou oficial).
+    // O menu de versões permanece ABERTO após cada exclusão — faxina em sequência.
+    function deleteRevisionVersion(vKey, btnEl) {
+      const canonicalKey = getCanonicalVersionKey(currentChapterKey);
+      if (vKey === canonicalKey) {
+        alert('⚠️ Esta versão é a CANÔNICA atual. Para apagá-la, primeiro marque outra versão como canônica.');
+        return;
+      }
+
+      if (!btnEl || btnEl.dataset.confirming !== '1') {
+        if (btnEl) {
+          btnEl.dataset.confirming = '1';
+          btnEl.innerHTML = '<span class="text-xs font-black">⚠️</span>';
+          btnEl.title = 'Clique de novo para CONFIRMAR a exclusão desta versão';
+          btnEl.classList.add('bg-rose-600', 'text-white');
+          setTimeout(() => {
+            if (btnEl.dataset.confirming === '1') {
+              delete btnEl.dataset.confirming;
+              btnEl.innerHTML = '<i data-lucide="trash-2" class="w-4 h-4"></i>';
+              btnEl.title = 'Apagar esta versão';
+              btnEl.classList.remove('bg-rose-600', 'text-white');
+              if (window.lucide) lucide.createIcons();
+            }
+          }, 3200);
+        }
+        return;
+      }
+
+      const revs = getSavedRevisions(currentChapterKey);
+      if (!revs[vKey]) return;
+      const deletedTag = revs[vKey].versionTag || vKey;
+      delete revs[vKey];
+      const res = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
+      if (!res.ok) {
+        alert(storageFullHelpMessage(res.reason));
+        return;
+      }
+
+      if (currentVersionKey === vKey) {
+        const remaining = Object.keys(revs);
+        currentVersionKey = remaining.length ? remaining[remaining.length - 1] : 'oficial';
+      }
+
+      renderVersionTabs();
+      renderMetrics();
+      renderSingleView();
+      if (currentViewMode === 'compare') updateCompare();
+      updateUrlHashRoute();
+      refreshStudioTitle();
+
+      // Mantém o menu aberto para limpar várias versões em sequência
+      try {
+        const menu = document.getElementById('version-dropdown-menu');
+        if (menu) menu.classList.remove('hidden');
+      } catch(e) {}
+
+      const restam = Object.keys(revs).length;
+      setStudioSaveStatus(true, `Versão "${deletedTag}" apagada. Restam ${restam} ${restam === 1 ? 'revisão' : 'revisões'} neste capítulo.`);
     }
 
     function saveRoteiroObs() {
@@ -4821,8 +4919,7 @@ Nenhuma alteração foi realizada no capítulo.`);
       if (!lastGeneratedRevision || !lastGeneratedRevision.summarizedRule) return;
       
       const revs = getSavedRevisions(currentChapterKey);
-      const revCount = Object.keys(revs).length + 1;
-      const revLabel = `R${revCount}`;
+      const revLabel = nextRevisionKey(revs);
 
       const rules = getCustomManualRules();
       const now = new Date().toISOString().slice(0, 10);
@@ -4876,7 +4973,7 @@ Nenhuma alteração foi realizada no capítulo.`);
         return;
       }
       const revs = getSavedRevisions(currentChapterKey);
-      const revLabel = `R${Object.keys(revs).length + 1}`;
+      const revLabel = nextRevisionKey(revs);
       const rules = getCustomManualRules();
       const now = new Date().toISOString().slice(0, 10);
       const newRuleText = `[${revLabel} · ${now}] ${ruleText}`;
@@ -4974,8 +5071,7 @@ Ela já vale para todas as próximas reescritas, de qualquer IA.`);
 
       const dataset = getCurrentVolumeDataset();
       const revs = getSavedRevisions(currentChapterKey);
-      const count = Object.keys(revs).length + 1;
-      const rKey = `R${count}`;
+      const rKey = nextRevisionKey(revs);
       const engineSlug = getCleanEngineSlug(currentSelectedEngine);
       
       lastGeneratedRevision.versionTag = `${rKey} (${engineSlug})`;
