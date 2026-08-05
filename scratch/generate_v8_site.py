@@ -1080,14 +1080,14 @@ html_template = """<!DOCTYPE html>
         <div class="bg-purple-50 border border-purple-200 rounded-2xl p-5 space-y-4 shadow-sm">
           <div class="flex items-center justify-between">
             <span class="text-xs font-mono font-extrabold text-purple-950 uppercase tracking-wider flex items-center gap-2">
-              <i data-lucide="plus-circle" class="w-4 h-4 text-purple-700"></i> 💡 Propor Nova Regra ou Alteração de Estilo (#28+)
+              <i data-lucide="plus-circle" class="w-4 h-4 text-purple-700"></i> 💡 Propor Nova Regra ou Alteração de Estilo (#35+)
             </span>
             <button id="btn-voice-manual" onclick="toggleVoiceManualProposal()" class="px-3 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-lg text-xs font-extrabold flex items-center gap-1.5 transition cursor-pointer">
               <i data-lucide="mic" class="w-3.5 h-3.5"></i>
               <span id="voice-manual-btn-text">Ditar Regra por Voz</span>
             </button>
           </div>
-          <textarea id="manual-proposal-input" rows="2" class="w-full bg-white border border-slate-300 rounded-xl p-3 text-xs font-semibold text-slate-900 focus:outline-none focus:border-purple-600 font-sans shadow-inner" placeholder="Ex: '#28 — 27/07/2026 · Sempre que citar valores em dólares, acrescentar a conversão aproximada em R$ entre parênteses.'"></textarea>
+          <textarea id="manual-proposal-input" rows="2" class="w-full bg-white border border-slate-300 rounded-xl p-3 text-xs font-semibold text-slate-900 focus:outline-none focus:border-purple-600 font-sans shadow-inner" placeholder="Ex: '#35 — 04/08/2026 · Sempre que citar valores em dólares, acrescentar a conversão aproximada em R$ entre parênteses.'"></textarea>
           <div class="flex items-center justify-between">
             <span class="text-[11px] text-slate-600 font-medium italic">As novas regras ficam salvas no sistema e incorporadas à IA.</span>
             <button onclick="saveManualProposal()" class="px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-xs font-extrabold shadow transition flex items-center gap-1.5 cursor-pointer">
@@ -1095,12 +1095,29 @@ html_template = """<!DOCTYPE html>
               <span>Acrescentar ao Manual de Estilo</span>
             </button>
           </div>
+
+          <!-- QA-FEATURE (Kimi 3, 2026-08-04): confirmação inteligente da regra —
+               o Estúdio processa a diretriz (editável) e o editor confirma "sim ou não". -->
+          <div id="manual-proposal-confirm" class="hidden space-y-3 pt-3 border-t border-purple-200">
+            <p class="text-[11px] text-slate-700 font-bold leading-relaxed">📝 O Estúdio processou sua diretriz assim — <strong>é isso mesmo?</strong> (pode editar o texto antes de confirmar)</p>
+            <textarea id="manual-proposal-processed" rows="3" class="w-full bg-white border border-purple-300 rounded-xl p-3 text-xs font-semibold text-slate-900 focus:outline-none focus:border-purple-600 font-sans shadow-inner"></textarea>
+            <div class="flex flex-wrap items-center gap-2">
+              <button onclick="confirmManualProposal(this)" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold shadow transition flex items-center gap-1.5 cursor-pointer">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                <span>✅ Sim, acrescentar como Regra #<span id="manual-proposal-next-number"></span></span>
+              </button>
+              <button onclick="cancelManualProposal(this)" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 cursor-pointer">
+                <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                <span>❌ Não, voltar</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- DYNAMIC CUSTOM RULES SECTION -->
         <div id="manual-custom-rules-container" class="hidden space-y-3">
           <h4 class="text-xs font-mono font-extrabold uppercase text-purple-900 tracking-wider flex items-center gap-2 border-b border-purple-200 pb-2">
-            <i data-lucide="sparkles" class="w-4 h-4 text-purple-700"></i> Regras Adicionadas pelo Miguel (#28+)
+            <i data-lucide="sparkles" class="w-4 h-4 text-purple-700"></i> Regras Adicionadas pelo Miguel (#35+)
           </h4>
           <div id="manual-custom-rules-list" class="space-y-2">
             <!-- Rendered custom rules -->
@@ -1520,7 +1537,7 @@ html_template = """<!DOCTYPE html>
     }
 
     function saveCustomManualRules(rules) {
-      localStorage.setItem('miguel_manual_de_estilo_custom_rules', JSON.stringify(rules));
+      safeLocalSet('miguel_manual_de_estilo_custom_rules', JSON.stringify(rules));
       renderCustomManualRules();
     }
 
@@ -1540,32 +1557,81 @@ html_template = """<!DOCTYPE html>
 
       rules.forEach((ruleText, idx) => {
         const div = document.createElement('div');
-        div.className = "p-3 bg-purple-950/30 border border-purple-500/30 rounded-xl text-xs text-purple-200 flex items-start justify-between gap-3 shadow";
+        // QA-FIX CONTRASTE (Kimi 3, 2026-08-04): antes era bg roxo-escuro/30% com
+        // texto roxo-claro sobre o fundo creme do modal — ilegível (pedido Miguel).
+        div.className = "p-3 bg-white border border-purple-300 rounded-xl text-xs text-slate-800 flex items-start justify-between gap-3 shadow-sm";
         div.innerHTML = `
-          <div class="flex-1">
-            <span class="font-mono font-bold text-purple-400">#${28 + idx}</span> — ${ruleText}
+          <div class="flex-1 leading-relaxed">
+            <span class="font-mono font-black text-purple-800">#${35 + idx}</span> — ${ruleText}
           </div>
-          <button onclick="deleteCustomManualRule(${idx})" class="text-slate-500 hover:text-red-400 text-xs font-mono px-1">✕</button>
+          <button onclick="deleteCustomManualRule(${idx})" title="Apagar esta regra" class="text-slate-400 hover:text-rose-600 text-xs font-mono font-bold px-1.5 py-0.5 rounded transition cursor-pointer">✕</button>
         `;
         list.appendChild(div);
       });
     }
 
+    // QA-FEATURE (Kimi 3, 2026-08-04): processamento inteligente da regra proposta
+    // (pedido do Miguel: "tem que processar o que eu falo com inteligência e pedir
+    // confirmação — é isso mesmo, sim ou não?"). Higieniza o texto ditado (muletas
+    // de voz, comandos de ditado), formata como regra e pede confirmação editável.
+    function formulateStyleRule(rawText) {
+      let t = (rawText || '').trim();
+      // remove em cadeia: interjeições/muletas de voz e comandos de ditado no início
+      let prev;
+      do {
+        prev = t;
+        t = t.replace(/^(?:(?:é{1,3}|ahn?|hum|tipo|né|ó|olha|então|bom|veja bem|aí)[\s,;:.\-]*)+/i, '').trim();
+        t = t.replace(/^(?:digit\w*|escrev\w*|anot\w*|acrescent\w*|adicion\w*|coloqu?\w*|ponha|bota?\w*|inclu\w*|nova regra|regra nova|regra(?=\s*:))[\s:,.\-]+/i, '').trim();
+      } while (t !== prev && t.length > 0);
+      if (t) t = t.charAt(0).toUpperCase() + t.slice(1);
+      if (t && !/[.!?]$/.test(t)) t += '.';
+      return t;
+    }
+
     function saveManualProposal() {
       const input = document.getElementById('manual-proposal-input');
-      const text = input.value.trim();
+      const text = input ? input.value.trim() : '';
       if (!text) {
         alert("Por favor digite ou dite a nova regra para o Manual de Estilo.");
         return;
       }
+      const processed = formulateStyleRule(text);
+      const confirmArea = document.getElementById('manual-proposal-confirm');
+      const processedArea = document.getElementById('manual-proposal-processed');
+      const numSpan = document.getElementById('manual-proposal-next-number');
+      if (!confirmArea || !processedArea) return;
+      processedArea.value = processed;
+      if (numSpan) numSpan.textContent = String(35 + getCustomManualRules().length);
+      confirmArea.classList.remove('hidden');
+      try { confirmArea.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e) {}
+    }
 
+    function confirmManualProposal(sourceBtn) {
+      const processedArea = document.getElementById('manual-proposal-processed');
+      const text = processedArea ? processedArea.value.trim() : '';
+      if (!text) {
+        flashButtonFeedback(sourceBtn, false, 'Regra vazia');
+        return;
+      }
       const rules = getCustomManualRules();
-      rules.push(text);
-      saveCustomManualRules(rules);
+      if (!rules.includes(text)) {
+        rules.push(text);
+        saveCustomManualRules(rules);
+      }
+      const input = document.getElementById('manual-proposal-input');
+      if (input) input.value = '';
+      const confirmArea = document.getElementById('manual-proposal-confirm');
+      if (confirmArea) confirmArea.classList.add('hidden');
+      if (typeof voiceManualIsRecording !== 'undefined' && voiceManualIsRecording) stopVoiceManualProposal();
+      flashButtonFeedback(sourceBtn, true, `Regra #${34 + rules.length} registrada!`);
+      showStudioToast(true, `Regra #${34 + rules.length} no Manual de Estilo!`);
+      alert(`📝 Nova regra #${34 + rules.length} adicionada ao Manual de Estilo!\n\nEla já vale para todas as próximas reescritas, de qualquer IA.`);
+    }
 
-      input.value = '';
-      if (voiceManualIsRecording) stopVoiceManualProposal();
-      alert(`Nova regra #${27 + rules.length} adicionada com sucesso ao Manual de Estilo!`);
+    function cancelManualProposal(sourceBtn) {
+      const confirmArea = document.getElementById('manual-proposal-confirm');
+      if (confirmArea) confirmArea.classList.add('hidden');
+      flashButtonFeedback(sourceBtn, true, 'Voltar p/ editar');
     }
 
     function deleteCustomManualRule(idx) {
@@ -4719,7 +4785,7 @@ Regras:
       if (!rules.includes(newRuleText)) {
         rules.push(newRuleText);
         saveCustomManualRules(rules);
-        alert(`Diretriz resumida registrada com sucesso no Manual de Estilo como Regra #${27 + rules.length} (${revLabel})!`);
+        alert(`Diretriz resumida registrada com sucesso no Manual de Estilo como Regra #${34 + rules.length} (${revLabel})!`);
       }
     }
 
@@ -4749,7 +4815,7 @@ Regras:
 
       area.value = proposal;
       const rules = getCustomManualRules();
-      if (numSpan) numSpan.textContent = String(27 + rules.length + 1);
+      if (numSpan) numSpan.textContent = String(34 + rules.length + 1);
       card.classList.remove('hidden');
       try { card.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e) {}
     }
@@ -4779,10 +4845,10 @@ Regras:
         renderCustomManualRules();
       }
       if (card) card.classList.add('hidden');
-      flashButtonFeedback(sourceBtn, true, `Regra #${27 + rules.length} registrada!`);
-      setStudioSaveStatus(true, `Diretriz registrada como Regra #${27 + rules.length} no Manual de Estilo — já vale para todas as próximas reescritas, de qualquer IA.`);
-      showStudioToast(true, `Regra #${27 + rules.length} no Manual de Estilo!`);
-      alert(`📝 Diretriz registrada com sucesso como Regra #${27 + rules.length} (${revLabel})!\n\nEla já vale para todas as próximas reescritas, de qualquer IA.`);
+      flashButtonFeedback(sourceBtn, true, `Regra #${34 + rules.length} registrada!`);
+      setStudioSaveStatus(true, `Diretriz registrada como Regra #${34 + rules.length} no Manual de Estilo — já vale para todas as próximas reescritas, de qualquer IA.`);
+      showStudioToast(true, `Regra #${34 + rules.length} no Manual de Estilo!`);
+      alert(`📝 Diretriz registrada com sucesso como Regra #${34 + rules.length} (${revLabel})!\n\nEla já vale para todas as próximas reescritas, de qualquer IA.`);
     }
 
     function dismissStyleRuleCard(sourceBtn) {
