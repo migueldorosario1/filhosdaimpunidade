@@ -462,6 +462,10 @@ html_template = """<!DOCTYPE html>
         <select id="chapter-select" onchange="selectChapter(this.value)" class="bg-white border-2 border-amber-500 rounded-xl px-4 py-2 text-sm font-bold text-slate-900 focus:outline-none focus:border-amber-600 shadow-sm max-w-xs md:max-w-md truncate cursor-pointer">
           <!-- Dynamically populated -->
         </select>
+        <button onclick="openChapterManager()" title="Gerenciar capítulos (criar, renomear, reordenar, apagar)" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 rounded-xl text-xs font-extrabold shadow-sm transition cursor-pointer flex items-center gap-1.5">
+          <i data-lucide="list-plus" class="w-4 h-4"></i>
+          <span>📚 Gerenciar</span>
+        </button>
 
         <button onclick="navigateChapter(1)" title="Próximo Capítulo" class="p-2 bg-white hover:bg-slate-100 border border-slate-300 rounded-xl text-slate-800 transition shadow-sm cursor-pointer">
           <i data-lucide="chevron-right" class="w-5 h-5"></i>
@@ -1323,6 +1327,27 @@ html_template = """<!DOCTYPE html>
     </button>
   </div>
 
+  <!-- MODAL GESTOR DE CAPÍTULOS (QA-FEATURE Kimi 3, 2026-08-05) -->
+  <div id="modal-chapter-manager" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-[#faf8f4] rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200">
+      <div class="flex items-center justify-between p-5 border-b border-slate-200">
+        <div>
+          <h3 class="text-base font-black font-display text-slate-900">📚 Gestor de Capítulos</h3>
+          <p class="text-[11px] text-slate-600 font-semibold">Criar, renomear, reordenar e apagar capítulos — as mudanças ficam salvas no seu navegador.</p>
+        </div>
+        <button onclick="closeChapterManager()" class="p-2 hover:bg-slate-200 rounded-xl transition text-slate-700 cursor-pointer"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="p-4 overflow-y-auto flex-1 space-y-2" id="chapter-manager-list"></div>
+      <div class="p-4 border-t border-slate-200 space-y-3">
+        <div class="flex items-center gap-2">
+          <input id="chapter-manager-new-title" placeholder="➕ Título do novo capítulo..." onkeydown="if(event.key==='Enter')createChapterFromManager()" class="flex-1 bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs font-bold text-slate-900 focus:outline-none focus:border-amber-600 shadow-inner">
+          <button onclick="createChapterFromManager()" class="px-4 py-2.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black shadow cursor-pointer">Criar Capítulo</button>
+        </div>
+        <div id="chapter-manager-deleted" class="hidden"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- FLOATING WIDGET FOR ESTÚDIO EDITORIAL FULL VIEW -->
   <div id="floating-studio-fullview-widget" class="fixed top-4 right-4 z-[10000] hidden flex items-center bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-1.5 rounded-full shadow-2xl">
     <!-- ICON: OLHO (VOLTAR MENU / RESTABLECER PAINÉIS DO ESTÚDIO) -->
@@ -1708,7 +1733,61 @@ html_template = """<!DOCTYPE html>
     }
 
     function getCurrentVolumeDataset() {
-      return (currentVolume === 'vol2_v1') ? bookVol2V1 : bookVol1V7;
+      const base = (currentVolume === 'vol2_v1') ? bookVol2V1 : bookVol1V7;
+      // QA-FEATURE GESTÃO DE CAPÍTULOS (Kimi 3, 2026-08-05): aplica os overrides do
+      // autor (renomear/apagar/reordenar/criar) com cache por estado — mutações de
+      // conteúdo em sessão continuam valendo; o manuscrito embutido nunca é destruído.
+      const ops = getChapterOps();
+      const opsHash = JSON.stringify(ops);
+      if (_datasetCache.vol === currentVolume && _datasetCache.opsHash === opsHash && _datasetCache.ds) return _datasetCache.ds;
+      const ds = applyChapterOps(base, ops);
+      _datasetCache = { vol: currentVolume, opsHash, ds };
+      try { loadChapterPersistentState(); } catch(e) {}
+      return _datasetCache.ds;
+    }
+
+    let _datasetCache = { vol: null, opsHash: null, ds: null };
+
+    // Overrides do autor sobre o manuscrito embutido (persistidos por volume).
+    function getChapterOps(vol) {
+      try {
+        const raw = localStorage.getItem('miguel_book_chapter_ops_' + (vol || currentVolume));
+        const ops = raw ? JSON.parse(raw) : {};
+        return { renamed: ops.renamed || {}, deleted: ops.deleted || [], order: ops.order || [], custom: ops.custom || {} };
+      } catch(e) { return { renamed: {}, deleted: [], order: [], custom: {} }; }
+    }
+
+    function saveChapterOps(ops, vol) {
+      safeLocalSet('miguel_book_chapter_ops_' + (vol || currentVolume), JSON.stringify(ops));
+    }
+
+    function applyChapterOps(base, ops) {
+      const out = {};
+      Object.keys(base).forEach(k => {
+        if (ops.deleted.includes(k)) return;
+        const ch = base[k];
+        if (!ch._originalTitle) ch._originalTitle = ch.title;
+        ch.title = ops.renamed[k] || ch._originalTitle;
+        out[k] = ch;
+      });
+      Object.keys(ops.custom).forEach(k => {
+        const c = ops.custom[k];
+        out[k] = {
+          title: c.title,
+          mainContent: c.content || '',
+          content: c.content || '',
+          versionTag: c.versionTag || 'Capítulo do Autor',
+          badge: c.badge || '✍️ Capítulo criado pelo autor',
+          isCustom: true
+        };
+      });
+      if (ops.order && ops.order.length > 0) {
+        const ordered = {};
+        ops.order.forEach(k => { if (out[k]) ordered[k] = out[k]; });
+        Object.keys(out).forEach(k => { if (!ordered[k]) ordered[k] = out[k]; });
+        return ordered;
+      }
+      return out;
     }
 
     function switchVolume(volKey) {
@@ -1791,6 +1870,199 @@ html_template = """<!DOCTYPE html>
       }
       loadChapter(key);
       if (!skipHashUpdate) updateUrlHashRoute();
+    }
+
+    // ===== QA-FEATURE GESTÃO DE CAPÍTULOS (Kimi 3, 2026-08-05) =====
+    // Pedido do Miguel: criar, renomear, reordenar e apagar capítulos com liberdade.
+    let _chapterManagerEditing = null;
+
+    function createChapterFromManager() {
+      const input = document.getElementById('chapter-manager-new-title');
+      const title = input ? input.value.trim() : '';
+      if (!title) { showStudioToast(false, 'Digite o título do novo capítulo'); return; }
+      const ops = getChapterOps();
+      const key = 'custom_' + Date.now();
+      ops.custom[key] = { title, content: '', createdAt: new Date().toISOString() };
+      saveChapterOps(ops);
+      if (input) input.value = '';
+      renderChapterManager();
+      initChapterSelect();
+      selectChapter(key);
+      showStudioToast(true, `Capítulo "${title}" criado!`);
+    }
+
+    function moveChapterOrder(chapKey, delta) {
+      const dataset = getCurrentVolumeDataset();
+      const keys = Object.keys(dataset);
+      const idx = keys.indexOf(chapKey);
+      const newIdx = idx + delta;
+      if (idx === -1 || newIdx < 0 || newIdx >= keys.length) return;
+      const tmp = keys[idx]; keys[idx] = keys[newIdx]; keys[newIdx] = tmp;
+      const ops = getChapterOps();
+      ops.order = keys;
+      saveChapterOps(ops);
+      renderChapterManager();
+      initChapterSelect();
+      loadChapter(currentChapterKey);
+      showStudioToast(true, 'Ordem dos capítulos atualizada!');
+    }
+
+    function startRenameChapter(chapKey) {
+      _chapterManagerEditing = chapKey;
+      renderChapterManager();
+      try {
+        const inp = document.getElementById('chapter-manager-rename-input');
+        if (inp) { inp.focus(); inp.select(); }
+      } catch(e) {}
+    }
+
+    function confirmRenameChapter(chapKey) {
+      const inp = document.getElementById('chapter-manager-rename-input');
+      const title = inp ? inp.value.trim() : '';
+      if (!title) {
+        showStudioToast(false, 'Título vazio — renomeação cancelada');
+        _chapterManagerEditing = null;
+        renderChapterManager();
+        return;
+      }
+      const ops = getChapterOps();
+      if (ops.custom[chapKey]) {
+        ops.custom[chapKey].title = title;
+      } else {
+        ops.renamed[chapKey] = title;
+      }
+      saveChapterOps(ops);
+      _chapterManagerEditing = null;
+      renderChapterManager();
+      initChapterSelect();
+      loadChapter(currentChapterKey);
+      refreshStudioTitle();
+      showStudioToast(true, `Capítulo renomeado para "${title}"!`);
+    }
+
+    function cancelRenameChapter() {
+      _chapterManagerEditing = null;
+      renderChapterManager();
+    }
+
+    function deleteChapterOps(chapKey, btnEl) {
+      if (!btnEl || btnEl.dataset.confirming !== '1') {
+        if (btnEl) {
+          btnEl.dataset.confirming = '1';
+          btnEl.innerHTML = '<span class="text-[10px] font-black">⚠️</span>';
+          btnEl.title = 'Clique de novo para CONFIRMAR a exclusão do capítulo';
+          btnEl.classList.add('bg-rose-600', 'text-white');
+          setTimeout(() => {
+            if (btnEl.dataset.confirming === '1') {
+              delete btnEl.dataset.confirming;
+              btnEl.innerHTML = '<i data-lucide="trash-2" class="w-4 h-4"></i>';
+              btnEl.classList.remove('bg-rose-600', 'text-white');
+              if (window.lucide) lucide.createIcons();
+            }
+          }, 3200);
+        }
+        return;
+      }
+      const ops = getChapterOps();
+      const dataset = getCurrentVolumeDataset();
+      const visibleKeys = Object.keys(dataset);
+      if (visibleKeys.length <= 1) {
+        alert('⚠️ Não é possível apagar o último capítulo visível do volume.');
+        return;
+      }
+      const isCustom = !!ops.custom[chapKey];
+      const deletedTitle = (dataset[chapKey] && dataset[chapKey].title) || chapKey;
+      if (isCustom) {
+        delete ops.custom[chapKey];
+        ['miguel_book_revisions_', 'miguel_book_draft_revision_', 'miguel_book_canonical_', 'miguel_instruction_history_', 'miguel_book_persistent_content_', 'miguel_book_persistent_tag_'].forEach(base => {
+          try { localStorage.removeItem(base + currentVolume + '_' + chapKey); } catch(e) {}
+        });
+      } else {
+        if (!ops.deleted.includes(chapKey)) ops.deleted.push(chapKey);
+      }
+      saveChapterOps(ops);
+      if (currentChapterKey === chapKey) {
+        const rest = Object.keys(getCurrentVolumeDataset());
+        if (rest.length) selectChapter(rest[0]);
+      }
+      renderChapterManager();
+      initChapterSelect();
+      showStudioToast(true, `Capítulo "${deletedTitle}" apagado${isCustom ? ' definitivamente' : ' (oculto — restaurável)'}.`);
+    }
+
+    function restoreChapter(chapKey) {
+      const ops = getChapterOps();
+      ops.deleted = ops.deleted.filter(k => k !== chapKey);
+      saveChapterOps(ops);
+      renderChapterManager();
+      initChapterSelect();
+      showStudioToast(true, 'Capítulo restaurado!');
+    }
+
+    function openChapterManager() {
+      renderChapterManager();
+      document.getElementById('modal-chapter-manager').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeChapterManager() {
+      document.getElementById('modal-chapter-manager').classList.add('hidden');
+      _chapterManagerEditing = null;
+    }
+
+    function renderChapterManager() {
+      const list = document.getElementById('chapter-manager-list');
+      if (!list) return;
+      const dataset = getCurrentVolumeDataset();
+      const keys = Object.keys(dataset);
+      const ops = getChapterOps();
+      list.innerHTML = '';
+      keys.forEach((k, idx) => {
+        const ch = dataset[k];
+        const isCustom = !!ops.custom[k];
+        const isEditing = _chapterManagerEditing === k;
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-2 p-2.5 bg-white border border-slate-200 rounded-xl shadow-sm';
+        row.innerHTML = `
+          <span class="text-[10px] font-mono font-bold text-slate-500 w-6 text-center">${idx + 1}</span>
+          <div class="flex flex-col gap-1">
+            <button onclick="moveChapterOrder('${k}', -1)" ${idx === 0 ? 'disabled' : ''} class="text-slate-500 hover:text-amber-700 disabled:opacity-30 cursor-pointer" title="Subir"><i data-lucide="chevron-up" class="w-4 h-4"></i></button>
+            <button onclick="moveChapterOrder('${k}', 1)" ${idx === keys.length - 1 ? 'disabled' : ''} class="text-slate-500 hover:text-amber-700 disabled:opacity-30 cursor-pointer" title="Descer"><i data-lucide="chevron-down" class="w-4 h-4"></i></button>
+          </div>
+          <div class="flex-1 min-w-0">
+            ${isEditing
+              ? `<input id="chapter-manager-rename-input" value="${(ch.title || '').replace(/"/g, '&quot;')}" onkeydown="if(event.key==='Enter')confirmRenameChapter('${k}');if(event.key==='Escape')cancelRenameChapter()" class="w-full bg-white border-2 border-purple-400 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 focus:outline-none focus:border-purple-600">`
+              : `<span class="text-xs font-bold text-slate-900 truncate block">${ch.title || k}</span>${isCustom ? '<span class="text-[9px] font-mono font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">✍️ autor</span>' : ''}${k === currentChapterKey ? '<span class="text-[9px] font-mono font-bold text-amber-800 bg-amber-100 px-1.5 py-0.5 rounded ml-1">atual</span>' : ''}`}
+          </div>
+          ${isEditing
+            ? `<button onclick="confirmRenameChapter('${k}')" class="px-2.5 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-lg text-[10px] font-black cursor-pointer" title="Salvar nome">💾</button>
+               <button onclick="cancelRenameChapter()" class="px-2.5 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg text-[10px] font-black cursor-pointer" title="Cancelar">✕</button>`
+            : `<button onclick="selectChapter('${k}');closeChapterManager()" class="px-2 py-1.5 text-slate-500 hover:text-purple-700 cursor-pointer" title="Abrir capítulo"><i data-lucide="book-open" class="w-4 h-4"></i></button>
+               <button onclick="startRenameChapter('${k}')" class="px-2 py-1.5 text-slate-500 hover:text-purple-700 cursor-pointer" title="Renomear capítulo"><i data-lucide="pen-line" class="w-4 h-4"></i></button>
+               <button onclick="deleteChapterOps('${k}', this)" class="px-2 py-1.5 text-rose-500 hover:bg-rose-50 rounded-lg cursor-pointer" title="Apagar capítulo (2 toques)"><i data-lucide="trash-2" class="w-4 h-4"></i></button>`}
+        `;
+        list.appendChild(row);
+      });
+
+      const deletedSection = document.getElementById('chapter-manager-deleted');
+      if (deletedSection) {
+        if (ops.deleted.length > 0) {
+          deletedSection.classList.remove('hidden');
+          const base = (currentVolume === 'vol2_v1') ? bookVol2V1 : bookVol1V7;
+          deletedSection.innerHTML = '<div class="text-[10px] font-mono font-bold text-slate-500 uppercase tracking-wider mb-2">🗃️ Capítulos ocultos (restauráveis)</div>' +
+            ops.deleted.map(k => {
+              const t = (base[k] && base[k].title) || k;
+              return `<div class="flex items-center justify-between gap-2 p-2 bg-slate-50 border border-slate-200 rounded-lg mb-1.5">
+                <span class="text-[11px] font-bold text-slate-600 truncate">${t}</span>
+                <button onclick="restoreChapter('${k}')" class="px-2.5 py-1 bg-emerald-100 hover:bg-emerald-200 text-emerald-900 rounded-lg text-[10px] font-black cursor-pointer">♻️ Restaurar</button>
+              </div>`;
+            }).join('');
+        } else {
+          deletedSection.classList.add('hidden');
+          deletedSection.innerHTML = '';
+        }
+      }
+      if (window.lucide) lucide.createIcons();
     }
 
     function navigateChapter(delta) {
@@ -2323,10 +2595,20 @@ html_template = """<!DOCTYPE html>
         </button>
 
         <!-- VERTICAL DROPDOWN MENU (ESCADA REVERSA DE CIMA PRA BAIXO) -->
-        <div id="version-dropdown-menu" class="hidden absolute left-0 mt-2 w-64 rounded-2xl bg-white border-2 border-purple-200 shadow-2xl z-50 overflow-hidden py-1 max-h-80 overflow-y-auto">
+        <div id="version-dropdown-menu" class="hidden absolute left-0 mt-2 w-72 rounded-2xl bg-white border-2 border-purple-200 shadow-2xl z-50 overflow-hidden py-1 max-h-96 overflow-y-auto">
           <div class="px-3.5 py-2 border-b border-slate-200 text-[10px] uppercase font-mono font-bold text-slate-500 tracking-wider flex items-center justify-between bg-purple-50">
             <span>📜 Histórico de Versões</span>
-            <span class="text-amber-800 font-mono font-bold">👑 = Canônica</span>
+            <div class="flex items-center gap-2">
+              <span class="text-amber-800 font-mono font-bold">👑 = Canônica</span>
+              <button onclick="toggleVersionCleanupMode(event)" title="Modo faxina: selecionar várias versões para apagar de uma vez" class="px-2 py-1 bg-rose-100 hover:bg-rose-200 text-rose-800 rounded-md text-[10px] font-black normal-case tracking-normal cursor-pointer">🧹 Faxina</button>
+            </div>
+          </div>
+          <div id="version-cleanup-bar" class="hidden px-3 py-2 bg-rose-50 border-b border-rose-200 flex items-center justify-between gap-2">
+            <button onclick="versionCleanupSelectAll()" class="text-[10px] font-black text-rose-800 hover:underline cursor-pointer">selecionar todas</button>
+            <div class="flex items-center gap-2">
+              <button id="btn-version-cleanup-delete" onclick="bulkDeleteSelectedVersions(this)" class="px-2.5 py-1 bg-rose-600 hover:bg-rose-700 text-white rounded-md text-[10px] font-black cursor-pointer">🗑️ Apagar (0)</button>
+              <button onclick="toggleVersionCleanupMode(event)" class="text-[10px] font-black text-slate-600 hover:underline cursor-pointer">cancelar</button>
+            </div>
           </div>
           <div id="version-dropdown-list" class="divide-y divide-slate-100"></div>
         </div>
@@ -2369,7 +2651,23 @@ html_template = """<!DOCTYPE html>
         row.appendChild(itemBtn);
 
         const deletable = (v.type === 'revision') && !isCanonical;
-        if (deletable) {
+        if (versionCleanupMode && deletable) {
+          // QA-FEATURE FAXINA (Kimi 3): em modo faxina, a linha vira seleção múltipla
+          const cbWrap = document.createElement('div');
+          cbWrap.className = 'flex items-center pl-3 bg-rose-50';
+          const cb = document.createElement('input');
+          cb.type = 'checkbox';
+          cb.className = 'w-4 h-4 rounded border-rose-400 text-rose-600 cursor-pointer';
+          cb.checked = versionCleanupSelection.has(v.key);
+          cb.onchange = () => toggleVersionCleanupItem(v.key, cb);
+          cbWrap.appendChild(cb);
+          row.insertBefore(cbWrap, row.firstChild);
+          itemBtn.onclick = (ev) => {
+            ev.preventDefault();
+            cb.checked = !cb.checked;
+            toggleVersionCleanupItem(v.key, cb);
+          };
+        } else if (deletable) {
           const delBtn = document.createElement('button');
           delBtn.className = 'px-3 text-rose-600 hover:bg-rose-100 dark:hover:bg-rose-900/40 transition cursor-pointer flex items-center';
           delBtn.title = `Apagar a versão "${v.label}" (2 toques: clicar e confirmar)`;
@@ -2383,6 +2681,14 @@ html_template = """<!DOCTYPE html>
 
         listEl.appendChild(row);
       });
+
+      // QA-FEATURE FAXINA (Kimi 3): barra de ações em massa visível só no modo faxina
+      try {
+        const bar = document.getElementById('version-cleanup-bar');
+        if (bar) bar.classList.toggle('hidden', !versionCleanupMode);
+        const delBtn = document.getElementById('btn-version-cleanup-delete');
+        if (delBtn) delBtn.textContent = `🗑️ Apagar (${versionCleanupSelection.size})`;
+      } catch(e) {}
 
       // 2. BUTTON: TORNAR CANÔNICA (Make Canonical)
       const canonicalBtn = document.createElement('button');
@@ -2482,6 +2788,88 @@ html_template = """<!DOCTYPE html>
       const restam = Object.keys(revs).length;
       setStudioSaveStatus(true, `Versão "${deletedTag}" apagada. Restam ${restam} ${restam === 1 ? 'revisão' : 'revisões'} neste capítulo.`);
       showStudioToast(true, `Versão "${deletedTag}" apagada — restam ${restam}.`);
+    }
+
+    // ===== QA-FEATURE MODO FAXINA (Kimi 3, 2026-08-05) =====
+    // Pedido do Miguel: "botão para apagar VÁRIAS versões de uma vez" (25+ versões).
+    // Seleção múltipla no menu de versões + exclusão em massa com 1 confirmação (2 toques).
+    let versionCleanupMode = false;
+    const versionCleanupSelection = new Set();
+
+    function toggleVersionCleanupMode(ev) {
+      if (ev) ev.stopPropagation();
+      versionCleanupMode = !versionCleanupMode;
+      versionCleanupSelection.clear();
+      renderVersionTabs();
+      try { const menu = document.getElementById('version-dropdown-menu'); if (menu) menu.classList.remove('hidden'); } catch(e) {}
+    }
+
+    function versionCleanupSelectAll() {
+      const revs = getSavedRevisions(currentChapterKey);
+      const canonicalKey = getCanonicalVersionKey(currentChapterKey);
+      versionCleanupSelection.clear();
+      Object.keys(revs).forEach(k => { if (k !== canonicalKey) versionCleanupSelection.add(k); });
+      renderVersionTabs();
+      try { const menu = document.getElementById('version-dropdown-menu'); if (menu) menu.classList.remove('hidden'); } catch(e) {}
+    }
+
+    function toggleVersionCleanupItem(vKey, checkboxEl) {
+      if (checkboxEl.checked) versionCleanupSelection.add(vKey);
+      else versionCleanupSelection.delete(vKey);
+      const btn = document.getElementById('btn-version-cleanup-delete');
+      if (btn) btn.textContent = `🗑️ Apagar (${versionCleanupSelection.size})`;
+    }
+
+    function bulkDeleteSelectedVersions(btnEl) {
+      if (versionCleanupSelection.size === 0) {
+        showStudioToast(false, 'Nenhuma versão selecionada para apagar');
+        return;
+      }
+      if (btnEl.dataset.confirming !== '1') {
+        btnEl.dataset.confirming = '1';
+        const n = versionCleanupSelection.size;
+        btnEl.textContent = `⚠️ Confirmar apagar ${n}?`;
+        btnEl.classList.add('animate-pulse');
+        setTimeout(() => {
+          if (btnEl.dataset.confirming === '1') {
+            delete btnEl.dataset.confirming;
+            btnEl.classList.remove('animate-pulse');
+            btnEl.textContent = `🗑️ Apagar (${versionCleanupSelection.size})`;
+          }
+        }, 3500);
+        return;
+      }
+
+      const revs = getSavedRevisions(currentChapterKey);
+      const canonicalKey = getCanonicalVersionKey(currentChapterKey);
+      let apagadas = 0;
+      versionCleanupSelection.forEach(k => {
+        if (k !== canonicalKey && revs[k]) { delete revs[k]; apagadas++; }
+      });
+      const res = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
+      if (!res.ok) {
+        alert(storageFullHelpMessage(res.reason));
+        return;
+      }
+
+      if (versionCleanupSelection.has(currentVersionKey)) {
+        const remaining = Object.keys(revs);
+        currentVersionKey = remaining.length ? remaining[remaining.length - 1] : 'oficial';
+      }
+
+      versionCleanupSelection.clear();
+      versionCleanupMode = false;
+      renderVersionTabs();
+      renderMetrics();
+      renderSingleView();
+      if (currentViewMode === 'compare') updateCompare();
+      updateUrlHashRoute();
+      refreshStudioTitle();
+      try { const menu = document.getElementById('version-dropdown-menu'); if (menu) menu.classList.remove('hidden'); } catch(e) {}
+
+      const restam = Object.keys(revs).length;
+      setStudioSaveStatus(true, `${apagadas} ${apagadas === 1 ? 'versão apagada' : 'versões apagadas'} na faxina. Restam ${restam} ${restam === 1 ? 'revisão' : 'revisões'} neste capítulo.`);
+      showStudioToast(true, `${apagadas} ${apagadas === 1 ? 'versão apagada' : 'versões apagadas'} — restam ${restam}.`);
     }
 
     function saveRoteiroObs() {
