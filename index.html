@@ -2651,6 +2651,9 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
             const revs = getSavedRevisions(k);
             if (revs[storedCanonicalKey] && revs[storedCanonicalKey].content) {
               chContent = revs[storedCanonicalKey].content;
+            } else if (currentVolume === 'vol1_v7' && k === '01_estarei_vingado' && expVersionsCap1[storedCanonicalKey]) {
+              // QA-FIX NOME CANÔNICA (Kimi 3): canônica apontando para versão experimental
+              chContent = expVersionsCap1[storedCanonicalKey].content;
             }
           }
         } catch(e) {}
@@ -2834,6 +2837,21 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       return storageGetMigrated('miguel_book_canonical', chapKey) || 'oficial';
     }
 
+    // QA-FIX NOME CANÔNICA (Kimi 3, 2026-08-05): rótulo de exibição de qualquer
+    // versão — a identidade de origem nunca é apagada ao tornar canônica
+    // (pedido do Miguel: "mantém o nome, não tira o nome").
+    function getVersionLabelForKey(chapKey, vKey) {
+      const dataset = getCurrentVolumeDataset();
+      const ch = dataset[chapKey];
+      if (!vKey || vKey === 'oficial') return (ch && ch.versionTag) || 'Oficial';
+      if (currentVolume === 'vol1_v7' && chapKey === '01_estarei_vingado' && expVersionsCap1[vKey]) {
+        return expVersionsCap1[vKey].title;
+      }
+      const revs = getSavedRevisions(chapKey);
+      if (revs[vKey]) return revs[vKey].versionTag || vKey;
+      return vKey;
+    }
+
     function setCanonicalVersion(vKey, sourceBtn) {
       const canonRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
       if (!canonRes.ok) {
@@ -2846,8 +2864,11 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       renderMetrics();
       renderSingleView();
       flashButtonFeedback(sourceBtn, true, 'Canônica definida!');
-      showStudioToast(true, `"${vKey}" agora é a versão CANÔNICA!`);
-      alert(`👑 A versão "${vKey}" foi definida como a VERSÃO CANÔNICA OFICIAL do capítulo! Nenhuma outra versão foi apagada.`);
+      const canonLabel = getVersionLabelForKey(currentChapterKey, vKey);
+      showStudioToast(true, `👑 Canônica: ${canonLabel}`);
+      alert(`👑 A versão "${canonLabel}" foi definida como a VERSÃO CANÔNICA OFICIAL do capítulo!
+
+Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
     }
 
     function renderVersionTabs() {
@@ -4356,29 +4377,39 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       const dataset = getCurrentVolumeDataset();
       const ch = dataset[currentChapterKey];
       if (ch) {
-        const now = new Date().toISOString().slice(0, 10);
+        // QA-FIX NOME CANÔNICA (Kimi 3, 2026-08-05): a canônica vira PONTEIRO para
+        // a versão de origem — o NOME original nunca é apagado (pedido do Miguel:
+        // "depois que torna canônica mantém o nome, não tira o nome").
+        const originKey = currentVersionKey || 'oficial';
+        const originLabel = getVersionLabelForKey(currentChapterKey, originKey);
         ch.mainContent = finalTxt;
         ch.content = finalTxt;
-        ch.versionTag = `Kimi Canônica (${now})`;
 
         const canonWriteRes = safeLocalSet('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey, finalTxt);
+        const canonKeyRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), originKey);
         saveCustomChapters();
-        saveChapterPersistentState(currentChapterKey, finalTxt, "Canônica");
+        saveChapterPersistentState(currentChapterKey, finalTxt, originLabel);
         renderSingleView();
         updateRenderedFullChapterFromTextarea();
-        if (canonWriteRes.ok) {
+        renderVersionTabs();
+        renderMetrics();
+        if (canonWriteRes.ok && canonKeyRes.ok) {
           refreshStudioTitle();
           pulseStudioTitle();
           flashButtonFeedback(sourceBtn, true, 'Canônica atualizada!');
-          setStudioSaveStatus(true, `O capítulo foi atualizado e tornado CANÔNICO (${ch.versionTag}).`);
-          showStudioToast(true, 'Versão canônica atualizada!');
+          setStudioSaveStatus(true, `Versão canônica definida: "${originLabel}" — nome original preservado no menu.`);
+          showStudioToast(true, `👑 Canônica: ${originLabel}`);
           try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch(e) {}
-          alert(`👑 O Capítulo "${ch.title}" foi atualizado e tornado CANÔNICO com sucesso!`);
+          alert(`👑 O Capítulo "${ch.title}" agora tem como versão CANÔNICA:
+
+"${originLabel}"
+
+O nome original da versão foi preservado no menu de versões.`);
         } else {
           flashButtonFeedback(sourceBtn, false, 'Falha ao gravar canônica');
           setStudioSaveStatus(false, 'Falha ao gravar a canônica — aplicada apenas nesta sessão.');
           showStudioToast(false, 'Falha ao gravar a canônica');
-          alert(storageFullHelpMessage(canonWriteRes.reason) + `
+          alert(storageFullHelpMessage(canonWriteRes.ok ? canonKeyRes.reason : canonWriteRes.reason) + `
 
 (A versão canônica ficou aplicada apenas nesta sessão e se perderá ao recarregar.)`);
         }
