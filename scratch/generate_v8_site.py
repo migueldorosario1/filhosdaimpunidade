@@ -2259,7 +2259,10 @@ html_template = """<!DOCTYPE html>
       const activeVersionLabel = (currentChapterKey === 'full_book' || currentVersionKey === 'oficial')
         ? (ch.versionTag || 'Canônico')
         : (isExpActive ? (activeData.title || activeData.versionTag) : (activeData.versionTag || activeData.title || currentVersionKey));
-      titleElem.textContent = `📖 Estúdio Editorial — ${ch.title} (${activeVersionLabel})`;
+      // QA-FEATURE DESTAQUE CANÔNICA (Kimi 3, 2026-08-06): coroa no título quando a
+      // versão aberta é a canônica — nome original sempre visível (pedido do Miguel).
+      const isCanonKey = currentChapterKey !== 'full_book' && currentVersionKey === getCanonicalVersionKey(currentChapterKey);
+      titleElem.textContent = `📖 Estúdio Editorial — ${ch.title} (${isCanonKey ? '👑 ' : ''}${activeVersionLabel})`;
     }
 
     function loadChapter(chapKey) {
@@ -2458,12 +2461,17 @@ html_template = """<!DOCTYPE html>
       }
       const activeData = getActiveVersionData();
       const metrics = calculateMetrics(activeData.content);
-      
+
       setEl('metric-author', activeData.author || 'Kimi (ZCode) & Miguel');
       setEl('metric-version-tag', activeData.versionTag || dataset[currentChapterKey].versionTag);
       setEl('metric-words', metrics.words.toLocaleString('pt-BR'));
       setEl('metric-sentences', metrics.sentences.toLocaleString('pt-BR'));
-      setEl('metric-badge', activeData.badge || 'Oficial Protegida 🔒');
+      // QA-FEATURE DESTAQUE CANÔNICA (Kimi 3, 2026-08-06): quando a versão vista é a
+      // canônica, o badge diz isso COM o nome/origem — "cada post mantém seu nome
+      // original sempre, com destaque" (pedido do Miguel).
+      const isCanonNow = currentChapterKey !== 'full_book' && currentVersionKey === getCanonicalVersionKey(currentChapterKey);
+      const baseBadge = activeData.badge || 'Oficial Protegida 🔒';
+      setEl('metric-badge', isCanonNow ? `👑 CANÔNICA · ${baseBadge}` : baseBadge);
     }
 
     function getActiveVersionData() {
@@ -5475,7 +5483,10 @@ Regras:
             if (typeof dataset[chapKey] === 'object') {
               dataset[chapKey].mainContent = savedContent;
               dataset[chapKey].content = savedContent;
-              if (savedTag) dataset[chapKey].versionTag = savedTag;
+              // QA-FIX NOME ORIGINAL (Kimi 3, 2026-08-06): a etiqueta de versão NUNCA
+              // é sobrescrita pelo estado persistente — cada versão mantém seu nome
+              // original (R#/LLM de origem) para sempre (pedido do Miguel). A
+              // identidade canônica vem do ponteiro miguel_book_canonical, não da tag.
             }
           }
         });
