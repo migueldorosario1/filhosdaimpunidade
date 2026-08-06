@@ -678,6 +678,12 @@
                 <input type="checkbox" id="chk-fonte-resumo" checked onchange="fontesSyncFromParts()" class="w-4 h-4 rounded border-amber-500 text-amber-700 bg-white chk-fonte-parte">
                 <span>📋 Resumo <span class="font-normal text-slate-500">(arquitetura do livro — perguntas e molduras)</span></span>
               </label>
+              <!-- QA-FEATURE (Kimi 3, 2026-08-06): FONTES & ITENS CRIADOS PELO EDITOR na Central
+                   entram AQUI automaticamente como checkboxes (pedido do Miguel: "o item novo
+                   já entra lá, tanto item quanto fonte individual"). -->
+              <div id="fontes-custom-list" class="flex flex-col gap-2 pt-2 mt-1 border-t border-amber-200">
+                <!-- Dynamically rendered by renderFontesCustomCheckboxes() -->
+              </div>
             </div>
           </div>
 
@@ -823,11 +829,15 @@
             <i data-lucide="database" class="w-6 h-6"></i>
           </div>
           <div>
-            <h3 class="text-lg md:text-xl font-black font-display tracking-tight text-slate-900 dark:text-slate-100">🗄️ Central de Fontes & Banco de Links (~70 Documentos)</h3>
+            <h3 class="text-lg md:text-xl font-black font-display tracking-tight text-slate-900 dark:text-slate-100">🗄️ Central de Fontes & Banco de Links (<span id="database-total-count">…</span> Fontes)</h3>
             <p class="text-xs text-amber-950 dark:text-amber-300 font-extrabold">Mapa interativo de acórdãos STF, relatórios OFAC/EUA, entrevistas no YouTube e matérias primárias</p>
           </div>
         </div>
         <div class="flex items-center gap-2">
+          <button onclick="toggleAddSourcePanel()" title="Adicionar uma nova fonte ao acervo (livro, PDF, link, post, documento...)" class="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer">
+            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+            <span>➕ Adicionar Fonte</span>
+          </button>
           <button onclick="toggleCentralFullView()" title="Full View: Ocultar Filtros e Ver Só o Conteúdo" class="flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer">
             <i data-lucide="eye" class="w-4 h-4"></i>
             <span>👁️ Full View Conteúdo</span>
@@ -846,32 +856,46 @@
           <input id="source-search-input" oninput="filterSourceCenter()" type="text" placeholder="🔍 Buscar por termo (ex: STF, CNN, OFAC, YouTube, Intercept, Bannon, Magnitsky)..." class="w-full bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl pl-10 pr-4 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-amber-500 shadow-inner">
         </div>
 
-        <!-- Filter Category Badges -->
-        <div class="flex flex-wrap items-center gap-1.5 text-xs font-sans">
-          <button onclick="setSourceFilter('all')" id="source-tab-all" class="source-filter-btn px-3 py-1.5 rounded-lg font-black bg-amber-600 text-white shadow-sm cursor-pointer transition">
-            🌟 Todos (~70 Fontes)
-          </button>
-          <button onclick="setSourceFilter('livros')" id="source-tab-livros" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            📚 Livros & PDFs de Referência
-          </button>
-          <button onclick="setSourceFilter('yt')" id="source-tab-yt" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            🎥 Entrevistas YouTube (Com Transcrição)
-          </button>
-          <button onclick="setSourceFilter('stf')" id="source-tab-stf" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            ⚖️ STF & Judiciário
-          </button>
-          <button onclick="setSourceFilter('eua')" id="source-tab-eua" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            🇺🇸 EUA & OFAC (Magnitsky)
-          </button>
-          <button onclick="setSourceFilter('tarifaco')" id="source-tab-tarifaco" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            📰 Reportagens: Tarifaço
-          </button>
-          <button onclick="setSourceFilter('dinheiro')" id="source-tab-dinheiro" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            💰 Investigações: Texas & Dinheiro
-          </button>
-          <button onclick="setSourceFilter('x')" id="source-tab-x" class="source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition">
-            🐦 Posts de Prova no X
-          </button>
+        <!-- Filter Category Badges (QA-FEATURE Kimi 3, 06/08: abas dinâmicas — categorias novas criadas pelo editor ganham aba automaticamente) -->
+        <div id="source-filter-tabs" class="flex flex-wrap items-center gap-1.5 text-xs font-sans">
+          <!-- Dynamically rendered by renderSourceFilterTabs() -->
+        </div>
+        <p class="text-[11px] text-slate-500 dark:text-slate-400 font-semibold italic">✏️ Liberdade total: cada cartão tem 🗑️ para apagar a fonte e ➕ Item para anexar sub-itens (PDFs, links, trechos). Tudo que você criar entra automaticamente no Estúdio (memória de fontes).</p>
+      </div>
+
+      <!-- ADD-SOURCE PANEL (QA-FEATURE Kimi 3, 06/08 — pedido do Miguel: "adicionar fonte / adicionar item / para onde ela entra / apagar fonte") -->
+      <div id="add-source-panel" class="hidden p-5 border-b-2 border-emerald-300 dark:border-emerald-800 bg-emerald-50/80 dark:bg-emerald-950/40">
+        <div class="max-w-3xl mx-auto space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-black font-display text-emerald-950 dark:text-emerald-200">➕ Nova Fonte no Acervo</h4>
+            <button onclick="toggleAddSourcePanel(true)" class="text-xs font-black text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 cursor-pointer">✖ Fechar</button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input id="as-title" type="text" placeholder="Título da fonte * (ex: Livro 'Os Sertões', PDF do DOJ...)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            <input id="as-source" type="text" placeholder="Fonte / autor / veículo * (ex: Euclides da Cunha, DOJ, X @perfil)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            <div class="flex flex-col gap-1.5">
+              <select id="as-category" onchange="onAsCategoryChange()" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+                <!-- options by renderAsCategoryOptions() -->
+              </select>
+              <input id="as-new-category" type="text" placeholder="Nome da NOVA categoria (ex: Bibliografia Internacional)" class="hidden bg-white dark:bg-slate-800 border-2 border-emerald-400 dark:border-emerald-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            </div>
+            <input id="as-date" type="text" placeholder="Data (ex: 05/08/2026 ou 2026)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            <input id="as-link" type="text" placeholder="Link (https://...) — opcional mas recomendado" class="md:col-span-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            <textarea id="as-summary" rows="2" placeholder="Resumo / sinopse — o que essa fonte prova ou traz" class="md:col-span-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"></textarea>
+            <textarea id="as-transcript" rows="2" placeholder="Transcrição / fichamento / trechos citáveis (opcional — entra no prompt do Estúdio quando marcado)" class="md:col-span-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"></textarea>
+            <input id="as-status" type="text" placeholder="Status (ex: 📚 PDF no Acervo · 🎥 Transcrito ✅)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            <input id="as-badge" type="text" placeholder="Selo (ex: Prova STF, Exclusivo, Bibliografia)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+          </div>
+          <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+            <label for="as-studio" class="flex items-center gap-2 text-xs font-black text-emerald-950 dark:text-emerald-200 cursor-pointer">
+              <input type="checkbox" id="as-studio" checked class="w-4 h-4 rounded border-emerald-500 text-emerald-700 bg-white">
+              <span>🧠 Entrar automaticamente no Estúdio (checkbox da memória de fontes)</span>
+            </label>
+            <button onclick="saveNewSource(this)" class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-black transition shadow-sm flex items-center gap-2 cursor-pointer">
+              <i data-lucide="save" class="w-4 h-4"></i>
+              <span>💾 Gravar Fonte no Acervo</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -3636,6 +3660,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
     }
     function openDatabaseModal() {
       document.getElementById('modal-database').classList.remove('hidden');
+      renderSourceFilterTabs();
       setSourceFilter('all');
     }
     function closeDatabaseModal() { document.getElementById('modal-database').classList.add('hidden'); }
@@ -4187,17 +4212,142 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       }
     ];
 
+    // ============================================================
+    // QA-FEATURE (Kimi 3, 2026-08-06): CENTRAL DE FONTES VIVA
+    // Pedido do Miguel: "adicionar fonte, adicionar item, escolher para
+    // onde ela entra (categoria — inclusive criar nova), apagar fonte,
+    // apagar item — com liberdade total para aumentar o número de fontes".
+    // Categorias novas: Livros (bibliografia separada de PDF), PDFs
+    // Variados, STF & Judiciário, Justiça USA, Governo USA, Postagens
+    // Redes Sociais. Tudo persiste no navegador (localStorage) e entra
+    // automaticamente no checkbox da memória de fontes do Estúdio.
+    // ============================================================
+
+    const SOURCE_CATEGORIES_BASE = {
+      livros:      { icon: '📚', label: 'Livros & Bibliografia',                badge: '📚 Livro / Bibliografia',  color: 'bg-amber-100 text-amber-900 border-amber-300 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-800' },
+      pdfs:        { icon: '📄', label: 'PDFs Variados & Referência',           badge: '📄 PDF / Referência',      color: 'bg-stone-200 text-stone-900 border-stone-400 dark:bg-stone-800/60 dark:text-stone-300 dark:border-stone-700' },
+      yt:          { icon: '🎥', label: 'Entrevistas YouTube (Com Transcrição)', badge: '🎥 Vídeo YouTube',        color: 'bg-red-100 text-red-900 border-red-300 dark:bg-red-900/40 dark:text-red-300 dark:border-red-800' },
+      stf:         { icon: '⚖️', label: 'STF & Judiciário',                     badge: '⚖️ STF / Judiciário',      color: 'bg-blue-100 text-blue-900 border-blue-300 dark:bg-blue-900/40 dark:text-blue-300 dark:border-blue-800' },
+      justica_usa: { icon: '🦅', label: 'Justiça USA',                          badge: '🦅 Justiça USA',           color: 'bg-cyan-100 text-cyan-900 border-cyan-300 dark:bg-cyan-900/40 dark:text-cyan-300 dark:border-cyan-800' },
+      governo_usa: { icon: '🏛️', label: 'Governo USA',                          badge: '🏛️ Governo USA',           color: 'bg-indigo-100 text-indigo-900 border-indigo-300 dark:bg-indigo-900/40 dark:text-indigo-300 dark:border-indigo-800' },
+      tarifaco:    { icon: '📰', label: 'Reportagens: Tarifaço',                badge: '📰 Reportagem Tarifaço',   color: 'bg-orange-100 text-orange-900 border-orange-300 dark:bg-orange-900/40 dark:text-orange-300 dark:border-orange-800' },
+      dinheiro:    { icon: '💰', label: 'Investigações: Texas & Dinheiro',      badge: '💰 Texas & Dinheiro',      color: 'bg-emerald-100 text-emerald-900 border-emerald-300 dark:bg-emerald-900/40 dark:text-emerald-300 dark:border-emerald-800' },
+      redes:       { icon: '📱', label: 'Postagens Redes Sociais',              badge: '📱 Redes Sociais',         color: 'bg-sky-100 text-sky-900 border-sky-300 dark:bg-sky-900/40 dark:text-sky-300 dark:border-sky-800' },
+      outros:      { icon: '🗂️', label: 'Outros / Variados',                    badge: '🗂️ Documento',             color: 'bg-slate-100 text-slate-900 border-slate-300 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700' }
+    };
+
+    // Remapeamento pedido pelo Miguel (06/08): separar Livros de PDFs,
+    // dividir EUA em Governo USA / Justiça USA, X vira Redes Sociais.
+    // Aplicado na LEITURA — o acervo original embutido fica intacto.
+    const BUILTIN_CATEGORY_REMAP = {
+      pdf_dossie_havengate: 'pdfs',
+      pdf_sonho_loucos: 'pdfs',
+      pdf_form_adv_calixsan: 'pdfs',
+      pdf_braz_global_certificate: 'pdfs',
+      pdf_pesquisa_datafolha_cnt: 'pdfs',
+      pdf_acordao_stf_ap2782: 'stf',
+      eua_eo_14323: 'governo_usa',
+      eua_ofac_moraes: 'governo_usa',
+      eua_ustr_docket: 'governo_usa',
+      x_post_magnitsky: 'redes',
+      x_post_nota_conjunta: 'redes'
+    };
+
+    const CUSTOM_SOURCES_KEY = 'miguel_fontes_custom_v2';
+    const HIDDEN_SOURCES_KEY = 'miguel_fontes_hidden_v1';
+    const SOURCE_ITEMS_KEY = 'miguel_fontes_items_v1';
+    const CUSTOM_CATS_KEY = 'miguel_fontes_custom_cats_v1';
+
+    function escH(s) {
+      return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function safeHref(u) {
+      const s = String(u || '').trim();
+      return (/^https?:\/\//i.test(s)) ? s : '#';
+    }
+    function slugifyCat(name) {
+      return String(name || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 30) || 'outros';
+    }
+
+    function loadJsonKey(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        if (!raw) return fallback;
+        const parsed = JSON.parse(raw);
+        return parsed == null ? fallback : parsed;
+      } catch(e) { return fallback; }
+    }
+    function loadCustomSources() { const v = loadJsonKey(CUSTOM_SOURCES_KEY, []); return Array.isArray(v) ? v : []; }
+    function saveCustomSources(list) { safeLocalSet(CUSTOM_SOURCES_KEY, JSON.stringify(list)); }
+    function loadHiddenSourceIds() { const v = loadJsonKey(HIDDEN_SOURCES_KEY, []); return Array.isArray(v) ? v : []; }
+    function saveHiddenSourceIds(list) { safeLocalSet(HIDDEN_SOURCES_KEY, JSON.stringify(list)); }
+    function loadSourceItemsOverlay() { const v = loadJsonKey(SOURCE_ITEMS_KEY, {}); return (v && typeof v === 'object' && !Array.isArray(v)) ? v : {}; }
+    function saveSourceItemsOverlay(map) { safeLocalSet(SOURCE_ITEMS_KEY, JSON.stringify(map)); }
+    function loadCustomCategories() { const v = loadJsonKey(CUSTOM_CATS_KEY, {}); return (v && typeof v === 'object' && !Array.isArray(v)) ? v : {}; }
+    function saveCustomCategories(map) { safeLocalSet(CUSTOM_CATS_KEY, JSON.stringify(map)); }
+
+    function getCategoryRegistry() {
+      const reg = Object.assign({}, SOURCE_CATEGORIES_BASE);
+      const customCats = loadCustomCategories();
+      Object.keys(customCats).forEach(k => {
+        reg[k] = {
+          icon: customCats[k].icon || '🗃️',
+          label: customCats[k].label || k,
+          badge: (customCats[k].icon || '🗃️') + ' ' + (customCats[k].label || k),
+          color: 'bg-violet-100 text-violet-900 border-violet-300 dark:bg-violet-900/40 dark:text-violet-300 dark:border-violet-800'
+        };
+      });
+      return reg;
+    }
+
+    // Acervo completo = embutido (menos ocultas, com remap de categoria e
+    // itens-anexo do overlay) + fontes criadas pelo editor.
+    function getAllSources() {
+      const hidden = loadHiddenSourceIds();
+      const itemsOverlay = loadSourceItemsOverlay();
+      const builtin = sourcesDatabase
+        .filter(s => hidden.indexOf(s.id) === -1)
+        .map(s => Object.assign({}, s, {
+          category: BUILTIN_CATEGORY_REMAP[s.id] || s.category,
+          items: Array.isArray(itemsOverlay[s.id]) ? itemsOverlay[s.id] : []
+        }));
+      const custom = loadCustomSources().map(s => Object.assign({ items: [] }, s, { custom: true }));
+      return builtin.concat(custom);
+    }
+
     let currentSourceFilter = 'all';
+
+    function renderSourceFilterTabs() {
+      const wrap = document.getElementById('source-filter-tabs');
+      if (!wrap) return;
+      const reg = getCategoryRegistry();
+      const all = getAllSources();
+      const countByCat = {};
+      all.forEach(s => { countByCat[s.category] = (countByCat[s.category] || 0) + 1; });
+
+      const btnBase = 'source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition';
+      let html = `<button onclick="setSourceFilter('all')" id="source-tab-all" class="${btnBase}">🌟 Todas (${all.length})</button>`;
+      // Todas as categorias aparecem (mesmo vazias — prontas para receber fontes novas).
+      Object.keys(reg).forEach(key => {
+        const n = countByCat[key] || 0;
+        html += `<button onclick="setSourceFilter('${key}')" id="source-tab-${key}" class="${btnBase}">${reg[key].icon} ${escH(reg[key].label)}${n > 0 ? ` (${n})` : ''}</button>`;
+      });
+
+      const hiddenCount = loadHiddenSourceIds().length;
+      if (hiddenCount > 0) {
+        html += `<button onclick="restoreHiddenSources()" title="As fontes embutidas que você apagou ficam só ocultas — clique para trazer de volta" class="px-3 py-1.5 rounded-lg font-bold bg-rose-100 dark:bg-rose-950/50 text-rose-800 dark:text-rose-300 hover:bg-rose-200 border border-rose-300 dark:border-rose-800 cursor-pointer transition">♻️ ${hiddenCount} apagada${hiddenCount > 1 ? 's' : ''} — restaurar</button>`;
+      }
+      wrap.innerHTML = html;
+
+      const totalEl = document.getElementById('database-total-count');
+      if (totalEl) totalEl.textContent = all.length;
+      const activeTab = document.getElementById('source-tab-' + currentSourceFilter);
+      if (activeTab) activeTab.className = 'source-filter-btn px-3 py-1.5 rounded-lg font-black bg-amber-600 text-white shadow-sm cursor-pointer transition';
+    }
 
     function setSourceFilter(cat) {
       currentSourceFilter = cat;
-      document.querySelectorAll('.source-filter-btn').forEach(btn => {
-        btn.className = "source-filter-btn px-3 py-1.5 rounded-lg font-bold bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-slate-200 hover:bg-slate-300 cursor-pointer transition";
-      });
-      const activeTab = document.getElementById('source-tab-' + cat);
-      if (activeTab) {
-        activeTab.className = "source-filter-btn px-3 py-1.5 rounded-lg font-black bg-amber-600 text-white shadow-sm cursor-pointer transition";
-      }
+      renderSourceFilterTabs();
       filterSourceCenter();
     }
 
@@ -4210,8 +4360,9 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
     function renderSourceCenterCards(filterCat = 'all', searchQuery = '') {
       const grid = document.getElementById('source-cards-grid');
       if (!grid) return;
+      const reg = getCategoryRegistry();
 
-      let filtered = sourcesDatabase;
+      let filtered = getAllSources();
       if (filterCat !== 'all') {
         filtered = filtered.filter(s => s.category === filterCat);
       }
@@ -4219,68 +4370,93 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       if (searchQuery && searchQuery.trim().length > 0) {
         const q = searchQuery.toLowerCase().trim();
         filtered = filtered.filter(s =>
-          s.title.toLowerCase().includes(q) ||
-          s.summary.toLowerCase().includes(q) ||
-          s.source.toLowerCase().includes(q) ||
-          s.date.toLowerCase().includes(q)
+          (s.title || '').toLowerCase().includes(q) ||
+          (s.summary || '').toLowerCase().includes(q) ||
+          (s.source || '').toLowerCase().includes(q) ||
+          (s.date || '').toLowerCase().includes(q)
         );
       }
 
       if (filtered.length === 0) {
         grid.innerHTML = `
           <div class="col-span-full p-8 text-center bg-white dark:bg-slate-900 border-2 border-dashed border-slate-300 dark:border-slate-800 rounded-2xl">
-            <p class="text-sm font-bold text-slate-500">🔍 Nenhuma fonte encontrada com o termo "${searchQuery}".</p>
+            <p class="text-sm font-bold text-slate-500">🔍 Nenhuma fonte encontrada${searchQuery ? ` com o termo "${escH(searchQuery)}"` : ' nesta categoria ainda'}.</p>
+            <p class="text-xs font-semibold text-slate-400 mt-2">Use o botão <strong>➕ Adicionar Fonte</strong> no topo para acrescentar a primeira.</p>
           </div>
         `;
         return;
       }
 
-      const catBadges = {
-        livros: { icon: 'book', color: 'bg-amber-100 text-amber-900 border-amber-300 dark:bg-amber-900/40 dark:text-amber-300 dark:border-amber-800', label: '📚 Livros & PDFs' },
-        yt: { icon: 'youtube', color: 'bg-red-100 text-red-900 border-red-300 dark:bg-red-900/40 dark:text-red-300 dark:border-red-800', label: '🎥 Vídeo YouTube' },
-        stf: { icon: 'scale', color: 'bg-blue-100 text-blue-900 border-blue-300 dark:bg-blue-900/40 dark:text-blue-300 dark:border-blue-800', label: '⚖️ STF / Judiciário' },
-        eua: { icon: 'globe', color: 'bg-indigo-100 text-indigo-900 border-indigo-300 dark:bg-indigo-900/40 dark:text-indigo-300 dark:border-indigo-800', label: '🇺🇸 EUA / OFAC' },
-        tarifaco: { icon: 'newspaper', color: 'bg-orange-100 text-orange-900 border-orange-300 dark:bg-orange-900/40 dark:text-orange-300 dark:border-orange-800', label: '📰 Reportagem Tarifaço' },
-        dinheiro: { icon: 'dollar-sign', color: 'bg-emerald-100 text-emerald-900 border-emerald-300 dark:bg-emerald-900/40 dark:text-emerald-300 dark:border-emerald-800', label: '💰 Texas & Dinheiro' },
-        x: { icon: 'twitter', color: 'bg-sky-100 text-sky-900 border-sky-300 dark:bg-sky-900/40 dark:text-sky-300 dark:border-sky-800', label: '🐦 Post no X' }
-      };
-
       grid.innerHTML = filtered.map(item => {
-        const catInfo = catBadges[item.category] || { icon: 'file-text', color: 'bg-slate-100 text-slate-900 border-slate-300', label: 'Documento' };
+        const catInfo = reg[item.category] || { icon: '🗂️', label: item.category, badge: '🗂️ Documento', color: 'bg-slate-100 text-slate-900 border-slate-300' };
         const actionLabel = item.category === 'yt' ? 'Ver no YouTube 🎥' : 'Acessar Fonte ↗';
+        const items = Array.isArray(item.items) ? item.items : [];
+
+        const itemsHtml = items.length > 0 ? `
+          <div class="space-y-1.5 pt-2 border-t border-dashed border-slate-200 dark:border-slate-800">
+            <div class="text-[10px] font-mono font-black uppercase tracking-wider text-slate-500 dark:text-slate-400">📎 Itens anexos (${items.length})</div>
+            ${items.map((it, idx) => `
+              <div class="flex items-center justify-between gap-2 text-xs bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-lg px-2.5 py-1.5">
+                <span class="font-bold text-slate-800 dark:text-slate-200 truncate">📎 ${it.link && it.link !== '#' ? `<a href="${safeHref(it.link)}" target="_blank" rel="noopener noreferrer" class="text-indigo-700 dark:text-indigo-400 hover:underline">${escH(it.title)}</a>` : escH(it.title)}${it.note ? ` <span class="font-normal text-slate-500">— ${escH(it.note)}</span>` : ''}</span>
+                <button onclick="deleteSourceItem('${item.id}', '${it.id}')" title="Apagar este item" class="shrink-0 text-rose-500 hover:text-rose-700 font-black cursor-pointer px-1">🗑️</button>
+              </div>
+            `).join('')}
+          </div>
+        ` : '';
 
         return `
           <div class="bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-500/60 rounded-2xl p-5 shadow-sm hover:shadow-md transition space-y-3 flex flex-col justify-between">
             <div class="space-y-2">
               <div class="flex items-center justify-between gap-2">
                 <span class="text-[11px] font-mono font-black border px-2.5 py-0.5 rounded-lg ${catInfo.color}">
-                  ${catInfo.label}
+                  ${catInfo.badge}${item.custom ? ' · ✍️ sua' : ''}
                 </span>
-                <span class="text-[11px] font-mono font-bold text-slate-500 dark:text-slate-400">
-                  📅 ${item.date}
-                </span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[11px] font-mono font-bold text-slate-500 dark:text-slate-400">
+                    📅 ${escH(item.date)}
+                  </span>
+                  <button onclick="confirmDeleteSource('${item.id}')" title="Apagar esta fonte do acervo" class="text-rose-400 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40 rounded-lg p-1 transition cursor-pointer">
+                    <i data-lucide="trash-2" class="w-4 h-4"></i>
+                  </button>
+                </div>
               </div>
 
               <h4 class="text-base font-black font-display text-slate-900 dark:text-slate-100 leading-snug">
-                ${item.title}
+                ${escH(item.title)}
               </h4>
 
               <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-sans">
-                ${item.summary}
+                ${escH(item.summary)}
               </p>
+
+              ${itemsHtml}
+
+              <div id="item-form-${item.id}" class="hidden space-y-1.5 bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-2.5">
+                <input id="ni-title-${item.id}" type="text" placeholder="Título do item * (ex: PDF do capítulo 3, post, trecho)" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+                <input id="ni-link-${item.id}" type="text" placeholder="Link do item (opcional)" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+                <input id="ni-note-${item.id}" type="text" placeholder="Nota rápida (opcional — entra no prompt do Estúdio)" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+                <div class="flex justify-end gap-2 pt-0.5">
+                  <button onclick="toggleItemForm('${item.id}', true)" class="px-2.5 py-1 text-[11px] font-black text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 cursor-pointer">Cancelar</button>
+                  <button onclick="saveSourceItem('${item.id}')" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-[11px] font-black transition cursor-pointer">💾 Gravar item</button>
+                </div>
+              </div>
             </div>
 
             <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2">
               <span class="text-xs font-mono font-bold text-amber-900 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-1 rounded-md border border-amber-200 dark:border-amber-800">
-                ${item.status}
+                ${escH(item.status)}
               </span>
 
               <div class="flex items-center gap-2">
+                <button onclick="toggleItemForm('${item.id}')" title="Anexar um item a esta fonte (PDF, link, trecho, post)" class="px-3 py-1.5 bg-emerald-100 hover:bg-emerald-200 dark:bg-emerald-900/40 dark:hover:bg-emerald-900/60 text-emerald-900 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+                  <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                  <span>➕ Item</span>
+                </button>
                 <button onclick="openTranscriptById('${item.id}')" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer">
                   <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
                   <span>📖 Transcrição / Fichamento</span>
                 </button>
-                <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer">
+                <a href="${safeHref(item.link)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer">
                   <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
                   <span>${actionLabel}</span>
                 </a>
@@ -4293,8 +4469,194 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       if (window.lucide) lucide.createIcons();
     }
 
+    // ---------- ADICIONAR FONTE (pedido do Miguel) ----------
+    function toggleAddSourcePanel(forceClose) {
+      const panel = document.getElementById('add-source-panel');
+      if (!panel) return;
+      const willShow = forceClose === true ? false : panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !willShow);
+      if (willShow) {
+        renderAsCategoryOptions();
+        const t = document.getElementById('as-title');
+        if (t) t.focus();
+      }
+    }
+
+    function renderAsCategoryOptions() {
+      const sel = document.getElementById('as-category');
+      if (!sel) return;
+      const reg = getCategoryRegistry();
+      let html = '';
+      Object.keys(reg).forEach(key => {
+        html += `<option value="${key}">${reg[key].icon} ${escH(reg[key].label)}</option>`;
+      });
+      html += `<option value="__nova__">✨ ➕ Criar NOVA categoria...</option>`;
+      sel.innerHTML = html;
+      onAsCategoryChange();
+    }
+
+    function onAsCategoryChange() {
+      const sel = document.getElementById('as-category');
+      const inp = document.getElementById('as-new-category');
+      if (!sel || !inp) return;
+      const isNew = sel.value === '__nova__';
+      inp.classList.toggle('hidden', !isNew);
+      if (isNew) inp.focus();
+    }
+
+    function saveNewSource(btn) {
+      const val = id => { const el = document.getElementById(id); return el ? String(el.value || '').trim() : ''; };
+      const title = val('as-title');
+      const sourceName = val('as-source');
+      if (!title || !sourceName) {
+        flashButtonFeedback(btn, false, 'Preencha título e fonte/autor');
+        return;
+      }
+
+      let catKey = val('as-category');
+      if (catKey === '__nova__') {
+        const newCatName = val('as-new-category');
+        if (!newCatName) {
+          flashButtonFeedback(btn, false, 'Dê um nome à nova categoria');
+          return;
+        }
+        catKey = 'cat_' + slugifyCat(newCatName);
+        const customCats = loadCustomCategories();
+        if (!customCats[catKey]) {
+          customCats[catKey] = { icon: '🗃️', label: newCatName };
+          saveCustomCategories(customCats);
+        }
+      }
+
+      const studioChk = document.getElementById('as-studio');
+      const newSource = {
+        id: 'custom_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+        category: catKey,
+        date: val('as-date') || new Date().toLocaleDateString('pt-BR'),
+        source: sourceName,
+        title: title,
+        summary: val('as-summary') || 'Fonte acrescentada manualmente pelo editor na Central de Fontes.',
+        link: safeHref(val('as-link')),
+        status: val('as-status') || '➕ Adicionada pelo editor',
+        badge: val('as-badge') || 'Fonte do Editor',
+        transcript: val('as-transcript'),
+        custom: true,
+        studio: studioChk ? studioChk.checked : true,
+        items: []
+      };
+
+      const list = loadCustomSources();
+      list.push(newSource);
+      const res = safeLocalSet(CUSTOM_SOURCES_KEY, JSON.stringify(list));
+      if (!res.ok) {
+        alert(storageFullHelpMessage(res.reason));
+        return;
+      }
+
+      ['as-title', 'as-source', 'as-date', 'as-link', 'as-summary', 'as-transcript', 'as-status', 'as-badge', 'as-new-category'].forEach(id => {
+        const el = document.getElementById(id); if (el) el.value = '';
+      });
+      toggleAddSourcePanel(true);
+      setSourceFilter(catKey);
+      renderFontesCustomCheckboxes();
+      alert('✅ Fonte gravada no acervo!\n\n"' + title + '" entrou em ' + (getCategoryRegistry()[catKey] ? getCategoryRegistry()[catKey].label : catKey) + (newSource.studio ? ' e já aparece no checkbox da memória de fontes do Estúdio.' : '.'));
+    }
+
+    // ---------- APAGAR FONTE (pedido do Miguel: "entrou fonte errada") ----------
+    function confirmDeleteSource(sourceId) {
+      const item = getAllSources().find(s => s.id === sourceId);
+      if (!item) return;
+      const isBuiltin = !item.custom;
+      const msg = isBuiltin
+        ? `🗑️ Apagar a fonte "${item.title}"?\n\n(Ela é do acervo original: fica só OCULTA e dá para restaurar depois pelo botão ♻️ nas abas.)`
+        : `🗑️ Apagar DEFINITIVAMENTE a fonte "${item.title}" que você criou?`;
+      if (!confirm(msg)) return;
+
+      if (isBuiltin) {
+        const hidden = loadHiddenSourceIds();
+        if (hidden.indexOf(sourceId) === -1) { hidden.push(sourceId); saveHiddenSourceIds(hidden); }
+      } else {
+        saveCustomSources(loadCustomSources().filter(s => s.id !== sourceId));
+      }
+      renderSourceFilterTabs();
+      filterSourceCenter();
+      renderFontesCustomCheckboxes();
+    }
+
+    function restoreHiddenSources() {
+      saveHiddenSourceIds([]);
+      renderSourceFilterTabs();
+      filterSourceCenter();
+      alert('♻️ Pronto! As fontes do acervo original voltaram a aparecer.');
+    }
+
+    // ---------- ITENS ANEXOS A UMA FONTE (adicionar/apagar item) ----------
+    function toggleItemForm(sourceId, forceClose) {
+      const form = document.getElementById('item-form-' + sourceId);
+      if (!form) return;
+      const willShow = forceClose === true ? false : form.classList.contains('hidden');
+      form.classList.toggle('hidden', !willShow);
+      if (willShow) {
+        const t = document.getElementById('ni-title-' + sourceId);
+        if (t) t.focus();
+      }
+    }
+
+    function saveSourceItem(sourceId) {
+      const val = id => { const el = document.getElementById(id); return el ? String(el.value || '').trim() : ''; };
+      const title = val('ni-title-' + sourceId);
+      if (!title) { alert('⚠️ Dê um título ao item.'); return; }
+      const newItem = {
+        id: 'it_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
+        title: title,
+        link: safeHref(val('ni-link-' + sourceId)),
+        note: val('ni-note-' + sourceId)
+      };
+
+      const isCustom = loadCustomSources().some(s => s.id === sourceId);
+      if (isCustom) {
+        const list = loadCustomSources();
+        const src = list.find(s => s.id === sourceId);
+        if (!src) return;
+        if (!Array.isArray(src.items)) src.items = [];
+        src.items.push(newItem);
+        saveCustomSources(list);
+      } else {
+        const overlay = loadSourceItemsOverlay();
+        if (!Array.isArray(overlay[sourceId])) overlay[sourceId] = [];
+        overlay[sourceId].push(newItem);
+        saveSourceItemsOverlay(overlay);
+      }
+
+      toggleItemForm(sourceId, true);
+      filterSourceCenter();
+      renderFontesCustomCheckboxes();
+    }
+
+    function deleteSourceItem(sourceId, itemId) {
+      if (!confirm('🗑️ Apagar este item anexo?')) return;
+      const isCustom = loadCustomSources().some(s => s.id === sourceId);
+      if (isCustom) {
+        const list = loadCustomSources();
+        const src = list.find(s => s.id === sourceId);
+        if (src && Array.isArray(src.items)) {
+          src.items = src.items.filter(it => it.id !== itemId);
+          saveCustomSources(list);
+        }
+      } else {
+        const overlay = loadSourceItemsOverlay();
+        if (Array.isArray(overlay[sourceId])) {
+          overlay[sourceId] = overlay[sourceId].filter(it => it.id !== itemId);
+          saveSourceItemsOverlay(overlay);
+        }
+      }
+      filterSourceCenter();
+      renderFontesCustomCheckboxes();
+    }
+
+
     function openTranscriptById(itemId) {
-      const item = sourcesDatabase.find(s => s.id === itemId);
+      const item = getAllSources().find(s => s.id === itemId);
       if (!item) return;
       
       // If transcript does not exist or is empty, generate an instant, structured breakdown on the fly!
@@ -5019,30 +5381,90 @@ O nome e o texto ficam na versão de origem — a marcação agora é verdadeira
     }
 
     function fontesToggleAll(masterAll) {
-      document.querySelectorAll('.chk-fonte-parte').forEach(cb => { cb.checked = masterAll.checked; });
+      document.querySelectorAll('.chk-fonte-parte, .chk-fonte-custom').forEach(cb => { cb.checked = masterAll.checked; });
       saveFontesSelection();
     }
 
     function fontesSyncFromParts() {
-      const parts = Array.from(document.querySelectorAll('.chk-fonte-parte'));
+      const parts = Array.from(document.querySelectorAll('.chk-fonte-parte, .chk-fonte-custom'));
       const todas = document.getElementById('chk-fontes-todas');
       if (todas) {
         const checkedCount = parts.filter(cb => cb.checked).length;
-        todas.checked = checkedCount === parts.length;
+        todas.checked = checkedCount === parts.length && parts.length > 0;
         todas.indeterminate = checkedCount > 0 && checkedCount < parts.length;
       }
       saveFontesSelection();
+    }
+
+    // Fontes & itens criados pelo editor na Central → viram checkboxes aqui.
+    function getFontesCustomEntries() {
+      const entries = [];
+      const reg = getCategoryRegistry();
+      getAllSources().forEach(s => {
+        if (s.custom && s.studio !== false) {
+          const catIcon = (reg[s.category] && reg[s.category].icon) || '🗃️';
+          entries.push({
+            id: s.id,
+            kind: 'fonte',
+            label: `${catIcon} ${s.title}`,
+            sub: `fonte sua · ${reg[s.category] ? reg[s.category].label : s.category}`,
+            text: `FONTE ACRESCENTADA PELO EDITOR: ${s.title}\nOrigem: ${s.source} (${s.date})${s.link && s.link !== '#' ? `\nLink: ${s.link}` : ''}\nResumo: ${s.summary}${s.transcript && s.transcript.trim() ? `\nFichamento/Transcrição:\n${s.transcript}` : ''}`
+          });
+        }
+        (Array.isArray(s.items) ? s.items : []).forEach(it => {
+          entries.push({
+            id: it.id,
+            kind: 'item',
+            label: `📎 ${it.title}`,
+            sub: `item de: ${s.title}`,
+            text: `ITEM ANEXO da fonte "${s.title}": ${it.title}${it.link && it.link !== '#' ? `\nLink: ${it.link}` : ''}${it.note ? `\nNota do editor: ${it.note}` : ''}`
+          });
+        });
+      });
+      return entries;
+    }
+
+    let fontesCustomSavedState = {};
+
+    function renderFontesCustomCheckboxes() {
+      const wrap = document.getElementById('fontes-custom-list');
+      if (!wrap) return;
+      const entries = getFontesCustomEntries();
+      if (entries.length === 0) {
+        wrap.innerHTML = '';
+        return;
+      }
+      wrap.innerHTML = `
+        <div class="text-[10px] font-mono font-black uppercase tracking-wider text-emerald-800 pt-1">➕ Suas fontes & itens da Central (${entries.length})</div>
+        ${entries.map(e => {
+          const checked = fontesCustomSavedState.hasOwnProperty(e.id) ? fontesCustomSavedState[e.id] : true;
+          return `
+          <label class="flex items-start gap-2.5 text-xs text-slate-800 font-bold cursor-pointer bg-emerald-50/60 px-2.5 py-1.5 rounded-lg border border-emerald-200">
+            <input type="checkbox" data-fc-id="${escH(e.id)}" ${checked ? 'checked' : ''} onchange="fontesSyncFromParts()" class="w-4 h-4 mt-0.5 rounded border-emerald-500 text-emerald-700 bg-white chk-fonte-custom">
+            <span>${escH(e.label)} <span class="font-normal text-slate-500">(${escH(e.sub)})</span></span>
+          </label>`;
+        }).join('')}
+      `;
+      fontesSyncFromParts();
     }
 
     function getSelectedFontesParts() {
       const master = document.getElementById('chk-consult-canonical-memory');
       if (!master || !master.checked) return null;
       const get = id => { const el = document.getElementById(id); return !!(el && el.checked); };
+      const customChecked = [];
+      document.querySelectorAll('.chk-fonte-custom').forEach(cb => {
+        if (!cb.checked) return;
+        const fcId = cb.getAttribute('data-fc-id');
+        const entry = getFontesCustomEntries().find(e => e.id === fcId);
+        if (entry) customChecked.push({ label: entry.label, text: entry.text });
+      });
       return {
         transcricoes: get('chk-fonte-transcricoes'),
         reportagens: get('chk-fonte-reportagens'),
         historico: get('chk-fonte-historico'),
-        resumo: get('chk-fonte-resumo')
+        resumo: get('chk-fonte-resumo'),
+        custom: customChecked
       };
     }
 
@@ -5050,12 +5472,19 @@ O nome e o texto ficam na versão de origem — a marcação agora é verdadeira
       try {
         const master = document.getElementById('chk-consult-canonical-memory');
         const get = id => { const el = document.getElementById(id); return !!(el && el.checked); };
+        const customState = {};
+        document.querySelectorAll('.chk-fonte-custom').forEach(cb => {
+          const fcId = cb.getAttribute('data-fc-id');
+          if (fcId) customState[fcId] = !!cb.checked;
+        });
+        fontesCustomSavedState = Object.assign({}, fontesCustomSavedState, customState);
         safeLocalSet(FONTES_SELECTION_KEY, JSON.stringify({
           master: !!(master && master.checked),
           transcricoes: get('chk-fonte-transcricoes'),
           reportagens: get('chk-fonte-reportagens'),
           historico: get('chk-fonte-historico'),
-          resumo: get('chk-fonte-resumo')
+          resumo: get('chk-fonte-resumo'),
+          custom: fontesCustomSavedState
         }));
       } catch(e) {}
     }
@@ -5063,7 +5492,7 @@ O nome e o texto ficam na versão de origem — a marcação agora é verdadeira
     function initFontesSelection() {
       try {
         const raw = localStorage.getItem(FONTES_SELECTION_KEY);
-        if (!raw) return;
+        if (!raw) { renderFontesCustomCheckboxes(); return; }
         const state = JSON.parse(raw);
         const set = (id, val) => { const el = document.getElementById(id); if (el && typeof val === 'boolean') el.checked = val; };
         set('chk-consult-canonical-memory', state.master);
@@ -5071,8 +5500,10 @@ O nome e o texto ficam na versão de origem — a marcação agora é verdadeira
         set('chk-fonte-reportagens', state.reportagens);
         set('chk-fonte-historico', state.historico);
         set('chk-fonte-resumo', state.resumo);
+        if (state.custom && typeof state.custom === 'object') fontesCustomSavedState = state.custom;
         const panel = document.getElementById('fontes-subpanel');
         if (panel) panel.classList.toggle('hidden', !state.master);
+        renderFontesCustomCheckboxes();
         fontesSyncFromParts();
       } catch(e) {}
     }
@@ -5125,6 +5556,13 @@ ${bancoLinksMarkdown.trim()}`);
 ${fonteHistorico.trim()}`);
         if (fontesSel.resumo && typeof fonteResumo === 'string' && fonteResumo.trim().length > 0) fonteParts.push(`--- 📋 RESUMO (arquitetura do livro — perguntas e molduras) ---
 ${fonteResumo.trim()}`);
+        // QA-FEATURE (Kimi 3, 2026-08-06): fontes & itens criados pelo editor
+        // na Central entram no prompt quando marcados (pedido do Miguel).
+        if (fontesSel.custom && fontesSel.custom.length > 0) fonteParts.push(`--- ➕ FONTES & ITENS ACRESCENTADOS PELO EDITOR (Central de Fontes viva) ---
+${fontesSel.custom.map(c => `### ${c.label}
+${c.text}`).join(`
+
+`)}`);
         if (fonteParts.length > 0) {
           fontesBlock = `
 
