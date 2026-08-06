@@ -881,6 +881,16 @@
             </div>
             <input id="as-date" type="text" placeholder="Data (ex: 05/08/2026 ou 2026)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
             <input id="as-link" type="text" placeholder="Link (https://...) — opcional mas recomendado" class="md:col-span-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+            <!-- UPLOAD DE ARQUIVO (pedido do Miguel, 06/08: "subir o arquivo que está no meu computador") -->
+            <div class="md:col-span-2 flex flex-wrap items-center gap-3 bg-white dark:bg-slate-800 border-2 border-dashed border-emerald-300 dark:border-emerald-700 rounded-xl px-3 py-2.5">
+              <label for="as-file" class="flex items-center gap-2 text-xs font-black text-emerald-900 dark:text-emerald-300 cursor-pointer hover:text-emerald-700">
+                <i data-lucide="upload" class="w-4 h-4"></i>
+                <span>📁 Subir arquivo do seu computador (PDF, TXT, MD, CSV...)</span>
+              </label>
+              <input type="file" id="as-file" onchange="onAsFileChange()" accept=".pdf,.txt,.md,.markdown,.csv,.json,.srt,.vtt,.rtf,.doc,.docx" class="text-xs font-bold text-slate-700 dark:text-slate-300 file:mr-3 file:px-3 file:py-1.5 file:rounded-lg file:border-0 file:bg-emerald-600 file:text-white file:font-black file:cursor-pointer hover:file:bg-emerald-700">
+              <span id="as-file-info" class="text-[11px] font-mono font-bold text-slate-500"></span>
+            </div>
+            <p class="md:col-span-2 -mt-1 text-[11px] text-emerald-900/80 dark:text-emerald-300/80 font-semibold italic">💡 O arquivo fica gravado no navegador deste computador e ganha botão <strong>📁 Abrir</strong> no cartão. Se for TXT/MD, o texto já entra no fichamento sozinho; se for PDF, o Estúdio tenta extrair o texto automaticamente.</p>
             <textarea id="as-summary" rows="2" placeholder="Resumo / sinopse — o que essa fonte prova ou traz" class="md:col-span-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"></textarea>
             <textarea id="as-transcript" rows="2" placeholder="Transcrição / fichamento / trechos citáveis (opcional — entra no prompt do Estúdio quando marcado)" class="md:col-span-2 bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"></textarea>
             <input id="as-status" type="text" placeholder="Status (ex: 📚 PDF no Acervo · 🎥 Transcrito ✅)" class="bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
@@ -4397,7 +4407,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
             <div class="text-[10px] font-mono font-black uppercase tracking-wider text-slate-500 dark:text-slate-400">📎 Itens anexos (${items.length})</div>
             ${items.map((it, idx) => `
               <div class="flex items-center justify-between gap-2 text-xs bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-lg px-2.5 py-1.5">
-                <span class="font-bold text-slate-800 dark:text-slate-200 truncate">📎 ${it.link && it.link !== '#' ? `<a href="${safeHref(it.link)}" target="_blank" rel="noopener noreferrer" class="text-indigo-700 dark:text-indigo-400 hover:underline">${escH(it.title)}</a>` : escH(it.title)}${it.note ? ` <span class="font-normal text-slate-500">— ${escH(it.note)}</span>` : ''}</span>
+                <span class="font-bold text-slate-800 dark:text-slate-200 truncate">📎 ${it.fileId ? `<button onclick="openSourceFile('${it.fileId}')" title="Abrir arquivo: ${escH(it.fileName || 'anexo')}" class="text-indigo-700 dark:text-indigo-400 hover:underline cursor-pointer">${escH(it.title)} 📁</button>` : (it.link && it.link !== '#' ? `<a href="${safeHref(it.link)}" target="_blank" rel="noopener noreferrer" class="text-indigo-700 dark:text-indigo-400 hover:underline">${escH(it.title)}</a>` : escH(it.title))}${it.note ? ` <span class="font-normal text-slate-500">— ${escH(it.note)}</span>` : ''}</span>
                 <button onclick="deleteSourceItem('${item.id}', '${it.id}')" title="Apagar este item" class="shrink-0 text-rose-500 hover:text-rose-700 font-black cursor-pointer px-1">🗑️</button>
               </div>
             `).join('')}
@@ -4429,12 +4439,23 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
                 ${escH(item.summary)}
               </p>
 
+              ${item.fileName ? `
+              <div class="flex items-center justify-between gap-2 text-xs bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 rounded-lg px-2.5 py-1.5">
+                <span class="font-bold text-indigo-900 dark:text-indigo-300 truncate">📁 ${escH(item.fileName)}${item.fileSize ? ` (${fmtSize(item.fileSize)})` : ''}</span>
+                <button onclick="openSourceFile('${item.fileId}')" title="Abrir o arquivo anexado" class="shrink-0 px-2.5 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-[11px] font-black transition cursor-pointer">Abrir</button>
+              </div>
+              ` : ''}
+
               ${itemsHtml}
 
               <div id="item-form-${item.id}" class="hidden space-y-1.5 bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-xl p-2.5">
                 <input id="ni-title-${item.id}" type="text" placeholder="Título do item * (ex: PDF do capítulo 3, post, trecho)" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
                 <input id="ni-link-${item.id}" type="text" placeholder="Link do item (opcional)" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
                 <input id="ni-note-${item.id}" type="text" placeholder="Nota rápida (opcional — entra no prompt do Estúdio)" class="w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg px-2.5 py-1.5 text-xs font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500">
+                <label class="flex items-center gap-2 text-[11px] font-black text-emerald-900 dark:text-emerald-300 cursor-pointer">
+                  <span class="shrink-0">📁 Arquivo do item (opcional):</span>
+                  <input type="file" id="ni-file-${item.id}" accept=".pdf,.txt,.md,.markdown,.csv,.json,.srt,.vtt,.rtf,.doc,.docx" class="w-full text-[11px] font-bold text-slate-600 dark:text-slate-300 file:mr-2 file:px-2 file:py-1 file:rounded-md file:border-0 file:bg-emerald-600 file:text-white file:font-black file:cursor-pointer">
+                </label>
                 <div class="flex justify-end gap-2 pt-0.5">
                   <button onclick="toggleItemForm('${item.id}', true)" class="px-2.5 py-1 text-[11px] font-black text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 cursor-pointer">Cancelar</button>
                   <button onclick="saveSourceItem('${item.id}')" class="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-[11px] font-black transition cursor-pointer">💾 Gravar item</button>
@@ -4504,7 +4525,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       if (isNew) inp.focus();
     }
 
-    function saveNewSource(btn) {
+    async function saveNewSource(btn) {
       const val = id => { const el = document.getElementById(id); return el ? String(el.value || '').trim() : ''; };
       const title = val('as-title');
       const sourceName = val('as-source');
@@ -4529,7 +4550,22 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       }
 
       const studioChk = document.getElementById('as-studio');
-      const newSource = {
+
+      // Upload de arquivo (se o editor escolheu um): grava no IndexedDB do navegador.
+      let fileMeta = {};
+      let fileSavedOk = false;
+      if (asPendingFile) {
+        const fid = 'file_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+        try {
+          await idbSaveFile(fid, asPendingFile, { name: asPendingFile.name, type: asPendingFile.type });
+          fileMeta = { fileId: fid, fileName: asPendingFile.name, fileSize: asPendingFile.size, fileType: asPendingFile.type };
+          fileSavedOk = true;
+        } catch(e) {
+          alert('⚠️ O arquivo NÃO pôde ser gravado no navegador (' + e.message + ').\n\nA fonte será criada sem o anexo — depois você pode anexar de novo por um item.');
+        }
+      }
+
+      const newSource = Object.assign({
         id: 'custom_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7),
         category: catKey,
         date: val('as-date') || new Date().toLocaleDateString('pt-BR'),
@@ -4543,7 +4579,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         custom: true,
         studio: studioChk ? studioChk.checked : true,
         items: []
-      };
+      }, fileMeta);
 
       const list = loadCustomSources();
       list.push(newSource);
@@ -4556,10 +4592,13 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       ['as-title', 'as-source', 'as-date', 'as-link', 'as-summary', 'as-transcript', 'as-status', 'as-badge', 'as-new-category'].forEach(id => {
         const el = document.getElementById(id); if (el) el.value = '';
       });
+      asPendingFile = null;
+      const asFileInp = document.getElementById('as-file'); if (asFileInp) asFileInp.value = '';
+      const asFileInfo = document.getElementById('as-file-info'); if (asFileInfo) asFileInfo.textContent = '';
       toggleAddSourcePanel(true);
       setSourceFilter(catKey);
       renderFontesCustomCheckboxes();
-      alert('✅ Fonte gravada no acervo!\n\n"' + title + '" entrou em ' + (getCategoryRegistry()[catKey] ? getCategoryRegistry()[catKey].label : catKey) + (newSource.studio ? ' e já aparece no checkbox da memória de fontes do Estúdio.' : '.'));
+      alert('✅ Fonte gravada no acervo!\n\n"' + title + '" entrou em ' + (getCategoryRegistry()[catKey] ? getCategoryRegistry()[catKey].label : catKey) + (newSource.studio ? ' e já aparece no checkbox da memória de fontes do Estúdio.' : '.') + (fileSavedOk ? '\n\n📁 Arquivo "' + fileMeta.fileName + '" anexado — abre pelo botão 📁 do cartão.' : ''));
     }
 
     // ---------- APAGAR FONTE (pedido do Miguel: "entrou fonte errada") ----------
@@ -4577,6 +4616,9 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         if (hidden.indexOf(sourceId) === -1) { hidden.push(sourceId); saveHiddenSourceIds(hidden); }
       } else {
         saveCustomSources(loadCustomSources().filter(s => s.id !== sourceId));
+        // limpa os arquivos anexados (fonte + itens) do IndexedDB
+        if (item.fileId) idbDeleteFile(item.fileId);
+        (Array.isArray(item.items) ? item.items : []).forEach(it => { if (it.fileId) idbDeleteFile(it.fileId); });
       }
       renderSourceFilterTabs();
       filterSourceCenter();
@@ -4602,7 +4644,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       }
     }
 
-    function saveSourceItem(sourceId) {
+    async function saveSourceItem(sourceId) {
       const val = id => { const el = document.getElementById(id); return el ? String(el.value || '').trim() : ''; };
       const title = val('ni-title-' + sourceId);
       if (!title) { alert('⚠️ Dê um título ao item.'); return; }
@@ -4612,6 +4654,21 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         link: safeHref(val('ni-link-' + sourceId)),
         note: val('ni-note-' + sourceId)
       };
+
+      // Arquivo opcional anexado ao item (IndexedDB do navegador).
+      const itemFileInp = document.getElementById('ni-file-' + sourceId);
+      const itemFile = itemFileInp && itemFileInp.files && itemFileInp.files[0];
+      if (itemFile) {
+        const fid = 'file_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+        try {
+          await idbSaveFile(fid, itemFile, { name: itemFile.name, type: itemFile.type });
+          newItem.fileId = fid;
+          newItem.fileName = itemFile.name;
+          newItem.fileSize = itemFile.size;
+        } catch(e) {
+          alert('⚠️ O arquivo do item NÃO pôde ser gravado (' + e.message + '). O item será criado sem o anexo.');
+        }
+      }
 
       const isCustom = loadCustomSources().some(s => s.id === sourceId);
       if (isCustom) {
@@ -4633,26 +4690,189 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       renderFontesCustomCheckboxes();
     }
 
+    // ---------- UPLOAD DE ARQUIVO DO COMPUTADOR (pedido do Miguel, 06/08) ----------
+    // O arquivo é gravado no IndexedDB do navegador DESTE computador (localStorage
+    // é pequeno demais para PDFs) e ganha botão "📁 Abrir" no cartão. TXT/MD/CSV
+    // têm o texto lido direto para o fichamento; PDF tenta extração via pdf.js (CDN).
+    const FILES_DB_NAME = 'fdi_fontes_files';
+    const TEXT_FILE_RE = /\.(txt|md|markdown|csv|json|srt|vtt|log)$/i;
+
+    function fmtSize(n) {
+      n = Number(n) || 0;
+      if (n >= 1048576) return (n / 1048576).toFixed(1).replace('.', ',') + ' MB';
+      if (n >= 1024) return Math.round(n / 1024) + ' KB';
+      return n + ' B';
+    }
+
+    function idbSupported() {
+      try { return typeof indexedDB !== 'undefined'; } catch(e) { return false; }
+    }
+
+    function idbOpen() {
+      return new Promise((resolve, reject) => {
+        if (!idbSupported()) { reject(new Error('IndexedDB indisponível neste navegador')); return; }
+        const req = indexedDB.open(FILES_DB_NAME, 1);
+        req.onupgradeneeded = () => { req.result.createObjectStore('files', { keyPath: 'id' }); };
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => reject(req.error || new Error('falha ao abrir IndexedDB'));
+      });
+    }
+
+    async function idbSaveFile(id, blob, meta) {
+      const db = await idbOpen();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction('files', 'readwrite');
+        tx.objectStore('files').put(Object.assign({ id: id, blob: blob }, meta || {}));
+        tx.oncomplete = () => resolve(true);
+        tx.onerror = () => reject(tx.error || new Error('falha ao gravar arquivo'));
+      });
+    }
+
+    async function idbGetFile(id) {
+      const db = await idbOpen();
+      return new Promise((resolve, reject) => {
+        const tx = db.transaction('files', 'readonly');
+        const req = tx.objectStore('files').get(id);
+        req.onsuccess = () => resolve(req.result || null);
+        req.onerror = () => reject(req.error);
+      });
+    }
+
+    async function idbDeleteFile(id) {
+      if (!id) return;
+      try {
+        const db = await idbOpen();
+        await new Promise((resolve, reject) => {
+          const tx = db.transaction('files', 'readwrite');
+          tx.objectStore('files').delete(id);
+          tx.oncomplete = () => resolve(true);
+          tx.onerror = () => reject(tx.error);
+        });
+      } catch(e) {}
+    }
+
+    let asPendingFile = null;
+
+    function onAsFileChange() {
+      const inp = document.getElementById('as-file');
+      const info = document.getElementById('as-file-info');
+      asPendingFile = (inp && inp.files && inp.files[0]) ? inp.files[0] : null;
+      if (!asPendingFile) { if (info) info.textContent = ''; return; }
+      const f = asPendingFile;
+      if (info) info.textContent = '📎 ' + f.name + ' (' + fmtSize(f.size) + ')' + (idbSupported() ? '' : ' — ⚠️ sem IndexedDB: fica só nesta sessão');
+      autofillTranscriptFromFile(f, 'as-transcript', info);
+    }
+
+    function autofillTranscriptFromFile(file, textareaId, infoEl) {
+      try {
+        const name = file.name || '';
+        if (TEXT_FILE_RE.test(name) || (file.type || '').indexOf('text/') === 0) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const txt = String(reader.result || '');
+            const ta = document.getElementById(textareaId);
+            if (ta && txt.trim()) {
+              ta.value = txt.slice(0, 30000) + (txt.length > 30000 ? '\n\n[... texto truncado em 30.000 caracteres para caber no prompt — o arquivo completo abre pelo botão 📁 do cartão ...]' : '');
+            }
+            if (infoEl) infoEl.textContent = '📎 ' + file.name + ' — ✅ texto lido para o fichamento (' + Math.min(txt.length, 30000).toLocaleString('pt-BR') + ' chars)';
+          };
+          reader.readAsText(file);
+        } else if (/\.pdf$/i.test(name) || file.type === 'application/pdf') {
+          extractPdfText(file, textareaId, infoEl);
+        } else {
+          if (infoEl) infoEl.textContent = '📎 ' + file.name + ' — anexado (este tipo não tem leitura automática de texto)';
+        }
+      } catch(e) {}
+    }
+
+    let pdfjsLoadingPromise = null;
+    function loadPdfJs() {
+      if (typeof window !== 'undefined' && window.pdfjsLib) return Promise.resolve(window.pdfjsLib);
+      if (pdfjsLoadingPromise) return pdfjsLoadingPromise;
+      pdfjsLoadingPromise = new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js';
+        s.onload = () => {
+          try {
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+            resolve(window.pdfjsLib);
+          } catch(e) { reject(e); }
+        };
+        s.onerror = () => reject(new Error('pdf.js não carregou (sem internet?)'));
+        document.body.appendChild(s);
+      });
+      return pdfjsLoadingPromise;
+    }
+
+    async function extractPdfText(file, textareaId, infoEl) {
+      try {
+        if (infoEl) infoEl.textContent = '📎 ' + file.name + ' — ⏳ extraindo texto do PDF...';
+        const pdfjs = await loadPdfJs();
+        const buf = await file.arrayBuffer();
+        const pdf = await pdfjs.getDocument({ data: buf }).promise;
+        const maxPages = Math.min(pdf.numPages, 40);
+        let text = '';
+        for (let p = 1; p <= maxPages; p++) {
+          const page = await pdf.getPage(p);
+          const content = await page.getTextContent();
+          text += content.items.map(it => it.str).join(' ') + '\n';
+          if (text.length > 30000) break;
+        }
+        const ta = document.getElementById(textareaId);
+        if (ta && text.trim()) {
+          const truncated = text.length > 30000 || pdf.numPages > maxPages;
+          ta.value = text.trim().slice(0, 30000) + (truncated ? '\n\n[... extração limitada (' + maxPages + '/' + pdf.numPages + ' págs., até 30 mil chars) — o PDF completo abre pelo botão 📁 do cartão ...]' : '');
+        }
+        if (infoEl) infoEl.textContent = text.trim()
+          ? '📎 ' + file.name + ' — ✅ texto extraído do PDF (' + maxPages + '/' + pdf.numPages + ' págs.)'
+          : '📎 ' + file.name + ' — PDF anexado (sem texto extraível — provavelmente digitalizado/imagem)';
+      } catch(e) {
+        if (infoEl) infoEl.textContent = '📎 ' + file.name + ' — PDF anexado (extração automática indisponível: ' + e.message + ')';
+      }
+    }
+
+    async function openSourceFile(fileId) {
+      try {
+        const rec = await idbGetFile(fileId);
+        if (!rec || !rec.blob) {
+          alert('⚠️ Arquivo não encontrado neste navegador (o armazenamento local pode ter sido limpo). Anexe-o de novo pela Central.');
+          return;
+        }
+        const url = URL.createObjectURL(rec.blob);
+        window.open(url, '_blank');
+        setTimeout(() => { try { URL.revokeObjectURL(url); } catch(e) {} }, 60000);
+      } catch(e) {
+        alert('⚠️ Não consegui abrir o arquivo: ' + e.message);
+      }
+    }
+
     function deleteSourceItem(sourceId, itemId) {
       if (!confirm('🗑️ Apagar este item anexo?')) return;
       const isCustom = loadCustomSources().some(s => s.id === sourceId);
+      let removedFileId = null;
       if (isCustom) {
         const list = loadCustomSources();
         const src = list.find(s => s.id === sourceId);
         if (src && Array.isArray(src.items)) {
+          const removed = src.items.find(it => it.id === itemId);
+          if (removed && removed.fileId) removedFileId = removed.fileId;
           src.items = src.items.filter(it => it.id !== itemId);
           saveCustomSources(list);
         }
       } else {
         const overlay = loadSourceItemsOverlay();
         if (Array.isArray(overlay[sourceId])) {
+          const removed = overlay[sourceId].find(it => it.id === itemId);
+          if (removed && removed.fileId) removedFileId = removed.fileId;
           overlay[sourceId] = overlay[sourceId].filter(it => it.id !== itemId);
           saveSourceItemsOverlay(overlay);
         }
       }
+      if (removedFileId) idbDeleteFile(removedFileId);
       filterSourceCenter();
       renderFontesCustomCheckboxes();
     }
+
 
 
     function openTranscriptById(itemId) {
@@ -5408,7 +5628,7 @@ O nome e o texto ficam na versão de origem — a marcação agora é verdadeira
             kind: 'fonte',
             label: `${catIcon} ${s.title}`,
             sub: `fonte sua · ${reg[s.category] ? reg[s.category].label : s.category}`,
-            text: `FONTE ACRESCENTADA PELO EDITOR: ${s.title}\nOrigem: ${s.source} (${s.date})${s.link && s.link !== '#' ? `\nLink: ${s.link}` : ''}\nResumo: ${s.summary}${s.transcript && s.transcript.trim() ? `\nFichamento/Transcrição:\n${s.transcript}` : ''}`
+            text: `FONTE ACRESCENTADA PELO EDITOR: ${s.title}\nOrigem: ${s.source} (${s.date})${s.link && s.link !== '#' ? `\nLink: ${s.link}` : ''}${s.fileName ? `\nArquivo anexo: ${s.fileName}` : ''}\nResumo: ${s.summary}${s.transcript && s.transcript.trim() ? `\nFichamento/Transcrição:\n${s.transcript}` : ''}`
           });
         }
         (Array.isArray(s.items) ? s.items : []).forEach(it => {
@@ -5417,7 +5637,7 @@ O nome e o texto ficam na versão de origem — a marcação agora é verdadeira
             kind: 'item',
             label: `📎 ${it.title}`,
             sub: `item de: ${s.title}`,
-            text: `ITEM ANEXO da fonte "${s.title}": ${it.title}${it.link && it.link !== '#' ? `\nLink: ${it.link}` : ''}${it.note ? `\nNota do editor: ${it.note}` : ''}`
+            text: `ITEM ANEXO da fonte "${s.title}": ${it.title}${it.link && it.link !== '#' ? `\nLink: ${it.link}` : ''}${it.fileName ? `\nArquivo anexo: ${it.fileName}` : ''}${it.note ? `\nNota do editor: ${it.note}` : ''}`
           });
         });
       });

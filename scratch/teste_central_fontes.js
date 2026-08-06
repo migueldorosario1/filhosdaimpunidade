@@ -1,6 +1,16 @@
 const fs = require('fs');
 const lines = fs.readFileSync('index.html', 'utf8').split('\n');
-const code = lines.slice(1237, 6400).join('\n');
+// localiza o bloco principal: o ÚLTIMO <script> simples (sem src) antes de </body>
+const startLine = lines.findIndex(l => l.trim() === '<script>' && lines[lines.indexOf(l) - 1] !== undefined && true);
+let scriptStart = -1, scriptEnd = -1;
+for (let i = 0; i < lines.length; i++) {
+  if (lines[i].trim() === '<script>') scriptStart = i; // fica com o último
+}
+for (let i = lines.length - 1; i >= 0; i--) {
+  if (lines[i].trim() === '</script>') { scriptEnd = i; break; }
+}
+if (scriptStart < 0 || scriptEnd <= scriptStart) { console.log('bloco principal não achado'); process.exit(1); }
+const code = lines.slice(scriptStart + 1, scriptEnd).join('\n');
 const store = {};
 const elements = {};
 const customCheckboxes = [];
@@ -40,4 +50,9 @@ global.marked = { parse: s => s };
 global.fetch = async () => ({ ok: false, json: async () => ({}) });
 
 const test = code + fs.readFileSync('scratch/_snippet.js', 'utf8');
-try { console.log(new Function(test)()); } catch (e) { console.log('❌ ERRO:', e.message); console.log(e.stack.split('\n').slice(0, 4).join('\n')); }
+(async () => {
+  try {
+    const r = await new Function('return (async () => {' + test + '})()')();
+    console.log(r);
+  } catch (e) { console.log('❌ ERRO:', e.message); console.log(e.stack.split('\n').slice(0, 4).join('\n')); process.exit(1); }
+})();
