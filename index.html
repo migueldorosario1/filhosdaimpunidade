@@ -746,7 +746,7 @@
 
             <!-- ACTION BUTTONS: SALVAR E TORNAR CANÔNICA -->
             <div class="flex flex-wrap items-center gap-2.5">
-              <button onclick="resetChapterToCanonicalOriginal()" class="px-3.5 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-extrabold flex items-center gap-1.5 shadow-sm cursor-pointer" title="Descartar rascunhos salvos e restaurar o texto canônico original">
+              <button onclick="resetChapterToCanonicalOriginal()" class="px-3.5 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-extrabold flex items-center gap-1.5 shadow-sm cursor-pointer" title="Descartar as edições da SESSÃO atual (rascunho em cache) e voltar a ver o texto da versão ativa. NÃO apaga nenhuma versão R# já gravada.">
                 <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
                 <span>Resetar Original</span>
               </button>
@@ -760,7 +760,7 @@
                 <span>👑 Tornar Canônica</span>
               </button>
 
-              <button onclick="saveDeepSeekRevision(this)" class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm cursor-pointer">
+              <button id="btn-gravar-revisao" onclick="saveDeepSeekRevision(this)" class="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold flex items-center gap-2 shadow-sm cursor-pointer">
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>💾 Gravar Revisão R#</span>
               </button>
@@ -799,8 +799,8 @@
             </summary>
             <div class="space-y-3 pt-3">
               <p class="text-xs text-slate-700 font-sans font-bold">Altere o texto abaixo manualmente e clique no botão verde para aplicar e salvar o ajuste no capítulo:</p>
-              <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea()" class="w-full bg-white border-2 border-purple-400 rounded-xl p-4 text-base font-mono text-slate-950 focus:outline-none focus:border-purple-600 leading-relaxed shadow-sm" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
-              <button onclick="saveManualTextareaEdits(this)" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
+              <textarea id="deepseek-editable-result" rows="12" oninput="updateRenderedFullChapterFromTextarea(); resetSaveButtonsOnEdit()" class="w-full bg-white border-2 border-purple-400 rounded-xl p-4 text-base font-mono text-slate-950 focus:outline-none focus:border-purple-600 leading-relaxed shadow-sm" placeholder="O texto reescrito do capítulo aparecerá aqui..."></textarea>
+              <button id="btn-salvar-manual" onclick="saveManualTextareaEdits(this)" class="w-full py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md cursor-pointer transition">
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>💾 Salvar alteração manual no capítulo</span>
               </button>
@@ -2520,7 +2520,58 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       el.textContent = (ok ? '✅ ' : '⚠️ ') + msg;
     }
 
-    // QA-FEATURE (Kimi 3, 2026-08-04): TOAST flutuante no topo — o "sinalzinho"
+    // QA-FEATURE SINAL DE GRAVAÇÃO (Kimi 3, 2026-08-06 — pedido do Miguel:
+    // "mostrar no meio da página uma plaquinha: gravado; muda a cor do botão
+    // de gravar; que aí eu vou ter certeza que gravou"):
+    // (a) plaquinha GRANDE no centro da tela; (b) botão fica VERDE com
+    // "✅ Gravado (R#)" de forma PERSISTENTE — só volta ao normal quando o
+    // autor edita o texto de novo (sinal de "há mudanças não gravadas").
+    function showStudioSavedConfirmation(msg) {
+      try {
+        const old = document.getElementById('studio-saved-confirm');
+        if (old) old.remove();
+        const el = document.createElement('div');
+        el.id = 'studio-saved-confirm';
+        el.textContent = msg;
+        el.className = 'px-8 py-5 rounded-3xl shadow-2xl border-4 border-emerald-300 bg-emerald-600 text-white text-lg font-black';
+        el.style.cssText = 'position:fixed; top:50%; left:50%; transform:translate(-50%,-50%) scale(.8); z-index:100000; opacity:0; transition:all .3s ease; pointer-events:none; text-align:center; max-width:88vw;';
+        document.body.appendChild(el);
+        requestAnimationFrame(() => { el.style.opacity = '1'; el.style.transform = 'translate(-50%,-50%) scale(1)'; });
+        setTimeout(() => {
+          el.style.opacity = '0';
+          el.style.transform = 'translate(-50%,-50%) scale(.9)';
+          setTimeout(() => { try { el.remove(); } catch(e) {} }, 350);
+        }, 2400);
+      } catch(e) {}
+    }
+
+    function markButtonAsSaved(btn, savedLabel) {
+      if (!btn) return;
+      if (!btn.dataset.origHtml) {
+        btn.dataset.origHtml = btn.innerHTML;
+        btn.dataset.origClass = btn.className;
+      }
+      btn.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>✅ Gravado (${savedLabel})</span>`;
+      btn.classList.remove('bg-emerald-700', 'hover:bg-emerald-800');
+      btn.classList.add('bg-green-600', 'ring-2', 'ring-green-300');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function resetButtonToUnsaved(btn) {
+      if (!btn || !btn.dataset.origHtml) return;
+      btn.innerHTML = btn.dataset.origHtml;
+      btn.className = btn.dataset.origClass;
+      delete btn.dataset.origHtml;
+      delete btn.dataset.origClass;
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Sinal "há mudanças não gravadas": ao editar o texto bruto, os botões de
+    // gravação voltam ao estado normal (saem do "✅ Gravado" verde).
+    function resetSaveButtonsOnEdit() {
+      resetButtonToUnsaved(document.getElementById('btn-gravar-revisao'));
+      resetButtonToUnsaved(document.getElementById('btn-salvar-manual'));
+    }
     // impossível de perder (pedido do Miguel: "entrar uma plaquinha gravado a
     // versão nova"). Some sozinho após ~4s. Não depende de alert/confirm.
     function showStudioToast(ok, msg) {
@@ -5708,6 +5759,8 @@ Ela já vale para todas as próximas reescritas, de qualquer IA.`);
       flashButtonFeedback(sourceBtn, true, `${rKey} gravada!`);
       setStudioSaveStatus(true, `Revisão ${rKey} gravada com sucesso (${engineSlug}) — o Estúdio agora está nesta versão.`);
       showStudioToast(true, `Versão ${rKey} gravada — você está nela agora!`);
+      showStudioSavedConfirmation(`✅ ${rKey} gravada com sucesso!`);
+      markButtonAsSaved(sourceBtn, rKey);
       try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch(e) {} // "mexe um pouquinho a página"
       alert(`✅ Nova Revisão ${rKey} gravada com sucesso (${engineSlug})! O capítulo foi salvo e atualizado.`);
     }
@@ -5821,7 +5874,11 @@ Abra "📝 Editar texto bruto do capítulo", selecione o texto (Ctrl+A) e copie 
     }
 
     function resetChapterToCanonicalOriginal() {
-      if (confirm("Deseja descartar edições de rascunho e restaurar o capítulo canônico original?")) {
+      if (confirm(`Restaurar a versão original?
+
+Isso descarta apenas as edições da sessão atual (rascunho em cache) e volta a mostrar o texto da versão ativa.
+
+✅ NÃO apaga nenhuma versão R# já gravada — todas continuam no menu de versões.`)) {
         localStorage.removeItem('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey);
         localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + currentChapterKey);
         // QA-FIX (Kimi 3, 2026-07-29): descartar também o rascunho cacheado,
@@ -5829,7 +5886,8 @@ Abra "📝 Editar texto bruto do capítulo", selecione o texto (Ctrl+A) e copie 
         localStorage.removeItem(storageKeyVol('miguel_book_draft_revision', currentChapterKey));
         localStorage.removeItem('miguel_book_draft_revision_' + currentChapterKey); // chave legada (pré-prefixo de volume)
         selectChapter(currentChapterKey);
-        if (typeof openStudioModal === 'function') openStudioModal();
+        resetSaveButtonsOnEdit();
+        showStudioToast(true, 'Restaurado à versão original — suas revisões R# seguem intactas.');
       }
     }
 
