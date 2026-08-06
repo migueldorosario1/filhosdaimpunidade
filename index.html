@@ -2860,8 +2860,24 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       return vKey;
     }
 
-    function setCanonicalVersion(vKey, sourceBtn) {
-      const canonRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
+    // QA-FEATURE VERDADE EDITORIAL (Kimi 3, 2026-08-06 — ordem do Miguel: "a
+    // marcação tem que ser verdadeira"): se a canônica aponta para a Oficial mas o
+    // texto exibido é IDÊNTICO ao de uma versão (revisão ou experimental), a origem
+    // verdadeira é aquela versão — corrigir o ponteiro e limpar o override da
+    // Oficial (ela volta ao texto verdadeiro do manuscrito; nada se perde, pois o
+    // texto mora na versão de origem).
+    function repairCanonicalOrigin(matchKey, btnEl) {
+      setCanonicalVersion(matchKey, btnEl);
+      try {
+        localStorage.removeItem('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey);
+        localStorage.removeItem('miguel_book_persistent_tag_' + currentVolume + '_' + currentChapterKey);
+      } catch(e) {}
+      loadChapter(currentChapterKey);
+      refreshStudioTitle();
+      showStudioToast(true, 'Marcação corrigida — origem verdadeira restaurada!');
+    }
+
+    function setCanonicalVersion(vKey, sourceBtn) {      const canonRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), vKey);
       if (!canonRes.ok) {
         flashButtonFeedback(sourceBtn, false, canonRes.reason === 'quota' ? 'Falha: armazenamento cheio' : 'Falha: gravação bloqueada');
         showStudioToast(false, 'Falha ao definir a canônica');
@@ -2967,6 +2983,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
               <button onclick="toggleVersionCleanupMode(event)" class="text-[10px] font-black text-slate-600 hover:underline cursor-pointer">cancelar</button>
             </div>
           </div>
+          <div id="version-truth-banner"></div>
           <div id="version-dropdown-list" class="divide-y divide-slate-100"></div>
         </div>
       `;
@@ -3045,6 +3062,38 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         if (bar) bar.classList.toggle('hidden', !versionCleanupMode);
         const delBtn = document.getElementById('btn-version-cleanup-delete');
         if (delBtn) delBtn.textContent = `🗑️ Apagar (${versionCleanupSelection.size})`;
+      } catch(e) {}
+
+      // QA-FEATURE VERDADE EDITORIAL (Kimi 3, 2026-08-06): se a canônica aponta para
+      // a Oficial mas o texto exibido é IDÊNTICO ao de uma revisão/experimental, a
+      // marcação está mentindo sobre a origem — oferecer a correção com 1 clique
+      // (Miguel: "tem que ser verdadeiro... não é para inventar nada").
+      try {
+        const truthEl = document.getElementById('version-truth-banner');
+        if (truthEl) {
+          truthEl.innerHTML = '';
+          if (canonicalKey === 'oficial' && currentChapterKey !== 'full_book') {
+            const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+            const dsNow = getCurrentVolumeDataset();
+            const chNow = dsNow[currentChapterKey];
+            const curTxt = norm(chNow && chNow.mainContent);
+            const revsNow = getSavedRevisions(currentChapterKey);
+            let matchKey = Object.keys(revsNow).reverse().find(rk => revsNow[rk] && norm(revsNow[rk].content) === curTxt && curTxt.length > 0);
+            if (!matchKey && currentVolume === 'vol1_v7' && currentChapterKey === '01_estarei_vingado') {
+              matchKey = ['antigravity', 'claude', 'gpt'].find(k => expVersionsCap1[k] && norm(expVersionsCap1[k].content) === curTxt && curTxt.length > 0);
+            }
+            if (matchKey) {
+              const matchTag = getVersionLabelForKey(currentChapterKey, matchKey);
+              truthEl.innerHTML = `
+                <div class="m-2 p-3 bg-amber-50 border border-amber-300 rounded-xl text-[11px] font-bold text-amber-950 leading-relaxed">
+                  ⚖️ <strong>Verdade editorial:</strong> o texto marcado como canônico (Oficial) é idêntico ao de <strong>${matchTag}</strong>.
+                  <button class="mt-1.5 w-full px-3 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[10px] font-black cursor-pointer">👑 Corrigir: a canônica verdadeira é "${matchTag}"</button>
+                </div>`;
+              const btn = truthEl.querySelector('button');
+              if (btn) btn.onclick = () => repairCanonicalOrigin(matchKey, btn);
+            }
+          }
+        }
       } catch(e) {}
 
       // 2. BUTTON: TORNAR CANÔNICA (Make Canonical)
@@ -4385,18 +4434,24 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       const dataset = getCurrentVolumeDataset();
       const ch = dataset[currentChapterKey];
       if (ch) {
-        // QA-FIX NOME CANÔNICA (Kimi 3, 2026-08-05): a canônica vira PONTEIRO para
-        // a versão de origem — o NOME original nunca é apagado (pedido do Miguel:
-        // "depois que torna canônica mantém o nome, não tira o nome").
         const originKey = currentVersionKey || 'oficial';
         const originLabel = getVersionLabelForKey(currentChapterKey, originKey);
-        ch.mainContent = finalTxt;
-        ch.content = finalTxt;
 
-        const canonWriteRes = safeLocalSet('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey, finalTxt);
+        // QA-FIX VERDADE CANÔNICA (Kimi 3, 2026-08-06 — ordem do Miguel: "tem que
+        // ser verdadeiro; se estou no R4 Gemini e torno canônica, tem que ser o
+        // Gemini R4 canônico; não é para inventar nada"):
+        // • Revisão/experimental: a canônica é SÓ O PONTEIRO para a versão de origem.
+        //   NÃO copia conteúdo, NÃO toca na oficial, NÃO inventa nome.
+        // • Oficial editada: persistir o texto da oficial (ela mesma), sem renomear.
+        let canonWriteRes = { ok: true };
+        if (originKey === 'oficial') {
+          ch.mainContent = finalTxt;
+          ch.content = finalTxt;
+          canonWriteRes = safeLocalSet('miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey, finalTxt);
+          saveCustomChapters();
+          saveChapterPersistentState(currentChapterKey, finalTxt, ch.versionTag || 'Oficial');
+        }
         const canonKeyRes = safeLocalSet(storageKeyVol('miguel_book_canonical', currentChapterKey), originKey);
-        saveCustomChapters();
-        saveChapterPersistentState(currentChapterKey, finalTxt, originLabel);
         renderSingleView();
         updateRenderedFullChapterFromTextarea();
         renderVersionTabs();
@@ -4412,7 +4467,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
 
 "${originLabel}"
 
-O nome original da versão foi preservado no menu de versões.`);
+O nome e o texto ficam na versão de origem — a marcação agora é verdadeira.`);
         } else {
           flashButtonFeedback(sourceBtn, false, 'Falha ao gravar canônica');
           setStudioSaveStatus(false, 'Falha ao gravar a canônica — aplicada apenas nesta sessão.');
