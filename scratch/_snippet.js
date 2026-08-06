@@ -36,6 +36,20 @@ out.push("entries Estúdio: " + entries.length + " → " + entries.map(e => e.ki
 out.push("fonte sem upload não tem fileId? " + !getAllSources().find(s => s.id === nova.id).fileId);
 out.push("idbSupported() false no stub (guarda OK)? " + (idbSupported() === false));
 out.push("fmtSize(2400000) = " + fmtSize(2400000) + " | fmtSize(30000) = " + fmtSize(30000));
+// toggle do botão Adicionar Fonte ↔ Voltar ao menu (pedido Miguel) + sem janelinha
+toggleAddSourcePanel();
+out.push("form aberto: botão virou Voltar? " + (document.getElementById("btn-add-source-label").textContent.includes("Voltar ao menu")));
+out.push("form aberto: lista escondida (sem janelinha)? " + document.getElementById("source-grid-wrapper").classList.contains("hidden"));
+out.push("form aberto: filtros escondidos? " + document.getElementById("database-modal-filters").classList.contains("hidden"));
+toggleAddSourcePanel();
+out.push("form fechado: botão voltou p/ Adicionar? " + (document.getElementById("btn-add-source-label").textContent.includes("Adicionar Fonte")));
+out.push("form fechado: lista de volta? " + !document.getElementById("source-grid-wrapper").classList.contains("hidden"));
+// auditoria de links YouTube
+const brokenCount = sourcesDatabase.filter(s => s.broken).length;
+out.push("links marcados indisponíveis: " + brokenCount + " (esperado 13)");
+out.push("Tucker com link real? " + (sourcesDatabase.find(s => s.id === "yt_paulo_figueiredo_tucker").link.includes("fRXhn0UN-_4")));
+out.push("Fox/Lou Dobbs com link real? " + (sourcesDatabase.find(s => s.id === "yt_eduardo_fox_news").link.includes("mTziWNvuOco")));
+out.push("Monark corte com link real? " + (sourcesDatabase.find(s => s.id === "yt_eduardo_podcast_monark").link.includes("-rvebyRe7QY")));
 entries.forEach(e => customCheckboxes.push({ checked: true, getAttribute: () => e.id }));
 document.getElementById("chk-consult-canonical-memory").checked = true;
 const sel = getSelectedFontesParts();

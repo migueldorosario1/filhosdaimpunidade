@@ -834,9 +834,9 @@
           </div>
         </div>
         <div class="flex items-center gap-2">
-          <button onclick="toggleAddSourcePanel()" title="Adicionar uma nova fonte ao acervo (livro, PDF, link, post, documento...)" class="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer">
+          <button id="btn-add-source-toggle" onclick="toggleAddSourcePanel()" title="Adicionar uma nova fonte ao acervo (livro, PDF, link, post, documento...)" class="flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer">
             <i data-lucide="plus-circle" class="w-4 h-4"></i>
-            <span>➕ Adicionar Fonte</span>
+            <span id="btn-add-source-label">➕ Adicionar Fonte</span>
           </button>
           <button onclick="toggleCentralFullView()" title="Full View: Ocultar Filtros e Ver Só o Conteúdo" class="flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer">
             <i data-lucide="eye" class="w-4 h-4"></i>
@@ -910,7 +910,7 @@
       </div>
 
       <!-- MAIN SOURCE GRID CONTAINER -->
-      <div class="p-6 overflow-y-auto space-y-4 flex-1 bg-[#faf8f4] dark:bg-slate-950">
+      <div id="source-grid-wrapper" class="p-6 overflow-y-auto space-y-4 flex-1 bg-[#faf8f4] dark:bg-slate-950">
         <div id="source-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Dynamically Populated Source Cards -->
         </div>
@@ -3846,6 +3846,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       // --- NOVAS REFERÊNCIAS: CANAL DE FLÁVIO BOLSONARO ---
       {
         id: 'yt_flavio_candidatura_2026',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '05/07/2026',
         source: 'Canal Flávio Bolsonaro',
@@ -3858,6 +3859,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_flavio_moraes_suspeicao',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '22/06/2026',
         source: 'Canal Flávio Bolsonaro',
@@ -3870,6 +3872,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_flavio_tarifaco_senado',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '19/07/2025',
         source: 'TV Senado / Canal Flávio',
@@ -3882,6 +3885,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_flavio_anistia_coletiva',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '10/05/2026',
         source: 'Canal Flávio Bolsonaro',
@@ -3894,6 +3898,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_flavio_jovem_pan_2026',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '14/06/2026',
         source: 'Jovem Pan News',
@@ -3908,6 +3913,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       // --- NOVAS REFERÊNCIAS: CANAL DE EDUARDO BOLSONARO & LOBBY MAGA ---
       {
         id: 'yt_eduardo_turning_point',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '15/12/2025',
         source: 'Eduardo Bolsonaro Oficial',
@@ -3920,6 +3926,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_eduardo_magnitsky_press',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '19/07/2025',
         source: 'Eduardo Bolsonaro Oficial',
@@ -3932,6 +3939,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_eduardo_live_tarifaco',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '21/07/2025',
         source: 'Eduardo Bolsonaro Oficial',
@@ -3946,10 +3954,10 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         id: 'yt_eduardo_podcast_monark',
         category: 'yt',
         date: '08/04/2026',
-        source: 'Monark Talks (Miami)',
-        title: 'Monark Talks — Entrevista com Eduardo Bolsonaro em Miami (2h15m)',
+        source: 'Cortes do Flow [OFICIAL]',
+        title: 'Monark × Eduardo Bolsonaro — Debate (Cortes do Flow)',
         summary: 'Discussão sobre asilo político, financiamento do filme Dark Horse, Vorcaro e estratégia digital.',
-        link: 'https://www.youtube.com/watch?v=M2k4P9vL5xT',
+        link: 'https://www.youtube.com/watch?v=-rvebyRe7QY',
         status: '🎥 Mapeado / Vídeo 🔗',
         badge: 'Monark Talks',
         transcript: `MONARK TALKS (08/04/2026)Longa entrevista gravada em Miami abordando a rotina nos EUA e o confronto judicial.`
@@ -3958,16 +3966,17 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         id: 'yt_eduardo_fox_news',
         category: 'yt',
         date: '24/07/2025',
-        source: 'Fox Business (Mornings with Maria)',
-        title: 'Fox Business — Eduardo Bolsonaro on Brazil Crisis & US Tariffs',
+        source: 'Fox Business / Canal Eduardo Bolsonaro',
+        title: 'Fox Business — Lou Dobbs entrevista Eduardo Bolsonaro (Legendado)',
         summary: 'Participação na TV americana defendendo a aplicação da Lei Magnitsky e retaliações comerciais.',
-        link: 'https://www.youtube.com/watch?v=F5k7M8vN6xU',
+        link: 'https://www.youtube.com/watch?v=mTziWNvuOco',
         status: '🎥 Transcrito ✅',
         badge: 'Fox Business',
         transcript: `FOX BUSINESS (24/07/2025)Eduardo Bolsonaro expõe suas teses para a audiência norte-americana na Fox Business.`
       },
       {
         id: 'yt_eduardo_post_stf_verdict',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '17/06/2026',
         source: 'Eduardo Bolsonaro Oficial',
@@ -3982,6 +3991,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       // --- NOVAS REFERÊNCIAS: PAULO FIGUEIREDO & INVESTIGAÇÕES ---
       {
         id: 'yt_paulo_figueiredo_havengate',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '04/05/2026',
         source: 'Paulo Figueiredo Show',
@@ -3994,6 +4004,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_paulo_figueiredo_vorcaro',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '12/05/2026',
         source: 'Paulo Figueiredo Show',
@@ -4011,7 +4022,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         source: 'Tucker Carlson Network',
         title: 'Tucker Carlson & Paulo Figueiredo — "The Brazilian Judicial Crisis"',
         summary: 'Entrevista transmitida na rede de Tucker Carlson denunciando decisões judiciais e bloqueios no Brasil.',
-        link: 'https://www.youtube.com/watch?v=T4k8M9vP0xZ',
+        link: 'https://www.youtube.com/watch?v=fRXhn0UN-_4',
         status: '🎥 Transcrito ✅',
         badge: 'Tucker Carlson',
         transcript: `TUCKER CARLSON NETWORK (10/01/2026)Participação de Paulo Figueiredo no programa americano abordando a política brasileira.`
@@ -4020,6 +4031,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       // --- NOVAS REFERÊNCIAS: COBERTURA JORNALÍSTICA & DEBATES ---
       {
         id: 'yt_metropoles_debate_anistia',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '08/07/2026',
         source: 'Metrópoles',
@@ -4032,6 +4044,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       },
       {
         id: 'yt_poder360_analise_stf',
+        broken: true, // QA-AUDIT (Kimi 3, 06/08): link YouTube original fora do ar (oEmbed 400/404); link real não localizado — fichamento preservado
         category: 'yt',
         date: '16/06/2026',
         source: 'Poder360',
@@ -4477,10 +4490,14 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
                   <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
                   <span>📖 Transcrição / Fichamento</span>
                 </button>
-                <a href="${safeHref(item.link)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer">
-                  <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                  <span>${actionLabel}</span>
-                </a>
+                ${item.broken
+                  ? `<span title="O link original deste vídeo saiu do ar no YouTube (auditoria oEmbed de 06/08). O fichamento/transcrição segue disponível no botão ao lado — e quando você achar o link certo, anexe como ➕ Item." class="px-3 py-1.5 bg-slate-300 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded-xl text-xs font-bold flex items-center gap-1.5 cursor-not-allowed select-none">
+                    <span>⚠️ Link indisponível</span>
+                  </span>`
+                  : `<a href="${safeHref(item.link)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    <span>${actionLabel}</span>
+                  </a>`}
               </div>
             </div>
           </div>
@@ -4496,6 +4513,26 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       if (!panel) return;
       const willShow = forceClose === true ? false : panel.classList.contains('hidden');
       panel.classList.toggle('hidden', !willShow);
+
+      // Pedido do Miguel (06/08): (1) o botão MUDA — "Adicionar Fonte" vira
+      // "⬅️ Voltar ao menu de fontes" e vice-versa; (2) nada de "janelinha"
+      // apertada embaixo — com o formulário aberto, a lista e os filtros
+      // saem da tela e o formulário ocupa o modal inteiro.
+      const gridWrap = document.getElementById('source-grid-wrapper');
+      const filters = document.getElementById('database-modal-filters');
+      const btn = document.getElementById('btn-add-source-toggle');
+      const btnLabel = document.getElementById('btn-add-source-label');
+      if (gridWrap) gridWrap.classList.toggle('hidden', willShow);
+      if (filters) filters.classList.toggle('hidden', willShow);
+      panel.classList.toggle('overflow-y-auto', willShow);
+      panel.classList.toggle('flex-1', willShow);
+      if (btn) {
+        btn.className = willShow
+          ? 'flex items-center gap-1.5 px-3.5 py-2 bg-slate-600 hover:bg-slate-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer'
+          : 'flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition shadow-sm cursor-pointer';
+      }
+      if (btnLabel) btnLabel.textContent = willShow ? '⬅️ Voltar ao menu de fontes' : '➕ Adicionar Fonte';
+
       if (willShow) {
         renderAsCategoryOptions();
         const t = document.getElementById('as-title');
