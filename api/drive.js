@@ -41,6 +41,12 @@ const REVISIONS_FILE_ID = '1_4bU2bc0o30lOOdN6REWjuAs6FxxE-Jh';    // revisions.j
 const RULES_FILE_ID = '1QOgSBRc9UNfNFtKcKoFUuowH9SipYviF';        // custom_rules.json
 const GH_REPO = 'migueldorosario1/filhosdaimpunidade';
 
+// Cache do op=status (best-effort, por instância serverless): cada status
+// consome 4 queries da quota COMPARTILHADA do projeto público do rclone —
+// abrir o modal 2× seguidas não precisa consultar o Drive de novo.
+const STATUS_CACHE_TTL_MS = 60 * 1000;
+let statusCache = { at: 0, data: null };
+
 const RCLONE_CLIENT_ID = '202264815644.apps.googleusercontent.com';
 const RCLONE_ENCRYPTED_SECRET = 'eX8GpZTVx3vxMWVkuuBdDWmAUE6rGhTwVrvG9GhllYccSdj2-mvHVg';
 
@@ -64,21 +70,25 @@ function obscureReveal(x) {
 async function getDriveToken() {
   const refreshToken = process.env.GDRIVE_REFRESH_TOKEN || '';
   if (!refreshToken) throw new Error('GDRIVE_REFRESH_TOKEN ausente nas env vars da Vercel');
-  const res = await fetch('https://oauth2.googleapis.com/token', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({
-      client_id: RCLONE_CLIENT_ID,
-      client_secret: obscureReveal(RCLONE_ENCRYPTED_SECRET),
-      refresh_token: refreshToken,
-      grant_type: 'refresh_token'
-    })
-  });
-  const data = await res.json();
-  if (!res.ok || !data.access_token) {
-    throw new Error('OAuth Google falhou: ' + (data.error_description || data.error || res.status));
-  }
-  return data.access_token;
+  // O endpoint de token do projeto público do rclone também sofre rate-limit
+  // → retry aqui também (erro real tipo invalid_grant falha na hora).
+  return withQuotaRetry(async () => {
+    const res = await fetch('https://oauth2.googleapis.com/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        client_id: RCLONE_CLIENT_ID,
+        client_secret: obscureReveal(RCLONE_ENCRYPTED_SECRET),
+        refresh_token: refreshToken,
+        grant_type: 'refresh_token'
+      })
+    });
+    const data = await res.json();
+    if (!res.ok || !data.access_token) {
+      throw new Error('OAuth Google falhou: ' + (data.error_description || data.error || res.status));
+    }
+    return data.access_token;
+  }, 'token OAuth');
 }
 
 async function driveGet(token, url) {
@@ -94,14 +104,23 @@ async function driveGet(token, url) {
 // o 1º push real falhou no meio; sem validação de shape, um payload de ERRO
 // JSON do Google chegou a ser gravado por cima do revisions.json (restaurado
 // via rclone + git, md5 conferido). As duas guardas abaixo impedem reprise.
+// REFORÇO (mesmo dia, 2ª onda — Miguel pegou 403 de quota no op=status): o
+// retry cobria só download/upload/snapshot; agora cobre também o token OAuth
+// e as 4 chamadas de metadados do status, e o status ganhou cache de 60s pra
+// consumir menos quota (bypass: ?nocache=1, usado pelo "↻ atualizar").
 function isQuotaError(e) {
   return /quota|rate.?limit|429/i.test(String(e && e.message || e));
 }
 
+// Budget default: ~39s de esperas em 4 tentativas — cabe no maxDuration=60
+// (pior caso c/ jitter ~47s + a última chamada em si). Jitter ±20% quando no
+// default pra não sincronizar as retentativas com o resto do planeta.
+const RETRY_WAITS_DEFAULT = [0, 5000, 12000, 22000];
+
 async function withQuotaRetry(fn, label) {
   const waits = process.env.FDI_RETRY_WAITS
     ? process.env.FDI_RETRY_WAITS.split(',').map(Number)
-    : [0, 6000, 15000];
+    : RETRY_WAITS_DEFAULT.map(w => (w ? Math.round(w * (0.8 + Math.random() * 0.4)) : 0));
   let lastErr;
   for (let i = 0; i < waits.length; i++) {
     if (waits[i]) await new Promise(r => setTimeout(r, waits[i]));
@@ -183,23 +202,32 @@ export default async function handler(req, res) {
       }
     }
 
+    if (op === 'status') {
+      const nocache = String((req.query && req.query.nocache) || '') === '1';
+      if (!nocache && statusCache.data && (Date.now() - statusCache.at) < STATUS_CACHE_TTL_MS) {
+        return res.status(200).json({ ...statusCache.data, cached: true });
+      }
+    }
+
     const token = await getDriveToken();
 
     if (op === 'status') {
       const fields = 'id,name,size,modifiedTime';
-      const folder = await driveGet(token, 'https://www.googleapis.com/drive/v3/files/' + ROOT_FOLDER_ID + '?fields=id,name');
-      const rev = await driveGet(token, 'https://www.googleapis.com/drive/v3/files/' + REVISIONS_FILE_ID + '?fields=' + fields);
-      const rules = await driveGet(token, 'https://www.googleapis.com/drive/v3/files/' + RULES_FILE_ID + '?fields=' + fields);
+      const folder = await withQuotaRetry(() => driveGet(token, 'https://www.googleapis.com/drive/v3/files/' + ROOT_FOLDER_ID + '?fields=id,name'), 'status pasta');
+      const rev = await withQuotaRetry(() => driveGet(token, 'https://www.googleapis.com/drive/v3/files/' + REVISIONS_FILE_ID + '?fields=' + fields), 'status revisions');
+      const rules = await withQuotaRetry(() => driveGet(token, 'https://www.googleapis.com/drive/v3/files/' + RULES_FILE_ID + '?fields=' + fields), 'status rules');
       const q = encodeURIComponent("'" + BACKUPS_FOLDER_ID + "' in parents and name contains 'livro_backup_' and trashed=false");
-      const bak = await driveGet(token, 'https://www.googleapis.com/drive/v3/files?q=' + q + '&orderBy=name%20desc&pageSize=1&fields=files(' + fields + ')');
-      return res.status(200).json({
+      const bak = await withQuotaRetry(() => driveGet(token, 'https://www.googleapis.com/drive/v3/files?q=' + q + '&orderBy=name%20desc&pageSize=1&fields=files(' + fields + ')'), 'status backups');
+      const payload = {
         ok: true,
         folder,
         revisions: rev,
         customRules: rules,
         latestBackup: (bak.files && bak.files[0]) || null,
         serverTime: new Date().toISOString()
-      });
+      };
+      statusCache = { at: Date.now(), data: payload };
+      return res.status(200).json(payload);
     }
 
     if (op === 'pull') {
@@ -268,7 +296,9 @@ export default async function handler(req, res) {
 
     return res.status(400).json({ ok: false, error: 'op desconhecida: ' + op });
   } catch (e) {
-    return res.status(502).json({ ok: false, error: String(e.message || e).slice(0, 400) });
+    // quotaCongested deixa o cliente distinguir "quota compartilhada cheia"
+    // de erro real de configuração (env vars ausentes etc.) sem regex.
+    return res.status(502).json({ ok: false, error: String(e.message || e).slice(0, 400), quotaCongested: isQuotaError(e) });
   }
 }
 
