@@ -191,6 +191,23 @@
       margin: 2.5rem 0;
     }
 
+    /* QA-FIX CONTRASTE UI-CARDS (Kimi K3, 2026-08-07 — pedido Miguel: "a letra
+       do título Livro Inteiro Compilado está cinza escura, bota branca").
+       Causa raiz: os cards de UI (cabeçalho do compilado, do roteiro, anotações)
+       são renderizados DENTRO de #reader-content.prose-book, e as regras
+       `.prose-book h2` (classe+elemento = especificidade maior) venciam o
+       `.text-white` do Tailwind (só classe) — título ficava #854d0e (âmbar
+       escuro) sobre gradiente âmbar. A classe marcadora .fdi-ui devolve a cor
+       herdada (branca nos cards escuros) e zera margens/família do prose. */
+    .prose-book .fdi-ui h1, .prose-book .fdi-ui h2, .prose-book .fdi-ui h3, .prose-book .fdi-ui h4 {
+      color: inherit;
+      margin: 0;
+    }
+    .prose-book .fdi-ui p {
+      color: inherit;
+      margin: 0;
+    }
+
     /* CUSTOM STYLES FOR MANUAL DE ESTILO MODAL (ELEGANT TYPOGRAPHY & NO OVERFLOW) */
     .prose-manual {
       font-family: 'Inter', sans-serif;
@@ -329,9 +346,9 @@
           <span>📌 Roteiro do Livro</span>
         </button>
 
-        <button onclick="compileAndReadFullBook()" title="Compilar todos os capítulos em um único manuscrito" class="flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition shadow-md cursor-pointer">
+        <button onclick="compileAndReadFullBook()" title="Abrir o livro inteiro compilado (para regenerar a compilação use ⚡ Atualizar Compilação lá dentro)" class="flex items-center gap-1.5 px-3.5 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition shadow-md cursor-pointer">
           <i data-lucide="book-open" class="w-4 h-4 text-white"></i>
-          <span>📚 Ler / Compilar Livro Inteiro</span>
+          <span>📖 Ler Livro Inteiro</span>
         </button>
 
         <button onclick="openDatabaseModal()" class="flex items-center gap-1.5 px-3.5 py-2 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl text-xs font-bold text-slate-800 transition shadow-sm cursor-pointer">
@@ -1309,6 +1326,71 @@
         </div>
 
         <div id="drive-sync-log" class="hidden p-3.5 bg-slate-50 border border-slate-300 rounded-2xl text-[11px] font-mono font-bold text-slate-700 leading-relaxed whitespace-pre-wrap"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL EDITAR ROTEIRO (QA-FEATURE Kimi K3, 2026-08-07 — pedido Miguel:
+       "tem que ter um botãozinho para editar o roteiro") -->
+  <div id="modal-editar-roteiro" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-amber-300 rounded-3xl max-w-4xl w-full flex flex-col shadow-2xl overflow-hidden text-slate-900 max-h-[92vh]">
+      <div class="p-5 border-b border-amber-200 flex items-center justify-between bg-amber-50">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-800">
+            <i data-lucide="pencil" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-extrabold font-display text-slate-900">✏️ Editar Roteiro do Livro</h3>
+            <p class="text-xs text-amber-900 font-bold">Texto do frontmatter — ficha técnica, apresentação, epígrafes</p>
+          </div>
+        </div>
+        <button onclick="closeEditarRoteiroModal()" class="text-slate-500 hover:text-slate-900 p-1 cursor-pointer">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4 text-sm text-slate-900 bg-[#faf8f4] overflow-y-auto">
+        <p id="editar-roteiro-info" class="p-3.5 bg-amber-50 border border-amber-300 rounded-2xl text-xs font-bold text-slate-800 leading-relaxed"></p>
+        <textarea id="editar-roteiro-text" rows="18" class="w-full bg-white border border-slate-300 rounded-xl p-3.5 text-sm font-mono text-slate-900 focus:outline-none focus:border-amber-500 shadow-inner"></textarea>
+        <div class="flex items-center justify-between gap-2 flex-wrap">
+          <button onclick="restoreRoteiroTexto(this)" title="Descartar a sua edição e voltar ao texto original do código (2 toques)" class="px-4 py-2.5 bg-rose-100 hover:bg-rose-200 border border-rose-300 rounded-xl text-xs font-black text-rose-900 transition cursor-pointer">↩️ Restaurar Original</button>
+          <div class="flex items-center gap-2">
+            <button onclick="closeEditarRoteiroModal()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl text-xs font-black text-slate-700 transition cursor-pointer">Cancelar</button>
+            <button onclick="saveRoteiroTexto()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black shadow-md border border-emerald-500 transition cursor-pointer">💾 Salvar Roteiro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL EDITAR LIVRO INTEIRO (QA-FEATURE Kimi K3, 2026-08-07 — pedido Miguel:
+       "tem que ter o botão de editar também, o livro inteiro") -->
+  <div id="modal-editar-livro" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-amber-300 rounded-3xl max-w-4xl w-full flex flex-col shadow-2xl overflow-hidden text-slate-900 max-h-[92vh]">
+      <div class="p-5 border-b border-amber-200 flex items-center justify-between bg-amber-50">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-800">
+            <i data-lucide="book-open-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-extrabold font-display text-slate-900">✏️ Editar o Livro Inteiro Compilado</h3>
+            <p class="text-xs text-amber-900 font-bold">Edição manual do manuscrito compilado — os capítulos canônicos NÃO são tocados</p>
+          </div>
+        </div>
+        <button onclick="closeEditarLivroModal()" class="text-slate-500 hover:text-slate-900 p-1 cursor-pointer">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4 text-sm text-slate-900 bg-[#faf8f4] overflow-y-auto">
+        <p class="p-3.5 bg-amber-50 border border-amber-300 rounded-2xl text-xs font-bold text-slate-800 leading-relaxed">
+          📌 O livro compilado é gerado na hora a partir dos 23 capítulos. A sua edição manual fica salva <strong>por cima da compilação</strong> (banner âmbar avisa) — os capítulos e versões R# seguem intactos, e "⚡ Atualizar Compilação" pergunta antes de descartar a sua edição.
+        </p>
+        <textarea id="editar-livro-text" rows="18" class="w-full bg-white border border-slate-300 rounded-xl p-3.5 text-sm font-mono text-slate-900 focus:outline-none focus:border-amber-500 shadow-inner"></textarea>
+        <div class="flex items-center justify-end gap-2">
+          <button onclick="closeEditarLivroModal()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl text-xs font-black text-slate-700 transition cursor-pointer">Cancelar</button>
+          <button onclick="saveLivroEditado()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black shadow-md border border-emerald-500 transition cursor-pointer">💾 Salvar Edição do Livro</button>
+        </div>
       </div>
     </div>
   </div>
@@ -2907,13 +2989,28 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
     }
 
     function downloadFullBook() {
-      const fullBookData = getCompiledFullBookData();
+      // Baixa o texto EXIBIDO: edição manual (se houver) tem prioridade sobre a compilação.
+      const disp = getFullBookDisplayText();
       const dateFormatted = new Date().toISOString().slice(0, 10).replace(/-/g, '_');
-      const blob = new Blob([fullBookData.mainContent], { type: 'text/markdown;charset=utf-8;' });
+      const blob = new Blob([disp.text], { type: 'text/markdown;charset=utf-8;' });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', `R1_Filhos_da_Impunidade_${currentVolume === 'vol1_v7' ? 'Vol_1_23Caps' : 'Vol_2'}_${dateFormatted}_compilado.md`);
+      link.setAttribute('download', `R1_Filhos_da_Impunidade_${currentVolume === 'vol1_v7' ? 'Vol_1_23Caps' : 'Vol_2'}_${dateFormatted}_compilado${disp.edited ? '_editado' : ''}.md`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function downloadRoteiro() {
+      // Baixa o texto do roteiro/frontmatter (com override de edição, se houver).
+      const txt = getRoteiroText();
+      const dateFormatted = new Date().toISOString().slice(0, 10).replace(/-/g, '_');
+      const blob = new Blob([txt], { type: 'text/markdown;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `Roteiro_Filhos_da_Impunidade_${currentVolume}_${dateFormatted}.md`);
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -2961,6 +3058,98 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       renderSingleView();
       window.scrollTo(0, 0);
       updateUrlHashRoute();
+    }
+
+    // ⚡ Atualizar Compilação — se existir EDIÇÃO MANUAL ativa, exige 2 toques
+    // (padrão do app: confirm() é suprimido em webviews). A compilação regenera
+    // dos capítulos canônicos — a edição manual sai da frente da página.
+    function atualizarCompilacao(btnEl) {
+      const editTs = localStorage.getItem('miguel_fullbook_manual_edit_ts_' + currentVolume);
+      if (editTs && (!btnEl || btnEl.dataset.confirming !== '1')) {
+        if (btnEl) {
+          btnEl.dataset.confirming = '1';
+          btnEl.innerHTML = '⚠️ Descartar edição e atualizar?';
+          setTimeout(() => {
+            if (btnEl.dataset.confirming === '1') {
+              delete btnEl.dataset.confirming;
+              btnEl.innerHTML = '<i data-lucide="refresh-cw" class="w-4 h-4 text-amber-700"></i><span>⚡ Atualizar Compilação</span>';
+              if (window.lucide) lucide.createIcons();
+            }
+          }, 3800);
+        }
+        return;
+      }
+      if (editTs) {
+        localStorage.removeItem('miguel_fullbook_manual_edit_' + currentVolume);
+        localStorage.removeItem('miguel_fullbook_manual_edit_ts_' + currentVolume);
+        showStudioToast(true, '⚡ Compilação atualizada — edição manual descartada.');
+      } else {
+        showStudioToast(true, '⚡ Compilação atualizada a partir dos capítulos.');
+      }
+      compileAndReadFullBook();
+    }
+
+    // ===== QA-FEATURE EDITAR LIVRO INTEIRO (Kimi K3, 2026-08-07) =====
+    // Pedido do Miguel: "tem que ter o botão de editar também, o livro inteiro."
+    // A edição manual fica em localStorage próprio e é mostrada POR CIMA da
+    // compilação (banner avisa) — capítulos/versões R# nunca são tocados.
+    function getFullBookDisplayText() {
+      const fullData = getCompiledFullBookData();
+      const edit = localStorage.getItem('miguel_fullbook_manual_edit_' + currentVolume);
+      if (edit && edit.trim()) {
+        return { text: edit, edited: true, ts: localStorage.getItem('miguel_fullbook_manual_edit_ts_' + currentVolume) };
+      }
+      return { text: fullData.mainContent, edited: false, ts: null };
+    }
+
+    function openEditarLivroModal() {
+      const m = document.getElementById('modal-editar-livro');
+      if (!m) return;
+      const ta = document.getElementById('editar-livro-text');
+      if (ta) ta.value = getFullBookDisplayText().text;
+      m.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeEditarLivroModal() {
+      const m = document.getElementById('modal-editar-livro');
+      if (m) m.classList.add('hidden');
+    }
+
+    function saveLivroEditado() {
+      const ta = document.getElementById('editar-livro-text');
+      if (!ta) return;
+      const text = ta.value.trim();
+      if (!text) {
+        alert('⚠️ O texto do livro está vazio — nada foi salvo.');
+        return;
+      }
+      const res = safeLocalSet('miguel_fullbook_manual_edit_' + currentVolume, text);
+      if (!res.ok) { alert(storageFullHelpMessage(res.reason)); return; }
+      localStorage.setItem('miguel_fullbook_manual_edit_ts_' + currentVolume, new Date().toISOString());
+      closeEditarLivroModal();
+      showStudioToast(true, '✏️ Livro inteiro editado — sua versão está na frente (banner âmbar).');
+      if (currentChapterKey === 'full_book') renderSingleView();
+    }
+
+    function discardFullBookEdit(btnEl) {
+      if (!btnEl || btnEl.dataset.confirming !== '1') {
+        if (btnEl) {
+          btnEl.dataset.confirming = '1';
+          btnEl.innerHTML = '⚠️ Confirmar descarte?';
+          setTimeout(() => {
+            if (btnEl.dataset.confirming === '1') {
+              delete btnEl.dataset.confirming;
+              btnEl.innerHTML = '↩️ Voltar à compilação canônica';
+            }
+          }, 3500);
+        }
+        return;
+      }
+      localStorage.removeItem('miguel_fullbook_manual_edit_' + currentVolume);
+      localStorage.removeItem('miguel_fullbook_manual_edit_ts_' + currentVolume);
+      showStudioToast(true, '↩️ De volta à compilação canônica — edição manual descartada.');
+      renderSingleView();
     }
 
     function triggerAiAuditWithTokenWarning() {
@@ -3659,12 +3848,206 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       showStudioToast(true, `⬆️ Nova versão gravada: ${tag}`);
     }
 
+    // ===== QA-FEATURE ANOTAÇÕES DO ROTEIRO — LISTA VIVA (Kimi K3, 2026-08-07) =====
+    // Pedido do Miguel: "coloca também VER anotações... uma listinha das
+    // anotações anteriores, com o botãozinho de apagar, de editar — ver, editar
+    // e apagar. É importante, senão eu não vou poder usar."
+    // Antes: UMA caixa de texto única (miguel_roteiro_observacoes) — salvar
+    // sobrescrevia tudo. Agora: cada salvamento vira uma ANOTAÇÃO na lista
+    // (miguel_roteiro_anotacoes_v1), com 👁️ Ver / ✏️ Editar / 🗑️ Apagar.
+    // A caixa antiga é migrada automaticamente como 1ª anotação (nada se perde).
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function fmtAnotacaoDate(ts) {
+      try {
+        const d = new Date(ts);
+        return d.toLocaleDateString('pt-BR') + ' ' + d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      } catch(e) { return String(ts || ''); }
+    }
+
+    function loadRoteiroAnotacoes() {
+      let list = [];
+      try {
+        const raw = localStorage.getItem('miguel_roteiro_anotacoes_v1');
+        list = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(list)) list = [];
+      } catch(e) { list = []; }
+      // Migração única da caixa antiga (texto solto) → vira a 1ª anotação da lista
+      try {
+        const old = (localStorage.getItem('miguel_roteiro_observacoes') || '').trim();
+        const jaMigrada = localStorage.getItem('miguel_roteiro_anotacoes_migrada') === '1';
+        if (old && !jaMigrada) {
+          list.push({ id: 'anot_migrada_' + Date.now().toString(36), text: old, ts: new Date().toISOString(), migrada: true });
+          localStorage.setItem('miguel_roteiro_anotacoes_v1', JSON.stringify(list));
+        }
+        if (!jaMigrada) localStorage.setItem('miguel_roteiro_anotacoes_migrada', '1');
+      } catch(e) {}
+      return list;
+    }
+
+    function saveRoteiroAnotacoes(list) {
+      const res = safeLocalSet('miguel_roteiro_anotacoes_v1', JSON.stringify(list));
+      if (!res.ok) {
+        alert(storageFullHelpMessage(res.reason));
+        return false;
+      }
+      return true;
+    }
+
     function saveRoteiroObs() {
       const area = document.getElementById('roteiro-obs-textarea');
-      if (area) {
-        localStorage.setItem('miguel_roteiro_observacoes', area.value);
-        alert('✅ Anotações do roteiro salvas com sucesso!');
+      if (!area) return;
+      const text = area.value.trim();
+      if (!text) {
+        showStudioToast(false, 'Anotação vazia — escreva algo antes de salvar');
+        return;
       }
+      const list = loadRoteiroAnotacoes();
+      const editingId = window._roteiroEditingId || null;
+      if (editingId) {
+        const item = list.find(a => a.id === editingId);
+        if (!item) { window._roteiroEditingId = null; showStudioToast(false, 'Anotação não encontrada — salve como nova'); renderSingleView(); return; }
+        item.text = text;
+        item.editada = true;
+        item.tsEdicao = new Date().toISOString();
+        if (!saveRoteiroAnotacoes(list)) return;
+        window._roteiroEditingId = null;
+        showStudioToast(true, '✏️ Anotação editada e salva.');
+      } else {
+        list.push({
+          id: 'anot_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 7),
+          text: text,
+          ts: new Date().toISOString()
+        });
+        if (!saveRoteiroAnotacoes(list)) return;
+        showStudioToast(true, '💾 Anotação salva na lista (' + list.length + ' no total).');
+      }
+      renderSingleView(); // re-renderiza: limpa a caixa e mostra a lista atualizada
+    }
+
+    function viewRoteiroAnotacao(id) {
+      const el = document.getElementById('anot-full-' + id);
+      if (el) el.classList.toggle('hidden');
+    }
+
+    function editRoteiroAnotacao(id) {
+      const list = loadRoteiroAnotacoes();
+      const item = list.find(a => a.id === id);
+      if (!item) { showStudioToast(false, 'Anotação não encontrada'); return; }
+      window._roteiroEditingId = id;
+      renderSingleView();
+      const area = document.getElementById('roteiro-obs-textarea');
+      if (area) {
+        area.value = item.text;
+        area.focus();
+        area.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    function cancelRoteiroAnotacaoEdit() {
+      window._roteiroEditingId = null;
+      renderSingleView();
+    }
+
+    function deleteRoteiroAnotacao(id, btnEl) {
+      // Confirmação em 2 toques no próprio botão (padrão do app — confirm() é suprimido em webviews)
+      if (!btnEl || btnEl.dataset.confirming !== '1') {
+        if (btnEl) {
+          btnEl.dataset.confirming = '1';
+          btnEl.innerHTML = '⚠️ Confirmar?';
+          btnEl.classList.remove('bg-rose-100');
+          btnEl.classList.add('bg-rose-600', 'text-white');
+          setTimeout(() => {
+            if (btnEl.dataset.confirming === '1') {
+              delete btnEl.dataset.confirming;
+              btnEl.innerHTML = '🗑️ Apagar';
+              btnEl.classList.add('bg-rose-100');
+              btnEl.classList.remove('bg-rose-600', 'text-white');
+            }
+          }, 3200);
+        }
+        return;
+      }
+      let list = loadRoteiroAnotacoes();
+      const antes = list.length;
+      list = list.filter(a => a.id !== id);
+      if (list.length === antes) return;
+      if (window._roteiroEditingId === id) window._roteiroEditingId = null;
+      if (!saveRoteiroAnotacoes(list)) return;
+      showStudioToast(true, '🗑️ Anotação apagada — restam ' + list.length + '.');
+      renderSingleView();
+    }
+
+    // ===== QA-FEATURE EDITAR ROTEIRO (Kimi K3, 2026-08-07) =====
+    // Pedido do Miguel: "tem que ter um botãozinho para editar o roteiro."
+    // O texto do roteiro/frontmatter (ficha técnica, apresentação) ganha um
+    // override em localStorage — o original embutido no código NUNCA é tocado
+    // (↩️ Restaurar Original descarta a edição). Mesma filosofia das versões R#.
+    function getRoteiroText() {
+      const ds = getCurrentVolumeDataset();
+      const original = (ds['00_frontmatter'] && ds['00_frontmatter'].mainContent) || '';
+      const override = localStorage.getItem('miguel_roteiro_texto_override_' + currentVolume);
+      return (override && override.trim()) ? override : original;
+    }
+
+    function openEditarRoteiroModal() {
+      const m = document.getElementById('modal-editar-roteiro');
+      if (!m) return;
+      const ta = document.getElementById('editar-roteiro-text');
+      if (ta) ta.value = getRoteiroText();
+      const info = document.getElementById('editar-roteiro-info');
+      const ts = localStorage.getItem('miguel_roteiro_texto_override_ts_' + currentVolume);
+      if (info) info.textContent = ts
+        ? '✏️ Este roteiro tem uma EDIÇÃO SUA ativa (de ' + fmtAnotacaoDate(ts) + '). Salvar atualiza a sua edição; "Restaurar Original" volta ao texto do código.'
+        : 'Você está editando o TEXTO ORIGINAL do roteiro. Ao salvar, vira uma edição sua (o original fica guardado e pode ser restaurado a qualquer momento).';
+      m.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeEditarRoteiroModal() {
+      const m = document.getElementById('modal-editar-roteiro');
+      if (m) m.classList.add('hidden');
+    }
+
+    function saveRoteiroTexto() {
+      const ta = document.getElementById('editar-roteiro-text');
+      if (!ta) return;
+      const text = ta.value.trim();
+      if (!text) {
+        alert('⚠️ O texto do roteiro está vazio — nada foi salvo.');
+        return;
+      }
+      const res = safeLocalSet('miguel_roteiro_texto_override_' + currentVolume, text);
+      if (!res.ok) { alert(storageFullHelpMessage(res.reason)); return; }
+      localStorage.setItem('miguel_roteiro_texto_override_ts_' + currentVolume, new Date().toISOString());
+      closeEditarRoteiroModal();
+      showStudioToast(true, '✏️ Roteiro editado e salvo — sua versão está ativa.');
+      if (currentChapterKey === '00_frontmatter') renderSingleView();
+    }
+
+    function restoreRoteiroTexto(btnEl) {
+      if (!btnEl || btnEl.dataset.confirming !== '1') {
+        if (btnEl) {
+          btnEl.dataset.confirming = '1';
+          btnEl.innerHTML = '⚠️ Confirmar restauração?';
+          setTimeout(() => {
+            if (btnEl.dataset.confirming === '1') {
+              delete btnEl.dataset.confirming;
+              btnEl.innerHTML = '↩️ Restaurar Original';
+            }
+          }, 3500);
+        }
+        return;
+      }
+      localStorage.removeItem('miguel_roteiro_texto_override_' + currentVolume);
+      localStorage.removeItem('miguel_roteiro_texto_override_ts_' + currentVolume);
+      closeEditarRoteiroModal();
+      showStudioToast(true, '↩️ Roteiro restaurado ao texto original — sua edição foi descartada.');
+      if (currentChapterKey === '00_frontmatter') renderSingleView();
     }
 
     function renderRoteiroDoLivro() {
@@ -3705,50 +4088,95 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         `;
       }).join('');
 
-      const savedObs = localStorage.getItem('miguel_roteiro_observacoes') || '';
+      const anotacoes = loadRoteiroAnotacoes(); // inclui migração da caixa antiga
+      const editingId = window._roteiroEditingId || null;
+      const roteiroTxt = getRoteiroText();
+      const roteiroOverrideTs = localStorage.getItem('miguel_roteiro_texto_override_ts_' + currentVolume);
+
+      const anotacoesHtml = anotacoes.length === 0
+        ? `<p class="text-xs text-slate-500 dark:text-slate-400 font-bold italic">Nenhuma anotação anterior — a primeira que você salvar aparece aqui na lista.</p>`
+        : anotacoes.slice().reverse().map(a => `
+          <div class="border border-amber-200 dark:border-slate-700 rounded-xl bg-amber-50/60 dark:bg-slate-950 p-3 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-[10px] font-mono font-black text-amber-900 dark:text-amber-400">🗓️ ${fmtAnotacaoDate(a.ts)}${a.migrada ? ' · migrada da caixa antiga' : ''}${a.editada ? ' · editada' : ''}</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="viewRoteiroAnotacao('${a.id}')" title="Ver a anotação inteira" class="px-2.5 py-1 bg-sky-100 hover:bg-sky-200 text-sky-900 rounded-lg text-[10px] font-black transition cursor-pointer">👁️ Ver</button>
+                <button onclick="editRoteiroAnotacao('${a.id}')" title="Editar esta anotação (volta pra caixa de texto)" class="px-2.5 py-1 bg-amber-100 hover:bg-amber-200 text-amber-950 rounded-lg text-[10px] font-black transition cursor-pointer">✏️ Editar</button>
+                <button onclick="deleteRoteiroAnotacao('${a.id}', this)" title="Apagar esta anotação (2 toques: clicar e confirmar)" class="px-2.5 py-1 bg-rose-100 hover:bg-rose-200 text-rose-800 rounded-lg text-[10px] font-black transition cursor-pointer">🗑️ Apagar</button>
+              </div>
+            </div>
+            <p class="text-xs font-mono font-bold text-slate-800 dark:text-slate-200 leading-relaxed">${escapeHtml(a.text.length > 180 ? a.text.slice(0, 180) + '…' : a.text)}</p>
+            <div id="anot-full-${a.id}" class="hidden text-xs font-mono font-bold text-slate-800 dark:text-slate-200 leading-relaxed whitespace-pre-wrap bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-700 rounded-lg p-3">${escapeHtml(a.text)}</div>
+          </div>
+        `).join('');
 
       return `
         <!-- HEADER DO ROTEIRO DO LIVRO -->
-        <div class="bg-gradient-to-r from-slate-900 to-amber-950 text-white rounded-3xl p-6 md:p-8 mb-8 shadow-xl border-2 border-amber-500/40 space-y-4">
-          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="bg-amber-500 text-slate-950 text-xs font-mono font-black px-3 py-1 rounded-md uppercase tracking-wider shadow">Roteiro Canônico</span>
-                <span class="text-xs font-mono text-amber-200 font-extrabold">${keys.length} Capítulos Canônicos • ~${fullData.totalWords.toLocaleString()} Palavras</span>
-              </div>
-              <h2 class="text-2xl md:text-3xl font-black font-display tracking-tight text-white">📌 Roteiro Estrutural & Sinopses do Livro</h2>
-              <p class="text-sm text-amber-100/90 mt-1 font-sans">Guia do Foragido: Navegação organizada por todos os 23 capítulos, sinopses e observações de apuração.</p>
+        <div class="fdi-ui bg-gradient-to-r from-slate-900 to-amber-950 text-white rounded-3xl p-6 md:p-8 mb-8 shadow-xl border-2 border-amber-500/40 space-y-4">
+          <div>
+            <div class="flex items-center gap-2 mb-2 flex-wrap">
+              <span class="bg-amber-500 text-slate-950 text-xs font-mono font-black px-3 py-1 rounded-md uppercase tracking-wider shadow">Roteiro Canônico</span>
+              <span class="text-xs font-mono text-amber-200 font-extrabold">${keys.length} Capítulos Canônicos • ~${fullData.totalWords.toLocaleString()} Palavras</span>
             </div>
-            <div class="flex flex-wrap gap-2.5 shrink-0">
-              <button onclick="compileAndReadFullBook()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-xl text-xs font-black transition shadow-md flex items-center gap-2 cursor-pointer">
-                <i data-lucide="book-open" class="w-4 h-4 text-slate-950"></i>
-                <span>📚 Ler / Compilar Livro Inteiro</span>
-              </button>
-              <button onclick="downloadFullBook()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 rounded-xl text-xs font-bold transition flex items-center gap-2 cursor-pointer">
-                <i data-lucide="download" class="w-4 h-4"></i>
-                <span>Baixar Roteiro (.md)</span>
-              </button>
-            </div>
+            <h2 class="text-2xl md:text-3xl font-black font-display tracking-tight text-white">📌 Roteiro Estrutural & Sinopses do Livro</h2>
+            <p class="text-sm text-amber-100/90 mt-1 font-sans">Guia do Foragido: Navegação organizada por todos os 23 capítulos, sinopses e observações de apuração.</p>
+          </div>
+          <div class="flex flex-wrap gap-2.5">
+            <button onclick="compileAndReadFullBook()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-xl text-xs font-black transition shadow-md flex items-center gap-2 cursor-pointer">
+              <i data-lucide="book-open" class="w-4 h-4 text-slate-950"></i>
+              <span>📖 Ler Livro Inteiro</span>
+            </button>
+            <button onclick="openEditarRoteiroModal()" title="Editar o texto do roteiro/frontmatter (ficha técnica, apresentação)" class="px-4 py-2.5 bg-white hover:bg-amber-50 text-slate-900 border border-amber-300 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-md cursor-pointer">
+              <i data-lucide="pencil" class="w-4 h-4 text-amber-700"></i>
+              <span>✏️ Editar Roteiro</span>
+            </button>
+            <button onclick="downloadRoteiro()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white border border-slate-600 rounded-xl text-xs font-bold transition flex items-center gap-2 cursor-pointer">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Baixar Roteiro (.md)</span>
+            </button>
           </div>
         </div>
 
         <!-- QUADRO INTERATIVO DE OBSERVAÇÕES DO ROTEIRO -->
-        <div class="bg-white dark:bg-slate-900 border-2 border-amber-300 dark:border-amber-700/60 rounded-3xl p-6 mb-8 shadow-md space-y-4">
-          <div class="flex items-center justify-between border-b border-amber-200 dark:border-slate-800 pb-3">
+        <div class="fdi-ui bg-white dark:bg-slate-900 border-2 border-amber-300 dark:border-amber-700/60 rounded-3xl p-6 mb-8 shadow-md space-y-4">
+          <div class="flex items-center justify-between border-b border-amber-200 dark:border-slate-800 pb-3 flex-wrap gap-2">
             <div class="flex items-center gap-2">
               <i data-lucide="notebook-pen" class="w-5 h-5 text-amber-600 dark:text-amber-400"></i>
               <h3 class="text-base font-black font-display text-slate-900 dark:text-slate-100">📝 Anotações & Observações do Roteiro (Miguel)</h3>
             </div>
-            <button onclick="saveRoteiroObs()" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition flex items-center gap-1.5 shadow cursor-pointer">
-              <i data-lucide="save" class="w-3.5 h-3.5"></i>
-              <span>Salvar Anotações</span>
-            </button>
+            <div class="flex items-center gap-2">
+              ${editingId ? `<button onclick="cancelRoteiroAnotacaoEdit()" class="px-3 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-xl text-xs font-black transition cursor-pointer">✖️ Cancelar edição</button>` : ''}
+              <button onclick="saveRoteiroObs()" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition flex items-center gap-1.5 shadow cursor-pointer">
+                <i data-lucide="save" class="w-3.5 h-3.5"></i>
+                <span>${editingId ? '💾 Salvar Edição' : '💾 Salvar Anotação'}</span>
+              </button>
+            </div>
           </div>
-          <textarea id="roteiro-obs-textarea" rows="3" placeholder="Digite aqui suas observações sobre o roteiro, novas ideias para capítulos ou orientações para a IA..." class="w-full bg-amber-50/50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl p-3.5 text-xs font-mono font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-amber-500 leading-relaxed">${savedObs}</textarea>
+          ${editingId ? `<p class="text-[11px] font-black text-amber-800 dark:text-amber-400">✏️ Editando uma anotação anterior — "Salvar Edição" atualiza ela mesma (não cria nova).</p>` : ''}
+          <textarea id="roteiro-obs-textarea" rows="3" placeholder="Digite aqui suas observações sobre o roteiro, novas ideias para capítulos ou orientações para a IA..." class="w-full bg-amber-50/50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl p-3.5 text-xs font-mono font-bold text-slate-900 dark:text-slate-100 focus:outline-none focus:border-amber-500 leading-relaxed"></textarea>
+          <div class="space-y-2.5 pt-1">
+            <h4 class="text-xs font-mono font-black uppercase text-slate-600 dark:text-slate-400 tracking-wider">📚 Anotações anteriores (${anotacoes.length}) — ver, editar e apagar:</h4>
+            ${anotacoesHtml}
+          </div>
+        </div>
+
+        <!-- TEXTO DO ROTEIRO / FRONTMATTER -->
+        <div class="fdi-ui bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-3xl p-6 mb-8 shadow-md space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3 flex-wrap gap-2">
+            <h3 class="text-base font-black font-display text-slate-900 dark:text-slate-100 flex items-center gap-2">
+              <i data-lucide="scroll-text" class="w-5 h-5 text-amber-600"></i>
+              <span>📜 Texto do Roteiro (frontmatter do livro)</span>
+            </h3>
+            <div class="flex items-center gap-2">
+              ${roteiroOverrideTs ? `<span class="text-[10px] font-mono font-black text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded">✏️ editado em ${fmtAnotacaoDate(roteiroOverrideTs)}</span>` : `<span class="text-[10px] font-mono font-black text-slate-600 bg-slate-100 border border-slate-300 px-2 py-0.5 rounded">texto original</span>`}
+              <button onclick="openEditarRoteiroModal()" class="px-3 py-1.5 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-black transition cursor-pointer">✏️ Editar</button>
+            </div>
+          </div>
+          <div class="prose-book text-sm">${marked.parse(roteiroTxt)}</div>
         </div>
 
         <!-- GRID DE SINOPSES DOS CAPÍTULOS -->
-        <div class="space-y-4">
+        <div class="fdi-ui space-y-4">
           <h3 class="text-lg font-black font-display text-slate-900 dark:text-slate-100 flex items-center gap-2">
             <i data-lucide="list" class="w-5 h-5 text-amber-600"></i>
             <span>Mapa Geral dos 23 Capítulos Canônicos</span>
@@ -3766,33 +4194,43 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
 
       if (currentChapterKey === 'full_book') {
         const fullData = getCompiledFullBookData();
+        const disp = getFullBookDisplayText();
         container.innerHTML = `
-          <div class="bg-gradient-to-r from-amber-600 to-amber-800 text-white rounded-3xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl">
+          <div class="fdi-ui bg-gradient-to-r from-amber-600 to-amber-800 text-white rounded-3xl p-6 mb-8 shadow-xl space-y-4">
             <div>
-              <div class="flex items-center gap-2 mb-1.5">
+              <div class="flex items-center gap-2 mb-1.5 flex-wrap">
                 <span class="bg-amber-300 text-amber-950 text-xs font-mono font-black px-2.5 py-0.5 rounded uppercase shadow-sm">Compilado Canônico</span>
                 <span class="text-xs font-mono text-amber-100 font-bold">${fullData.totalChapters} Capítulos · ~${fullData.totalWords.toLocaleString()} palavras</span>
               </div>
               <h2 class="text-xl md:text-2xl font-black font-display tracking-tight text-white">${fullData.title}</h2>
               <p class="text-xs text-amber-100 mt-1 font-sans">Compilação dinâmica de todas as 23 versões canônicas ativas em um único manuscrito contínuo.</p>
             </div>
-            <div class="flex flex-wrap items-center gap-2.5 shrink-0">
+            <div class="flex flex-wrap items-center gap-2.5 border-t border-amber-400/40 pt-4">
               <button onclick="downloadFullBook()" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black transition flex items-center gap-2 shadow-md cursor-pointer">
                 <i data-lucide="download" class="w-4 h-4"></i>
                 <span>📥 Baixar Livro Inteiro (.md)</span>
               </button>
-              <button onclick="compileAndReadFullBook()" class="px-4 py-2.5 bg-white hover:bg-amber-50 text-amber-950 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-md cursor-pointer">
+              <button onclick="atualizarCompilacao(this)" title="Recompilar o manuscrito a partir das versões canônicas ativas dos capítulos" class="px-4 py-2.5 bg-white hover:bg-amber-50 text-amber-950 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-md cursor-pointer">
                 <i data-lucide="refresh-cw" class="w-4 h-4 text-amber-700"></i>
                 <span>⚡ Atualizar Compilação</span>
               </button>
-              <button onclick="triggerAiAuditWithTokenWarning()" class="px-4 py-2.5 bg-amber-950/80 hover:bg-amber-950 text-white border border-amber-400/40 rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-md cursor-pointer">
+              <button onclick="openEditarLivroModal()" title="Editar manualmente o texto do livro inteiro compilado (os capítulos não são tocados)" class="px-4 py-2.5 bg-white hover:bg-amber-50 text-slate-900 border border-amber-300 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-md cursor-pointer">
+                <i data-lucide="pencil" class="w-4 h-4 text-amber-700"></i>
+                <span>✏️ Editar Livro Inteiro</span>
+              </button>
+              <button onclick="triggerAiAuditWithTokenWarning()" title="Abrir o Estúdio Editorial apontando para o livro inteiro (não revisa sozinho — você decide lá dentro)" class="px-4 py-2.5 bg-purple-700 hover:bg-purple-800 text-white border border-purple-500 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-md cursor-pointer">
                 <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
-                <span>🤖 Revisar com IA</span>
+                <span>🎬 Estúdio do Livro Inteiro</span>
               </button>
             </div>
           </div>
+          ${disp.edited ? `
+          <div class="fdi-ui mb-8 p-4 bg-amber-50 border-2 border-amber-400 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3 shadow-sm">
+            <p class="text-xs font-black text-amber-950 leading-relaxed">✏️ Você está lendo a sua <strong>EDIÇÃO MANUAL</strong> do livro inteiro (salva em ${fmtAnotacaoDate(disp.ts)}). A compilação canônica dos capítulos segue intacta embaixo dela.</p>
+            <button onclick="discardFullBookEdit(this)" class="px-3.5 py-2 bg-white hover:bg-amber-100 border border-amber-400 text-amber-950 rounded-xl text-[11px] font-black transition shrink-0 cursor-pointer">↩️ Voltar à compilação canônica</button>
+          </div>` : ''}
           <div class="prose-book">
-            ${marked.parse(fullData.mainContent)}
+            ${marked.parse(disp.text)}
           </div>
         `;
         if (window.lucide) lucide.createIcons();
