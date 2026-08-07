@@ -2871,6 +2871,7 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
     }
 
     function loadChapter(chapKey) {
+      versionRenamingKey = null; // troca de capítulo sempre fecha edição de nome pendente
       const prodContainer = document.getElementById('prod-block-container');
       if (chapKey === 'full_book') {
         renderVersionTabs();
@@ -3394,6 +3395,35 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         const isSelected = (v.key === currentVersionKey);
         const isCanonical = (v.key === canonicalKey);
 
+        // QA-FEATURE RENOMEAR VERSÃO (K3, 2026-08-07 — pedido Miguel: "tem que
+        // ter o comando para mudar o nome... botei o nome errado, Gemini 3.6"):
+        // a linha em edição vira input inline + ✓/✕ (mesmo padrão do gerenciador
+        // de capítulos). O menu permanece ABERTO durante e depois da edição.
+        if (versionRenamingKey === v.key && v.type === 'revision') {
+          const rowEdit = document.createElement('div');
+          rowEdit.className = 'w-full flex items-center gap-1.5 px-3 py-2 bg-sky-50';
+          const revsNow = getSavedRevisions(currentChapterKey);
+          const curLabel = (revsNow[v.key] && revsNow[v.key].versionTag) || v.key;
+          rowEdit.innerHTML = `
+            <input id="version-rename-input" type="text" maxlength="40" class="flex-1 min-w-0 px-2 py-1.5 border-2 border-sky-400 rounded-lg text-xs font-bold text-slate-900 bg-white" title="Novo nome da versão (Enter salva, Esc cancela)">
+            <button class="px-2 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg cursor-pointer" title="Salvar o novo nome"><i data-lucide="check" class="w-4 h-4"></i></button>
+            <button class="px-2 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg cursor-pointer" title="Cancelar a renomeação"><i data-lucide="x" class="w-4 h-4"></i></button>
+          `;
+          const inp = rowEdit.querySelector('#version-rename-input');
+          if (inp) {
+            inp.value = curLabel; // via propriedade: rótulo existente nunca vira HTML
+            inp.onkeydown = (ev) => {
+              if (ev.key === 'Enter') { ev.preventDefault(); confirmRenameVersion(v.key); }
+              if (ev.key === 'Escape') cancelRenameVersion();
+            };
+          }
+          const editBtns = rowEdit.querySelectorAll('button');
+          if (editBtns[0]) editBtns[0].onclick = () => confirmRenameVersion(v.key);
+          if (editBtns[1]) editBtns[1].onclick = () => cancelRenameVersion();
+          listEl.appendChild(rowEdit);
+          return;
+        }
+
         // QA-FEATURE (Kimi 3, 2026-08-04): linha = botão de selecionar + botão 🗑️
         // de apagar (só em revisões não-canônicas; oficial/canônica/experimentais
         // não podem ser apagadas). Pedido do Miguel: limpar a lista de versões.
@@ -3439,16 +3469,32 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
             cb.checked = !cb.checked;
             toggleVersionCleanupItem(v.key, cb);
           };
-        } else if (deletable) {
-          const delBtn = document.createElement('button');
-          delBtn.className = 'px-3 text-rose-600 hover:bg-rose-100 dark:hover:bg-rose-900/40 transition cursor-pointer flex items-center';
-          delBtn.title = `Apagar a versão "${v.label}" (2 toques: clicar e confirmar)`;
-          delBtn.innerHTML = '<i data-lucide="trash-2" class="w-4 h-4"></i>';
-          delBtn.onclick = (ev) => {
-            ev.stopPropagation();
-            deleteRevisionVersion(v.key, delBtn);
-          };
-          row.appendChild(delBtn);
+        } else {
+          // QA-FEATURE RENOMEAR VERSÃO (K3, 2026-08-07): ✏️ em TODA revisão
+          // (inclusive a canônica — renomear não conflita com o 👑; só apagar
+          // é que é bloqueado nela). Oficial/experimentais não têm nome editável.
+          if (v.type === 'revision') {
+            const renBtn = document.createElement('button');
+            renBtn.className = 'px-2.5 text-sky-600 hover:bg-sky-100 dark:hover:bg-sky-900/40 transition cursor-pointer flex items-center';
+            renBtn.title = `Renomear a versão "${v.label}"`;
+            renBtn.innerHTML = '<i data-lucide="pencil" class="w-4 h-4"></i>';
+            renBtn.onclick = (ev) => {
+              ev.stopPropagation();
+              startRenameVersion(v.key);
+            };
+            row.appendChild(renBtn);
+          }
+          if (deletable) {
+            const delBtn = document.createElement('button');
+            delBtn.className = 'px-3 text-rose-600 hover:bg-rose-100 dark:hover:bg-rose-900/40 transition cursor-pointer flex items-center';
+            delBtn.title = `Apagar a versão "${v.label}" (2 toques: clicar e confirmar)`;
+            delBtn.innerHTML = '<i data-lucide="trash-2" class="w-4 h-4"></i>';
+            delBtn.onclick = (ev) => {
+              ev.stopPropagation();
+              deleteRevisionVersion(v.key, delBtn);
+            };
+            row.appendChild(delBtn);
+          }
         }
 
         listEl.appendChild(row);
@@ -3604,6 +3650,72 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       showStudioToast(true, `Versão "${deletedTag}" apagada — restam ${restam}.`);
     }
 
+    // ===== QA-FEATURE RENOMEAR VERSÃO (K3, 2026-08-07) =====
+    // Pedido do Miguel: "Tem que ter o comando para mudar o nome. Eu botei o nome
+    // errado aqui, está Gemini 3.6." O nome de exibição de uma revisão mora em
+    // revs[R#].versionTag (localStorage) — renomear troca só o rótulo, o texto e a
+    // chave R# ficam intactos (canônica continua apontando para a mesma versão).
+    // Mesmo padrão do gerenciador de capítulos (start/confirm/cancel + input
+    // inline). O menu permanece ABERTO para o Miguel ver o resultado na hora.
+    let versionRenamingKey = null;
+
+    function __keepVersionMenuOpen() {
+      try { const menu = document.getElementById('version-dropdown-menu'); if (menu) menu.classList.remove('hidden'); } catch(e) {}
+    }
+
+    function startRenameVersion(vKey) {
+      versionRenamingKey = vKey;
+      renderVersionTabs(); // reconstrói o menu com a linha em modo edição
+      __keepVersionMenuOpen();
+      try {
+        const inp = document.getElementById('version-rename-input');
+        if (inp) { inp.focus(); inp.select(); }
+      } catch(e) {}
+    }
+
+    function confirmRenameVersion(vKey) {
+      const inp = document.getElementById('version-rename-input');
+      const newLabel = inp ? inp.value.trim() : '';
+      versionRenamingKey = null;
+
+      const revs = getSavedRevisions(currentChapterKey);
+      if (!revs[vKey]) { renderVersionTabs(); __keepVersionMenuOpen(); return; }
+      const oldLabel = revs[vKey].versionTag || vKey;
+
+      if (!newLabel) {
+        renderVersionTabs();
+        __keepVersionMenuOpen();
+        showStudioToast(false, 'Nome vazio — renomeação cancelada');
+        return;
+      }
+      if (newLabel === oldLabel) {
+        renderVersionTabs();
+        __keepVersionMenuOpen();
+        return; // nada mudou, só fecha a edição
+      }
+
+      revs[vKey].versionTag = newLabel.slice(0, 40);
+      const res = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
+      if (!res.ok) {
+        alert(storageFullHelpMessage(res.reason));
+        renderVersionTabs();
+        __keepVersionMenuOpen();
+        return;
+      }
+
+      renderVersionTabs();
+      renderMetrics();
+      refreshStudioTitle();
+      __keepVersionMenuOpen();
+      showStudioToast(true, `Versão renomeada: "${oldLabel}" → "${revs[vKey].versionTag}"`);
+    }
+
+    function cancelRenameVersion() {
+      versionRenamingKey = null;
+      renderVersionTabs();
+      __keepVersionMenuOpen();
+    }
+
     // ===== QA-FEATURE MODO FAXINA (Kimi 3, 2026-08-05) =====
     // Pedido do Miguel: "botão para apagar VÁRIAS versões de uma vez" (25+ versões).
     // Seleção múltipla no menu de versões + exclusão em massa com 1 confirmação (2 toques).
@@ -3612,10 +3724,11 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
 
     function toggleVersionCleanupMode(ev) {
       if (ev) ev.stopPropagation();
+      versionRenamingKey = null; // faxina e renomeação não coexistem
       versionCleanupMode = !versionCleanupMode;
       versionCleanupSelection.clear();
       renderVersionTabs();
-      try { const menu = document.getElementById('version-dropdown-menu'); if (menu) menu.classList.remove('hidden'); } catch(e) {}
+      __keepVersionMenuOpen();
     }
 
     function versionCleanupSelectAll() {
