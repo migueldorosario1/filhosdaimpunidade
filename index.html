@@ -349,6 +349,11 @@
           <span class="hidden sm:inline">☁️ Sincronizar GitHub</span>
         </button>
 
+        <button onclick="openDriveSyncModal()" class="flex items-center gap-1.5 px-3.5 py-2 bg-sky-100 hover:bg-sky-200 border border-sky-300 rounded-xl text-xs font-bold text-sky-950 transition shadow-sm cursor-pointer">
+          <i data-lucide="hard-drive-download" class="w-4 h-4 text-sky-700"></i>
+          <span class="hidden sm:inline">☁️ Sincronizar Google Drive</span>
+        </button>
+
         <!-- THEME SWITCHER (MODO DIA / MODO NOITE) -->
         <button id="theme-toggle-btn" onclick="toggleThemeMode()" title="Alternar Modo Dia / Noite" class="flex items-center gap-1.5 px-3.5 py-2 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-xl text-xs font-bold text-amber-900 transition shadow-sm cursor-pointer">
           <span id="theme-toggle-icon">☀️</span>
@@ -1236,6 +1241,74 @@
           <button onclick="closeUploadVersionModal()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl text-xs font-black text-slate-700 transition cursor-pointer">Cancelar</button>
           <button onclick="saveUploadedVersion(this)" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-xs font-black shadow-md border border-sky-500 transition cursor-pointer">💾 Gravar como nova versão</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SINCRONIZAR GOOGLE DRIVE (QA-FEATURE Kimi K3, 2026-08-07 — pedido Miguel:
+       "bota um botão também de sincronizar com o Google Drive... confere se é o backup certo") -->
+  <div id="modal-drive-sync" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-sky-300 rounded-3xl max-w-2xl w-full flex flex-col shadow-2xl overflow-hidden text-slate-900 max-h-[92vh]">
+      <div class="p-5 border-b border-sky-200 flex items-center justify-between bg-sky-50">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 border border-sky-300 flex items-center justify-center text-sky-800">
+            <i data-lucide="hard-drive-download" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-extrabold font-display text-slate-900">Sincronização com o Google Drive</h3>
+            <p class="text-xs text-sky-900 font-bold">Backup do livro na pasta <code class="font-mono">gdrive:novo livro</code> (espelho diário 04:30)</p>
+          </div>
+        </div>
+        <button onclick="closeDriveSyncModal()" class="text-slate-500 hover:text-slate-900 p-1 cursor-pointer">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4 text-sm text-slate-900 bg-[#fafbfc] overflow-y-auto">
+        <!-- STATUS AO VIVO DO BACKUP -->
+        <div class="p-4 bg-sky-50 border border-sky-300 rounded-2xl space-y-2 text-xs">
+          <div class="font-extrabold text-sky-950 flex items-center justify-between">
+            <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-sky-700"></i><span>Estado do backup no Drive (verificação ao vivo):</span></span>
+            <button onclick="loadDriveSyncStatus()" class="text-[10px] font-black text-sky-800 hover:underline cursor-pointer">↻ atualizar</button>
+          </div>
+          <div id="drive-sync-status" class="font-mono font-bold text-slate-700 leading-relaxed">⏳ verificando...</div>
+        </div>
+
+        <div class="space-y-3">
+          <button onclick="pullFromGoogleDrive(this)" class="w-full p-3.5 bg-white hover:bg-sky-50 border border-slate-300 rounded-xl flex items-center justify-between transition text-left group shadow-sm cursor-pointer">
+            <div>
+              <div class="font-bold text-slate-900 group-hover:text-sky-900 transition">🔄 Puxar revisões do Google Drive</div>
+              <div class="text-xs text-slate-600">Baixa <code class="font-mono">revisions.json</code> + <code class="font-mono">custom_rules.json</code> do Drive e mescla com as deste navegador (as suas locais têm prioridade)</div>
+            </div>
+            <i data-lucide="download-cloud" class="w-5 h-5 text-sky-700"></i>
+          </button>
+
+          <button onclick="pushToGoogleDrive(this)" class="w-full p-3.5 bg-white hover:bg-sky-50 border border-slate-300 rounded-xl flex items-center justify-between transition text-left group shadow-sm cursor-pointer">
+            <div>
+              <div class="font-bold text-slate-900 group-hover:text-sky-900 transition">⬆️ Enviar revisões deste navegador para o Google Drive</div>
+              <div class="text-xs text-slate-600">Grava suas revisões R# no Drive (com snapshot de segurança) <strong>e espelha no GitHub</strong> — as duas pontas ficam frescas</div>
+            </div>
+            <i data-lucide="upload-cloud" class="w-5 h-5 text-sky-700"></i>
+          </button>
+
+          <button onclick="exportRevisionsBundle()" class="w-full p-3.5 bg-white hover:bg-sky-50 border border-slate-300 rounded-xl flex items-center justify-between transition text-left group shadow-sm cursor-pointer">
+            <div>
+              <div class="font-bold text-slate-900 group-hover:text-sky-900 transition">📥 Baixar pacote de revisões em JSON</div>
+              <div class="text-xs text-slate-600">Mesmo backup manual do botão GitHub — para guardar onde quiser</div>
+            </div>
+            <i data-lucide="download" class="w-5 h-5 text-sky-700"></i>
+          </button>
+
+          <a href="https://drive.google.com/drive/folders/1MGdnx-6jg3nhulk1AC8J4KivViMwFVe2" target="_blank" rel="noopener" class="w-full p-3.5 bg-white hover:bg-sky-50 border border-slate-300 rounded-xl flex items-center justify-between transition text-left group shadow-sm cursor-pointer block">
+            <div>
+              <div class="font-bold text-slate-900 group-hover:text-sky-900 transition">📂 Abrir a pasta do backup no Drive</div>
+              <div class="text-xs text-slate-600"><code class="font-mono">novo livro</code> — espelho do projeto + zips diários em <code class="font-mono">backups/</code></div>
+            </div>
+            <i data-lucide="external-link" class="w-5 h-5 text-sky-700"></i>
+          </a>
+        </div>
+
+        <div id="drive-sync-log" class="hidden p-3.5 bg-slate-50 border border-slate-300 rounded-2xl text-[11px] font-mono font-bold text-slate-700 leading-relaxed whitespace-pre-wrap"></div>
       </div>
     </div>
   </div>
@@ -6871,6 +6944,157 @@ Isso descarta apenas as edições da sessão atual (rascunho em cache) e volta a
       a.download = `miguel_livro_revisoes_backup_${new Date().toISOString().slice(0, 10)}.json`;
       a.click();
       URL.revokeObjectURL(url);
+    }
+
+    // ===== QA-FEATURE SYNC GOOGLE DRIVE (Kimi K3, 2026-08-07) =====
+    // Pedido do Miguel: botão de sincronizar com o Google Drive, par do botão
+    // GitHub. O backup certo foi verificado: pasta gdrive:novo livro (espelho
+    // diário 04:30; revisions.json byte-idêntico ao do GitHub na verificação).
+    // O trabalho pesado (OAuth Google) vive na função serverless /api/drive —
+    // nenhum segredo no navegador. op=status/pull são livres; op=push pede a
+    // chave de sincronização (guardada neste navegador após o 1º uso).
+    function openDriveSyncModal() {
+      document.getElementById('modal-drive-sync').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+      loadDriveSyncStatus();
+    }
+
+    function closeDriveSyncModal() {
+      const m = document.getElementById('modal-drive-sync');
+      if (m) m.classList.add('hidden');
+    }
+
+    function fmtDriveDate(iso) {
+      if (!iso) return '—';
+      try {
+        const d = new Date(iso);
+        return d.toLocaleDateString('pt-BR') + ' ' + d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      } catch(e) { return iso; }
+    }
+
+    function driveSyncLog(msg) {
+      const el = document.getElementById('drive-sync-log');
+      if (!el) return;
+      el.classList.remove('hidden');
+      el.textContent = msg;
+    }
+
+    async function loadDriveSyncStatus() {
+      const el = document.getElementById('drive-sync-status');
+      if (!el) return;
+      el.textContent = '⏳ verificando o backup no Google Drive...';
+      try {
+        const res = await fetch('/api/drive?op=status&t=' + Date.now());
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || ('HTTP ' + res.status));
+        const pastaOk = data.folder && data.folder.name === 'novo livro';
+        const linhas = [
+          (pastaOk ? '✅ BACKUP CERTO' : '⚠️ PASTA INESPERADA') + ': pasta "' + (data.folder && data.folder.name || '?') + '" no Drive',
+          '📄 revisions.json — ' + (data.revisions ? fmtDriveDate(data.revisions.modifiedTime) + ' (' + (data.revisions.size || '?') + ' bytes)' : 'NÃO ENCONTRADO'),
+          '📄 custom_rules.json — ' + (data.customRules ? fmtDriveDate(data.customRules.modifiedTime) : 'NÃO ENCONTRADO'),
+          '🗜️ último zip: ' + (data.latestBackup ? data.latestBackup.name.replace('livro_backup_', '').replace('.zip', '') + ' (' + fmtDriveDate(data.latestBackup.modifiedTime) + ')' : 'nenhum encontrado'),
+          '🕒 horário do servidor: ' + fmtDriveDate(data.serverTime)
+        ];
+        el.textContent = linhas.join('\n');
+        el.style.whiteSpace = 'pre-wrap';
+      } catch(e) {
+        el.textContent = '⚠️ Não consegui verificar o Drive agora: ' + e.message + '\n(a ponte serverless /api/drive pode estar sem as env vars — avise o Kimi)';
+      }
+    }
+
+    async function pullFromGoogleDrive(btnEl) {
+      driveSyncLog('⏳ Baixando revisões do Google Drive...');
+      try {
+        const res = await fetch('/api/drive?op=pull&t=' + Date.now());
+        const data = await res.json();
+        if (!data.ok) throw new Error(data.error || ('HTTP ' + res.status));
+
+        // Mesma semântica do sync GitHub: remoto como base, LOCAL tem prioridade
+        let capMesclados = 0;
+        const revData = data.revisions || {};
+        Object.keys(revData).forEach(chapKey => {
+          const localRevs = getSavedRevisions(chapKey);
+          const merged = { ...revData[chapKey], ...localRevs };
+          localStorage.setItem(storageKeyVol('miguel_book_revisions', chapKey), JSON.stringify(merged));
+          capMesclados++;
+        });
+
+        let regrasTotal = 0;
+        if (Array.isArray(data.customRules)) {
+          const mergedRules = Array.from(new Set([...data.customRules, ...getCustomManualRules()]));
+          saveCustomManualRules(mergedRules);
+          regrasTotal = mergedRules.length;
+        }
+
+        renderVersionTabs();
+        renderMetrics();
+        renderSingleView();
+        if (currentViewMode === 'compare') updateCompare();
+        refreshStudioTitle();
+
+        const msg = '✅ Puxado do Google Drive: ' + capMesclados + ' capítulo(s) mesclados, ' + regrasTotal + ' regras do Manual. Suas versões locais tiveram prioridade.';
+        driveSyncLog(msg);
+        showStudioToast(true, 'Drive → navegador: sincronizado ✅');
+        loadDriveSyncStatus();
+      } catch(e) {
+        driveSyncLog('❌ Falha ao puxar do Drive: ' + e.message);
+        showStudioToast(false, 'Falha ao puxar do Drive');
+      }
+    }
+
+    async function pushToGoogleDrive(btnEl) {
+      // Coleta igual ao exportRevisionsBundle: todas as revisões do volume atual + regras
+      const revisions = {};
+      const dataset = getCurrentVolumeDataset();
+      Object.keys(dataset).forEach(chapKey => {
+        const revs = getSavedRevisions(chapKey);
+        if (Object.keys(revs).length > 0) revisions[chapKey] = revs;
+      });
+      const customRules = getCustomManualRules();
+      const totalR = Object.values(revisions).reduce((n, r) => n + Object.keys(r).length, 0);
+      if (totalR === 0 && customRules.length === 0) {
+        driveSyncLog('⚠️ Nada para enviar: este navegador não tem revisões R# nem regras gravadas.');
+        return;
+      }
+
+      let syncKey = localStorage.getItem('fdi_drive_sync_key') || '';
+      if (!syncKey) {
+        syncKey = (window.prompt('🔑 Chave de sincronização do Drive (1ª vez só; fica gravada neste navegador).\n\nEstá no cofre como FDI_SYNC_SECRET — peça ao Kimi se não tiver.') || '').trim();
+        if (!syncKey) return;
+        localStorage.setItem('fdi_drive_sync_key', syncKey);
+      }
+
+      driveSyncLog('⏳ Enviando ' + totalR + ' revisões R# + ' + customRules.length + ' regras para o Google Drive...');
+      try {
+        const res = await fetch('/api/drive?op=push', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-sync-key': syncKey },
+          body: JSON.stringify({ revisions, customRules })
+        });
+        const data = await res.json();
+        if (res.status === 401) {
+          localStorage.removeItem('fdi_drive_sync_key');
+          driveSyncLog('❌ Chave de sincronização recusada. Ela foi esquecida deste navegador — clique de novo para tentar com a chave certa (cofre: FDI_SYNC_SECRET).');
+          return;
+        }
+        if (!data.ok) throw new Error(data.error || ('HTTP ' + res.status));
+
+        const gh = data.github && data.github.revisions && data.github.revisions.commit
+          ? 'GitHub espelhado (commit ' + data.github.revisions.commit + ')'
+          : 'GitHub: ' + ((data.github && (data.github.erro || (data.github.revisions && data.github.revisions.skipped))) || 'sem confirmação');
+        driveSyncLog(
+          '✅ ENVIADO ao Google Drive!\n' +
+          '📄 revisions.json — ' + fmtDriveDate(data.drive.revisions.modifiedTime) + ' (' + data.drive.revisions.size + ' bytes)\n' +
+          '📄 custom_rules.json — ' + fmtDriveDate(data.drive.customRules.modifiedTime) + '\n' +
+          '🗜️ snapshot de segurança: ' + (data.snapshot || '—') + '\n' +
+          '🐙 ' + gh
+        );
+        showStudioToast(true, 'Navegador → Drive: enviado ✅');
+        loadDriveSyncStatus();
+      } catch(e) {
+        driveSyncLog('❌ Falha ao enviar para o Drive: ' + e.message);
+        showStudioToast(false, 'Falha ao enviar para o Drive');
+      }
     }
 
     // Auto-sync from GitHub repository on bootup
