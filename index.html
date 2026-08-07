@@ -1190,6 +1190,56 @@
     </div>
   </div>
 
+  <!-- MODAL SUBIR NOVA VERSÃO (QA-FEATURE Kimi K3, 2026-08-07 — pedido Miguel:
+       "um botão para subir uma versão inteiramente nova... continua com o mesmo nome,
+       o capítulo continua no mesmo capítulo, só que uma versão nova") -->
+  <div id="modal-upload-version" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white border-2 border-sky-300 rounded-3xl max-w-3xl w-full flex flex-col shadow-2xl overflow-hidden text-slate-900 max-h-[92vh]">
+      <div class="p-5 border-b border-sky-200 flex items-center justify-between bg-sky-50">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 border border-sky-300 flex items-center justify-center text-sky-800">
+            <i data-lucide="upload-cloud" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="text-lg font-extrabold font-display text-slate-900">⬆️ Subir Nova Versão</h3>
+            <p id="upload-version-subtitle" class="text-xs text-sky-900 font-bold">Mesmo capítulo, mesmo nome — só uma versão nova (R#)</p>
+          </div>
+        </div>
+        <button onclick="closeUploadVersionModal()" class="text-slate-500 hover:text-slate-900 p-1 cursor-pointer">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-4 text-sm text-slate-900 bg-[#fafbfc] overflow-y-auto">
+        <div class="p-3.5 bg-sky-50 border border-sky-300 rounded-2xl text-xs leading-relaxed font-medium text-slate-800">
+          📌 A versão enviada entra no <strong>histórico de versões deste capítulo</strong> como uma revisão nova (<strong id="upload-version-nextr" class="font-mono text-sky-900">R#</strong>), sem apagar nem alterar nenhuma versão existente. O nome do capítulo não muda. Depois de gravar, você pode torná-la canônica 👑 se quiser — como qualquer outra versão.
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-xs font-mono font-extrabold uppercase text-slate-600">1️⃣ Escolher arquivo do computador (.md, .txt, .pdf):</label>
+          <input type="file" id="upload-version-file" onchange="onUploadVersionFileChange()" accept=".md,.markdown,.txt,.pdf" class="w-full text-xs font-bold text-slate-700 file:mr-3 file:px-4 file:py-2.5 file:rounded-xl file:border-0 file:bg-sky-600 file:text-white file:font-black file:text-xs file:cursor-pointer hover:file:bg-sky-700 bg-white border border-slate-300 rounded-xl p-2 cursor-pointer">
+          <p id="upload-version-file-info" class="text-[11px] font-bold text-slate-500"></p>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-xs font-mono font-extrabold uppercase text-slate-600">2️⃣ Ou cole o texto da nova versão aqui (Markdown):</label>
+          <textarea id="upload-version-text" rows="12" oninput="updateUploadVersionCharcount()" placeholder="Cole aqui o texto COMPLETO da nova versão do capítulo..." class="w-full bg-white border border-slate-300 rounded-xl p-3.5 text-sm font-mono text-slate-900 focus:outline-none focus:border-sky-500 shadow-inner"></textarea>
+          <p id="upload-version-charcount" class="text-[11px] font-mono font-bold text-slate-500 text-right">0 caracteres</p>
+        </div>
+
+        <div class="space-y-2">
+          <label class="text-xs font-mono font-extrabold uppercase text-slate-600">Rótulo (opcional — ex.: "Sônia", "final revisada"):</label>
+          <input type="text" id="upload-version-label" maxlength="40" placeholder="Sem rótulo — vira só o R# (upload)" class="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-bold text-slate-900 focus:outline-none focus:border-sky-500 shadow-inner">
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-1">
+          <button onclick="closeUploadVersionModal()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-xl text-xs font-black text-slate-700 transition cursor-pointer">Cancelar</button>
+          <button onclick="saveUploadedVersion(this)" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 text-white rounded-xl text-xs font-black shadow-md border border-sky-500 transition cursor-pointer">💾 Gravar como nova versão</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FLOATING WIDGET FOR MAIN READER FULL VIEW -->
   <div id="floating-fullview-widget" class="fixed top-4 right-4 z-50 hidden flex items-center gap-2.5 bg-slate-900/90 dark:bg-slate-950/90 backdrop-blur-md border-2 border-amber-500/80 p-2 rounded-full shadow-2xl">
     <!-- ICON 1: ESTÚDIO EDITORIAL -->
@@ -3058,6 +3108,7 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
             <span>📜 Histórico de Versões</span>
             <div class="flex items-center gap-2">
               <span class="text-amber-800 font-mono font-bold">👑 = Canônica</span>
+              <button onclick="closeVersionDropdown(); openUploadVersionModal();" title="Subir uma versão inteiramente nova deste capítulo (arquivo ou colar texto) — vira um novo R#" class="px-2 py-1 bg-sky-100 hover:bg-sky-200 text-sky-800 rounded-md text-[10px] font-black normal-case tracking-normal cursor-pointer">⬆️ Subir</button>
               <button onclick="toggleVersionCleanupMode(event)" title="Modo faxina: selecionar várias versões para apagar de uma vez" class="px-2 py-1 bg-rose-100 hover:bg-rose-200 text-rose-800 rounded-md text-[10px] font-black normal-case tracking-normal cursor-pointer">🧹 Faxina</button>
             </div>
           </div>
@@ -3192,6 +3243,16 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
         canonicalBtn.innerHTML = `<i data-lucide="crown" class="w-4 h-4 text-white"></i> <span>Tornar Canônica</span>`;
       }
       container.appendChild(canonicalBtn);
+
+      // QA-FEATURE SUBIR NOVA VERSÃO (Kimi K3, 2026-08-07 — pedido Miguel):
+      // botão visível na barra de versões ("na capa mesmo") para subir uma
+      // versão INTEIRAMENTE NOVA deste capítulo — mesmo nome, novo R#.
+      const uploadBtn = document.createElement('button');
+      uploadBtn.onclick = () => openUploadVersionModal();
+      uploadBtn.title = 'Subir uma versão inteiramente nova deste capítulo (arquivo .md/.txt/.pdf ou colar texto) — vira um novo R# no histórico';
+      uploadBtn.className = "flex items-center gap-1.5 px-3.5 py-2 bg-sky-600 hover:bg-sky-700 text-white border border-sky-500 rounded-xl text-xs font-extrabold shadow transition cursor-pointer";
+      uploadBtn.innerHTML = `<i data-lucide="upload-cloud" class="w-4 h-4 text-white"></i> <span>⬆️ Subir Nova Versão</span>`;
+      container.appendChild(uploadBtn);
 
       if (window.lucide) lucide.createIcons();
     }
@@ -3361,6 +3422,168 @@ Nenhuma outra versão foi apagada e o nome original foi mantido no menu.`);
       const restam = Object.keys(revs).length;
       setStudioSaveStatus(true, `${apagadas} ${apagadas === 1 ? 'versão apagada' : 'versões apagadas'} na faxina. Restam ${restam} ${restam === 1 ? 'revisão' : 'revisões'} neste capítulo.`);
       showStudioToast(true, `${apagadas} ${apagadas === 1 ? 'versão apagada' : 'versões apagadas'} — restam ${restam}.`);
+    }
+
+    // ===== QA-FEATURE SUBIR NOVA VERSÃO (Kimi K3, 2026-08-07) =====
+    // Pedido do Miguel: "a gente já tem como apagar as versões prontas, tem como
+    // editar as versões prontas, mas não tem como subir uma versão inteiramente
+    // nova de um capítulo... tem que criar essa liberdade: subir uma versão
+    // inteiramente nova — continua com o mesmo nome, o capítulo continua no
+    // mesmo capítulo, só que uma versão nova."
+    // Fluxo: botão na barra de versões (e no menu 📜) → modal → arquivo do
+    // computador (.md/.txt/.pdf, texto lido na hora) OU colar o texto → grava
+    // como revisão R# nova do MESMO capítulo (sem tocar nas outras versões,
+    // sem mudar canônica, sem renomear nada). A versão nova vira a ativa.
+    const UPLOAD_VERSION_MAX_CHARS = 400000; // teto de segurança p/ localStorage (~5MB/origem)
+
+    function openUploadVersionModal() {
+      if (currentChapterKey === 'full_book' || currentChapterKey === '00_frontmatter') {
+        showStudioToast(false, 'Escolha um capítulo específico para subir uma nova versão');
+        return;
+      }
+      const dataset = getCurrentVolumeDataset();
+      const chapter = dataset[currentChapterKey];
+      if (!chapter) return;
+
+      const revs = getSavedRevisions(currentChapterKey);
+      const nextR = nextRevisionKey(revs);
+      const cleanTitle = (chapter.title || currentChapterKey).replace(/^#\s+/, '');
+
+      const sub = document.getElementById('upload-version-subtitle');
+      if (sub) sub.textContent = `📖 ${cleanTitle} — mesmo capítulo, mesmo nome; a nova versão entra como ${nextR}`;
+      const nextr = document.getElementById('upload-version-nextr');
+      if (nextr) nextr.textContent = nextR;
+
+      const ta = document.getElementById('upload-version-text');
+      if (ta) ta.value = '';
+      const lbl = document.getElementById('upload-version-label');
+      if (lbl) lbl.value = '';
+      const finp = document.getElementById('upload-version-file');
+      if (finp) finp.value = '';
+      const info = document.getElementById('upload-version-file-info');
+      if (info) info.textContent = '';
+      updateUploadVersionCharcount();
+
+      document.getElementById('modal-upload-version').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeUploadVersionModal() {
+      const m = document.getElementById('modal-upload-version');
+      if (m) m.classList.add('hidden');
+    }
+
+    function updateUploadVersionCharcount() {
+      const ta = document.getElementById('upload-version-text');
+      const cc = document.getElementById('upload-version-charcount');
+      if (ta && cc) cc.textContent = (ta.value || '').length.toLocaleString('pt-BR') + ' caracteres';
+    }
+
+    function onUploadVersionFileChange() {
+      const inp = document.getElementById('upload-version-file');
+      const info = document.getElementById('upload-version-file-info');
+      const file = (inp && inp.files && inp.files[0]) ? inp.files[0] : null;
+      if (!file) { if (info) info.textContent = ''; return; }
+
+      const name = file.name || '';
+      if (TEXT_FILE_RE.test(name) || (file.type || '').indexOf('text/') === 0) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const txt = String(reader.result || '');
+          const ta = document.getElementById('upload-version-text');
+          if (ta && txt.trim()) {
+            ta.value = txt.length > UPLOAD_VERSION_MAX_CHARS
+              ? txt.slice(0, UPLOAD_VERSION_MAX_CHARS) + '\n\n[... texto truncado em ' + UPLOAD_VERSION_MAX_CHARS.toLocaleString('pt-BR') + ' caracteres (teto de segurança do armazenamento) ...]'
+              : txt;
+            updateUploadVersionCharcount();
+          }
+          if (info) info.textContent = '📎 ' + name + ' — ✅ texto lido (' + txt.length.toLocaleString('pt-BR') + ' chars). Confira abaixo e grave.';
+        };
+        reader.onerror = () => { if (info) info.textContent = '📎 ' + name + ' — ⚠️ não consegui ler este arquivo.'; };
+        reader.readAsText(file);
+      } else if (/\.pdf$/i.test(name) || file.type === 'application/pdf') {
+        extractPdfForUploadVersion(file);
+      } else {
+        if (info) info.textContent = '📎 ' + name + ' — ⚠️ tipo sem leitura automática (use .md, .txt ou .pdf, ou cole o texto).';
+      }
+    }
+
+    async function extractPdfForUploadVersion(file) {
+      const info = document.getElementById('upload-version-file-info');
+      try {
+        if (info) info.textContent = '📎 ' + file.name + ' — ⏳ extraindo texto do PDF...';
+        const pdfjs = await loadPdfJs();
+        const buf = await file.arrayBuffer();
+        const pdf = await pdfjs.getDocument({ data: buf }).promise;
+        const maxPages = Math.min(pdf.numPages, 200);
+        let text = '';
+        for (let p = 1; p <= maxPages; p++) {
+          const page = await pdf.getPage(p);
+          const content = await page.getTextContent();
+          text += content.items.map(it => it.str).join(' ') + '\n';
+          if (text.length > UPLOAD_VERSION_MAX_CHARS) break;
+        }
+        text = text.trim();
+        const ta = document.getElementById('upload-version-text');
+        if (ta && text) {
+          const truncated = text.length > UPLOAD_VERSION_MAX_CHARS || pdf.numPages > maxPages;
+          ta.value = text.slice(0, UPLOAD_VERSION_MAX_CHARS) + (truncated ? '\n\n[... extração limitada (' + maxPages + '/' + pdf.numPages + ' págs.) ...]' : '');
+          updateUploadVersionCharcount();
+        }
+        if (info) info.textContent = text
+          ? '📎 ' + file.name + ' — ✅ texto extraído do PDF (' + maxPages + '/' + pdf.numPages + ' págs.). Confira abaixo e grave.'
+          : '📎 ' + file.name + ' — ⚠️ PDF sem texto extraível (provavelmente digitalizado/imagem). Cole o texto manualmente.';
+      } catch(e) {
+        if (info) info.textContent = '📎 ' + file.name + ' — ⚠️ extração automática indisponível (' + e.message + '). Cole o texto manualmente.';
+      }
+    }
+
+    function saveUploadedVersion(btnEl) {
+      const ta = document.getElementById('upload-version-text');
+      const text = ta ? ta.value.trim() : '';
+      if (!text) {
+        showStudioToast(false, 'A nova versão está vazia — suba um arquivo ou cole o texto');
+        alert('⚠️ A nova versão está vazia.\n\nEscolha um arquivo do computador (.md/.txt/.pdf) ou cole o texto completo da nova versão.');
+        return;
+      }
+      if (currentChapterKey === 'full_book' || currentChapterKey === '00_frontmatter') {
+        showStudioToast(false, 'Escolha um capítulo específico para subir uma nova versão');
+        return;
+      }
+
+      const labelEl = document.getElementById('upload-version-label');
+      const customLabel = labelEl ? labelEl.value.trim().replace(/[()]/g, '').slice(0, 40) : '';
+
+      const nowISO = new Date().toISOString().slice(0, 10);
+      const revs = getSavedRevisions(currentChapterKey);
+      const rKey = nextRevisionKey(revs);
+
+      revs[rKey] = {
+        title: 'Versão Enviada (upload)',
+        author: 'Miguel do Rosário',
+        versionTag: customLabel ? `${rKey} (upload: ${customLabel})` : `${rKey} (upload)`,
+        badge: `Enviada em ${nowISO}`,
+        content: text,
+        engineSlug: 'upload',
+        rawInstruction: 'Upload de versão inteiramente nova pelo editor (arquivo do computador ou texto colado)',
+        summarizedRule: 'Versão integral enviada pelo editor'
+      };
+
+      const res = safeLocalSet(storageKeyVol('miguel_book_revisions', currentChapterKey), JSON.stringify(revs));
+      if (!res.ok) {
+        setStudioSaveStatus(false, res.reason === 'quota' ? 'Armazenamento cheio — a nova versão NÃO foi gravada. Libere espaço (faxina de versões) e tente de novo.' : 'Gravação bloqueada pelo navegador — a nova versão NÃO foi gravada.');
+        showStudioToast(false, res.reason === 'quota' ? 'Armazenamento cheio — NÃO gravou' : 'Gravação bloqueada — NÃO gravou');
+        alert(storageFullHelpMessage(res.reason));
+        return;
+      }
+
+      closeUploadVersionModal();
+      switchVersion(rKey); // já re-renderiza abas, métricas, visão e URL
+      refreshStudioTitle();
+
+      const tag = revs[rKey].versionTag;
+      setStudioSaveStatus(true, `Nova versão "${tag}" gravada neste capítulo e agora é a versão ativa. As outras versões continuam intactas no histórico.`);
+      showStudioToast(true, `⬆️ Nova versão gravada: ${tag}`);
     }
 
     function saveRoteiroObs() {
