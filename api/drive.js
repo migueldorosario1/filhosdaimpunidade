@@ -88,6 +88,64 @@ async function driveGet(token, url) {
   return data;
 }
 
+// --- HARDENING 2026-08-07 (incidente de quota do projeto OAuth público do rclone) ---
+// O client OAuth público do rclone divide a quota "Queries per minute" com
+// TODOS os usuários de rclone do planeta — 403 de quota é rotina. Sem retry,
+// o 1º push real falhou no meio; sem validação de shape, um payload de ERRO
+// JSON do Google chegou a ser gravado por cima do revisions.json (restaurado
+// via rclone + git, md5 conferido). As duas guardas abaixo impedem reprise.
+function isQuotaError(e) {
+  return /quota|rate.?limit|429/i.test(String(e && e.message || e));
+}
+
+async function withQuotaRetry(fn, label) {
+  const waits = process.env.FDI_RETRY_WAITS
+    ? process.env.FDI_RETRY_WAITS.split(',').map(Number)
+    : [0, 6000, 15000];
+  let lastErr;
+  for (let i = 0; i < waits.length; i++) {
+    if (waits[i]) await new Promise(r => setTimeout(r, waits[i]));
+    try { return await fn(); }
+    catch (e) {
+      lastErr = e;
+      if (!isQuotaError(e)) throw e; // erro real: falha na hora
+      console.warn(label + ': quota estourada, tentativa ' + (i + 1) + '/' + waits.length);
+    }
+  }
+  throw lastErr;
+}
+
+// Shape esperado do revisions.json: { cap: { R#: { content: string, ... } } }
+function validaShapeRevisions(revs) {
+  if (!revs || typeof revs !== 'object' || Array.isArray(revs)) return false;
+  for (const cap of Object.keys(revs)) {
+    const entradas = revs[cap];
+    if (!entradas || typeof entradas !== 'object' || Array.isArray(entradas)) return false;
+    for (const rk of Object.keys(entradas)) {
+      const rev = entradas[rk];
+      if (!rev || typeof rev !== 'object' || typeof rev.content !== 'string') return false;
+    }
+  }
+  return true;
+}
+
+function validaShapeRegras(rules) {
+  return Array.isArray(rules) && rules.every(r => typeof r === 'string');
+}
+
+async function driveDownloadJson(token, fileId, nome) {
+  const txt = await withQuotaRetry(async () => {
+    const res = await fetch('https://www.googleapis.com/drive/v3/files/' + fileId + '?alt=media', { headers: { Authorization: 'Bearer ' + token } });
+    const t = await res.text();
+    if (!res.ok) throw new Error('Drive download ' + nome + ' falhou (' + res.status + '): ' + t.slice(0, 200));
+    return t;
+  }, 'download ' + nome);
+  let data;
+  try { data = JSON.parse(txt); }
+  catch (e) { throw new Error('Drive download ' + nome + ': conteúdo não é JSON (' + txt.slice(0, 80) + ')'); }
+  return data;
+}
+
 async function githubUpsertFile(path, contentStr, message) {
   const token = process.env.GITHUB_TOKEN || '';
   if (!token) return { skipped: 'GITHUB_TOKEN ausente' };
@@ -145,11 +203,14 @@ export default async function handler(req, res) {
     }
 
     if (op === 'pull') {
-      const revTxt = await (await fetch('https://www.googleapis.com/drive/v3/files/' + REVISIONS_FILE_ID + '?alt=media', { headers: { Authorization: 'Bearer ' + token } })).text();
-      const rulesTxt = await (await fetch('https://www.googleapis.com/drive/v3/files/' + RULES_FILE_ID + '?alt=media', { headers: { Authorization: 'Bearer ' + token } })).text();
-      let revisions = {}, customRules = [];
-      try { revisions = JSON.parse(revTxt); } catch (e) {}
-      try { customRules = JSON.parse(rulesTxt); } catch (e) {}
+      const revisions = await driveDownloadJson(token, REVISIONS_FILE_ID, 'revisions.json');
+      const customRules = await driveDownloadJson(token, RULES_FILE_ID, 'custom_rules.json');
+      if (!validaShapeRevisions(revisions)) {
+        return res.status(502).json({ ok: false, error: 'revisions.json do Drive com formato inesperado — NADA foi repassado (proteção pós-incidente de quota).' });
+      }
+      if (!validaShapeRegras(customRules)) {
+        return res.status(502).json({ ok: false, error: 'custom_rules.json do Drive com formato inesperado — NADA foi repassado (proteção pós-incidente de quota).' });
+      }
       return res.status(200).json({ ok: true, revisions, customRules });
     }
 
@@ -158,6 +219,14 @@ export default async function handler(req, res) {
       const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
       const revisions = body.revisions && typeof body.revisions === 'object' ? body.revisions : {};
       const customRules = Array.isArray(body.customRules) ? body.customRules : [];
+      // Guarda anti-lixo (incidente 07/08): nunca gravar payload que não tenha
+      // o shape editorial esperado — um JSON de erro do Google passou por aqui.
+      if (!validaShapeRevisions(revisions)) {
+        return res.status(400).json({ ok: false, error: 'revisions com formato inválido (esperado {cap: {R#: {content}}}) — gravação RECUSADA.' });
+      }
+      if (!validaShapeRegras(customRules)) {
+        return res.status(400).json({ ok: false, error: 'customRules com formato inválido (esperado array de strings) — gravação RECUSADA.' });
+      }
       const revStr = JSON.stringify(revisions, null, 2);
       const rulesStr = JSON.stringify(customRules, null, 2);
       if (revStr.length + rulesStr.length > 4 * 1024 * 1024) {
@@ -168,17 +237,17 @@ export default async function handler(req, res) {
       const ts = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
       let snapshotName = null;
       try {
-        const copy = await drivePost(token, 'https://www.googleapis.com/drive/v3/files/' + REVISIONS_FILE_ID + '/copy', {
+        const copy = await withQuotaRetry(() => drivePost(token, 'https://www.googleapis.com/drive/v3/files/' + REVISIONS_FILE_ID + '/copy', {
           name: 'revisions_snapshot_' + ts + '.json',
           parents: [BACKUPS_FOLDER_ID]
-        });
+        }), 'snapshot');
         snapshotName = copy.name || null;
       } catch (e) { snapshotName = 'falhou: ' + e.message; }
 
       // 2) Atualiza os 2 arquivos no Drive (mesmo ID = mesmo arquivo, histórico preservado)
       const upFields = 'id,name,size,modifiedTime';
-      const revUp = await driveUpload(token, REVISIONS_FILE_ID, revStr, upFields);
-      const rulesUp = await driveUpload(token, RULES_FILE_ID, rulesStr, upFields);
+      const revUp = await withQuotaRetry(() => driveUpload(token, REVISIONS_FILE_ID, revStr, upFields), 'upload revisions');
+      const rulesUp = await withQuotaRetry(() => driveUpload(token, RULES_FILE_ID, rulesStr, upFields), 'upload rules');
 
       // 3) Espelha no GitHub (mantém o site GitHub-sync fresco e dispara redeploy)
       let github;
