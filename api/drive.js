@@ -245,10 +245,17 @@ export default async function handler(req, res) {
     if (op === 'push') {
       if (req.method !== 'POST') return res.status(405).json({ ok: false, error: 'use POST' });
       const body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : (req.body || {});
-      const revisions = body.revisions && typeof body.revisions === 'object' ? body.revisions : {};
+      const revisions = body.revisions;
       const customRules = Array.isArray(body.customRules) ? body.customRules : [];
       // Guarda anti-lixo (incidente 07/08): nunca gravar payload que não tenha
       // o shape editorial esperado — um JSON de erro do Google passou por aqui.
+      // Reforço 2 (mesmo dia): `revisions` AUSENTE ou VAZIO é RECUSADO — push sem
+      // conteúdo jamais é legítimo (o app sempre manda o objeto completo). O
+      // fallback antigo (`|| {}`) deixava `{}` passar VACUAMENTE pelo shape-guard
+      // e apagava o backup (incidente 2: teste com chave certa gravou {} no Drive).
+      if (!revisions || typeof revisions !== 'object' || Array.isArray(revisions) || Object.keys(revisions).length === 0) {
+        return res.status(400).json({ ok: false, error: 'revisions ausente ou vazio — gravação RECUSADA (push sempre carrega as revisões do navegador).' });
+      }
       if (!validaShapeRevisions(revisions)) {
         return res.status(400).json({ ok: false, error: 'revisions com formato inválido (esperado {cap: {R#: {content}}}) — gravação RECUSADA.' });
       }

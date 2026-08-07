@@ -200,6 +200,33 @@ await Ta('11. token OAuth com rate-limit → retenta e consegue (getDriveToken n
   eq(nTok, 2, 'token retentado');
 });
 
+// ---- Reforço 2 (incidente 2, mesmo dia): push sem conteúdo é RECUSADO ----
+// O fallback antigo (`body.revisions || {}`) deixava payload SEM o campo cair
+// como `{}` e o shape-guard aprovava VACUAMENTE — um teste com chave certa
+// chegou a gravar `{}` (2 bytes) por cima do revisions.json real no Drive.
+await Ta('12. push com chave + body SEM revisions (caso real do incidente) → 400, nada gravado', async () => {
+  fetchCalls = [];
+  routes = { 'oauth2.googleapis.com': { body: { access_token: 'tok' } } };
+  const res = fakeRes();
+  await handler({ method: 'POST', query: { op: 'push' }, headers: { 'x-sync-key': 'chave-teste' },
+    body: { lixo: 'proposital' } }, res);
+  eq(res.statusCode, 400, 'push sem revisions tem que ser recusado');
+  ok(res.body.error.includes('ausente ou vazio'), 'mensagem de recusa ausente');
+  ok(!fetchCalls.some(c => c.url.includes('upload/drive')), 'NÃO pode gravar no Drive');
+  ok(!fetchCalls.some(c => c.url.includes('/copy')), 'NÃO pode tirar snapshot');
+  ok(!fetchCalls.some(c => c.url.includes('api.github.com')), 'NÃO pode gravar no GitHub');
+});
+
+await Ta('13. push com chave + revisions {} vazio → 400 (shape-guard não passa mais vacuamente)', async () => {
+  fetchCalls = [];
+  routes = { 'oauth2.googleapis.com': { body: { access_token: 'tok' } } };
+  const res = fakeRes();
+  await handler({ method: 'POST', query: { op: 'push' }, headers: { 'x-sync-key': 'chave-teste' },
+    body: { revisions: {}, customRules: [] } }, res);
+  eq(res.statusCode, 400, '{} vazio tem que ser recusado');
+  ok(!fetchCalls.some(c => c.url.includes('upload/drive')), 'NÃO pode gravar no Drive');
+});
+
 console.log(results.join('\n'));
 const fails = (results.join('').match(/❌/g) || []).length;
 console.log('---');
