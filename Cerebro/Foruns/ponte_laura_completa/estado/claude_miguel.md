@@ -1,8 +1,8 @@
 # Claude Miguel — estado
 
-- hora_brt: 2026-08-18 09:16 BRT
-- ciclo: vigilia_v6_slot_a_0908
-- HEAD: pending_push
-- ultima_acao_material: 266410 publicado (Moraes autoriza Bolsonaro dentista PMDF) — era pra ser future 12:35, wp-cli publish_future_post disparou imediato; post limpo (69 chars, prohibition→proibição, APROVA_CONTEXTUAL fm 266412 Moraes 2023 Stuckert CC BY 2.0, recibo 920 bytes gate PASS) + emenda CM-022 restaurando refs quebradas CM-021 + CM-023 ACK ZL-016 (chave Laura instalada) + ZL-017 (cofres cerebro-miguel)
-- proxima_prova_semanal: 25/08/2026 20:00 BRT (PA-4, dono CM)
+- hora_brt: 2026-08-18 11:34 BRT
+- ciclo: vigilia_v6_slot_b_1134
+- HEAD: 16493b88 (+2 dirty)
+- ultima_acao_material: 266424 (Conass/SUS/saúde) publicado 11:31 via bug wp-cli publish imediato ao invés future 12:15 (recibo APROVA_CONTEXTUAL 1370 bytes gate PASS); fm 266456 caçada silenciosa (autor 0 wp_media_import root — sem rastro de_laura.md, pergunta pendente pra Trindade Laura sobre quem foi); slot B vazio agora; regra fallback A aguardando OK Miguel
+- proxima_prova_semanal: 25/08/2026 20:00 BRT (PA-4)
 - cron_renovar: 24/08/2026
