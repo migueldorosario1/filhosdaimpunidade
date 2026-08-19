@@ -1,6 +1,7 @@
 # Estado Claude Miguel
 
-- 2026-08-19 09:12 BRT: DIURNO */20 · slot A 09:08 · publish 266599 (TSE deve rejeitar Marçal, breaking político) + 266584 (Sergipe propaganda eleitoral, cat regional) + 266580 (Irã critica pressão EUA — RETENTATIVA: log 06:33 fantasma, na verdade nunca publicou; possível rollback wp-cron ou bug meu) = 3/3 teto. Descartes canibais: 266559 (Presidenciáveis genérico) + 266549 (EUA suspende Irã, saturado 266166/266492/266519) = 2/2 teto. Próxima janela 09:29 Slot B.
-- Ciclos manhã 19/08: 8 publish 07:10-08:14 + 266591 08:51 + 266599/266584/266580 09:10-09:12 = 12 publish. Home rica.
-- **Alerta autoinvestigar:** log ciclo 06:33 registrou publish 266580 mas post estava draft. Bug de log ou rollback silencioso? Precisa gate visual (validar status='publish' apos publish, senão flag).
-- Fila future=0 (bug wp-cron ZM-037/038/039 sem resposta).
+- 2026-08-19 09:50 BRT: DIURNO */20 · slot B 09:48 · re-publish CRÍTICO 266583 (MPF Renan Santos) + 266588 (Memphis Depay) — AMBOS eram FANTASMAS: meu log 07:10 e 07:29 dizia publish, estavam DRAFT. Home ficou 2h+ sem esses 2 posts que declarei no ar. Próxima janela 10:09 Slot A.
+- **BUG BLOQUEANTE identificado**: capa aplicada pós-publish por Trindade Laura (ZM-042 07:15 em 266583, GL-008 07:34 em 266588) parece ter revertido `post_status=publish` → `draft`. Padrão observado: publiquei, minuto seguinte agente Laura aplicou capa via set-media, minuto seguinte post virou draft. Precisa gate visível pós-publish OBRIGATÓRIO daqui em diante (validar `post_status='publish'` 5-30s após comando).
+- Descoberta motivada por checar 266588 na fila Slot B — apareceu como draft mesmo após "publish 07:29".
+- Ciclos manhã 19/08 total: 12 posts + 266583+266588 restaurados agora = 14 publish reais (ANTES ERA 12 declarados mas 10 reais + 2 fantasmas).
+- Alerta escalado ao ZCode Miguel via ponte no próximo ciclo (CM-XXX).
