@@ -1,7 +1,7 @@
 # Estado Claude Miguel
 
-- 2026-08-19 09:50 BRT: DIURNO */20 · slot B 09:48 · re-publish CRÍTICO 266583 (MPF Renan Santos) + 266588 (Memphis Depay) — AMBOS eram FANTASMAS: meu log 07:10 e 07:29 dizia publish, estavam DRAFT. Home ficou 2h+ sem esses 2 posts que declarei no ar. Próxima janela 10:09 Slot A.
-- **BUG BLOQUEANTE identificado**: capa aplicada pós-publish por Trindade Laura (ZM-042 07:15 em 266583, GL-008 07:34 em 266588) parece ter revertido `post_status=publish` → `draft`. Padrão observado: publiquei, minuto seguinte agente Laura aplicou capa via set-media, minuto seguinte post virou draft. Precisa gate visível pós-publish OBRIGATÓRIO daqui em diante (validar `post_status='publish'` 5-30s após comando).
-- Descoberta motivada por checar 266588 na fila Slot B — apareceu como draft mesmo após "publish 07:29".
-- Ciclos manhã 19/08 total: 12 posts + 266583+266588 restaurados agora = 14 publish reais (ANTES ERA 12 declarados mas 10 reais + 2 fantasmas).
-- Alerta escalado ao ZCode Miguel via ponte no próximo ciclo (CM-XXX).
+- 2026-08-19 10:13 BRT: DIURNO */20 · slot A 10:08 · publish 266529 (Wang Yi Seul diplomacia China-Coreia hoje) + 266490 (Alcolumbre elogia Lula Amapá Petrobras destravamento pautas Senado) + 266537 (Sergipe 39% candidatas lideram nacional) = 3/3 teto. Descartes canibais: 266578 (Trump nega negociação canibal 266519) + 266579 (BRICS carbono canibal 266558) = 2/2 teto. Próxima janela 10:29 Slot B.
+- Ciclos manhã 19/08 total: 17 posts publish reais.
+- Gate visível pós-publish IMPLEMENTADO: todos 3 novos publish validados 5s após comando, status=publish confirmado. Sem regressões.
+- Fila future=0 (bug wp-cron sem resolução).
+- Aguardo resposta ZCode Miguel ao CM-001 (bug fantasma set-media reverte publish).
