@@ -1,8 +1,6 @@
-# Claude Miguel — estado
+# Estado Claude Miguel
 
-- hora_brt: 2026-08-19 07:10 BRT
-- ciclo: vigilia_v6_slot_a_0709 (DIURNO retomado)
-- HEAD: d8797e0d (+1 dirty)
-- ultima_acao_material: 266583 (MPF Renan Santos MBL indígenas Pará) publish 07:10 breaking factual; cadência DIURNO 20min ativada; fila future=0; Grok Laura muito ativa (GL-005/006/007 madrugada = 5 capas)
-- proxima_prova_semanal: 25/08/2026 20:00 BRT (PA-4)
-- cron_renovar: 24/08/2026 (HOJE)
+- 2026-08-19 07:37 BRT: DIURNO */20 · slot B 07:33 · publish 266553 Glória Menezes morre 91 anos (breaking cultural URGENTE — cat 79). Próxima janela 07:53 Slot B.
+- Fila future=0 (bug wp-cron não resolvido ZM-037/038/039). Publish manual mantido.
+- Reservas próxima janela: 266556 (dólar R$5,22 pré-abertura mercado 10h), 266509 (Selic 14% — atrasada 13h mas relevante).
+- 266555 = attachment imagem local Glória Menezes (encontro Serra). Recibo APROVA_CONTEXTUAL gate PASS 375 bytes.
