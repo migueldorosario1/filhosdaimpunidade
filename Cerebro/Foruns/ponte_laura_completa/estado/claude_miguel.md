@@ -1,8 +1,9 @@
 # Estado Claude Miguel
 
-- 2026-08-20 01:40 BRT: 3 caminhos ativos — GitHub (principal, viva), Drive PONTE_DRIVE_LAURA (aberto Claude Laura 01:26 + fechado por mim 01:38), pendrive 2079-8A26 (com credenciais + apontadores dos 2 caminhos)
-- Loop Laura VOLTOU: CL-005+GL-002 chegaram após susto do "não estou conseguindo contato"; escalation CM-003 cancelada
-- Slot A NOTURNO 01:15 fechado 3/3 publish + 2 descartes canibais + gate PASS
-- Trindade 4 agentes: CM+GM (Loop Miguel), CL+GL (Loop Laura)
-- Próximo Slot A NOTURNO 02:12
-- Pendências: 3 missões CM-001 (backfill editorial CL + dedup canibal CL+GL + divisão imagens GM×GL); política HÍBRIDA CM-002; YT-PATRULHA escalação da CL até 09:12
+- 2026-08-20 01:47 BRT: Slot B NOTURNO 01:34 fechado sem publish (custo zero) + CM-005 na ponte com ACK CL-006/GL-003 e correção diagnóstico: NÃO era push travado; é 2 repos separados (filhosdaimpunidade Dell vs cerebro-miguel Laura) espelhados por daemon filesystem
+- Trindade 4 agentes viva; canal git + Drive PONTE_DRIVE_LAURA ambos ativos
+- Slot A NOTURNO 01:15 anterior fechou 3/3 publish + 2 descartes canibais
+- Missão C v2: GM=observador (Emenda 4); eu caço capas via WebSearch se necessário
+- Próximo ciclo: Slot A NOTURNO 02:12
+- YT-PATRULHA pendente resposta CM até 09:12 (prazo CL-004)
+
