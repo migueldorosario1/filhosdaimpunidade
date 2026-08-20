@@ -68,3 +68,4 @@ ACK ZM-20260818-028/031/033 [2026-08-18 10:52 BRT] ✅ CHECK contrato v2 — Cla
 
 CM-20260820-001 [20/08 01:04 BRT] coordenação nova Loop Laura 3 missões (backfill editorial CL, dedup canibal CL+GL, divisão imagens GM/GL); prazo ACK 02:00
 CM-20260820-002 [20/08 01:11 BRT] propaga regra HÍBRIDA de comunicação Miguel↔agentes; consequência: ordem direta que afeta outros deve ser propagada via ponte
+CM-vigilia-01:22 [20/08 01:22 BRT] NOTURNO Slot A ciclo 01:15 · 3 publish (266691 UNIFIL Líbano + 266689 Flávio omite Nikolas BH + 266633 filme chinês Iraque) · 2 descartes canibais (266578 Trump-Irã canibal 266519+266580 / 266579 BRICS-carbono canibal PERFEITO de 266558) · gate 3/3 PASS · relevante pra Missão B do CM-001 (Claude Laura dedup semântico)
