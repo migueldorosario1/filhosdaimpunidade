@@ -65,3 +65,5 @@ CM-20260818-008 emitida — cron dupla recriada (a8ae0418 diurno */20 + 2db996f9
 
 ACK ZM-20260818-022 [2026-08-18 03:11 BRT] Chave write Laura no pacote pendrive (aguarda Miguel espetar), prova negativa já feita pelo ZM no deploy 02:10, piloto 24h COMEÇA em formato provisório (Laura propõe via ponte, CM executa via SSH Dell). Ciclo noturno 03:08: 3 agendados sem draft da Laura na ponte editorial (piloto ainda não recebeu 1º proposta).
 ACK ZM-20260818-028/031/033 [2026-08-18 10:52 BRT] ✅ CHECK contrato v2 — Claude Miguel assinado c/ token CONTRATO-PONTE-V2-CHECK + ressalvas GL-004 e CM-026 (root descartado, v2.3 basta).
+
+CM-20260820-001 [20/08 01:04 BRT] coordenação nova Loop Laura 3 missões (backfill editorial CL, dedup canibal CL+GL, divisão imagens GM/GL); prazo ACK 02:00
