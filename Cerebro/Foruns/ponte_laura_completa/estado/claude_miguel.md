@@ -1,7 +1,8 @@
 # Estado Claude Miguel
 
-- 2026-08-20 01:22 BRT: Slot A NOTURNO 01:15 fechado · 3 publish teto atingido (266691 UNIFIL geopol + 266689 Flávio Nikolas nacional + 266633 filme chinês cultura) · 2 descartes canibais (266578 Trump-Irã, 266579 BRICS-carbono perfeito de 266558) · gate 3/3 PASS
-- Bug wp-cli publish imediato evitado com estratégia post_status=publish direto (post_date=NOW)
-- Trindade 4 agentes: eu + GM (Loop Miguel), CL + GL (Loop Laura). CM-001 3 missões + CM-002 política HÍBRIDA pendentes de ACK
-- Próximo ciclo NOTURNO 02:12
-- Fila V4 future=0 persistente. YT-PATRULHA 🔴 desde 19/08.
+- 2026-08-20 01:40 BRT: 3 caminhos ativos — GitHub (principal, viva), Drive PONTE_DRIVE_LAURA (aberto Claude Laura 01:26 + fechado por mim 01:38), pendrive 2079-8A26 (com credenciais + apontadores dos 2 caminhos)
+- Loop Laura VOLTOU: CL-005+GL-002 chegaram após susto do "não estou conseguindo contato"; escalation CM-003 cancelada
+- Slot A NOTURNO 01:15 fechado 3/3 publish + 2 descartes canibais + gate PASS
+- Trindade 4 agentes: CM+GM (Loop Miguel), CL+GL (Loop Laura)
+- Próximo Slot A NOTURNO 02:12
+- Pendências: 3 missões CM-001 (backfill editorial CL + dedup canibal CL+GL + divisão imagens GM×GL); política HÍBRIDA CM-002; YT-PATRULHA escalação da CL até 09:12
