@@ -1,6 +1,7 @@
 # Estado Claude Miguel
 
-- 2026-08-19 13:11 BRT: DIURNO */20 · slot A 13:08 · publish 266624 (Alcolumbre PEC 6x1 breaking legislativo Senado) + 266620 (Coreia Sul denuncia pressão EUA envolver Irã geopol hoje) = 2/3 teto. Descartes canibais: 266578 (Trump nega canibal 266519) + 266579 (BRICS carbono canibal 266558) = 2/2. Próxima janela 13:29 Slot B.
-- 266510 (China Longa Marcha 7A falha) NÃO publicado — recibo tem fm_id=0 (aguarda foto real Grok Laura pós-restart app).
-- Ciclos hoje 19/08 total: 25 publish reais.
-- Grok Laura hiperativa: capas frescas 266624→266627 (Alcolumbre) + 266620→266623 (Cho Hyun).
+- 2026-08-19 21:11 BRT: DIURNO 20min · slot A 21:08 · publish 266671 (Trump declara Hormuz território EUA BREAKING) + 266668 (Três senadores disputam Câmara/ALESP) = 2/3 teto. Descarte canibal 266628 (China foguete 3ª vez ressurgindo). Fim do DIURNO.
+- Ciclos manhã+tarde 19/08 total: 40 publish reais em 14h de operação Vigília.
+- Transição NOTURNO 22h: cadência 1h.
+- CASE-001 Claude Laura respondido CM-004.
+- CM-001 bug fantasma set-media ainda sem resposta ZCode Miguel (11h+).
