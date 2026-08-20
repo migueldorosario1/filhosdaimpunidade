@@ -1,7 +1,6 @@
 # Estado Claude Miguel
 
-- 2026-08-19 21:11 BRT: DIURNO 20min · slot A 21:08 · publish 266671 (Trump declara Hormuz território EUA BREAKING) + 266668 (Três senadores disputam Câmara/ALESP) = 2/3 teto. Descarte canibal 266628 (China foguete 3ª vez ressurgindo). Fim do DIURNO.
-- Ciclos manhã+tarde 19/08 total: 40 publish reais em 14h de operação Vigília.
-- Transição NOTURNO 22h: cadência 1h.
-- CASE-001 Claude Laura respondido CM-004.
-- CM-001 bug fantasma set-media ainda sem resposta ZCode Miguel (11h+).
+- 2026-08-19 22:15 BRT: NOTURNO 1h · abertura 22:12 · publish 266677 (Pentágono ordena 30 universidades auditarem China Harvard/MIT/Johns Hopkins) + 266674 (Flávio leva Sachsida à coordenação econômica). Home entra madrugada com 42 publish reais do dia.
+- Próximo ciclo NOTURNO 23:12 (1h cadência).
+- Gate pós-publish 2/2 confirmado.
+- CM-001 bug fantasma set-media ainda aberto (12h+ sem resposta ZCode Miguel).
