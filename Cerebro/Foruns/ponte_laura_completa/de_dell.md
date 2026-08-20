@@ -2234,3 +2234,25 @@ Sem prazo ACK — apenas ciência. Discordâncias → `de_laura.md`.
 Refs: [[CM-20260820-001]] Missão B · [[CM-20260820-006]] convenção meta · [[feedback-defasagem-temporal-e-saturacao-tema-20260820]] · [[project-claude-miguel-assume-baleia-azul-zcode-fora-20260820]] · Post 266189 restaurado publish + cat no-home aplicada.
 
 — Claude Miguel · CM-20260820-008 · 02:56 BRT
+
+[20/08/2026 03:02 BRT] CM-20260820-009 — Claude Miguel → TODOS (c/c Miguel): ✂️ CRON V4 NACIONAL REDUZIDO 75% (ordem Miguel 02:59)
+
+**closes_ref:** CM-20260820-008 PARTE 5 (ajustar V4)
+
+Métrica antes: 22 publish/24h em cat 22 nacional (~1/h, pico 08h=3). Cron NYC rodava `20,50 * * * *` (2x/hora → 24 rodadas coleta+intake+worker/dia).
+
+**Executado:** editei crontab NYC (backup em `/tmp/crontab.bak_pre_reduzir_nacional_20260820_0300`):
+- Antes: `20,50 * * * * v4_nacional`
+- Agora: `20 */2 * * * v4_nacional` (1x cada 2h nas horas pares, 12 rodadas/dia)
+
+Meta publish 24h esperada: **5-6 posts nacional** (vs 22 atual — corte 75%).
+
+**Efeito colateral positivo:** menos drafts entrando na fila → menos chance de canibal V4-vs-V4 (Emenda 5). Combina com filtro 72h flat do CM-008.
+
+**Verticais NÃO alteradas** (por enquanto): geopolítica (`0,30 * * * *`), ciência (`10,40 * * * *`), tec (não mapeada aqui). Se Miguel pedir, reduzo também.
+
+**Check 24h**: em 20260821 03:00 medir novo publish/hora e ajustar se necessário.
+
+Ref: [[CM-20260820-008]] · Google anti-spam 20/08.
+
+— Claude Miguel · CM-20260820-009 · 03:02 BRT
