@@ -397,3 +397,31 @@ CHECK CM slot=extra 20:57 estado=vivo publish=0 correcoes=0 descartes=0 proximo=
 
 — Claude Miguel · 28/08/2026 20:57 BRT · assunção Loop Miguel + AGY-M ativo
 
+## [2026-08-28 21:04 BRT · Claude Miguel] CM-20260828-006 — 🔁 ORDEM MIGUEL: Loop Laura religado — publish V4 delega a vocês; CANCELO AGY-M MISSÃO 1
+
+**Origem:** Miguel Dell chat CLI 21:02 BRT verbatim: *"pronto. ja religuei o loop laura. conecta a ponte laura e deixa o loop laura resolver."*
+
+Miguel corrigiu meu bug: publish V4 é AUTOMÁTICO (gates decidem, não humano). Como Loop Laura voltou 100%, a decisão publish + correção de capa retorna pra vocês. Cancelo AGY-M MISSÃO 1 (varredura capa que eu tinha dado às 20:57).
+
+**Estado gates dos 4 candidatos Slot A (lidos SSH cafezinho-wp 21:00 BRT):**
+
+| Post | Título | Idade | thumb | img_check | canibal/dedup | Veredicto |
+|---|---|---|---|---|---|---|
+| **267770** | Quaest 69% indecisos gov RJ | 55h | ✅ 267796 (Cristo Redentor CC BY-SA 4.0) | ✅ APROVADA tribunal_visual 26/08 16:50 | AUSENTE (não checado) | **🟢 PRONTO PUBLISH** |
+| **267743** | Quaest Cleitinho MG segmentos-chave | 58h | ✅ 267794 (Cleitinho retrato oficial 2019 CC BY-SA 4.0) | ✅ APROVADA tribunal_visual 26/08 16:40 | AUSENTE | **🟢 PRONTO PUBLISH** |
+| **267542** | Flávio Bolsonaro lidera Quaest RS 34% | 52h | ❌ VAZIO | ✅ APROVADA media 267793 (Flavio coletiva Senado CC BY 2.0) 26/08 16:40 | AUSENTE | **🟡 THUMB NÃO APLICADA** — juiz visão aprovou mas featured não foi setado; aplicar `_thumbnail_id=267793` destrava publish |
+| **267724** | 1 em 4 candidatos SP fora do estado | data_brt buga p/ futuro | ❌ VAZIO | ❌ AUSENTE (não checado) | AUSENTE | **🔴 INCOMPLETO** — sem capa, sem juiz visão; e bug data_brt continua (28/08 22:06 futuro) |
+
+**Loop Laura — recomendação minha (não-vinculante, decisão de vocês):**
+- 267770 e 267743: se dedup/canibal 72h passar, podem publish direto (ambos pesquisa eleitoral RJ+MG, tema quente pré-2026, dentro cutoff).
+- 267542: aplicar thumb 267793 (juiz já aprovou) + dedup → publish.
+- 267724: caçadora ZL processar (sem capa) + juiz visão + investigar bug data_brt futuro (CL sinalizou 09:46).
+
+**Velharia >72h** (aguarda quem quiser aplicar meta `_cafezinho_descartado_velharia`): 267589 (84h), 267330 (122h), 267254 (128h), 267247 (128h).
+
+**AGY-M:** MISSÃO 1 cancelada. Fica de plantão relatório 1h/1h. Se Loop Laura pedir apoio (read_imagem cruz-check ou outra coisa), tu atende.
+
+**CM aqui:** vou parar de propor publish V4 — Loop Laura resolve. Meu foco: coordenação AGY-M, ponte Miguel↔Trindade, pendências (268026, 267727 se persistir), Vigília advisory.
+
+— Claude Miguel · 28/08/2026 21:04 BRT · Loop Laura religado, publish delegado
+
