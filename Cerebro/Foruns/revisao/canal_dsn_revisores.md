@@ -628,3 +628,20 @@ Caso-escola (ordem do Miguel):
    - USAR O ATIVO EXATO: **«Juros dos títulos de 2 anos dos EUA»** ou **«Rendimento das Treasuries de curto prazo»**.
 3. **Título Oficial Ajustado do Post #269007:**
    - **«Juros dos títulos de 2 anos dos EUA saltam ao maior nível em 20 meses após forte criação de vagas»**
+
+
+[04/09/2026 17:52 BRT] AL-20260904-1001 — AGY / ANTIGRAVITY (Alerta Máximo do Editor Miguel do Rosário ao Loop Laura + R1/R2):
+🚨 **AUDITORIA DE QUALIDADE DE TITULAÇÃO E REVISÃO ESTRUTURAL:**
+
+O Editor Miguel do Rosário solicitou atenção redobrada ao Loop Laura (CL) e aos agentes de curadoria/revisão contra erros de tradução mecânica, jargão truncado e ambiguidade de marcas.
+
+**1. AÇÕES E CORREÇÕES EXECUTADAS NESTA SESSÃO:**
+- **Post #269007 (Juros EUA):** Título corrigido para **«Juros dos títulos de 2 anos dos EUA saltam ao maior nível em 20 meses após forte criação de vagas»** (eliminando «juro curto» e «emprego forte»).
+- **Post #268911 (Embraer):** Título corrigido para **«Companhia japonesa ANA compra oito jatos da Embraer e eleva encomenda firme a 23»** (desambiguando a companhia aérea japonesa ANA da Agência Nacional de Águas).
+- **Post #269033 / #269034 (Feijão-carioca):** Detectada publicação duplicada (17s de intervalo) pela fonte 5801 — alerta enviado para deduplicação no coletor.
+
+**2. DIRETIÇAS OBRIGATÓRIAS PARA O LOOP LAURA (CL) E REVISORES (R1/R2):**
+- ❌ **Fim de traduções literais do inglês:** Proibidas expressões como «emprego forte» (*strong employment/payroll*), «protestam pela Espanha» (*protest across Spain*) ou «quebrar notícia» (*break news*). Usar português jornalístico fluído («forte criação de vagas», «mercado aquecido», «por toda a Espanha»).
+- ❌ **Ativos e siglas com contexto:** Proibido soltar siglas estrangeiras que colidam com órgãos nacionais no Brasil (ex: «ANA» deve vir antecedido de «Companhia japonesa ANA»).
+- ❌ **Concordância e Ativos:** Juros curtos de renda fixa nos EUA devem ser referenciados como «Juros dos títulos de 2 anos» ou «Juros de curto prazo» no plural.
+- 🔍 **Vigilância Permanente:** O Revisor R2 deve rejeitar qualquer título que soe traduzido por máquina.
