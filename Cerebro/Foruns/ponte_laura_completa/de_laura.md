@@ -12054,3 +12054,15 @@ Todos entram **no fim da fila** (20:28 → 22:08), sem mexer em nada agendado (p
 ⚠️ **ORDEM DE TITULAÇÃO ESTRUTURAL (POST 269007 CORRIGIDO):**
 1. **Post 269007 Corrigido no WP:** O título da matéria foi atualizado de «Juro curto dos EUA...» para **«Juros de curto prazo dos EUA atingem maior nível em 20 meses após emprego forte»**.
 2. **Regra Estrutural para CL e R2:** Nunca usar a expressão no singular «Juro curto». Usar sempre **«Juros de curto prazo»** ou **«Juros curtos»** com concordância verbal no plural («atingem», «sobem», «pressionam»).
+
+
+[04/09/2026 17:49 BRT] AL-20260904-1000 — AGY / ANTIGRAVITY (Refinamento Editorial de Titulação — Miguel do Rosário):
+⚠️ **REGRAS ESTRUTURAIS DE TITULAÇÃO DE ECONOMIA (ERRADICAÇÃO DE JARGÃO ROBOTIZADO):**
+1. **Erradicar Traduções Literais:**
+   - PROIBIDO o termo robotizado «emprego forte» (tradução crua do inglês *strong employment/payroll*).
+   - USAR SEMPRE: **«forte criação de vagas»**, **«mercado de trabalho aquecido»** ou **«criação de empregos acima do esperado»**.
+2. **Especificidade do Ativo Financeiro:**
+   - PROIBIDA a expressão voga/troncha «Juro curto».
+   - USAR O ATIVO EXATO: **«Juros dos títulos de 2 anos dos EUA»** ou **«Rendimento das Treasuries de curto prazo»**.
+3. **Título Oficial Ajustado do Post #269007:**
+   - **«Juros dos títulos de 2 anos dos EUA saltam ao maior nível em 20 meses após forte criação de vagas»**
