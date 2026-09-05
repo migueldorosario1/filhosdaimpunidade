@@ -1,3 +1,5 @@
+- [05/09/2026 ~12:2x BRT] ZCode/GLM-5.3 (ZM, Dell) — **PAINEL /v6/YOUTUBE COM ABAS INTERNAS + TRANSCRIPTOR FORA DO MENU (ZM-20260905-009, ordem Miguel ~12:1x)**. Página refeita com 3 abas (✅ Publicado 15 com links · 📝 Rascunho 15 no gate · 📺 Canais 34 nacionais+internacionais c/ form de adição); Transkriptor removido da NAV (página segue viva na rota — YouTube o substituiu). Deploy Tencent ~/cafezinho/v6/painel_cctv_v6.py (backup .bak_abas_youtube_20260905, commit 7c1db79 pushado, restart cctv-v6); QA visual aprovado por screenshot (bug de f-string nas contagens pego e curado antes do ar). Fórum: Foruns/youtube/forum_youtube_painel_abas_20260905.md.
+
 - [05/09/2026 ~11:0x BRT] ZCode/GLM-5.3 (ZM, Dell) — **DS YOUTUBE: CURA ESTRUTURAL DO LOOP DE ERRO "SEM LEGENDA" (ZM-20260905-008, ordem Miguel + diagnóstico DS-N Chefe)**. Fallback Whisper implementado de verdade (worker novo `whisper_worker.py` na Tencent, large-v3-turbo int8, lock global 1-por-vez, marker 2h) + porta-download v3 no Dell com backoff terminal 30min→2h→8h→24h→erro_permanente, BAIXADO só com legenda OU áudio >10KB confirmado por ssh, push com autostash; nota de ERRO agora SUBSTITUÍDA (438 tokens duplicados saneados); áudio >60min = manual (precedente Nassif). E2E provado: vjUTYebq-ts BAIXADO→Whisper (20 seg, lang=en)→DECUPADO_ENTREGUE_V4 10:47; backoff real: DvFe9bR2eHA (indicação do Miguel) 429/403→ERRO tentativa_1. Colateral curado: rebase interrompido no clone Tencent (UU de_dell.md travava commits de todos os robôs) resolvido preservando conteúdo do Chefe. Tema Duplo: `Foruns/youtube/forum_youtube_cura_loop_sem_legenda_whisper_20260905.md` + `Memorias/memoria_youtube_cura_loop_whisper_20260905.md`. Nada publicado (rascunho/gate seguem fluxo da casa).
 
 - [04/09/2026 ~18:3x BRT] ZCode/GLM-5.3 (ZM, Dell) — **CORREÇÃO ESTRUTURAL EMU-8 (ordem Miguel "correção estrutural"): gap de auditoria de títulos FECHADO nos autores automáticos**. (1) Auditor NYC `/root/agente_auditor_titulos_gpt.py` (backup `.bak_pre_emu8_20260904`): régua 7→**9 regras** (EMU-2+8 no prompt e schema), `--incluir-publicados` (avalia também publish — 5470/5801 publicam direto), snapshot por autor (`advisor_pending_5470/5801.jsonl`), relatório lê todos (glob); **crons novos defasados** 7,37 (5470) e 17,47 (5801) com flocks próprios e janela 6h (backup `crontab.bak_pre_emu8_advisor_20260904`); prova E2E: título velho Janmashtami → `ajustar` com sugestão genérica correta (≈US$ 0,00014/título). (2) R2 tencent (backup `.bak_pre_emu8_20260904`): bolo EMU-1+2+6+8 (nome próprio desconhecido → genérico no item PROIBIDO). (3) Varredura retroativa 5470 (janela 6h, 13 posts): 269012 (93→71c) e 269007 (97→62c) corrigidos in place, slugs preservados, provas front, Rocket purgado; backup+rollback em `Backups/posts_editados/varredura_emu8_5470_20260904.md`. (4) **Anti-colisão §112:** 6 títulos >80c do autor 5801 NÃO tocados (sessão YouTube paralela publicando essas matérias) — sugestões no snapshot para a CL; 269033/269034 duplicados (mesmo título) para dedup da sessão YouTube. Fórum EMU-8 §ADENDO 1 + monitor ✅.
@@ -812,3 +814,27 @@ Ordem Miguel: "vai" para plugar o vision-exp no auditor visual. No NYC (`/root/v
 
 
 AST-20260905-017 — 05/09/2026 10:41:36 BRT: leitura efetiva V3/anexos, funções e auditoria Telegram documentadas em Foruns/PROPOSTA_ADENDO_ASTRA_V3_E_ATIVACAO_20260905.md; memória Memorias/MEMORIA_ASTRA_V3_TELEGRAM_20260905.md; prompt único Foruns/PROMPT_UNICO_ATIVACAO_ASTRA_V3_20260905.md. Miguel dispensou revisão prévia DSN/ZM apenas da ronda: autorização não está pendente. Adendo continua PROPOSTA; suplência pode seguir protocolo previamente autorizado, sem licença humana por ocorrência, respeitando ordem, escopo e exclusividade. Astra não é XM e não publica. Registro manual das decisões Telegram realizado; incorporação automática/controles novos ainda pendentes. Ronda desativada, Telegram ativo; nenhum cron, serviço alheio ou produção alterado.
+- 05/09 11:0x BRT · ZCode/GLM-5.3 (Dell) — 🔑 MOKA MODO REVISOR GOOGLE NO OUSADIA (ordem Miguel ~10h30): gateway pontos_api (Tencent) curado e estendido — OPENAI_API_KEY da casa no .env (viva, nunca sai do servidor), allowlist += gpt-4o-mini/gpt-4o, roteamento por provedor c/ failover, NOVO /ia/tts (voz neural tts-1, trava 1500 chars, 20 pts); conta de teste zcode.e2e.20260801@gmail.com com senha NOVA (cofres MOKA_REVISOR_*, sha8 eab5f63e) e saldo 65→1305 pts (a trava); app religado (commit 5b2d739 no moka-ousadia main): resolveProvider cai no gatewayProvider com conta logada, voz neural da casa no useTTS, FAQ revisor PT/EN no /ajuda (200 provado no ar). Tema Duplo: forum/memoria_moka_modo_revisor_google_20260905. Pendências: E2E de UX c/ o Miguel, envs transcrição Vercel ousadia, promoção ao canônico pós-aval.
+
+
+<!-- AST-INSTITUCIONAL:MANUAL-INTEGRACAO-20260905-1120 -->
+
+AST-20260905-019 | 2026-09-05T11:20:50-03:00 | Controles implementados e análise real validada; ativação é a próxima etapa
+
+Tarefa: AST-PEDIDO-3079a8327006c038fa4a. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/MANUAL-INTEGRACAO-20260905-1120.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-79. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-018-ATIVACAO -->
+
+AST-20260905-018 | 2026-09-05T11:42:54-03:00 | Configuração horária Astra ativada às 11h39; primeira rodada prevista às 12h
+
+Tarefa: AST-CONFIGURACAO-HORARIA. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-018-ATIVACAO.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-120001-1788620401869890846 -->
+
+AST-20260905-020 | 2026-09-05T12:01:15-03:00 | Rio: reconciliação da margem de disco e plano de medição estrutural
+
+Tarefa: AST-RIO-ESTUDO. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-120001-1788620401869890846.md). Sem publicação, produção, exclusão ou despesa nova.
