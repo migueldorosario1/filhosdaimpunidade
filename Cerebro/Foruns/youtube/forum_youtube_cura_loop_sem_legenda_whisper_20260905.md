@@ -47,3 +47,27 @@ O Nassif (`-szqKhIY-3A`) travou horas nesse loop até a contingência do Chefe (
 - **Publicação:** nada foi publicado; rascunho/gate seguem o fluxo da casa (redator V4.1 → CL publica).
 
 — ZCode/GLM-5.3 (ZM) · 20260905 10:5x BRT
+
+---
+
+## ADENDO 1 — Blindagem pós-E2E: VAD descartava clipes curtos + áudio mudo do storm (11:2x-11:4x)
+
+No acompanhamento pós-cura, 3 vídeos do loop (MrggA3TvOuE/6qXIQKXCHAQ/DIavgncHyiI, clipes BBC/TRT de 17-51s) terminavam o Whisper com "0 segmentos" e transcrição vazia — e transcricao.txt vazia faria o robô re-disparar o worker a cada ciclo (loop novo em potencial). Investigação (ffprobe/volumedetect): os áudios baixados DURANTE o storm vieram com track silenciosa (max_volume -91dB — o YouTube serve áudio mudo em vez de 403 quando desconfia do IP). E o VAD default do faster-whisper também descarta fala rápida de clipe curto. Três ajustes finais:
+
+1. **Worker v3**: passada com VAD; se 0 segmentos → `volumedetect`: max_volume ≤ -60dB = track muda de verdade → `audio_mudo.marker` (terminal); só se há volume → 2ª passada sem VAD (fala rápida curta legítima). Transcrição-lixo ("Thank you."/"Music") nunca mais vira arquivo.
+2. **Robô**: aceita transcrição >200 bytes (500 antigo descartava clipe curto legítimo; "Thank you." tem <50). Worker acabou com transcrição ≤200 bytes → motivo `whisper_ruido` → mesma cura do mudo: apaga o áudio, ERRO `audio_mudo_refazer_download_N`, freio 3× → `erro_permanente_audio_mudo_3x`.
+3. **Porta**: item devolvido por áudio mudo = cache local+Tencent limpos e re-download em codec DIFERENTE (opus 249/250/251 — o 139 m4a do storm vinha silencioso).
+
+Resultado esperado da cadeia (acontecendo): worker detecta mudo → ERRO refazer → porta baixa opus limpo → Whisper extrai fala → decupagem. Se o YouTube continuar servindo track ruim, a escada 3× encerra com nota permanente — nunca loop.
+
+— ZCode/GLM-5.3 (ZM) · 20260905 11:4x BRT
+
+## ADENDO 2 — Desfecho da cadeia ao vivo (12:07-12:10) e estado final
+
+- **6qX/DIavg não eram mudos** (max_volume -5.3/-3.1dB): o áudio tem trilha sonora mas a fala da notícia não veio na track 139 do storm — transcrição-lixo ("Music"/"Thank you.", 43-67 bytes). O sistema tratou sozinho: `whisper_ruido` → linha 🔇 única → áudio descartado → ERRO `audio_mudo_refazer_download_1`.
+- **Mrgg é mudo real** (-91dB) → marker → 🔇 → porta limpou cache e re-baixou em **opus** (audio.webm) às 12:10; novo arquivo também veio inutilizável → **backoff tries=1, próxima tentativa ~12:40** — 1 tentativa por degrau da escada, zero repetição imediata.
+- DvFe9bR2eHA (indicação do Miguel): ERRO tentativa_2 às 11:15, próxima ~13:15 (degrau de 2h).
+- **Fila 12:07: DECUPADO 31 · BAIXADO 11 · ERRO 4 (todos com backoff)** — o loop original (ERRO 10-11 marcados a cada ciclo) acabou. Dos 7 vídeos do loop: 4 decupados pelo Whisper (CNN ankle monitor, bond rates, Spain border, Minneapolis), 3 em re-download com escada.
+- Se um desses nunca mais tiver áudio bom: 3 mudos = `erro_permanente_audio_mudo_3x` e a fila fica limpa para sempre — decisão de desistência fica registrada na própria linha.
+
+— ZCode/GLM-5.3 (ZM) · 20260905 12:1x BRT

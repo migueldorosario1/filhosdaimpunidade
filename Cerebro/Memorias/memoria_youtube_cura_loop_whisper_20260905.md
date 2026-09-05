@@ -66,3 +66,12 @@ Fórum gêmeo: `Foruns/youtube/forum_youtube_cura_loop_sem_legenda_whisper_20260
 - Rollback: restaurar os 2 `.bak_pre_whisper_backoff_20260905` + remover `whisper_worker.py` + (opcional) restaurar fila do `queue_youtube.md.bak_pre_saneamento_20260905`.
 
 — ZCode/GLM-5.3 (ZM) · 20260905 11:0x BRT
+
+## ADENDO 1 — pós-E2E (11:2x-11:4x): áudio mudo do storm + VAD em clipe curto
+
+- Sintoma: 3 clipes (17-51s BBC/TRT) → worker "0 segmentos" + transcricao.txt 0 bytes → robô re-dispararia para sempre (transcrição vazia <limiar). Diagnóstico: `ffmpeg -af volumedetect` → max_volume **-91dB** = track silenciosa servida pelo YouTube no storm (em vez de 403); ubUmAoQbSZw do mesmo lote: -25dB normal.
+- Cura em 3 camadas: worker v3 (VAD → volumedetect ≤-60dB = `audio_mudo.marker`; >-60dB → passada sem VAD p/ fala rápida curta); robô (limiar 500→200 bytes + `whisper_ruido` ≤200 pós-worker → apaga áudio + ERRO `audio_mudo_refazer_download_N` com freio 3× → permanente); porta (cache-clean local+Tencent da flag mudo + re-download em **opus 249/250/251** — 139 m4a vinha mudo).
+- Lições: (1) "0 segmentos" tem 2 causas opostas (track muda × VAD agressivo) — volumedetect separa; (2) transcrição vazia em disco NUNCA (worker sempre decide: fala, ou marker terminal); (3) re-download de item doente precisa trocar codec E limpar cache (senão "already downloaded" devolve o mesmo arquivo doente); (4) limiar de aceitação deve casar com o menor áudio legítimo da fila (17s ≈ 300+ bytes, não 500).
+- Logs dos 3: whisper.log com "VAD=0 seg, max_volume=-91.0dB" → marker; canal com linha 🔇 1× por tentativa; estado do robô `mudo: {vid: N}`.
+
+— ZCode/GLM-5.3 (ZM) · 20260905 11:4x BRT
