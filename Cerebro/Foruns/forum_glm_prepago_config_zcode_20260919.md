@@ -33,3 +33,10 @@ A perna ZAI da **curadoria da esteira de fios** estava morta desde a expiração
 - **Pronto:** teste completo, config no ZCode, espelhos Dell+Tencent, provas ao vivo, registro no Cérebro
 - **Falta:** nada bloqueante. Pendências leves: (1) vigília de crédito GLM lia quota do coding plan — adaptar para prepaid quando houver endpoint de saldo; (2) Miguel escolher "Z.ai API — PRÉ-PAGO" no seletor de modelos quando quiser usar GLM
 - **Preciso de você (Miguel):** nada urgente
+
+## ADENDO 19/09 ~15:5x — LIMPEZA DO SELETOR (ordem Miguel: "apaga a assinatura, deixa só um Z com a API pré-paga")
+
+- Apagados do `~/.zcode/v2/config.json` (backup `.bak_limpeza_zai_20260919_155x`): `builtin:zai`, `builtin:zai-coding-plan`, `builtin:zai-start-plan`, `builtin:bigmodel`, `builtin:bigmodel-coding-plan`, `builtin:bigmodel-start-plan` (chaves mortas 401 ou vazias; histórico nos backups)
+- Restou UM Z.ai no seletor: **"Z.ai API — PRÉ-PAGO"** (GLM-5.3 / GLM-4.6 / GLM-4.5-Flash)
+- `setting.json`: ponteiros mortos das famílias zai/bigmodel removidos (selectedKeys + connectionSelections); `cli/config.json`: modelo padrão repontado de `builtin:zai-coding-plan/GLM-5.3` para o pré-pago `e488030c/GLM-5.3`; `coding-plan-cache.json` removido (app regenera) — tudo com backup
+- Se algo do plano reaparecer no seletor: é o app recriando templates builtin vazios/desativados — ignorar ou mandar limpar de novo
