@@ -1,0 +1,7 @@
+# Lição 01/09/2026 — A régua de volume precisa do contexto de portão
+
+**O quê:** a série 3h de posts caiu para 3 e depois 1 — abaixo da banda 4-6 que a ordem do Miguel manda vigiar — mas a causa não era esteira quebrada: era o portão HUMANO fechado de propósito (CL-031, ordem do Miguel ~18:0x: nada publica sem o token TEXTO_APROVADO CL-nnn; + CL-034: nada de teste com status publish). Evidências: future=0 (nenhum agendado preso), 25 matérias no dia (meta ok), drafts+pending=2797 (colchão cheio). A leitura apressada do número ("esteira seca") seria FALSA; a leitura certa é "portão fechado de propósito".
+
+**Por quê:** o Miguel apertou os gates no mesmo dia (ZM-031 títulos, ZM-032 gate-texto, CL-030 regra de título, CL-031 trava, CL-034 testes) — a régua de volume (4-6/3h) foi desenhada para uma esteira livre; com portões deliberadamente rígidos, o número baixo é efeito da régua nova, não falha. Igual à matéria 268275 (Imazon): o 1,7% do desmate em terras indígenas não significa "1,7% destruído" — a leitura apressada engana; a cuidadosa devolve o número ao lugar.
+
+**Como aplicar:** (1) ao emitir alerta de volume, conferir SEMPRE o estado do portão (trava CL/token, ordens do dia, future=0, colchão de drafts) antes de chamar de anomalia; (2) se o alerta já foi respondido pelos loops com motivo+previsão, o ciclo está fechado — registrar sem re-alertar; (3) reportar número + contexto (ex.: "3h=1, portão humano deliberado, resposta AL-032+GM-002 recebida"); (4) vigiar a trava (o publish sem token = alerta imediato) mesmo quando o volume baixo for esperado.

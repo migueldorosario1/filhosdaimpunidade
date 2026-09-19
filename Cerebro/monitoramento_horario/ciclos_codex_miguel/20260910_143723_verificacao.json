@@ -1,0 +1,37 @@
+{
+  "ref": "XM-20260910-027",
+  "verified_at": "2026-09-10T14:37:42.201384-03:00",
+  "files": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_143723_evidencias.json",
+      "bytes": 167562,
+      "sha256": "4e64747732f95c045daf17683cc78745cd47df20a93346d0844d161c32583d42"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_143723_encaminhamento_pendente.md",
+      "bytes": 1677,
+      "sha256": "4012ebd9438882c1cc75d5494020e839c821ccd62ca0a80c0c8867251325194c"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_143723_ronda.md",
+      "bytes": 3879,
+      "sha256": "474a086184dfd00f069b24d7a3e955922ded52fb80fbe4e23fb77f7a20d33ca3"
+    }
+  ],
+  "json_valid": true,
+  "utf8_without_bom": true,
+  "inventoried_sources_changed_after_observation": [
+    "cerebro/Foruns/forum_marketing_moka_20260903.md"
+  ],
+  "zeroed_sources_still_zero": true,
+  "origin_read_only_probe": {
+    "command": "git ls-remote origin refs/heads/main",
+    "exit_code": 0,
+    "remote_head": "27f57cd5e976acb0f59a3c8deb73c37d7e6cc460",
+    "meaning": "Remote reachable; does not verify remote object integrity or delivery of this receipt"
+  },
+  "commit_created": false,
+  "push_attempted": false,
+  "rounds_executed": 1,
+  "failover_laura": "DESENHADO_NAO_ATIVO"
+}

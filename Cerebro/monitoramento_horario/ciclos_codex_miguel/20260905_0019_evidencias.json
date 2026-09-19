@@ -1,0 +1,66 @@
+{
+  "ref": "XM-20260905-001",
+  "captured_brt": "05/09/2026 00:19:03 BRT",
+  "git_head_read": "6cf6a8fc4d3f181ace1329de8f7e434384bde5d1",
+  "anchor": "246d70b32",
+  "http": [
+    {
+      "url": "https://www.ocafezinho.com/",
+      "http": 200,
+      "data": {
+        "bytes": 335846
+      }
+    },
+    {
+      "url": "https://www.ocafezinho.com/feed/",
+      "http": 200,
+      "data": {
+        "bytes": 84724
+      }
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269077?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269077,
+        "date": "2026-09-04T23:08:00",
+        "status": "publish",
+        "featured_media": 269081
+      }
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269085?_fields=id,status,date,featured_media",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "url": "https://controle.ocafezinho.com/wp-json/wp/v2/posts?per_page=1&_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": [
+        {
+          "id": 269077,
+          "date": "2026-09-04T23:08:00",
+          "status": "publish",
+          "featured_media": 269081
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "bytes": 2095331,
+      "sha256": "e7d11001c98dca1985ad39478fad53cd724c7ee9f21723ddfa7d0515c3c83535"
+    },
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 5697381,
+      "sha256": "5295e6c651080c776ffcac18016b70d11ddb54ee2a585e2f263c18d1c51dbc6f"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "bytes": 148201,
+      "sha256": "91c4acae87f691084a78e6d2b37c62175231ca7e3da28f4f6cc2a54b11bb2f26"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/grok_miguel.md": {
+      "bytes": 31954,
+      "sha256": "bea36e7c70eaa59d312b56fc20691b0addbc88ef24e6a08d2d5250c2076375e8"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "at": "2026-09-09T17:26:36.288229-03:00",
+  "local_head": "82a439efaab750e021438f3659de4e367493ad7d",
+  "origin_head": "8fa27f32984f7bf8e40992bf6c2e46f5fa76585c",
+  "divergence": "1\t2",
+  "tracked_status": "",
+  "push_returncode": 1,
+  "push_result": "REJECTED_NON_FAST_FORWARD",
+  "pull_returncode": 128,
+  "pull_result": "NOT_POSSIBLE_TO_FAST_FORWARD",
+  "mode": "HOLD_GIT_NON_FF",
+  "mutation_remote": false,
+  "ref": "XM-20260909-015",
+  "closed_at": "2026-09-09T17:27:09.292937-03:00",
+  "rounds_executed": 1,
+  "operational_commit": "82a439efaab750e021438f3659de4e367493ad7d",
+  "operational_cut": "b903178bbe9c928edd95f05900debd2718fe12af",
+  "delivery": "PENDENTE_LOCAL",
+  "closure_appends": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_172610_ronda.md",
+      "prefix_preserved": true,
+      "before_sha256": "96b1cc84dbfa32d728b93c09e749f8a77356aa703246342198fa621a7e66bf6c",
+      "after_sha256": "da27ce3147801ff5489e1795c2bf9fb10d196cecb580f0fcca8f8429ee8038f3",
+      "appended_sha256": "b39bea091e62ef04d98488e9cc764417ffc6cab598beee435405a288664b9764"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "prefix_preserved": true,
+      "before_sha256": "a9be671a01c49f4d666c740adcff6829a00e7acef162d7ef855b56ac1593bc33",
+      "after_sha256": "7443a48be25284b13e6db1dda9edfe0d157bcff245d063de7ad08dde463f35b5",
+      "appended_sha256": "9b440d7a7ca741004ff75e046f9965dbbdcd44ad9b41f17204c16275e7b8f009"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "prefix_preserved": true,
+      "before_sha256": "2821e02189c417ad1fca9dd2f5e3ed6c48efe10297f88db47a0ca364a629f57b",
+      "after_sha256": "65bf661dbb1444f57f74e2d63440985394253ed36dffd9165bd3f246e4a6a212",
+      "appended_sha256": "913ed985de5122ee7fc8dd2143091bbfb88347b53fd89eaba2b651bc8e130c06"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "prefix_preserved": true,
+      "before_sha256": "6922c070b4e8c7e159d6bebed9eab1cd27df88ab8f136e5e6edabe43fae43975",
+      "after_sha256": "73bc6853548071172b75cafb9c0b542014e2c35200b0283cf84b244ef2862c94",
+      "appended_sha256": "4d32929acd0bffdd052b6e233a2e5bdeb2e57384b1bb0659c6c913c7d3fa873a"
+    }
+  ],
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "untracked_preexisting_count": 219,
+  "prohibited_actions_executed": []
+}

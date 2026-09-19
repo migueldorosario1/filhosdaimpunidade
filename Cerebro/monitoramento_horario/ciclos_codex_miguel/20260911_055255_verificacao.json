@@ -1,0 +1,534 @@
+{
+  "ref": "XM-20260911-012",
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:47:58.373315-03:00",
+      "since": "2026-09-11T05:17:57.013463-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "9896175263f967bcbc15efcd57562d654f986ae1519c4d6ae93d3c484a548c0d",
+          "requests": 4,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "cc204178e76a13aaf9a2bc3a16e4e301a5ec8b3fe3e89beba2d394e9423804f9",
+          "requests": 6416,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        }
+      ],
+      "redis_errors": {
+        "sha256": "3b86c8603d1331832215554fbd78c75f459338fb9cffd6327835060b097a9b7c",
+        "total": 0,
+        "by_minute": {}
+      },
+      "redis_info": {
+        "uptime_in_seconds": "8179",
+        "used_memory": "308079064",
+        "used_memory_peak": "1019700616",
+        "expired_keys": "205",
+        "evicted_keys": "0",
+        "db0": "keys=256956,expires=56,avg_ttl=451582754"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "slowlog": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:50:31.306145-03:00",
+      "retained_sample": 128,
+      "earliest_retained_at": "2026-09-11T03:36:15-03:00",
+      "flush_events": [
+        {
+          "id": 192,
+          "timestamp": 1789115135,
+          "at": "2026-09-11T05:25:35-03:00",
+          "duration_usec": 911211,
+          "command": "FLUSHDB",
+          "mode": null,
+          "client_address_present": true,
+          "client_is_loopback": true,
+          "client_name_present": false
+        },
+        {
+          "id": 190,
+          "timestamp": 1789113637,
+          "at": "2026-09-11T05:00:37-03:00",
+          "duration_usec": 854026,
+          "command": "FLUSHDB",
+          "mode": null,
+          "client_address_present": true,
+          "client_is_loopback": true,
+          "client_name_present": false
+        },
+        {
+          "id": 186,
+          "timestamp": 1789111537,
+          "at": "2026-09-11T04:25:37-03:00",
+          "duration_usec": 21468,
+          "command": "FLUSHDB",
+          "mode": null,
+          "client_address_present": true,
+          "client_is_loopback": true,
+          "client_name_present": false
+        },
+        {
+          "id": 185,
+          "timestamp": 1789111529,
+          "at": "2026-09-11T04:25:29-03:00",
+          "duration_usec": 7498582,
+          "command": "FLUSHDB",
+          "mode": null,
+          "client_address_present": true,
+          "client_is_loopback": true,
+          "client_name_present": false
+        }
+      ],
+      "scope": "One read-only SLOWLOG GET 128; other args and client identities not logged."
+    }
+  },
+  "commandstats": {
+    "at": "2026-09-11T05:51:29.559071-03:00",
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "rc": 0,
+      "flushdb": [
+        "cmdstat_flushdb:calls=4,usec=9285287,usec_per_call=2321321.75"
+      ]
+    }
+  },
+  "wordpress_readback": {
+    "rc": 0,
+    "at": "2026-09-11T05:48:25.236250-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:48:25-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269719,
+          "hash": "13cbcd12347cf07c706a015b7824809fcdbdb2cc94a321efe945f327844872e1",
+          "status": "publish",
+          "title": "Agentes da OpenAI usaram sites alheios para trocar mensagens",
+          "author": "5470",
+          "date": "2026-09-11 05:30:00",
+          "slug": "agentes-da-openai-usaram-sites-alheios-para-trocar-mensagens",
+          "fm": 269762,
+          "categories": [
+            5008,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269431,
+          "hash": "0c8688ae0443071d75226461a90089a62987db7ea2321e0ccb7655393519406f",
+          "status": "publish",
+          "title": "Mendonça afasta chefe da PF e transforma guerra com a corporação em crise institucional",
+          "author": "5780",
+          "date": "2026-09-08 10:58:32",
+          "slug": "mendonca-afasta-chefe-da-pf-e-transforma-guerra-com-a-corporacao-em-crise-institucional",
+          "fm": 269432,
+          "categories": [
+            2403
+          ],
+          "edit_lock": "1788879301:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269416,
+          "hash": "f1e068f49ac43ef8da141c6bdb1bd6515edaf17c2f2d05db809a64b9ccd300e3",
+          "status": "publish",
+          "title": "Rússia apoia mediação da Índia na Ucrânia antes do encontro Putin-Modi",
+          "author": "5470",
+          "date": "2026-09-08 10:45:00",
+          "slug": "russia-apoia-mediacao-da-india-na-ucrania-antes-do-encontro-putin-modi",
+          "fm": 269418,
+          "categories": [
+            5087,
+            5003,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "public": [
+    {
+      "post_id": 269719,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/11/agentes-da-openai-usaram-sites-alheios-para-trocar-mensagens/",
+      "at": "2026-09-11T05:48:28.534491-03:00",
+      "sha256_html": "c4ef64ce043419313c3d7a60cf502b3539d0a868faffe71471637e48558bd44d",
+      "paragraphs": 17,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269431,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/mendonca-afasta-chefe-da-pf-e-transforma-guerra-com-a-corporacao-em-crise-institucional/",
+      "at": "2026-09-11T05:48:28.579485-03:00",
+      "sha256_html": "d785138ae1c80366e3a8744eb200714109fae1fd103e05af7017079c578f9eab",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 32,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269416,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/russia-apoia-mediacao-da-india-na-ucrania-antes-do-encontro-putin-modi/",
+      "at": "2026-09-11T05:48:28.624476-03:00",
+      "sha256_html": "dd19458c2ad517089647be3ad8f6f64230077dbbe959ba62ffcf2c2016bc87f1",
+      "paragraphs": 11,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "integrity": {
+    "at": "2026-09-11T05:51:02.344402-03:00",
+    "pre_push_present": false,
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "equal": true,
+        "git_sha256": "1acf98fbe0127569bcaf761de2668fd365869f527e7fefa07d370c20816275f8",
+        "canonical_sha256": "1acf98fbe0127569bcaf761de2668fd365869f527e7fefa07d370c20816275f8"
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "equal": true,
+        "git_sha256": "bba6ee8b5d955411d11e581ee301233babfb8bb9f439866a323a1cd0a6535f3b",
+        "canonical_sha256": "bba6ee8b5d955411d11e581ee301233babfb8bb9f439866a323a1cd0a6535f3b"
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "equal": false,
+        "git_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "canonical_sha256": "902d63dd17f6006c4156afd14d6657617802177b77af0b11813707faa617d3e2"
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "equal": false,
+        "git_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01"
+      },
+      {
+        "path": "MONITORAMENTO_DE_TRABALHO.md",
+        "equal": true,
+        "git_sha256": "33ff37423e88104bd728d7ced1ef4528f2cc2f431ba6557fa46c6a33ba57ae45",
+        "canonical_sha256": "33ff37423e88104bd728d7ced1ef4528f2cc2f431ba6557fa46c6a33ba57ae45"
+      }
+    ],
+    "xm039_header_present": false
+  },
+  "editorial_receipt": "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/state/ronda_horaria/editorial/reports/XM-20260911-012-EDITORIAL.json",
+  "sources": [
+    {
+      "url": "https://www.streetinsider.com/Reuters/Exclusive-OpenAI%E2%80%99s%2Brogue%2Bagents%2Bused%2Bat%2Bleast%2B10%2Bmore%2Bsites%2Bfor%2Bunauthorized%2Bcomms,%2Bresearchers%2Bsay/27041531.html",
+      "scope": "Apuração original Reuters de 09/09, republicada; confirma entrevistas e contagens atribuídas, sem certificar todos os rastros. Toronto foi contatada depois da publicação; Leitner hospedava seis wikis; motivo das tarefas era hipótese dos pesquisadores."
+    },
+    {
+      "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+      "scope": "Relato oficial de 26/08 sobre Hugging Face e canais não autorizados; não certifica o inventário dos dez sites da reportagem posterior."
+    },
+    {
+      "url": "https://agenciabrasil.ebc.com.br/justica/noticia/2026-09/fachin-suspende-decisoes-de-mendonca-e-dino-sobre-diretor-da-pf",
+      "scope": "Resultado indexado de notícia de 09/09 18:05 informa suspensão por Fachin. Abertura integral falhou; exige decisão primária SL 1946 e atualização por editor responsável, sem reescrever texto protegido."
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2304633&lang=1&reg=48",
+      "scope": "Nota oficial indiana de 30/08 confirma cúpula em 12–13/09 no Bharat Mandapam. Não confirma por si só a reunião bilateral de 11/09 nem falas sobre tarifas."
+    },
+    {
+      "url": "https://www.uniindia.com/national/external-peskov-modi-putin/172781",
+      "scope": "Despacho original UNI de 08/09, recorte disponível, relata briefing Peskov e pauta bilateral. Transcrição integral e comunicado diplomático ainda pendentes."
+    },
+    {
+      "url": "https://redis.io/docs/latest/commands/slowlog-get/",
+      "scope": "Execução sem I/O; metadados cliente desde v4; sem executar exemplos mutantes da documentação."
+    }
+  ]
+}

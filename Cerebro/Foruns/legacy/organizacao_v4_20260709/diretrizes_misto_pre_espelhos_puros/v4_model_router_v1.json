@@ -1,0 +1,72 @@
+{
+  "_doc": "Contrato V4 para roteamento inteligente de modelos por qualidade, custo e ordem externa de rota.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "principios": {
+    "sem_modelo_hardcoded": true,
+    "usa_apenas_candidatos_validos": true,
+    "feedback_editor_tem_peso": true,
+    "custo_estimado_entra_no_score": true,
+    "exploracao_controlada_quando_pouca_amostra": true,
+    "revisor_diferente_do_produtor": true
+  },
+  "inputs": {
+    "candidatos": "diretrizes/v4_rotas_llm_limpas_v1.json",
+    "feedback": "agent_data/v4/feedback/editor_feedback.jsonl",
+    "pricing": "diretrizes/v4_pricing_llm_v1.json",
+    "recomputed_costs": "agent_data/v4/receipts/recomputed/*.jsonl"
+  },
+  "expected_tokens": {
+    "redacao": {
+      "tokens_in": 1200,
+      "tokens_out": 900
+    },
+    "revisao": {
+      "tokens_in": 1600,
+      "tokens_out": 450
+    },
+    "auditoria": {
+      "tokens_in": 1400,
+      "tokens_out": 300
+    },
+    "fact_check": {
+      "tokens_in": 1800,
+      "tokens_out": 350
+    },
+    "curadoria": {
+      "tokens_in": 900,
+      "tokens_out": 250
+    }
+  },
+  "feedback_operation_map": {
+    "redacao": "produzir_dry_run",
+    "revisao": "revisar_dry_run",
+    "auditoria": "auditar_final_dry_run",
+    "fact_check": "fact_check_dry_run",
+    "curadoria": "curadoria_dry_run"
+  },
+  "recommendation": {
+    "min_samples_for_feedback_priority": 3,
+    "weights": {
+      "quality": 0.7,
+      "cost_efficiency": 0.2,
+      "route_order": 0.1
+    },
+    "fallback_quality_source": "ratings_quality",
+    "tie_breakers": [
+      "higher_quality",
+      "lower_cost",
+      "route_order"
+    ]
+  },
+  "outputs": {
+    "include_all_candidates": true,
+    "include_reason": true,
+    "include_mode": true,
+    "modes": [
+      "feedback_priority",
+      "exploration"
+    ]
+  }
+}

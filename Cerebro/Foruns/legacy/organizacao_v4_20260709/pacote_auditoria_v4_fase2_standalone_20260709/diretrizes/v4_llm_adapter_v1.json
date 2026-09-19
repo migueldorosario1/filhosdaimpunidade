@@ -1,0 +1,44 @@
+{
+  "_doc": "Contrato do adaptador LLM V4. Modo mock por padrao; chamadas reais exigem habilitacao explicita futura.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "mode_default": "mock",
+  "allow_real_calls": false,
+  "source_routes": "diretrizes/v4_rotas_llm_limpas_v1.json",
+  "orchestration": "diretrizes/v4_orquestracao_llm_v1.json",
+  "real": {
+    "enabled": false,
+    "require_healthcheck": true,
+    "healthcheck": {
+      "check_env_keys": true,
+      "check_provider_enabled": true,
+      "check_model_rating": true,
+      "network_call": false
+    },
+    "selection": {
+      "strategy": "first_valid_by_route_order",
+      "respect_route_order": true
+    }
+  },
+  "principios": {
+    "sem_modelo_hardcoded": true,
+    "sem_diretriz_hardcoded": true,
+    "usa_rotas_v4_limpas": true,
+    "mock_por_padrao": true,
+    "real_exige_flag_explicita": true
+  },
+  "mock": {
+    "provider": "mock",
+    "model": "v4-mock-local",
+    "quality": 5,
+    "allowed_functions": [
+      "redacao",
+      "revisao",
+      "auditoria",
+      "fact_check",
+      "curadoria",
+      "tribunal_visual"
+    ]
+  }
+}

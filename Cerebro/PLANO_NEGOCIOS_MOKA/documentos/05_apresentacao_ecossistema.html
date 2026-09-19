@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ecossistema de Mídia — Sites Temáticos + Moka</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #0d1117; color: #e6edf3; overflow: hidden; }
+  .slide { display: none; width: 100vw; height: 100vh; padding: 6vh 8vw; flex-direction: column; justify-content: center; }
+  .slide.ativo { display: flex; }
+  .kicker { color: #58a6ff; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; font-size: 1.6vh; margin-bottom: 2vh; }
+  h1 { font-size: 6.5vh; line-height: 1.1; margin-bottom: 3vh; }
+  h2 { font-size: 4.2vh; margin-bottom: 3vh; color: #fff; }
+  p, li { font-size: 2.4vh; line-height: 1.65; color: #c9d1d9; }
+  .grade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.2vh; margin-top: 3vh; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 14px; padding: 2.6vh; }
+  .card h3 { font-size: 2.6vh; margin-bottom: 1vh; }
+  .card .dom { color: #58a6ff; font-size: 1.9vh; }
+  .badge { display: inline-block; background: #238636; color: #fff; border-radius: 999px; padding: .3vh 1.2vh; font-size: 1.6vh; font-weight: 700; margin-left: 1vh; }
+  .badge.pausa { background: #9e6a03; }
+  .num { font-size: 7vh; font-weight: 800; color: #58a6ff; }
+  .rodape { position: fixed; bottom: 2.5vh; left: 8vw; right: 8vw; display: flex; justify-content: space-between; color: #6e7681; font-size: 1.6vh; }
+  .nav { position: fixed; bottom: 2.5vh; right: 8vw; }
+  .nav button { background: #238636; border: 0; color: #fff; border-radius: 8px; padding: 1vh 2.4vh; font-size: 1.8vh; cursor: pointer; margin-left: 1vh; }
+  .nav button.sec { background: #30363d; }
+  .moka { background: linear-gradient(135deg, #1f6feb, #8957e5); border-radius: 18px; padding: 4vh; color: #fff; }
+  .moka h3 { font-size: 3.4vh; }
+  ul { padding-left: 2.4vw; }
+  .fluxo { display: flex; align-items: center; gap: 1.5vh; flex-wrap: wrap; margin-top: 3vh; }
+  .etapa { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1.6vh 2vh; font-size: 2vh; }
+  .seta { color: #58a6ff; font-size: 2.6vh; }
+</style>
+</head>
+<body>
+
+<!-- 1 CAPA -->
+<section class="slide ativo">
+  <div class="kicker">Apresentação de negócios · Julho 2026</div>
+  <h1>Ecossistema de Mídia<br>Sites Temáticos + Moka</h1>
+  <p>Portfólio de portais editoriais operados por agentes de IA, com produção diária de conteúdo,<br>monetização por anúncios e um aplicativo leitor no centro da estratégia.</p>
+  <div class="rodape"><span>Miguel do Rosário · Uso interno</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 2 NÚMEROS -->
+<section class="slide">
+  <div class="kicker">O ecossistema em números</div>
+  <h2>Uma máquina de conteúdo rodando todos os dias</h2>
+  <div class="grade">
+    <div class="card"><div class="num">7</div><p>portais ativos em produção (mais 1 em redesenho: Mapa Rio)</p></div>
+    <div class="card"><div class="num">4×</div><p>rodadas de publicação por dia, por site (3h e 13h + vídeos 2:30 e 12:30)</p></div>
+    <div class="card"><div class="num">3</div><p>idiomas de operação: PT-BR, EN e um site bilíngue (AIatolah PT/EN)</p></div>
+    <div class="card"><div class="num">100%</div><p>dos posts passam por auditoria editorial com IA antes de publicar</p></div>
+  </div>
+  <div class="rodape"><span>← → para navegar</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 3 PORTFOLIO 1 -->
+<section class="slide">
+  <div class="kicker">O portfólio · 1 de 2</div>
+  <h2>Os portais</h2>
+  <div class="grade">
+    <div class="card"><h3>Rio Carta <span class="badge">PT</span></h3><p class="dom">riocarta.com</p><p>O estado do Rio de Janeiro inteiro: política fluminense, segurança, serviços e as últimas pesquisas eleitorais.</p></div>
+    <div class="card"><h3>Global South News <span class="badge">EN</span></h3><p class="dom">globalsouth.news</p><p>Geopolítica multipolar em inglês: BRICS, Sul Global, colunistas próprios e vídeo-análises diárias.</p></div>
+    <div class="card"><h3>Mundo dos Trilhos <span class="badge">PT</span></h3><p class="dom">mundotrilhos.com</p><p>O portal do transporte sobre trilhos: metrô, VLT, ferrovias de carga e alta velocidade no Brasil.</p></div>
+    <div class="card"><h3>Rail Post <span class="badge">EN</span></h3><p class="dom">railpost.news</p><p>A indústria ferroviária global em inglês: projetos, tecnologia e política ferroviária mundial.</p></div>
+  </div>
+  <div class="rodape"><span>→</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 4 PORTFOLIO 2 -->
+<section class="slide">
+  <div class="kicker">O portfólio · 2 de 2</div>
+  <h2>E mais três (um em redesenho)</h2>
+  <div class="grade">
+    <div class="card"><h3>Discover Brazil <span class="badge">EN</span></h3><p class="dom">discoverbrazil.news</p><p>O Brasil para o turista internacional: ecoturismo, cultura, gastronomia e destinos.</p></div>
+    <div class="card"><h3>Ceará Digital <span class="badge">PT</span></h3><p class="dom">ceara.digital</p><p>Notícia quente do Ceará: política estadual, Fortaleza e interior, com foco no cidadão cearense.</p></div>
+    <div class="card"><h3>AIatolah <span class="badge">PT+EN</span></h3><p class="dom">aiatolah.com</p><p>IA além do hype: modelos abertos, chips, China tech e rankings de preço de LLMs — bilíngue.</p></div>
+    <div class="card"><h3>Mapa Rio <span class="badge pausa">REDESENHO</span></h3><p class="dom">mapario.com.br</p><p>Mapa político do Rio — fora do pipeline de notícias até o novo conceito editorial.</p></div>
+  </div>
+  <div class="rodape"><span>→</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 5 PIPELINE -->
+<section class="slide">
+  <div class="kicker">Como o conteúdo nasce</div>
+  <h2>O pipeline editorial autônomo</h2>
+  <div class="fluxo">
+    <div class="etapa">🛰️ Coleta<br>RSS + busca</div><span class="seta">→</span>
+    <div class="etapa">✍️ Produção<br>reescreve por persona</div><span class="seta">→</span>
+    <div class="etapa">🔍 Auditoria<br>fatos + escopo + valor</div><span class="seta">→</span>
+    <div class="etapa">🖼️ Imagem<br>juiz visual + anti-repetição</div><span class="seta">→</span>
+    <div class="etapa">🚀 Publicação<br>git + Vercel</div><span class="seta">→</span>
+    <div class="etapa">📡 Indexação<br>Google em minutos</div>
+  </div>
+  <ul style="margin-top:4vh">
+    <li><b>Agente YouTube por site:</b> transcreve entrevistas completas e escreve a matéria a partir do conteúdo real do vídeo</li>
+    <li><b>Juiz visual com IA:</b> toda imagem de capa é vista e avaliada antes de publicar — nada de foto errada ou repetida</li>
+    <li><b>Diretrizes vivas por site:</b> cada portal tem contrato editorial próprio, atualizado pelo editor em tempo real</li>
+  </ul>
+  <div class="rodape"><span>→</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 6 MOKA -->
+<section class="slide">
+  <div class="kicker">O centro da estratégia</div>
+  <div class="moka">
+    <h3>📱 Moka — o aplicativo leitor</h3>
+    <p style="color:#e6edf3; margin-top:2vh">Todos os portais carregam o <b>banner central do Moka</b>: o app de leitura que agrega o conteúdo da rede.<br><br>
+    <b>Modelo:</b> gratuito para o leitor, com camada <b>premium</b> — os 7 portais são o funil de instalação.</p>
+  </div>
+  <div class="rodape"><span>→</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 7 MONETIZAÇÃO E MÉTRICAS -->
+<section class="slide">
+  <div class="kicker">Receita e medição</div>
+  <h2>Monetização e analytics</h2>
+  <div class="grade">
+    <div class="card"><h3>📈 GA4 próprio por site</h3><p>Cada portal tem sua propriedade Google Analytics 4 (criadas via API em 22/07) — tráfego medido por domínio, em tempo real.</p></div>
+    <div class="card"><h3>💰 AdSense</h3><p>Conta dos temáticos com formato discreto (sem overlays agressivos). Rio Carta já veicula; demais em ativação gradual pelo painel.</p></div>
+    <div class="card"><h3>⚡ Indexação rápida</h3><p>Todo post novo é enviado à API de indexação do Google na hora da publicação.</p></div>
+    <div class="card"><h3>🔒 Operação segura</h3><p>Backups completos, rollback por git, e nenhuma alteração sem registro em fórum próprio do projeto.</p></div>
+  </div>
+  <div class="rodape"><span>→</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<!-- 8 ROADMAP -->
+<section class="slide">
+  <div class="kicker">Próximos passos</div>
+  <h2>O que vem por aí</h2>
+  <ul>
+    <li><b>Redes sociais por site</b> — handles padronizados em criação (X, Instagram, Facebook)</li>
+    <li><b>Agente vigilante</b> — patrulha diária corrigindo imagem, link e duplicidade automaticamente</li>
+    <li><b>Mapa Rio</b> — novo conceito editorial fora do formato noticioso</li>
+    <li><b>Moka</b> — lançamento do funil de instalação a partir dos 7 portais</li>
+    <li><b>Cafezinho × vídeos</b> — esteira de entrevistas transcritas com revisão humana antes do ar</li>
+  </ul>
+  <div class="rodape"><span>Fim · perguntas?</span><span class="nav"><button class="sec" onclick="ir(-1)">←</button><button onclick="ir(1)">→</button></span></div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let i = 0;
+  function ir(d) {
+    slides[i].classList.remove('ativo');
+    i = (i + d + slides.length) % slides.length;
+    slides[i].classList.add('ativo');
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ') ir(1);
+    if (e.key === 'ArrowLeft') ir(-1);
+  });
+</script>
+</body>
+</html>

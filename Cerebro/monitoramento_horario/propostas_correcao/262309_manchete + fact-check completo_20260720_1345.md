@@ -1,0 +1,5 @@
+{
+  "post_id": 262309,
+  "campo": "manchete + fact-check completo",
+  "sugestao": "Draft nacional altamente sensível: alega negociação de Flávio Bolsonaro por vaga no STF para 'bispo da Universal'. Antes de publicar, Miguel/editorial deve verificar (1) se existe vaga aberta ou prevista no STF neste momento, (2) fonte primária identificável no corpo do texto (não visível no payload), (3) nome do bispo citado e ligação institucional real com Universal, (4) se 'negociação' está atribuída a fonte nominal ou é ilação. Título absoluto + acusação política grave + pauta STF exige âncora factual sólida — fora do escopo do fact-check autônomo do Sentinela. Cafezinho é anti-imperialista de esquerda e crítico ao clã Bolsonaro (linha editorial), mas manchete precisa de lastro pra sustentar exposição jurídica."
+}

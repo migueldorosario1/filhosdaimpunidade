@@ -1,0 +1,49 @@
+{
+  "ref": "XM-20260910-018",
+  "rounds_executed": 1,
+  "content_commit": "a77d4a1f6e3a1aba8a774d21932f4ba58098835e",
+  "github_push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "a77d4a1f6e3a1aba8a774d21932f4ba58098835e:refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   ba645fe4b..a77d4a1f6  a77d4a1f6e3a1aba8a774d21932f4ba58098835e -> main\n",
+    "timestamp_brt": "2026-09-10T08:53:18.175710-03:00"
+  },
+  "github_ls_remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "a77d4a1f6e3a1aba8a774d21932f4ba58098835e\trefs/heads/main\n",
+    "stderr": "",
+    "timestamp_brt": "2026-09-10T08:53:20.303341-03:00"
+  },
+  "delivery_confirmed": true,
+  "timestamp_brt": "2026-09-10T08:53:35.477456-03:00",
+  "nyc": {
+    "main": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "ancestor_rc": 1,
+    "result": "HOLD_NON_FF",
+    "push_attempted": false
+  },
+  "gdrive": "NAO_TESTADO",
+  "tencent_reserva": "NAO_TESTADO",
+  "prefixes_preserved": true,
+  "preexisting_untracked_preserved": 221,
+  "artifact_sha256": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_085258_evidencias.json": "48d5502722ec0cba2b0664f384dbd31bdea8776d272f35c768d8f27a893d1166",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_085258_diagnostico.md": "fb39dc0efeac10d9bf6c1b00ce0864e0edae74ff85a3ea0088f8b9c0b50afe78",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_085258_fontes_primarias.json": "7a189bd9690d7db91b7535a311993635321129a7a5aed557910603d97662aebe",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_085258_replay.py": "b10c3e1d798b1cae12f6ebfb973eedfc4e74565d3909e1f8fa6b5524665087d8"
+  },
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "operational_mutations": 0
+}

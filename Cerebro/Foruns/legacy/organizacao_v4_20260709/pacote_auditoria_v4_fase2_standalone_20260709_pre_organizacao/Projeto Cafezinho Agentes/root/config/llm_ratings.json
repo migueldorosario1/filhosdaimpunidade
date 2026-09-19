@@ -1,0 +1,1465 @@
+{
+  "_criterios": {
+    "economia": "5=mais barato/mais desejavel. Separada em economia_oficial e economia_observada.",
+    "qualidade": "1=evitar, 2=operacional, 3=limítrofe/alucina ocasionalmente, 4=editorial bom, 5=top editorial com teste-trava",
+    "status": "Apenas status=ativo deve entrar em cascata sem override manual. status bloqueado/bug_ativo/legado/pendente_teste/ativo_com_cautela exige regra especifica.",
+    "velocidade": "5=flash/muito veloz, 4=rápido, 3=médio, 2=lento, 1=muito lento/reasoning longo"
+  },
+  "_decisao_f0a": {
+    "decisao_miguel": "2026-05-18T15:30:00-03:00",
+    "motivo": "Anthropic ja esta disabled desde 2026-05-14; sem urgencia financeira confirmada para deploy intermediario.",
+    "status": "reescalonada_para_sprint_completo"
+  },
+  "_doc": "Sistema de notas LLM em 3 dimensoes: qualidade, economia e velocidade. Aprovado por Miguel 2026-05-25.",
+  "_fonte": "Foruns/forum_sistema_notas_llm_20260518.md#15.1,#36",
+  "_status": "producao",
+  "_updated_at": "2026-07-01T18:03:00-03:00",
+  "_updated_by": "codex_v3_editorial_frontier_superluxo_strict",
+  "default_behavior_unknown_model": "reject",
+  "modelos": {
+    "claude-haiku-4-5": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 5,
+      "familia": "claude",
+      "flags": {
+        "bloqueado_por_politica": true,
+        "emergencia_manual_apenas": true,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": "emergencia_financeira_anthropic",
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Nao reativar sem teto financeiro.",
+      "origem": "eua",
+      "preco_fonte_url": "https://www.anthropic.com/pricing",
+      "preco_oficial_usd_1m_input": 0.25,
+      "preco_oficial_usd_1m_output": 1.25,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "anthropic",
+      "qualidade": 3,
+      "status": "bloqueado",
+      "velocidade": 5
+    },
+    "claude-opus-4-7": {
+      "bugs_ativos": [],
+      "economia_observada": 1,
+      "economia_oficial": 1,
+      "familia": "claude",
+      "flags": {
+        "bloqueado_por_politica": true,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": "opus_bloqueado_por_politica_e_custo",
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Bloqueado por politica: sem Opus.",
+      "origem": "eua",
+      "preco_fonte_url": "https://www.anthropic.com/pricing",
+      "preco_oficial_usd_1m_input": 15.0,
+      "preco_oficial_usd_1m_output": 75.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "anthropic",
+      "qualidade": 5,
+      "status": "bloqueado",
+      "velocidade": 3
+    },
+    "claude-opus-4-8": {
+      "bugs_ativos": [],
+      "economia_observada": 1,
+      "economia_oficial": 1,
+      "familia": "claude",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais",
+        "curadoria"
+      ],
+      "modalidade": "texto",
+      "observacao": "Opus 4.8 autorizado para auditoria final super_luxo por Miguel em 2026-06-24; validado via HTTP real.",
+      "origem": "eua",
+      "preco_fonte_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+      "preco_oficial_usd_1m_input": 5.0,
+      "preco_oficial_usd_1m_output": 25.0,
+      "preco_verificado_em": "2026-06-24",
+      "provider": "anthropic",
+      "qualidade": 5,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "claude-sonnet-4-6": {
+      "bugs_ativos": [],
+      "economia_observada": 1,
+      "economia_oficial": 3,
+      "familia": "claude",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "emergencia_manual_apenas": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais",
+        "curadoria"
+      ],
+      "modalidade": "texto",
+      "observacao": "Desbloqueado 27/05 (Claude Maestro, ordem Miguel). Fallback final luxo. Custo mais alto que chineses — usar como ultima opcao, nao primeira.",
+      "origem": "eua",
+      "preco_fonte_url": "https://www.anthropic.com/pricing",
+      "preco_oficial_usd_1m_input": 3.0,
+      "preco_oficial_usd_1m_output": 15.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "anthropic",
+      "qualidade": 5,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "deepseek-chat": {
+      "bugs_ativos": [],
+      "economia_observada": 5,
+      "economia_oficial": 5,
+      "familia": "deepseek",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": true,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "funcoes_permitidas": [
+        "perifericos_editoriais",
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Legado/depreciacao futura; nao usar como base do sistema novo.",
+      "origem": "asiatico",
+      "provider": "deepseek",
+      "qualidade": 4,
+      "status": "legado",
+      "velocidade": 5
+    },
+    "deepseek-v4-flash": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 5,
+      "familia": "deepseek",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": true,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Estavel em logs locais para uso economico, fora de redacao/revisao/fact-check.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://platform.deepseek.com/api-docs/pricing",
+      "preco_oficial_usd_1m_input": 0.1,
+      "preco_oficial_usd_1m_output": 0.2,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "deepseek",
+      "qualidade": 3,
+      "status": "ativo",
+      "velocidade": 5
+    },
+    "deepseek-v4-pro": {
+      "benchmark_fonte": null,
+      "benchmark_verificado_em": null,
+      "bugs_ativos": [],
+      "custo_real_fonte": null,
+      "custo_real_medio_chamada_usd": null,
+      "economia_observada": null,
+      "economia_oficial": 5,
+      "familia": "deepseek",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": true,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "fonte_nota_qualidade": [
+        "teste_trava",
+        "benchmark_publico",
+        "experiencia_prod"
+      ],
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Primario editorial provisório; exige trava anti-alucinacao e temperature=0.1.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://platform.deepseek.com/api-docs/pricing",
+      "preco_nota": "Promo 75% off ate 31/05/2026. Preco regular: $1.74/$3.48",
+      "preco_oficial_usd_1m_input": 0.44,
+      "preco_oficial_usd_1m_output": 0.87,
+      "preco_verificado_em": "2026-05-25",
+      "provider": "deepseek",
+      "qualidade": 5,
+      "status": "ativo",
+      "velocidade": 4
+    },
+    "gemini-2.5-flash": {
+      "bugs_ativos": [],
+      "economia_observada": 4,
+      "economia_oficial": 5,
+      "familia": "gemini",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": true,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "auditoria",
+        "fact_check",
+        "perifericos_simples",
+        "redacao",
+        "revisao",
+        "tribunal_visual",
+        "tribunal_visual_crosscheck"
+      ],
+      "modalidade": "texto_multimodal",
+      "observacao": "Gemini Flash + Google Search Grounding (Miguel 2026-06-10 17:35 BRT) — revisor padrão",
+      "origem": "eua",
+      "preco_fonte_url": "https://ai.google.dev/pricing",
+      "preco_oficial_usd_1m_input": 0.075,
+      "preco_oficial_usd_1m_output": 0.3,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "gemini",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 5
+    },
+    "gemini-2.5-pro": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 4,
+      "familia": "gemini",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "tribunal_visual",
+        "curadoria",
+        "fact_check"
+      ],
+      "modalidade": "texto_multimodal",
+      "observacao": "Fallback multimodal/editorial; nao confundir com Flash.",
+      "origem": "eua",
+      "preco_fonte_url": "https://ai.google.dev/pricing",
+      "preco_oficial_usd_1m_input": 1.25,
+      "preco_oficial_usd_1m_output": 5.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "gemini",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 5
+    },
+    "glm-4-plus": {
+      "bugs_ativos": [
+        "BUG-20260518-GLM-4-PLUS-ALUCINA-COM-TRAVA-EXPLICITA"
+      ],
+      "economia_observada": 4,
+      "economia_oficial": 4,
+      "familia": "glm",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial",
+        "teste_real_25mai"
+      ],
+      "funcoes_permitidas": [
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Bug alucinacao §66 ainda registrado, promovido com cautela apos teste 25/05 (3.7s, 115 tokens, output limpo).",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://open.bigmodel.cn/pricing",
+      "preco_nota": "5 RMB/M tokens unificado. Testado OK 25/05 com credito Miguel.",
+      "preco_oficial_usd_1m_input": 0.69,
+      "preco_oficial_usd_1m_output": 0.69,
+      "preco_verificado_em": "2026-05-25",
+      "provider": "zhipu",
+      "qualidade": 3,
+      "status": "inativo_sem_saldo",
+      "velocidade": 4
+    },
+    "glm-5.1": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 4,
+      "familia": "glm",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "auditoria"
+      ],
+      "modalidade": "texto",
+      "observacao": "Reasoning padrao; qualidade alta, mas caro/lento para pipeline curto.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://open.bigmodel.cn/pricing",
+      "preco_oficial_usd_1m_input": 2.0,
+      "preco_oficial_usd_1m_output": 5.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "zhipu",
+      "qualidade": 5,
+      "status": "pendente_teste",
+      "velocidade": 1
+    },
+    "glm-5.1_thinking_false": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 4,
+      "familia": "glm",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "perifericos_editoriais"
+      ],
+      "modalidade": "texto",
+      "observacao": "Variante operacional com thinking desabilitado; requer teste-trava antes de promocao.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://open.bigmodel.cn/pricing",
+      "preco_oficial_usd_1m_input": 2.0,
+      "preco_oficial_usd_1m_output": 5.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "zhipu",
+      "qualidade": 4,
+      "status": "pendente_teste",
+      "velocidade": 3
+    },
+    "gpt-4o": {
+      "bugs_ativos": [],
+      "economia_observada": 3,
+      "economia_oficial": 3,
+      "familia": "gpt",
+      "flags": {
+        "alertar_se_percentual_hora_maior_que": 30,
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais"
+      ],
+      "modalidade": "texto_multimodal",
+      "observacao": "Fallback ocidental; monitorar se virar rota dominante.",
+      "origem": "eua",
+      "preco_fonte_url": "https://openai.com/api/pricing/",
+      "preco_oficial_usd_1m_input": 2.5,
+      "preco_oficial_usd_1m_output": 10.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "openai",
+      "qualidade": 5,
+      "status": "ativo",
+      "velocidade": 4
+    },
+    "gpt-4o-mini": {
+      "bugs_ativos": [],
+      "economia_observada": 3,
+      "economia_oficial": 5,
+      "familia": "gpt",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Separar de search-preview; fora de redacao.",
+      "origem": "eua",
+      "preco_fonte_url": "https://openai.com/api/pricing/",
+      "preco_oficial_usd_1m_input": 0.15,
+      "preco_oficial_usd_1m_output": 0.6,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "openai",
+      "qualidade": 2,
+      "status": "ativo",
+      "velocidade": 5
+    },
+    "gpt-4o-mini-search-preview": {
+      "bugs_ativos": [],
+      "economia_observada": 3,
+      "economia_oficial": 3,
+      "familia": "gpt",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": true,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "funcoes_permitidas": [
+        "rag_busca"
+      ],
+      "modalidade": "rag",
+      "observacao": "Categoria busca/RAG, nao redacao.",
+      "origem": "eua",
+      "provider": "openai",
+      "qualidade": 3,
+      "status": "inativo_sem_saldo",
+      "velocidade": 5
+    },
+    "gpt-5": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 1,
+      "familia": "gpt",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "estimativa"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais"
+      ],
+      "modalidade": "texto",
+      "observacao": "Bloqueado por politica: sem GPT-5/o-series.",
+      "observacao_healthcheck": "bloqueado em 2026-07-01T20:32:30+00:00: responses sem texto",
+      "origem": "eua",
+      "preco_fonte_url": "https://platform.openai.com/docs/pricing",
+      "preco_oficial_usd_1m_input": 5.0,
+      "preco_oficial_usd_1m_output": 30.0,
+      "preco_verificado_em": "2026-06-24",
+      "provider": "openai",
+      "qualidade": 5,
+      "status": "bloqueado_healthcheck",
+      "velocidade": 1
+    },
+    "gpt-5.4": {
+      "ativo": true,
+      "bloqueado": false,
+      "bugs_ativos": [],
+      "custo_input_usd_mtok": 5.0,
+      "custo_output_usd_mtok": 30.0,
+      "economia_observada": null,
+      "economia_oficial": 1,
+      "familia": "gpt",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais",
+        "curadoria"
+      ],
+      "modalidade": "texto_multimodal",
+      "modelo": "gpt-5.4",
+      "observacao": "Super_luxo V3 autorizado por Miguel em 2026-06-24; validado via microteste real.",
+      "observacao_healthcheck": "bloqueado em 2026-07-01T20:54:46+00:00: Responses HTTP 500: {\n  \"error\": {\n    \"message\": \"An error occurred while processing your request. You can retry your request, or contact us through our help center at help.openai",
+      "origem": "eua",
+      "preco_fonte_url": "https://platform.openai.com/docs/pricing",
+      "preco_oficial_usd_1m_input": 5.0,
+      "preco_oficial_usd_1m_output": 30.0,
+      "preco_verificado_em": "2026-06-24",
+      "provider": "openai",
+      "qualidade": 5,
+      "status": "bloqueado_healthcheck",
+      "velocidade": 4
+    },
+    "gpt-5.5": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 1,
+      "familia": "gpt",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais",
+        "curadoria"
+      ],
+      "modalidade": "texto_multimodal",
+      "observacao": "Super_luxo V3 autorizado por Miguel em 2026-06-24; validado via microteste real.",
+      "observacao_healthcheck": "restaurado em 2026-07-01T20:54:45+00:00",
+      "origem": "eua",
+      "preco_fonte_url": "https://platform.openai.com/docs/pricing",
+      "preco_oficial_usd_1m_input": 5.0,
+      "preco_oficial_usd_1m_output": 30.0,
+      "preco_verificado_em": "2026-06-24",
+      "provider": "openai",
+      "qualidade": 5,
+      "status": "ativo",
+      "velocidade": 4
+    },
+    "grok-3": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 2,
+      "familia": "grok",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "estimativa"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "perifericos_editoriais"
+      ],
+      "modalidade": "texto",
+      "observacao": "Incluido no super_luxo V3 como fallback Grok, pendente validacao de acesso se chave xAI estiver ativa.",
+      "origem": "eua",
+      "preco_fonte_url": "https://docs.x.ai/docs/models",
+      "preco_oficial_usd_1m_input": 3.0,
+      "preco_oficial_usd_1m_output": 15.0,
+      "preco_verificado_em": "2026-06-24",
+      "provider": "xai",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 4
+    },
+    "grok-4.3": {
+      "ativo": true,
+      "bloqueado": false,
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 2,
+      "familia": "grok",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "estimativa"
+      ],
+      "funcoes": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "perifericos_editoriais",
+        "curadoria"
+      ],
+      "modalidade": "texto",
+      "modelo": "grok-4.3",
+      "observacao": "Incluido no super_luxo V3 como fallback Grok, pendente validacao de acesso se chave xAI estiver ativa.",
+      "origem": "eua",
+      "preco_fonte_url": "https://docs.x.ai/docs/models",
+      "preco_oficial_usd_1m_input": 3.0,
+      "preco_oficial_usd_1m_output": 15.0,
+      "preco_verificado_em": "2026-06-24",
+      "provider": "xai",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 4
+    },
+    "kimi-k2.5": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 4,
+      "familia": "kimi",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "long_context": true,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "revisao",
+        "auditoria"
+      ],
+      "modalidade": "texto",
+      "observacao": "Long-context; precisa teste-trava.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://platform.moonshot.cn/pricing",
+      "preco_oficial_usd_1m_input": 1.0,
+      "preco_oficial_usd_1m_output": 3.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "moonshot",
+      "qualidade": 4,
+      "status": "pendente_teste",
+      "velocidade": 3
+    },
+    "kimi-k2.6": {
+      "bugs_ativos": [
+        "content_vazio_historico"
+      ],
+      "economia_observada": null,
+      "economia_oficial": 4,
+      "familia": "kimi",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Evitar ate novo benchmark.",
+      "origem": "asiatico",
+      "provider": "moonshot",
+      "qualidade": 1,
+      "status": "bloqueado",
+      "velocidade": 1
+    },
+    "llama-3.1-8b-instant": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 5,
+      "familia": "llama",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Confirmar Groq no Tencent.",
+      "origem": "eua",
+      "preco_fonte_url": "https://wow.groq.com/pricing/",
+      "preco_oficial_usd_1m_input": 0.05,
+      "preco_oficial_usd_1m_output": 0.05,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "groq",
+      "qualidade": 2,
+      "status": "pendente_teste",
+      "velocidade": 3
+    },
+    "mistral-large-latest": {
+      "bugs_ativos": [],
+      "economia_observada": 4,
+      "economia_oficial": 4,
+      "familia": "mistral",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "perifericos_editoriais"
+      ],
+      "modalidade": "texto",
+      "observacao": "Promovido Q4 em 27/05 (Claude Maestro). Europeu, bom fallback diversificado.",
+      "origem": "europeu",
+      "preco_fonte_url": "https://mistral.ai/pricing",
+      "preco_nota": "Large 3 — drastica reducao vs Large 2 ($2/$6)",
+      "preco_oficial_usd_1m_input": 0.5,
+      "preco_oficial_usd_1m_output": 1.5,
+      "preco_verificado_em": "2026-05-25",
+      "provider": "mistral",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "moonshot-v1-32k": {
+      "bugs_ativos": [],
+      "economia_observada": 2,
+      "economia_oficial": 2,
+      "familia": "kimi",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "long_context": true,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "funcoes_permitidas": [
+        "redacao",
+        "revisao",
+        "auditoria",
+        "perifericos_editoriais"
+      ],
+      "modalidade": "texto",
+      "observacao": "Custo real local excelente; impor cap de input em tarefas curtas.",
+      "origem": "asiatico",
+      "provider": "moonshot",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "moonshot-v1-8k": {
+      "bugs_ativos": [],
+      "economia_observada": 2,
+      "economia_oficial": 2,
+      "familia": "kimi",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "funcoes_permitidas": [
+        "perifericos_editoriais",
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Legacy model. USD 1.00/1M input+output. Caro para tier economico. Ultimo fallback.",
+      "origem": "asiatico",
+      "provider": "moonshot",
+      "qualidade": 3,
+      "status": "inativo_sem_saldo",
+      "velocidade": 3
+    },
+    "o3": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 1,
+      "familia": "gpt",
+      "flags": {
+        "bloqueado_por_politica": true,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": "gpt5_o_series_bloqueados_por_politica_e_custo",
+        "reasoning": true,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "estimativa"
+      ],
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Bloqueado por politica: sem GPT-5/o-series.",
+      "origem": "eua",
+      "preco_fonte_url": "estimativa_forum_sistema_notas_llm_20260518_secao_15_1",
+      "preco_oficial_usd_1m_input": 15.0,
+      "preco_oficial_usd_1m_output": 60.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "openai",
+      "qualidade": 5,
+      "status": "bloqueado",
+      "velocidade": 1
+    },
+    "qwen-max": {
+      "bugs_ativos": [],
+      "economia_observada": 5,
+      "economia_oficial": 3,
+      "familia": "qwen",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Luxo Alibaba restaurado como ativo Q4 em 27/05 (Claude Maestro). Fallback primario quando deepseek-v4-pro cai.",
+      "origem": "asiatico",
+      "provider": "alibaba",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "qwen-plus": {
+      "bugs_ativos": [],
+      "economia_observada": 5,
+      "economia_oficial": 5,
+      "familia": "qwen",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "funcoes_permitidas": [
+        "perifericos_editoriais",
+        "perifericos_simples"
+      ],
+      "modalidade": "texto",
+      "observacao": "Economico. NAO usar para redacao/revisao/auditoria. Rebaixado de Q4 em 27/05 (Claude Maestro) — estava produzindo erros grosseiros e JSON malformado na redacao.",
+      "origem": "asiatico",
+      "provider": "alibaba",
+      "qualidade": 3,
+      "status": "ativo",
+      "velocidade": 4
+    },
+    "qwen-vl-max-latest": {
+      "bugs_ativos": [],
+      "economia_observada": 3,
+      "economia_oficial": 3,
+      "familia": "qwen",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial",
+        "teste_real_25mai"
+      ],
+      "funcoes_permitidas": [
+        "tribunal_visual",
+        "tribunal_visual_crosscheck"
+      ],
+      "modalidade": "vision",
+      "observacao": "Candidato para Tribunal Visual; precisa teste real com imagem.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "preco_oficial_usd_1m_input": 1.5,
+      "preco_oficial_usd_1m_output": 4.5,
+      "preco_verificado_em": "2026-05-25",
+      "provider": "alibaba",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "qwen-vl-plus": {
+      "bugs_ativos": [],
+      "economia_observada": 5,
+      "economia_oficial": 5,
+      "familia": "qwen",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": true
+      },
+      "fonte_nota_economia": [
+        "preco_oficial",
+        "teste_real_25mai"
+      ],
+      "funcoes_permitidas": [
+        "tribunal_visual",
+        "tribunal_visual_crosscheck"
+      ],
+      "modalidade": "vision",
+      "observacao": "Mais barato para Vision. Testado OK 25/05 (1.2s, 57 tokens). Primario Tribunal Visual.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "preco_oficial_usd_1m_input": 0.26,
+      "preco_oficial_usd_1m_output": 0.78,
+      "preco_verificado_em": "2026-05-25",
+      "provider": "alibaba",
+      "qualidade": 3,
+      "status": "ativo",
+      "velocidade": 5
+    },
+    "qwen3-max": {
+      "bugs_ativos": [],
+      "economia_observada": 4,
+      "economia_oficial": 5,
+      "familia": "qwen",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": false,
+        "tratar_4xx_como_erro_ferramenta": true,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial",
+        "teste_real_25mai"
+      ],
+      "funcoes_permitidas": [],
+      "modalidade": "texto",
+      "observacao": "Passou teste-trava §66.6. Mais barato que qwen-max (0.78 vs 1.04). Prioridade sobre qwen-max.",
+      "origem": "asiatico",
+      "preco_fonte_url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "preco_oficial_usd_1m_input": 0.78,
+      "preco_oficial_usd_1m_output": 3.9,
+      "preco_verificado_em": "2026-05-25",
+      "provider": "alibaba",
+      "qualidade": 5,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "sonar-pro": {
+      "bugs_ativos": [],
+      "economia_observada": null,
+      "economia_oficial": 3,
+      "familia": "sonar",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": false,
+        "search": true,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "fonte_nota_economia": [
+        "preco_oficial"
+      ],
+      "funcoes_permitidas": [
+        "fact_check"
+      ],
+      "modalidade": "rag",
+      "observacao": "Fact-check primario/RAG; nao compete com redacao.",
+      "origem": "eua",
+      "preco_fonte_url": "https://docs.perplexity.ai/docs/pricing",
+      "preco_oficial_usd_1m_input": 3.0,
+      "preco_oficial_usd_1m_output": 15.0,
+      "preco_verificado_em": "2026-05-18",
+      "provider": "perplexity",
+      "qualidade": 4,
+      "status": "ativo",
+      "velocidade": 3
+    },
+    "sonar-reasoning-pro": {
+      "bugs_ativos": [],
+      "economia_observada": 3,
+      "economia_oficial": 3,
+      "familia": "sonar",
+      "flags": {
+        "bloqueado_por_politica": false,
+        "exige_temperature_01": false,
+        "motivo_bloqueio": null,
+        "reasoning": true,
+        "search": true,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "vision": false
+      },
+      "funcoes_permitidas": [
+        "fact_check"
+      ],
+      "modalidade": "rag",
+      "observacao": "Usar excepcionalmente; historico de <think>/JSON.",
+      "origem": "eua",
+      "provider": "perplexity",
+      "qualidade": 4,
+      "status": "inativo_sem_saldo",
+      "velocidade": 1
+    },
+    "gemini-3.5-flash": {
+      "provider": "gemini",
+      "familia": "gemini",
+      "origem": "eua",
+      "modalidade": "texto_multimodal",
+      "qualidade": 5,
+      "economia_oficial": 4,
+      "economia_observada": 4,
+      "preco_oficial_usd_1m_input": 0.075,
+      "preco_oficial_usd_1m_output": 0.3,
+      "preco_fonte_url": "https://ai.google.dev/pricing",
+      "preco_verificado_em": "2026-07-01",
+      "fonte_nota_economia": [
+        "preco_oficial_herdado_ate_verificacao"
+      ],
+      "status": "ativo",
+      "funcoes_permitidas": [
+        "curadoria",
+        "redacao",
+        "revisao",
+        "auditoria",
+        "fact_check",
+        "perifericos_editoriais",
+        "tribunal_visual",
+        "tribunal_visual_crosscheck"
+      ],
+      "bugs_ativos": [],
+      "flags": {
+        "search": true,
+        "vision": true,
+        "reasoning": false,
+        "exige_temperature_01": false,
+        "tratar_4xx_como_erro_ferramenta": false,
+        "bloqueado_por_politica": false,
+        "motivo_bloqueio": null
+      },
+      "observacao": "Gemini 3.5 Flash solicitado por Miguel em 2026-07-01 para curadoria; não confundir com gemini-2.5-flash.",
+      "velocidade": 5
+    }
+  },
+  "modelos_bloqueados_globais": [
+    "claude-opus-*",
+    "gpt-5*",
+    "o1*",
+    "o3*",
+    "o4*"
+  ],
+  "ordenacao_padrao": [
+    "status_ativo",
+    "sem_bugs_ativos_quando_exigido",
+    "funcao_permitida",
+    "qualidade_minima",
+    "preferencia_origem",
+    "economia_observada_ou_oficial_desc",
+    "qualidade_desc",
+    "velocidade_desc",
+    "latencia_observada_asc"
+  ],
+  "provider_filtros_chineses": {
+    "alibaba": {
+      "codigos_proprios": [],
+      "http": [
+        400,
+        451
+      ]
+    },
+    "moonshot": {
+      "codigos_proprios": [],
+      "http": [
+        400,
+        451
+      ]
+    },
+    "zhipu": {
+      "codigos_proprios": [
+        1301
+      ],
+      "http": [
+        400,
+        451
+      ]
+    }
+  },
+  "regras_por_tarefa": {
+    "auditoria": {
+      "_doc": "Auditor exclui apenas o redator primario (DeepSeek). Revisor e excluido dinamicamente no motor_publicador.py:1487-1492. Fix moonshot 2026-05-27 Claude.",
+      "excluir_bugs_ativos": true,
+      "preferir_origem": "frontier",
+      "qualidade_minima": 4,
+      "sequencia_preferida": [
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-3.5-flash",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ],
+      "_doc_sequencia_preferida": "Regra Miguel 2026-07-01: funções editoriais usam apenas frontier/superluxo; curadoria prioriza Gemini 3.5 Flash; sem Gemini 2.5 Flash e sem cadeia econômica.",
+      "excluir_providers": [
+        "alibaba",
+        "deepseek",
+        "moonshot",
+        "mistral",
+        "zhipu"
+      ],
+      "apenas_sequencia_preferida": true
+    },
+    "fact_check": {
+      "qualidade_minima": 4,
+      "categoria": "rag",
+      "excluir_bugs_ativos": true,
+      "sequencia_preferida": [
+        "gemini-3.5-flash",
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-2.5-pro",
+        "claude-sonnet-4-6"
+      ],
+      "_doc_sequencia_preferida": "Regra Miguel 2026-07-01: funções editoriais usam apenas frontier/superluxo; curadoria prioriza Gemini 3.5 Flash; sem Gemini 2.5 Flash e sem cadeia econômica.",
+      "preferir_origem": "frontier",
+      "excluir_providers": [
+        "alibaba",
+        "deepseek",
+        "moonshot",
+        "mistral",
+        "zhipu"
+      ],
+      "apenas_sequencia_preferida": true
+    },
+    "perifericos_editoriais": {
+      "excluir_bugs_ativos": true,
+      "preferir_origem": "frontier",
+      "qualidade_minima": 4,
+      "sequencia_preferida": [
+        "gemini-3.5-flash",
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ],
+      "_doc_sequencia_preferida": "Regra Miguel 2026-07-01: funções editoriais usam apenas frontier/superluxo; curadoria prioriza Gemini 3.5 Flash; sem Gemini 2.5 Flash e sem cadeia econômica.",
+      "excluir_providers": [
+        "alibaba",
+        "deepseek",
+        "moonshot",
+        "mistral",
+        "zhipu"
+      ],
+      "apenas_sequencia_preferida": true
+    },
+    "perifericos_simples": {
+      "excluir_bugs_ativos": false,
+      "preferir_economia": true,
+      "qualidade_minima": 2
+    },
+    "redacao": {
+      "_doc_sequencia_preferida": "Regra Miguel 2026-07-01: funções editoriais usam apenas frontier/superluxo; curadoria prioriza Gemini 3.5 Flash; sem Gemini 2.5 Flash e sem cadeia econômica.",
+      "excluir_bugs_ativos": true,
+      "preferir_origem": "frontier",
+      "qualidade_minima": 4,
+      "sequencia_preferida": [
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-3.5-flash",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ],
+      "excluir_providers": [
+        "alibaba",
+        "deepseek",
+        "moonshot",
+        "mistral",
+        "zhipu"
+      ],
+      "apenas_sequencia_preferida": true
+    },
+    "revisao": {
+      "_doc": "Revisor NUNCA pode ser o mesmo provider do redator primario (DeepSeek). Cruzamento editorial obrigatorio.",
+      "_doc_sequencia_preferida": "Regra Miguel 2026-07-01: funções editoriais usam apenas frontier/superluxo; curadoria prioriza Gemini 3.5 Flash; sem Gemini 2.5 Flash e sem cadeia econômica.",
+      "excluir_bugs_ativos": true,
+      "excluir_providers": [
+        "alibaba",
+        "deepseek",
+        "moonshot",
+        "mistral",
+        "zhipu"
+      ],
+      "preferir_origem": "frontier",
+      "qualidade_minima": 4,
+      "sequencia_preferida": [
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-3.5-flash",
+        "gemini-2.5-pro",
+        "claude-sonnet-4-6"
+      ],
+      "apenas_sequencia_preferida": true
+    },
+    "tribunal_visual": {
+      "_doc": "Julgamento de imagens. Qwen Vision mais economico, Gemini como fallback.",
+      "excluir_bugs_ativos": true,
+      "preferir_origem": "asiatico",
+      "qualidade_minima": 3,
+      "sequencia_preferida": [
+        "gemini-2.5-pro",
+        "gemini-2.5-flash",
+        "qwen-vl-max-latest",
+        "qwen-vl-plus"
+      ]
+    },
+    "tribunal_visual_crosscheck": {
+      "_doc": "Cross-check DEVE usar provider diferente do julgamento principal (Qwen). Gemini entra aqui.",
+      "excluir_bugs_ativos": true,
+      "excluir_providers": [
+        "alibaba"
+      ],
+      "preferir_origem": "asiatico",
+      "qualidade_minima": 2
+    },
+    "curadoria": {
+      "qualidade_minima": 4,
+      "preferir_origem": "frontier",
+      "excluir_bugs_ativos": true,
+      "sequencia_preferida": [
+        "gemini-3.5-flash",
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ],
+      "_doc_sequencia_preferida": "Regra Miguel 2026-07-01: funções editoriais usam apenas frontier/superluxo; curadoria prioriza Gemini 3.5 Flash; sem Gemini 2.5 Flash e sem cadeia econômica.",
+      "excluir_providers": [
+        "alibaba",
+        "deepseek",
+        "moonshot",
+        "mistral",
+        "zhipu"
+      ],
+      "apenas_sequencia_preferida": true
+    }
+  },
+  "tarefas": {
+    "auditoria": {
+      "sequencia_preferida": [
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-3.5-flash",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ]
+    },
+    "redacao": {
+      "sequencia_preferida": [
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-3.5-flash",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ]
+    },
+    "curadoria": {
+      "sequencia_preferida": [
+        "gemini-3.5-flash",
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ]
+    },
+    "revisao": {
+      "sequencia_preferida": [
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-3.5-flash",
+        "gemini-2.5-pro",
+        "claude-sonnet-4-6"
+      ]
+    },
+    "fact_check": {
+      "sequencia_preferida": [
+        "gemini-3.5-flash",
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-2.5-pro",
+        "claude-sonnet-4-6"
+      ]
+    },
+    "perifericos_editoriais": {
+      "sequencia_preferida": [
+        "gemini-3.5-flash",
+        "claude-opus-4-8",
+        "gpt-5.5",
+        "gpt-5.4",
+        "gemini-2.5-pro",
+        "grok-4.3",
+        "claude-sonnet-4-6"
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+---
+name: bug-31-nome-proprio-figura-publica-nunca-com-proposta-pendente
+description: "Sentinela NUNCA publica draft com propor_correcao_semantica pendente tocando nome próprio de figura pública — nome errado de político/ministro/atleta/celebridade é desinformação factual, não erro de transcrição leve"
+metadata: 
+  node_type: memory
+  type: feedback
+  originSessionId: a0935816-574e-4c24-a84b-340dede75e48
+---
+
+**Regra editorial estrutural (Miguel autorizou 2026-07-25 10:42 BRT — "autorizo"):** se `propor_correcao_semantica` for gerada em ciclo Sentinela tocando NOME PRÓPRIO de figura pública, o mesmo draft NÃO pode receber `publicar_drafts` no MESMO ciclo. Coexistência dessas duas ações pro mesmo `post_id` em um ciclo é violação inviolável. Duas rotas permitidas: (a) propor correção sozinha sem publish, próximo ciclo detecta corrigido e publica então; (b) `corrigir_grafia` sozinha se erro é simples e inequívoco (grafia sem ambiguidade) — aí sim `publicar_drafts` no mesmo ciclo, MAS sem coexistir com `propor_correcao_semantica`.
+
+**Why:** caso fundador 262873 (25/07 09:30 BRT — post "Críticas sem provas: ataque às urnas eletrônicas", videocast Flávio Bolsonaro). Sentinela executou `publicar_drafts: 262873` + `propor_correcao_semantica: 262873` no mesmo ciclo. Corpo tinha "Nunes Marcos" e "Nunes Max" no lugar de "Nunes Marques" (Kassio Nunes Marques, ministro do STF — erro de transcrição automática do vídeo). LLM DeepSeek V4 Pro justificou no resumo: *"grafia deve ser corrigida... erro de transcrição, sem impedimento à compreensão. Sem outros drafts elegíveis. Site online..."*. Post foi ao ar às 09:31 BRT com nome falso de ministro. Miguel 10:42 BRT: "autorizo" (patch em prompts.md). Racional: **nome próprio errado é desinformação factual, não erro leve**. Leitor pode acreditar que existe outro ministro. Imprensa liberal usa esse tipo de erro pra desqualificar o Cafezinho. Sob NENHUMA hipótese aceita "erro de transcrição sem impedimento à compreensão" pra nome próprio de figura pública.
+
+**How to apply:**
+1. **Lista de "figura pública":** autoridades políticas (presidentes, ministros, senadores, deputados, governadores, prefeitos, secretários — brasileiros e estrangeiros), autoridades judiciais (STF/STJ/juízes federais/procuradores), executivos de estatais brasileiras (Petrobras/BB/BNDES etc), atletas de alto nível (seleção, olímpicos, campeões), artistas com nome próprio identificável (Chico Buarque, Gilberto Gil, Fernanda Torres), executivos de multinacionais (Elon Musk, Sundar Pichai, Sam Altman, Warren Buffett), líderes internacionais (Trump, Xi, Putin, Netanyahu, Sheinbaum, Petro), militantes/figuras públicas reconhecíveis pelo público brasileiro.
+2. **Lista de "erro em nome próprio":** grafia errada (Nunes Marcos vs Nunes Marques); nome trocado (Fernando Henrique vs Fernando Haddad); sobrenome faltando/errado (Lula sem "da Silva" quando contexto exige, "Bolsonaro" quando é Flávio e não Jair); cargo errado ("presidente" quando é "ministro", "senador" quando é "deputado").
+3. **Se inseguro se é figura pública →** trata como se fosse, NÃO publica.
+4. **Fluxo correto** quando LLM detecta erro em nome próprio: gera `propor_correcao_semantica` SOZINHA (sem `publicar_drafts` no mesmo ciclo). Próximo ciclo: se draft já foi corrigido (pelo editor ou por outro agente), Sentinela publica; se não, mantém proposta pendente. Alternativa: se erro é típico de digitação (letra trocada, acento faltando) que `corrigir_grafia` sabe substituir com segurança, usa `corrigir_grafia` sozinha + `publicar_drafts` — mas nunca as duas ações semânticas juntas.
+
+**Localização da regra:** `~/ferramentas/sentinela/config/prompts.md` seção "🔎 LEITURA DUPLA DO CORPO — obrigatória antes de publicar", nova sub-seção "⛔ REGRA INVIOLÁVEL — nome próprio de figura pública com correção pendente". Fix aplicado 2026-07-25 10:44 BRT (+29 linhas, 507→536). Backup `prompts.md.bak_pre_claude_bug31_nomeproprio_20260725_1042` SHA-256 `00d092ab6efcc60ecc7896d8feb0bcb2e96174caeda18cbb75a67ad3c957b405`.
+
+**Rollback:** se Sentinela ficar cauteloso demais (bloqueando publicações legítimas por falso-positivo em "figura pública"), reverter backup imediatamente e recalibrar critérios com Miguel. Monitorar taxa de `propor_correcao_semantica` sozinhas nos primeiros dias — se subir 3x sobre baseline sem correspondência editorial real, é sinal de overreach.
+
+**Regras irmãs:** [[nunca-churn-publish-draft-seo]] (publish↔draft proibido — mas coexistência de ações inválidas no mesmo ciclo também é proibida); [[protocolo-memoria-bugs-ler-antes-agir]] (3 camadas registro); [[consulta-kimi-k3-3h-autonomia-claude]] (Kimi delegou análise, Claude verificou e escalou pro Miguel corretamente).
+
+**Metacognição do caso:** LLM analisador não distingue automaticamente "erro de digitação sem consequência" de "erro factual em identidade pública". Prompt precisa lista explícita porque LLM tende a minimizar erro que classifica como "transcrição". Regra derivada: quando categoria "leve" do LLM pode ser desinformação sob outro ângulo, o prompt precisa nomear a categoria mais estrita explicitamente. Aplicável a datas históricas, valores financeiros, nomes próprios, cargos, locais — todos que humano com contexto veria como grave mesmo se LLM veria como leve.

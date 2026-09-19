@@ -1,0 +1,12 @@
+# 263220 backup (sem patch — CIS/Vilnai/tiroteio Tal confirmados 5 fontes)
+# sha: 4962215606a3484bf4ae9df43f9e5dd9643acc7b3812076560ac428944cae8df
+
+<p>Segundo o <a href="https://www.aljazeera.com/news/2026/7/28/israeli-ex-generals-urge-trump-to-push-netanyahu-on-settler-terror" rel="noopener">Al Jazeera</a>, quase 600 ex-generais, diplomatas e oficiais de inteligência israelenses enviaram uma carta a Donald Trump pedindo que ele pressione Netanyahu a conter o que chamam de &quot;terror de colonos&quot; na Cisjordânia ocupada.</p>
+<p>O apelo foi publicado na terça-feira (28) e alerta que a escalada de violência pode &quot;incendiar a região&quot; com consequências graves para a segurança israelense, americana e regional.</p>
+<p>O grupo responsável pela carta, o Commanders for Israel&#x27;s Security, reúne mais de 550 coronéis e generais aposentados do Exército de Israel, além de autoridades do Mossad, Shin Bet, Polícia de Israel e do serviço diplomático.</p>
+<p>Na carta, os ex-oficiais afirmam que &quot;não é segredo&quot; que certos membros do governo israelense &quot;orquestram grande parte desse caos&quot;, protegendo colonos e forças israelenses da fiscalização da lei. Eles escrevem que a &quot;expansão da atividade terrorista de colonos judeus&quot; corre o risco de produzir consequências ainda mais catastróficas que o ataque do Hamas de 7 de outubro de 2023.</p>
+<p>O documento afirma que &quot;a menos que seja detida com rapidez e decisão, a violência crescente na Cisjordânia está prestes a incendiar a região&quot; e traz &quot;sérias repercussões para a segurança israelense e os interesses regionais dos EUA&quot;. Para os signatários, &quot;ninguém além do senhor, Sr. Presidente, pode evitar essa calamidade&quot;.</p>
+<p>A carta foi divulgada dias após pogroms e violência generalizada de colonos israelenses na Cisjordânia, na sequência de um tiroteio na cidade de Tal que matou dois israelenses e quatro palestinos. A analista Nour Odeh afirmou que o documento se alinha a outros alertas do establishment de defesa israelense contra colonos que &quot;tomam a iniciativa&quot; e &quot;dão as ordens&quot; em nome do Exército, colocando até soldados israelenses em risco.</p>
+<p>Netanyahu se encontrará com Trump em Washington nesta terça-feira, em sua sétima visita à Casa Branca. A escalada entre Irã e Estados Unidos está momentaneamente pausada para esforços diplomáticos, tornando o apelo dos ex-generais ainda mais sensível no tabuleiro do Oriente Médio.</p>
+
+<!-- zizi_job_id: v4d_geopolitica_aa4cf4c8b4354a56 -->

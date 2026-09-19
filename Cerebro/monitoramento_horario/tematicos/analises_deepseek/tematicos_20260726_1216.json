@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260726_1216",
+  "ts_brt": "2026-07-26T12:16:48-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260726_1216\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site completamente inacessível (HTTP status 0) durante o ciclo, mas nenhum alerta foi emitido pelo coletor. Último commit data de 4 dias atrás, sugerindo possível falha técnica.\",\n      \"evidencia\": \"http_status: 0, data_max_conteudo_home: null, last_commit_git: af19cb3 2026-07-22T16:08:40-03:00\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"Site offline (status 0) — deveria ter alerta P3 no mínimo\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Verificar motivo de cearadigital.news estar offline; se for falha de deploy ou DNS, acionar equipe técnica.\",\n  \"confianca\": 0.95,\n  \"notas\": \"Demais 7 sites operacionais, frescor do conteúdo ok (publicações do mesmo dia). Apenas ceara_digital apresenta anomalia clara não capturada pelo coletor.\"\n}"
+}

@@ -1,0 +1,2 @@
+
+Adendo de revisão local 2026-09-11T02:51:13.354890-03:00: na proposta de data do 269519, acrescentar vírgula após 2026, fechando o aposto antes de confirma. Versão final privada: /home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-006/proposta_limpa_269519_v2.json. Substitui somente a pontuação da quarta proposta; total permanece 13; zero aplicações. Recibo original imutável preservado.

@@ -1,0 +1,183 @@
+{
+  "ref": "XM-20260905-003",
+  "captured_brt": "2026-09-05T02:20:31.047884-03:00",
+  "anchor": "6b881cc06a230240061439486c5d726ae9a4b9aa",
+  "head_read": "ab36dada5826c8840449886d34ae06c73d02208b",
+  "sources": {
+    "MEMORY.md": {
+      "canonical_bytes": 7251,
+      "canonical_sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "git_bytes": 7251,
+      "git_sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "MONITORAMENTO_DE_TRABALHO.md": {
+      "canonical_bytes": 229618,
+      "canonical_sha256": "3dced43eccd821d9ef90ddc98edf16637b4eed4d163d0166b062b4efff59ccd7",
+      "git_bytes": 228262,
+      "git_sha256": "e72a67f83e4ff5fe47f8f6638221a16f7c0977f8a73ed79ee0df6ab07f025773",
+      "equal": false,
+      "canonical_changed_since_anchor": true,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/inbox_trindade/codex.md": {
+      "canonical_bytes": 11403,
+      "canonical_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "git_bytes": 11403,
+      "git_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/inbox_trindade/zcode.md": {
+      "canonical_bytes": 48590,
+      "canonical_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "git_bytes": 48590,
+      "git_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/inbox_trindade/claude.md": {
+      "canonical_bytes": 35767,
+      "canonical_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "git_bytes": 35767,
+      "git_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/inbox_trindade/grok.md": {
+      "canonical_bytes": 18816,
+      "canonical_sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "git_bytes": 18816,
+      "git_sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/canal_trindade.md": {
+      "canonical_bytes": 34534,
+      "canonical_sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "git_bytes": 34534,
+      "git_sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md": {
+      "canonical_bytes": 652,
+      "canonical_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "git_bytes": 652,
+      "git_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md": {
+      "canonical_bytes": 29441,
+      "canonical_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "git_bytes": 29441,
+      "git_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/ponte_laura_completa/de_laura.md": {
+      "canonical_bytes": 2100827,
+      "canonical_sha256": "5af488047520c82fbca23ed027c8a026085dbf89f9c234b3b8d89eb3e81fce90",
+      "git_bytes": 2100827,
+      "git_sha256": "5af488047520c82fbca23ed027c8a026085dbf89f9c234b3b8d89eb3e81fce90",
+      "equal": true,
+      "canonical_changed_since_anchor": true,
+      "git_changed_since_corrected_anchor": true
+    },
+    "Foruns/ponte_laura_completa/de_dell.md": {
+      "canonical_bytes": 5803193,
+      "canonical_sha256": "937c8903de6a70746f9a4ead850efefc9241c59786f79c9b2583f00aaf89aeb2",
+      "git_bytes": 5803193,
+      "git_sha256": "937c8903de6a70746f9a4ead850efefc9241c59786f79c9b2583f00aaf89aeb2",
+      "equal": true,
+      "canonical_changed_since_anchor": true,
+      "git_changed_since_corrected_anchor": true
+    },
+    "Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "canonical_bytes": 76859,
+      "canonical_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "git_bytes": 76859,
+      "git_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "canonical_bytes": 93356,
+      "canonical_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "git_bytes": 93356,
+      "git_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/ponte_laura_completa/loop_ativo.json": {
+      "canonical_bytes": 154,
+      "canonical_sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14",
+      "git_bytes": 171,
+      "git_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "equal": false,
+      "canonical_changed_since_anchor": true,
+      "git_changed_since_corrected_anchor": false
+    },
+    "Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "canonical_bytes": 12668,
+      "canonical_sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+      "git_bytes": 12668,
+      "git_sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+      "equal": true,
+      "canonical_changed_since_anchor": false,
+      "git_changed_since_corrected_anchor": false
+    }
+  },
+  "http_first_attempt": [
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269085?_fields=id,status,date,featured_media",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269089?_fields=id,status,date,featured_media",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "http_curl_mozilla": [
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269085?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269085,
+        "date": "2026-09-05T00:28:00",
+        "status": "publish",
+        "featured_media": 269082
+      }
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269089?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269089,
+        "date": "2026-09-05T01:38:00",
+        "status": "publish",
+        "featured_media": 269095
+      }
+    }
+  ],
+  "marker": {
+    "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "line": 17468,
+    "introduced_by": "85243ca7e",
+    "confirmed_in_canonical": true
+  },
+  "status_before": "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json\n?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md\n",
+  "pull": "git pull --ff-only origin main: exit 0, Already up to date."
+}

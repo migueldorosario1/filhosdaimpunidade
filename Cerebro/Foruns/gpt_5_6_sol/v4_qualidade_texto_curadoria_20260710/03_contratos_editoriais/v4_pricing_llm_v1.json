@@ -1,0 +1,53 @@
+{
+  "_doc": "Tabela versionada de precos LLM V4 para custo estimado auditavel nos recibos JSONL.",
+  "_version": "2026-07-09-official-deepseek",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "_source": "config/llm_ratings.json + https://api-docs.deepseek.com/quick_start/pricing/",
+  "currency": "USD",
+  "unit": "1M_tokens",
+  "fallback": {
+    "unknown_model_cost_usd_per_1m_input": 0.0,
+    "unknown_model_cost_usd_per_1m_output": 0.0,
+    "pricing_table_version": "pending"
+  },
+  "models": {
+    "gpt-5.5": {
+      "provider": "openai",
+      "input_usd_per_1m": 5.0,
+      "output_usd_per_1m": 30.0,
+      "verified_at": "2026-06-24"
+    },
+    "claude-opus-4-8": {
+      "provider": "anthropic",
+      "input_usd_per_1m": 5.0,
+      "output_usd_per_1m": 25.0,
+      "verified_at": "2026-06-24"
+    },
+    "claude-sonnet-4-6": {
+      "provider": "anthropic",
+      "input_usd_per_1m": 3.0,
+      "output_usd_per_1m": 15.0,
+      "verified_at": "2026-05-18"
+    },
+    "gemini-3.5-flash": {
+      "provider": "gemini",
+      "input_usd_per_1m": 0.075,
+      "output_usd_per_1m": 0.3,
+      "verified_at": "2026-07-01"
+    },
+    "deepseek-v4-pro": {
+      "provider": "deepseek",
+      "input_usd_per_1m": 0.435,
+      "output_usd_per_1m": 0.87,
+      "verified_at": "2026-07-09",
+      "source_url": "https://api-docs.deepseek.com/quick_start/pricing/"
+    },
+    "qwen3-max": {
+      "provider": "alibaba",
+      "input_usd_per_1m": 0.78,
+      "output_usd_per_1m": 3.9,
+      "verified_at": "2026-05-25"
+    }
+  }
+}

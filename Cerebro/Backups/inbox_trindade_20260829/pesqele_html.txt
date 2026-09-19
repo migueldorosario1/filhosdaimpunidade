@@ -1,0 +1,111 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head id="j_id_3"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/css/bootstrap/bootstrap.min.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/css/timeline/timeline.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/css/chart/morris.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/css/base/sepel2.site.base.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/css/base/pesqele.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/css/base/font-awesome.min.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"><link rel="stylesheet" type="text/css" href="/javax.faces.resource/components.css.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0">
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="http://www.tse.jus.br/internet/img/favicon.ico" type="image/x-icon">
+
+		<!-- Força inclusão do jsf.js -->
+
+		<!-- Bootstrap CSS -->
+		<!-- Timeline CSS -->
+		<!-- Morris Charts CSS -->
+		<!-- Cand CSS -->
+		<!-- Custom Fonts --></head><body>
+<div id="j_id_m" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable ui-resizable" role="dialog" aria-describedby="j_id_m_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_id_m_title" style="width: 400px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="j_id_m_title" class="ui-dialog-title">Sessão Expirada!</span></div><div class="ui-dialog-content ui-widget-content" id="j_id_m_content" style="height: 132px;"><form id="formAviso" name="formAviso" method="post" action="/index.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n" enctype="application/x-www-form-urlencoded"><span id="formAviso:groupAviso">
+				<div class="modal-body"><label id="formAviso:j_id_q" class="ui-outputlabel ui-widget">Para continuar é necessário um novo acesso.</label>
+				</div>
+				<div class="modal-footer" style="text-align: center;">
+					<button type="button" class="btn btn-primary" aria-label="Left Align" onclick="window.location.href = ''">
+						<span class="glyphicon glyphicon-ok" aria-hidden="true"></span><img id="formAviso:j_id_s" width="5px;" height="" alt="" src="/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=8.0"><label id="formAviso:j_id_t" class="ui-outputlabel ui-widget">OK</label>
+					</button>
+				</div></span><input type="hidden" name="formAviso_SUBMIT" value="1" style=""><input type="hidden" name="javax.faces.ViewState" id="j_id__v_0:javax.faces.ViewState:1" value="YTA0YjNiZDE4NzliZGEyZDAwMDAwMDAx" autocomplete="off" style=""></form></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div></div><script type="text/javascript" src="/javax.faces.resource/jsf.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=javax.faces"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><div class="ui-dialog-docking-zone"></div>
+<div id="j_id_w" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container ui-draggable ui-resizable" role="dialog" aria-describedby="j_id_w_content" aria-hidden="true" aria-modal="true" aria-labelledby="j_id_w_title" style="width: 300px; height: auto;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span id="j_id_w_title" class="ui-dialog-title"></span></div><div class="ui-dialog-content ui-widget-content" id="j_id_w_content" style="height: 132px;"><span id="groupAviso">
+				<div class="modal-body" align="center"><img id="j_id_z" src="/javax.faces.resource/wait.gif.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=images" alt=""><img id="j_id_10" width="20" height="" alt="" src="/javax.faces.resource/spacer/dot_clear.gif.xhtml?ln=primefaces&amp;v=8.0"><label id="j_id_11" class="ui-outputlabel ui-widget">Por favor, aguarde...</label>
+				</div></span></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div></div>
+
+		<!-- CABEÇALHO -->
+
+	<div id="siteCabecalho" class="navbar navbar-default navbar-fixed-top site-cabecalho">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#siteCabecalhoMenu" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href=""><img id="j_id_18" src="/javax.faces.resource/topo-tse.png.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=images" class="site-cabecalho-logo" alt="Logo do TSE"> 
+						<span class="site-cabecalho-titulo">PesqEle Público</span>
+						<span class="site-cabecalho-titulo-vermelho"></span>
+				</a>
+				<div class="site-versao-nome">3.9.1.0</div>
+			</div>
+			<div id="siteCabecalhoMenu" class="navbar-collapse collapse navbar-default site-background">
+				<ul class="nav navbar-nav navbar-right site-cabecalho-menu">
+					<li><a href="http://www.tse.jus.br/legislacao/compilada/res/2019/resolucao-no-23-600-de-12-de-dezembro-de-2019" target="_blank">Resolução Nº 23.600/2019</a></li>
+				</ul>
+			</div>
+		</div>
+	</div><script type="text/javascript" src="/javax.faces.resource/jsf.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=javax.faces"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script>
+
+		<div id="sitePrincipal" class="container-fluid site-principal">
+			<div id="wrapper">
+				<div id="page-content-wrapper">
+					<!-- CONTEUDO SEM TITULO -->
+		<nav id="siteNavegacao" class="navbar navbar-default site-navegacao  site-cabecalho-sombra">
+            <div class="container-fluid">
+                <div class="site-navegacao-nome">Início</div>
+            </div>            
+        </nav>
+        
+        <div id="sitePrincipal" class="container-fluid site-principal">
+            <!-- MENU -->
+
+        <div id="sitePrincipalMenu" class="navbar-default sidebar site-principal-menu site-principal-menu-sombra" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+		            <li><a href="/app/pesquisa/listar.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n">
+							<i class="fa fa-search fa-fw"></i>
+							Consultar Pesquisas
+						</a>
+					</li>
+		            <li><a href="/app/pesquisa/listarEstatisticos.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n">
+							<i class="fa fa-search fa-fw"></i>
+							Consultar Estatísticos
+						</a>
+					</li>
+		 			<li><a href="/app/pesquisa/validarCodigo.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n">
+							<i class="fa fa-building-o fa-fw"></i>
+							Validação de Código 
+						</a>
+					</li>
+					<li><a href="/app/pesquisa/listar30dias.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n">
+							<i class="fa fa-search fa-fw"></i>
+							Consultar últimas Pesquisas
+						</a>
+					</li>
+                </ul>
+            </div>
+        </div><script type="text/javascript" src="/javax.faces.resource/jsf.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=javax.faces"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script>
+
+            <div id="sitePrincipalConteudo" class="site-principal-conteudo">
+				<!-- Título	-->
+	<div class="row">
+		<div class="area-top clearfix">
+			<div class="pull-left header">
+				<h3 class="title">
+					<!-- <i class="fa fa-search fa-fw" /> Pesqele -->
+					Pesqele
+				</h3>
+			</div>
+		</div>
+	</div>			
+				Selecione uma opção de menu.
+			</div>
+		</div>
+				</div>
+			</div>
+		</div>
+        <div id="siteRodape" class="site-rodape site-rodape-sombra">
+            PesqEle - Sistema de Registro de Pesquisas Eleitorais, Versão: 3.9.1.0, SECINP - Tribunal Superior Eleitoral.
+        </div>
+		<!-- Custom Theme JavaScript -->
+		<!-- Bootstrap JavaScript --><script type="text/javascript" src="/javax.faces.resource/jsf.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=javax.faces"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/core.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/idlemonitor/idlemonitor.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/components.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n?ln=primefaces&amp;v=8.0"></script><script type="text/javascript" src="/javax.faces.resource/js/base/cand.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"></script><script type="text/javascript" src="/javax.faces.resource/js/bootstrap/bootstrap.min.js.xhtml;jsessionid=4gNdsfDDI02C3jvCYcLMT2LJH93MHtDCIWa3zC7n"></script>
+
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div><div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div></body></html>

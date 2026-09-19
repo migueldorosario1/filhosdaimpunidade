@@ -1,0 +1,49 @@
+{
+  "curadoria_id": "cur_63d2d34a351a7e9c",
+  "editoria": "v4_politica_economia",
+  "fatos_travados": [
+    {
+      "fato": "A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.",
+      "fonte_ref": [
+        "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A reportagem registra que Flavio enviou documento ao USTR defendendo adiamento da medida, sob argumento de que a pressao tarifaria fortaleceria Lula.",
+      "fonte_ref": [
+        "https://elpais.com/america/2026-07-07/bolsonaro-hijo-viaja-a-washington-para-intentar-evitar-un-nuevo-castigo-arancelario-que-dane-su-campana.html"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados.",
+      "fonte_ref": [
+        "https://elpais.com/america/2026-07-07/bolsonaro-hijo-viaja-a-washington-para-intentar-evitar-un-nuevo-castigo-arancelario-que-dane-su-campana.html"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+    "entidade_principal": "Flavio Bolsonaro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "item_id": "v4_real_001",
+  "manifesto": {
+    "curadoria_id": "cur_63d2d34a351a7e9c",
+    "external_publish": false,
+    "modo_experimento": "dry_run_ab_261439",
+    "real_wordpress_draft": false,
+    "step": "ab_261439_variant_b"
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de Flavio Bolsonaro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.",
+  "status": "producao_ab_dry_run",
+  "texto_dry_run": "<p>Flávio Bolsonaro foi a Washington tentar conter uma tarifa associada ao campo político que a direita brasileira costuma tratar como aliado. Esse é o ponto que muda a matéria: a pressão de Trump contra produtos brasileiros pode virar custo econômico, reacender a pauta da soberania e entregar a Lula uma bandeira eleitoral que ele sabe usar.</p>\n\n<p>Segundo a Associated Press, a administração Trump voltou a discutir uma tarifa de 25% sobre produtos brasileiros, apesar de os Estados Unidos manterem superávit comercial com o Brasil. Flávio argumentou ao USTR que a pressão tarifária poderia fortalecer Lula. A pergunta editorial, portanto, não é apenas quem venceu a troca de acusações; é por que o próprio bolsonarismo precisou pedir a Washington que não criasse um problema para sua campanha.</p>\n\n<p>A contradição fica mais concreta quando o Pix entra na mesa. O El País registrou que o sistema brasileiro de pagamentos se tornou ponto sensível porque autoridades americanas o veem como concorrente dos meios privados de pagamento. Flávio tenta defender o Pix sem romper com a lógica de acomodação aos EUA, e Lula explora esse flanco como disputa de soberania financeira.</p>\n\n<p>A consequência política é direta: a direita brasileira descobre que alinhamento externo tem custo quando a potência aliada transforma disputa política em tarifa contra o país. Lula tenta ocupar o lugar de defensor do interesse nacional; Flávio tenta impedir que a própria referência internacional da direita entregue esse terreno ao adversário.</p>\n\n<p><strong>Fontes:</strong> <a href=\"https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a\">Associated Press</a> e <a href=\"https://elpais.com/america/2026-07-07/bolsonaro-hijo-viaja-a-washington-para-intentar-evitar-un-nuevo-castigo-arancelario-que-dane-su-campana.html\">El País</a>.</p>",
+  "titulo": "Tarifa dos EUA transforma Trump em problema eleitoral para Flávio Bolsonaro"
+}

@@ -1,0 +1,149 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.. Tese escolhida: Quando os fatos auditados sobre audiovisual brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Audiovisual brasileiro disputa soberania cultural nas plataformas.",
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica",
+    "evidencias_ref": [
+      "fatos_travados:IBGE",
+      "fatos_travados:setor_produtivo"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+    "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+    "tipo": "economica"
+  },
+  "contradicao_central": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+  "curador_modelo": "mock-curador-v4",
+  "curadoria_id": "cur_b08a98f50f33804c",
+  "editoria": "v4_cultura",
+  "fato_novo": "A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.",
+  "fatos_travados": [
+    {
+      "fato": "A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+    "entidade_principal": "audiovisual brasileiro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "9406e75e758f257137866c8615ee5d361c6d5b9f508e8f35e6a6126dfd38a8aa",
+  "item_id": "v4_real_007",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "acervo_local_cultura",
+      "referencias_regulacao_streaming"
+    ],
+    "resumo_consenso": "A leitura corrente reduz streaming a cota ou entretenimento, sem mostrar a disputa por soberania cultural e valor economico.",
+    "timestamp_brt": "2026-07-10T10:45:00-03:00"
+  },
+  "manifesto_curadoria": {
+    "agent": "curador",
+    "contract": "contratos/v4_curadoria_tese_v1.json",
+    "issues": [],
+    "leitura_corrente_timestamped": true,
+    "ok": true,
+    "teses_candidatas": 3
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de audiovisual brasileiro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural. A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras. O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas. O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.",
+    "primary_entity": "audiovisual brasileiro",
+    "source_status": "auditado_fixture",
+    "titulo": "Audiovisual brasileiro disputa soberania cultural nas plataformas"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+      "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando os fatos auditados sobre audiovisual brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-10T12:04:08.814297-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: USTR, setor produtivo",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

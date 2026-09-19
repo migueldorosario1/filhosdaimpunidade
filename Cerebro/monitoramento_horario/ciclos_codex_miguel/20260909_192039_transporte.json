@@ -1,0 +1,57 @@
+{
+  "ref": "XM-20260909-019",
+  "timestamp_brt": "2026-09-09T19:20:48.119672-03:00",
+  "commit": "3a2390d36692c0f9a65b15c93296d403b6772dd0",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_192039_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_192039_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_192039_blocos_removidos.md"
+  ],
+  "push": {
+    "command": "git push origin main",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   9d38fd86f..3a2390d36  main -> main"
+  },
+  "origin_verification": {
+    "command": "git ls-remote origin refs/heads/main",
+    "exit_code": 0,
+    "stdout": "3a2390d36692c0f9a65b15c93296d403b6772dd0\trefs/heads/main",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "nyc": {
+    "timestamp_brt": "2026-09-09T19:19:25.836000-03:00",
+    "command": "git ls-remote nyc refs/heads/main",
+    "exit_code": 0,
+    "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_of_head_rc": 1,
+    "action": "Sem push divergente. Prova só de acesso Git, não valida sincronização."
+  },
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_192039_ronda.md",
+  "transport": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_192039_transporte.json",
+  "prewrite_pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "stdout": "Already up to date.",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD"
+  },
+  "close_timestamp_brt": "2026-09-09T19:21:20.090288-03:00",
+  "closing_pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "stdout": "Already up to date.",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD"
+  },
+  "total_distinct_round_files": 7,
+  "checks": {
+    "utf8_without_bom": true,
+    "append_only_prefix_verified": true,
+    "git_diff_check_exit_code": 0,
+    "selective_staging_verified": true,
+    "rounds": 1
+  }
+}

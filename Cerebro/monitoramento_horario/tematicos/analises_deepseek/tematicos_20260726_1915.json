@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260726_1915",
+  "ts_brt": "2026-07-26T19:15:24-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260726_1915\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou http_status 0 (fora do ar) mas não foi gerado alerta pelo coletor\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"P3 (site inacessível)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar site ceara_digital: http_status 0 sem alerta; verificar possível falha no coletor ou necessidade de configurar alerta.\",\n  \"confianca\": 0.9,\n  \"notas\": \"ceara_digital está fora do ar (http_status 0) mas não gerou alerta. Demais sites normais.\"\n}"
+}

@@ -1,0 +1,38 @@
+# LOG — SIMULAÇÕES da OBRA MOKA (ronda produtiva, 30/08) — 1 linha por simulação
+- 20260830 17:15:31 | SIM 2/8 anti-polucao | OK | lixo e curto REJEITADOS com motivo ✓ (corpo com menos de 200 caracteres | título curto demais)
+- 20260830 17:46:13 | SIM 3/8 round-trip | OK | ERRO round-trip: ,
+- 20260830 17:46:47 | SIM 3/8 round-trip | OK | export→import idêntico (2 objs, Índice fora) ✓
+- 20260830 18:15:45 | SIM 4/8 orcamento | OK | 100k chars → 25k tokens · US$$0.0109 · 5min · marca grande ✓
+- 20260830 18:45:39 | SIM 5/8 busca | OK | busca sem acento = com acento, e inexistente não acha ✓
+- 20260830 19:15:37 | SIM 6/8 contexto-kinds | OK | contexto separa 🎒 bagagem × ⚡ operacional ✓
+- 20260830 19:45:38 | SIM 7/8 i18n-12 | FALHA | FALTANDO: BLOCO pt-BR BLOCO en BLOCO es BLOCO fr BLOCO de BLOCO it BLOCO ru BLOCO zh
+- 20260830 19:45:59 | SIM 7/8 i18n-12 | FALHA | (sem saída)
+- 20260830 19:46:19 | SIM 7/8 i18n-12 | OK | 12 idiomas × 13 chaves da obra: OK ✓
+- 20260830 20:15:52 | SIM 8/8 peso-ousadia | FALHA | LENTO: s ( /=0,098665s /memoria=0,097363s /harness=0,144782s /writer=0,102320s)
+- 20260830 20:16:12 | SIM 8/8 peso-ousadia | FALHA | LENTO: s ( /=0,083079s /memoria=0,086721s /harness=0,113374s /writer=0,130316s)
+- 20260830 20:16:55 | SIM 8/8 peso-ousadia | OK | 4 páginas carregam em 0.48881600000000003s total ( /=0.179185s /memoria=0.078686s /harness=0.117129s /writer=0.113816s) ✓
+- 20260830 20:46:09 | SIM 2/8 anti-polucao | OK | lixo e curto REJEITADOS com motivo ✓ (corpo com menos de 200 caracteres | título curto demais)
+- 20260830 21:15:50 | SIM 3/8 round-trip | OK | export→import idêntico (2 objs, Índice fora) ✓
+- 20260830 21:45:44 | SIM 4/8 orcamento | OK | 100k chars → 25k tokens · US$$0.0109 · 5min · marca grande ✓
+- 20260830 22:15:51 | SIM 5/8 busca | OK | busca sem acento = com acento, e inexistente não acha ✓
+- 20260830 22:45:35 | SIM 6/8 contexto-kinds | OK | contexto separa 🎒 bagagem × ⚡ operacional ✓
+- 20260830 23:15:29 | SIM 7/8 i18n-12 | OK | 12 idiomas × 13 chaves da obra: OK ✓
+- 20260830 23:45:31 | SIM 8/8 peso-ousadia | OK | 4 páginas carregam em 0.417975s total ( /=0.089510s /memoria=0.079814s /harness=0.109706s /writer=0.138945s) ✓
+- 20260831 00:15:40 | SIM 9/8 matchprice | OK | 7 famílias de modelo casam no ranking de preços ✓
+- 20260831 00:45:36 | SIM 1/8 anti-polucao | OK | lixo e curto REJEITADOS com motivo ✓ (corpo com menos de 200 caracteres | título curto demais)
+- 20260831 01:15:34 | SIM 2/8 round-trip | OK | export→import idêntico (2 objs, Índice fora) ✓
+- 20260831 01:45:39 | SIM 3/8 orcamento | OK | 100k chars → 25k tokens · US$$0.0109 · 5min · marca grande ✓
+- 20260831 02:15:45 | SIM 4/8 busca | OK | busca sem acento = com acento, e inexistente não acha ✓
+- 20260831 02:45:38 | SIM 5/8 contexto-kinds | OK | contexto separa 🎒 bagagem × ⚡ operacional ✓
+- 20260831 03:15:43 | SIM 6/8 i18n-12 | OK | 12 idiomas × 13 chaves da obra: OK ✓
+- 20260831 03:45:45 | SIM 7/8 peso-ousadia | OK | 4 páginas carregam em 0.51935s total ( /=0.120124s /memoria=0.093758s /harness=0.190193s /writer=0.115275s) ✓
+- 20260831 04:16:10 | SIM 8/8 matchprice | OK | 7 famílias de modelo casam no ranking de preços ✓
+- 20260831 04:45:31 | SIM 1/8 anti-polucao | OK | lixo e curto REJEITADOS com motivo ✓ (corpo com menos de 200 caracteres | título curto demais)
+- 20260831 05:15:32 | SIM 2/8 round-trip | OK | export→import idêntico (2 objs, Índice fora) ✓
+- 20260831 05:45:32 | SIM 3/8 orcamento | OK | 100k chars → 25k tokens · US$$0.0109 · 5min · marca grande ✓
+- 20260831 06:15:56 | SIM 4/8 busca | OK | busca sem acento = com acento, e inexistente não acha ✓
+- 20260831 06:45:34 | SIM 5/8 contexto-kinds | OK | contexto separa 🎒 bagagem × ⚡ operacional ✓
+- 20260831 07:15:33 | SIM 6/8 i18n-12 | OK | 12 idiomas × 13 chaves da obra: OK ✓
+- 20260831 07:45:37 | SIM 7/8 peso-ousadia | OK | 4 páginas carregam em 0.416574s total ( /=0.079511s /memoria=0.064199s /harness=0.119494s /writer=0.153370s) ✓
+- 20260831 08:15:54 | SIM 8/8 matchprice | OK | 7 famílias de modelo casam no ranking de preços ✓
+- 20260831 23:23:40 | SIM 1/8 anti-polucao | OK | lixo e curto REJEITADOS com motivo ✓ (corpo com menos de 200 caracteres | título curto demais)

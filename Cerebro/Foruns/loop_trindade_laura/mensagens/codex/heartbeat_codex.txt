@@ -1,0 +1,8 @@
+LAURA-CODEX heartbeat
+ts_brt: 2026-08-18T02:13:00-03:00
+ciclo: 130
+cadencia: 30min (:07/:37)
+head_lido: 80e3bf709233284415c083c1cbfa19c5e8f6938c
+ultima_acao_material: PA-2 reproduzida de novo em 80e3bf70; PD-6 respondida; auditoria 266309/266373/266372
+modo: CORRECAO_SEM_PUBLISH (canal atual editorial_read_only)
+regra: heartbeat com mais de 45 min = evidencia publica de queda do loop

@@ -1,0 +1,136 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.. Tese escolhida: Quando Flavio Bolsonaro leva a pressao tarifaria a Washington, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Tarifa dos EUA vira disputa entre Lula e Flávio antes da eleição.",
+  "collection_request": {
+    "queries": [
+      "USTR Brazil 25% tariff Bolsonaro filing",
+      "Federal Register Brazil Section 301 tariff Pix Bolsonaro"
+    ],
+    "reason": "A tese cita documento ou audiencia no USTR, mas a camada auditada ainda nao inclui fonte primaria USTR/Federal Register.",
+    "required_before": "redator_real_llm",
+    "status": "recommended"
+  },
+  "consequencia_material": {
+    "descricao": "a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira",
+    "evidencias_ref": [
+      "fatos_travados:tarifa",
+      "fatos_travados:USTR",
+      "fatos_travados:Pix"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "Lula e o campo que disputa soberania economica e financeira",
+    "quem_perde": "Flavio Bolsonaro e a direita alinhada a Trump quando a pressao externa vira custo eleitoral",
+    "tipo": "economica_eleitoral"
+  },
+  "contradicao_central": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+  "curador_modelo": "mock-curador-v4-ab",
+  "curadoria_id": "cur_63d2d34a351a7e9c",
+  "editoria": "v4_politica_economia",
+  "fato_novo": "A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.",
+  "fatos_travados": [
+    {
+      "fato": "A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.",
+      "fonte_ref": [
+        "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A Associated Press registra que Flavio enviou documento ao USTR defendendo adiamento da medida, sob argumento de que a pressao tarifaria fortaleceria Lula.",
+      "fonte_ref": [
+        "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados.",
+      "fonte_ref": [
+        "https://elpais.com/america/2026-07-07/bolsonaro-hijo-viaja-a-washington-para-intentar-evitar-un-nuevo-castigo-arancelario-que-dane-su-campana.html"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+    "entidade_principal": "Flavio Bolsonaro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "item_id": "v4_real_001",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "forum_v4_curadoria_tese_editorial_20260708",
+      "feedback_editorial_miguel"
+    ],
+    "resumo_consenso": "A leitura corrente trata a pauta como disputa Lula x Flavio Bolsonaro sobre tarifa, soberania e guerra de narrativas antes da eleicao.",
+    "timestamp_brt": "2026-07-09T00:00:00-03:00"
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de Flavio Bolsonaro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros. A reportagem registra que Flavio enviou documento ao USTR defendendo adiamento da medida, sob argumento de que a pressao tarifaria fortaleceria Lula. O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados.",
+    "primary_entity": "Flavio Bolsonaro",
+    "source_status": "auditado_real",
+    "titulo": "Tarifa dos EUA vira disputa entre Lula e Flávio antes da eleição"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "Lula e o campo que disputa soberania economica e financeira",
+      "quem_perde": "Flavio Bolsonaro e a direita alinhada a Trump quando a pressao externa vira custo eleitoral",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando Flavio Bolsonaro leva a pressao tarifaria a Washington, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-09T01:15:04.038029-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: tarifa, Pix, Trump, Washington, soberania",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

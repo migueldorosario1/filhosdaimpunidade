@@ -1,0 +1,14 @@
+# 263240 backup — Mpf→MPF + REVISTAFORUM→Revista Fórum
+
+<p><em>Ministério Público Federal identifica brecha que permite registro de embarcações de garimpo sem licença e pressiona Marinha a agir em nove estados da Amazônia Legal, sob ameaça de ação judicial.</em></p>
+<p>Segundo o <a href="https://revistaforum.com.br/meio-ambiente-e-sustentabilidade/mpf-marinha-fiscalizacao-garimpo-amazonia" rel="noopener">REVISTAFORUM</a>, o Ministério Público Federal deu à Marinha do Brasil 60 dias para fechar uma brecha que alimenta o garimpo ilegal na Amazônia: dragas e balsas conseguem registro na autoridade marítima sem apresentar licença ambiental ou título da Agência Nacional de Mineração.</p>
+<p>A recomendação foi emitida pelo 2º Ofício da Amazônia Ocidental e abrange nove estados da Amazônia Legal: Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Rondônia, Roraima e Tocantins.</p>
+<p>A Marinha não se manifestou oficialmente sobre as exigências.</p>
+<p>O MPF exige que licença ambiental e título da Agência Nacional de Mineração se tornem condições obrigatórias para autorizar a operação de qualquer draga ou balsa. O pacote inclui o uso de registros fotográficos, vídeos, relatórios de inteligência e dados de geolocalização por satélite como prova para responsabilizar proprietários, mesmo quando as embarcações forem destruídas em operações de fiscalização.</p>
+<p>Outra frente prevista é a intensificação de inspeções em oficinas e estaleiros onde dragas e balsas são construídas ou reformadas, para impedir que embarcações clandestinas entrem em operação antes do registro. O MPF também recomenda tornar obrigatório o uso de rastreadores via satélite nas dragas que operam na região.</p>
+<p>A recomendação propõe o compartilhamento de dados com o Centro Gestor e Operacional do Sistema de Proteção da Amazônia para identificar embarcações que desligam intencionalmente seus sistemas de localização ao se aproximar de áreas de garimpo.</p>
+<p>A ação do MPF ocorre em meio a denúncias graves vindas do interior de Roraima. Lideranças indígenas relataram, ao longo de 2025, que garimpeiros ilegais têm devastado a Terra Indígena Raposa Serra do Sol com uso de explosivos e submetido jovens das comunidades a condições análogas à escravidão. As comunidades mais atingidas são Napoleão, Tarame, Raposa I e Raposa II, no município de Normandia, e Urucá, em Uiramutã.</p>
+<p>A Raposa Serra do Sol é a segunda maior terra indígena do Brasil em população, com mais de 26 mil indígenas de diversos povos, conforme o Censo de 2022 do IBGE. O território foi demarcado pelo Supremo Tribunal Federal e segue sendo alvo sistemático do garimpo ilegal.</p>
+<p>O prazo de 60 dias foi estabelecido sob ameaça de medidas judiciais caso a Marinha não inicie as ações recomendadas.</p>
+
+<!-- zizi_job_id: v4d_nacional_23ea7a5b8bca42e7 -->

@@ -1,0 +1,132 @@
+{
+  "ref": "XM-20260910-028",
+  "commit": "af6ed5f139afbcb64ef7ce4eaed84578006b8048",
+  "started_at": "2026-09-10T14:53:46.102627-03:00",
+  "attempts": [
+    {
+      "command": [
+        "git",
+        "push",
+        "origin",
+        "main"
+      ],
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   7a23a11ac..af6ed5f13  main -> main\n",
+      "observed_at": "2026-09-10T14:53:54.495532-03:00"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "rc": 0,
+      "stdout": "af6ed5f139afbcb64ef7ce4eaed84578006b8048\trefs/heads/main\n",
+      "stderr": "",
+      "observed_at": "2026-09-10T14:53:59.895934-03:00"
+    },
+    {
+      "command": [
+        "git",
+        "push",
+        "nyc",
+        "main"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            main -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "observed_at": "2026-09-10T14:54:07.438828-03:00"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "nyc",
+        "refs/heads/main"
+      ],
+      "rc": 0,
+      "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+      "observed_at": "2026-09-10T14:54:14.827446-03:00"
+    }
+  ],
+  "finished_at": "2026-09-10T14:54:14.828087-03:00",
+  "concurrent_delta": {
+    "commit": "db6710b8187638f91e75ee5b6c6ebdb82bcc24ae",
+    "paths": [
+      "cerebro/Foruns/forum_marketing_moka_20260903.md",
+      "cerebro/MONITORAMENTO_DE_TRABALHO.md"
+    ],
+    "classification": "marketing; fora do escopo; ponte e normas sem delta; sem alterar registros do ZM"
+  },
+  "closed_at": "2026-09-10T14:55:40.824709-03:00",
+  "result": "ENTREGA_GITHUB_CONFIRMADA_NYC_NON_FAST_FORWARD",
+  "rounds_executed": 1,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "verification": {
+    "verified_at": "2026-09-10T14:54:21.747745-03:00",
+    "commit": "af6ed5f139afbcb64ef7ce4eaed84578006b8048",
+    "files": [
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "bytes": 1458257,
+        "sha256": "a38a1fab7979a91bd83916e2079fb7c546eb1a13ff279f5d00004a685abee2c2",
+        "matches_committed_blob": true
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "bytes": 131604,
+        "sha256": "797d35c65377f65d4111909adb38a4ae479142a7334adc5df48a7e56e7772442",
+        "matches_committed_blob": true
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+        "bytes": 119631,
+        "sha256": "c4f583f710d5ccb1b0bea1e8e88463f65e9164f575077c4598f8763642aa5e3f",
+        "matches_committed_blob": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_145319_ronda.md",
+        "bytes": 4892,
+        "sha256": "3c774ad415dd214e6f1e954c6f0bc8bf85d4168c34b096cbedacbf6b95e35cc1",
+        "matches_committed_blob": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_145319_evidencias.json",
+        "bytes": 113842,
+        "sha256": "fa5be92a5fb537118240f16369df408e942f175d2f4f4e896a918f39933d0d7f",
+        "matches_committed_blob": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_145319_integridade.json",
+        "bytes": 2946,
+        "sha256": "f5a029b91649debc89659559b3d1988468cf1741eb0b70bf5985e93593ae358f",
+        "matches_committed_blob": true
+      }
+    ],
+    "still_zero": {
+      "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md": true,
+      "projeto_cafezinho_agentes/foruns/canal_trindade.md": true
+    },
+    "index_clean": true
+  },
+  "prewrite_retry": {
+    "first": {
+      "command": [
+        "git",
+        "pull",
+        "--ff-only",
+        "origin",
+        "main"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "fatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n"
+    },
+    "note": "Primeira conexão SSH interrompida sem resposta, antes de qualquer escrita; retentativa limitada por ConnectTimeout concluiu pull RC0. Não é prova de perda de credencial."
+  },
+  "prohibited_actions_executed": [],
+  "helper_not_run": "rebase/autostash e cópia de terceiros; prevaleceu ff-only e transporte seletivo"
+}

@@ -1,0 +1,27 @@
+{
+  "conteudo": "A Pesquisa Industrial Anual Produto 2024 do IBGE registrou receita liquida de vendas de cerca de R$ 5,3 trilhoes na industria brasileira, distribuida em aproximadamente 3,4 mil produtos e servicos industriais. Oleos brutos de petroleo lideraram o ranking pelo terceiro ano seguido, com R$ 278,2 bilhoes e 5,3% do total nacional. Minerios de ferro ficaram em segundo lugar, com R$ 159,5 bilhoes e 3,0%, seguidos por oleo diesel, com R$ 149,8 bilhoes e 2,8%. Os dez principais produtos responderam por 20,9% da receita industrial. O Sudeste concentrou 55,3% da receita, o Sul 20,5%, o Nordeste 9,8%, o Norte 7,4% e o Centro-Oeste 6,9%. O material estruturado pelo Cafezinho aponta a contradicao economica: parte relevante da industria medida em receita e sustentada por extracao, combustiveis e commodities, o que recoloca o debate sobre setor produtivo, reprimarizacao e valor agregado.",
+  "editoria": "v4_politica_economia",
+  "fonte": "IBGE PIA-Produto 2024 estruturado localmente",
+  "fontes": [
+    "scratch/pauta_pesquisa_industrial_anual_2024.md",
+    "IBGE Pesquisa Industrial Anual Produto 2024"
+  ],
+  "item_id": "v4_real_004",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "IBGE",
+      "acervo_local_cafezinho"
+    ],
+    "resumo_consenso": "A leitura corrente tende a destacar o ranking de produtos industriais e a concentracao regional, sem transformar o dado em tese sobre reprimarizacao e valor agregado.",
+    "timestamp_brt": "2026-07-10T00:10:00-03:00"
+  },
+  "manifesto_auditoria": {
+    "fonte_validada": true,
+    "qualidade_minima": true,
+    "risco_juridico_revisado": true
+  },
+  "primary_entity": "setor produtivo brasileiro",
+  "status": "auditado_local_preliminar",
+  "titulo": "IBGE mostra uma indústria bilionária ainda presa a commodities"
+}

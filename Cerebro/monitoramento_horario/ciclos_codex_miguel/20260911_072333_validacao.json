@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-11T07:24:14.474961-03:00",
+  "status": "PASS",
+  "checks_count": 405,
+  "summary": [
+    "Snapshots e cursores históricos conferidos; deltas novos, sem releitura de backlog.",
+    "12 normativos por hash; três appends próprios sem exclusão.",
+    "Três versões/backups e campos protegidos iguais; três páginas completas HTTP 200.",
+    "19 propostas exatas privadas, zero aplicação; conteúdo proposto separado e conferido.",
+    "Sete future atuais/capas/eventos únicos nos timestamps esperados; oito anteriores explicados pelo 269770.",
+    "Sticky reproduzido; 500 AMP correlacionado por tempo/caminho, zero RedisException nesta janela.",
+    "Holds e proibições preservados; transporte institucional pendente."
+  ],
+  "artifact_sha256": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": "14e8042175f8ed222a68c56abca1250720a07040d8e2c863afabcbb2c62396b9",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "e728d7bf28a0805adcb38273494141871a7e3054884d6b80399580b181c4923d",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "f706e1dbf966bcb5b0053eb91b9237e16b789a83c9f6c54636f996889dcc2ebd",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_ronda.md": "59b1329ebb131a39cb3703ab3d51938abea79f66ac6fb937060eddead87cfd9a",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_evidencias.json": "13b2d9c32f51d88053434f3c68d258f8b46f20646ca6dfe54344434fa51f78b8",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_verificacao.json": "5b61991963d0431ee016450fdf541eac06f00d6da80433144ec42a7b0d6da76c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_editorial.md": "1a4350b204b1943b7b9550b47143cad3eb6f104084b6e3985bf60055ce7c6b3d",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_transporte.json": "4ba33f67a167059e93367b0cb625a9bd61c2025be454fabfae25039eea04829e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_encaminhamento_pendente.md": "526ec83cc197c3aaee57b1459a016d7e5b1a0d5c6e5b1848bb5e514ec2236ad9"
+  }
+}

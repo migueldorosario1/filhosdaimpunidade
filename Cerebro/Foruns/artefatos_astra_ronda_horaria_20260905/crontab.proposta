@@ -1,0 +1,3 @@
+# PREPARADO, NÃO INSTALADO. Só descomentar após revisão DS-N + ZM registrada.
+# Fuso do cron do Dell já verificado: America/Sao_Paulo. Não trocar CRON_TZ global.
+# 0 0,8-23 * * * /home/migueldorosario/.pyenv/versions/3.10.13/bin/python3 "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/ronda_horaria/runner.py" --config "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/ronda_horaria/config.json" run # ASTRA_RONDA_HORARIA_20260905

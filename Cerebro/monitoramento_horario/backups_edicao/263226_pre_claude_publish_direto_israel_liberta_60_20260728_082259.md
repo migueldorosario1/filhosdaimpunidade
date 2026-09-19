@@ -1,0 +1,15 @@
+# 263226 backup (sem patch)
+# sha: 5a415a1ad37602a2078dff99ff81566f83d4fa4ebc45d138068c9a99db2ac43e
+
+<p>Sessenta palestinos detidos por Israel foram devolvidos a Gaza na segunda-feira (27) em estado grave: desnutridos, feridos e, muitos deles, incapazes de andar.</p>
+<p>Eles chegaram ao Hospital Nasser, em Khan Younis, transportados por equipes do Comitê Internacional da Cruz Vermelha, com sinais visíveis de lesões e colapso físico.</p>
+<p>É a maior libertação de prisioneiros desde o início do cessar-fogo em janeiro de 2025, segundo a <a href="https://www.aljazeera.com/news/2026/7/28/sixty-palestinians-detained-by-israel-return-to-gaza-describe-abuses" rel="noopener">Al Jazeera</a>.</p>
+<p>Os homens estavam entre cerca de 1.300 residentes de Gaza detidos por Israel sob a acusação de serem &quot;combatentes ilegais&quot;, conforme dados do grupo israelense HaMoked. A ONU e organizações de direitos humanos classificam as ações de Israel contra a população palestina como genocídio.</p>
+<p>O correspondente da Al Jazeera em Gaza, Moath al-Kahlout, afirmou que os libertados eram trabalhadores que atuavam em territórios palestinos ocupados por Israel antes de 7 de outubro de 2023. Ele acrescentou que o bloqueio israelense tornará a recuperação ainda mais difícil: os ex-detentos precisam urgentemente de comida e abrigo.</p>
+<p>Abdullah Kilani, preso em dezembro de 2024 na rua Salah al-Din, no centro de Gaza, disse à agência Anadolu que ficou detido por mais de 18 meses e foi baleado junto com outro detento. &quot;As condições eram extremamente duras. Ainda não acredito que estou livre&quot;, declarou.</p>
+<p>Outro ex-detento, identificado como Abu Ibrahim, contou que os prisioneiros eram obrigados a permanecer sentados sobre concreto nu ou placas de ferro. Ele foi ferido ao ser espancado com coronhadas de fuzil pelos guardas. &quot;Não havia distinção entre jovens e idosos&quot;, afirmou.</p>
+<p>Mohammed Jabr al-Majdalawi, 43 anos, disse que passou um ano e nove meses preso e só soube da libertação ao encontrar a equipe da Cruz Vermelha. &quot;Estou chorando porque sofremos demais. Palavras não descrevem o que passamos&quot;, declarou, pedindo que organismos internacionais ajam para proteger os que ainda estão detidos.</p>
+<p>Os homens passaram pelas prisões de Ofer, Negev e Sde Teiman, instalações que grupos de direitos humanos palestinos e israelenses descrevem como parte de um sistema de tortura sistemática. Batidas frequentes, negligência médica, privação de alimentos e contenção prolongada são práticas documentadas nesses locais.</p>
+<p>Uma comissão de inquérito da ONU informou no mês passado que crianças palestinas presas por Israel foram submetidas a tortura, abuso sexual e outras formas de maus-tratos. O Comitê Internacional da Cruz Vermelha declarou não ter acesso a palestinos detidos desde outubro de 2023 e reiterou o pedido para localizá-los e inspecionar as condições de encarceramento. Ao todo, cerca de 9.600 palestinos seguem presos por Israel, incluindo crianças.</p>
+
+<!-- zizi_job_id: v4d_geopolitica_5c6b6f7b27fc49d7 -->

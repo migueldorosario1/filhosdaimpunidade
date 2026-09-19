@@ -1,0 +1,10 @@
+# LOG RONDA DE TESTES ZCODE-MOKA (2/2h) — 1 linha por ronda
+- 20260830 15:32:49 | teste 2/8 (memoria) | OK | HTTP 200 | revisor: AGY (Antigravity)
+- 20260830 18:15:36 | teste 3/8 (harness) | FALHA | HTTP 200 mas padrão 'Converse com sua memória' NÃO encontrado no HTML | revisor: DSC (DS Celular)
+- 20260830 20:15:44 | teste 4/8 (writer) | OK | HTTP 200 | revisor: CL (Claude Laura)
+- 20260830 22:15:44 | teste 5/8 (familia) | OK | HTTP 200 | revisor: DS-N (DS Nuvem)
+- 20260831 00:15:33 | teste 6/8 (memoria-bib) | FALHA | HTTP 200 mas padrão 'Importar da biblioteca' NÃO encontrado no HTML | revisor: AGY (Antigravity)
+- 20260831 02:15:37 | teste 7/8 (ajuda-telemetria) | OK | HTTP 200 | revisor: DSC (DS Celular)
+- 20260831 04:15:47 | teste 8/8 (velocidade) | OK | 0,094174s | revisor: CL (Claude Laura)
+- 20260831 06:15:33 | teste 1/8 (estante) | OK | HTTP 200 | revisor: DS-N (DS Nuvem)
+- 20260831 08:15:33 | teste 2/8 (memoria) | OK | HTTP 200 | revisor: AGY (Antigravity)

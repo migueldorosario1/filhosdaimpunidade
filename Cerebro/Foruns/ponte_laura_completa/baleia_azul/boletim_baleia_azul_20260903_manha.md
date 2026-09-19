@@ -1,0 +1,17 @@
+# Boletim Baleia Azul — 03/09/2026 (manhã)
+
+Miguel e Gabriel,
+
+a manhã de quinta-feira chegou com uma assinatura que mexe no tabuleiro do Oriente Médio e com o caso Master trocando a fase das revelações pela fase das brigas institucionais. O Cafezinho abriu o dia com a Organização de Xangai no centro do jogo.
+
+**"Organização de Xangai condena guerra contra o Irã com a assinatura da Índia"** (06:07) — a declaração de Bishkek saiu assinada por Xi Jinping, Vladimir Putin, Narendra Modi e Masoud Pezeshkian: o bloco condena os ataques ao Irã, defende o direito nuclear iraniano e rejeita sanções unilaterais. O que tira a matéria do lugar-comum é a assinatura indiana: a Índia é aliada histórica dos Estados Unidos e de Israel, dois atores centrais na pressão contra Teerã — e mesmo assim aderiu ao texto. Três horas antes, o mesmo bloco aparecia em outra cena: **"Índia e Rússia discutem criar banco de desenvolvimento do bloco de Xangai"** (03:17). Nova Délhi senta na mesa que condena a guerra e na mesa que constrói a alternativa financeira ao Ocidente — raramente os dois papéis ficaram tão visíveis num único dia.
+
+O caso Master, que o site acompanha desde março, acordou em outra fase. **"Mendonça diz que Vorcaro depôs sem a PF e não citou Moraes"** (00:48): André Mendonça, do Supremo, explicou que a presença do Ministério Público era obrigatória no depoimento do ex-banqueiro Daniel Vorcaro — e a da Polícia Federal, não. A oitiva corre sob sigilo, com a defesa alegando intimidações graves. Cinco horas depois, o atrito entre instituições veio a público: **"Advocacia-Geral diz à PF que cautela evitou anular os inquéritos do Master"** (05:17) — a cúpula da PF acusa a AGU de omissão na crise com Mendonça, e o órgão de Jorge Messias responde que rejeitou medidas capazes de derrubar as investigações e de entregar às defesas a anulação das provas. Duas instituições do Estado discutindo em voz alta quem protegeu o quê — o capítulo de hoje não é sobre o dinheiro, é sobre a investigação sobreviver.
+
+No mercado, o dia tem gosto de açúcar. **"Açúcar bruto atinge maior preço em 16 meses"** (06:41) — o contrato em Nova York alcançou 18,77 centavos de dólar por libra, puxado por dois ponteiros: a Índia, maior consumidora do mundo, pedindo a antecipação da colheita de canaviais ainda imaturos (cana verde rende menos e aperta a oferta global), e o volume de chuva acumulado em Ribeirão Preto, coração do maior polo produtor do planeta, capaz de parar a colheita a qualquer momento. No instante do fechamento, o topo do site era a Coreia: **"Kim Jong Un vincula ensino de 12 anos ao desenvolvimento nacional"** (07:02) — Pyongyang apostando em formar a própria geração técnica.
+
+Foram 14 matérias no ar desde a meia-noite, todas no minuto; a sequência pontual da esteira segue de pé. A fila do dia: Lula (07:37), Chevron e Eni na Venezuela (07:58), Augusto Cury (08:27), Goethe (09:07), Flávio (09:37), Palmeiras (09:58) e Uber na Nigéria (10:18). A audiência abriu acima do pulso habitual: 617 leitores distintos na manhã, 68 online no fechamento. No financeiro da casa, saiu o relatório diário de ontem: US$ 15,12 reais de consumo, âncora de US$ 9,17, 336 chamadas. O serviço novo de Investimento faz o primeiro ciclo às 14:00 no espelho (nada no site principal) — aviso assim que subir. O bug de sincronização não recorreu desde as 06:22; a decisão sobre o interruptor de segurança segue com você.
+
+Até a edição da tarde — fechamento 19:15.
+
+— DS Nuvem Chefe (DS-N Chefe), editor titular da Baleia Azul · 03/09/2026 07:39 BRT

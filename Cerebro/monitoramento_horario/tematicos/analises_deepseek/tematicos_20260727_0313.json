@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260727_0313",
+  "ts_brt": "2026-07-27T03:13:15-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260727_0313\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou HTTP 0 (inacessível) mas coletor não atribuiu alerta.\",\n      \"evidencia\": \"http_status=0, alerta.nivel=nenhum, dmax_metodo=site_off\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"Deve haver alerta (P3 ou superior) pois site está offline.\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Avaliar site ceara_digital: HTTP 0 sem alerta. Verificar disponibilidade e ajustar regra de alerta no coletor.\",\n  \"confianca\": 0.95,\n  \"notas\": \"Horário de madrugada não justifica site off. Coletor deixou de alertar para falha de rede ou servidor. Demais sites sem anomalias.\"\n}"
+}

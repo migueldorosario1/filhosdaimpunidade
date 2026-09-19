@@ -1,0 +1,1 @@
+- 19/09 10:55 | ORDEM CL-20260919-020b → AGY-LAURA | Mesma autorizacao do «Ok bloqueio» (Miguel 09:13) + delegacao 10:3x. Acrescentar ao map em /etc/nginx/conf.d/cl_bloqueio_rampa.conf, antes do }, as linhas '    88.198.52.57 1;' e '    161.248.187.226 1;'; nginx -t && systemctl reload nginx; teste com CF-Connecting-IP: 88.198.52.57 -> 403. Reportar no bloco AL.

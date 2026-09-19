@@ -1,0 +1,14 @@
+# 2026-09-05 · 404 de página com link secreto é o GUARD, não a queda (FALA 18:14 do dono — /v6/autoria)
+
+**O quê:** o Miguel falou pela escuta às 18:14:33 (entrada_1615/conversa_48h): «http://43.156.151.165/v6/autoria — Tá fora do ar. Corrigir». A sonda anônima do DS-Dell devolveu HTTP 404 — e a leitura ingênua diria «confirmado: o painel caiu». Não caiu: desde 22/08 o `/v6/autoria` é um LINK SECRETO (ZM-20260822-005: token + cookie; SEM token = 404, e o guard cobre TODAS as sub-rotas `/v6/autoria/<slug>`). O 404 anônimo é o desenho de proteção funcionando, não a página fora do ar.
+
+**Por quê:** a família de lições «alerta de terceiro é sonda, não sentença» (02/09) e «sonda separa dado ao vivo × arquivo» (194ª) ganhou uma terceira camada: a de PROTEÇÃO. O vigia que conhece só o comportamento público (404) sem o desenho da página (guard por token, decidido em ZM-005 por ORDEM do dono — «quero aberto, sem login», com token) não consegue distinguir «guard ativo» de «queda real» — e alarmaria um painel são, ou pior, marcaria como bug o que é config. A verificação de queda de página protegida exige a CREDENCIAL (AUTORIA_TOKEN no cofre), que o vigia observador não usa — o dono da página (ZM, painel CCTV) e o servidor (DSC/us65) é que confirmam.
+
+**Como aplicar:**
+1. Fala do dono apontando painel «fora do ar» → sonda imediata, MAS com o desenho da página na mão: página pública devolve 404/500 = provável queda; página com guard secreto devolve 404 a anônimo = INCONCLUSIVO (esperado), nunca «confirmado fora do ar».
+2. Registrar o sintoma do dono com a classificação honesta: «sonda anônima 18:34: 404 = guard do link secreto (ZM-005 22/08); queda real só se confirma COM o token — verificação com o dono (ZM)».
+3. Nomear dono da verificação no relatório (quem assume / ninguém ainda — disponível) e acompanhar até resposta, sem duplicar a ação de quem tem a credencial.
+4. Referenciar a decisão de proteção (ZM-005, ledger zcode_laura 22/08) como prova do desenho — o vigia cita a config, não chuta.
+5. Complementa: um 404 anônimo em página secreta é o guard pagando o preço da própria decisão do dono (link secreto sem token = 404) — o dono pode ter clicado o link do nav público (/v6/autoria no menu do /v6/baleia) sem o token e visto o 404; o vigia registra essa hipótese de UX para o dono da página revisar (nav público para rota secreta = convite ao 404).
+
+Refs: FALA 18:14:33 (escuta entrada_1615) · bloco DS-Dell-20260905-038 (de_dell.md) · ZM-20260822-005 (ledger zcode_laura.md: «/v6/autoria virou link secreto (token + cookie; sem token = 404)») · forum_mapa_sinais_integracoes_baleia_cctv_20260822.md (adendo 4: troca Basic Auth por link secreto, ordem Miguel) · lições irmãs: 20260902_alerta_de_terceiro_e_sonda_nao_sentenca.md · (obs 194ª — sonda classifica a camada) · CEREBRO_NODE_COFRE_CHAVES.md (AUTORIA_PAINEL_URL/USER/PASS nos cofres).

@@ -1,0 +1,60 @@
+{
+  "schema": "cafezinho.faxina.removal-manifest.v1",
+  "created_utc": "2026-08-11T09:34:12Z",
+  "authorized_by": "Miguel do Rosário",
+  "authorization_context": "Autorização explícita no chat após apresentação dos lotes local e NYC",
+  "host": "local-miguel",
+  "source": "/home/migueldorosario/Downloads/Antigravity Google/Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR",
+  "classification": "legacy_inactive_over_15_days_authorized",
+  "source_logical_bytes": 3543345181,
+  "source_entries": 95832,
+  "inventory": {
+    "file": "INVENTARIO_LEGACY_TEMATICOS_LOCAL_20260811_03.jsonl.gz",
+    "sha256": "71195d50eb2d811c2ceee6a1f627c5ab482d79fc26a2592215e69ce1b8e8af3f",
+    "sensitive_name_paths_metadata_only": 274
+  },
+  "archive": {
+    "object": "b2:failover-cafezinho1/faxina/local/legacy-sites/2026-08/rodada_20260811_05/sites_tematicos_legacy_full_20260811_05.tar.gz.gpg",
+    "bytes": 2742206182,
+    "sha256": "00cdc4da3a7b0fda1f2f2d03abec47b478534425ca57042c762573afca2c7fc1",
+    "format": "tar.gz encrypted with GnuPG symmetric AES-256",
+    "remote_hash_verified": true,
+    "post_removal_remote_hash_verified": true,
+    "full_restore_diff_verified": true
+  },
+  "key_custody": {
+    "secret_exposed_in_manifest": false,
+    "local_locator": "/home/migueldorosario/Downloads/Antigravity Google/Outros/chaves/faxina/sites_tematicos_legacy_20260811_05.gpg.passphrase",
+    "nyc_locator": "/root/config/faxina_keys/sites_tematicos_legacy_20260811_05.gpg.passphrase",
+    "b2_secure_locator": "gdrive-backup-b2:Cafezinho-operacional/cofres/faxina/2026-08/sites_tematicos_legacy_20260811_05.gpg.passphrase",
+    "mirrors_compared": true
+  },
+  "dependency_proof": {
+    "processes": 0,
+    "open_file_descriptors": 0,
+    "cron_systemd_timer_or_external_operational_references": 0,
+    "last_file_activity": "2026-07-24",
+    "canonical_registry": "Projeto Cafezinho Agentes/root/ferramentas/sentinela_tematicos/site_registry.json",
+    "canonical_repositories": "Projeto Cafezinho Agentes/sites-v4/",
+    "canonical_sites_count": 8,
+    "dirty_git_repository_preserved_in_full": "global_south_news"
+  },
+  "restore": {
+    "method": "Baixar o objeto, validar SHA-256, descriptografar com uma cópia autorizada da chave e extrair o tar.gz em diretório temporário. Revisar antes de recolocar no caminho original.",
+    "full_local_extract_and_recursive_diff": "ok",
+    "requires_human_review": true
+  },
+  "removal": {
+    "scope": "Somente o diretório exato sites-tematicos_LEGADO_NAO_USAR; sites-v4, registry, orquestrador e projetos canônicos não entram no corte.",
+    "source_removed": true,
+    "removed_utc": "2026-08-11T09:57:00Z",
+    "post_removal_smoke_verified": true,
+    "smokes": [
+      "registry com 8 sites ativos",
+      "8 repositórios canônicos sites-v4 presentes",
+      "orquestrador V4 compila",
+      "crons V4 ativos presentes",
+      "8 sites públicos responderam HTTP 200"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "at": "2026-09-10T17:53:36.023790-03:00",
+  "state": "HOLD_TRANSPORTE_GIT",
+  "pulls": [
+    {
+      "attempt": 1,
+      "command": "git pull --ff-only origin main",
+      "rc": 128,
+      "error": "Not possible to fast-forward, aborting."
+    },
+    {
+      "attempt": 2,
+      "command": "git pull --ff-only origin main",
+      "rc": 128,
+      "error": "Not possible to fast-forward, aborting."
+    },
+    {
+      "attempt": 3,
+      "command": "git pull --ff-only origin main",
+      "rc": 128,
+      "error": "Not possible to fast-forward, aborting."
+    }
+  ],
+  "head": "7ec0e35261bd8f5b59a9299e6fa1ad4ba35f5f0d",
+  "origin_main": "4b742551a4aba51c569477a46d262e81a42d4b08",
+  "left_right_counts": "2\t7",
+  "commit": null,
+  "push": null,
+  "c1_delivery": "PENDENTE",
+  "c2_delivery": "PENDENTE_NAO_TENTADA_SEM_COMMIT",
+  "shared_bridge_written": false,
+  "reason": "Divergência não reconciliada; não improvisar merge/rebase/reset nem contornar o hold com outra via."
+}

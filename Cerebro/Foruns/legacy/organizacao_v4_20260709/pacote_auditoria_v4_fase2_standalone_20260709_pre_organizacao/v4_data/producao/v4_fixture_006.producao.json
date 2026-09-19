@@ -1,0 +1,58 @@
+{
+  "conteudo": "Material auditado minimo para validar integracao de imagem destacada auditada no fluxo V4, sem publicacao externa.",
+  "created_at": "2026-07-08T21:37:06.736857+00:00",
+  "editoria": "v4_politica_economia",
+  "idempotency_key": "f4ff11efb0358563639ef86b421171d36b2d57a32bcdcb1b820bebd8c0b6d641",
+  "item_id": "v4_fixture_006",
+  "llm_response": {
+    "content": "[MOCK V4/gemini/gemini-3.5-flash/v4_politica_economia/redacao] Flavio Bolsonaro critica decisao do STF. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar integracao de imagem destacada auditada no fluxo V4, sem publicacao externa.",
+    "cost_usd_estimated": 2.257e-05,
+    "duration_ms_llm": 0,
+    "error_class": null,
+    "mode": "mock",
+    "model": "gemini-3.5-flash",
+    "pricing_table_version": "2026-07-08-local-ratings",
+    "prompt_hash": "71a6efc6a58cf639caedd9c6f9c3c8f0f2226bbcb5399b96e6c855b5a65a669a",
+    "provider": "gemini",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo"
+    ],
+    "selected_tier": "gemini_luxo",
+    "selection_reason": "exploration: qualidade=1.000, custo=1.000, rota=0.000, samples=0",
+    "selection_strategy": "quality_cost_router",
+    "tokens_in": 29,
+    "tokens_out": 68
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "bb3e2348fb8638872453087bd4b9e4697b5f82a48c1ba5507063d9bf53185c3f",
+      "editoria": "v4_politica_economia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "from": "auditado",
+    "imagem_destacada_validada": false,
+    "manifesto_auditoria_final": true,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "source_status": "auditado_fixture",
+  "status": "produzir_dry_run",
+  "texto_dry_run": "[MOCK V4/gemini/gemini-3.5-flash/v4_politica_economia/redacao] Flavio Bolsonaro critica decisao do STF. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar integracao de imagem destacada auditada no fluxo V4, sem publicacao externa.",
+  "titulo": "Flavio Bolsonaro critica decisao do STF"
+}

@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-11T06:48:09.984301-03:00",
+  "local_head": "9e33e0e66e2ef6563e30ebdd2101997f57b97df3",
+  "remotes": [
+    {
+      "name": "origin",
+      "rc": 0,
+      "sha": "907746ed5c9c645ec4c58781727e899dd5d9a805",
+      "is_ancestor_of_local": false
+    },
+    {
+      "name": "nyc",
+      "rc": 0,
+      "sha": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "is_ancestor_of_local": false
+    }
+  ],
+  "delivery": "PENDENTE",
+  "push_performed": false,
+  "reason": "Pull --ff-only recusado; integridade/reservas divergentes. ponte_push.sh faria rebase/autostash e copia de canais alheios; não executar sob hold."
+}

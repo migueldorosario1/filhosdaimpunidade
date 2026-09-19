@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_1603",
+  "ts_brt": "2026-07-25T16:03:46-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_1603\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou http_status 0 (falha de conectividade) mas coletor não gerou alerta. Deveria ter ao menos P3.\",\n      \"evidencia\": \"http_status=0, dmax_metodo='site_off', problemas=[]\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"alerta.nivel='nenhum'\",\n      \"deepseek_diz\": \"Deveria ter alerta P3 (ou maior) por http_status 0 (site offline).\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"ceara_digital offline (http_status 0) não detectado pelo coletor - verificar se site foi removido ou há falha de rede.\",\n  \"confianca\": 0.95,\n  \"notas\": \"ceara_digital com http_status 0 sem alerta; mapa_rio e aiatolah com P2 suprimidos por shadow, coerente.\"\n}"
+}

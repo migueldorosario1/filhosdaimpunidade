@@ -1,0 +1,97 @@
+{
+  "_doc": "Contrato operacional V4 para limpeza, ordem, organizacao, leveza, automacao, autolimpeza, auto-organizacao e autobackup.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "lema": [
+    "limpeza",
+    "ordem",
+    "organizacao",
+    "leveza",
+    "automacao"
+  ],
+  "principios": {
+    "sem_hardcode_editorial": true,
+    "diretrizes_externas": true,
+    "llms_externas": true,
+    "bancos_em_camadas": true,
+    "produtores_leem_apenas_auditado": true,
+    "operacao_idempotente": true,
+    "modo_dry_run_por_padrao": true
+  },
+  "escopo_operacional": {
+    "modo_padrao": "v4_estrito",
+    "scan_roots": [
+      "contratos",
+      "codigo",
+      "dados",
+      "Cerebro/Foruns",
+      "Cerebro/memorias_provisorias",
+      "Backups"
+    ],
+    "ignored_roots": [
+      ".transcribe_venv",
+      "Projeto Cafezinho Agentes/Legacy",
+      "Projeto Cafezinho Agentes/Legacy20260610",
+      "Projeto Cafezinho Agentes/Legacy_CEREBRO_CANONICO_STAGING_20260610",
+      "Projeto Cafezinho Agentes/Legacy_Cerebro_duplicata_inbox_20260620",
+      "Projeto Cafezinho Agentes/Backups",
+      "Cerebro/Foruns/backup_limpeza_20260615_150354",
+      "Cerebro/Foruns/backup_limpeza_20260615_1615_codex_publicador_crontab"
+    ]
+  },
+  "autolimpeza": {
+    "objetivo": "Manter inboxes, foruns, caches e artefatos temporarios curtos, rastreaveis e sem lixo acumulado.",
+    "regras": [
+      {
+        "alvo": "inbox_trindade",
+        "acao": "compactar_resolvidos",
+        "limite_linhas_recomendado": 120,
+        "destino": "historico/inbox_trindade/YYYYMMDD/",
+        "exige_manifesto": true
+      },
+      {
+        "alvo": "cache_python",
+        "acao": "remover_pycache",
+        "padrao": "**/__pycache__",
+        "seguro_em_dry_run": true
+      },
+      {
+        "alvo": "artefatos_temporarios_v4",
+        "acao": "mover_para_tmp_ou_backup",
+        "padroes": [
+          "tmp_v4_*",
+          "*.tmp",
+          "*.bak"
+        ],
+        "exige_confirmacao_para_deletar": true
+      }
+    ]
+  },
+  "autoorganizacao": {
+    "objetivo": "Classificar arquivos por funcao e manter indices de retomada atualizados.",
+    "categorias": {
+      "diretrizes": "contratos/v4_*.md",
+      "contratos_json": "contratos/v4_*.json",
+      "codigo_tecnico": "codigo/",
+      "foruns": "Cerebro/Foruns/forum_*v4*.md",
+      "backups": "Backups/*v4*"
+    },
+    "indices_obrigatorios": [
+      "Cerebro/Foruns/forum_plano_trabalho_execucao_novo_v4_20260708.md",
+      "Cerebro/memorias_provisorias/PONTO_DE_RETOMADA_CODEX.md"
+    ]
+  },
+  "autobackup": {
+    "objetivo": "Criar checkpoints seletivos antes e depois de mudancas V4 relevantes.",
+    "destino_b2": "b2:failover-cafezinho1/Antigravity_Google/backups/",
+    "escopo_padrao": [
+      "contratos/v4_*",
+      "codigo/",
+      "dados/",
+      "Cerebro/Foruns/forum_*v4*.md"
+    ],
+    "exige_rclone_check": true,
+    "nao_usar_sync": true
+  }
+}

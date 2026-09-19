@@ -1,0 +1,10 @@
+{"data": 1785025220.0, "agente": "moka_gateway:resumo_video", "modelo": "deepseek", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 1}
+{"data": 1785025469.0, "agente": "moka_gateway:resumo_video", "modelo": "deepseek", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 2}
+{"data": 1785027774.0, "agente": "moka_gateway:resumo_video", "modelo": "deepseek(admin)", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 3}
+{"data": 1785616677.0, "agente": "moka_gateway:transcricao_video_1h", "modelo": "transkriptor", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.277984, "status": "ok", "ref_id": 4}
+{"data": 1785616928.0, "agente": "moka_gateway:transcricao_video_15min", "modelo": "transkriptor", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.001855, "status": "ok", "ref_id": 5}
+{"data": 1785649608.0, "agente": "moka_gateway:resumo_video", "modelo": "deepseek-v4-flash", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 6}
+{"data": 1785649610.0, "agente": "moka_gateway:transcricao_video_15min", "modelo": "deepseek-v4-pro", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 7}
+{"data": 1785857055.0, "agente": "moka_gateway:transcricao_video_15min", "modelo": "deepseek-v4-flash", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 8}
+{"data": 1785857392.0, "agente": "moka_gateway:transcricao_video_15min", "modelo": "deepseek-v4-flash", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 9}
+{"data": 1785858525.0, "agente": "moka_gateway:transcricao_video_15min", "modelo": "deepseek-v4-pro(failover de deepseek-v4-flash)", "prompt_tokens": 0, "completion_tokens": 0, "custo_usd": 0.0, "status": "ok", "ref_id": 10}

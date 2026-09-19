@@ -1,0 +1,66 @@
+{
+  "ref": "XM-20260910-004",
+  "timestamp_brt": "2026-09-10T01:52:22.103351-03:00",
+  "commit": "58e62fe6b125e4c1249c1f42ed1e372035b756b1",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_bug178_prompt_zcode.md"
+  ],
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_ronda.md",
+  "evidence": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_evidencias.json",
+  "evidence_sha256": "f1005be82241e5d4b019ab2120bf9ebc10038cd4dd2079df84016ac96c335959",
+  "prompt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_bug178_prompt_zcode.md",
+  "prompt_sha256": "042b4f155abc155db764ba97e4706c5f5441a77e5e1efa74b10e2c0e03b33ae9",
+  "transport": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_015215_transporte.json",
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   2032f7f2d..58e62fe6b  main -> main\n"
+  },
+  "origin_verification": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "58e62fe6b125e4c1249c1f42ed1e372035b756b1\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "nyc": {
+    "command": [
+      "git",
+      "ls-remote",
+      "nyc",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+    "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+    "is_ancestor_rc": 1,
+    "action": "HOLD_NON_FF"
+  },
+  "checks": {
+    "append_only_prefix_verified": true,
+    "utf8_without_bom": true,
+    "git_diff_check_exit_code": 0,
+    "selective_staging_verified": true,
+    "preexisting_untracked_preserved": true,
+    "rounds": 1,
+    "isolated_probes_passed": 3
+  },
+  "total_distinct_round_files": 7,
+  "closing_note": "Fecho documental da mesma ronda; nao inicia outra. Entrega operacional acima; registro de transporte segue em commit seletivo proprio."
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><title>Plano de Negócios Moka — 22/07/2026</title>
+<style>body{font-family:Georgia,serif;max-width:860px;margin:40px auto;padding:0 20px;color:#222;line-height:1.65}
+h1{color:#1a3a6b;border-bottom:3px solid #1a6feb;padding-bottom:8px}
+h2{color:#1a6feb;margin-top:28px}
+h3{color:#333}
+table{border-collapse:collapse;width:100%;margin:14px 0}
+td,th{border:1px solid #ccc;padding:8px 10px;text-align:left}
+th{background:#f0f5ff}
+hr{border:0;border-top:1px solid #ddd;margin:26px 0}
+strong{color:#1a3a6b}</style></head><body><h1>Plano de Negócios — Moka: Assinatura, Capital (20.000 títulos) e Página do Investidor</h1><br>
+<br>
+<strong>Data:</strong> 2026-07-22 | <strong>Para:</strong> Miguel do Rosário | <strong>Escopo:</strong> modelo de receita, estrutura de capital, painel público do investidor e arquitetura cripto<br>
+<br>
+<hr><br>
+<br>
+<h2>1. Preço de assinatura — pesquisa de mercado (jul/2026)</h2><br>
+<br>
+<table><br>
+<tr><th>Concorrente</th><th>Preço/mês</th></tr><br>
+<tr><td>Kindle Unlimited (Amazon BR)</td><td>R$ 24,90 (reajustado de 19,90)</td></tr><br>
+<tr><td>Substack (mínimo por newsletter)</td><td>US$ 5 (~R$ 28)</td></tr><br>
+<tr><td>Valor Econômico</td><td>R$ 24,90–59,90</td></tr><br>
+<tr><td>VEJA</td><td>R$ 9,90–14,99</td></tr><br>
+<tr><td>Gazeta do Povo</td><td>~R$ 19,90</td></tr><br>
+</table><br>
+<strong>Posicionamento sugerido do Moka Premium: R$ 24,90/mês</strong> — âncora exata do Kindle Unlimited, com o diferencial que nenhum deles tem: resumo de vídeo, tradução de livros e áudio sob demanda, além dos 7 portais de notícia. Plano anual: R$ 249 (2 meses grátis).<br>
+<br>
+*O sistema de pontos (já construído) continua como porta de entrada: amostra 200 pts grátis → pacotes avulsos → upsell para assinatura ilimitada.*<br>
+<br>
+<h2>2. Unit economics por assinante</h2><br>
+<br>
+<table><br>
+<tr><th>Item</th><th>Valor/mês</th></tr><br>
+<tr><td>Receita bruta</td><td>R$ 24,90</td></tr><br>
+<tr><td>Gateway (MP/Stripe ~4%)</td><td>− R$ 1,00</td></tr><br>
+<tr><td>Custo LLM por assinante ativo típico¹</td><td>− R$ 3,50 a 7,00</td></tr><br>
+<tr><td><strong>Margem por assinante</strong></td><td><strong>≈ R$ 17–20</strong></td></tr><br>
+</table><br>
+¹ Uso típico: 10 resumos de vídeo + 5 livros + 2 traduções + TTS leve ≈ US$ 0,65–1,30.<br>
+<br>
+<strong>Custos fixos mensais:</strong> Vercel Pro ($20) + Transkriptor (~$30) + LLM base + domínios + servidores ≈ <strong>R$ 900/mês</strong>.<br>
+<br>
+<strong>Ponto de equilíbrio: ~50–60 assinantes pagantes.</strong> Abaixo disso, prejuízo controlado de até ~R$ 900/mês; acima, tudo é lucro marginal.<br>
+<br>
+<h2>3. Estrutura de capital — 20.000 títulos</h2><br>
+<br>
+- <strong>Capital:</strong> 20.000 títulos; Miguel detém os 20.000 no início e pode vender cotas<br>
+- <strong>Cada título = 0,005% do lucro distribuído</strong> (20.000 × 0,005% = 100%)<br>
+- <strong>Waterfall:</strong> (1) receita → (2) custos operacionais → (3) reserva de reinvestimento (sugestão 30%) → (4) <strong>lucro distribuído proporcional aos títulos</strong><br>
+- <strong>Preço do título na venda inicial:</strong> referência de valuation. Ex.: projetando R$ 250 mil de lucro no ano 2, payout/título = R$ 12,50/ano → título pode ser vendido a R$ 50–100 (múltiplo 4–8× payout). <strong>O painel mostra o valor de mercado implícito do título em tempo real.</strong><br>
+- <strong>Fundadores (primeiros sócios):</strong> bônus de entrada — ex.: 2× títulos pelo preço de 1 nos primeiros 1.000 títulos vendidos.<br>
+<br>
+<h2>4. A página do investidor (pública, atualizada)</h2><br>
+<br>
+<strong>URL sugerida:</strong> `moka.app/investidores` — dois modos:<br>
+<br>
+<h3>Modo REAL (dados vivos)</h3><br>
+- Assinantes ativos agora, MRR, receita acumulada<br>
+- Custos do mês, lucro/prejuízo acumulado desde o início<br>
+- <strong>Gráfico rumo ao breakeven</strong> (barra de progresso até 60 assinantes)<br>
+- Por título: payout acumulado, valor implícito, % do lucro<br>
+- "Seu painel": login do sócio mostra seus títulos e seu total a receber<br>
+<br>
+<h3>Modo SIMULAÇÃO (o "link L Simula")</h3><br>
+- Slider de assinantes (0 → 10.000) → calcula ao vivo: MRR, custos, lucro, payout por título, valor da cota do visitante<br>
+- Cenários prontos: pessimista (150 ass.), base (500 ass.), otimista (2.000 ass.)<br>
+- <strong>Botão "quero ser sócio"</strong> → checkout do título<br>
+<br>
+<h2>5. Arquitetura cripto (com pé no chão jurídico)</h2><br>
+<br>
+<strong>Caminho seguro (recomendado agora):</strong><br>
+- Títulos como <strong>unidades contábeis</strong> no nosso ledger (não token em blockchain) — escritura/contrato privado<br>
+- <strong>Payout opcional em USDC/stablecoin</strong> para sócios internacionais (Pix para BR, USDC para fora) — atrai investidor cripto sem emitir security token<br>
+<br>
+<strong>Caminho futuro (só com advogado):</strong><br>
+- Tokenização real dos títulos (ERC-20 ou similar)<br>
+- ⚠️ <strong>Alerta jurídico:</strong> vender participação em lucros a investidores é oferta de valor mobiliário. No Brasil, exige enquadramento — crowdfunding de investimento regulado (Resolução CVM 88) ou estrutura contratual privada bem desenhada. <strong>Antes de vender o 1º título: parecer jurídico.</strong> Isso vale 10× mais para token.<br>
+<br>
+<h2>6. Entregáveis técnicos (ordem sugerida)</h2><br>
+<br>
+1. `moka_pontos/` (✅ pronto: schema + API de pontos)<br>
+2. Tabela `assinantes` + `titulos_capital` no mesmo banco (extensão do schema v1)<br>
+3. Página pública `/investidores` (modo real + simulador)<br>
+4. Painel do sócio com login (mesma auth da API)<br>
+5. Gerador de convites + landing da amostra grátis<br>
+6. Webhook gateway → métricas reais na página<br>
+<br>
+<hr><br>
+<br>
+*Relatório gerado por ZCode (Kimi) em 22/07/2026. Arquivos relacionados: `estudo_sistema_pontos_moka_20260722.md`, `moka_pontos_schema_v1.sql`, `moka_pontos/app.py`.*<br>
+</body></html>

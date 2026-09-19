@@ -1,0 +1,1018 @@
+{
+  "at": "2026-09-11T07:53:10.441173-03:00",
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T07:47:55.951225-03:00",
+      "since": "2026-09-11T07:17:55.565145-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "40d7ed69288b7d8534c7102b72c805769f1f281ab00a10a5527a5597f409fdee",
+          "requests": 11,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "8cd1f6e7185128411fe8026db11a5e3db6056e237480f7dcf85e8893d052a089",
+          "requests": 6318,
+          "errors": {
+            "500": 51
+          },
+          "by_minute": {
+            "07:25": 7,
+            "07:33": 39,
+            "07:34": 5
+          },
+          "last_5xx": "2026-09-11T07:34:01-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "f81d311e15034c5b009ebf039a83303505348aaeeb85e7e78b3707e586e48eb3",
+        "total": 59,
+        "by_minute": {
+          "07:25": 10,
+          "07:33": 44,
+          "07:34": 5
+        }
+      },
+      "redis_info": {
+        "uptime_in_seconds": "15377",
+        "used_memory": "812559376",
+        "used_memory_peak": "1292986176",
+        "expired_keys": "370",
+        "evicted_keys": "0",
+        "db0": "keys=338104,expires=74,avg_ttl=47770043119"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "slowlog_delta": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "commandstats_flushdb": [
+        "cmdstat_flushdb:calls=8,usec=13803201,usec_per_call=1725400.12"
+      ],
+      "flushdb_retained_calls": 8,
+      "flushdb_retained_usec": 13803201,
+      "at": "2026-09-11T07:48:51.537079-03:00",
+      "retained_sample": 128,
+      "earliest_retained_at": "2026-09-11T04:03:02-03:00",
+      "slow_events": [
+        {
+          "id": 264,
+          "timestamp": 1789122841,
+          "at": "2026-09-11T07:34:01-03:00",
+          "duration_usec": 16390601,
+          "command": "MGET",
+          "returned_argc": 32,
+          "omitted_args": 79083,
+          "mode": null,
+          "row_fields": 6,
+          "client_address_present": true,
+          "client_name_present": false,
+          "client_address_sha256": "3a088270f702fce16f86f705d6dd6b6d577168a4e1a070b2de7f56a43bdb18fa",
+          "inferred_total_keys": 79113
+        },
+        {
+          "id": 248,
+          "timestamp": 1789122799,
+          "at": "2026-09-11T07:33:19-03:00",
+          "duration_usec": 1487331,
+          "command": "MGET",
+          "returned_argc": 32,
+          "omitted_args": 15715,
+          "mode": null,
+          "row_fields": 6,
+          "client_address_present": true,
+          "client_name_present": false,
+          "client_address_sha256": "3b68bd374050c70393585e297ef782295c8e13f90edcea66ecb06f6110c20011",
+          "inferred_total_keys": 15745
+        },
+        {
+          "id": 224,
+          "timestamp": 1789122774,
+          "at": "2026-09-11T07:32:54-03:00",
+          "duration_usec": 929965,
+          "command": "MGET",
+          "returned_argc": 32,
+          "omitted_args": 79083,
+          "mode": null,
+          "row_fields": 6,
+          "client_address_present": true,
+          "client_name_present": false,
+          "client_address_sha256": "3b68bd374050c70393585e297ef782295c8e13f90edcea66ecb06f6110c20011",
+          "inferred_total_keys": 79113
+        },
+        {
+          "id": 218,
+          "timestamp": 1789122336,
+          "at": "2026-09-11T07:25:36-03:00",
+          "duration_usec": 10088,
+          "command": "FLUSHDB",
+          "returned_argc": 1,
+          "omitted_args": 0,
+          "mode": null,
+          "row_fields": 6,
+          "client_address_present": true,
+          "client_name_present": false,
+          "client_address_sha256": "a9c6778ea975c9942c9e75e425e3ae75d95903ffd17d6d95e1a95d68b71b4d92"
+        },
+        {
+          "id": 217,
+          "timestamp": 1789122332,
+          "at": "2026-09-11T07:25:32-03:00",
+          "duration_usec": 3236799,
+          "command": "FLUSHDB",
+          "returned_argc": 1,
+          "omitted_args": 0,
+          "mode": null,
+          "row_fields": 6,
+          "client_address_present": true,
+          "client_name_present": false,
+          "client_address_sha256": "780c5a903e3f1fe5edd90dc8be9ebf08a2c3004ca27e5559f8c07cbf841cf860"
+        }
+      ],
+      "scope": "One read-only SLOWLOG GET 128; other args and client identities not logged."
+    }
+  },
+  "incident_detail": {
+    "rc": 0,
+    "data": {
+      "at": "2026-09-11T07:50:00.868843-03:00",
+      "cutoff": "2026-09-11T07:47:55.951225-03:00",
+      "window_0733_0734": {
+        "requests_5xx": 44,
+        "first": "2026-09-11T07:33:19-03:00",
+        "last": "2026-09-11T07:34:01-03:00",
+        "elapsed_seconds": 42.0
+      },
+      "last_16_seconds_to_slowlog_stamp": 43,
+      "redis_error_lines": [
+        {
+          "time": "2026-09-11T07:25:30-03:00",
+          "line_sha256": "6b5b80aab49145313bea4a5f2c9e1ffbba4682aeac50696a707b3ea0c724b6dc",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:25:30-03:00",
+          "line_sha256": "6586d38a09bd1d4e0a0298dc7044189aa29b2486f452852f87fdbd2ca60e8da4",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:25:30-03:00",
+          "line_sha256": "9dc816ca73a36a55cba1ab2715e1d517d84e1ea170ecbb236a3e50965268f364",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "9394f38ae87cfe56c581af40940ba92c40da3f774ba506edc780e119423bdfe7",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "4bef88f1ff70b57d23087ce303bdab291c1b2d0d2ea38d08af629e81561cfe49",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "67ccdb0ee1cbfd58dba5a5c70dae1a5565f1fd7772c64462986843bc544ad86a",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "584da2a464f0a02c0c2e8065264efa932655c5c6390398a5cfa2bc7039deabe7",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "1cb26339eae772f536a958c5786ce5afc58fd756a8f511293471b8f1b41dd210",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "865206a72c086d3819c904daeb8db2a89dfdfb7893addddc108440325032ea4b",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:25:31-03:00",
+          "line_sha256": "b46b165271d3b4ce3f1720aaaddba2932a97a7b4421d7ff97e7a44a4b2f368ec",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:19-03:00",
+          "line_sha256": "1266d9bd9374d5eee097333deb0adacee9319b997362ef24aca929a5e9de42e8",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:19-03:00",
+          "line_sha256": "8acafe19e169d70d7606907891984ce264a6225e11ae10d8de0f1e2c0badaabd",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:19-03:00",
+          "line_sha256": "c93a14381aedf2b2e7e4768d510bff1d17c5c24c8f053d0d6830d909fe5269fe",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:19-03:00",
+          "line_sha256": "4f473b5655d61fac6a442ae8f64c9819cdc7b9779d47785db41d43273912a318",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:19-03:00",
+          "line_sha256": "bb92b5349a9a20d333ff2c9ed46a12a30443d6e0619acc593e7f1fe1667f78d6",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:46-03:00",
+          "line_sha256": "36c4efcecc9e38df73d513357661c6f0468944b9bf5b20ecdfd1b155b75a8836",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:46-03:00",
+          "line_sha256": "3a95cb19aa1582cf03b99c54581700b73ba277a43c032870af68c9bdde043f1e",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:47-03:00",
+          "line_sha256": "cae6b21ebda4c4ebca148d0508b70afc2ff2e40f5977113e0948517eecc959f9",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:47-03:00",
+          "line_sha256": "9a4fad431dfa29e88ffcf5530ee4065572f7875445add1bda05b6307c52868fd",
+          "socket_read": false,
+          "read_error": true
+        },
+        {
+          "time": "2026-09-11T07:33:47-03:00",
+          "line_sha256": "097e8e975823bed377974f821286b0e0d1cd37721023c652d3bcb73905b5d577",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:47-03:00",
+          "line_sha256": "161b7ac1b9e294897b6661522dc8ad090f51842d0d42bec855b81d14749eb417",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:48-03:00",
+          "line_sha256": "12c4b924c08e099d87ebf98b433056a23876f9a781e95991c13d6b5365e0fbba",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:49-03:00",
+          "line_sha256": "bf2b4f78a376557a31f7ca5d58eba81a105e032c3ad3ba429b7f39026b54f648",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:49-03:00",
+          "line_sha256": "1b0bd11cbab05c66fa3626af5f6aba1c98d6d19070c9bb0ecc2f3e46a05aabc5",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:49-03:00",
+          "line_sha256": "3d75f4f42a98be2452feacf062f97b6621016571969312b1492cdd041ded81fd",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:49-03:00",
+          "line_sha256": "4d38d7ec483567d610078ca926df8534f0270ac865dc0187f48fa76e34c99ee9",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:50-03:00",
+          "line_sha256": "edceb5d7e79af938929b696161131b807ef76d141817675f66920c2485163290",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:51-03:00",
+          "line_sha256": "3b04a8f95fb375e3bb903ec8a34eadfa706c63bc9cac01b79ea5f71c3ce29859",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:51-03:00",
+          "line_sha256": "a7e272eb62950243c79ba19f12c89149f2fdfc833262a9759a09a1d2934b98ff",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:51-03:00",
+          "line_sha256": "ffc12428cbbfdbd1a124816781bba36e4a736e40bcc37ab897c2dcd15d358a81",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:52-03:00",
+          "line_sha256": "4208e915a659c83a69233f63dc53e4d6f8c4e7cfed5d02b42dbc658dbdd8ff48",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:52-03:00",
+          "line_sha256": "f64fcee1796c7506ca4720b0c8712ef075160baf4a6e7bab3b996b662b658964",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:52-03:00",
+          "line_sha256": "8b2fd09014fc2af035467103c12e825d7edb7b929fff9d7fc739df5eb32d2f77",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:52-03:00",
+          "line_sha256": "e64afd8c050f6b9096e72aa380c0992947038576df0c1601affeb008e72ccf8f",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:52-03:00",
+          "line_sha256": "277c6839af62ac2cdfffd95fbcdff4d977162b2d2893b8d069af184617e7e535",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:53-03:00",
+          "line_sha256": "3e53d3ab71b5aa6878106efa66ed612f325a3dd8f301fcb497d92b5913b0fdf5",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:53-03:00",
+          "line_sha256": "0b75bc1eeaf7d150aba5872d2daec0de10bf318d795e36b92d645b99ad1490eb",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:54-03:00",
+          "line_sha256": "659227177d9778122be2e123d12cb3f974e5f0a192993603b2304fcfe1048fcb",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:54-03:00",
+          "line_sha256": "e947ecd8d01e04245ec57f914665226be0b1b2b341fdcf3882ab8d806a96cac3",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:54-03:00",
+          "line_sha256": "a080b74dad2414f3503057adbbe4281379afa9f0505449f27722d074c2d1bd15",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:54-03:00",
+          "line_sha256": "259368056ed894ebd9e3f7c697a32c3841d2c1fbd9246dc1735397eff6b15fa1",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:54-03:00",
+          "line_sha256": "9e7ee40ca11bbb96eb880bc28d9f7c98525590e9a5fcd526a4313863d55e0b94",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:55-03:00",
+          "line_sha256": "b5e3d3f0dfef894689d31c6f9be4586ac48bac9821fd781b2ee39eb1563bca75",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:55-03:00",
+          "line_sha256": "bc4bf6ebbc2c9bf758e4285a511ed2972fa27ce6ff807af880466074dff61b42",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:55-03:00",
+          "line_sha256": "5bea50cf4282021c9b75f6a50efc31a99c78566d33e921c85b3ec4876e94ed12",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:56-03:00",
+          "line_sha256": "dc7d612a83b73d1acabd394f647705fe699402fb36c796b3e893aa06224d3744",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:56-03:00",
+          "line_sha256": "c054e39886890c0086311ae7eaf9f99524dcc9b0ddb059b25419f602bbdd04a9",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:56-03:00",
+          "line_sha256": "f6d60cb491a81cfb81ba780852a43ac28f81b39dd3a43cb386a31409c172212d",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:57-03:00",
+          "line_sha256": "e6a71a2a9ca9d9fcb044463c2bb51c09651edae01ebd0f449cd7e3db1cf4d706",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:58-03:00",
+          "line_sha256": "fab8861471b0182419046eade4834efb23bd626ebf9e4483b08535de6a7aad0e",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:58-03:00",
+          "line_sha256": "835ff9efea082ca2e17b2b71ad910e623ded9a56edf6f983b8eaabfd19c9816d",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:59-03:00",
+          "line_sha256": "82e4193f0ff3a902262276f56751b6134bfcd1b6d4499e8de4c67f82709f88d7",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:59-03:00",
+          "line_sha256": "1dd4e62b05fa828547664be3b18cb62054ea8a0d6d17fce54d58eefadccc5f88",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:33:59-03:00",
+          "line_sha256": "fa01ade793847923b0ea43c1658d3aade6f536de9eb2a2bd0e727eef93afa7ae",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:34:00-03:00",
+          "line_sha256": "f55517f77236cce27d5155d76e368f0a65f824338046821d7ac69826e6c52594",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:34:00-03:00",
+          "line_sha256": "c69dd2e37568c06d8d9e01e2454f7e1804ffd5ff5359461c87f937da96067b1a",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:34:00-03:00",
+          "line_sha256": "6bc8efc318e1807d9fb5fe7ef41a9610ddd253e160cc62db2debcafbf389cd0e",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:34:00-03:00",
+          "line_sha256": "ead6c7341808cb538bffa1716da205eabc3278e542643a8752743eb3a09da34f",
+          "socket_read": true,
+          "read_error": false
+        },
+        {
+          "time": "2026-09-11T07:34:01-03:00",
+          "line_sha256": "6bf024119ad9a2b675b009261812e415d1c3ee0defef1bd0735a3d12e47c5c74",
+          "socket_read": true,
+          "read_error": false
+        }
+      ],
+      "redis_error_lines_count": 59
+    }
+  },
+  "panels": [
+    {
+      "path": "/v6/lumina",
+      "http": 200,
+      "bytes": 27733,
+      "elapsed": 4.701,
+      "at": "2026-09-11T07:50:09.520280-03:00"
+    },
+    {
+      "path": "/v6/sol",
+      "http": 200,
+      "bytes": 14895,
+      "elapsed": 1.878,
+      "at": "2026-09-11T07:50:06.701418-03:00"
+    }
+  ],
+  "wordpress_readback": {
+    "rc": 0,
+    "at": "2026-09-11T07:48:16.921608-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T07:48:16-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269398,
+          "hash": "524a2159951570360d522f23de1ed0690423c2367ae008f1cefe66846ee3b79a",
+          "status": "publish",
+          "title": "Gabi critica confederação por regra que tirou Tifanny da Superliga",
+          "author": "5470",
+          "date": "2026-09-08 02:30:00",
+          "slug": "gabi-critica-confederacao-por-regra-que-tirou-tifanny-da-superliga",
+          "fm": 269399,
+          "categories": [
+            1271,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269393,
+          "hash": "be6bd86d1b2a3b0d819f172648cfc82124085320e9e17a3d51b7c8e167da1c16",
+          "status": "publish",
+          "title": "Projeto no Senado exige 80% da pena cumprida para progressão em feminicídio",
+          "author": "5470",
+          "date": "2026-09-08 00:30:00",
+          "slug": "projeto-no-senado-exige-80-da-pena-cumprida-para-progressao-em-feminicidio",
+          "fm": 269394,
+          "categories": [
+            1335,
+            22,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269378,
+          "hash": "ab93a1cf3c93637fa1b10f4c2c797ef0c68905dca21380f103b11decef47cc63",
+          "status": "publish",
+          "title": "Anvisa autoriza remédio experimental para o piloto Lito Sousa",
+          "author": "5470",
+          "date": "2026-09-07 23:30:00",
+          "slug": "anvisa-autoriza-remedio-experimental-para-o-piloto-lito-sousa",
+          "fm": 269389,
+          "categories": [
+            2403,
+            258
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "public": [
+    {
+      "post_id": 269398,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/gabi-critica-confederacao-por-regra-que-tirou-tifanny-da-superliga/",
+      "at": "2026-09-11T07:48:16.224200-03:00",
+      "sha256_html": "9d272f0aeab4ed3a2dee1cf5d77b550159514dc3233d2687c348d4a8e0182d9f",
+      "paragraphs": 17,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269393,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/projeto-no-senado-exige-80-da-pena-cumprida-para-progressao-em-feminicidio/",
+      "at": "2026-09-11T07:48:16.265624-03:00",
+      "sha256_html": "cee7288026a28c09edea94a5b4f6f9db47fad0197b4e7fe7bf833cd3ee015289",
+      "paragraphs": 8,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269378,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/07/anvisa-autoriza-remedio-experimental-para-o-piloto-lito-sousa/",
+      "at": "2026-09-11T07:48:16.307115-03:00",
+      "sha256_html": "79c581d3fa6bf6a969e17345cf423c3ff709136649acfd722d76a96891e8f39b",
+      "paragraphs": 12,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "integrity": {
+    "at": "2026-09-11T07:51:29.891387-03:00",
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "local_sha256": "98217158ceab40916448d26c3809fd1a9bc4f59b9e9ec0223f4981dbf603e35a",
+        "canonical_sha256": "98217158ceab40916448d26c3809fd1a9bc4f59b9e9ec0223f4981dbf603e35a",
+        "origin_sha256": "bbe502e8603656e738d20af8c0047ccfbe68830299904d4790b0495e86295211",
+        "local_canonical_equal": true,
+        "local_origin_equal": false
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "local_sha256": "5f68bdbd1eb14f8180ae91f9a4ed9c3ec05e2d55a093a413df85f205db45d843",
+        "canonical_sha256": "5f68bdbd1eb14f8180ae91f9a4ed9c3ec05e2d55a093a413df85f205db45d843",
+        "origin_sha256": "5f68bdbd1eb14f8180ae91f9a4ed9c3ec05e2d55a093a413df85f205db45d843",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "local_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01",
+        "origin_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "local_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "canonical_sha256": "902d63dd17f6006c4156afd14d6657617802177b77af0b11813707faa617d3e2",
+        "origin_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+        "local_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+        "origin_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      }
+    ],
+    "remote_ref_present": {
+      "XM-20260910-039": false,
+      "XM-20260911-013": true
+    },
+    "pre_push_exists": false
+  },
+  "prior_delivery": {
+    "at": "2026-09-11T07:50:32.203401-03:00",
+    "origin": "9d3cb8af288dc3cbc7b54dbc8a646de4f8589666",
+    "receipts": [
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_062217_ronda.md",
+        "remote_present": true,
+        "remote_sha256": "133e23f7bfbce6596970495f1fb1a24fec31dddb344b5fcc2187424e6056633b",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_062217_editorial.md",
+        "remote_present": true,
+        "remote_sha256": "d7e0b634fda825ccda0c3e5f6ad73be7805f2746cbc5681dd67a4c068afcf80f",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_062217_transporte.json",
+        "remote_present": true,
+        "remote_sha256": "672bb60e66dd052584f871d460acb519097d7c9be3154f70068431cc2520923b",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_ronda.md",
+        "remote_present": true,
+        "remote_sha256": "4dce9f5d8f8f35c06ef39bc915280e70c3fc1f196ad921c61ced70d2de15c937",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_editorial.md",
+        "remote_present": true,
+        "remote_sha256": "f90bbfeaadb152e64e3764862bb5e5188c3d4683dc71153b574085e53795e3b6",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_transporte.json",
+        "remote_present": true,
+        "remote_sha256": "3f0f3cea43d46dcf5fff0582174c9fa4ce317dbe39d2b0753b0889d02772970c",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_ronda.md",
+        "remote_present": true,
+        "remote_sha256": "59b1329ebb131a39cb3703ab3d51938abea79f66ac6fb937060eddead87cfd9a",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_editorial.md",
+        "remote_present": true,
+        "remote_sha256": "1a4350b204b1943b7b9550b47143cad3eb6f104084b6e3985bf60055ce7c6b3d",
+        "local_equal": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_072333_transporte.json",
+        "remote_present": true,
+        "remote_sha256": "4ba33f67a167059e93367b0cb625a9bd61c2025be454fabfae25039eea04829e",
+        "local_equal": true
+      }
+    ],
+    "refs_in_remote": {
+      "XM-20260911-014": true,
+      "XM-20260911-015": true,
+      "ZM-20260911-001": false
+    }
+  },
+  "editorial_sources": [
+    {
+      "url": "https://assets.cbv.com.br/Politica_de_Elegibilidade_Categoria_Feminina_14_08_2026_f30634cb85.pdf",
+      "scope": "Política 14/08/2026, itens 7.4 e 16.1–16.6: exceção impede os efeitos; transição não é ausência de qualquer regra. Fonte primária."
+    },
+    {
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175657",
+      "scope": "PL 5249/2026, autoria Carlos Fávaro, 01/09/2026, aguardando despacho."
+    },
+    {
+      "url": "https://legis.senado.leg.br/sdleg-getter/documento?disposition=inline&dm=10309368&rendition_principal=S&ts=1788296600357",
+      "scope": "Texto inicial, art.2 e art.3: 80%, vedação de livramento e revogação do art.112 VI d."
+    },
+    {
+      "url": "https://legis.senado.gov.br/norma/549086/publicacao/34619809",
+      "scope": "LEP consolidada, art.112 VI d: 75% e vedação já existentes pela Lei15358/2026; VII80% e VIII85%."
+    },
+    {
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2018/conheca-as-formas-de-acesso-a-medicamentos-em-estudo",
+      "scope": "Orientação primária sobre acesso compassivo individual, médico e patrocinador; não comprova deferimento individual de Lito."
+    },
+    {
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/anvisa-aprova-importacao-de-remedio-experimental-para-piloto-lito",
+      "scope": "Reportagem original 05/09/2026 com declarações da família: expectativa sete a nove dias após04/09; fonte de atribuição, não acesso ao ato da Anvisa."
+    }
+  ],
+  "private_evidence": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-016"
+}

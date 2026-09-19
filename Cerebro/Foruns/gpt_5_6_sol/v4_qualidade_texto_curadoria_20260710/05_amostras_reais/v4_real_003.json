@@ -1,0 +1,27 @@
+{
+  "conteudo": "O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo. A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011. A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%. O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%. A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.",
+  "editoria": "v4_politica_economia",
+  "fonte": "IBGE PIM-PF abril 2026 estruturado localmente",
+  "fontes": [
+    "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md",
+    "IBGE Pesquisa Industrial Mensal - Producao Fisica abril 2026"
+  ],
+  "item_id": "v4_real_003",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "IBGE",
+      "acervo_local_cafezinho"
+    ],
+    "resumo_consenso": "A leitura corrente resume o dado como alta mensal da industria e quarto mes seguido de crescimento, com mencao regional dispersa.",
+    "timestamp_brt": "2026-07-10T00:10:00-03:00"
+  },
+  "manifesto_auditoria": {
+    "fonte_validada": true,
+    "qualidade_minima": true,
+    "risco_juridico_revisado": true
+  },
+  "primary_entity": "indústria brasileira",
+  "status": "auditado_local_preliminar",
+  "titulo": "Indústria cresce, mas mostra a dependência do setor produtivo brasileiro"
+}

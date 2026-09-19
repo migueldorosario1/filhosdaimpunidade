@@ -1,0 +1,58 @@
+{
+  "ref": "XM-20260910-044",
+  "at": "2026-09-10T23:52:46.352655-03:00",
+  "baseline": "bae5057a7e3487c532f95fc3aa9aec0730861866",
+  "commit": "9f277e8d8183a9f23c77af9993e2f0ea920d404f",
+  "attempts": [
+    {
+      "remote": "origin",
+      "at": "2026-09-10T23:52:49.930391-03:00",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   bae5057a7..9f277e8d8  9f277e8d8183a9f23c77af9993e2f0ea920d404f -> main\n"
+    },
+    {
+      "remote": "nyc",
+      "at": "2026-09-10T23:52:54.177420-03:00",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            9f277e8d8183a9f23c77af9993e2f0ea920d404f -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "f23b3d57cde7e71c99a8c2315cbacb7a0d0d8a1b68c9ee1bdaca08880c957510"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "33006f300b7813faff88569e6266bd101d66af08ae1dbb98a4d84e52074d1454"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "face80161865ca0e31e4ba67751ea06e418bd957080ebcb12bec292714c0a377"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_235226_ronda.md",
+      "sha256": "78577cb5aef48b7129ee42ba99a317c92582cb3c5031ff73f6925d202b991811"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_235226_evidencias.json",
+      "sha256": "9fd606ba33e3f37036298b84d2d65ac4d47c9eeab8ce943170d893042dea84bb"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_235226_editorial.md",
+      "sha256": "dfdaa8aa04c9849a08ffc14c66341e27b0265a46c0d089be512518fc440ff431"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_235226_mensagem.md",
+      "sha256": "347be7373d92003397ea5eea5b173bf8433ac0fd1528deec75e19042f7b08365"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_235226_verificacao.json",
+      "sha256": "6132cbe258f95e8fc25609c59636fa5709ec3c17294d3b06f793fed95755a9ea"
+    }
+  ],
+  "origin_remote_verified": "9f277e8d8183a9f23c77af9993e2f0ea920d404f",
+  "state": "C1_ENTREGUE_C2_PENDENTE"
+}

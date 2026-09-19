@@ -1,0 +1,453 @@
+{
+  "schema": "loop_miguel_bridge_integrity_v1",
+  "generated_at_brt": "2026-09-19T16:15:01.587245-03:00",
+  "file_count": 89,
+  "total_bytes": 4958387,
+  "files": [
+    {
+      "path": "00_LEIA_PRIMEIRO.md",
+      "bytes": 5270,
+      "sha256": "98c81f0d2f434af69d4cd1842001269b56f93857faa559842b7b83d6b68314e2"
+    },
+    {
+      "path": "ALERTAS_SLA.md",
+      "bytes": 39653,
+      "sha256": "05d6eaf69654402a4fb2e8c8ba78e10f9484cd502a106aa4b52acc23ebfea5fd"
+    },
+    {
+      "path": "CONFIG_PONTE.json",
+      "bytes": 228,
+      "sha256": "f59a0bb2ab45970ff68579cf264dc61df591bb4a9e6cae99fab5954b8d2c79e8"
+    },
+    {
+      "path": "CONTRATO.md",
+      "bytes": 5738,
+      "sha256": "58485bac911b5debda7111a6c6fdc6edcc2ec18745a7816d6b40ff51e7ed4a56"
+    },
+    {
+      "path": "ESTADO_ATUAL.md",
+      "bytes": 1135,
+      "sha256": "af865fe5003a8f845e8cf92441b2d044be7717f175dae7f9f6935ea2537365a7"
+    },
+    {
+      "path": "HISTORICO.md",
+      "bytes": 31,
+      "sha256": "0a596f017c979b70ec8e4b707b718c17615e35afda02c711e1341c9dfd09e8ed"
+    },
+    {
+      "path": "INDEX_ATIVO.md",
+      "bytes": 19323,
+      "sha256": "0f6af9d49d21ac3bed3a817948c8eee922f635b8a1762d1e0095c9a067a258fa"
+    },
+    {
+      "path": "INDEX_COMPLETO.json",
+      "bytes": 88992,
+      "sha256": "e39b2d499dca38fbef16ea872aa607a06298282e1c83d38eb53989cee08e30f9"
+    },
+    {
+      "path": "LEDGER_APPEND_ONLY.json",
+      "bytes": 357566,
+      "sha256": "ec9c6236427e548ce75ad459480d005bf61b7a0b21d7ffcde74d5c5c5c5953cc"
+    },
+    {
+      "path": "MURAL.md",
+      "bytes": 279,
+      "sha256": "4fb75f7b4bfa93476d1cdf88b85ac1205324cd0dbe6589008c78e8c3424babbd"
+    },
+    {
+      "path": "RESERVA_TRABALHO.md",
+      "bytes": 4587,
+      "sha256": "152f48a34163521b886c7955f3356c1c8365998f4d8f40256af31fb0269b6817"
+    },
+    {
+      "path": "SAUDE_PONTE.json",
+      "bytes": 11798,
+      "sha256": "4464ef5381afe63e86630a04a2e0b16022650aeed8f10a438c588e07e02aa55b"
+    },
+    {
+      "path": "arquivo/INDEX.md",
+      "bytes": 7892,
+      "sha256": "7cb603bedba5c08cedf346a37ba5b1b709fce5f486811c262ea79c676282e601"
+    },
+    {
+      "path": "arquivo/rotacoes/20260817_042601/HISTORICO.md",
+      "bytes": 2830,
+      "sha256": "fbebb11adc55924e93e14eac5a8b588da439ac97516408f744a91a7f88a759a1"
+    },
+    {
+      "path": "arquivo/rotacoes/20260817_042601/fila_para_zcode.md",
+      "bytes": 610,
+      "sha256": "9c8dbafbdd053abccb48a35766110f53bced6ecf15b0532e9fc0fc89fd5b8875"
+    },
+    {
+      "path": "arquivo/rotacoes/20260818_042601/HISTORICO.md",
+      "bytes": 8911,
+      "sha256": "98ddc6834f89dda5d247683e1fe35510363411b820b07fa0868c46fbc35f7a12"
+    },
+    {
+      "path": "arquivo/rotacoes/20260818_042601/MURAL.md",
+      "bytes": 5494,
+      "sha256": "be58fed07292c5280e4b5422b6c8c7583e4de4bafc2ed3e20aa64d524c1d7909"
+    },
+    {
+      "path": "arquivo/rotacoes/20260818_042601/fila_para_claude.md",
+      "bytes": 6540,
+      "sha256": "1a268ed6a9f674131f16dadd8a9e3bbae19b40c11bf8075927b33271a1decc87"
+    },
+    {
+      "path": "arquivo/rotacoes/20260818_042601/fila_para_grok.md",
+      "bytes": 6623,
+      "sha256": "8bbf8fe4fd851c31fd5de8e1a966badfb3e4946c09f4d33a7caf519ecdc4dc96"
+    },
+    {
+      "path": "arquivo/rotacoes/20260818_042601/fila_para_zcode.md",
+      "bytes": 13205,
+      "sha256": "07e69ff7dd73c433479e68a9ce0c9588229cf59ad0fcab27ca538cd682866a41"
+    },
+    {
+      "path": "arquivo/rotacoes/20260819_042602/HISTORICO.md",
+      "bytes": 7085,
+      "sha256": "4ea0a3eb6e3aa197c45a2a5cee4dd27cdd13a38221298a7d8a7f58d24f1b10a7"
+    },
+    {
+      "path": "arquivo/rotacoes/20260819_042602/MURAL.md",
+      "bytes": 10662,
+      "sha256": "d0638a38546b48f1be2a94fa6e23e8f004d8c7b21d56d745ebb9642644762129"
+    },
+    {
+      "path": "arquivo/rotacoes/20260819_042602/fila_para_claude.md",
+      "bytes": 105186,
+      "sha256": "0c9063afa823b780454907fd70d9d8356d42306ac807d5846b5e6c06a0375fb2"
+    },
+    {
+      "path": "arquivo/rotacoes/20260819_042602/fila_para_zcode.md",
+      "bytes": 56477,
+      "sha256": "51e68f23f9f98d4bf0f2a9dc9aa29b6adc9a6cf08730cf4aa5b5e0cda2106721"
+    },
+    {
+      "path": "arquivo/rotacoes/20260820_042601/HISTORICO.md",
+      "bytes": 6790,
+      "sha256": "c1b394216122b53d1553a93a8e394df59f2c769890e0822b6b85e33e93c72081"
+    },
+    {
+      "path": "arquivo/rotacoes/20260820_042601/MURAL.md",
+      "bytes": 11612,
+      "sha256": "4ee90f74548a31e6515eb76063b6ffcbb5a28fc5f3c0c5ae8a91e2f91da36a1c"
+    },
+    {
+      "path": "arquivo/rotacoes/20260820_042601/fila_para_claude.md",
+      "bytes": 83918,
+      "sha256": "3da248dd669caa1477dc0da63b51ee945f16d9f493a6d42722fbc42feb2b6631"
+    },
+    {
+      "path": "arquivo/rotacoes/20260820_042601/fila_para_grok.md",
+      "bytes": 44056,
+      "sha256": "6691b485fb2d8f6a8d5529a3adcb89dede316db0dfb8485cb4b368dcbaaec4ea"
+    },
+    {
+      "path": "arquivo/rotacoes/20260820_042601/fila_para_zcode.md",
+      "bytes": 69162,
+      "sha256": "542cc87c0a9f74fb2a3d9b50eb7c9964f14cd7576dd3e68554772b0d90f3e11b"
+    },
+    {
+      "path": "arquivo/rotacoes/20260821_042601/HISTORICO.md",
+      "bytes": 2275,
+      "sha256": "10e1cf5ec71918b015b21452a9c8e5219ee1d8d023ab8aba3d2e20973b97dad6"
+    },
+    {
+      "path": "arquivo/rotacoes/20260821_042601/MURAL.md",
+      "bytes": 9041,
+      "sha256": "3aa5aec41b7057736df41d0618df764857d6fd636749f34867761fb9b7d4bb38"
+    },
+    {
+      "path": "arquivo/rotacoes/20260821_042601/fila_para_claude.md",
+      "bytes": 93913,
+      "sha256": "61ef505395c7c138d0915421f1c9cb90f185a03323b37c91d658196ab19afad3"
+    },
+    {
+      "path": "arquivo/rotacoes/20260821_042601/fila_para_grok.md",
+      "bytes": 32839,
+      "sha256": "1e7f42133a72a4774b251d97055ab59720f3e42d2f1534ca789d91fb64dbf92c"
+    },
+    {
+      "path": "arquivo/rotacoes/20260821_042601/fila_para_zcode.md",
+      "bytes": 16857,
+      "sha256": "8d516b49c5674d5795c04fbc76770b378b80e5869e358d90e1f18a6e7c8c0800"
+    },
+    {
+      "path": "arquivo/rotacoes/20260822_042601/MURAL.md",
+      "bytes": 2245,
+      "sha256": "4710f8d576c370fba93bf2eb90568991459f8b108ce21aa1e6a425629facc945"
+    },
+    {
+      "path": "arquivo/rotacoes/20260823_042601/HISTORICO.md",
+      "bytes": 3573,
+      "sha256": "54ec5ad9882862b8d6c7c128b606aebc90d854218a04229cfa32c6f5b3c3a929"
+    },
+    {
+      "path": "arquivo/rotacoes/20260823_042601/MURAL.md",
+      "bytes": 1043,
+      "sha256": "5ddc6dd267ee3f715cce243654169609cba2b2e0b100f1635b928b692e8f2d1c"
+    },
+    {
+      "path": "arquivo/rotacoes/20260823_042601/fila_para_claude.md",
+      "bytes": 88648,
+      "sha256": "166ea3fb98ad52f95bcfcbf5ed4cbae7b7bd181ff43bc95aabc119fbd3a42077"
+    },
+    {
+      "path": "arquivo/rotacoes/20260824_042601/MURAL.md",
+      "bytes": 5341,
+      "sha256": "980a85ed428270da181f6535730195fbc034987ec29e19e2a7bd5180be37b070"
+    },
+    {
+      "path": "arquivo/rotacoes/20260824_042601/fila_para_claude.md",
+      "bytes": 88648,
+      "sha256": "8d18d5147557c93ce00a7db06f8b86ceefa981bf04584ab0d3642dc4cba03890"
+    },
+    {
+      "path": "arquivo/rotacoes/20260825_042601/fila_para_claude.md",
+      "bytes": 88648,
+      "sha256": "c94445e2e64ef2e3952bac3209cd5e56df0ac65dc4a7caba0c6edc201c9310b7"
+    },
+    {
+      "path": "arquivo/rotacoes/20260826_042601/fila_para_claude.md",
+      "bytes": 89785,
+      "sha256": "1f61e7ab33f20f8de1eb5a692131c82f49547531adb8323305c3a9618a11d170"
+    },
+    {
+      "path": "arquivo/rotacoes/20260827_042601/fila_para_claude.md",
+      "bytes": 89785,
+      "sha256": "1352fc82e49d6c378cc59f48eab989b9189cd0ad8d225b22646eb206d09eaccf"
+    },
+    {
+      "path": "arquivo/rotacoes/20260828_042601/fila_para_claude.md",
+      "bytes": 89785,
+      "sha256": "c003225749f279a38bf197421708cd5279b21577246c3762b3af7eff33cd3a50"
+    },
+    {
+      "path": "arquivo/rotacoes/20260829_042601/fila_para_claude.md",
+      "bytes": 760,
+      "sha256": "624c1593fbcdd984b1cf482f9f7643d5fa32c6b34f5bb17ccbf20ed562317310"
+    },
+    {
+      "path": "arquivo/rotacoes/20260831_042601/fila_para_claude.md",
+      "bytes": 1032,
+      "sha256": "5cf5716216e4211ff8bbf52ae2c3b2251d41f5e0a41d84e73ee15dde4acce828"
+    },
+    {
+      "path": "arquivo/snapshots/20260817_042601/HISTORICO.md",
+      "bytes": 20384,
+      "sha256": "f072d3119e8256e5ae87e97b4bdff90895050fc2a69aa61ca3ac2343875c9ceb"
+    },
+    {
+      "path": "arquivo/snapshots/20260817_042601/fila_para_zcode.md",
+      "bytes": 163999,
+      "sha256": "c727cc9232b704fa6c889bcb643e4d7b28231f7c3d6e45bd25a1750283014f1e"
+    },
+    {
+      "path": "arquivo/snapshots/20260818_042601/HISTORICO.md",
+      "bytes": 23157,
+      "sha256": "d35a93fe129d5e73ee7b3e4aa20d7d669d53e50dfb857bb06fe3bcc1cb368617"
+    },
+    {
+      "path": "arquivo/snapshots/20260818_042601/MURAL.md",
+      "bytes": 36408,
+      "sha256": "e8ab18f733be2366f71cc142018346f1eb382a4bde5493321db29c721d8981eb"
+    },
+    {
+      "path": "arquivo/snapshots/20260818_042601/fila_para_claude.md",
+      "bytes": 248533,
+      "sha256": "6c42460473d64da2ba76a1b9209c9b622434916c88f83e25b05b1777d15e3b81"
+    },
+    {
+      "path": "arquivo/snapshots/20260818_042601/fila_para_grok.md",
+      "bytes": 86957,
+      "sha256": "d2173f4f9a0f1bf106851d2f73c4090b3e31a952eb5d36d87635ff30a74acd08"
+    },
+    {
+      "path": "arquivo/snapshots/20260818_042601/fila_para_zcode.md",
+      "bytes": 180770,
+      "sha256": "3a2bbdb7511758b4edbde3c29d05f0e636a6a690368f2c8f7e4abe3335914968"
+    },
+    {
+      "path": "arquivo/snapshots/20260819_042602/HISTORICO.md",
+      "bytes": 15659,
+      "sha256": "f21dde6cea6c3c8fe6f42c67db1e14dc30a577c5b47f0b8eb3434a5d7465a7ba"
+    },
+    {
+      "path": "arquivo/snapshots/20260819_042602/MURAL.md",
+      "bytes": 33159,
+      "sha256": "0d8478d550ca46dfb26d2ca9096bceef3aeb46932027dcea20fab49c49352f79"
+    },
+    {
+      "path": "arquivo/snapshots/20260819_042602/fila_para_claude.md",
+      "bytes": 248160,
+      "sha256": "b9bc5228778a0fdc8ff587b446e59462960b520eb1abfb00b71205d7a330a89b"
+    },
+    {
+      "path": "arquivo/snapshots/20260819_042602/fila_para_zcode.md",
+      "bytes": 168195,
+      "sha256": "d6abb9e5c8d99aad2870b24bf61399680aaff009053fce06951eae1eea3e1243"
+    },
+    {
+      "path": "arquivo/snapshots/20260820_042601/HISTORICO.md",
+      "bytes": 9183,
+      "sha256": "bec41ae402d3973518377d8f18e8a8c5310da5008cdf0b573c855d612624907e"
+    },
+    {
+      "path": "arquivo/snapshots/20260820_042601/MURAL.md",
+      "bytes": 23540,
+      "sha256": "fe92a8eb885cfbb61874cb0e57652c9c97464cb018058d54af81a3c91321e7ac"
+    },
+    {
+      "path": "arquivo/snapshots/20260820_042601/fila_para_claude.md",
+      "bytes": 143873,
+      "sha256": "e6b753b268ec5b82ed51eddcb6d0214821806481c395522ab197dbf5d22ceb19"
+    },
+    {
+      "path": "arquivo/snapshots/20260820_042601/fila_para_grok.md",
+      "bytes": 80541,
+      "sha256": "c40d4cd0e9d6ef1970483f22fc4072f59cc355e3847b8f9fa7b9f2a58af16abf"
+    },
+    {
+      "path": "arquivo/snapshots/20260820_042601/fila_para_zcode.md",
+      "bytes": 111927,
+      "sha256": "c03a9c7c63a21950b48051c13c53605e0b49e2ec4f021b0fe12cb16d53540fa4"
+    },
+    {
+      "path": "arquivo/snapshots/20260821_042601/HISTORICO.md",
+      "bytes": 5531,
+      "sha256": "4529a3b5bab6351bbd0acaf48bcb48279d95f4db5735c2dede3d993b9c5d10fc"
+    },
+    {
+      "path": "arquivo/snapshots/20260821_042601/MURAL.md",
+      "bytes": 17269,
+      "sha256": "cd21988ebcfc51fd2f9b7a57abbfe0aafe337aa683fa19a336f78844a57229e3"
+    },
+    {
+      "path": "arquivo/snapshots/20260821_042601/fila_para_claude.md",
+      "bytes": 145176,
+      "sha256": "52487edb0f4fa3194aad9ea713a491f25f43ab11aadb8c94eed78ec0a40a9f5a"
+    },
+    {
+      "path": "arquivo/snapshots/20260821_042601/fila_para_grok.md",
+      "bytes": 36692,
+      "sha256": "6cde795c1eca435e7dd977926987ea4b36af52695a62daaa420398feac5d75e6"
+    },
+    {
+      "path": "arquivo/snapshots/20260821_042601/fila_para_zcode.md",
+      "bytes": 42974,
+      "sha256": "901a67d6c682053891d492ac26c8d16fc41aa7580b97e4a44e4a56f21962f995"
+    },
+    {
+      "path": "arquivo/snapshots/20260822_042601/MURAL.md",
+      "bytes": 8398,
+      "sha256": "15a05cc8024ffb010d8e2259e86415df8d11ddc7f524cb6ff1eabd5b2d17994f"
+    },
+    {
+      "path": "arquivo/snapshots/20260823_042601/HISTORICO.md",
+      "bytes": 3430,
+      "sha256": "7fcbdbe2fadf73894c5817775fd718d7e3505c5f3450ec2a263039c768f497b6"
+    },
+    {
+      "path": "arquivo/snapshots/20260823_042601/MURAL.md",
+      "bytes": 6323,
+      "sha256": "762618fedf749f8641464e00c9643be69a2de59e875b4198d5bdc9e5b86f3d27"
+    },
+    {
+      "path": "arquivo/snapshots/20260823_042601/fila_para_claude.md",
+      "bytes": 156101,
+      "sha256": "03538eead570ea6c7c6f0bcb558f47092743de43b1fc857b0458949b0dfa2a33"
+    },
+    {
+      "path": "arquivo/snapshots/20260824_042601/MURAL.md",
+      "bytes": 5450,
+      "sha256": "976463ab795ec02eb6f224458ec0ad28c291a5a6999472f2603c884413899a79"
+    },
+    {
+      "path": "arquivo/snapshots/20260824_042601/fila_para_claude.md",
+      "bytes": 164871,
+      "sha256": "6694c322bdec06f18bb43ae609bde8715714ae0b3520adc8305407811b1bf046"
+    },
+    {
+      "path": "arquivo/snapshots/20260825_042601/fila_para_claude.md",
+      "bytes": 167034,
+      "sha256": "19272d9abd318be843822083e47eb92370e2a7067e0e145a24aae630716ba32c"
+    },
+    {
+      "path": "arquivo/snapshots/20260826_042601/fila_para_claude.md",
+      "bytes": 175028,
+      "sha256": "6f00cbd74377f51ab96623193697397f40aae83ab84a8f88a797ee41f8bf763d"
+    },
+    {
+      "path": "arquivo/snapshots/20260827_042601/fila_para_claude.md",
+      "bytes": 184077,
+      "sha256": "1d4ae5e660f90d646420725ceaa8abb73d6279bf924be75d8ed58e0355a8ae66"
+    },
+    {
+      "path": "arquivo/snapshots/20260828_042601/fila_para_claude.md",
+      "bytes": 194619,
+      "sha256": "04f7b2bd95aa14f84e029014dbd339e6c18dc97b37ae83b8e3c77440c7299f3e"
+    },
+    {
+      "path": "arquivo/snapshots/20260829_042601/fila_para_claude.md",
+      "bytes": 105045,
+      "sha256": "95860d945110e6c147b62fb0d247f4a47607436ca5785b05ff783884846acf3d"
+    },
+    {
+      "path": "arquivo/snapshots/20260831_042601/fila_para_claude.md",
+      "bytes": 104496,
+      "sha256": "7ea8b2f8fdc19e980aecb6a10c728cab56f40b1b56abba02dbbc9cf31f860167"
+    },
+    {
+      "path": "fila_para_claude.md",
+      "bytes": 103675,
+      "sha256": "323d07b5087df4ae6df689244a346b59924539cdf0e43eb68db5ff66855430ef"
+    },
+    {
+      "path": "fila_para_grok.md",
+      "bytes": 4060,
+      "sha256": "9577aa60252b090dc8d74974719ecd1a8ebb2d02b503f3b5d0c922c8da785ab5"
+    },
+    {
+      "path": "fila_para_zcode.md",
+      "bytes": 26326,
+      "sha256": "17a76344af0455864d5f3c81e06f683f2d28c8ef396d08ab869587e3c9a8e3a0"
+    },
+    {
+      "path": "mesa_editorial/00_LEIA_PRIMEIRO.md",
+      "bytes": 1499,
+      "sha256": "a78f7c79a40e45054858b8ba9bfeb6565290f1ee001d8d8e8d8f8a1671a51aa4"
+    },
+    {
+      "path": "mesa_editorial/ANEXOS/README.md",
+      "bytes": 363,
+      "sha256": "295a2092f8dd1eafa372ab09854d3f727c5e0f87206a72a819e9c6dee3399223"
+    },
+    {
+      "path": "mesa_editorial/CHECKPOINT.md",
+      "bytes": 765,
+      "sha256": "c621198b05e3aa5f80425313496086c5be51300aedc4a3c2c79305d17425ac22"
+    },
+    {
+      "path": "mesa_editorial/COMENTARIOS_ROGERIO.md",
+      "bytes": 717,
+      "sha256": "f2f8cac6c84be5e2438a37774a72ea80e27a4fb19be7de651a82a65a45c3ae0a"
+    },
+    {
+      "path": "mesa_editorial/DECISOES_CLAUDE.md",
+      "bytes": 1061,
+      "sha256": "bd0459037104186f7308f96e3fc832ff4dbe635b6dc9745cd8f1a0b61cd9cde2"
+    },
+    {
+      "path": "mesa_editorial/ENTRADA.md",
+      "bytes": 3868,
+      "sha256": "82f9c6e5e401e78bdcb69f0b092844e7a6b7e54e53e0bb16f8bc98d24d94a7c1"
+    },
+    {
+      "path": "ponte_imagens_RESERVA.md",
+      "bytes": 13223,
+      "sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6"
+    }
+  ]
+}

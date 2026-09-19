@@ -1,0 +1,382 @@
+{
+  "_leia": "Curadoria do MAPA da página /v6/faxina (painel CCTV v6 Tencent). O gerador gera_seed_faxina.py lê ESTE arquivo + LEDGER_APAGADOS.md + índice SQLite + df, e escreve a seed no repo cerebro-miguel (.tencent_v6_oficina/faxina_dell_status_SEED.json). Quando um lote da fila retirar/mover um diretório, ATUALIZAR AQUI: st (status), obs, destino e gb_override se preciso. gb ausente = puxado do índice (auto). gb presente = fixo (usar quando o índice poda caches/.git e subestima — sempre explicar no obs).",
+  "_legenda_status": {
+    "🔒": "intocável D3 (trabalho vivo — nunca retirar)",
+    "🟢": "vivo/ativo (uso corrente)",
+    "🌙": "na fila noturna (lote N — retire com backup verificado)",
+    "✅": "retirado (backup verificado na nuvem; local = APONTADOR.md)",
+    "♻️": "regenerável (poda periódica pela automação leve)",
+    "❄️": "congelado (N9 — só com OK explícito do Miguel)",
+    "⚠️": "aguarda decisão do Miguel"
+  },
+  "inicio": {
+    "pct_disco": 72,
+    "usado_gb": 313,
+    "data": "08/09 15:0x",
+    "meta_pct": 40,
+    "nota": "Missão Faxina Total do Dell — ordem do Miguel 08/09/2026 (voz): computador levinho, tudo na nuvem com memória dupla (B2 + GDrive), tudo indexado no Cérebro, poucos diretórios na raiz."
+  },
+  "nuvem": {
+    "b2": "b2:failover-cafezinho1/faxina/ (pacotes tar+gpg, SHA256SUMS, manifest, readback)",
+    "gdrive": "gdrive:Backup_Total/dell_faxina/ · gdrive:Jornais do dia — ESPAÇO GIGANTE quase vazio: usar como destino PRIMÁRIO (ordem do Miguel 08/09: 'era para usar o GDrive')",
+    "github": "github:migueldorosario1/cerebro-miguel (Cérebro + LEDGER + seeds do painel)",
+    "indice_duplo": "ÍNDICE DUPLO (ordem do Miguel 08/09): DB local ~/.local/share/buscador_local/indice.sqlite + cópia diária em gdrive:Backup_Total/dell_faxina/indice/ E b2:failover-cafezinho1/faxina/indice/ + CATALOGO_NUVEM.md legível no Cérebro/repo (o Cérebro já é espelhado = catálogo triplo)"
+  },
+  "fila_gb_override": {
+    "_leia": "GB por lote da fila (total do lote, não o 1º número do texto). Atualizar quando um lote encolher/andar.",
+    "N1": 5.0,
+    "N1b": 0.3,
+    "N2": 27.0,
+    "N3": 12.4,
+    "N4": 38.0,
+    "N5": 6.5,
+    "N6": 4.6,
+    "N7": 15.4,
+    "N8": null,
+    "N9": 26.2,
+    "N10": 0.02,
+    "N11": null
+  },
+  "serie_semente": [
+    {
+      "d": "08/09 15:0x",
+      "pct": 72,
+      "livre_gb": 147,
+      "lib_acum_gb": 0,
+      "nota": "início da Faxina Total"
+    },
+    {
+      "d": "08/09 15:4x",
+      "pct": 51,
+      "livre_gb": 218,
+      "lib_acum_gb": 94,
+      "nota": "L1+L2 (94G)"
+    }
+  ],
+  "lotes_abertura": [
+    {
+      "id": "L1",
+      "t": "Missão do dia 08/09: 61 clones DS-Dell (58G) + snapshot DeepSeek corrompido (23G) + caches whisper/HF (3,3G) + db ZCode pré-vacuum (1,6G)",
+      "ok": true,
+      "gb": 86.0,
+      "quando": "08/09 15:2x"
+    },
+    {
+      "id": "L2",
+      "t": "Jornais do dia (ordem explícita): 501 PDFs (12,4G) → GDrive verificado + fluxo corrigido na origem (sweep pós-upload no cron)",
+      "ok": true,
+      "gb": 12.4,
+      "quando": "08/09 15:3x"
+    }
+  ],
+  "mapa": [
+    {
+      "label": "~/ (home)",
+      "path": null,
+      "nivel": 0,
+      "st": "🟢",
+      "obs": "disco todo: 219G usados de 460G (51%) · índice vê ~77G no home (poda toolchains/caches) · meta D5: home = 4 raízes (AG · Dados_Frios · ZCodeProject · cerebro-miguel) + dotfiles"
+    },
+    {
+      "label": "Downloads/Antigravity Google",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google",
+      "nivel": 1,
+      "gb": 48.0,
+      "st": "🟢",
+      "obs": "RAIZ canônica (Cérebro vivo) · index vê 23G; +27G do AG/.git podado (N2: forense dos únicos antes de retirar) · topo 209 itens → N11 consolida"
+    },
+    {
+      "label": "Dados_Frios",
+      "path": "/home/migueldorosario/Dados_Frios",
+      "nivel": 1,
+      "st": "🌙",
+      "obs": "N4: 1 subitem/noite → tar+gpg → B2+GDrive, readback, local vira APONTADOR.md"
+    },
+    {
+      "label": "ZCodeProject",
+      "path": "/home/migueldorosario/ZCodeProject",
+      "nivel": 1,
+      "st": "🔒",
+      "obs": "D3 intocável — workspace ativo (moka)"
+    },
+    {
+      "label": "cerebro-miguel",
+      "path": "/home/migueldorosario/cerebro-miguel",
+      "nivel": 1,
+      "st": "🔒",
+      "obs": "repo canônico de publicação do Cérebro (vivo)"
+    },
+    {
+      "label": ".zcode",
+      "path": "/home/migueldorosario/.zcode",
+      "nivel": 1,
+      "st": "♻️",
+      "obs": "4,7G→1,2G (vacuum 06/09 + faxina 08/09) · N10: poda mensal artifacts/exec/log >14d"
+    },
+    {
+      "label": ".codex",
+      "path": "/home/migueldorosario/.codex",
+      "nivel": 1,
+      "st": "🌙",
+      "obs": "N6: sessions 2,1G → tar → B2, podar >30d"
+    },
+    {
+      "label": ".grok",
+      "path": "/home/migueldorosario/.grok",
+      "nivel": 1,
+      "st": "🌙",
+      "obs": "N6: sessions 1,9G + downloads 442M → B2"
+    },
+    {
+      "label": ".config",
+      "path": "/home/migueldorosario/.config",
+      "nivel": 1,
+      "gb": 8.8,
+      "st": "🌙",
+      "obs": "google-chrome 8,8G (index poda caches → vê 0,9G) · N7: podar SÓ caches regeneráveis, NUNCA Local Storage/IndexedDB (logins)"
+    },
+    {
+      "label": ".gemini",
+      "path": "/home/migueldorosario/.gemini",
+      "nivel": 1,
+      "gb": 6.6,
+      "st": "🌙",
+      "obs": "antigravity-browser-profile 6,6G (index vê 1,1G) · N7 idem"
+    },
+    {
+      "label": ".local",
+      "path": "/home/migueldorosario/.local",
+      "nivel": 1,
+      "gb": 7.1,
+      "st": "❄️",
+      "obs": "lib 7,1G toolchains (N9 — index vê 1,6G) · ⚠️ bin/ tem tools vivas"
+    },
+    {
+      "label": ".pyenv",
+      "path": null,
+      "nivel": 1,
+      "gb": 7.0,
+      "st": "❄️",
+      "obs": "N9 CONGELADO: crons usam .pyenv/versions/3.10.13 — só com OK do Miguel"
+    },
+    {
+      "label": "Android",
+      "path": null,
+      "nivel": 1,
+      "gb": 5.9,
+      "st": "❄️",
+      "obs": "emulador/SDK · N9 — Miguel cogitou mover p/ nuvem; aguarda OK"
+    },
+    {
+      "label": ".nvm",
+      "path": null,
+      "nivel": 1,
+      "gb": 4.1,
+      "st": "❄️",
+      "obs": "N9 congelado"
+    },
+    {
+      "label": "AG/Outros",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Outros",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N5: novo livro 2,5G · mapa rio videos 2,2G · Aplicativos 1,8G · 🔒 dentro: Negocios Priscila · pautas editoriais · chaves"
+    },
+    {
+      "label": "AG/Projeto Cafezinho Agentes",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Projeto Cafezinho Agentes",
+      "nivel": 2,
+      "st": "🔒",
+      "obs": "D3 — esteira V4.1 viva"
+    },
+    {
+      "label": "AG/agent_data",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/agent_data",
+      "nivel": 2,
+      "st": "🔒",
+      "obs": "D3"
+    },
+    {
+      "label": "AG/zm_operacoes",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/zm_operacoes",
+      "nivel": 2,
+      "st": "🟢",
+      "obs": "operações ZM"
+    },
+    {
+      "label": "AG/astra_operacoes",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes",
+      "nivel": 2,
+      "st": "🔒",
+      "obs": "D3"
+    },
+    {
+      "label": "AG/scratch",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/scratch",
+      "nivel": 2,
+      "st": "🔒",
+      "obs": "D3"
+    },
+    {
+      "label": "AG/grava_jornal_20260902",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/grava_jornal_20260902",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N11: temp de gravação — avaliar se morto"
+    },
+    {
+      "label": "AG/Cicero Agentes",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cicero Agentes",
+      "nivel": 2,
+      "st": "🟢",
+      "obs": ""
+    },
+    {
+      "label": "AG/moka",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/moka",
+      "nivel": 2,
+      "st": "🔒",
+      "obs": "D3 — app Moka ativo"
+    },
+    {
+      "label": "AG/Cerebro",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro",
+      "nivel": 2,
+      "st": "🔒",
+      "obs": "Cérebro canônico vivo (Camadas 1-3)"
+    },
+    {
+      "label": "AG/.ds_ponte_clone_309+308",
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/.ds_ponte_clone_309",
+      "nivel": 2,
+      "gb": 0.6,
+      "st": "🟢",
+      "obs": "2 últimos clones da ponte DS mantidos · leve 4/4h poda clones >3h limpos preservando os 2 últimos"
+    },
+    {
+      "label": "DF/mapario",
+      "path": "/home/migueldorosario/Dados_Frios/mapario",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4 — maior item da fila (vídeos 7,7G+2,9G · riocarta.bundle 2,3G)"
+    },
+    {
+      "label": "DF/Rio Carta Agentes",
+      "path": "/home/migueldorosario/Dados_Frios/Rio Carta Agentes",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4"
+    },
+    {
+      "label": "DF/Backups_workspace",
+      "path": "/home/migueldorosario/Dados_Frios/Backups_workspace",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4"
+    },
+    {
+      "label": "DF/livros baixados novos",
+      "path": "/home/migueldorosario/Dados_Frios/livros baixados novos",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4"
+    },
+    {
+      "label": "DF/Bella Cia Project",
+      "path": "/home/migueldorosario/Dados_Frios/Bella Cia Project",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4"
+    },
+    {
+      "label": "DF/scratch",
+      "path": "/home/migueldorosario/Dados_Frios/scratch",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4"
+    },
+    {
+      "label": "DF/Agentes Labs",
+      "path": "/home/migueldorosario/Dados_Frios/Agentes Labs",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N4"
+    },
+    {
+      "label": "DF/quarentena_ds_clones_20260908",
+      "path": "/home/migueldorosario/Dados_Frios/quarentena_ds_clones_20260908",
+      "nivel": 2,
+      "st": "🌙",
+      "obs": "N1b: clone_276 (314M, 2 edits sujos + stash) — resgatar conteúdo único; prazo resposta DS-Dell 10/09"
+    },
+    {
+      "label": "DF/Jornais do dia",
+      "path": "/home/migueldorosario/Dados_Frios/Jornais do dia",
+      "nivel": 2,
+      "st": "✅",
+      "obs": "L2: 501 PDFs → gdrive:Jornais do dia (verificado) · pasta = APONTADOR.md · cron 10:30/13:00/18:00 sobe e varre"
+    }
+  ],
+  "faxinas_regulares": [
+    {
+      "n": 1,
+      "nome": "Faxina geral do Dell (lotes do LEDGER)",
+      "cadencia": "semanal — automação pesada 03:15 (criação pendente: prompt arquivado em Foruns/sessoes_zcode/)",
+      "o_que": "LEDGER_APAGADOS.md: lotes N1-N12 — nada sai do disco sem backup VERIFICADO na nuvem",
+      "backups": "GDrive Backup_Total/dell_faxina + B2 failover-cafezinho1/faxina (por lote, ver LEDGER)",
+      "ultima": "2026-09-08",
+      "resultado": "94G liberados · disco 72%→51% · missão 4/15 lotes",
+      "marcador": ""
+    },
+    {
+      "n": 2,
+      "nome": "ZCode leve (antigos >14d → nuvem)",
+      "cadencia": "automática — automação leve a cada 4h (passo 4), poda o que passou de 14 dias",
+      "o_que": "artifacts/exec do ~/.zcode/cli >14d → tar+gpg AES256 → nuvem dupla → readback sha256 → poda",
+      "backups": "GDrive dell_faxina/zcode + B2 zcode-dell/antigos (passphrase alias ZM_ZCODE_ANTIGOS_PASSPHRASE)",
+      "ultima": "2026-09-08",
+      "resultado": "296 arquivos (7,8MB cifrado) · ~/.zcode/cli 1,2G",
+      "marcador": "~/.local/share/buscador_local/.marcadores/purga_zcode"
+    },
+    {
+      "n": 3,
+      "nome": "Snapshot do banco do ZCode + poda de sessões",
+      "cadencia": "semanal (domingo, madrugada — automação pesada, criação pendente; 1º manual feito 08/09)",
+      "o_que": "hot backup WAL-safe do db.sqlite VIVO → gpg → nuvem dupla → poda de conteúdo de sessões >14d (linhas preservadas)",
+      "backups": "GDrive dell_faxina/zcode/db + B2 zcode-dell/db (passphrase alias ZM_ZCODE_FAXINA_20260906_PASSPHRASE)",
+      "ultima": "2026-09-08",
+      "resultado": "1º snapshot: 521 sessões · gpg 253MB ×2 destinos",
+      "marcador": "~/.local/share/buscador_local/.marcadores/db_snapshot"
+    },
+    {
+      "n": 4,
+      "nome": "Rotação dos canais de comunicação",
+      "cadencia": "semanal — ou antes, se de_dell/de_laura passarem de 8-10MB",
+      "o_que": "canais quentes da ponte → arquivo/backup_<data> + nuvem dupla + repo GitHub; vivos novos leves com entrada ZM",
+      "backups": "quádruplo: arquivo/ local + GDrive dell_faxina/canais + B2 canais-dell + repo cerebro-miguel",
+      "ultima": "2026-09-08",
+      "resultado": "de_dell 9,9MB→1,5K · de_laura 2,9MB→716b · ZM-20260908-005",
+      "marcador": "auto:cabecalho_de_dell"
+    },
+    {
+      "n": 5,
+      "nome": "Índice local + espelho na nuvem (índice DUPLO)",
+      "cadencia": "diária — automação leve (passo 7), 1 espelho/dia (marker .ultimo_espelho)",
+      "o_que": "índice SQLite do buscador (265k arquivos) → GDrive+B2 com verificação de tamanho + CATALOGO_NUVEM.md",
+      "backups": "GDrive dell_faxina/indice + B2 faxina/indice (DB 139MB nos 2) + catálogo triplo via repo",
+      "ultima": "2026-09-08",
+      "resultado": "espelho verificado ×2 · catálogo no ar",
+      "marcador": "~/.local/share/buscador_local/.ultimo_espelho"
+    },
+    {
+      "n": 6,
+      "nome": "Jornais do dia (PDFs >3d)",
+      "cadencia": "diária — cron 10:30/13:00/18:00 (sweep após upload)",
+      "o_que": "sweep_jornais_verificados.py: apaga PDF local >3d SÓ com cópia idêntica verificada no GDrive (fail-safe)",
+      "backups": "GDrive Jornais do dia (1.219 arquivos · 31,7GB)",
+      "ultima": "2026-09-08",
+      "resultado": "fluxo corrigido 15:4x (LEDGER 2.3)",
+      "marcador": ""
+    }
+  ]
+}

@@ -1,0 +1,721 @@
+{
+  "incident208.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T08:18:21.879111-03:00",
+      "since": "2026-09-11T07:47:55.951225-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "230e4523c1a833c387664b567782517d60c64ae147fcdcfd84a1b7c0ff4c0b5d",
+          "requests": 177,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "bfab787878f79ea1e2912f1d6a368c8abbd31333edd9f088ef422001f16d2632",
+          "requests": 6612,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        }
+      ],
+      "redis_errors": {
+        "sha256": "6601ad4abbde8cdf2d951e1e1be0c9f5326e64b12d483d5358eea282ab1a68ec",
+        "total": 0,
+        "by_minute": {}
+      },
+      "redis_info": {
+        "uptime_in_seconds": "17204",
+        "used_memory": "888872296",
+        "used_memory_peak": "1292986176",
+        "expired_keys": "411",
+        "evicted_keys": "0",
+        "db0": "keys=444699,expires=79,avg_ttl=45624811922"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "integrity.json": {
+    "at": "2026-09-11T08:18:18.365472-03:00",
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "local_sha256": "00cc1672b9ffef1054df3506814dc9a66d1cef849fceecae8376f9f8ccf425f1",
+        "canonical_sha256": "00cc1672b9ffef1054df3506814dc9a66d1cef849fceecae8376f9f8ccf425f1",
+        "origin_sha256": "00cc1672b9ffef1054df3506814dc9a66d1cef849fceecae8376f9f8ccf425f1",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "local_sha256": "a8ac9c3e4ccaebf5f97164dbe660c1151691bb02a50b6ea6e285792c2644ed6d",
+        "canonical_sha256": "a8ac9c3e4ccaebf5f97164dbe660c1151691bb02a50b6ea6e285792c2644ed6d",
+        "origin_sha256": "a8ac9c3e4ccaebf5f97164dbe660c1151691bb02a50b6ea6e285792c2644ed6d",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "local_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01",
+        "origin_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "local_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "canonical_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "origin_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+        "local_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+        "origin_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      }
+    ],
+    "remote_ref_present": {
+      "XM-20260910-039": false,
+      "XM-20260911-013": true
+    },
+    "pre_push_exists": false
+  },
+  "editorial_readback.json": {
+    "rc": 0,
+    "at": "2026-09-11T08:19:29.575204-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T08:19:29-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269882,
+          "hash": "87c4e1d6b62c72660982894cb2e9072815918e489bbf6a154e9726dc8af4f4dc",
+          "status": "publish",
+          "title": "Lula defende abrir sigilos do STF e promete presídios de segurança máxima",
+          "author": "2018",
+          "date": "2026-09-11 07:57:14",
+          "slug": "lula-entrevista-sbt-serie-presidenciais-2026",
+          "fm": 269883,
+          "categories": [
+            5088,
+            21141,
+            22,
+            28
+          ],
+          "edit_lock": "1789120950:2018",
+          "audit": "",
+          "edit_active": false,
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269409,
+          "hash": "d02afa04d6803e67a0f70bab77044c20b048513515bff325954c0fca16f2378d",
+          "status": "publish",
+          "title": "Secretário uruguaio chama de colonialista acordo do petróleo venezuelano",
+          "author": "5470",
+          "date": "2026-09-08 09:15:00",
+          "slug": "secretario-uruguaio-chama-de-colonialista-acordo-do-petroleo-venezuelano",
+          "fm": 269414,
+          "categories": [
+            5003,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "audit": "[{\"revisor\":\"ast\",\"ts\":\"2026-09-11 08:03:30\",\"titulo\":\"Secretu00e1rio uruguaio chama de colonialista acordo do petru00f3leo venezuelano\",\"sha_conteudo\":\"5e0081d1e3b5100fd6fefb782e5c7d6c14f5d54423b21b24dee6747a0bf03aec\",\"titulo_anterior\":\"Secretu00e1rio uruguaio chama de colonialista acordo do petru00f3leo venezuelano\"}]",
+          "edit_active": false,
+          "protection": ""
+        },
+        {
+          "id": 269420,
+          "hash": "8de29a8d289be6c889674542b49d13a24dfb536b7c8aae8a820d645d85b9b8ae",
+          "status": "publish",
+          "title": "Nexus aponta empate técnico entre Flávio e Lula no segundo turno",
+          "author": "5780",
+          "date": "2026-09-08 09:12:36",
+          "slug": "btg-nexus-ja-mostra-flavio-a-frente-de-lula-no-2o-turno",
+          "fm": 269421,
+          "categories": [
+            2403
+          ],
+          "edit_lock": "1788869910:5735",
+          "audit": "[{\"revisor\":\"ast\",\"ts\":\"2026-09-11 08:07:28\",\"titulo\":\"Nexus aponta empate tu00e9cnico entre Flu00e1vio e Lula no segundo turno\",\"sha_conteudo\":\"704cdb4259763fbc03e953045c88c21e96116e00bbcb9fac2c398de5145282a1\",\"titulo_anterior\":\"BTG/Nexus ju00e1 mostra Flu00e1vio u00e0 frente de Lula no 2u00ba turno\"},{\"revisor\":\"ast\",\"ts\":\"2026-09-11 08:12:02\",\"titulo\":\"Nexus aponta empate tu00e9cnico entre Flu00e1vio e Lula no segundo turno\",\"sha_conteudo\":\"248d739e3c117ec592b0a34933bbd76ab16265bd269c8d2db101198d67241171\",\"titulo_anterior\":\"Nexus aponta empate tu00e9cnico entre Flu00e1vio e Lula no segundo turno\"}]",
+          "edit_active": false,
+          "protection": "post_publicado_por_humano"
+        }
+      ]
+    }
+  },
+  "public_verified.json": [
+    {
+      "post_id": 269882,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/11/lula-entrevista-sbt-serie-presidenciais-2026/",
+      "at": "2026-09-11T08:19:28.269381-03:00",
+      "sha256_html": "cf02c7b1e8e85e735b2f19ae3237192ccdcb9a879e994a309051bf70f4de8711",
+      "paragraphs": 22,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 24,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269409,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/secretario-uruguaio-chama-de-colonialista-acordo-do-petroleo-venezuelano/",
+      "at": "2026-09-11T08:19:28.313258-03:00",
+      "sha256_html": "fb0ad8ecaf5510202b9e4025ca83db1b44cd1aee59bda88e524865bb42c5c8cd",
+      "paragraphs": 11,
+      "all_paragraphs_present": false,
+      "missing": [
+        "Sánchez fez a declaração em 6 de setembro de 2026, durante um encontro promovido pelo Movimento de Participação Popular (MPP) no Parque Capurro, em Montevidéu. O dirigente também criticou a baixa reação política dos países vizinhos diante da pressão externa sobre os recursos venezuelanos."
+      ],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 2,
+      "all_text_blocks_present": false,
+      "missing_blocks": [
+        "O secretário da Presidência do Uruguai, Alejandro Sánchez, afirmou que um acordo petrolífero entre Estados Unidos e Venezuela entrega a Washington o controle majoritário sobre mais de 65 bilhões de barris de reservas venezuelanas. Para ele, o arranjo configura \"uma ação já nem sequer imperialista, mas colonialista\". Sánchez fez a declaração em 6 de setembro de 2026, durante um encontro promovido pelo Movimento de Participação Popular (MPP) no Parque Capurro, em Montevidéu. O dirigente também criticou a baixa reação política dos países vizinhos diante da pressão externa sobre os recursos venezuelanos. \"Há bastante silêncio sobre o que está acontecendo na Venezuela\", disse Sánchez, de acordo com o jornal uruguaio La Diaria. Ele afirmou que centros de poder \"obrigam os Estados a assinar aquilo que mais lhes interessa\". Controle sobre reservas estratégicas Segundo a descrição apresentada pelo secretário, o acordo concede aos Estados Unidos poder majoritário sobre um volume superior a 65 bilhões de barris. O acordo que ele critica foi anunciado por Donald Trump e ratificado pela Assembleia Nacional venezuelana em 1º de setembro. O entendimento entrega a exploração de 17 campos de petróleo à empresa North American Blue Energy Partners e prevê participação acionária e poder de veto do governo norte-americano sobre a produção. Sánchez não detalhou no discurso as cláusulas nem a divisão operacional prevista, o que impede medir pelo seu relato o alcance jurídico do controle. A dimensão material da denúncia, porém, está no deslocamento da capacidade de decisão sobre o petróleo venezuelano para uma potência estrangeira. \"Temos de ser conscientes de que a América Latina está sendo, lamentavelmente, novamente submetida e espoliada\", afirmou. A crítica alcança um mecanismo recorrente na região, no qual acordos firmados sob forte pressão externa limitam o poder dos Estados sobre energia, minérios e outras riquezas estratégicas. Disputa entre Estados Unidos e China Sánchez inseriu a Venezuela na disputa internacional por recursos protagonizada por Estados Unidos e China. Ele defendeu que o Uruguai preserve autonomia diante das duas potências e declarou que o país não quer que nenhuma delas interfira nas decisões nacionais. A condenação mais dura foi dirigida à política de Washington para o petróleo venezuelano. Na avaliação do secretário, a apropriação do poder decisório sobre as reservas ultrapassa a influência econômica e assume caráter colonial. O dirigente uruguaio também disse que o enfraquecimento dos espaços multilaterais das Nações Unidas prejudica países pequenos. Sem instituições capazes de conter relações desiguais, negociações bilaterais passam a refletir com maior intensidade o peso econômico e político de cada parte."
+      ],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269420,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/btg-nexus-ja-mostra-flavio-a-frente-de-lula-no-2o-turno/",
+      "at": "2026-09-11T08:19:28.355002-03:00",
+      "sha256_html": "4cec8125a6e0e5f7fd6b57d830e9ca2bdbb24310924eefc06bb958b1e4950d2f",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 8,
+      "all_text_blocks_present": false,
+      "missing_blocks": [
+        "A 13ª rodada da pesquisa BTG/Nexus , divulgada nesta terça-feira (8), registra um marco simbólico na série histórica do instituto: pela primeira vez, o senador Flávio Bolsonaro (PL) aparece numericamente à frente do presidente Lula (PT) no cenário de segundo turno — 46% a 45%. A diferença de um ponto está dentro da margem de erro de dois pontos, o que mantém o resultado tecnicamente empatado, mas a inversão da posição, mesmo que estatisticamente insignificante, rompe um padrão que vinha se repetindo desde pelo menos 24 de agosto, quando Lula tinha 46% contra 45% de Flávio — exatamente os números trocados de posição.",
+        "A estratificação desta rodada, uma das mais completas divulgadas nas últimas semanas, expõe com nitidez os contornos da polarização. Lula tem 43% entre as mulheres, contra 31% de Flávio. Entre os homens, o senador aparece com 39%, e o presidente, com 35%; a margem de erro nesse recorte é de 3 pontos percentuais. Entre eleitores com 60 anos ou mais, chega a 44%; entre quem tem apenas ensino fundamental, 47%; e na faixa de renda de até um salário mínimo, 46% contra 26% de Flávio — os pilares tradicionais da base lulista seguem sólidos.",
+        "O recorte regional, porém, escancara a fratura geográfica do país: no Nordeste, Lula vence por 54% a 23% — a maior vantagem regional de toda a pesquisa, coerente com os números que este site já vem documentando semana após semana no Ceará e na Bahia. No Sudeste, mantém liderança mais estreita (39% a 35%). Mas no Sul, o quadro se inverte de forma dramática: Flávio dispara para 50% contra apenas 22% de Lula — uma diferença de 28 pontos percentuais. No Norte e Centro-Oeste, Flávio também lidera, 42% a 31%, e no interior do país como um todo, Flávio tem 38%, contra 36% de Lula; a margem de erro nesse recorte é de 3 pontos percentuais."
+      ],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "public_latest_full.json": [
+    {
+      "post_id": 269409,
+      "blocks": 11,
+      "missing": [],
+      "all_blocks_present": true,
+      "sha256_html": "4ceff06d50912a5b4773946628580bd1e06808267690dd3f6aa9a07709959dbd",
+      "markers": []
+    },
+    {
+      "post_id": 269420,
+      "blocks": 8,
+      "missing": [],
+      "all_blocks_present": true,
+      "sha256_html": "e6675feae06158c0f91cce7443b3fd08133f00ce679c53f922dc58bf8ca24871",
+      "markers": []
+    }
+  ],
+  "public_probe.json": [
+    {
+      "post_id": 269420,
+      "query": false,
+      "at": "2026-09-11T08:21:06.330723-03:00",
+      "http": 200,
+      "headers": {
+        "Age": null,
+        "CF-Cache-Status": "DYNAMIC",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "X-Cache": null,
+        "Last-Modified": null,
+        "Date": "Fri, 11 Sep 2026 11:21:05 GMT"
+      },
+      "hash": "e6675feae06158c0f91cce7443b3fd08133f00ce679c53f922dc58bf8ca24871",
+      "h1": [
+        "Nexus aponta empate técnico entre Flávio e Lula no segundo turno"
+      ],
+      "new_men": true,
+      "old_men": false,
+      "new_date": false,
+      "old_date": false
+    },
+    {
+      "post_id": 269420,
+      "query": true,
+      "at": "2026-09-11T08:21:08.820351-03:00",
+      "http": 200,
+      "headers": {
+        "Age": null,
+        "CF-Cache-Status": "DYNAMIC",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "X-Cache": null,
+        "Last-Modified": null,
+        "Date": "Fri, 11 Sep 2026 11:21:08 GMT"
+      },
+      "hash": "d1824c5bb62ed0b6122741cda0ead8f3eed8496f5b73b10d04b0902c4b57b93b",
+      "h1": [
+        "Nexus aponta empate técnico entre Flávio e Lula no segundo turno"
+      ],
+      "new_men": true,
+      "old_men": false,
+      "new_date": false,
+      "old_date": false
+    },
+    {
+      "post_id": 269409,
+      "query": false,
+      "at": "2026-09-11T08:21:47.487864-03:00",
+      "http": 200,
+      "headers": {
+        "Age": null,
+        "CF-Cache-Status": "DYNAMIC",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "X-Cache": null,
+        "Last-Modified": null,
+        "Date": "Fri, 11 Sep 2026 11:21:47 GMT"
+      },
+      "hash": "4ceff06d50912a5b4773946628580bd1e06808267690dd3f6aa9a07709959dbd",
+      "h1": [
+        "Secretário uruguaio chama de colonialista acordo do petróleo venezuelano"
+      ],
+      "new_men": false,
+      "old_men": false,
+      "new_date": true,
+      "old_date": false
+    },
+    {
+      "post_id": 269409,
+      "query": true,
+      "at": "2026-09-11T08:21:52.848857-03:00",
+      "http": 200,
+      "headers": {
+        "Age": null,
+        "CF-Cache-Status": "DYNAMIC",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "X-Cache": null,
+        "Last-Modified": null,
+        "Date": "Fri, 11 Sep 2026 11:21:52 GMT"
+      },
+      "hash": "73f9e127648c4184f5557eedee84a963345269558b82e4ed95feb01d3ebfd834",
+      "h1": [
+        "Secretário uruguaio chama de colonialista acordo do petróleo venezuelano"
+      ],
+      "new_men": false,
+      "old_men": false,
+      "new_date": true,
+      "old_date": false
+    }
+  ],
+  "public_probe_nyc.json": {
+    "rc": 0,
+    "data": [
+      {
+        "post_id": 269420,
+        "query": false,
+        "at": "2026-09-11T11:22:16.923262+00:00",
+        "http": 200,
+        "headers": {
+          "Age": null,
+          "CF-Cache-Status": "DYNAMIC",
+          "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+          "X-Cache": null,
+          "Last-Modified": null,
+          "Date": "Fri, 11 Sep 2026 11:22:16 GMT"
+        },
+        "hash": "81b92f18c908626ff1c7c5ce664b0a911e209716c68aa9512c5864bc4b611d03",
+        "h1": [
+          "Nexus aponta empate técnico entre Flávio e Lula no segundo turno"
+        ],
+        "new_men": true,
+        "old_men": false,
+        "new_date": false,
+        "old_date": false
+      },
+      {
+        "post_id": 269420,
+        "query": true,
+        "at": "2026-09-11T11:22:19.854036+00:00",
+        "http": 200,
+        "headers": {
+          "Age": null,
+          "CF-Cache-Status": "DYNAMIC",
+          "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+          "X-Cache": null,
+          "Last-Modified": null,
+          "Date": "Fri, 11 Sep 2026 11:22:19 GMT"
+        },
+        "hash": "81945fc8b4c7389f2ab813bf3ee5f4f87cf44de4ad95361b6d1258c069870fdc",
+        "h1": [
+          "Nexus aponta empate técnico entre Flávio e Lula no segundo turno"
+        ],
+        "new_men": true,
+        "old_men": false,
+        "new_date": false,
+        "old_date": false
+      },
+      {
+        "post_id": 269409,
+        "query": false,
+        "at": "2026-09-11T11:22:17.157344+00:00",
+        "http": 200,
+        "headers": {
+          "Age": null,
+          "CF-Cache-Status": "DYNAMIC",
+          "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+          "X-Cache": null,
+          "Last-Modified": null,
+          "Date": "Fri, 11 Sep 2026 11:22:17 GMT"
+        },
+        "hash": "921a39b76a028eb6d2a4d3c69ccc3a50df7240630b1090f88c4599b57106df76",
+        "h1": [
+          "Secretário uruguaio chama de colonialista acordo do petróleo venezuelano"
+        ],
+        "new_men": false,
+        "old_men": false,
+        "new_date": true,
+        "old_date": false
+      },
+      {
+        "post_id": 269409,
+        "query": true,
+        "at": "2026-09-11T11:22:20.337711+00:00",
+        "http": 200,
+        "headers": {
+          "Age": null,
+          "CF-Cache-Status": "DYNAMIC",
+          "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+          "X-Cache": null,
+          "Last-Modified": null,
+          "Date": "Fri, 11 Sep 2026 11:22:20 GMT"
+        },
+        "hash": "f01ed6eabc7911c36abf0bd2e2b982124121a2d2fe81e8e6ce72eed5cad72c8d",
+        "h1": [
+          "Secretário uruguaio chama de colonialista acordo do petróleo venezuelano"
+        ],
+        "new_men": false,
+        "old_men": false,
+        "new_date": true,
+        "old_date": false
+      }
+    ],
+    "error": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n"
+  },
+  "previous_continuity.json": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_ronda.md",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "3cf79f7e61f8255259f3dcade18b3156a84449655f35b2e61fe0e15ef810b45d",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_evidencias.json",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "021b02a422deff8fdc4aa732aaa1086a2456173802c3a4e64b6f3dbcad8da675",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_verificacao.json",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "d3d0d86efecad00f9a96863ad727fedcb3e586b78d4fc2794ede63fa68f3a2e2",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_editorial.md",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "7a91f194f4dcd78d5efc1a4f3b9637a0540e91a45e62b203bd5a42e806ff4ab8",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_transporte.json",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "60e86d3acc374ec6fb1d2fd6640e6e34c57e326427fd41fa68a020e4eed056d4",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_encaminhamento_pendente.md",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "6b68aba055711109334de5d3e278140879ed391dc242da9bfa433309daebf503",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_validacao.json",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "d72b3df8a20d77da73ee0a1bff993c27a5d406e31003ea5d4197bf5b13ba7189",
+      "local_same": false,
+      "origin_same": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_validacao_final.json",
+      "local_exists": false,
+      "origin_exists": false,
+      "original_sha256": "75bf3449806951cc60a5c1df8460937cab82598a3f6d1f6f0a1a4ded83db9fc4",
+      "local_same": false,
+      "origin_same": false
+    }
+  ]
+}

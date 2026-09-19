@@ -1,0 +1,315 @@
+{
+ "metadata": {
+  "politica": "classificação pela assinatura do ERRO MAIS RECENTE (last_attempt), não por presença de assinatura",
+  "grupos_mistos": 20,
+  "grupos_totais": 412
+ },
+ "distribuicao_final_412": {
+  "code_blocked": 37,
+  "retry_ready_condicional": 151,
+  "retry_ready_transient": 110,
+  "config_blocked": 114
+ },
+ "grupos_mistos_detalhe": [
+  {
+   "entidade": "Flavio Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55403098431_a1145f7c7e_o.jpg",
+   "tentativas": 75,
+   "assinaturas_historicas": [
+    "TECH_429_CREDITO",
+    "TECH_TIMEOUT"
+   ],
+   "erro_mais_recente": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to man",
+   "classe_erro_mais_recente": "TECH_429_CREDITO",
+   "decisao_temporal": "retry_ready_condicional",
+   "justificativa": "429 crédito; retry-ready se rota saudável (P3 confirmou OK hoje)",
+   "first_attempt": "2026-07-23T03:03:39",
+   "last_attempt": "2026-07-25T13:04:59"
+  },
+  {
+   "entidade": "Benjamin Netanyahu",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Benjamin_Netanyahu_1996.jpg?",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"bf9e6c0e-2e62-9246-842e-dc62530a3bf6\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:36:31",
+   "last_attempt": "2026-08-04T01:10:38"
+  },
+  {
+   "entidade": "Friedrich Merz",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2024-08-21_Event%2C_CD",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T17:40:01",
+   "last_attempt": "2026-08-04T01:16:14"
+  },
+  {
+   "entidade": "Helder Barbalho",
+   "url_canonica": "https://live.staticflickr.com/4380/36339454870_2838244409_o.jpg",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T19:43:40",
+   "last_attempt": "2026-08-04T12:46:15"
+  },
+  {
+   "entidade": "Marco Rubio",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Marco_Rubio_%282434314",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"2b287ec6-5ae9-9b43-ba76-b1320fc0c39b\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:41:32",
+   "last_attempt": "2026-08-04T01:18:52"
+  },
+  {
+   "entidade": "Marco Rubio",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Marco_Rubio_%282208454",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"ffc66878-efd4-9fa4-b755-fe8a17853f82\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T18:15:03",
+   "last_attempt": "2026-08-04T02:12:31"
+  },
+  {
+   "entidade": "Marco Rubio",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Marco_Rubio_%282363388",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T19:42:00",
+   "last_attempt": "2026-08-04T04:13:25"
+  },
+  {
+   "entidade": "Mojtaba Khamenei",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Ayatollah_Sayyid_Mojtaba_Kha",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"1a02a1f9-f198-9f56-9893-4cb6d915479e\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:37:42",
+   "last_attempt": "2026-08-04T01:13:11"
+  },
+  {
+   "entidade": "Narendra Modi",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Narendra_Modi_and_Michael_Wa",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T17:39:14",
+   "last_attempt": "2026-08-04T01:15:45"
+  },
+  {
+   "entidade": "Recep Tayyip Erdogan",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/1/12/Prime_Minister_of_Turkey_Rec",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T17:39:39",
+   "last_attempt": "2026-08-04T01:15:55"
+  },
+  {
+   "entidade": "Recep Tayyip Erdogan",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Recep_Tayyip_Erdogan_%282020",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"565ac59c-f984-9c80-aceb-41d42adac4de\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:39:43",
+   "last_attempt": "2026-08-04T01:15:57"
+  },
+  {
+   "entidade": "Scott Bessent",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Jamieson_Greer_Howard_",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T17:18:57",
+   "last_attempt": "2026-08-04T01:22:10"
+  },
+  {
+   "entidade": "Senado Federal",
+   "url_canonica": "https://live.staticflickr.com/65535/55441184055_2a4482ee60_o.jpg",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"eee6779a-bef2-9357-ac8b-2dcc1696a4c7\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T18:03:59",
+   "last_attempt": "2026-08-04T02:03:34"
+  },
+  {
+   "entidade": "Volodymyr Zelensky",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Visite_de_Volodymyr_Ze",
+   "tentativas": 3,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"af7244a3-fc5c-94ad-b990-55d992bc6448\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-04T05:35:58",
+   "last_attempt": "2026-08-04T13:36:48"
+  },
+  {
+   "entidade": "Abbas Araghchi",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Meeting_Dr._Seyed_Abba",
+   "tentativas": 2,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"9bcc4260-c5b6-942a-a8bf-5bc7dc7daa8a\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:16:46",
+   "last_attempt": "2026-08-03T18:17:04"
+  },
+  {
+   "entidade": "Abbas Araghchi",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dr._Seyed_Abbas_Araghc",
+   "tentativas": 2,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T17:16:43",
+   "last_attempt": "2026-08-03T18:17:03"
+  },
+  {
+   "entidade": "J.D. Vance",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/9/9c/J.D._Vance_Senate_Resignatio",
+   "tentativas": 2,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_SSLError: HTTPSConnectionPool(host='ws-aduzgn18hhh3ckpj.ap-southeast-1.maas.aliyuncs.com', port=443): Max retr",
+   "classe_erro_mais_recente": "TECH_SSL",
+   "decisao_temporal": "retry_ready_transient",
+   "justificativa": "SSL; transitório, retry-ready com backoff",
+   "first_attempt": "2026-08-03T17:15:36",
+   "last_attempt": "2026-08-03T18:15:51"
+  },
+  {
+   "entidade": "Recep Tayyip Erdogan",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Recep_Tayyip_Erdogan-W",
+   "tentativas": 2,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"1a99d553-c88b-94e5-9c2b-ef1b1df862ff\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T21:09:16",
+   "last_attempt": "2026-08-04T11:12:48"
+  },
+  {
+   "entidade": "Volodymyr Zelensky",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Visite_de_Volodymyr_Ze",
+   "tentativas": 2,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"069d8f46-5ff5-9c2c-a9e0-d6488d3e809a\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:35:53",
+   "last_attempt": "2026-08-03T19:04:36"
+  },
+  {
+   "entidade": "Wang Yi",
+   "url_canonica": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/2018_Karin_Kneissl_and",
+   "tentativas": 2,
+   "assinaturas_historicas": [
+    "TECH_CONFIG_BLOCKED_403",
+    "TECH_SSL"
+   ],
+   "erro_mais_recente": "qwen:qwen_http_403: {\"error\":{\"message\":\"Workspace endpoint access denied.\",\"id\":\"72d9d73f-738b-9dbd-91e8-9049b049b32b\",",
+   "classe_erro_mais_recente": "TECH_CONFIG_BLOCKED_403",
+   "decisao_temporal": "config_blocked",
+   "justificativa": "403 Workspace; exige corrigir config antes",
+   "first_attempt": "2026-08-03T17:15:53",
+   "last_attempt": "2026-08-03T18:16:51"
+  }
+ ]
+}

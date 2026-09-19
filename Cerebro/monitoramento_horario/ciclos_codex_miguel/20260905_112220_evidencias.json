@@ -1,0 +1,569 @@
+{
+  "snapshot_brt": "2026-09-05T11:18:50.043975-03:00",
+  "head": "bc32a536f38b0faed827b05a6720b8929a88d6a6",
+  "previous_receipt": "20260905_105151_ronda.md",
+  "previous_evidence_sha256": "598954b50392bdea083e5d19c1be74d13c42f3b139fba7361d9da01a89db1cb7",
+  "sources": {
+    "/home/migueldorosario/cerebro-miguel/LOOP_MIGUEL_CODEX.md": {
+      "sha256": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+      "bytes": 5018,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_00.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": {
+      "sha256": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+      "bytes": 6955,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_01.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/claude_memory/project_cadencias_trindade_20260817.md": {
+      "sha256": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+      "bytes": 4802,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_02.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/MEMORY.md": {
+      "sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "bytes": 7251,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_03.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/CONTRATO_PONTE_COMPLETA.md": {
+      "sha256": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380",
+      "bytes": 12613,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_04.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "sha256": "46a08424461cae97f93c10f46dd69953d4aa55e9dc640100e3d8c6e48008ad30",
+      "bytes": 2178783,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_05.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "bytes": 171,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_06.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+      "bytes": 12668,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_07.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "sha256": "88147d8e9694b4759ea3a4e63a70921477518eb4b9d519873a0ba2e35be6dae4",
+      "bytes": 233124,
+      "same_as_previous": false,
+      "previous_prefix_matches": false,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_08.bin",
+      "baseline_git": "d95a2eb458ce443147df8bb2219eea865951f305"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/canal_trindade.md": {
+      "sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "bytes": 34534,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_09.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_imagens_v4_LOG.md": {
+      "sha256": "5b5fc8feb7b8580852919cb5c3edcf7a2ef9c6987e08e59c1c842349c13ac970",
+      "bytes": 322879,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_10.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/codex.md": {
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "bytes": 11403,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_11.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/claude.md": {
+      "sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb",
+      "bytes": 1036878,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_12.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/zcode.md": {
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "bytes": 48590,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_13.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/grok.md": {
+      "sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "bytes": 18816,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_14.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "sha256": "03081bdfe05096ea41f1d461d8346384b85bcf9392dd10a67b0e87e07cea4b80",
+      "bytes": 6228244,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_15.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "bytes": 76859,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_16.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "bytes": 93356,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_17.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "sha256": "46a08424461cae97f93c10f46dd69953d4aa55e9dc640100e3d8c6e48008ad30",
+      "bytes": 2178783,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_18.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "sha256": "03081bdfe05096ea41f1d461d8346384b85bcf9392dd10a67b0e87e07cea4b80",
+      "bytes": 6228244,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_19.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "bytes": 76859,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_20.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "bytes": 93356,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_21.bin"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14",
+      "bytes": 154,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_22.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Estilo/MANUAL_DE_COMUNICACAO_INTERNA.md": {
+      "sha256": "9f172d66e7433183f2be741615ed6f41a46497afe6e022b81ad4999944db43da",
+      "bytes": 4884,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_23.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md": {
+      "sha256": "e29e1390529546eef4c9625de1aed440cc925dfc255e0de51cd11273f863a888",
+      "bytes": 18189,
+      "same_as_previous": false,
+      "previous_prefix_matches": false,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_24.bin",
+      "baseline_git": "aba62cac9ffdaa877df896982286bc239c5a10c5"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/astra.md": {
+      "sha256": "f4cf210005b259657fea0ca1636c11df39d0989e6bdcc31616dd3e5267ef341d",
+      "bytes": 400,
+      "same_as_previous": true,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_25.bin"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "sha256": "9ce4628bdf5c3770cd7cdd570075ac935a4327df1afcddfac89f190b848ae174",
+      "bytes": 150862,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "snapshot": "/tmp/codex-miguel-ronda-20260905-hispxa4m/source_26.bin"
+    }
+  },
+  "deltas": [
+    {
+      "source": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_05.txt",
+      "bytes": 3388,
+      "method": "append_from_previous_bytes",
+      "sha256": "9b25052f90d926270f1611b76d03f89df9938ee9c470a2ad430e064e9cbd1bd1"
+    },
+    {
+      "source": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_08.txt",
+      "bytes": 1217,
+      "method": "diff_zero_context",
+      "sha256": "47e4135fb081d3f753687a7e56d30bcf204bed81f77077a922d3f0f305855b67"
+    },
+    {
+      "source": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_15.txt",
+      "bytes": 17942,
+      "method": "append_from_previous_bytes",
+      "sha256": "c9846b5a77a96742d9cb8c016a3426e249e9225957dc19c27a62292514e29632"
+    },
+    {
+      "source": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_18.txt",
+      "bytes": 8839,
+      "method": "append_from_previous_bytes",
+      "sha256": "a61c0a91cf4e5cab87023ccc50892933351b3b4b29351a5a8855a28a0e928bf9"
+    },
+    {
+      "source": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_19.txt",
+      "bytes": 18762,
+      "method": "append_from_previous_bytes",
+      "sha256": "12e46a6505e3d73a62f2cf8ba0ab0830a26ca1e40db5bfb8aa359b8c757e4861"
+    },
+    {
+      "source": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_24.txt",
+      "bytes": 33500,
+      "method": "diff_zero_context",
+      "sha256": "c3bf2a7c1797da0c44fe5fd0faf8841fd1cdea617e94ea658e4a42c7dd2ca89f"
+    },
+    {
+      "source": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+      "file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_26.txt",
+      "bytes": 142,
+      "method": "append_from_previous_bytes",
+      "sha256": "4ff6e2b5009ecad08faa7011886df7aaa9ae6fcdacddf0669d66f330f15e1cf4"
+    }
+  ],
+  "preexisting_status": [
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_105151_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_105151_ronda.md"
+  ],
+  "ref": "XM-20260905_112220-HOLD",
+  "time_brt": "2026-09-05T11:22:20.998685-03:00",
+  "first_clock_checkpoint_brt": "2026-09-05T11:17:43-03:00",
+  "mode": "OBSERVACAO_FASE2_HOLD_INTEGRIDADE",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "rounds_executed": 1,
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "result": "Already up to date.",
+    "head_after_pull": "bc32a536f38b0faed827b05a6720b8929a88d6a6"
+  },
+  "head_at_close": "2e26f4bfc5d39fdd4ce2ee7a019467e9d827d5a7",
+  "integrity": {
+    "checked_brt": "2026-09-05T11:19:46.659723-03:00",
+    "copies": {
+      "de_laura.md": {
+        "equal": true,
+        "clone_sha256": "46a08424461cae97f93c10f46dd69953d4aa55e9dc640100e3d8c6e48008ad30",
+        "canonical_sha256": "46a08424461cae97f93c10f46dd69953d4aa55e9dc640100e3d8c6e48008ad30",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": true
+      },
+      "de_dell.md": {
+        "equal": true,
+        "clone_sha256": "03081bdfe05096ea41f1d461d8346384b85bcf9392dd10a67b0e87e07cea4b80",
+        "canonical_sha256": "03081bdfe05096ea41f1d461d8346384b85bcf9392dd10a67b0e87e07cea4b80",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": true
+      },
+      "ledger/codex_miguel.md": {
+        "equal": true,
+        "clone_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+        "canonical_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": true
+      },
+      "estado/codex_miguel.md": {
+        "equal": true,
+        "clone_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+        "canonical_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": true
+      },
+      "loop_ativo.json": {
+        "equal": false,
+        "clone_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14",
+        "canonical_is_prefix_of_clone": false,
+        "clone_is_prefix_of_canonical": false,
+        "clone_value": {
+          "ativo": "laura",
+          "desde": "2026-08-18T08:40:00-03:00",
+          "motivo": "ordem Miguel 18/08 ~08:35 — Laura primária, Miguel redundância (skip)",
+          "failover_para": "miguel"
+        },
+        "canonical_value": {
+          "ativo": "laura",
+          "desde": "2026-08-22T20:25:03-03:00",
+          "motivo": "Laura fresca no GitHub por >= 20 min (reversão automática)",
+          "failover_para": null
+        }
+      }
+    },
+    "ref_occurrences": {
+      "clone/ledger/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      },
+      "canonical/ledger/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      },
+      "clone/estado/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      },
+      "canonical/estado/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      }
+    },
+    "ponte_health_conflict_lines": [
+      110,
+      111,
+      112,
+      114,
+      116,
+      119
+    ],
+    "claude_inbox": {
+      "equal": false,
+      "clone_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "canonical_sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb"
+    },
+    "git_changed_ledger_paths": [
+      "cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+      "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md"
+    ],
+    "normative_paths_changed_since_previous_head": []
+  },
+  "public_rest": [
+    {
+      "target": "canonico",
+      "id": 269122,
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269122?_fields=id,status,date,modified,author,featured_media,title,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T11:20:16.732375-03:00",
+      "http": 200,
+      "server_date": "Sat, 05 Sep 2026 14:20:17 GMT",
+      "final_url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269122?_fields=id,status,date,modified,author,featured_media,title,link",
+      "body_sha256": "a95c5a2123d1433f88a7697460182ce0553ee53de0827f4e5ca60456e0e38e43",
+      "raw_body_file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/rest_canonico_269122.json",
+      "data": {
+        "id": 269122,
+        "date": "2026-09-05T11:08:00",
+        "modified": "2026-09-05T10:42:36",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/05/tse-mantem-cinco-candidaturas-presidenciais-sob-analise/",
+        "title": {
+          "rendered": "TSE mantém cinco candidaturas presidenciais sob análise"
+        },
+        "author": 5470,
+        "featured_media": 269123
+      },
+      "raw_body_utf8": "{\"id\":269122,\"date\":\"2026-09-05T11:08:00\",\"modified\":\"2026-09-05T10:42:36\",\"status\":\"publish\",\"link\":\"https:\\/\\/www.ocafezinho.com\\/2026\\/09\\/05\\/tse-mantem-cinco-candidaturas-presidenciais-sob-analise\\/\",\"title\":{\"rendered\":\"TSE mant\\u00e9m cinco candidaturas presidenciais sob an\\u00e1lise\"},\"author\":5470,\"featured_media\":269123}"
+    },
+    {
+      "target": "espelho",
+      "id": 269116,
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/269116?_fields=id,status,date,modified,author,featured_media,title,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T11:20:16.733373-03:00",
+      "http": 404,
+      "server_date": "Sat, 05 Sep 2026 14:20:17 GMT",
+      "body_sha256": "2f6d8723c215f1d9cc1480fcedec48efc27a4a63544d72d84bd16e4e7b997a5e",
+      "raw_body_file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/rest_espelho_269116.json",
+      "data": {
+        "code": "rest_post_invalid_id",
+        "message": "ID inválido de post.",
+        "data": {
+          "status": 404
+        }
+      },
+      "raw_body_utf8": "{\"code\":\"rest_post_invalid_id\",\"message\":\"ID inv\\u00e1lido de post.\",\"data\":{\"status\":404}}"
+    },
+    {
+      "target": "canonico",
+      "id": 269116,
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269116?_fields=id,status,date,modified,author,featured_media,title,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T11:20:16.733782-03:00",
+      "http": 200,
+      "server_date": "Sat, 05 Sep 2026 14:20:17 GMT",
+      "final_url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269116?_fields=id,status,date,modified,author,featured_media,title,link",
+      "body_sha256": "036d0e53c3da5f3b9f4b003ec5b33e4db27785ab467fc76da7da066a480d3064",
+      "raw_body_file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/rest_canonico_269116.json",
+      "data": {
+        "id": 269116,
+        "date": "2026-09-05T10:28:00",
+        "modified": "2026-09-05T09:41:00",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/05/aplicativo-brasileiro-traduz-livro-inteiro-em-ingles-por-centavos-usando-a-propria-chave-de-ia-do-leitor/",
+        "title": {
+          "rendered": "Aplicativo brasileiro traduz livro inteiro em inglês por centavos usando a própria chave de IA do leitor"
+        },
+        "author": 5795,
+        "featured_media": 269118
+      },
+      "raw_body_utf8": "{\"id\":269116,\"date\":\"2026-09-05T10:28:00\",\"modified\":\"2026-09-05T09:41:00\",\"status\":\"publish\",\"link\":\"https:\\/\\/www.ocafezinho.com\\/2026\\/09\\/05\\/aplicativo-brasileiro-traduz-livro-inteiro-em-ingles-por-centavos-usando-a-propria-chave-de-ia-do-leitor\\/\",\"title\":{\"rendered\":\"Aplicativo brasileiro traduz livro inteiro em ingl\\u00eas por centavos usando a pr\\u00f3pria chave de IA do leitor\"},\"author\":5795,\"featured_media\":269118}"
+    },
+    {
+      "target": "espelho_slug_269116",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts?slug=aplicativo-brasileiro-traduz-livro-inteiro-em-ingles-por-centavos-usando-a-propria-chave-de-ia-do-leitor&_fields=id,status,date,author,featured_media,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T11:20:45.361693-03:00",
+      "http": 200,
+      "server_date": "Sat, 05 Sep 2026 14:20:46 GMT",
+      "cache": {
+        "Age": null,
+        "CF-Cache-Status": null,
+        "X-Cache": null
+      },
+      "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "raw_body_file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/espelho_slug_269116.json",
+      "data": [],
+      "raw_body_utf8": "[]"
+    },
+    {
+      "target": "espelho_controle_269115",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/269115?_fields=id,status,date,author,featured_media,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T11:20:45.362664-03:00",
+      "http": 200,
+      "server_date": "Sat, 05 Sep 2026 14:20:46 GMT",
+      "cache": {
+        "Age": null,
+        "CF-Cache-Status": null,
+        "X-Cache": null
+      },
+      "body_sha256": "e5d846e4d971093f2feedf57f3a8c9486e3c4199d20b967046f8031549c6a6a5",
+      "raw_body_file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/espelho_controle_269115.json",
+      "data": {
+        "id": 269115,
+        "date": "2026-09-05T10:08:00",
+        "status": "publish",
+        "link": "https://cafezinho.news/openai-deixou-acesso-de-administrador-fora-de-apuracao-externa.htm",
+        "author": 5470,
+        "featured_media": 269117
+      },
+      "raw_body_utf8": "{\"id\":269115,\"date\":\"2026-09-05T10:08:00\",\"status\":\"publish\",\"link\":\"https:\\/\\/cafezinho.news\\/openai-deixou-acesso-de-administrador-fora-de-apuracao-externa.htm\",\"author\":5470,\"featured_media\":269117}"
+    }
+  ],
+  "web_tool_attempt": {
+    "result": "web.open recusou as duas rotas REST; GET publico direto sem autenticacao forneceu as provas",
+    "ids": [
+      269122,
+      269116
+    ]
+  },
+  "coordination": {
+    "laura_new_refs_read": [
+      "CL-20260905-016"
+    ],
+    "dell_new_refs_read": [
+      "ZM-20260905-009",
+      "DS-N-20260905-189",
+      "DS-Dell-20260905-023 (ronda 183)",
+      "relay CL-20260905-016"
+    ],
+    "new_direct_queries_to_codex_miguel": 0,
+    "ack_delivered": false,
+    "pending_ack": "CL-20260905-016: informativo, ciencia registrada neste recibo; transporte suspenso por HOLD",
+    "external_orders_not_assumed": [
+      "Moka modo revisor e appeal: ZM/Miguel",
+      "YouTube/ONU e fila 5801: ZM/DS YouTube/CL",
+      "AST-20260905-018: ronda e controles proprios Astra",
+      "AGY/Chefe 11:35: CL declarou nada a executar"
+    ],
+    "report_disagreement": "DS-N-189 relata 269116=200 no espelho; DS-Dell-183 relata 404. GET XM 11:20 confirma 404 por ID e [] por slug; nao declara causa nem invalida leitura anterior de terceiros."
+  },
+  "reservations": {
+    "delta_file": "/tmp/codex-miguel-ronda-20260905-hispxa4m/delta_08.txt",
+    "delta": "--- ultimo_recibo\n+++ snapshot_ronda\n@@ -12,0 +13,2 @@\n+| ZCode (**GLM-5.3**) — ordem Miguel 05/09 ~10h30: **MOKA OUSADIA: modo revisor Google** (conta de teste zcode.e2e + IA da casa via gateway pontos_api :8420 — OpenAI gpt-4o-mini + voz neural /ia/tts, trava de pontos) | 05/09 10:31→10:52 | tencent:/home/ubuntu/moka/pontos_api (patch+chave+conta) + `~/ZCodeProject/moka-app` commit 5b2d739 + cofres + Cérebro | ✅ **CONCLUÍDO** — gateway: OpenAI na allowlist + /ia/tts novo (provas texto+voz c/ débito real); conta revisor senha nova + 1305 pts (cofres MOKA_REVISOR_*, sha8 eab5f63e); app religado (conta logada = IA da casa em todo o app) e NO AR no Ousadia (FAQ revisor servido, /ajuda 200); ponte ZM-20260905-009 + Tema Duplo forum/memoria_moka_modo_revisor_google_20260905; **aguarda Miguel testar (login ⚙️) e liberar uso no appeal** |\n+| Astra (AST) — AST-20260905-018: implementar/testar/ativar ronda própria e controles Telegram | 05/09 10:47:34→ | astra_operacoes/ronda_horaria e ponte_astra próprios; sem serviços alheios | 🔄 EM ANDAMENTO — autorização direta de Miguel, revisão prévia dispensada; mesma assinatura/modelo, sem publicação, exclusão ou despesa nova. |\n",
+    "new_active": "AST-20260905-018",
+    "created": 0,
+    "changed": 0,
+    "released": 0,
+    "scope_respected": true
+  },
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0,
+    "private_queue_examined": false,
+    "reason": "HOLD de integridade; Emenda 4 restringe substituto MIGUEL-GROK a observador/segunda vista se pedida; nenhuma solicitacao nova."
+  },
+  "reading_notes": [
+    "Leituras obrigatorias LOOP, minuta e memoria de cadencias integrais; contrato da ponte integral para avaliar HOLD. Hashes nao mudaram apos pull.",
+    "MEMORY, inboxes, canal Trindade, log imagens e ledger/estado XM SEM_NOVIDADE por hash.",
+    "Somente deltas operacionais desde 20260905_105151; copia canonica das pontes alcancou o clone, conteudo identico deduplicado.",
+    "Estado CL comparado por caracteres para evitar reler a linha historica longa; trechos alterados com contexto curto em delta_estado_cl_legivel.txt.",
+    "Diff de nomes desde HEAD do ultimo recibo: somente ledger/estado CL mudaram entre todos os ledgers/estados; nenhum contrato monitorado mudou."
+  ],
+  "sources_changed_after_read": [
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/astra.md"
+  ],
+  "preexisting_untracked_files_at_start": 30,
+  "transport": "PENDENTE; HOLD integridade; sem ponte/ledger/estado/commit/push nesta ronda",
+  "operational_mutations": 0,
+  "prohibitions_preserved": true,
+  "writes": [
+    "recibo novo UTF-8 sem BOM",
+    "evidencias novas UTF-8 sem BOM",
+    "diagnosticos temporarios /tmp"
+  ],
+  "pending": [
+    "Reconciliação ponte_health, loop_ativo, inbox Claude e refs XM-20260905-004/005 ausentes",
+    "269116 no espelho: nao localizado por ID/slug no endpoint consultado ~52 min apos publish; causa nao determinada",
+    "ACK de ciencia CL-016 e transporte do recibo pendentes; nenhuma entrega declarada"
+  ],
+  "next_cursor": {
+    "policy": "Comparar cada fonte ao hash/bytes registrados; se nao append, usar snapshot verificado ou Git com hash correspondente. Deltas posteriores ao snapshot ficam para proxima ronda."
+  },
+  "estado_cl_delta_legivel": "# Estado — Claude Laura (LAURA-CLAUDE)\n\nhora_brt: 03/09 12:21\nciclo: 707\nHEAD: (ver git log)\nultima_acao_material: CL-20260903-123 — 7º Fable (TSE) no a\n[... conteúdo inalterado omitido ...]\n_opiniao: DeepSeek Laura (texto) · GM para apuros\nponto_retomada: CL-20260905-016 em de_laura.md (11:10) — 0) DIURNO (:12/:42, 30 min): AGY parado desde 22:38 (04/09) ⇒ CL executa; hoje 10-11 no ar (269119 10:48; 269122 TSE 11:08); DS YouTube voltou a produzir (decupagens → V4.1) → rascunhos 5801 passam pelo gate CL (5801: future vira publish — só agendar quando for publicar já); categoria SEMPRE --by=id, pelo assunto; trava = filtro do Claude Code (rito §10 + Chefe); áudios do Miguel: tg_transcrever.ps1; bot sem asterisco/#/traço; ONU sem rascunho (mapa = condição); vídeo DvFe9bR2eHA aguarda rascunho; sticky 269021 — listas com --ignore_sticky_posts=1; ciclos 11:15/11:25/11:35 → cl163 derivado do cl162 (head -3; entra ≥ 10 min após execução e ≥ 20 min após 269122; isentas 2026-09-06); próxima 11:42; 4 ciclos mudos hoje (13:35/14:22/14:25/14:45 — ZM/DS-N); 268982 rascunho por "
+}

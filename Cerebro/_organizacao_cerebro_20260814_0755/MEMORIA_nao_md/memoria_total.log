@@ -1,0 +1,1677 @@
+
+--- CONSOLIDAÇÃO 2026-04-02 17:52:55.722617 ---
+
+--- LOG: zizilinda_training_scores.log ---
+[2026-04-02T14:20:31.465588-03:00] Job: zizi_d9f0e058349b | PostID: 229858 | Avaliação: Péssimo | LLM: Desconhecida
+
+--- LOG: agente_controlado_run.log ---
+[14:18:37] [GEO] Publicacao via config do bot: publish
+[14:18:37] [SYS] Rodada concluída: geopolitica
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] RELATÓRIO DA RODADA
+[14:18:37] [SYS]   gemini: 3 chamadas
+[14:18:37] [SYS]   deepseek: 0 chamadas [CIRCUIT ABERTO]
+[14:18:37] [SYS]   Total chamadas LLM: 3
+[14:18:37] [SYS]   Tempo total: 1m42s
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] ============================================================
+[14:16:55] [SYS] ============================================================
+[14:16:55] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[14:16:55] [SYS] ============================================================
+[14:16:55] [SYS] PID file encontrado mas processo morto — limpando e continuando
+[14:16:55] [SYS] --- HEALTH CHECK ---
+[14:16:57] [SYS] wordpress: OK
+[14:16:57] [SYS] Health check LLMs em cache (14h20m atrás) — pulando re-teste
+[14:16:57] [SYS] gemini: OK (cached)
+[14:16:57] [SYS] claude: FALHOU (cached)
+[14:16:57] [SYS] gpt: OK (cached)
+[14:16:57] [SYS] deepseek: OK (cached)
+[14:16:57] [SYS] ideogram: chave configurada
+[14:16:57] [SYS] dalle: chave configurada (via OPENAI_API_KEY)
+[14:16:57] [SYS] Acionado pela Zizilinda — cooldown ignorado.
+[14:16:57] [SYS] URL presente mas Zizilinda já extraiu texto (1527 chars) — pula re-extração
+[14:16:57] [SYS] Briefing carregado: {"url": "https://x.com/BowesChay/status/2039363594190467465", "texto": "Autor: Chay Bowes (@BowesChay) Professor John Mearsheimer- \"If the Nuremberg Trials took place today, and Israelis and American
+[14:16:57] [SYS] Editoria definida pelo briefing: geopolitica
+[14:16:57] [SYS] Escrevendo direto do material (8975 chars)
+[14:16:57] [SYS] AVISO: estilo_master.json nao encontrado, usando fallback interno
+[14:17:17] [SYS] HTTP conexão erro tentativa 1: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:17:42] [SYS] HTTP conexão erro tentativa 2: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:18:12] [SYS] HTTP conexão erro tentativa 3: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:18:12] [SYS] [CIRCUIT] deepseek marcado como falho por 600s
+[14:18:19] [SYS] [CIRCUIT] DeepSeek em cooldown, pulando
+[14:18:19] [SYS] [CIRCUIT] DeepSeek em cooldown, pulando
+[14:18:19] [GEO] Título vazio após parse_artigo — gerando título a partir do corpo
+[14:18:19] [GEO] Título gerado pela IA: Mearsheimer compara líderes EUA e Israel a criminosos de guerra (63 chars)
+[14:18:31] [GEO] [IMG] Usando imagem personalizada do usuário: id=229857
+[14:18:31] [GEO] Publicacao via config do bot: publish
+[14:18:37] [GEO] Publicado! ID=229858 | Link=https://www.ocafezinho.com/2026/04/02/mearsheimer-compara-lideres-eua-e-israel-a-criminosos-de-guerra/ | Imagem=229857 | zizi_job_id=zizi_d9f0e058349b
+[14:18:37] [GEO] Publicacao via config do bot: publish
+[14:18:37] [SYS] Rodada concluída: geopolitica
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] RELATÓRIO DA RODADA
+[14:18:37] [SYS]   gemini: 3 chamadas
+[14:18:37] [SYS]   deepseek: 0 chamadas [CIRCUIT ABERTO]
+[14:18:37] [SYS]   Total chamadas LLM: 3
+[14:18:37] [SYS]   Tempo total: 1m42s
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] ============================================================
+
+--- LOG: zizilinda_controlado.log ---
+[2026-04-02T14:16:44.670201-03:00] [ZIZI] handle_callback data=caption:skip step=awaiting_caption
+[2026-04-02T14:16:53.974933-03:00] [ZIZI] dispatch_agent: estado antigo do agente limpo
+[2026-04-02T14:18:38.563828-03:00] [ZIZI] wp_find_by_job_id: encontrado id=229858 job_id=zizi_d9f0e058349b (meta=True, content=True)
+[2026-04-02T14:18:38.565152-03:00] [ZIZI] dispatch_agent: post encontrado pelo job_id=zizi_d9f0e058349b
+[2026-04-02T14:18:38.565563-03:00] [ZIZI] dispatch_agent: notificando post id=229858 title=Mearsheimer compara líderes EUA e israel a criminosos de gue
+[2026-04-02T14:18:39.188385-03:00] [ZIZI] dispatch_agent: notificação enviada com sucesso
+[2026-04-02T14:20:30.858602-03:00] [ZIZI] handle_callback disparado - Update data: feedback:bad
+[2026-04-02T14:20:31.463232-03:00] [ZIZI] handle_callback data=feedback:bad step=awaiting_post_feedback
+[2026-04-02T14:34:26.967819-03:00] [ZIZI] Webhook removido.
+[2026-04-02T14:34:26.967942-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-02T14:34:27.773085-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:31.935732-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:33.100998-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:37.765933-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:39.429928-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:44.848094-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:47.262596-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:50.804696-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:54.347599-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:59.893374-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:35:05.444016-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:36:09.187501-03:00] [ZIZI] Webhook removido.
+[2026-04-02T14:36:09.187624-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-02T15:00:04.954268-03:00] [ZIZI] handle_text step=awaiting_correction_prompt from_voice=False low=cancela
+[2026-04-02T15:00:09.445035-03:00] [ZIZI] handle_callback disparado - Update data: cancel:yes
+[2026-04-02T15:00:09.737420-03:00] [ZIZI] handle_callback data=cancel:yes step=awaiting_cancel_confirm
+[2026-04-02T15:04:37.994619-03:00] [ZIZI] Webhook removido.
+[2026-04-02T15:04:37.994772-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+
+--- CONSOLIDAÇÃO 2026-04-02 17:53:37.419589 ---
+
+--- LOG: zizilinda_training_scores.log ---
+[2026-04-02T14:20:31.465588-03:00] Job: zizi_d9f0e058349b | PostID: 229858 | Avaliação: Péssimo | LLM: Desconhecida
+
+--- LOG: agente_controlado_run.log ---
+[14:18:37] [GEO] Publicacao via config do bot: publish
+[14:18:37] [SYS] Rodada concluída: geopolitica
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] RELATÓRIO DA RODADA
+[14:18:37] [SYS]   gemini: 3 chamadas
+[14:18:37] [SYS]   deepseek: 0 chamadas [CIRCUIT ABERTO]
+[14:18:37] [SYS]   Total chamadas LLM: 3
+[14:18:37] [SYS]   Tempo total: 1m42s
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] ============================================================
+[14:16:55] [SYS] ============================================================
+[14:16:55] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[14:16:55] [SYS] ============================================================
+[14:16:55] [SYS] PID file encontrado mas processo morto — limpando e continuando
+[14:16:55] [SYS] --- HEALTH CHECK ---
+[14:16:57] [SYS] wordpress: OK
+[14:16:57] [SYS] Health check LLMs em cache (14h20m atrás) — pulando re-teste
+[14:16:57] [SYS] gemini: OK (cached)
+[14:16:57] [SYS] claude: FALHOU (cached)
+[14:16:57] [SYS] gpt: OK (cached)
+[14:16:57] [SYS] deepseek: OK (cached)
+[14:16:57] [SYS] ideogram: chave configurada
+[14:16:57] [SYS] dalle: chave configurada (via OPENAI_API_KEY)
+[14:16:57] [SYS] Acionado pela Zizilinda — cooldown ignorado.
+[14:16:57] [SYS] URL presente mas Zizilinda já extraiu texto (1527 chars) — pula re-extração
+[14:16:57] [SYS] Briefing carregado: {"url": "https://x.com/BowesChay/status/2039363594190467465", "texto": "Autor: Chay Bowes (@BowesChay) Professor John Mearsheimer- \"If the Nuremberg Trials took place today, and Israelis and American
+[14:16:57] [SYS] Editoria definida pelo briefing: geopolitica
+[14:16:57] [SYS] Escrevendo direto do material (8975 chars)
+[14:16:57] [SYS] AVISO: estilo_master.json nao encontrado, usando fallback interno
+[14:17:17] [SYS] HTTP conexão erro tentativa 1: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:17:42] [SYS] HTTP conexão erro tentativa 2: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:18:12] [SYS] HTTP conexão erro tentativa 3: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:18:12] [SYS] [CIRCUIT] deepseek marcado como falho por 600s
+[14:18:19] [SYS] [CIRCUIT] DeepSeek em cooldown, pulando
+[14:18:19] [SYS] [CIRCUIT] DeepSeek em cooldown, pulando
+[14:18:19] [GEO] Título vazio após parse_artigo — gerando título a partir do corpo
+[14:18:19] [GEO] Título gerado pela IA: Mearsheimer compara líderes EUA e Israel a criminosos de guerra (63 chars)
+[14:18:31] [GEO] [IMG] Usando imagem personalizada do usuário: id=229857
+[14:18:31] [GEO] Publicacao via config do bot: publish
+[14:18:37] [GEO] Publicado! ID=229858 | Link=https://www.ocafezinho.com/2026/04/02/mearsheimer-compara-lideres-eua-e-israel-a-criminosos-de-guerra/ | Imagem=229857 | zizi_job_id=zizi_d9f0e058349b
+[14:18:37] [GEO] Publicacao via config do bot: publish
+[14:18:37] [SYS] Rodada concluída: geopolitica
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] RELATÓRIO DA RODADA
+[14:18:37] [SYS]   gemini: 3 chamadas
+[14:18:37] [SYS]   deepseek: 0 chamadas [CIRCUIT ABERTO]
+[14:18:37] [SYS]   Total chamadas LLM: 3
+[14:18:37] [SYS]   Tempo total: 1m42s
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] ============================================================
+
+--- LOG: zizilinda_controlado.log ---
+[2026-04-02T14:16:44.670201-03:00] [ZIZI] handle_callback data=caption:skip step=awaiting_caption
+[2026-04-02T14:16:53.974933-03:00] [ZIZI] dispatch_agent: estado antigo do agente limpo
+[2026-04-02T14:18:38.563828-03:00] [ZIZI] wp_find_by_job_id: encontrado id=229858 job_id=zizi_d9f0e058349b (meta=True, content=True)
+[2026-04-02T14:18:38.565152-03:00] [ZIZI] dispatch_agent: post encontrado pelo job_id=zizi_d9f0e058349b
+[2026-04-02T14:18:38.565563-03:00] [ZIZI] dispatch_agent: notificando post id=229858 title=Mearsheimer compara líderes EUA e israel a criminosos de gue
+[2026-04-02T14:18:39.188385-03:00] [ZIZI] dispatch_agent: notificação enviada com sucesso
+[2026-04-02T14:20:30.858602-03:00] [ZIZI] handle_callback disparado - Update data: feedback:bad
+[2026-04-02T14:20:31.463232-03:00] [ZIZI] handle_callback data=feedback:bad step=awaiting_post_feedback
+[2026-04-02T14:34:26.967819-03:00] [ZIZI] Webhook removido.
+[2026-04-02T14:34:26.967942-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-02T14:34:27.773085-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:31.935732-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:33.100998-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:37.765933-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:39.429928-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:44.848094-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:47.262596-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:50.804696-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:54.347599-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:59.893374-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:35:05.444016-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:36:09.187501-03:00] [ZIZI] Webhook removido.
+[2026-04-02T14:36:09.187624-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-02T15:00:04.954268-03:00] [ZIZI] handle_text step=awaiting_correction_prompt from_voice=False low=cancela
+[2026-04-02T15:00:09.445035-03:00] [ZIZI] handle_callback disparado - Update data: cancel:yes
+[2026-04-02T15:00:09.737420-03:00] [ZIZI] handle_callback data=cancel:yes step=awaiting_cancel_confirm
+[2026-04-02T15:04:37.994619-03:00] [ZIZI] Webhook removido.
+[2026-04-02T15:04:37.994772-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+
+--- CONSOLIDAÇÃO 2026-04-02 17:54:36.633429 ---
+
+--- LOG: zizilinda_training_scores.log ---
+[2026-04-02T14:20:31.465588-03:00] Job: zizi_d9f0e058349b | PostID: 229858 | Avaliação: Péssimo | LLM: Desconhecida
+
+--- LOG: agente_controlado_run.log ---
+[14:18:37] [GEO] Publicacao via config do bot: publish
+[14:18:37] [SYS] Rodada concluída: geopolitica
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] RELATÓRIO DA RODADA
+[14:18:37] [SYS]   gemini: 3 chamadas
+[14:18:37] [SYS]   deepseek: 0 chamadas [CIRCUIT ABERTO]
+[14:18:37] [SYS]   Total chamadas LLM: 3
+[14:18:37] [SYS]   Tempo total: 1m42s
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] ============================================================
+[14:16:55] [SYS] ============================================================
+[14:16:55] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[14:16:55] [SYS] ============================================================
+[14:16:55] [SYS] PID file encontrado mas processo morto — limpando e continuando
+[14:16:55] [SYS] --- HEALTH CHECK ---
+[14:16:57] [SYS] wordpress: OK
+[14:16:57] [SYS] Health check LLMs em cache (14h20m atrás) — pulando re-teste
+[14:16:57] [SYS] gemini: OK (cached)
+[14:16:57] [SYS] claude: FALHOU (cached)
+[14:16:57] [SYS] gpt: OK (cached)
+[14:16:57] [SYS] deepseek: OK (cached)
+[14:16:57] [SYS] ideogram: chave configurada
+[14:16:57] [SYS] dalle: chave configurada (via OPENAI_API_KEY)
+[14:16:57] [SYS] Acionado pela Zizilinda — cooldown ignorado.
+[14:16:57] [SYS] URL presente mas Zizilinda já extraiu texto (1527 chars) — pula re-extração
+[14:16:57] [SYS] Briefing carregado: {"url": "https://x.com/BowesChay/status/2039363594190467465", "texto": "Autor: Chay Bowes (@BowesChay) Professor John Mearsheimer- \"If the Nuremberg Trials took place today, and Israelis and American
+[14:16:57] [SYS] Editoria definida pelo briefing: geopolitica
+[14:16:57] [SYS] Escrevendo direto do material (8975 chars)
+[14:16:57] [SYS] AVISO: estilo_master.json nao encontrado, usando fallback interno
+[14:17:17] [SYS] HTTP conexão erro tentativa 1: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:17:42] [SYS] HTTP conexão erro tentativa 2: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:18:12] [SYS] HTTP conexão erro tentativa 3: HTTPSConnectionPool(host='api.deepseek.com', port=443): Read timed out.
+[14:18:12] [SYS] [CIRCUIT] deepseek marcado como falho por 600s
+[14:18:19] [SYS] [CIRCUIT] DeepSeek em cooldown, pulando
+[14:18:19] [SYS] [CIRCUIT] DeepSeek em cooldown, pulando
+[14:18:19] [GEO] Título vazio após parse_artigo — gerando título a partir do corpo
+[14:18:19] [GEO] Título gerado pela IA: Mearsheimer compara líderes EUA e Israel a criminosos de guerra (63 chars)
+[14:18:31] [GEO] [IMG] Usando imagem personalizada do usuário: id=229857
+[14:18:31] [GEO] Publicacao via config do bot: publish
+[14:18:37] [GEO] Publicado! ID=229858 | Link=https://www.ocafezinho.com/2026/04/02/mearsheimer-compara-lideres-eua-e-israel-a-criminosos-de-guerra/ | Imagem=229857 | zizi_job_id=zizi_d9f0e058349b
+[14:18:37] [GEO] Publicacao via config do bot: publish
+[14:18:37] [SYS] Rodada concluída: geopolitica
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] RELATÓRIO DA RODADA
+[14:18:37] [SYS]   gemini: 3 chamadas
+[14:18:37] [SYS]   deepseek: 0 chamadas [CIRCUIT ABERTO]
+[14:18:37] [SYS]   Total chamadas LLM: 3
+[14:18:37] [SYS]   Tempo total: 1m42s
+[14:18:37] [SYS] ----------------------------------------
+[14:18:37] [SYS] ============================================================
+
+--- LOG: zizilinda_controlado.log ---
+[2026-04-02T14:16:44.670201-03:00] [ZIZI] handle_callback data=caption:skip step=awaiting_caption
+[2026-04-02T14:16:53.974933-03:00] [ZIZI] dispatch_agent: estado antigo do agente limpo
+[2026-04-02T14:18:38.563828-03:00] [ZIZI] wp_find_by_job_id: encontrado id=229858 job_id=zizi_d9f0e058349b (meta=True, content=True)
+[2026-04-02T14:18:38.565152-03:00] [ZIZI] dispatch_agent: post encontrado pelo job_id=zizi_d9f0e058349b
+[2026-04-02T14:18:38.565563-03:00] [ZIZI] dispatch_agent: notificando post id=229858 title=Mearsheimer compara líderes EUA e israel a criminosos de gue
+[2026-04-02T14:18:39.188385-03:00] [ZIZI] dispatch_agent: notificação enviada com sucesso
+[2026-04-02T14:20:30.858602-03:00] [ZIZI] handle_callback disparado - Update data: feedback:bad
+[2026-04-02T14:20:31.463232-03:00] [ZIZI] handle_callback data=feedback:bad step=awaiting_post_feedback
+[2026-04-02T14:34:26.967819-03:00] [ZIZI] Webhook removido.
+[2026-04-02T14:34:26.967942-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-02T14:34:27.773085-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:31.935732-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:33.100998-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:37.765933-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:39.429928-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:44.848094-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:47.262596-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:50.804696-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:54.347599-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:34:59.893374-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:35:05.444016-03:00] [ZIZI] TELEGRAM ERROR NÃO TRATADO: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+NoneType: None
+
+[2026-04-02T14:36:09.187501-03:00] [ZIZI] Webhook removido.
+[2026-04-02T14:36:09.187624-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-02T15:00:04.954268-03:00] [ZIZI] handle_text step=awaiting_correction_prompt from_voice=False low=cancela
+[2026-04-02T15:00:09.445035-03:00] [ZIZI] handle_callback disparado - Update data: cancel:yes
+[2026-04-02T15:00:09.737420-03:00] [ZIZI] handle_callback data=cancel:yes step=awaiting_cancel_confirm
+[2026-04-02T15:04:37.994619-03:00] [ZIZI] Webhook removido.
+[2026-04-02T15:04:37.994772-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+
+--- CONSOLIDAÇÃO 2026-04-02 18:03:01.276576 ---
+
+--- LOG: fantastico.log ---
+[Upload] Transferindo a imagem para o seu WordPress (Biblioteca de Mídia)...
+✅ SUCESSO! Imagem salva no seu WordPress com o ID Mídia: 229741
+[17:00:50] ✅ Arte gerada e enviada pro WP (ID 229741)
+[17:00:55] 
+--- PUBLICANDO NO WORDPRESS DA EDITORIA FANTÁSTICA (MODO PUBLISH AUTÔNOMO) ---
+[17:00:55] TÍTULO MAGNÉTICO: O Atraso Inexplicável dos Trens de Alta Velocidade nos EUA: Há Esperança?
+[17:00:55] CATEGORIA: Ciência e Tecnologia (19936) | TAGS: ['infraestrutura', 'transporte', 'política', 'inovação']
+[17:01:03] ✅ Mega Rascunho salvo no servidor WP! Link / ID: 229742
+[17:01:03] ------------------------------------------------------
+
+[21:00:02] =========================================
+[21:00:02] 🚀 INICIANDO AGENTE DA EDITORIA FANTÁSTICA
+[21:00:02] =========================================
+[21:00:02] 👽 Radar Fantástico (Global/Inglês) ligado para: 'high speed train innovation'
+[21:00:03]    📥 Baixando e raspando fonte original em inglês: https://zmescience.com/research/inventions/britain-is-testin...
+[21:00:04] 💥 Tema Espetacular Sorteado: 'Britain Is Testing the World's First Quantum Navigation Technology for Trains'
+[21:00:32] 🔍 Buscando mídia nativamente na Biblioteca do WordPress (Custo Zero)...
+[21:00:32] 🔍 Buscando imagem de domínio público no WIKIMEDIA COMMONS (Custo Zero)...
+[21:00:32] ⚠️ Sem imagens na Biblioteca e nem na Wikipedia. Acionando IA Visual (Flux Pro) para gerar arte épica...
+
+[Upload] Transferindo a imagem para o seu WordPress (Biblioteca de Mídia)...
+✅ SUCESSO! Imagem salva no seu WordPress com o ID Mídia: 229757
+[21:01:27] ✅ Arte gerada e enviada pro WP (ID 229757)
+[21:01:36] 
+--- PUBLICANDO NO WORDPRESS DA EDITORIA FANTÁSTICA (MODO PUBLISH AUTÔNOMO) ---
+[21:01:36] TÍTULO MAGNÉTICO: Britânicos Testam Tecnologia de Navegação Quântica Revolucionária para Trens
+[21:01:36] CATEGORIA: Ciência e Tecnologia (19936) | TAGS: ['navegação quântica', 'trens', 'tecnologia', 'gps']
+[21:01:42] ✅ Mega Rascunho salvo no servidor WP! Link / ID: 229760
+[21:01:42] ------------------------------------------------------
+
+[11:00:02] =========================================
+[11:00:02] 🚀 INICIANDO AGENTE DA EDITORIA FANTÁSTICA
+[11:00:02] =========================================
+[11:00:02] 👽 Radar Fantástico (Global/Inglês) ligado para: 'mind blowing technology'
+[11:00:03]    📥 Baixando e raspando fonte original em inglês: https://www.ndtvprofit.com/technology/i-am-finally-able-to-t...
+[11:00:04] 💥 Tema Espetacular Sorteado: ''I Am Finally Able To Talk Again': Elon Musk-Backed Neuralink Tech Helps ALS Patient Speak | WATCH'
+[11:00:35] 🔍 Buscando mídia nativamente na Biblioteca do WordPress (Custo Zero)...
+[11:00:35] 🔍 Buscando imagem de domínio público no WIKIMEDIA COMMONS (Custo Zero)...
+[11:00:35] ⚠️ Sem imagens na Biblioteca e nem na Wikipedia. Acionando IA Visual (Flux Pro) para gerar arte épica...
+
+[Upload] Transferindo a imagem para o seu WordPress (Biblioteca de Mídia)...
+✅ SUCESSO! Imagem salva no seu WordPress com o ID Mídia: 229827
+[11:01:21] ✅ Arte gerada e enviada pro WP (ID 229827)
+[11:01:30] 
+--- PUBLICANDO NO WORDPRESS DA EDITORIA FANTÁSTICA (MODO PUBLISH AUTÔNOMO) ---
+[11:01:30] TÍTULO MAGNÉTICO: Tecnologia Neuralink Apoiadora de Elon Musk Devolve Voz a Paciente com Esclerose Lateral Amiotrófica
+[11:01:30] CATEGORIA: Ciência e Tecnologia (19936) | TAGS: ['neuralink', 'elon musk', 'esclerose lateral amiotrófica', 'tecnologia médica', 'interface cérebro-computador']
+[11:01:44] ✅ Mega Rascunho salvo no servidor WP! Link / ID: 229828
+[11:01:44] ------------------------------------------------------
+
+
+--- LOG: comandos_v4.log ---
+[2026-03-25T21:54:14.802459-03:00] editar_config erro (diretriz_autonomo): Unterminated string starting at: line 80 column 7 (char 7655)
+[2026-03-26T17:43:41.293523-03:00] editar_config erro (estilo_master): Unterminated string starting at: line 135 column 7 (char 7248)
+[2026-03-27T01:33:36.111191-03:00] cron retomado (linha descomentada)
+[2026-03-27T02:22:50.818625-03:00] editar_json_com_llm: JSON inválido na 1ª tentativa (Unterminated string starting at: line 80 column 7 (char 7639)), pedindo correção ao LLM
+[2026-03-27T02:23:50.121777-03:00] editar_json_com_llm erro (diretriz_autonomo): JSON inválido após 2 tentativas.
+Erro final: Unterminated string starting at: line 80 column 7 (char 7639)
+Primeiros 300 chars: {
+  "versao": "2.0",
+  "modo": "autonomo",
+  "updated_at": "2026-03-25T00:00:00-03:00",
+  "descricao": "Diretriz do agente autonomo do O Cafezinho. Define comportamento operacional, filtros de seguranca, prioridades de pauta e criterios de escolha para o modo sem supervisao.",
+  "comentario_geral": 
+[2026-03-27T03:53:56.891904-03:00] editar_json_com_llm: JSON inválido na 1ª tentativa (Unterminated string starting at: line 80 column 7 (char 7499)), pedindo correção ao LLM
+[2026-03-27T03:55:02.348167-03:00] editar_json_com_llm erro (diretriz_autonomo): JSON inválido após 2 tentativas.
+Erro final: Unterminated string starting at: line 80 column 7 (char 7499)
+Primeiros 300 chars: {
+  "versao": "2.0",
+  "modo": "autonomo",
+  "updated_at": "2026-03-27T00:00:00-03:00",
+  "descricao": "Diretriz do agente autonomo do O Cafezinho. Define comportamento operacional, filtros de seguranca, prioridades de pauta e criterios de escolha para o modo sem supervisao.",
+  "comentario_geral": 
+[2026-03-27T05:53:57.311053-03:00] foco gravar -> 2 item(s)
+[2026-03-27T06:06:01.390887-03:00] foco gravar -> 1 item(s)
+[2026-03-27T06:10:05.503958-03:00] foco cancelado via bot
+[2026-03-27T10:28:01.220097-03:00] foco gravar -> 1 item(s)
+[2026-03-27T12:11:21.281445-03:00] editar_json_com_llm: JSON inválido na 1ª tentativa (Unterminated string starting at: line 80 column 7 (char 7681)), pedindo correção ao LLM
+[2026-03-27T12:12:33.447021-03:00] editar_json_com_llm erro (diretriz_autonomo): JSON inválido após 2 tentativas.
+Erro final: Unterminated string starting at: line 80 column 7 (char 7681)
+Primeiros 300 chars: {
+  "versao": "2.0",
+  "modo": "autonomo",
+  "updated_at": "2026-03-27T00:00:00-03:00",
+  "descricao": "Diretriz do agente autonomo do O Cafezinho. Define comportamento operacional, filtros de seguranca, prioridades de pauta e criterios de escolha para o modo sem supervisao.",
+  "comentario_geral": 
+[2026-03-27T16:09:21.337732-03:00] foco gravar -> 1 item(s)
+[2026-03-27T16:14:59.842383-03:00] foco cancelado via bot
+[2026-03-27T16:20:03.832964-03:00] foco gravar -> 4 item(s)
+[2026-03-27T19:14:03.621590-03:00] foco -> politica | lulinha, CPI do INSS, Vorcaro, ALERJ, Rio de Janeiro, política nacional | 5 rodadas
+[2026-03-27T19:17:39.126503-03:00] foco cancelado via bot
+[2026-03-27T19:18:15.872872-03:00] foco gravar -> 6 item(s)
+[2026-03-27T21:09:46.305905-03:00] foco cancelado via bot
+[2026-03-28T00:13:48.914902-03:00] cron pausado (linha comentada)
+[2026-03-28T02:34:17.268854-03:00] cron pausado (linha comentada)
+[2026-03-29T15:55:39.711739-03:00] foco gravar -> 1 item(s)
+[2026-03-30T00:22:14.821794-03:00] foco gravar -> 1 item(s)
+[2026-03-30T07:10:46.605164-03:00] ga4_ativos_agora erro: File /root/keys/ga4.json was not found.
+[2026-03-30T07:11:03.853212-03:00] foco cancelado via bot
+[2026-03-30T07:11:33.117585-03:00] ga4_ativos_agora erro: File /root/keys/ga4.json was not found.
+[2026-03-30T10:34:58.979497-03:00] cron pausado (linha comentada)
+[2026-03-30T18:08:22.865315-03:00] cron pausado (linha comentada)
+
+--- LOG: mayra_v3.log ---
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 4865, in get_updates
+    await self._post(
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.NetworkError: Bad Gateway
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 4865, in get_updates
+    await self._post(
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.NetworkError: Bad Gateway
+
+--- LOG: zizi_linda.log ---
+           ^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_application.py", line 1315, in process_update
+    await coroutine
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/bot_zizi_linda.py", line 2474, in handle_callback
+    await query.answer()
+  File "/root/venv/lib/python3.12/site-packages/telegram/_callbackquery.py", line 190, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 970, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 4445, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+telegram.error.BadRequest: Query is too old and response timeout expired or query id is invalid
+[2026-03-29T13:39:43.331218-03:00] [ZIZI] handle_callback data=proc:cancel step=idle
+
+--- LOG: agente_controlado_run.log ---
+[12:09:44] [GEO] [IMG] Temas extraídos: ['putin', 'eua', 'ira', 'acordo nuclear', 'jcpoa']
+[12:09:44] [SYS] ERRO FATAL: name 'ler_briefing' is not defined
+[12:09:44] [SYS] Traceback (most recent call last):
+  File "/root/agente_controlado.py", line 4451, in <module>
+    main()
+  File "/root/agente_controlado.py", line 4421, in main
+    result = publish_post(section, titulo, editorial, corpo,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/agente_controlado.py", line 3696, in publish_post
+    briefing = ler_briefing()
+               ^^^^^^^^^^^^
+NameError: name 'ler_briefing' is not defined. Did you mean: 'load_briefing'?
+
+[16:57:10] [SYS] ============================================================
+[16:57:10] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[16:57:10] [SYS] ============================================================
+[16:57:10] [SYS] ERRO: WP_PASS não configurada
+[16:57:10] [SYS] ============================================================
+[16:57:10] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[16:57:10] [SYS] ============================================================
+[16:57:10] [SYS] ERRO: WP_PASS não configurada
+[18:01:10] [SYS] ============================================================
+[18:01:10] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[18:01:10] [SYS] ============================================================
+[18:01:10] [SYS] ERRO: WP_PASS não configurada
+[18:01:10] [SYS] ============================================================
+[18:01:10] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[18:01:10] [SYS] ============================================================
+[18:01:10] [SYS] ERRO: WP_PASS não configurada
+  File "/root/agente_controlado.py", line 430
+    from dotenv import load_dotenv
+    ^^^^
+SyntaxError: invalid syntax
+  File "/root/agente_controlado.py", line 430
+    from dotenv import load_dotenv
+    ^^^^
+SyntaxError: invalid syntax
+[23:56:04] [SYS] ============================================================
+[23:56:04] [SYS] AGENTE CONTROLADO V2 INICIADO (integrado com Zizilinda)
+[23:56:04] [SYS] ============================================================
+[23:56:04] [SYS] --- HEALTH CHECK ---
+[23:56:06] [SYS] wordpress: OK
+[23:56:06] [SYS] Executando health check completo das LLMs...
+[23:56:09] [SYS] gemini: OK
+[23:56:09] [SYS] claude: FALHOU
+[23:56:09] [SYS] gpt: OK
+[23:56:09] [SYS] deepseek: OK
+[23:56:09] [SYS] ideogram: chave configurada
+[23:56:09] [SYS] dalle: chave configurada (via OPENAI_API_KEY)
+[23:56:09] [SYS] ABORTADO: briefing não encontrado ou expirado.
+
+--- LOG: agente_v8_run.log ---
+[10:36:31] [POL] Google News: GloboNews Brasil política
+[10:36:32] [POL] Google News: Petrobras Brasil política
+[10:36:33] [POL] Coletado: 18 itens
+[10:36:33] [POL] [SCORE] 14 títulos com score heurístico direto, 4 para LLM
+[10:36:40] [POL] [DEDUP-EARLY] Descartado antes do pipeline: Pesquisa BTG mostra que Lula deve colocar diferenças econômicas no cen
+[10:36:41] [POL] [DEDUP-EARLY] Descartado antes do pipeline: Governo Lula tem deficit de R$ 30,1 bi nas contas em fevereiro
+[10:36:42] [POL] [DEDUP-EARLY] Descartado antes do pipeline: STF julgará eleição indireta ao governo do Rio em 8 de abril
+[10:36:43] [POL] [DEDUP-EARLY] Descartado antes do pipeline: Genro de Lula recebe honraria jurídica em cerimônia em Brasília
+[10:36:43] [POL] [DEDUP-EARLY] 4 candidata(s) descartada(s) antes do pipeline nesta editoria
+[10:36:49] [POL] Sem candidatas após curadoria
+[10:36:49] [SYS] [CONTINGÊNCIA] Rodada normal sem publicação — ativando modo contingência
+[10:36:50] [GEO] [CONTINGÊNCIA] Tentando geopolitica...
+[10:36:50] [GEO] [SCORE] 8 títulos com score heurístico direto, 10 para LLM
+[10:36:56] [GEO] [CONTINGÊNCIA] Modo ativado para geopolitica — min_score=2, limit=18
+[10:36:57] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Why have the US and Israel bombed more than 75 Iranian police faciliti
+[10:36:58] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Homes damaged as Iranian missiles trigger sirens across northern Israe
+[10:36:59] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Trump ‘pretty sure’ of Iran deal, but can Pakistan-led efforts end the
+[10:37:00] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Why does the US have Iran's Kharg Island in its sights?
+[10:37:01] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Russian oil tanker reaches Cuba after Trump appears to loosen blockade
+[10:37:02] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Spain closes airspace to US aircraft involved in Iran war
+[10:37:03] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Iran’s Foreign Ministry denies claims of US-Iran negotiations
+[10:37:04] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Beirut apartment damaged in Israeli strike
+[10:37:05] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Russia expels British diplomat over spying allegations
+[10:37:06] [GEO] [DEDUP-EARLY] Descartado antes do pipeline: Russia’s FSB orders British diplomat’s expulsion, UK rejects ‘intimida
+[10:37:06] [GEO] [DEDUP-EARLY] 10 candidata(s) descartada(s) antes do pipeline nesta editoria
+[10:37:12] [GEO] [CONTINGÊNCIA] Sem candidatas inéditas em geopolitica
+[10:37:12] [TEC] [CONTINGÊNCIA] Tentando tecnologia...
+[10:37:12] [TEC] [SCORE] 16 títulos com score heurístico direto, 2 para LLM
+[10:37:15] [TEC] [CONTINGÊNCIA] Modo ativado para tecnologia — min_score=2, limit=18
+[10:37:16] [TEC] [DEDUP-EARLY] Descartado antes do pipeline: AI chip startup Rebellions raises $400 million at $2.3B valuation in p
+[10:37:17] [TEC] [DEDUP-EARLY] Descartado antes do pipeline: With new plugins feature, OpenAI officially takes Codex beyond coding
+[10:37:17] [TEC] [DEDUP-EARLY] 2 candidata(s) descartada(s) antes do pipeline nesta editoria
+[10:37:23] [TEC] [CONTINGÊNCIA] Sem candidatas inéditas em tecnologia
+[10:37:23] [POL] [CONTINGÊNCIA] Tentando politica...
+[10:37:23] [POL] [SCORE] 14 títulos com score heurístico direto, 4 para LLM
+[10:37:30] [POL] [CONTINGÊNCIA] Modo ativado para politica — min_score=2, limit=18
+[10:37:31] [POL] [DEDUP-EARLY] Descartado antes do pipeline: Pesquisa BTG mostra que Lula deve colocar diferenças econômicas no cen
+[10:37:32] [POL] [DEDUP-EARLY] Descartado antes do pipeline: Governo Lula tem deficit de R$ 30,1 bi nas contas em fevereiro
+[10:37:33] [POL] [DEDUP-EARLY] Descartado antes do pipeline: STF julgará eleição indireta ao governo do Rio em 8 de abril
+[10:37:34] [POL] [DEDUP-EARLY] Descartado antes do pipeline: Genro de Lula recebe honraria jurídica em cerimônia em Brasília
+[10:37:34] [POL] [DEDUP-EARLY] 4 candidata(s) descartada(s) antes do pipeline nesta editoria
+[10:37:40] [POL] [CONTINGÊNCIA] Sem candidatas inéditas em politica
+[10:37:40] [SYS] [CONTINGÊNCIA] Sem publicação mesmo em modo contingência — encerrando rodada
+[10:37:42] [SYS] ----------------------------------------
+[10:37:42] [SYS] RELATÓRIO DA RODADA V9
+[10:37:42] [SYS]   gemini: 6 chamadas
+[10:37:42] [SYS]   Total chamadas LLM: 6
+[10:37:42] [SYS]   Tempo total: 7m40s
+[10:37:42] [SYS] ----------------------------------------
+[10:37:42] [SYS] ============================================================
+
+--- LOG: agente_editorial_run.log ---
+[2026-03-21T08:47:04.899883-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 745 (input), 425 (output)
+[2026-03-21T08:47:04.900314-03:00] [LLM_UTIL] Auditoria concluída: 1999 chars. Modelo usado: gpt-4o. Tokens: 745 (input), 425 (output)
+[2026-03-21T08:47:04.900422-03:00] [LLM_UTIL] Refinando texto com notas da auditoria...
+[2026-03-21T08:47:04.900845-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_writing. Usando default.
+[2026-03-21T08:47:04.900909-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_writing
+[2026-03-21T08:47:12.081203-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1109 (input), 855 (output)
+[2026-03-21T08:47:12.081799-03:00] [LLM_UTIL] Texto refinado: 3803 chars. Modelo usado: gpt-4o. Tokens: 1109 (input), 855 (output)
+[2026-03-21T08:47:12.081890-03:00] [LLM_UTIL] Gerando título para o artigo...
+[2026-03-21T08:47:12.081954-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_title_generation. Usando default.
+[2026-03-21T08:47:12.081999-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_title_generation
+[2026-03-21T08:47:12.736521-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 533 (input), 20 (output)
+[2026-03-21T08:47:12.737014-03:00] [LLM_UTIL] Título gerado: Alemanha em Xeque: Dependência do Gás Russo Abala Soberania Europeia
+[2026-03-21T08:47:12.737144-03:00] [LLM_UTIL] Status de publicação para o Agente Editorial: draft
+[2026-03-21T08:47:12.737206-03:00] [LLM_UTIL] Publicando post no WordPress: Alemanha em Xeque: Dependência do Gás Russo Abala ...
+[2026-03-21T08:47:17.300003-03:00] [LLM_UTIL] Post publicado com sucesso! ID: 227823
+[2026-03-21T08:47:17.301211-03:00] [LLM_UTIL] Artigo publicado/salvo como rascunho no WordPress: https://www.ocafezinho.com/?p=227823
+[2026-03-21T08:47:17.301677-03:00] [LLM_UTIL] Link para edição: https://www.ocafezinho.com/?p=227823&action=edit
+[2026-03-21T08:47:17.302360-03:00] [LLM_UTIL] Agente Editorial finalizado.
+[2026-03-21T08:47:51.315839-03:00] [LLM_UTIL] Agente Editorial iniciado.
+[2026-03-21T08:47:51.317045-03:00] [LLM_UTIL] Passo 1: Escrevendo texto...
+[2026-03-21T08:47:51.317492-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_writing. Usando default.
+[2026-03-21T08:47:51.317555-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_writing
+[2026-03-21T08:47:57.803317-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1228 (input), 594 (output)
+[2026-03-21T08:47:57.803798-03:00] [LLM_UTIL] Texto escrito: 2782 chars. Modelo usado: gpt-4o. Tokens: 1228 (input), 594 (output)
+[2026-03-21T08:47:57.803891-03:00] [LLM_UTIL] Passo 2: Revisando texto...
+[2026-03-21T08:47:57.804343-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_review. Usando default.
+[2026-03-21T08:47:57.804414-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_review
+[2026-03-21T08:48:01.670993-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 762 (input), 596 (output)
+[2026-03-21T08:48:01.671526-03:00] [LLM_UTIL] Texto revisado: 2788 chars. Modelo usado: gpt-4o. Tokens: 762 (input), 596 (output)
+[2026-03-21T08:48:01.671623-03:00] [LLM_UTIL] Auditoria: Fazendo notas...
+[2026-03-21T08:48:01.671685-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_auditing. Usando default.
+[2026-03-21T08:48:01.671726-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_auditing
+[2026-03-21T08:48:05.227719-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 742 (input), 365 (output)
+[2026-03-21T08:48:05.228167-03:00] [LLM_UTIL] Auditoria concluída: 1708 chars. Modelo usado: gpt-4o. Tokens: 742 (input), 365 (output)
+[2026-03-21T08:48:05.228261-03:00] [LLM_UTIL] Refinando texto com notas da auditoria...
+[2026-03-21T08:48:05.228680-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_writing. Usando default.
+[2026-03-21T08:48:05.228750-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_writing
+[2026-03-21T08:48:11.324634-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1046 (input), 743 (output)
+[2026-03-21T08:48:11.325062-03:00] [LLM_UTIL] Texto refinado: 3563 chars. Modelo usado: gpt-4o. Tokens: 1046 (input), 743 (output)
+[2026-03-21T08:48:11.325140-03:00] [LLM_UTIL] Gerando título para o artigo...
+[2026-03-21T08:48:11.325197-03:00] [LLM_UTIL] Erro: Nenhum modelo configurado para a tarefa editorial_title_generation. Usando default.
+[2026-03-21T08:48:11.325239-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa editorial_title_generation
+[2026-03-21T08:48:11.944153-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 500 (input), 20 (output)
+[2026-03-21T08:48:11.944607-03:00] [LLM_UTIL] Título gerado: Inovações Tecnológicas: O Equilíbrio Essencial entre Progresso e Humanidade
+[2026-03-21T08:48:11.944724-03:00] [LLM_UTIL] Status de publicação para o Agente Editorial: draft
+[2026-03-21T08:48:11.944773-03:00] [LLM_UTIL] Publicando post no WordPress: Inovações Tecnológicas: O Equilíbrio Essencial ent...
+[2026-03-21T08:48:15.697268-03:00] [LLM_UTIL] Post publicado com sucesso! ID: 227824
+[2026-03-21T08:48:15.698529-03:00] [LLM_UTIL] Artigo publicado/salvo como rascunho no WordPress: https://www.ocafezinho.com/?p=227824
+[2026-03-21T08:48:15.699124-03:00] [LLM_UTIL] Link para edição: https://www.ocafezinho.com/?p=227824&action=edit
+[2026-03-21T08:48:15.699929-03:00] [LLM_UTIL] Agente Editorial finalizado.
+
+--- LOG: curadoria.log ---
+[03:30:09] curadoria_geral [politica]: adicionadas keywords {'Lula'}
+[03:30:09] curadoria_geral [geopolitica]: adicionadas keywords {'BRICS', 'Irã', 'China'}
+[03:30:09] curadoria_geral [tecnologia]: adicionadas keywords {'Armas hipersônicas'}
+[03:30:09] curadoria_geral.json atualizada com tendências consolidadas
+[03:30:09] config_editorial.py atualizado — GOOGLE_QUERIES ajustado
+[03:30:09] ==================================================
+[03:30:09] AGENTE CURADORIA CONCLUÍDO
+[03:30:09] ==================================================
+[03:30:01] ==================================================
+[03:30:01] AGENTE CURADORIA INICIADO
+[03:30:01] ==================================================
+[03:30:01] Performance carregada — 28 posts, 10 temas
+[03:30:01] Buscando Google Trends BR...
+[03:30:02] Google Trends BR: 3 trends editoriais — ['china', 'patricia de sabrit', 'china fc']
+[03:30:02] Interpretando dados com Gemini...
+[03:30:09] Curadoria gerada: ['politica', 'geopolitica', 'tecnologia']
+[03:30:09] curadoria_diaria.json salva — expira em 24h
+[03:30:09] Tendências detectadas: {'politica': ['Lula'], 'geopolitica': ['BRICS', 'Irã', 'China'], 'tecnologia': ['Armas hipersônicas']}
+[03:30:09] curadoria_geral [politica]: adicionadas keywords {'Lula'}
+[03:30:09] curadoria_geral [geopolitica]: adicionadas keywords {'BRICS', 'Irã', 'China'}
+[03:30:09] curadoria_geral [tecnologia]: adicionadas keywords {'Armas hipersônicas'}
+[03:30:09] curadoria_geral.json atualizada com tendências consolidadas
+[03:30:09] config_editorial.py atualizado — GOOGLE_QUERIES ajustado
+[03:30:09] ==================================================
+[03:30:09] AGENTE CURADORIA CONCLUÍDO
+[03:30:09] ==================================================
+[03:30:02] ==================================================
+[03:30:02] AGENTE CURADORIA INICIADO
+[03:30:02] ==================================================
+[03:30:02] ERRO: /root/performance_weights.json não encontrado ou vazio — abortando
+[03:30:02] ==================================================
+[03:30:02] AGENTE CURADORIA INICIADO
+[03:30:02] ==================================================
+[03:30:02] ERRO: /root/performance_weights.json não encontrado ou vazio — abortando
+[03:30:01] ==================================================
+[03:30:01] AGENTE CURADORIA INICIADO
+[03:30:01] ==================================================
+[03:30:01] ERRO: /root/performance_weights.json não encontrado ou vazio — abortando
+[03:30:01] ==================================================
+[03:30:01] AGENTE CURADORIA INICIADO
+[03:30:01] ==================================================
+[03:30:01] ERRO: /root/performance_weights.json não encontrado ou vazio — abortando
+[03:30:02] ==================================================
+[03:30:02] AGENTE CURADORIA INICIADO
+[03:30:02] ==================================================
+[03:30:02] ERRO: /root/performance_weights.json não encontrado ou vazio — abortando
+[03:30:02] ==================================================
+[03:30:02] AGENTE CURADORIA INICIADO
+[03:30:02] ==================================================
+[03:30:02] ERRO: /root/performance_weights.json não encontrado ou vazio — abortando
+
+--- LOG: coleta_bruta.log ---
+[17:30:06] [COLETOR-V2] 📥 Tentando furar muro: 'Trump demite procuradora-geral por fracasso na condução do c...'
+[17:30:09] [COLETOR-V2] 📥 Tentando furar muro: 'Papa diz que missão cristã é combater “ocupação imperialista...'
+[17:30:09] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Bolsonaro pede a Moraes que cu
+[17:30:09] [COLETOR-V2] 📥 Tentando furar muro: 'O “fundador esquecido” da Apple que não ficou bilionário...'
+[17:30:09] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Trump demite procuradora-geral
+[17:30:09] [COLETOR-V2] 📥 Tentando furar muro: 'Lula assume a liderança e Flávio perde força em plataforma d...'
+[17:30:12] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Papa diz que missão cristã é c
+[17:30:12] [COLETOR-V2] 📥 Tentando furar muro: 'Nova Linha 17- Ouro do Metrô de SP muda a vida dos paulistan...'
+[17:30:13] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Lula assume a liderança e Fláv
+[17:30:13] [COLETOR-V2] 📥 Tentando furar muro: 'Nova alta do petróleo reacende temor de inflação global. Dól...'
+[17:30:17] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): O “fundador esquecido” da Appl
+[17:30:17] [COLETOR-V2] 📥 Tentando furar muro: 'Pressão alta silenciosa: confira sintomas que quase ninguém ...'
+[17:30:17] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Nova Linha 17- Ouro do Metrô d
+[17:30:17] [COLETOR-V2] 📥 Tentando furar muro: 'Virginia toma decisão após polêmica envolvendo Zé Felipe e o...'
+[17:30:17] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (3877 chars). Categoria: Macroeconomia
+[17:30:17] [COLETOR-V2] 📥 Tentando furar muro: 'Família vende casa para viver em barco com 4 filhos e divide...'
+[17:30:17] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Thales Bretas vai a tributo a 
+[17:30:17] [COLETOR-V2] 📥 Tentando furar muro: 'CPI do Crime remarca depoimento de Cláudio Castro para 14 de...'
+[17:30:19] [COLETOR-V2] 📥 Tentando furar muro: 'STF impediu acesso da CPMI a voos de ministros em aviões de ...'
+[17:30:19] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Família vende casa para viver 
+[17:30:19] [COLETOR-V2] 📥 Tentando furar muro: 'Criança vê idoso comendo sozinho e decide agir; gesto comove...'
+[17:30:19] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Virginia toma decisão após pol
+[17:30:19] [COLETOR-V2] 📥 Tentando furar muro: 'Corrida inclusiva e gratuita celebra Dia Mundial do Autismo ...'
+[17:30:20] [COLETOR-V2] 📥 Tentando furar muro: 'Estrela de Gilmore Girls revela receita que fãs esperavam há...'
+[17:30:20] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (2710 chars). Categoria: Institucional
+[17:30:20] [COLETOR-V2] 📥 Tentando furar muro: 'Grávida, Tainá Militão relata surgimento de nódulo no seio...'
+[17:30:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Criança vê idoso comendo sozin
+[17:30:21] [COLETOR-V2] 📥 Tentando furar muro: 'Grifes de MG são autuadas por trabalho escravo em oficinas d...'
+[17:30:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Estrela de Gilmore Girls revel
+[17:30:21] [COLETOR-V2] 📥 Tentando furar muro: 'TJ-SP condena a 103 anos de prisão homem que estuprou sobrin...'
+[17:30:22] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Grifes de MG são autuadas por 
+[17:30:22] [COLETOR-V2] 📥 Tentando furar muro: 'Em Salvador, Lula exibe força política e intensifica agenda ...'
+[17:30:22] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): TJ-SP condena a 103 anos de pr
+[17:30:22] [COLETOR-V2] 📥 Tentando furar muro: '6 fatores que podem aumentar o risco de cáries na Páscoa...'
+[17:30:22] [COLETOR-V2] 📥 Tentando furar muro: 'Bacopa monnieri: planta medicinal ajuda a reduzir o cansaço ...'
+[17:30:22] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Bacopa monnieri: planta medici
+[17:30:22] [COLETOR-V2] 📥 Tentando furar muro: 'Por que a chia é chamada de supersemente? Descubra os benefí...'
+[17:30:22] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (3656 chars). Categoria: Política
+[17:30:22] [COLETOR-V2] 📥 Tentando furar muro: 'Finanças em abril: veja o que os astros reservam para cada s...'
+[17:30:23] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): 6 fatores que podem aumentar o
+[17:30:23] [COLETOR-V2] 📥 Tentando furar muro: 'Argentina ré por injúria racial no Rio está de volta ao seu ...'
+[17:30:23] [COLETOR-V2] 📥 Tentando furar muro: 'Trump demite a procuradora-geral Pam Bondi...'
+[17:30:23] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Por que a chia é chamada de su
+[17:30:23] [COLETOR-V2] 📥 Tentando furar muro: 'TSE retoma caso Denarium após adiamentos que permitiram renú...'
+[17:30:23] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Finanças em abril: veja o que 
+[17:30:23] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Argentina ré por injúria racia
+[17:30:23] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Trump demite a procuradora-ger
+[17:30:24] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): TSE retoma caso Denarium após 
+[17:30:24] [COLETOR-V2] Salvas 3 matérias brutais no JSON do Agente V9.
+[17:30:24] [COLETOR-V2] Ciclo de coleta finalizado.
+
+--- LOG: zizilinda_controlado.log ---
+[2026-04-01T22:44:11.249430-03:00] [ZIZI] material_from_text: URL do X detectada → fetch_x_material
+[2026-04-01T22:44:11.249486-03:00] [ZIZI] _twitter_api_get_post: TWITTER_BEARER_TOKEN ausente
+[2026-04-01T22:44:11.558551-03:00] [ZIZI] _grok_extract_x_post: erro 400: {"code":"Client specified an invalid argument","error":"Model not found: grok-2-latest"}
+[2026-04-01T22:44:14.739603-03:00] [ZIZI] fetch_x_material: vcodec='' has_video=False
+[2026-04-01T22:44:15.917471-03:00] [ZIZI] fetch_x_material: fallback para fetch_url_context
+[2026-04-01T22:44:16.843610-03:00] [ZIZI] fetch_url_context: trafilatura falhou, tentando Jina Reader
+[2026-04-01T22:44:23.808449-03:00] [ZIZI] fetch_url_context: Jina Reader OK (5026 chars)
+[2026-04-01T22:46:34.084268-03:00] [ZIZI] handle_callback data=auth:yes step=conv_awaiting_auth
+[2026-04-01T22:46:41.211973-03:00] [ZIZI] handle_text step=conv_collecting from_voice=False low=agora
+[2026-04-01T22:54:13.282183-03:00] [ZIZI] handle_text step=awaiting_image from_voice=False low=oi
+[2026-04-01T23:26:48.409328-03:00] [ZIZI] Webhook removido.
+[2026-04-01T23:26:48.409450-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-01T23:27:35.938787-03:00] [ZIZI] handle_text step=awaiting_image from_voice=False low=oi
+[2026-04-01T23:28:16.033827-03:00] [ZIZI] handle_text step=idle from_voice=False low=oi
+[2026-04-01T23:28:19.005742-03:00] [ZIZI] handle_callback disparado - Update data: mode:build
+[2026-04-01T23:28:19.282005-03:00] [ZIZI] handle_callback data=mode:build step=menu
+[2026-04-01T23:28:31.528087-03:00] [ZIZI] handle_text step=idle from_voice=False low=https://x.com/dropsitenews/status/2039421072680882541
+[2026-04-01T23:28:31.528365-03:00] [ZIZI] material_from_text: URL do X detectada → fetch_x_material
+[2026-04-01T23:28:31.822127-03:00] [ZIZI] _twitter_api_get_post: OK tweet_id=2039421072680882541 (330 chars)
+[2026-04-01T23:28:31.823258-03:00] [ZIZI] fetch_x_material: Twitter API extraiu texto com sucesso
+[2026-04-01T23:28:33.300119-03:00] [ZIZI] fetch_x_material: vcodec='' has_video=False
+[2026-04-01T23:28:47.246283-03:00] [ZIZI] handle_callback disparado - Update data: auth:yes
+[2026-04-01T23:28:47.838205-03:00] [ZIZI] handle_callback data=auth:yes step=conv_awaiting_auth
+[2026-04-01T23:28:53.431558-03:00] [ZIZI] handle_text step=conv_collecting from_voice=False low=agora
+[2026-04-01T23:28:58.762447-03:00] [ZIZI] handle_callback disparado - Update data: image:upload
+[2026-04-01T23:28:59.032973-03:00] [ZIZI] handle_callback data=image:upload step=awaiting_image
+[2026-04-01T23:30:57.819339-03:00] [ZIZI] handle_callback disparado - Update data: caption:skip
+[2026-04-01T23:30:58.410836-03:00] [ZIZI] handle_callback data=caption:skip step=awaiting_caption
+[2026-04-01T23:31:05.892853-03:00] [ZIZI] dispatch_agent: estado antigo do agente limpo
+[2026-04-01T23:44:37.329635-03:00] [ZIZI] handle_callback disparado - Update data: proc:log
+[2026-04-01T23:46:14.150860-03:00] [ZIZI] handle_callback disparado - Update data: proc:cancel
+[2026-04-01T23:46:14.742982-03:00] [ZIZI] handle_callback data=proc:cancel step=idle
+[2026-04-01T23:53:25.142983-03:00] [ZIZI] Webhook removido.
+[2026-04-01T23:53:25.143124-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-01T23:54:48.472593-03:00] [ZIZI] handle_text step=idle from_voice=False low=oi
+[2026-04-01T23:54:51.414577-03:00] [ZIZI] handle_callback disparado - Update data: mode:build
+[2026-04-01T23:54:51.685229-03:00] [ZIZI] handle_callback data=mode:build step=menu
+[2026-04-01T23:55:02.407610-03:00] [ZIZI] handle_text step=idle from_voice=False low=https://x.com/dropsitenews/status/2039421072680882541
+[2026-04-01T23:55:02.407933-03:00] [ZIZI] material_from_text: URL do X detectada → fetch_x_material
+[2026-04-01T23:55:02.684764-03:00] [ZIZI] _twitter_api_get_post: OK tweet_id=2039421072680882541 (330 chars)
+[2026-04-01T23:55:02.685861-03:00] [ZIZI] fetch_x_material: Twitter API extraiu texto com sucesso
+[2026-04-01T23:55:04.281956-03:00] [ZIZI] fetch_x_material: vcodec='' has_video=False
+[2026-04-01T23:55:16.773048-03:00] [ZIZI] handle_callback disparado - Update data: auth:yes
+[2026-04-01T23:55:17.369591-03:00] [ZIZI] handle_callback data=auth:yes step=conv_awaiting_auth
+[2026-04-01T23:55:24.981633-03:00] [ZIZI] handle_text step=conv_collecting from_voice=False low=agora
+[2026-04-01T23:55:29.524162-03:00] [ZIZI] handle_callback disparado - Update data: image:upload
+[2026-04-01T23:55:29.796382-03:00] [ZIZI] handle_callback data=image:upload step=awaiting_image
+[2026-04-01T23:55:54.769320-03:00] [ZIZI] handle_callback disparado - Update data: caption:skip
+[2026-04-01T23:55:55.362998-03:00] [ZIZI] handle_callback data=caption:skip step=awaiting_caption
+[2026-04-01T23:56:03.037193-03:00] [ZIZI] dispatch_agent: estado antigo do agente limpo
+
+--- LOG: llm_utils.log ---
+[2026-03-24T18:40:01.728397-03:00] [LLM_UTIL] Coletando notícias para a editoria: geopolitica
+[2026-03-24T18:41:35.774088-03:00] [LLM_UTIL] Coletou 292 notícias para geopolitica
+[2026-03-24T18:41:35.774856-03:00] [LLM_UTIL] Classificando 30 notícias para geopolitica
+[2026-03-24T18:41:35.775224-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_classification
+[2026-03-24T18:41:53.928644-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 666 (input), 1979 (output). Custo: R$ 0.1651
+[2026-03-24T18:41:57.651474-03:00] [LLM_UTIL] Gerando artigo para: Série analisa como países vizinhos lidaram com suas ditaduras
+[2026-03-24T18:41:57.652438-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_writing
+[2026-03-24T18:42:09.109320-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1663 (input), 692 (output). Custo: R$ 0.0935
+[2026-03-24T18:42:09.111279-03:00] [LLM_UTIL] Erro ao ler CSV de mídia: too many values to unpack (expected 2)
+[2026-03-24T18:42:09.111493-03:00] [LLM_UTIL] Usando imagem de fallback da editoria: 227659
+[2026-03-24T18:42:19.791610-03:00] [LLM_UTIL] Post publicado com sucesso: Série analisa como países vizinhos lidaram com suas ditaduras
+[2026-03-24T18:42:19.793536-03:00] [LLM_UTIL] Agente finalizado.
+[2026-03-24T18:48:32.222093-03:00] [LLM_UTIL] PID anterior (1649970) não existe. Removendo lock.
+[2026-03-24T18:48:32.222357-03:00] [LLM_UTIL] Agente iniciado.
+[2026-03-24T18:48:32.222496-03:00] [LLM_UTIL] Processando editoria: tecnologia
+[2026-03-24T18:48:32.222552-03:00] [LLM_UTIL] Coletando notícias para a editoria: tecnologia
+[2026-03-24T18:48:44.461134-03:00] [LLM_UTIL] Erro ao buscar feed RSS https://www.tecmundo.com.br/rss: Remote end closed connection without response
+[2026-03-24T18:49:09.018571-03:00] [LLM_UTIL] Coletou 215 notícias para tecnologia
+[2026-03-24T18:49:09.019261-03:00] [LLM_UTIL] Classificando 30 notícias para tecnologia
+[2026-03-24T18:49:09.019654-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_classification
+[2026-03-24T18:49:32.964539-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 636 (input), 2076 (output). Custo: R$ 0.1716
+[2026-03-24T18:49:36.727787-03:00] [LLM_UTIL] Gerando artigo para: Alta dos combustíveis é a bomba da vez na política nacional
+[2026-03-24T18:49:36.728393-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_writing
+[2026-03-24T18:49:49.227427-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1788 (input), 722 (output). Custo: R$ 0.0988
+[2026-03-24T18:49:49.227842-03:00] [LLM_UTIL] Gerando artigo para: Alta dos combustíveis é a bomba da vez na política nacional
+[2026-03-24T18:49:49.228368-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_writing
+[2026-03-24T18:50:00.978593-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1788 (input), 726 (output). Custo: R$ 0.0992
+[2026-03-24T18:50:00.980198-03:00] [LLM_UTIL] Erro ao ler CSV de mídia: too many values to unpack (expected 2)
+[2026-03-24T18:50:07.663830-03:00] [LLM_UTIL] Imagem encontrada na biblioteca do WP: 228467
+[2026-03-24T18:50:23.410481-03:00] [LLM_UTIL] Post publicado com sucesso: Alta dos combustíveis é a bomba da vez na política nacional
+[2026-03-24T18:50:23.412949-03:00] [LLM_UTIL] Agente finalizado.
+[2026-03-24T18:56:25.622998-03:00] [LLM_UTIL] PID anterior (1652268) não existe. Removendo lock.
+[2026-03-24T18:56:25.623244-03:00] [LLM_UTIL] Agente iniciado.
+[2026-03-24T18:56:25.623402-03:00] [LLM_UTIL] Processando editoria: entretenimento
+[2026-03-24T18:56:25.623462-03:00] [LLM_UTIL] Coletando notícias para a editoria: entretenimento
+[2026-03-24T18:59:16.474189-03:00] [LLM_UTIL] Coletou 172 notícias para entretenimento
+[2026-03-24T18:59:16.474885-03:00] [LLM_UTIL] Classificando 30 notícias para entretenimento
+[2026-03-24T18:59:16.476172-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_classification
+[2026-03-24T18:59:38.347146-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 689 (input), 2000 (output). Custo: R$ 0.1672
+[2026-03-24T18:59:41.348767-03:00] [LLM_UTIL] Gerando artigo para: Nas guerras morais, a primeira vítima é sempre a tolerância
+[2026-03-24T18:59:41.349394-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_writing
+[2026-03-24T18:59:53.882443-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1947 (input), 690 (output). Custo: R$ 0.1004
+[2026-03-24T18:59:53.882881-03:00] [LLM_UTIL] Gerando artigo para: Nas guerras morais, a primeira vítima é sempre a tolerância
+[2026-03-24T18:59:53.883430-03:00] [LLM_UTIL] Tentando chamar LLM: gpt-4o para a tarefa news_writing
+[2026-03-24T19:00:01.419650-03:00] [LLM_UTIL] Agente V8 já está rodando (PID 1654279). Abortando.
+[2026-03-24T19:00:04.054031-03:00] [LLM_UTIL] Sucesso com gpt-4o. Tokens: 1947 (input), 520 (output). Custo: R$ 0.0877
+[2026-03-24T19:00:04.055471-03:00] [LLM_UTIL] Erro ao ler CSV de mídia: too many values to unpack (expected 2)
+[2026-03-24T19:00:09.817718-03:00] [LLM_UTIL] Imagem encontrada na biblioteca do WP: 228302
+[2026-03-24T19:00:16.706528-03:00] [LLM_UTIL] Post publicado com sucesso: Nas guerras morais, a primeira vítima é sempre a tolerância
+[2026-03-24T19:00:16.708624-03:00] [LLM_UTIL] Agente finalizado.
+
+--- LOG: performance.log ---
+GloboNews cogita demissão em massa após PowerPoint que tentou ligar Lula ao caso Master - O Cafezinho (1323)
+Lula conquista eleitores de centro e supera Flávio Bolsonaro - O Cafezinho (907)
+Juízes reagem a corte de benefícios com cancelamento de audiências - O Cafezinho (894)
+EUA e Israel atacam reservatório de água no Irã; 10 mil m³ perdidos - O Cafezinho (802)
+Nova pesquisa deixa vida de Lula mais difícil na busca pela reeleição - O Cafezinho (768)
+Irã ameaça retaliar após ataques de EUA e Israel matarem família em Bushehr - O Cafezinho (708)
+Pesquisa Atlas/estadão aponta empate técnico entre Haddad e Tarcísio no governo de São Paulo em 2026 - O Cafezinho (670)
+Irã ameaça sair do tratado nuclear após ataques EUA e Israel - O Cafezinho (654)
+Trump ameaça "desencadear o inferno" sobre o Irã enquanto contradições e divi... - O Cafezinho (647)
+Paquistão e Irã abrem Hormuz para 20 navios após acordo histórico - O Cafezinho (640)
+Atlas/Bloomberg mostra avanço de Flávio, mas também revela onde está o jogo real - O Cafezinho (608)
+Físico Zhu Zijie retorna à China para liderar pesquisa em átomos frios - O Cafezinho (602)
+Federação UB-PP abandona Elmano e adere a grupo de Ciro Gomes no Ceará - O Cafezinho (598)
+China inova em drones de batalha e desafia poder militar dos EUA - O Cafezinho (591)
+Alistamento de jovens e risco do Brasil virar Colônia da UE - O Cafezinho (585)
+EUA e Israel atacam Irã e expõem brutalidade militar conjunta - O Cafezinho (543)
+Países do Golfo recusam retaliar o Irã e viram as costas para Washington - O Cafezinho (523)
+EUA redefinem estratégia militar e focam no hemisfério norte, deixando Brasil em encruzilhada geopolítica - O Cafezinho (518)
+Irã ataca usina de energia e dessalinização no Kuwait e mata trabalhador indiano - O Cafezinho (518)
+China rompe barreira tecnológica e liga supercérebro de IA com chips 100% nacionais - O Cafezinho (517)
+GloboNews desaba em audiência após PowerPoint que associou Lula ao Master - O Cafezinho (448)
+Ciência do BRICS avança: Rússia descobre moléculas marinhas que podem revolucionar a proteção do coração - O Cafezinho (409)
+
+FOCO TREND TRAVADO: [míssil hipersônico Brasil] a partir de 'Brasil acelera míssil hipersônico de R$ 117 milhões e entra na corrida tecnológica das grandes potências - O Cafezinho'
+
+TEMAS BRUTOS:
+
+['lula', 'lula', 'lula', 'lula', 'lula', 'china', 'china', 'china', 'china', 'china', 'china', 'china', 'china', 'ira', 'ira', 'ira', 'geopolitica', 'geopolitica', 'geopolitica', 'lula', 'lula', 'lula', 'geopolitica', 'geopolitica', 'geopolitica', 'lula', 'lula', 'lula', 'flavio bolsonaro', 'flavio bolsonaro', 'flavio bolsonaro', 'bolsonaro', 'bolsonaro', 'bolsonaro', 'ira', 'ira', 'ira', 'geopolitica', 'geopolitica', 'geopolitica', 'lula', 'lula', 'eleicoes', 'eleicoes', 'ira', 'ira', 'geopolitica', 'geopolitica', 'lula', 'lula', 'ira', 'ira', 'geopolitica', 'geopolitica', 'ira', 'ira', 'trump', 'trump', 'ira', 'ira', 'china', 'china', 'politica', 'politica', 'china', 'china', 'geopolitica', 'geopolitica', 'ira', 'ira', 'geopolitica', 'geopolitica', 'ira', 'ira', 'geopolitica', 'geopolitica', 'ira', 'ira', 'geopolitica', 'geopolitica', 'ira', 'ira', 'ira', 'ira', 'china', 'china', 'lula', 'lula', 'geopolitica', 'geopolitica', 'russia', 'russia', 'geopolitica', 'geopolitica']
+
+PESOS:
+
+geopolitica 0.266
+ira 0.255
+lula 0.181
+china 0.149
+flavio bolsonaro 0.032
+bolsonaro 0.032
+eleicoes 0.021
+trump 0.021
+politica 0.021
+russia 0.021
+
+MACROTEMAS:
+
+geopolitica_expandida 0.712
+eleitoral_expandido 0.085
+institucional_expandido 0.021
+lula_e_governo 0.181
+
+Saída salva em: /root/performance_weights.json
+
+--- LOG: zizi_run.log ---
+[2026-03-21T20:17:45.156252-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH5YXqakTky7LK3RYUvj'} — tentando GPT fallback
+[2026-03-21T20:17:46.448085-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:22:51.615712-03:00] [ZIZI] Zizi Linda rodando | /root/venv/bin/python
+[2026-03-21T20:22:52.268838-03:00] [ZIZI] Webhook antigo removido com sucesso.
+[2026-03-21T20:23:12.666715-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=19
+[2026-03-21T20:23:13.217872-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH5xig874pUhhBaen2J4'} — tentando GPT fallback
+[2026-03-21T20:23:14.625417-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:23:28.438121-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=84
+[2026-03-21T20:23:29.299236-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH5ytkNyh4ciLjssmm8j'} — tentando GPT fallback
+[2026-03-21T20:23:30.268689-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:23:46.212760-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=53
+[2026-03-21T20:23:46.777377-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH61C8RYHz6bbxvxSEhJ'} — tentando GPT fallback
+[2026-03-21T20:23:47.973310-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:29:57.824260-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=77
+[2026-03-21T20:29:58.379209-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH6UaseuGmBYEyqzE4vn'} — tentando GPT fallback
+[2026-03-21T20:30:00.300784-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:30:26.243034-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=123
+[2026-03-21T20:30:26.807049-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH6WgRaRRm2arhqwcQQe'} — tentando GPT fallback
+[2026-03-21T20:30:27.818774-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:31:42.386475-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH6cFb1kDxqZxZdBHLV2'} — tentando GPT fallback
+[2026-03-21T20:31:46.330162-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T20:32:30.403843-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=61
+[2026-03-21T20:32:31.150763-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH6fqNqiGUb5CQQZRC5b'} — tentando GPT fallback
+[2026-03-21T20:32:32.202530-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T21:04:26.706983-03:00] [ZIZI] Zizi Linda rodando | /root/venv/bin/python
+[2026-03-21T21:04:27.368032-03:00] [ZIZI] Webhook antigo removido com sucesso.
+[2026-03-21T21:06:06.507145-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=23
+[2026-03-21T21:06:07.066456-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZH9ESx7evdMjzCHUYuDS'} — tentando GPT fallback
+[2026-03-21T21:06:08.144944-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T22:21:29.211164-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=133
+[2026-03-21T22:21:29.855017-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZHEyqTyrWqWQpKBPSRCb'} — tentando GPT fallback
+[2026-03-21T22:21:31.304172-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T22:22:46.755569-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=28
+[2026-03-21T22:22:47.329302-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZHF5Z4v9EXLGegx72VPh'} — tentando GPT fallback
+[2026-03-21T22:22:51.745927-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T22:24:33.168932-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=47
+[2026-03-21T22:24:33.728638-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZHFDPwTjJ2e3gPS4S51f'} — tentando GPT fallback
+[2026-03-21T22:24:34.848855-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T22:24:47.497814-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=24
+[2026-03-21T22:24:48.210274-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZHFETrdZ2tX66xXkz3fT'} — tentando GPT fallback
+[2026-03-21T22:24:49.776005-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T22:25:04.118156-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=40
+[2026-03-21T22:25:04.708126-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZHFFgHXBV8TAZjAszvV9'} — tentando GPT fallback
+[2026-03-21T22:25:05.868805-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+[2026-03-21T22:25:10.377527-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=0
+[2026-03-21T22:25:10.678220-03:00] [ZIZI] Transcricao vazia: Transcription(text='', logprobs=None, usage=UsageTokens(input_tokens=17, output_tokens=2, total_tokens=19, type='tokens', input_token_details=UsageTokensInputTokenDetails(audio_tokens=17, text_tokens=0)))
+[2026-03-21T22:25:22.264089-03:00] [ZIZI] Transcricao recebida | tipo=<class 'openai.types.audio.transcription.Transcription'> | texto_len=44
+[2026-03-21T22:25:22.824607-03:00] [ZIZI] Claude chat erro: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-3-5-sonnet-20241022'}, 'request_id': 'req_011CZHFH1r3Ar5PZ8zxgawMh'} — tentando GPT fallback
+[2026-03-21T22:25:24.785697-03:00] [ZIZI] GPT fallback OK para chat_id=1894890759
+
+--- LOG: miller.log ---
+[2026-04-01T19:46:52.151898-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+/root/miller_bot.py:1210: DeprecationWarning: There is no current event loop
+  asyncio.get_event_loop().run_until_complete(app.bot.delete_webhook(drop_pending_updates=True))
+[2026-04-01T19:46:52.776035-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-04-01T23:05:26.660791-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+
+--- LOG: robo_coleta.log ---
+[18:00:11] [COLETOR-V2] 📥 Tentando furar muro: 'Idosa morre atropelada por caminhão da Sabesp em São Bernard...'
+[18:00:11] [COLETOR-V2] 📥 Tentando furar muro: ''Apodreça na cadeia', diz Tarcísio sobre tenente-coronel da ...'
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: ''Para minha filha sobrou o caixão', diz pai sobre aposentado...'
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: 'UPL: Cristiano Figueiredo assume como novo CEO no Brasil...'
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: 'Vice-presidente dos EUA se reunirá com premiê húngaro antes ...'
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: 'Veja lista de 19 secretários que deixaram cargos no governo ...'
+[18:00:12] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): O “fundador esquecido” da Appl
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: 'Moody's rebaixa nota de crédito do BRB...'
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: 'Blogueiro é preso suspeito de abuso sexual de adolescentes e...'
+[18:00:12] [COLETOR-V2] 📥 Tentando furar muro: 'Homem é preso após tomar tadalafila, invadir casa e forçar s...'
+[18:00:13] [COLETOR-V2] 📥 Tentando furar muro: 'Nasa dá luz verde para tripulantes da Artemis II seguirem ru...'
+[18:00:13] [COLETOR-V2] 📥 Tentando furar muro: 'Anvisa determina apreensão de lotes falsificados de Mounjaro...'
+[18:00:13] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Lula assume a liderança e Fláv
+[18:00:13] [COLETOR-V2] 📥 Tentando furar muro: 'Saiba onde assistir ao jogo entre Palmeiras x Grêmio pelo Br...'
+[18:00:15] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Anvisa determina apreensão de 
+[18:00:15] [COLETOR-V2] 📥 Tentando furar muro: 'Guinness World desmente morte de Jonathan, animal mais velho...'
+[18:00:16] [COLETOR-V2] 📥 Tentando furar muro: 'Mulher é presa por extorquir turistas com “rezas” no Pelouri...'
+[18:00:16] [COLETOR-V2] 📥 Tentando furar muro: 'Preso pela PF usava perfis falsos para se aproximar de adole...'
+[18:00:16] [COLETOR-V2] 📥 Tentando furar muro: 'Irã reage à fala de Trump sobre fazer país “voltar à Idade d...'
+[18:00:17] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Guinness World desmente morte 
+[18:00:17] [COLETOR-V2] 📥 Tentando furar muro: 'Hipotireoidismo engorda mesmo? Endocrinologista revela mitos...'
+[18:00:17] [COLETOR-V2] 📥 Tentando furar muro: 'Professora e dentista: quem era o casal morto em trágico aci...'
+[18:00:18] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Hipotireoidismo engorda mesmo?
+[18:00:18] [COLETOR-V2] 📥 Tentando furar muro: 'Luto na gastronomia: chef com estrela Michelin morre aos 31 ...'
+[18:00:18] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (2402 chars). Categoria: Geopolítica
+[18:00:18] [COLETOR-V2] 📥 Tentando furar muro: 'Nova Linha 17- Ouro do Metrô de SP muda a vida dos paulistan...'
+[18:00:19] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Professora e dentista: quem er
+[18:00:19] [COLETOR-V2] 📥 Tentando furar muro: 'Pressão alta silenciosa: confira sintomas que quase ninguém ...'
+[18:00:19] [COLETOR-V2] 📥 Tentando furar muro: '10 pontos para dialogar com o conservadorismo sem ceder prin...'
+[18:00:19] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Luto na gastronomia: chef com 
+[18:00:19] [COLETOR-V2] 📥 Tentando furar muro: 'MPF pede a Moraes o acesso a laudos de operação policial que...'
+[18:00:19] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Nova Linha 17- Ouro do Metrô d
+[18:00:19] [COLETOR-V2] 📥 Tentando furar muro: 'Petróleo dispara, enquanto Washington e Teerã elevam o tom...'
+[18:00:20] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): MPF pede a Moraes o acesso a l
+[18:00:20] [COLETOR-V2] 📥 Tentando furar muro: 'TJ-SP condena a 103 anos de prisão homem que estuprou sobrin...'
+[18:00:20] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): 10 pontos para dialogar com o 
+[18:00:20] [COLETOR-V2] 📥 Tentando furar muro: '6 fatores que podem aumentar o risco de cáries na Páscoa...'
+[18:00:20] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (2996 chars). Categoria: Geopolítica
+[18:00:20] [COLETOR-V2] 📥 Tentando furar muro: 'Bacopa monnieri: planta medicinal ajuda a reduzir o cansaço ...'
+[18:00:20] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): TJ-SP condena a 103 anos de pr
+[18:00:20] [COLETOR-V2] 📥 Tentando furar muro: 'Por que a chia é chamada de supersemente? Descubra os benefí...'
+[18:00:21] [COLETOR-V2] 📥 Tentando furar muro: 'Finanças em abril: veja o que os astros reservam para cada s...'
+[18:00:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): 6 fatores que podem aumentar o
+[18:00:21] [COLETOR-V2] 📥 Tentando furar muro: 'Argentina ré por injúria racial no Rio está de volta ao seu ...'
+[18:00:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Bacopa monnieri: planta medici
+[18:00:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Por que a chia é chamada de su
+[18:00:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Finanças em abril: veja o que 
+[18:00:22] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Argentina ré por injúria racia
+[18:00:22] [COLETOR-V2] Salvas 3 matérias brutais no JSON do Agente V9.
+[18:00:22] [COLETOR-V2] Ciclo de coleta finalizado.
+
+--- LOG: miller_bot.log ---
+[2026-03-28T13:42:10.615362-03:00] [MILLER] Memória 48h: 0 entradas válidas mantidas
+[2026-03-28T13:42:10.615362-03:00] [MILLER] Memória 48h: 0 entradas válidas mantidas
+/root/miller_bot.py:1186: DeprecationWarning: There is no current event loop
+  asyncio.get_event_loop().run_until_complete(app.bot.delete_webhook(drop_pending_updates=True))
+[2026-03-28T13:42:11.869802-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Pierre (claude)
+[2026-03-28T13:42:11.869802-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Pierre (claude)
+[2026-03-31T11:53:49.604723-03:00] [MILLER] Wei LLM deepseek falhou: 401 Client Error: Unauthorized for url: https://api.deepseek.com/chat/completions
+[2026-03-31T11:53:49.604723-03:00] [MILLER] Wei LLM deepseek falhou: 401 Client Error: Unauthorized for url: https://api.deepseek.com/chat/completions
+[2026-03-31T11:53:50.315360-03:00] [MILLER] Wei LLM gpt falhou: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************XR8A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+[2026-03-31T11:53:50.315360-03:00] [MILLER] Wei LLM gpt falhou: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-proj-********************************************************************************************************************************************************XR8A. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+[2026-03-31T11:53:50.642948-03:00] [MILLER] Wei LLM claude falhou: 401 Client Error: Unauthorized for url: https://api.anthropic.com/v1/messages
+[2026-03-31T11:53:50.642948-03:00] [MILLER] Wei LLM claude falhou: 401 Client Error: Unauthorized for url: https://api.anthropic.com/v1/messages
+[2026-03-31T11:53:50.643076-03:00] [MILLER] Erro ao gerar resposta: Nenhum LLM disponível para Wei: 401 Client Error: Unauthorized for url: https://api.anthropic.com/v1/messages
+[2026-03-31T11:53:50.643076-03:00] [MILLER] Erro ao gerar resposta: Nenhum LLM disponível para Wei: 401 Client Error: Unauthorized for url: https://api.anthropic.com/v1/messages
+[2026-03-31T11:53:50.643368-03:00] [MILLER] Memória 48h: 0 entradas válidas mantidas
+[2026-03-31T11:53:50.643368-03:00] [MILLER] Memória 48h: 0 entradas válidas mantidas
+[2026-03-31T11:59:13.299643-03:00] [MILLER] Memória 48h: 1 entradas válidas mantidas
+[2026-03-31T11:59:13.842480-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Wei (deepseek)
+[2026-03-31T12:10:30.899440-03:00] [MILLER] Personalidade criada: /root/agent_data/miller_persona.json
+[2026-03-31T12:10:30.900105-03:00] [MILLER] Memória 48h: 1 entradas válidas mantidas
+[2026-03-31T12:10:31.528797-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-03-31T12:11:28.748696-03:00] [MILLER] Memória 48h: 1 entradas válidas mantidas
+[2026-03-31T12:12:15.285888-03:00] [MILLER] Audio Miller: Opa, tudo bem? Tudo bem? Eu vi que você... Eu tenho que deixar o comando escrever para ter umas... escrever conteúdos complexos. Eu posso deixar áudio aqui e você vai juntando pra, por exemplo, eu pedi lá pra você ter acesso ao meu conteúdo Origens, meu livro Origens. Você teve acesso aí?
+[2026-03-31T12:16:22.159694-03:00] [MILLER] Guardado em livro_miguel
+[2026-03-31T12:16:22.160292-03:00] [MILLER] Memória 48h: 2 entradas válidas mantidas
+[2026-03-31T12:25:21.748026-03:00] [MILLER] Audio Miller: Oi, e agora, você já tem acesso ao meu livro Origens?
+[2026-03-31T12:27:54.610362-03:00] [MILLER] Guardado em livro_miguel
+[2026-03-31T12:27:54.611010-03:00] [MILLER] Memória 48h: 3 entradas válidas mantidas
+[2026-03-31T12:50:38.752372-03:00] [MILLER] Memória 48h: 4 entradas válidas mantidas
+[2026-03-31T14:04:13.109241-03:00] [MILLER] Memória 48h: 4 entradas válidas mantidas
+[2026-03-31T14:09:16.696946-03:00] [MILLER] Memória 48h: 4 entradas válidas mantidas
+[2026-03-31T14:09:17.293808-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-03-31T14:52:08.588713-03:00] [MILLER] Memória 48h: 4 entradas válidas mantidas
+[2026-03-31T14:52:21.400785-03:00] [MILLER] Audio Miller: Oi, tudo bem? Está me ouvindo?
+[2026-03-31T14:52:24.783357-03:00] [MILLER] Memória 48h: 5 entradas válidas mantidas
+[2026-03-31T14:53:06.907979-03:00] [MILLER] Audio Miller: Você está com acesso ao meu livro agora, Origens?
+[2026-03-31T14:53:11.591642-03:00] [MILLER] Memória 48h: 6 entradas válidas mantidas
+[2026-03-31T15:44:23.751368-03:00] [MILLER] Memória 48h: 7 entradas válidas mantidas
+[2026-03-31T15:44:24.386032-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-03-31T20:46:07.369779-03:00] [MILLER] Audio Miller: Ah legal lá no diretório capítulo um tem um subdiretório chamado final, que tem o texto do livro. que tem o texto do primeiro capítulo. viu só para testar. Consegue trazer o primeiro parágrafo do primeiro capítulo aqui para eu ler? É final, né? É diretório capítulo um de subdiretório final.
+[2026-03-31T20:46:28.360534-03:00] [MILLER] Memória 48h: 7 entradas válidas mantidas
+[2026-04-01T19:09:01.480954-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+[2026-04-01T19:09:02.091162-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-04-01T19:11:41.372222-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+[2026-04-01T19:11:41.973111-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-04-01T19:39:38.764999-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+[2026-04-01T19:39:39.381315-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-04-01T19:46:52.151898-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+[2026-04-01T19:46:52.776035-03:00] [MILLER] Miller rodando | @MillernoRiobot | Hoje: Miller (deepseek)
+[2026-04-01T23:05:26.660791-03:00] [MILLER] Memória 48h: 8 entradas válidas mantidas
+
+--- LOG: agente_correcao.log ---
+[2026-03-22T14:00:53.112255-03:00] [CAETANO] Audio: Caetano, bom dia, vamos corrigir um negócio. Tem um post lá, o potencial, um post de agora, um dos últimos, potencial, exaustão, potencial dos eleitores, com a exaustão da polarização Lula-Bolsonaro.
+[2026-03-22T14:01:15.342303-03:00] [CAETANO] Audio: Não, não tenho o número do post, cara. Procura pelo título, é um dos últimos. Lista aí os quatro últimos posts.
+[2026-03-22T14:01:15.342303-03:00] [CAETANO] Audio: Não, não tenho o número do post, cara. Procura pelo título, é um dos últimos. Lista aí os quatro últimos posts.
+[2026-03-22T14:01:30.445102-03:00] [CAETANO] Audio: Não tenho o número do poste, não tenho.
+[2026-03-22T14:01:30.445102-03:00] [CAETANO] Audio: Não tenho o número do poste, não tenho.
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/root/agente_correcao.py", line 17, in <module>
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/root/agente_correcao.py", line 17, in <module>
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'
+nohup: ignoring input
+/root/agente_correcao.py:559: DeprecationWarning: There is no current event loop
+  asyncio.get_event_loop().run_until_complete(app.bot.delete_webhook(drop_pending_updates=True))
+[2026-03-23T05:39:24.969581-03:00] [CAETANO] Caetano rodando | @caetanoechicobot
+[2026-03-23T05:39:24.969581-03:00] [CAETANO] Caetano rodando | @caetanoechicobot
+[2026-03-23T05:39:34.885253-03:00] [CAETANO] Audio: Olá, Caetano, tudo bem?
+[2026-03-23T05:39:34.885253-03:00] [CAETANO] Audio: Olá, Caetano, tudo bem?
+[2026-03-23T05:39:56.205695-03:00] [CAETANO] Audio: Então, quero corrigir essa matéria: Japão se submete a Trump.
+[2026-03-23T05:39:56.205695-03:00] [CAETANO] Audio: Então, quero corrigir essa matéria: Japão se submete a Trump.
+[2026-03-23T05:40:02.416553-03:00] [CAETANO] Achou 1 post(s) nas últimas 48h
+[2026-03-23T05:40:02.416553-03:00] [CAETANO] Achou 1 post(s) nas últimas 48h
+[2026-03-23T05:40:23.142802-03:00] [CAETANO] Audio: Então, troca o título, corta só essa última frase do título, deixa só assim. Japão se submete a Trump e vira chacota na China.
+[2026-03-23T05:40:23.142802-03:00] [CAETANO] Audio: Então, troca o título, corta só essa última frase do título, deixa só assim. Japão se submete a Trump e vira chacota na China.
+[2026-03-23T05:40:38.854945-03:00] [CAETANO] Audio: Sim.
+[2026-03-23T05:40:38.854945-03:00] [CAETANO] Audio: Sim.
+[2026-03-24T17:20:19.980058-03:00] [CAETANO] Audio: Bom dia.
+[2026-03-24T17:20:19.980058-03:00] [CAETANO] Audio: Bom dia.
+[2026-03-24T17:20:38.401979-03:00] [CAETANO] Audio: Acha pra mim aí o artigo Lava Jato 2.0
+[2026-03-24T17:20:38.401979-03:00] [CAETANO] Audio: Acha pra mim aí o artigo Lava Jato 2.0
+[2026-03-24T17:21:10.912693-03:00] [CAETANO] Audio: Procura melhor aí. Lava Jato 2.0: Quando a tragédia virou farsa.
+[2026-03-24T17:21:10.912693-03:00] [CAETANO] Audio: Procura melhor aí. Lava Jato 2.0: Quando a tragédia virou farsa.
+[2026-03-24T17:21:16.155688-03:00] [CAETANO] wp_search erro: HTTPSConnectionPool(host='controle.ocafezinho.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?search=Lava+Jato+2.0&per_page=5&orderby=date&order=desc&status=any&after=2026-03-22T17%3A21%3A14.796011-03%3A00 (Caused by NewConnectionError("HTTPSConnection(host='controle.ocafezinho.com', port=443): Failed to establish a new connection: [Errno 113] No route to host"))
+[2026-03-24T17:21:16.155688-03:00] [CAETANO] wp_search erro: HTTPSConnectionPool(host='controle.ocafezinho.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?search=Lava+Jato+2.0&per_page=5&orderby=date&order=desc&status=any&after=2026-03-22T17%3A21%3A14.796011-03%3A00 (Caused by NewConnectionError("HTTPSConnection(host='controle.ocafezinho.com', port=443): Failed to establish a new connection: [Errno 113] No route to host"))
+[2026-03-24T17:21:16.155853-03:00] [CAETANO] Nenhum post nas últimas 48h, buscando no histórico completo
+[2026-03-24T17:21:16.155853-03:00] [CAETANO] Nenhum post nas últimas 48h, buscando no histórico completo
+[2026-03-24T17:27:35.268373-03:00] [CAETANO] Audio: Então, o cara corrigiu o mesmo post, esse Lava Jato 2.0, quando a tragédia vira farsa.
+[2026-03-24T17:27:35.268373-03:00] [CAETANO] Audio: Então, o cara corrigiu o mesmo post, esse Lava Jato 2.0, quando a tragédia vira farsa.
+[2026-03-24T17:28:15.811189-03:00] [CAETANO] Audio: Eu quero corrigir o mesmo post.
+[2026-03-24T17:28:15.811189-03:00] [CAETANO] Audio: Eu quero corrigir o mesmo post.
+[2026-03-24T17:28:20.838642-03:00] [CAETANO] Achou 5 post(s) nas últimas 48h
+[2026-03-24T17:28:20.838642-03:00] [CAETANO] Achou 5 post(s) nas últimas 48h
+[2026-03-24T17:28:38.762538-03:00] [CAETANO] Audio: Não, quero corrigir mesmo, poxa! Lava Jato 2.0: quando a tragédia vira farsa.
+[2026-03-24T17:28:38.762538-03:00] [CAETANO] Audio: Não, quero corrigir mesmo, poxa! Lava Jato 2.0: quando a tragédia vira farsa.
+[2026-03-24T17:29:14.985600-03:00] [CAETANO] Audio: Não sei o número do post, caralho. Meu, é o mesmo post que eu falei aqui antes. Você é burro? Você não é uma IA, você não tem inteligência?
+[2026-03-24T17:29:14.985600-03:00] [CAETANO] Audio: Não sei o número do post, caralho. Meu, é o mesmo post que eu falei aqui antes. Você é burro? Você não é uma IA, você não tem inteligência?
+
+--- LOG: historiador.log ---
+[18:00:03] ==================================================
+[18:00:03] 🏛️ INICIANDO O DIÁRIO DO HISTORIADOR (CONECTADO AO TRENDS)
+[18:00:03] ==================================================
+[18:00:03] 📡 Lendo Termos em Alta do Google News (Manchetes Gerais)...
+[18:00:12] 💡 Assunto em Alta Detectado: Irã
+[18:00:12] 💥 TEMA DA AULA HISTÓRICA: 'A origem histórica profunda e o contexto sociológico ou fundação milenar sobre: Irã'
+[18:00:30] 🔍 Buscando imagem Histórica no WIKIMEDIA COMMONS (Domínio Público)...
+[18:00:30] ⚠️ Nenhuma imagem do Wikimedia serviu. Tentando IA Generativa (Flux)...
+
+[Upload] Transferindo a imagem para o seu WordPress (Biblioteca de Mídia)...
+✅ SUCESSO! Imagem salva no seu WordPress com o ID Mídia: 229875
+[18:00:43] ✅ Arte Histórica Gerada por IA enviada pro WP (ID 229875)
+[18:00:46] 
+--- PUBLICANDO AULA DE HISTÓRIA NO WORDPRESS ---
+[18:00:46] TÍTULO: Diário do Historiador: a alma milenar do Irã, da estepe à forja dos impérios, uma epopeia de resistência e cultura
+[18:00:51] ✅ Aula de História publicada no servidor WP! ID: 229876
+[18:00:51] --------------------------------------------------
+
+
+--- LOG: mundodostrilhos.log ---
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/root/venv/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_updater.py", line 400, in _get_updates_cleanup
+    await self.bot.get_updates(
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 672, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 4865, in get_updates
+    await self._post(
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 704, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/_bot.py", line 733, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/venv/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 303, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [Errno -3] Temporary failure in name resolution
+Bot Mundo dos Trilhos rodando | /root/venv/bin/python
+
+--- LOG: master_trends.log ---
+[16:30:02] 🚨 Banco de Reserva vazio. Acionando COLETA AUTÔNOMA via Google News (obter_top_trends)...
+[16:30:02] 📡 Lendo Google News (Internacional (Mundo))...
+[16:30:02] 🔥 Foram enfileirados 20 títulos para a triagem da Inteligência Redacional...
+[16:30:02] 🧠 Acionando Camada de Curadoria Inteligente (Evitar Ads e Morneza)...
+[16:30:04] ✅ Curadoria Sênior blindou propagandas e escolheu a pauta peso-pesado: 'Democratas investigam se Secretário de Defesa dos EUA tentou comprar ações de empresas do setor militar antes ...'
+[16:30:04] 🔎 Acionando Coleta Densa e Fact-Checking (Brave Search) para: 'Democratas investigam se Secretário de Defesa dos EUA tentou comprar ações de empresas do setor militar antes da guerra contra Irã - G1'
+[16:30:05] 💥 Iniciando Agente Master V9 consumindo do BANCO BRUTO: 'Democratas investigam se Secretário de Defesa dos EUA tentou comprar ações de empresas do setor militar antes da guerra contra Irã - G1'
+[16:30:05] [ROTEADOR 🧠] Analisando temperatura dramática do novo tema usando IA Triadora...
+[16:30:06] [ROTEADOR 🧠] ⚡ A Inteligência considerou o Clima DRAMÁTICO. Roteando para a IA de Elite (Luxo).
+[16:30:06] [ROTEADOR 🧠] Sequência de Ataque Definida: ['gpt-4.5-preview', 'gemini-3.1-pro-preview']
+[16:30:06] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [OPENAI - gpt-4.5-preview]
+[16:30:06] [ROTEADOR 🧠] ⚠️ Falha no modelo gpt-4.5-preview: Error code: 404 - {'error': {'message': 'The model `gpt-4.5-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}. Subindo o próximo da fila...
+[16:30:06] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [GEMINI - gemini-3.1-pro-preview]
+[16:30:37] [ROTEADOR 🧠] ✅ Texto entregue com maestria por gemini-3.1-pro-preview!
+[16:30:37] 🧐 Camada Extra: Claude 3.5 Sonnet auditando furos no rascunho...
+[16:30:37] 🧠 Acionando Camada Final: Revisão Swarm (Elite Chain)...
+[16:30:37] [ROTEADOR 🧠] Sequência de Ataque Definida: ['claude-3-5-sonnet-20241022', 'grok-3', 'gemini-3.1-flash-live-preview', 'gpt-4o']
+[16:30:37] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [ANTHROPIC - claude-3-5-sonnet-20241022]
+[16:30:37] [ROTEADOR 🧠] ⚠️ Falha no modelo claude-3-5-sonnet-20241022: Claude API Error: {"type":"error","error":{"type":"not_found_error","message":"model: claude-3-5-sonnet-20241022"},"request_id":"req_011CZfVvzHYmhEzuVU6oDWyL"}. Subindo o próximo da fila...
+[16:30:37] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [XAI - grok-3]
+[16:30:54] [ROTEADOR 🧠] ✅ Texto entregue com maestria por grok-3 (Grok)!
+[16:30:54] ✅ Revisão Swarm (Elite Chain) concluída com sucesso.
+[16:30:54] 💎 Acionando Camada de Segurança: Auditoria Final de Elite...
+[16:30:54] [ROTEADOR 🧠] Sequência de Ataque Definida: ['claude-3-5-sonnet-20241022', 'gemini-3.1-flash-live-preview', 'gpt-4o-2024-08-06']
+[16:30:54] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [ANTHROPIC - claude-3-5-sonnet-20241022]
+[16:30:55] [ROTEADOR 🧠] ⚠️ Falha no modelo claude-3-5-sonnet-20241022: Claude API Error: {"type":"error","error":{"type":"not_found_error","message":"model: claude-3-5-sonnet-20241022"},"request_id":"req_011CZfVxH6rqd7ooDmF4CNT4"}. Subindo o próximo da fila...
+[16:30:55] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [GEMINI - gemini-3.1-flash-live-preview]
+[16:30:55] [ROTEADOR 🧠] ⚠️ Falha no modelo gemini-3.1-flash-live-preview: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-3.1-flash-live-preview is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}. Subindo o próximo da fila...
+[16:30:55] [ROTEADOR 🧠] 🔄 Acionando Modelo >>> [OPENAI - gpt-4o-2024-08-06]
+[16:31:13] [ROTEADOR 🧠] ✅ Texto entregue com maestria por gpt-4o-2024-08-06!
+[16:31:13] ✅ Auditoria Final concluída: Texto aprovado para publicação.
+[16:31:13] ⚠️ IA alucinou a categoria 'Política Internacional'. Forçando classificação para 'Geopolítica' para evitar bugs.
+[16:31:13] 🔍 Invocando Camada de Dupla Inteligência para Buscar Mídia no CSV (Custo Zero)...
+[16:31:15]    🤖 Inteligência 1 elegeu Mídia ID 226437. Remetendo ao Revisor Oficial de Autenticação...
+[16:31:16]    🚫 Inteligência 2 (Auditoria) VETOU RISCO. A foto ID 226437 geraria falso contexto (crime midiático).
+[16:31:16] 🔍 Buscando imagem de domínio público no WIKIMEDIA COMMONS (Custo Zero)...
+[16:31:17] ⚠️ Sem imagens na Biblioteca e nem na Wikipedia. Acionando IA Visual (Flux Pro)...
+
+[Upload] Transferindo a imagem para o seu WordPress (Biblioteca de Mídia)...
+✅ SUCESSO! Imagem salva no seu WordPress com o ID Mídia: 229872
+[16:31:31] ✅ Arte flux-pro enviada pro WP (ID 229872)
+[16:31:36] 
+--- PUBLICANDO NO WORDPRESS (VERIFICANDO STATUS GLOBAL) ---
+[16:31:36] TÍTULO: Democratas Investigam Secretário de Defesa dos EUA por Suspeita de Compra de Ações Antes da Guerra no Irã
+[16:31:36] CATEGORIA: Geopolítica (5003) | TAGS: ['Pentágono', 'Guerra no Irã', 'Democratas', 'Secretário de Defesa', 'Mercado Financeiro'] ([1216, 9240, 6931, 18702, 5022])
+[16:31:36] MÍDIA ID: 229872
+[16:31:36] MODO POSTAGEM FINAL: PUBLISH
+[16:31:53] ✅ Post salvo no servidor WP! Link / ID: 229873
+[16:31:54] ------------------------------------------------------
+
+
+--- LOG: manchete.log ---
+[2026-03-31 06:00:02] [manchete] ==================================================
+[2026-03-31 06:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-03-31 06:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-03-31 12:00:01] [manchete] ==================================================
+[2026-03-31 12:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-03-31 12:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-01 00:00:01] [manchete] ==================================================
+[2026-04-01 00:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-01 00:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-01 06:00:01] [manchete] ==================================================
+[2026-04-01 06:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-01 06:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 10:00:01] [manchete] ==================================================
+[2026-04-02 10:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 10:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 12:00:02] [manchete] ==================================================
+[2026-04-02 12:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 12:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 14:00:02] [manchete] ==================================================
+[2026-04-02 14:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 14:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 16:00:02] [manchete] ==================================================
+[2026-04-02 16:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 16:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 18:00:02] [manchete] ==================================================
+[2026-04-02 18:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 18:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+
+--- LOG: sentinela.log ---
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+✅ Checkup O.K. | O site está blindado, as IAs estão escrevendo limpo e sem repetições. Modo silencioso operando.
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+Enviando aviso de intervenção...
+====================================
+👁️ INICIANDO AGENTE OBSERVADOR O CAFEZINHO
+====================================
+Enviando aviso de intervenção...
+
+--- LOG: augusto.log ---
+nohup: ignoring input
+/root/venv/bin/python: can't open file '/root/augusto_bot.py': [Errno 2] No such file or directory
+
+--- LOG: ferroviario.log ---
+[14:00:09] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"900d1a08-ea55-476f-8873-bee4d8fe5af1","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:10] [FER] Busca [hu]: tehervasút logisztikai folyosó
+[14:00:10] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"c479d86c-9647-49b2-a2a6-08a9eb309b26","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:11] [FER] Busca [sv]: godsjärnväg logistik korridor
+[14:00:11] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"50787f77-085c-4282-a707-a90827431217","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:12] [FER] ERRO na rodada: Sem resultados de busca
+Traceback (most recent call last):
+  File "/root/agente_ferroviario_v2.py", line 1343, in <module>
+    run()
+  File "/root/agente_ferroviario_v2.py", line 1305, in run
+    raise RuntimeError("Sem resultados de busca")
+RuntimeError: Sem resultados de busca
+[14:00:02] [FER] Tema escolhido: carga | Brasil prioritário: True
+[14:00:02] [FER] Busca [pt]: Brasil ferrovia projeto
+[14:00:03] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"3e09b671-307f-48d0-8b2d-eac8aeff7bf7","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:04] [FER] Busca [pt]: Brasil metrô expansão
+[14:00:04] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"46e009ae-3048-41f5-ba87-06698e5702ed","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:05] [FER] Busca [pt]: Brasil VLT projeto
+[14:00:05] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"54e06cd5-d056-4cba-87c9-4246e7e36de8","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:06] [FER] Busca [pt]: Brasil trem alta velocidade
+[14:00:06] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"cecd216b-c65d-4ed8-b745-6a8fbd31a575","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:07] [FER] Busca [pt]: Brasil ferrovia carga logística
+[14:00:07] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"7c32ff4d-2e77-4445-89d5-7503bf939d3c","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:08] [FER] Busca [pt]: ferrovia de carga logística corredor
+[14:00:08] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"27748e8d-b9d1-442b-a187-f83bdcea3ee7","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:09] [FER] Busca [en]: freight rail logistics corridor
+[14:00:09] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"0ac32afc-b00a-4bd7-8b10-1b39221ca4cc","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:10] [FER] Busca [fr]: chemin de fer fret logistique corridor
+[14:00:10] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"3eeef894-8b58-422c-8912-e94a395c68de","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:11] [FER] Busca [de]: güterbahn logistik korridor
+[14:00:11] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"b24318ec-2a1e-4bc2-b34b-5077a457b765","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:12] [FER] Busca [zh]: 货运铁路 物流 走廊
+[14:00:12] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"965bc72c-0909-4470-bfda-e3a16194f12f","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:13] [FER] Busca [ja]: 貨物鉄道 物流 回廊
+[14:00:13] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"4bf8c689-0cf8-4db5-b197-f2004223e4c6","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:14] [FER] Busca [ko]: 화물철도 물류 회랑
+[14:00:14] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"9fdd3139-2c93-4430-96ac-3343adc60bdd","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:15] [FER] Busca [vi]: đường sắt hàng hóa logistics
+[14:00:15] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"0e606fd2-af22-412b-9fbb-89379c33ee31","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:16] [FER] Busca [hu]: tehervasút logisztikai folyosó
+[14:00:16] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"fd6fae31-d038-4161-bae9-0246a1d0579b","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:17] [FER] Busca [sv]: godsjärnväg logistik korridor
+[14:00:17] [FER] Brave API erro HTTP: 422 | {"type":"ErrorResponse","error":{"id":"d1fb553d-16d1-4e44-b553-24465186be93","status":422,"detail":"The provided subscription token is invalid.","meta":{"component":"authentication"},"code":"SUBSCRIPT
+[14:00:18] [FER] ERRO na rodada: Sem resultados de busca
+Traceback (most recent call last):
+  File "/root/agente_ferroviario_v2.py", line 1343, in <module>
+    run()
+  File "/root/agente_ferroviario_v2.py", line 1305, in run
+    raise RuntimeError("Sem resultados de busca")
+RuntimeError: Sem resultados de busca
+
+--- LOG: contador.log ---
+📊 <b>FECHAMENTO FINANCEIRO O CAFEZINHO</b>
+📅 Data: 2026-03-31
+
+💰 <b>Total Gasto no Dia:</b> $0.158502 USD
+
+🤖 <b>Gastos por Robô:</b>
+ - master_trends_v9: $0.072184
+ - master_trends_v9_revisor: $0.044083
+ - fantastico: $0.032427
+ - zizilinda: $0.009808
+
+🧠 <b>Uso de IAs:</b>
+ - gpt-4o: $0.15652
+ - deepseek-chat: $0.001982
+
+<i>Relatório contabilizado pelo Contador O.C (DeepSeek/Groq/OpenAI tokens).</i>
+Telegram Token não configurado.
+📊 <b>FECHAMENTO FINANCEIRO O CAFEZINHO</b>
+📅 Data: 2026-04-01
+💵 Cotação USD usada: R$ 5.00
+
+💰 <b>Total Gasto no Dia:</b> $0.2819 USD (R$ 1.41)
+
+🤖 <b>Gastos por Robô:</b>
+ - master_trends_v9: $0.1782 (R$ 0.89)
+ - fantastico: $0.0896 (R$ 0.45)
+ - zizilinda: $0.0141 (R$ 0.07)
+
+🧠 <b>Uso por LLM:</b>
+ - <b>gpt-4o</b>
+   ⚙️ Tokens: 20,674 | 💵 USD: $0.1037 | 🇧🇷 BRL: R$ 0.52
+ - <b>gemini-3.1-pro-preview</b>
+   ⚙️ Tokens: 98,458 | 💵 USD: $0.0985 | 🇧🇷 BRL: R$ 0.49
+ - <b>gemini-2.5-flash</b>
+   ⚙️ Tokens: 53,922 | 💵 USD: $0.0539 | 🇧🇷 BRL: R$ 0.27
+ - <b>gpt-4o-mini</b>
+   ⚙️ Tokens: 8,660 | 💵 USD: $0.0259 | 🇧🇷 BRL: R$ 0.13
+
+<i>Relatório auditado e enviado para MairaG Bot 2.</i>
+
+--- LOG: coleta_bruta_trends.log ---
+[15:30:01] [COLETOR-V2] 🔥 MODO CAÇADOR TRENDS ATIVADO: Buscando ativamente por [míssil hipersônico Brasil]
+[15:30:02] [COLETOR-V2] Iniciando raspagem e avaliação de 12 matérias INÉDITAS (Threadpool = 4)...
+[15:30:02] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil acelera míssil hipersônico de R$ 117 milhões e entra ...'
+[15:30:02] [COLETOR-V2] 📥 Tentando furar muro: 'O míssil supersônico brasileiro: entenda o desenvolvimento d...'
+[15:30:02] [COLETOR-V2] 📥 Tentando furar muro: 'O “míssil” hipersônico brasileiro de R$ 117 milhões, capaz d...'
+[15:30:02] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil lança míssil hipersônico que pode impactar potências ...'
+[15:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'Rússia ataca Ucrânia com míssil hipersônico Kinzhal e 442 dr...'
+[15:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'Primeiro caça supersônico produzido no Brasil é apresentado ...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Foguete hipersônico da FAB situa Brasil entre as potências a...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: '1º lança míssil do Brasil surpreende o mundo ao atingir o do...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Saiba como é o míssil hipersônico russo Oreshnik usado contr...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil faz primeiro disparo do Meteor, um dos mísseis mais l...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Vídeo: Velocidade do míssil hipersônico Fatah-2 destaca tecn...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: '14-X: Brasil tem plano de fabricar míssil hipersônico 100% n...'
+[15:30:05] [COLETOR-V2] Varredura completada. Nenhuma Hard-News novinha que passou pelo filtro impiedoso.
+[15:30:05] [COLETOR-V2] Ciclo de coleta finalizado.
+[09:30:02] [COLETOR-V2] Iniciando rotina V2 de coleta com Arquitetura Master.
+[09:30:02] [COLETOR-V2] 🔥 MODO CAÇADOR TRENDS ATIVADO: Buscando ativamente por [míssil hipersônico Brasil]
+[09:30:03] [COLETOR-V2] Iniciando raspagem e avaliação de 12 matérias INÉDITAS (Threadpool = 4)...
+[09:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil acelera míssil hipersônico de R$ 117 milhões e entra ...'
+[09:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'O míssil supersônico brasileiro: entenda o desenvolvimento d...'
+[09:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'O “míssil” hipersônico brasileiro de R$ 117 milhões, capaz d...'
+[09:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil lança míssil hipersônico que pode impactar potências ...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Primeiro caça supersônico produzido no Brasil é apresentado ...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Foguete hipersônico da FAB situa Brasil entre as potências a...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: '1º lança míssil do Brasil surpreende o mundo ao atingir o do...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Saiba como é o míssil hipersônico russo Oreshnik usado contr...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil faz primeiro disparo do Meteor, um dos mísseis mais l...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: '14-X: Brasil tem plano de fabricar míssil hipersônico 100% n...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Rússia ataca Ucrânia com míssil hipersônico - DW.com...'
+[09:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Rússia ataca Ucrânia com míssil hipersônico e mata ao menos ...'
+[09:30:06] [COLETOR-V2] Varredura completada. Nenhuma Hard-News novinha que passou pelo filtro impiedoso.
+[09:30:06] [COLETOR-V2] Ciclo de coleta finalizado.
+[15:30:02] [COLETOR-V2] Iniciando rotina V2 de coleta com Arquitetura Master.
+[15:30:02] [COLETOR-V2] 🔥 MODO CAÇADOR TRENDS ATIVADO: Buscando ativamente por [míssil hipersônico Brasil]
+[15:30:03] [COLETOR-V2] Iniciando raspagem e avaliação de 12 matérias INÉDITAS (Threadpool = 4)...
+[15:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil acelera míssil hipersônico de R$ 117 milhões e entra ...'
+[15:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'O “míssil” hipersônico brasileiro de R$ 117 milhões, capaz d...'
+[15:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'O míssil supersônico brasileiro: entenda o desenvolvimento d...'
+[15:30:03] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil lança míssil hipersônico que pode impactar potências ...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Rússia ataca Ucrânia com míssil hipersônico Kinzhal e 442 dr...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Primeiro caça supersônico produzido no Brasil é apresentado ...'
+[15:30:04] [COLETOR-V2] 📥 Tentando furar muro: 'Foguete hipersônico da FAB situa Brasil entre as potências a...'
+[15:30:05] [COLETOR-V2] 📥 Tentando furar muro: '1º lança míssil do Brasil surpreende o mundo ao atingir o do...'
+[15:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Saiba como é o míssil hipersônico russo Oreshnik usado contr...'
+[15:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Brasil faz primeiro disparo do Meteor, um dos mísseis mais l...'
+[15:30:05] [COLETOR-V2] 📥 Tentando furar muro: '14-X: Brasil tem plano de fabricar míssil hipersônico 100% n...'
+[15:30:05] [COLETOR-V2] 📥 Tentando furar muro: 'Rússia ataca Ucrânia com míssil hipersônico - dw.com...'
+[15:30:06] [COLETOR-V2] Varredura completada. Nenhuma Hard-News novinha que passou pelo filtro impiedoso.
+[15:30:06] [COLETOR-V2] Ciclo de coleta finalizado.
+
+--- LOG: zizi.log ---
+[2026-04-01T19:46:53.015652-03:00] [ZIZI] Zizilinda v2.0 rodando | /root/venv/bin/python3
+[2026-04-01T19:59:09.577080-03:00] [ZIZI] handle_text step=idle from_voice=False low=https://x.com/i/status/2039271890079113630
+[2026-04-01T19:59:09.577358-03:00] [ZIZI] material_from_text: URL do X detectada → fetch_x_material
+[2026-04-01T19:59:09.577438-03:00] [ZIZI] _twitter_api_get_post: TWITTER_BEARER_TOKEN ausente
+[2026-04-01T19:59:09.927996-03:00] [ZIZI] _grok_extract_x_post: erro 400: {"code":"Client specified an invalid argument","error":"Model not found: grok-2-latest"}
+[2026-04-01T19:59:11.807191-03:00] [ZIZI] fetch_x_material: yt-dlp texto extraído (299 chars)
+[2026-04-01T19:59:13.040152-03:00] [ZIZI] fetch_x_material: vcodec='avc1.640020' has_video=True
+[2026-04-01T19:59:15.676579-03:00] [ZIZI] whisper_transcribe: Tentando Grok 2 Audio (xAI)...
+[2026-04-01T20:01:17.935540-03:00] [ZIZI] whisper_transcribe: Grok falhou ou deu erro: ERRO GROK: Timeout aguardando transcrição.
+[2026-04-01T20:01:18.180066-03:00] [ZIZI] whisper_transcribe: Groq falhou (HTTP 401), tentando OpenAI fallback...
+[2026-04-01T20:01:22.045766-03:00] [ZIZI] whisper_transcribe: OpenAI OK (662 chars)
+[2026-04-01T20:01:24.263550-03:00] [ZIZI] fetch_x_material: transcrição traduzida para português
+[2026-04-01T20:02:26.803567-03:00] [ZIZI] handle_callback data=auth:yes step=conv_awaiting_auth
+[2026-04-01T20:02:34.850667-03:00] [ZIZI] handle_text step=conv_collecting from_voice=False low=agora
+[2026-04-01T20:05:29.795101-03:00] [ZIZI] handle_callback data=image:ai step=awaiting_image
+[2026-04-01T20:05:29.795214-03:00] [ZIZI] handle_callback: ação não reconhecida data=image:ai step=awaiting_image
+[2026-04-01T20:05:40.175505-03:00] [ZIZI] handle_callback data=mode:cancel step=idle
+[2026-04-01T20:54:27.221340-03:00] [ZIZI] handle_text step=idle from_voice=False low=oi
+[2026-04-01T20:54:30.775924-03:00] [ZIZI] handle_callback data=mode:build step=menu
+[2026-04-01T20:54:34.655152-03:00] [ZIZI] handle_text step=idle from_voice=False low=https://x.com/jacksonhinklle/status/2039271890079113630
+[2026-04-01T20:54:34.655315-03:00] [ZIZI] material_from_text: URL do X detectada → fetch_x_material
+[2026-04-01T20:54:34.655369-03:00] [ZIZI] _twitter_api_get_post: TWITTER_BEARER_TOKEN ausente
+[2026-04-01T20:54:34.936476-03:00] [ZIZI] _grok_extract_x_post: erro 400: {"code":"Client specified an invalid argument","error":"Model not found: grok-2-latest"}
+[2026-04-01T20:54:36.410657-03:00] [ZIZI] fetch_x_material: yt-dlp texto extraído (299 chars)
+[2026-04-01T20:54:37.655023-03:00] [ZIZI] fetch_x_material: vcodec='avc1.640020' has_video=True
+[2026-04-01T20:54:40.312224-03:00] [ZIZI] whisper_transcribe: Tentando Grok 2 Audio (xAI)...
+[2026-04-01T20:56:42.540872-03:00] [ZIZI] whisper_transcribe: Grok falhou ou deu erro: ERRO GROK: Timeout aguardando transcrição.
+[2026-04-01T20:56:42.664956-03:00] [ZIZI] whisper_transcribe: Groq falhou (HTTP 401), tentando OpenAI fallback...
+[2026-04-01T20:56:48.340155-03:00] [ZIZI] whisper_transcribe: OpenAI OK (662 chars)
+[2026-04-01T20:56:51.667031-03:00] [ZIZI] fetch_x_material: transcrição traduzida para português
+[2026-04-01T20:57:00.302269-03:00] [ZIZI] handle_callback data=auth:yes step=conv_awaiting_auth
+[2026-04-01T20:57:06.677324-03:00] [ZIZI] handle_text step=conv_collecting from_voice=False low=agora
+[2026-04-01T20:57:59.018977-03:00] [ZIZI] handle_text step=awaiting_caption from_voice=False low=putin, presidente da rússia, ironiza ameaças do ocidente ao irã
+[2026-04-01T20:58:08.922692-03:00] [ZIZI] dispatch_agent: estado antigo do agente limpo
+[2026-04-01T20:58:12.450486-03:00] [ZIZI] dispatch_agent: post encontrado pelo job_id=zizi_2d7367e956c8
+[2026-04-01T20:58:12.450653-03:00] [ZIZI] dispatch_agent: notificando post id=229751 title=Supremo impõe distância de segurança contra deputado que ame
+[2026-04-01T20:58:12.742488-03:00] [ZIZI] dispatch_agent: notificação enviada com sucesso
+[2026-04-01T22:44:05.111276-03:00] [ZIZI] handle_text step=idle from_voice=False low=oi
+[2026-04-01T22:44:07.534711-03:00] [ZIZI] handle_callback data=mode:build step=menu
+[2026-04-01T22:44:11.249264-03:00] [ZIZI] handle_text step=idle from_voice=False low=https://x.com/dropsitenews/status/2039421072680882541
+[2026-04-01T22:44:11.249430-03:00] [ZIZI] material_from_text: URL do X detectada → fetch_x_material
+[2026-04-01T22:44:11.249486-03:00] [ZIZI] _twitter_api_get_post: TWITTER_BEARER_TOKEN ausente
+[2026-04-01T22:44:11.558551-03:00] [ZIZI] _grok_extract_x_post: erro 400: {"code":"Client specified an invalid argument","error":"Model not found: grok-2-latest"}
+[2026-04-01T22:44:14.739603-03:00] [ZIZI] fetch_x_material: vcodec='' has_video=False
+[2026-04-01T22:44:15.917471-03:00] [ZIZI] fetch_x_material: fallback para fetch_url_context
+[2026-04-01T22:44:16.843610-03:00] [ZIZI] fetch_url_context: trafilatura falhou, tentando Jina Reader
+[2026-04-01T22:44:23.808449-03:00] [ZIZI] fetch_url_context: Jina Reader OK (5026 chars)
+[2026-04-01T22:46:34.084268-03:00] [ZIZI] handle_callback data=auth:yes step=conv_awaiting_auth
+[2026-04-01T22:46:41.211973-03:00] [ZIZI] handle_text step=conv_collecting from_voice=False low=agora
+[2026-04-01T22:54:13.282183-03:00] [ZIZI] handle_text step=awaiting_image from_voice=False low=oi
+
+--- LOG: emergencia_manual.log ---
+[00:47:32] [COLETOR-V2] 📥 Tentando furar muro: '"A regulamentação das plataformas não é censura, é transparê...'
+[00:47:32] [COLETOR-V2] 📥 Tentando furar muro: 'Após adiar balanço, CEO do BRB diz que pedirá até R$ 4 bilhõ...'
+[00:47:32] [COLETOR-V2] 📥 Tentando furar muro: 'Homem é detido em Apucarana após colidir contra carro estaci...'
+[00:47:32] [COLETOR-V2] 📥 Tentando furar muro: 'Polícia do Rio investiga suspeitos de abuso sexual infantil ...'
+[00:47:32] [COLETOR-V2] 📥 Tentando furar muro: '"A ONU não tem capacidade de cumprir o seu mandato", afirma ...'
+[00:48:16] [COLETOR-V2] 📥 Tentando furar muro: 'Ataque com drones causa incêndio em aeroporto do Kuwait...'
+[00:48:17] [COLETOR-V2] 📥 Tentando furar muro: 'Painel "Vozes que Permanecem" encerra Mês da Mulher em Apuca...'
+[00:48:17] [COLETOR-V2] 📥 Tentando furar muro: '“PowerPoint golpista”: a nova baixa na GloboNews após mentir...'
+[00:48:17] [COLETOR-V2] 📥 Tentando furar muro: 'Petroleiro britânico é atingido por “projétil desconhecido” ...'
+[00:48:17] [COLETOR-V2] 📥 Tentando furar muro: 'Sorocaba: Kassio reverte afastamento de “prefeito tiktoker” ...'
+[00:48:18] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): “PowerPoint golpista”: a nova 
+[00:48:18] [COLETOR-V2] 📥 Tentando furar muro: 'Aniversário do golpe: juiz e advogados homenageiam 1964 dura...'
+[00:48:19] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (1847 chars). Categoria: Política Institucional
+[00:48:19] [COLETOR-V2] 📥 Tentando furar muro: 'Barroso volta à advocacia e abre escritório com filha e ex-s...'
+[00:48:19] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (1964 chars). Categoria: Geopolítica
+[00:48:19] [COLETOR-V2] 📥 Tentando furar muro: 'As versões da Carta ao povo brasileiro. Por Moisés Mendes...'
+[00:48:19] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): Aniversário do golpe: juiz e a
+[00:48:19] [COLETOR-V2] 📥 Tentando furar muro: 'VÍDEO: Estudante tira sarro de Tarcísio e viraliza: “Haddad ...'
+[00:48:20] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (2036 chars). Categoria: Institucional
+[00:48:20] [COLETOR-V2] 📥 Tentando furar muro: 'VÍDEO – Trump diz que EUA devem deixar Irã em “duas ou três ...'
+[00:48:20] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): VÍDEO: Estudante tira sarro de
+[00:48:20] [COLETOR-V2] 📥 Tentando furar muro: 'A pressão do PT sobre o deputado bolsonarista acusado de est...'
+[00:48:21] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): A pressão do PT sobre o deputa
+[00:48:21] [COLETOR-V2]    ✅ EXCELENTE HARD-NEWS! (3652 chars). Categoria: Geopolítica
+[00:48:22] [COLETOR-V2]    🗑️ Descartada pela IA (Soft-News ou repetida): As versões da Carta ao povo br
+[00:49:02] [COLETOR-V2] Salvas 5 matérias brutais no JSON do Agente V9.
+[00:49:02] [COLETOR-V2] Ciclo de coleta finalizado.
+[00:49:02] 💥 Iniciando Agente Master V9 consumindo do BANCO BRUTO: 'Embaixador do Irã garante entrega de fertilizantes já comprados pelo Brasil'
+[00:49:04] OpenAI falhou: Error code: 404 - {'error': {'message': 'The model `gpt-4.5-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}
+[00:50:20] ✅ (Fallback) Gemini 3.1 Pro assumiu e escreveu o artigo com sucesso.
+[00:50:20] 🧐 Camada Extra: Claude 3.5 Sonnet auditando furos no rascunho...
+[00:50:21] 🧠 Acionando Camada Final: Revisão e Polimento com GPT-4o...
+[00:50:22] ⚠️ Falha na revisão camada 2 (GPT-4o): Error code: 404 - {'error': {'message': 'The model `gpt-4.5-preview` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'param': None, 'code': 'model_not_found'}}. Mantendo rascunho.
+[00:50:22] 🔍 Invocando Camada de Dupla Inteligência para Buscar Mídia no CSV (Custo Zero)...
+[00:50:22] ⚠️ Erro técnico no Sistema CSV Dupla Inteligência: 401 Client Error: Unauthorized for url: https://docs.google.com/spreadsheets/d/15smITKFZdr6ijHWttgKPzY27oCU4swFMlsV1UNwy3eY/export?format=csv
+[00:50:22] 🔍 Buscando imagem de domínio público no WIKIMEDIA COMMONS (Custo Zero)...
+[00:50:23] ⚠️ Sem imagens na Biblioteca e nem na Wikipedia. Acionando IA Visual (Flux Pro)...
+
+[Upload] Transferindo a imagem para o seu WordPress (Biblioteca de Mídia)...
+✅ SUCESSO! Imagem salva no seu WordPress com o ID Mídia: 229650
+[00:50:38] ✅ Arte flux-pro enviada pro WP (ID 229650)
+[00:50:49] 
+--- PUBLICANDO NO WORDPRESS (VERIFICANDO STATUS GLOBAL) ---
+[00:50:49] TÍTULO: Irã garante envio de fertilizantes ao Brasil e afasta risco de desabastecimento no agronegócio
+[00:50:49] CATEGORIA: Internacional (15) | TAGS: ['Irã', 'Agronegócio', 'Fertilizantes', 'Ureia', 'Geopolítica', 'Comércio Exterior'] ([18260, 437, 12169, 19965, 12371, 13625])
+[00:50:49] MÍDIA ID: 229650
+[00:50:49] MODO POSTAGEM FINAL: DRAFT
+[00:50:53] ✅ Post salvo no servidor WP! Link / ID: 229651
+[00:50:54] ------------------------------------------------------
+
+
+--- LOG: agente_manchete.log ---
+[2026-03-22 12:52:59] [manchete] ==================================================
+[2026-03-22 12:52:59] [manchete] AGENTE MANCHETE INICIADO
+[2026-03-22 12:52:59] [manchete] Performance carregada: 27 posts no top_posts
+[2026-03-22 12:53:00] [manchete] Posts elegíveis nas últimas 48h: 32
+[2026-03-22 12:53:02] [manchete] Manchete atual: id=227491 | Jeffrey Sachs alerta que ofensiva dos EUA contra o Irã pode causar um desastre nuclear global
+[2026-03-22 12:53:02] [manchete] 32 post(s) sem entrada de performance — ignorados.
+[2026-03-22 12:53:02] [manchete] Nenhum campeão com performance encontrada. Mantendo manchete atual.
+[2026-03-22 12:53:02] [manchete] ==================================================
+[2026-03-22 12:56:18] [manchete] ==================================================
+[2026-03-22 12:56:18] [manchete] AGENTE MANCHETE INICIADO
+[2026-03-22 12:56:18] [manchete] Performance carregada: 27 posts no top_posts
+[2026-03-22 12:56:20] [manchete] Posts elegíveis nas últimas 48h: 33
+[2026-03-22 12:56:21] [manchete] Manchete atual: id=227491 | Jeffrey Sachs alerta que ofensiva dos EUA contra o Irã pode causar um desastre nuclear global
+[2026-03-22 12:56:21] [manchete] 33 post(s) sem entrada de performance.
+[2026-03-22 12:56:21] [manchete] Nenhum cruzamento com performance encontrado. Usando fallback: post mais recente.
+[2026-03-22 12:56:21] [manchete] Fallback: post mais recente selecionado (idade=0.1h)
+[2026-03-22 12:56:21] [manchete] Campeão eleito: id=228006 | score=0.0000 | views=0 | views/h=0.00 | idade=0.1h | bônus_recência=40
+[2026-03-22 12:56:21] [manchete] Título: Reciclagem nuclear é ilusão e o lixo atômico exige descarte geológico profundo
+[2026-03-22 12:56:21] [manchete] Removendo manchete do post anterior: id=227491
+[2026-03-22 12:56:25] [manchete] Manchete removida: post 227491
+[2026-03-22 12:56:29] [manchete] Manchete aplicada: post 228006
+[2026-03-22 12:56:29] [manchete] ✅ Manchete atualizada com sucesso para post 228006
+[2026-03-22 12:56:29] [manchete] ==================================================
+[2026-03-31 06:00:02] [manchete] ==================================================
+[2026-03-31 06:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-03-31 06:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-03-31 12:00:01] [manchete] ==================================================
+[2026-03-31 12:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-03-31 12:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-01 00:00:01] [manchete] ==================================================
+[2026-04-01 00:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-01 00:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-01 06:00:01] [manchete] ==================================================
+[2026-04-01 06:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-01 06:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 10:00:01] [manchete] ==================================================
+[2026-04-02 10:00:01] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 10:00:01] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 12:00:02] [manchete] ==================================================
+[2026-04-02 12:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 12:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 14:00:02] [manchete] ==================================================
+[2026-04-02 14:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 14:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 16:00:02] [manchete] ==================================================
+[2026-04-02 16:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 16:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.
+[2026-04-02 18:00:02] [manchete] ==================================================
+[2026-04-02 18:00:02] [manchete] AGENTE MANCHETE INICIADO
+[2026-04-02 18:00:02] [manchete] ERRO: WP_PASS não configurada. Abortando.

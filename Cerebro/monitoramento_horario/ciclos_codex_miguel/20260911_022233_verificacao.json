@@ -1,0 +1,1095 @@
+{
+  "wp_verify.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:18:26.676532-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:18:26-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269758,
+          "date": "2026-09-11 02:30:00",
+          "fm": 269761,
+          "events": 1,
+          "event_timestamps": [
+            1789104600
+          ],
+          "expected_utc": 1789104600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269536,
+          "hash": "2e31d2bfd2307b5f6947a3597b908b508435b92be5f5e7509200b5ad15f15f03",
+          "status": "publish",
+          "title": "Fachin dá 72 horas para Mendonça explicar afastamento do diretor-geral da PF",
+          "author": "2018",
+          "date": "2026-09-08 22:39:54",
+          "slug": "fachin-da-72-horas-para-mendonca-explicar-afastamento-do-diretor-geral-da-pf",
+          "fm": 269537,
+          "categories": [
+            5088,
+            21141,
+            22
+          ],
+          "edit_lock": "",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269534,
+          "hash": "87ac5518cea84a9948a95fa88b6268538f4622767dcbdd08db9b24402a36b743",
+          "status": "publish",
+          "title": "Nada de virada: nova Quaest confirma cenário já conhecido da disputa pernambucana",
+          "author": "5780",
+          "date": "2026-09-08 22:39:45",
+          "slug": "nada-de-virada-nova-quaest-confirma-cenario-ja-conhecido-da-disputa-pernambucana",
+          "fm": 269535,
+          "categories": [
+            22,
+            4986
+          ],
+          "edit_lock": "1788917876:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269523,
+          "hash": "812c097ce9de535f5b90746a0c23f1620a8a57fdcb1af83f388dbf3a254c458d",
+          "status": "publish",
+          "title": "Ciro promete tirar a Enel do Ceará se for eleito, mas decisão final está nas mãos de Lula",
+          "author": "5780",
+          "date": "2026-09-08 21:31:05",
+          "slug": "ciro-promete-tirar-a-enel-do-ceara-se-for-eleito-mas-decisao-final-esta-nas-maos-de-lula",
+          "fm": 269524,
+          "categories": [
+            4968,
+            98,
+            4984,
+            22,
+            4986
+          ],
+          "edit_lock": "1788913767:5735",
+          "protection": "post_publicado_por_humano"
+        }
+      ]
+    }
+  },
+  "editorial_readback.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:22:31.732423-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:22:31-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269758,
+          "date": "2026-09-11 02:30:00",
+          "fm": 269761,
+          "events": 1,
+          "event_timestamps": [
+            1789104600
+          ],
+          "expected_utc": 1789104600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269536,
+          "hash": "2e31d2bfd2307b5f6947a3597b908b508435b92be5f5e7509200b5ad15f15f03",
+          "status": "publish",
+          "title": "Fachin dá 72 horas para Mendonça explicar afastamento do diretor-geral da PF",
+          "author": "2018",
+          "date": "2026-09-08 22:39:54",
+          "slug": "fachin-da-72-horas-para-mendonca-explicar-afastamento-do-diretor-geral-da-pf",
+          "fm": 269537,
+          "categories": [
+            5088,
+            21141,
+            22
+          ],
+          "edit_lock": "",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269534,
+          "hash": "87ac5518cea84a9948a95fa88b6268538f4622767dcbdd08db9b24402a36b743",
+          "status": "publish",
+          "title": "Nada de virada: nova Quaest confirma cenário já conhecido da disputa pernambucana",
+          "author": "5780",
+          "date": "2026-09-08 22:39:45",
+          "slug": "nada-de-virada-nova-quaest-confirma-cenario-ja-conhecido-da-disputa-pernambucana",
+          "fm": 269535,
+          "categories": [
+            22,
+            4986
+          ],
+          "edit_lock": "1788917876:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269523,
+          "hash": "812c097ce9de535f5b90746a0c23f1620a8a57fdcb1af83f388dbf3a254c458d",
+          "status": "publish",
+          "title": "Ciro promete tirar a Enel do Ceará se for eleito, mas decisão final está nas mãos de Lula",
+          "author": "5780",
+          "date": "2026-09-08 21:31:05",
+          "slug": "ciro-promete-tirar-a-enel-do-ceara-se-for-eleito-mas-decisao-final-esta-nas-maos-de-lula",
+          "fm": 269524,
+          "categories": [
+            4968,
+            98,
+            4984,
+            22,
+            4986
+          ],
+          "edit_lock": "1788913767:5735",
+          "protection": "post_publicado_por_humano"
+        }
+      ]
+    }
+  },
+  "public_verified.json": [
+    {
+      "post_id": 269536,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/fachin-da-72-horas-para-mendonca-explicar-afastamento-do-diretor-geral-da-pf/",
+      "at": "2026-09-11T02:18:41.857307-03:00",
+      "sha256_html": "560b445eb5b7e60ac41d56371c385ad706c4331eaf4f8e2983e15e6e8af4cb4d",
+      "paragraphs": 17,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269534,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/nada-de-virada-nova-quaest-confirma-cenario-ja-conhecido-da-disputa-pernambucana/",
+      "at": "2026-09-11T02:18:41.915944-03:00",
+      "sha256_html": "f1cd77280852f6c67813edf58ce529fa09d2f10e9ef6ac7ceb5d6b798e175962",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 8,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269523,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/ciro-promete-tirar-a-enel-do-ceara-se-for-eleito-mas-decisao-final-esta-nas-maos-de-lula/",
+      "at": "2026-09-11T02:18:41.971651-03:00",
+      "sha256_html": "ca26832489d73b91b150359b81848e0ad07fe530f5c81479a308403599970072",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 9,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "china_verify.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:18:26.821533-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:18:26.656857-03:00",
+      "state": {
+        "path": "/home/ubuntu/ds_nuvem_chefe/estado_casa.md",
+        "mtime": "2026-09-04T01:36:19.845217-03:00",
+        "sha256": "263050638eb119d035edc7a2d423e83a53e593b6842b71e1508d3245a1e648d5",
+        "first_lines": [
+          "# ESTADO DA CASA — memória do plantão do Telegram",
+          "> Mantida pelo DS Nuvem Chefe (DS-N Chefe) na ronda 30/30 (quando o estado mudar, atualize aqui com a data — é o que o plantão usa pra conversar com o Miguel). Semente inicial: ZM/ZCode GLM-5.3 · 20260830 16:30 BRT.",
+          "",
+          "## Como o sistema funciona (resumo pra conversa)",
+          "- Casa = O Cafezinho (ocafezinho.com, jornal) + ecossistema MOKA (Moka Reader mokareader.com, Moka Vídeo, Moka Writer mokawriter.vercel.app) + Global South News (GSN, em inglês).",
+          "- Cérebro = repositório central de memória e decisões (fóruns, memórias, ponte). Ponte = canal oficial dos agentes.",
+          "- Quem é quem: DS Nuvem Chefe (DS-N Chefe) (agente completo na Tencent, ronda :00/:30, acesso ao Cérebro e à ponte) · ZCode Miguel (ZM, GLM-5.3, no Dell — hoje chefe da obra MOKA) · DS Laura · Claude Laura (gate editorial) · AGY (motor de publicação) · Codex Miguel · DSC (consolidador). Grok Miguel e Grok Laura estão sem crédito.",
+          "- O plantão (eu, quem responde rápido no Telegram) NÃO é o chefe: só conversa leve e informação rápida; pergunta séria vai pro chefe, que responde na ronda.",
+          ""
+        ]
+      },
+      "consumer": {
+        "sha256": "fce91bb8cefa355d721b593e1cb6c1ebc1f87ba76287d458316e04f2f0822fc9",
+        "lines": [
+          {
+            "line": 19,
+            "text": "ESTADO = f'{BASE}/estado_casa.md'        # estado da casa, mantido pelo DS-N Chefe (ronda)"
+          },
+          {
+            "line": 96,
+            "text": "        + '## Estado da casa (mantido pelo DS Nuvem Chefe (DS-N Chefe) na ronda):\\n' + _ler(ESTADO, 2500)"
+          }
+        ]
+      },
+      "p11_code_sha256": "276452aff61b41a2a7f670d3d7a0a836536eac7eae23f9c30b6fd89039900f38",
+      "p11_state": {
+        "ultimo_saldo": 14.05,
+        "falhas": 0,
+        "aviso_ts": 1789070401.4936125,
+        "critico_ts": 1789075803.3206332
+      },
+      "p11_log_cursor_before": 2433,
+      "p11_log_delta": "11/09/2026 02:00:03 verde: saldo 14.43\n11/09/2026 02:15:02 verde: saldo 14.05\n",
+      "p11_log_size": 2511,
+      "p11_flag_exists": false
+    }
+  },
+  "factory_delta.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:18:25.201827-03:00",
+    "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+    "data": {
+      "at": "2026-09-11T05:18:25.109618+00:00",
+      "cursor_before": "20260911_0042.json",
+      "cycles": [
+        {
+          "path": "/root/v4_labs/dados/v41_ciclo/20260911_0152.json",
+          "sha256": "fcd379006ed7f816ca85ceec9c8c60864229928a03a424716ae1c321372c7c5d",
+          "data": {
+            "ts": "20260911_0152",
+            "vertical": "cultura",
+            "status": "rascunho_v41_criado",
+            "post_id": 269881,
+            "curadoria_estado": "tese_dinamica_aprovada"
+          }
+        }
+      ]
+    }
+  },
+  "incident208.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:19:07.064428-03:00",
+      "access": [
+        {
+          "path": "/var/log/nginx/access.log",
+          "bytes": 29079,
+          "sha256": "4f44224909e2712a86504ec3c59d89dfb193982f25b937b83d407e13f402d9e1",
+          "matched_hour": 117,
+          "status_0200_0204": {},
+          "total_0200_0204": 0,
+          "by_minute": {
+            "02:08": {
+              "requests": 3
+            },
+            "02:11": {
+              "requests": 32
+            },
+            "02:12": {
+              "requests": 82
+            }
+          },
+          "errors_since_0205": {},
+          "last_5xx": [],
+          "public_paths": {}
+        },
+        {
+          "path": "/var/log/nginx/access.ocafezinho.com.log",
+          "bytes": 8552600,
+          "sha256": "f36ebbc4f27172995027d59f2ad7cdcaf9ccc58df76423d4540074cbaeab729e",
+          "matched_hour": 4369,
+          "status_0200_0204": {
+            "500": 125,
+            "503": 10
+          },
+          "total_0200_0204": 135,
+          "by_minute": {
+            "02:00": {
+              "requests": 279,
+              "5xx": 11
+            },
+            "02:01": {
+              "requests": 262,
+              "5xx": 12
+            },
+            "02:02": {
+              "requests": 332,
+              "5xx": 110
+            },
+            "02:03": {
+              "requests": 221
+            },
+            "02:04": {
+              "requests": 231,
+              "5xx": 2
+            },
+            "02:05": {
+              "requests": 223
+            },
+            "02:06": {
+              "requests": 225
+            },
+            "02:07": {
+              "requests": 163
+            },
+            "02:08": {
+              "requests": 202
+            },
+            "02:09": {
+              "requests": 189
+            },
+            "02:10": {
+              "requests": 207
+            },
+            "02:11": {
+              "requests": 211
+            },
+            "02:12": {
+              "requests": 203
+            },
+            "02:13": {
+              "requests": 204
+            },
+            "02:14": {
+              "requests": 231
+            },
+            "02:15": {
+              "requests": 264
+            },
+            "02:16": {
+              "requests": 191
+            },
+            "02:17": {
+              "requests": 201
+            },
+            "02:18": {
+              "requests": 296
+            },
+            "02:19": {
+              "requests": 34
+            }
+          },
+          "errors_since_0205": {},
+          "last_5xx": [
+            "11/Sep/2026:02:04:15 -0300"
+          ],
+          "public_paths": {
+            "/": 7,
+            "/2016/06/15/o-grande-golpe-por-mauro-santayana": 3,
+            "/2016/06/16/lula-questiona-stf-sobre-crimes-de-sergio-moro": 3,
+            "/2016/06/16/crise-de-governo-no-brasil": 3,
+            "/2025/05/21/incendios-geraram-perda-mundial-recorde-de-florestas-em-2024/": 3,
+            "/2016/06/16/wall-street-journal-temer-e-acusado-de-corrupcao-na-lava-jato": 3,
+            "/2016/06/16/o-desmanche-do-governo-golpista-cai-terceiro-ministro-de-temer": 3,
+            "/2026/09/10/vorcaro-aponta-acm-neto-e-rueda-como-socios-ocultos-do-master/": 2
+          }
+        }
+      ],
+      "error_log": {
+        "bytes": 495453,
+        "sha256": "645f76a577010f28adcbaf6580cb91ec1115279fb46a5897cb778ac14060ee69",
+        "redis_exceptions_hour": 128,
+        "times": {
+          "2026/09/11 02:00": 11,
+          "2026/09/11 02:01": 12,
+          "2026/09/11 02:02": 103,
+          "2026/09/11 02:04": 2
+        },
+        "examples": [
+          {
+            "time": "2026/09/11 02:00:38",
+            "object_cache_1936": true,
+            "handle_exception": false,
+            "wp_die": false,
+            "show_error_and_die": false
+          },
+          {
+            "time": "2026/09/11 02:00:38",
+            "object_cache_1936": true,
+            "handle_exception": false,
+            "wp_die": false,
+            "show_error_and_die": false
+          },
+          {
+            "time": "2026/09/11 02:00:38",
+            "object_cache_1936": true,
+            "handle_exception": false,
+            "wp_die": false,
+            "show_error_and_die": false
+          }
+        ]
+      },
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "selected_lines": [
+          {
+            "line": 2920,
+            "text": ""
+          },
+          {
+            "line": 2921,
+            "text": "error_log( $exception ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log"
+          },
+          {
+            "line": 2922,
+            "text": ""
+          },
+          {
+            "line": 2923,
+            "text": "if ( function_exists( 'do_action' ) ) {"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          },
+          {
+            "line": 2939,
+            "text": "}"
+          },
+          {
+            "line": 2940,
+            "text": ""
+          },
+          {
+            "line": 2941,
+            "text": "/**"
+          },
+          {
+            "line": 2942,
+            "text": "* Show Redis connection error screen, or load custom `/redis-error.php`."
+          },
+          {
+            "line": 2943,
+            "text": "*"
+          },
+          {
+            "line": 2944,
+            "text": "* @return void"
+          },
+          {
+            "line": 2945,
+            "text": "*/"
+          },
+          {
+            "line": 2980,
+            "text": ") . \"</p>\\n\";"
+          },
+          {
+            "line": 2981,
+            "text": ""
+          },
+          {
+            "line": 2982,
+            "text": "$message .= \"<ul>\\n\";"
+          },
+          {
+            "line": 2983,
+            "text": "$message .= '<li>' . __( 'Is the correct Redis host and port set?', 'redis-cache' ) . \"</li>\\n\";"
+          },
+          {
+            "line": 2984,
+            "text": "$message .= '<li>' . __( 'Is the Redis server running?', 'redis-cache' ) . \"</li>\\n\";"
+          },
+          {
+            "line": 2985,
+            "text": "$message .= \"</ul>\\n\";"
+          },
+          {
+            "line": 2986,
+            "text": ""
+          },
+          {
+            "line": 2987,
+            "text": "$message .= '<p>' . sprintf("
+          },
+          {
+            "line": 2988,
+            "text": "// translators: %s = Link to installation instructions."
+          },
+          {
+            "line": 2989,
+            "text": "__( 'If you need help, please read the <a href=\"%s\">installation instructions</a>.', 'redis-cache' ),"
+          },
+          {
+            "line": 2990,
+            "text": "'https://github.com/rhubarbgroup/redis-cache/blob/develop/INSTALL.md'"
+          },
+          {
+            "line": 2991,
+            "text": ") . \"</p>\\n\";"
+          },
+          {
+            "line": 2992,
+            "text": "}"
+          },
+          {
+            "line": 2993,
+            "text": ""
+          },
+          {
+            "line": 2994,
+            "text": "$message .= '<p>' . sprintf("
+          },
+          {
+            "line": 2995,
+            "text": "// translators: %1$s = Formatted object-cache.php file name, %2$s = Formatted wp-content directory name."
+          },
+          {
+            "line": 2996,
+            "text": "__( 'To disable Redis, delete the %1$s file in the %2$s directory.', 'redis-cache' ),"
+          },
+          {
+            "line": 2997,
+            "text": "'<code>object-cache.php</code>',"
+          },
+          {
+            "line": 2998,
+            "text": "'<code>/wp-content/</code>'"
+          },
+          {
+            "line": 2999,
+            "text": ") . \"</p>\\n\";"
+          },
+          {
+            "line": 3000,
+            "text": ""
+          },
+          {
+            "line": 3001,
+            "text": "// phpcs:disable WordPress.Security.EscapeOutput"
+          },
+          {
+            "line": 3002,
+            "text": "wp_die( $message );"
+          },
+          {
+            "line": 3003,
+            "text": "// phpcs:enable"
+          },
+          {
+            "line": 3004,
+            "text": "}"
+          },
+          {
+            "line": 3005,
+            "text": ""
+          },
+          {
+            "line": 3006,
+            "text": "/**"
+          },
+          {
+            "line": 3007,
+            "text": "* Builds a clean connection array out of redis clusters array."
+          },
+          {
+            "line": 3008,
+            "text": "*"
+          }
+        ]
+      }
+    }
+  },
+  "incident208_previous_day_recount.json": {
+    "rc": 0,
+    "data": {
+      "at": "2026-09-11T02:21:17.935885-03:00",
+      "previous_day": {
+        "source": "/var/log/nginx/access.ocafezinho.com.log.1",
+        "bytes": 88333828,
+        "sha256": "7c51da01da9c38cbbba815c730e7d9e8b5056a3bbe0d79760f5055a7ffacc112",
+        "requests": 311295,
+        "5xx": 3513,
+        "statuses": {
+          "500": 1051,
+          "502": 4,
+          "504": 5,
+          "503": 2453
+        },
+        "hours": {
+          "00": 32,
+          "01": 33,
+          "02": 17,
+          "03": 224,
+          "04": 6,
+          "05": 5,
+          "06": 8,
+          "07": 8,
+          "08": 208,
+          "09": 22,
+          "10": 126,
+          "11": 2093,
+          "12": 110,
+          "13": 3,
+          "14": 119,
+          "15": 107,
+          "16": 88,
+          "18": 56,
+          "19": 1,
+          "20": 176,
+          "21": 5,
+          "22": 37,
+          "23": 29
+        }
+      },
+      "dropin_fail_gracefully_lines": [
+        {
+          "line": 253,
+          "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+        },
+        {
+          "line": 256,
+          "text": "$wp_object_cache = new WP_Object_Cache( $fail_gracefully );"
+        },
+        {
+          "line": 385,
+          "text": "private $fail_gracefully = true;"
+        },
+        {
+          "line": 506,
+          "text": "* @param bool $fail_gracefully Handles and logs errors if true throws exceptions otherwise."
+        },
+        {
+          "line": 508,
+          "text": "public function __construct( $fail_gracefully = false ) {"
+        },
+        {
+          "line": 511,
+          "text": "$this->fail_gracefully = $fail_gracefully;"
+        },
+        {
+          "line": 2912,
+          "text": "* @throws \\Exception If `fail_gracefully` flag is set to a falsy value."
+        },
+        {
+          "line": 2934,
+          "text": "if ( ! $this->fail_gracefully ) {"
+        }
+      ],
+      "redis_error_template_exists": false,
+      "config_graceful_constant_mentioned": false
+    },
+    "stderr": ""
+  },
+  "draft_checks.json": {
+    "rc": 0,
+    "data": {
+      "at": "2026-09-11T02:19:53-03:00",
+      "posts": [
+        {
+          "id": 269875,
+          "title": "Pressão dos Estados Unidos fortaleceu o Irã e corroeu influência regional, dizem economistas",
+          "status": "draft",
+          "modified": "2026-09-11 02:06:27",
+          "fm": 269754,
+          "excerpt_segments": [
+            "Ele destacou que Robinson Farinazzo tentam projetar poder por meio de ataques aéreos esporádicos para satisfazer o público doméstico, mas a realidade no terreno mostra um declínio irreversível da hegemonia norte-americana, agravado pela alta dos preços das commodities e pelo alinhamento econômico de atores regionais importantes.A discussão também abordou as raízes históricas do imperialismo ocidental, com Richard Wolff traçando a evolução do capitalismo global desde o colonialismo europeu até a hegemonia norte-americana do pós-guerra.",
+            "Wolff explicou que Robinson Farinazzo herdaram os vastos impérios coloniais da Europa após a Segunda Guerra Mundial, estabelecendo um domínio global que agora estão perdendo."
+          ],
+          "r1": "",
+          "text_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**Fato incorreto / atribuição trocada (2x):** o texto atribui a Richard Wolff a frase \\\"Robinson Farinazzo tentam projetar poder por meio de ataques aéreos esporádicos\\\" e \\\"Robinson Farinazzo herdaram os vastos impérios coloniais da Europa\\\". \\\"Robinson Farinazzo\\\" é um comentarista brasileiro (não um ator geopolítico) e não tem relação com a fala atribuída — o sujeito lógico das frases é \\\"os Estados Unidos\\\"/\\\"Washington\\\". Trata-se de erro de atribuição/nome que precisa ser corrigido antes de publicar. (Não há fonte externa que sustente \\\"Robinson Farinazzo\\\" como sujeito dessas ações; a inconsistência é interna ao próprio texto.)\", \"**INCERTO (não coberto pelas evidências desta busca):** a existência e o conteúdo da entrevista de Michael Hudson e Richard Wolff ao canal \\\"Dialogue Works\\\", conduzida por \\\"Nima R. Alkhorshid\\\", com as citações específicas (\\\"dinossauro de papel\\\", retirada de porta-aviões do Golfo Pérsico, \\\"acordos dos EUA relativos ao petróleo venezuelano\\\"). As evidências retornadas cobrem apenas a escalada EUA–Irã (petróleo, Ormuz, sanções), não a entrevista nem as falas. Não confirmo nem nego — fica como INCERTO.\", \"**DATA_DO_FATO:** o rascunho não data a entrevista/análise (quando ocorreu). Como o gancho é a atual escalada EUA–Irã (coberta pelas evidências de 20/07, 20-21/08 e 09/09/2026), é preciso declarar a data da entrevista para não configurar pauta velha publicada como notícia de hoje.\", \"FONTES: https://www.msn.com/pt-br/pol%C3%ADticas/rela%C3%A7%C3%B5es-internacionais/escalada-de-tens%C3%A3o-entre-ir%C3%A3-e-estados-unidos-faz-petr%C3%B3leo-disparar-e-aumenta-temor-de-infla%C3%A7%C3%A3o/ar-AA2bS1v2 | https://www.infomoney.com.br/business/global/analise-ira-desafia-pressao-dos-eua-e-prolonga-impasse-mas-quem-cede-primeiro/ | https://www.estadao.com.br/internacional/china-critica-pressao-dos-eua-sobre-ira-e-defende-solucao-diplomatica-para-conflito-npr/ | https://br.advfn.com/jornal/2026/07/conflito-entre-eua-e-ira-mantem-pressao-sobre-o-estreito-de-ormuz-mediadores-tentam-novo-cessar-fogo\"], \"fontes\": [\"https://www.msn.com/pt-br/pol%C3%ADticas/rela%C3%A7%C3%B5es-internacionais/escalada-de-tens%C3%A3o-entre-ir%C3%A3-e-estados-unidos-faz-petr%C3%B3leo-disparar-e-aumenta-temor-de-infla%C3%A7%C3%A3o/ar-AA2bS1v2\", \"https://www.infomoney.com.br/business/global/analise-ira-desafia-pressao-dos-eua-e-prolonga-impasse-mas-quem-cede-primeiro/\", \"https://www.estadao.com.br/internacional/china-critica-pressao-dos-eua-sobre-ira-e-defende-solucao-diplomatica-para-conflito-npr/\", \"https://br.advfn.com/jornal/2026/07/conflito-entre-eua-e-ira-mantem-pressao-sobre-o-estreito-de-ormuz-mediadores-tentam-novo-cessar-fogo\"], \"sha\": \"6a2a38cf0b231e52183e0292e55a8f600ace79d4\", \"ts\": \"11/09/2026 02:06\", \"ts_iso\": \"2026-09-11T05:06:26.535083+00:00\"}}"
+        },
+        {
+          "id": 269876,
+          "title": "Aliados dos Estados Unidos vendem títulos e colocam o dólar sob pressão",
+          "status": "draft",
+          "modified": "2026-09-11 02:06:09",
+          "fm": 269751,
+          "excerpt_segments": [
+            "Segundo o analista, a estabilidade desse mercado é crucial, mas os rendimentos estão subindo rapidamente, o que indica vulnerabilidades profundas que ameaçam todo o sistema econômico global.Durante a entrevista conduzida por Glenn Diesen, Sean Foo afirmou que Robinson Farinazzo estão tentando fazer coisas demais em pouco tempo.",
+            "Ele observou que as tensões geopolíticas em curso, particularmente em relação ao Oriente Médio e ao Irã, estão provocando enormes déficits públicos e obrigando Robinson Farinazzo a gastar mais de US$ 1 trilhão por ano apenas para pagar o serviço da dívida existente.",
+            "Essa mudança demonstra uma desconfiança crescente na estabilidade do dólar no longo prazo, especialmente enquanto Robinson Farinazzo continuam usando seu sistema financeiro como arma por meio de sanções secundárias, como ocorreu recentemente com medidas contra bancos turcos devido a vínculos com o Irã.O analista também discutiu como a China se insere nessa transformação do cenário econômico global.",
+            "O entrevistado observou que, à medida que a confiança global no sistema financeiro dos Estados Unidos se deteriora, as nações buscam ativamente ativos tangíveis com risco de contraparte igual a zero, o que explica o enorme êxodo global de ouro físico de depósitos ocidentais de volta às jurisdições de origem.Por fim, Sean Foo alertou que os instrumentos econômicos tradicionais de competição estão fracassando para Robinson Farinazzo."
+          ],
+          "r1": "",
+          "text_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**ERRO GRAVE — \\\"Robinson Farinazzo\\\" substituiu \\\"os Estados Unidos\\\"/\\\"Washington\\\" no texto.** O rascunho atribui a Robinson Farinazzo (comentarista brasileiro) ações que são do governo dos EUA: \\\"Robinson Farinazzo estão tentando fazer coisas demais em pouco tempo\\\", \\\"obrigando Robinson Farinazzo a gastar mais de US$ 1 trilhão por ano apenas para pagar o serviço da dívida\\\", \\\"enquanto Robinson Farinazzo continuam usando seu sistema financeiro como arma\\\", \\\"instrumentos econômicos tradicionais de competição estão fracassando para Robinson Farinazzo\\\". É erro de substituição automática (provável find-replace defeituoso) — o sujeito original era \\\"os Estados Unidos\\\"/\\\"Washington\\\". Fonte: o próprio corpo do texto, que na mesma frase usa \\\"Washington tenha tentado administrar a situação\\\" e \\\"os Estados Unidos\\\" como sujeitos das mesmas ações. [licoes/20260902_feedback_cl_treino_ordinal_fonte_incerto_1x.md — regra de nome completo + veículo antes de cortar atribuição]\", \"**INCERTO — Cifra \\\"US$ 40 trilhões\\\" de dívida nacional dos EUA.** As evidências desta busca não trazem o valor da dívida bruta americana em set/2026. Não confirmo nem nego; cifra em título/afirmação exige fonte que a sustente (pendência CIFRA). Fonte: nenhuma das URLs retornadas cobre o número.\", \"**INCERTO — \\\"US$ 1 trilhão por ano apenas para pagar o serviço da dívida\\\".** Sem cobertura nas evidências desta busca; não confirmo nem nego (pendência CIFRA).\", \"**INCERTO — Fundo soberano da Noruega considerando desfazer \\\"dezenas de bilhões de dólares\\\" em Treasuries.** Sem cobertura nas evidências desta busca; não confirmo nem nego.\", \"**INCERTO — Sanções secundárias dos EUA contra bancos turcos por vínculos com o Irã.** Sem cobertura nas evidências desta busca; não confirmo nem nego.\", \"**INCERTO — Entrevista de Sean Foo ao canal Glenn Diesen.** Sem cobertura nas evidências desta busca; não confirmo nem nego a existência, data ou conteúdo da entrevista.\"], \"fontes\": [\"https://www.sdpnoticias.com/internacional/rubio-promete-que-estados-unidos-no-combatira-carteles-sin-consentimiento-de-sus-aliados/\", \"https://www.telesurtv.net/eeuu-presiona-aliados-otan-contra-cpi/\", \"https://www.infobae.com/america/mundo/2026/09/05/estados-unidos-y-sus-aliados-impulsan-una-resolucion-para-enviar-a-iran-al-consejo-de-seguridad-por-su-programa-nuclear/\"], \"sha\": \"2a6a66041ee19c824c7600c88c79f2e96c4afe17\", \"ts\": \"11/09/2026 02:06\", \"ts_iso\": \"2026-09-11T05:06:08.217623+00:00\"}}"
+        },
+        {
+          "id": 269868,
+          "title": "Exclusivo: Mendonça deu habeas corpus sigiloso para Ibaneis escapar da CPI",
+          "status": "draft",
+          "modified": "2026-09-11 02:05:53",
+          "fm": 269874,
+          "excerpt_segments": [
+            "Nesta semana, o presidente do STF, Edson Fachin, tomou uma decisão drástica para tentar conter a crise institucional que assola a Suprema Corte: determinou a quebra do sigilo da Petição 15.556, a investigação-mãe da Operação Compliance Zero, cujo relator é o ministro André Mendonça.",
+            "O movimento fez com que dezenas de despachos e decisões sigilosas viessem a público, lançando luz sobre as engrenagens de um dos maiores escândalos financeiros do país, envolvendo o Banco Master, a REAG Investimentos e o empresário Daniel Vorcaro.",
+            "Uma leitura atenta da íntegra dos documentos liberados revela o que realmente está em jogo e as conexões políticas explosivas que Mendonça manteve sob sigilo.",
+            "Mendonça, no entanto, agiu para blindar o governador e concedeu um Habeas Corpus sigiloso a Ibaneis, garantindo-lhe o direito de não comparecer à CPI ou de permanecer em silêncio.",
+            "Nos documentos, também veio à tona, por meio de um vazamento natural do andamento das apurações, a existência de investigações sigilosas que miravam ACM Neto e Antonio Rueda, os grandes caciques da legenda.",
+            "Acesso à íntegra\n\n\n\nPara que nossos leitores e outros veículos independentes possam fazer suas próprias análises sobre o trabalho da PF e as decisões de Mendonça, disponibilizamos abaixo o acesso direto e completo a todos os arquivos e decisões que antes estavam sob sigilo nas Petições do STF."
+          ],
+          "r1": "",
+          "text_check": "{\"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"TÍTULO viola EMU-1/2/8: é trailer, tem dois-pontos e não traz um fato único claro com agente+ação+objeto.\", \"OLHO incoerente/truncado e com afirmação divergente: diz que Fachin “determinou a quebra do sigilo” da petição 15.556; as evidências indicam que ele pediu a retirada do sigilo a Mendonça, não determinou (https://www.correiodopovo.com.br/not%C3%ADcias/pol%C3%ADtica/fachin-pede-a-mendonca-que-retire-sigilo-do-caso-master-1.1746851 | https://www.msn.com/pt-br/noticias/other/presidente-do-stf-pede-retirada-de-sigilo-do-caso-master/ar-AA2bYQQE). Ajustar para “pediu” e concluir o texto truncado.\", \"DATA_DO_FATO: incluir a data do pedido de retirada de sigilo (10/9/2026) e datar os demais atos citados (ex.: liminar de 8/9 sobre a PF) para ancorar o “nesta semana” (https://www.bbc.com/portuguese/articles/cq8j79jpwjko | https://oglobo.globo.com/politica/noticia/2026/09/09/mendonca-moraes-segunda-turma-gilmar-agu-entenda-os-movimentos-de-cada-um-na-escalada-da-crise-no-stf.ghtml).\", \"NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA: referências a “Operação Compliance Zero”, BRB/Banco Master, e citações a ACM Neto/Antonio Rueda dentro das petições não aparecem nas fontes públicas listadas; incluir links/documentos públicos que sustentem esses pontos.\", \"SUGESTAO_TITULO: Fachin pede a Mendonça retirada de sigilo da petição 15.556 no STF\", \"CATEGORIA_SUGERIDA: Política\"], \"sugestao_titulo\": \"Fachin pede a Mendonça retirada de sigilo da petição 15.556 no STF\\nCATEGORIA_SUGERIDA: Política\", \"categoria_sugerida\": \"Política\", \"sha\": \"ee79cc7db02b809dab330df0f0ad8d58504232c0\", \"ts\": \"11/09/2026 01:20\", \"ts_iso\": \"2026-09-11T04:20:46.878158+00:00\"}, \"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**Cargo de Ibaneis Rocha desatualizado/incorreto:** o rascunho o trata como \\\"governador do Distrito Federal\\\" (presente), mas as fontes de abril/2026 o chamam de **ex-governador** do DF. Ex.: O Globo (\\\"liberou o ex-governador do Distrito Federal Ibaneis Rocha\\\"), CartaCapital (\\\"O ex-governador do Distrito Federal Ibaneis Rocha (MDB)\\\"), R7, IstoÉ e Correio Braziliense — todos usam \\\"ex-governador\\\". Fonte: https://oglobo.globo.com/politica/noticia/2026/04/03/mendonca-libera-ibaneis-de-comparecer-a-cpi-do-crime-organizado.ghtml | https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/\", \"**DATA_DO_FATO:** o núcleo da matéria (decisão de Mendonça que torna facultativo o comparecimento de Ibaneis à CPI) é de **2-3 de abril de 2026** (O Tempo: \\\"decidiu nesta quinta-feira (2/4)\\\"; O Globo/R7/IstoÉ: 03/04/2026), e a falta de Ibaneis à CPI ocorreu em **7 de abril de 2026** (CartaCapital). O rascunho narra o episódio como se fosse revelação \\\"desta semana\\\" (11/09/2026), sem gancho atual declarado (nova decisão, desdobramento, quebra de sigilo recente). Fato verdadeiro de ~5 meses atrás apresentado como notícia de hoje = pauta velha. Fonte: https://www.otempo.com.br/politica/judiciario/2026/4/3/mendonca-libera-ibaneis-e-torna-opcional-presenca-em-cpi | https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/\", \"**INCERTO — quebra de sigilo por Edson Fachin / Petição 15.556 / Operação Compliance Zero / afastamento de Andrei Rodrigues:** as evidências desta busca cobrem apenas a decisão de Mendonça sobre Ibaneis (abril/2026) e não confirmam nem negam: (a) que Fachin, como presidente do STF, determinou a quebra do sigilo da Petição 15.556; (b) a existência/nome da \\\"Operação Compliance Zero\\\"; (c) o afastamento do Diretor-Geral da PF Andrei Rodrigues por Mendonça; (d) as investigações sobre ACM Neto e Antonio Rueda. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — não aprovo fato duvidoso. (Obs.: o Correio Braziliense confirma apenas que Mendonça é \\\"relator do caso Master no STF\\\" e que concedeu habeas corpus a Ibaneis.)\", \"**INCERTO — citação textual atribuída a Mendonça:** o trecho entre aspas (\\\"restando configurada... afasto a obrigatoriedade de comparecimento...\\\") não pôde ser conferido contra as fontes desta busca; as evidências confirmam o *teor* da decisão (tornar facultativo o comparecimento), mas não o texto literal citado. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA.\", \"FONTES: https://oglobo.globo.com/politica/noticia/2026/04/03/mendonca-libera-ibaneis-de-comparecer-a-cpi-do-crime-organizado.ghtml | https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/ | https://noticias.r7.com/brasilia/mendonca-desobriga-ibaneis-rocha-de-comparecer-a-cpi-do-crime-organizado-03042026/ | https://www.otempo.com.br/politica/judiciario/2026/4/3/mendonca\"], \"fontes\": [\"https://oglobo.globo.com/politica/noticia/2026/04/03/mendonca-libera-ibaneis-de-comparecer-a-cpi-do-crime-organizado.ghtml\", \"https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/\", \"https://noticias.r7.com/brasilia/mendonca-desobriga-ibaneis-rocha-de-comparecer-a-cpi-do-crime-organizado-03042026/\", \"https://www.otempo.com.br/politica/judiciario/2026/4/3/mendonca\"], \"sha\": \"36695ead469508c41fc232f68f6f7c3c2c47f13c\", \"ts\": \"11/09/2026 02:05\", \"ts_iso\": \"2026-09-11T05:05:52.494684+00:00\"}}"
+        },
+        {
+          "id": 269881,
+          "title": "Documentário mostra câmera como ferramenta de autoria indígena",
+          "status": "draft",
+          "modified": "2026-09-11 02:05:23",
+          "fm": 0,
+          "excerpt_segments": [],
+          "r1": "",
+          "text_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / exibição não confirmada:** o rascunho afirma que o CineSesc exibiu *Arquivo Vivo* \\\"na quinta-feira (10), às 20h\\\", mas nenhuma das evidências desta busca cobre essa sessão nem o festival \\\"Amor ao Cinema\\\". Não há fonte que confirme a data, o horário ou o local da exibição — fato central da abertura, sem cobertura declarada. (NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA)\", \"**INCERTO — \\\"mais de 70 obras\\\" do Vídeo nas Aldeias:** a cifra não é confirmada por nenhuma das fontes desta busca. Sem fonte que a sustente, a cifra não pode ir ao corpo como fato (regra CIFRA).\", \"**INCERTO — biografia de Carelli (nascimento na França, USP, formação de indigenista em Brasília, trabalho na Funai nos anos 1970, fundação do CTI, parceria com Andrea Tonacci no projeto Inter Povos, trabalho como repórter fotográfico em *IstoÉ*, *Repórter Três* e *Movimento*, e no Projeto Povos Indígenas no Brasil/CEDI):** nenhuma das evidências desta busca cobre esses pontos. Não há como confirmar nem negar — registrado como INCERTO, não como incorreto.\", \"**INCERTO — fundação do Vídeo nas Aldeias em 1986 por Carelli e Virgínia Valadão:** sem cobertura nas evidências desta busca.\", \"**INCERTO — citações atribuídas a Carelli** (\\\"A sensação de ter adentrado em outro momento da humanidade...\\\", \\\"Para mim, foi uma experiência definitiva...\\\", \\\"A questão da apropriação da imagem tem várias dimensões...\\\"): não localizadas nas fontes desta busca; atribuição não verificável aqui.\", \"FONTES: https://www.correiobraziliense.com.br/diversao-e-arte/2026/09/7497886-documentario-que-relembra-o-programa-da-radio-nacional-estreia-nos-cinemas.html | https://oglobo.globo.com/rio/noticia/2026/09/10/documentario-sobre-cruz-da-primeira-missa-no-brasil-estreia-no-globoplay-filme-tera-sessao-no-rio.ghtml\"], \"fontes\": [\"https://www.correiobraziliense.com.br/diversao-e-arte/2026/09/7497886-documentario-que-relembra-o-programa-da-radio-nacional-estreia-nos-cinemas.html\", \"https://oglobo.globo.com/rio/noticia/2026/09/10/documentario-sobre-cruz-da-primeira-missa-no-brasil-estreia-no-globoplay-filme-tera-sessao-no-rio.ghtml\"], \"sha\": \"d813ebcf2f4209432e3c1638ac6fc5d961101389\", \"ts\": \"11/09/2026 02:05\", \"ts_iso\": \"2026-09-11T05:05:22.635637+00:00\"}}"
+        }
+      ]
+    },
+    "stderr": ""
+  },
+  "remote_integrity.json": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "baseline_remote": "46f8981ea17bfa8c32ce27d06c221f713a83a40a",
+      "remote": "9ddad681382377fc440796586b0e8c9c0098e281",
+      "removed_nonblank": 0
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "baseline_remote": "46f8981ea17bfa8c32ce27d06c221f713a83a40a",
+      "remote": "9ddad681382377fc440796586b0e8c9c0098e281",
+      "removed_nonblank": 0
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "baseline_remote": "46f8981ea17bfa8c32ce27d06c221f713a83a40a",
+      "remote": "9ddad681382377fc440796586b0e8c9c0098e281",
+      "removed_nonblank": 0
+    }
+  ],
+  "integrity.json": {
+    "at": "2026-09-11T02:18:26.823569-03:00",
+    "head": "427f497cc5b0a1c3777eb10a2a7cd666c38dafbb",
+    "baseline_commit": "7e8a2ba572333a2f7cb1f93a08a132c93a88368e",
+    "bridge_audit": [
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "removed_nonblank": 0,
+        "sha256": "0a50ade2e8e643ff3b303fee3a1df5019c6c8dc8d92e4a5c7776fba9d9a22c93",
+        "xm039_present": false
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+        "removed_nonblank": 0,
+        "sha256": "b9999a9d3e997de999a82d2bd51baef1e7f0a572fc02b70922c818250b341d76",
+        "xm039_present": false
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "removed_nonblank": 0,
+        "sha256": "6ea8cf3454a589eb2966b3a2b9a943ce960ed0c7ef575deb8564d5d3f9144122",
+        "xm039_present": false
+      }
+    ],
+    "active_hooks": []
+  }
+}

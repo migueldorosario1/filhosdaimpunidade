@@ -1,0 +1,79 @@
+{
+  "versao": "v1",
+  "status": "rascunho para shadow",
+  "base": "forum_novas_diretrizes_editoriais_correio_brasil_20260707.md, forum_super_luxo_editorial_v4_espelhado_20260707.md",
+  "descricao": "Freios específicos por família de LLM para reduzir vícios de texto no pipeline editorial.",
+  "freios": {
+    "claude": {
+      "familia": ["claude-sonnet-4", "claude-opus", "claude-haiku"],
+      "vicio_principal": "solenidade excessiva, parágrafo redondo, conclusão bonita",
+      "freios": [
+        "menos solenidade",
+        "menos parágrafo redondo",
+        "menos conclusão bonita",
+        "mais fato seco",
+        "mais frase curta",
+        "cortar adjetivo que enfeita sem informar",
+        "não transformar every fact into a meditation"
+      ],
+      "prompt_freio": "Write with dryness. Cut round paragraphs. Avoid beautiful conclusions. Prefer short factual sentences over elegant meditations. If a paragraph sounds like a literary essay, rewrite it as journalism."
+    },
+    "gpt": {
+      "familia": ["gpt-4o", "gpt-4o-mini", "gpt-5"],
+      "vicio_principal": "estrutura formulaica, transição previsível, tom escolar",
+      "freios": [
+        "menos estrutura escolar",
+        "menos transição previsível",
+        "menos 'por outro lado' / 'on the other hand'",
+        "mais voz jornalística",
+        "mais detalhe material",
+        "não começar parágrafo com 'While' ou 'Although' como muleta",
+        "não terminar com 'Ultimately' ou 'In the end'"
+      ],
+      "prompt_freio": "Avoid formulaic structure. No school-essay transitions. No 'on the other hand' as crutch. Write like a journalist, not a student. Add material detail. Cut predictable connectors."
+    },
+    "gemini": {
+      "familia": ["gemini-2.5-flash", "gemini-2.5-pro"],
+      "vicio_principal": "resumo excessivo, tom didático, neutralização",
+      "freios": [
+        "menos resumo",
+        "menos tom de boletim",
+        "mais lead jornalístico",
+        "mais consequência política",
+        "menos neutralização",
+        "não explicar o óbvio",
+        "não transformar notícia em explicador quando a pauta pede notícia"
+      ],
+      "prompt_freio": "Do not summarize. Do not explain the obvious. Write a journalistic lead, not a briefing. Show political consequence. Avoid neutralizing a clear fact into both-sides language."
+    },
+    "grok": {
+      "familia": ["grok-4", "grok-3"],
+      "vicio_principal": "graça, provocação, frase esperta, sarcasmo performático",
+      "freios": [
+        "menos gracinha",
+        "menos sarcasmo performático",
+        "não trocar argumento por piada",
+        "ironia só quando o fato pedir",
+        "não transformar matéria em stand-up",
+        "preservar sobriedade quando o fato é grave"
+      ],
+      "prompt_freio": "No performative wit. No sarcasm for its own sake. Irony only when the fact demands it. Do not turn journalism into stand-up. Preserve sobriety for serious facts."
+    },
+    "chineses_economicos": {
+      "familia": ["qwen", "kimi", "glm", "deepseek"],
+      "vicio_principal": "obedência formal sem nuance política brasileira, generalização, abstração ideológica",
+      "freios": [
+        "exigir nomes, cargos e contexto brasileiro",
+        "evitar generalização",
+        "checar se a conclusão nasceu do material",
+        "reduzir abstração ideológica",
+        "não traduzir literalmente estrutura de comunicado estatal",
+        "verificar se o texto faz sentido para leitor brasileiro",
+        "atenção a censura ou autocensura em temas sensíveis"
+      ],
+      "prompt_freio": "Use specific Brazilian names, titles, and context. No generalization. Check that conclusions come from the material, not from abstraction. Reduce ideological abstraction. Do not mimic state communique structure. Verify the text makes sense for a Brazilian reader. Watch for censorship or self-censorship on sensitive topics."
+    }
+  },
+  "regra_geral": "O freio é aplicado pelo roteador LLM antes de enviar o prompt ao modelo. O freio não substitui a diretriz editorial; ele complementa.",
+  "teste_obrigatorio": "Antes de deploy, rodar shadow com e sem freio e comparar naturalidade, densidade e ausência de cheiro de prompt."
+}

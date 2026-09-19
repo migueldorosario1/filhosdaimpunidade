@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_0244",
+  "ts_brt": "2026-07-25T02:44:16-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_0244\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"http_status=0 sem alerta atribuído pelo coletor, caracterizando possível falha de detecção (site off).\",\n      \"evidencia\": \"http_status: 0, problemas: [], alerta.nivel: 'nenhum'\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"deveria ter alerta ao menos P3 por site fora do ar (http_status=0)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Avaliar site ceara_digital (HTTP 0) não detectado; verificar disponibilidade e incluir alerta.\",\n  \"confianca\": 0.95,\n  \"notas\": \"ceara_digital com http_status=0 não gerou alerta; todos os outros sites coerentes. Três sites com P2 shadow por estagnação (51h) estão suprimidos mas corretos.\"\n}"
+}

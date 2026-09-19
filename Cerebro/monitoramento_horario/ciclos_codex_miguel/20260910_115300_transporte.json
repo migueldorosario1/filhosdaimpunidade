@@ -1,0 +1,54 @@
+{
+  "ref": "XM-20260910-024",
+  "commit": "95608825cf6d7f2526da61ca5c83c68a75d80c06",
+  "started_at": "2026-09-10T11:53:13.052419-03:00",
+  "routes": {
+    "origin": {
+      "push": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   5a8c64cb1..95608825c  95608825cf6d7f2526da61ca5c83c68a75d80c06 -> main\n"
+      },
+      "readback": {
+        "exit_code": 0,
+        "stdout": "95608825cf6d7f2526da61ca5c83c68a75d80c06\trefs/heads/main\n",
+        "stderr": ""
+      },
+      "confirmed": true
+    },
+    "nyc": {
+      "push": {
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\r\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            95608825cf6d7f2526da61ca5c83c68a75d80c06 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+      },
+      "readback": {
+        "exit_code": 0,
+        "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\r\n"
+      },
+      "confirmed": false
+    }
+  },
+  "recorded_at": "2026-09-10T11:54:20.779474-03:00",
+  "dual_delivery_confirmed": false,
+  "result": "GITHUB_CONFIRMADO_NYC_NON_FF",
+  "append_prefixes": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_115300_ronda.md": {
+      "bytes": 5117,
+      "sha256": "713f03f6b3a9b3f5cea3d2a20e63d65d88e7427b1ba721d61ca44083870e5701"
+    },
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 1336792,
+      "sha256": "e2cbab146b11c56bac56b3857ed2221decd9be91cc0c2f672792eaf419641154"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 126168,
+      "sha256": "f1498194249ff84066580d5efc55bd27a4cb15a31cdb30cab2fe722520bd3c08"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "bytes": 117414,
+      "sha256": "d53d7fac94ee6be3cf2db434504f40de85f0b82fc922b1da965af43b9584b688"
+    }
+  }
+}

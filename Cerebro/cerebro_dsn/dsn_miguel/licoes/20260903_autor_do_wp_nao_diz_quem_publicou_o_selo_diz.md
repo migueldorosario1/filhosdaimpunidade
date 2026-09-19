@@ -1,0 +1,13 @@
+# 2026-09-03 · Autor do WP não diz quem publicou — o selo/UA diz
+
+**O quê.** Na ronda DS-121 (20:30) registrei como "OBS anomalia de curadoria" o post 268909 (Datafolha CE com ângulo de confirmação entre institutos, 20:18:57) atribuindo-o ao **ciclo redator da esteira** porque o WP-CLI mostrava `post_author` 5780 ("Redação") — e escrevi "autoria 5780 = redator2/Redação — confirmei no WP-CLI; a5470/esteira não é: é o ciclo redator". **Estava errado**: na CL-135 (20:45) a Claude Laura provou no servidor que o 268909 foi publicado por um **HUMANO** — via admin, UA Android, **sem** `_cafezinho_txt_isenta`/carimbo = humano livre (outro editor da casa). Ou seja: o mesmo autor WP "Redação" (5780) é usado tanto pelo ciclo robótico quanto por humanos publicando pelo admin — e o 268909 duplicava, 10 minutos depois, o 268899 do Miguel (20:08:41): **o dedupe que falhou foi entre dois humanos da casa**, não um furo da esteira.
+
+**Por quê.** O campo `post_author` identifica a CONTA WP, não a NATUREZA do publicador (ciclo × humano). Quando o ciclo robótico publica, deixa rastro de metadata (selo `_cafezinho_txt_isenta`, carimbo, isenta assinada); quando um humano publica pelo admin, não deixa selo e o UA mostra o dispositivo real (Android/web). Atribuir "quem produziu" pelo autor do WP é inferência frágil — e eu a apresentei como "confirmei no WP-CLI", o que deu peso falso à inferência. O mesmo vale para a régua da casa "post publicado não sai": o 268909 fica no ar, e a decisão de fundir/despublicar a duplicata é do dono (Miguel) — veredito CL-135, regra permanente CL-119.
+
+**Como aplicar.**
+1. Ao reportar "quem produziu o quê", atribuir a origem por **PROVA**: presença/ausência de selo/isenta/carimbo + UA + timing vs slots da grade — nunca pelo `post_author` sozinho. "Autor 5780 no WP-CLI" é dado bruto, não veredito de origem.
+2. Post de ciclo sobre o MESMO release de um post humano recente: antes de classificar como "furo da esteira", sondar o rastro (selo/isenta/UA) — o atrito pode ser dedupe ENTRE humanos.
+3. Duplicata entre humanos publicada: registrar sem alarme (posts irreversíveis), reportar ao dono com o par de IDs e o veredito "publicado não sai; fusão é decisão do dono" (feedback CL nº 50: buscar termo-chave no site antes de publicar é o hábito que evita a repetição).
+4. Quando eu errar uma atribuição e a casa corrigir: registrar a correção na ponte e virar lição — a rastreabilidade do vigia inclui os próprios erros.
+
+**Refs:** bloco DS-20260903-041 (atribuição errada) · bloco DS-20260903-042 (correção) · CL-20260903-135 · 268909/268899 · licoes/20260903_post_publicado_nao_sai_e_a_excecao_registrada_e_o_caminho.md · regra CL-119.

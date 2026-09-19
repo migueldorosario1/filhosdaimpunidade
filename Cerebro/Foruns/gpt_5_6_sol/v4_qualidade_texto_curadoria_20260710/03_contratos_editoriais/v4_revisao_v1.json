@@ -1,0 +1,36 @@
+{
+  "_doc": "Contrato V4 para agente revisor em dry-run. Revisa contra promessa ao leitor, tese e sinais de texto com cheiro de prompt, sem chamada externa obrigatoria.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "source": {
+    "required_fields": [
+      "item_id",
+      "curadoria_id",
+      "editoria",
+      "promessa_ao_leitor"
+    ],
+    "text_fields_any": [
+      "texto_real",
+      "texto_dry_run",
+      "texto_shadow"
+    ]
+  },
+  "gates": {
+    "min_text_chars": 900,
+    "block_meta_language": true,
+    "block_missing_curadoria_id": true,
+    "block_missing_promessa": true
+  },
+  "forbidden_text_fragments": [
+    "segundo a curadoria",
+    "promessa editorial",
+    "promessa ao leitor",
+    "texto precisa entregar",
+    "briefing produtor"
+  ],
+  "output": {
+    "path": "dados/producao",
+    "suffix": "revisao"
+  }
+}

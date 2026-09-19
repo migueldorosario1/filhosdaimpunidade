@@ -1,0 +1,61 @@
+{
+  "ref": "XM-20260910-009",
+  "timestamp_brt": "2026-09-10T04:23:08.712331-03:00",
+  "commit": "b287471cd020dc9835a604385b071c110efeee0a",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_042232_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_042232_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_042232_auditoria_ponte.py"
+  ],
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_042232_ronda.md",
+  "evidence_sha256": "0472d6de6826ba06f1875bfedfc95fa7e9f6584ef11d34f9b0518a965fa6bbe3",
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [rejected]            main -> main (fetch first)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+  },
+  "origin_verification": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "063f99fd13738baa4b85779400f64e34ee56ff06\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": false,
+  "nyc": {
+    "command": [
+      "git",
+      "ls-remote",
+      "nyc",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+    "push_attempted": false,
+    "remote_main": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_rc": 1,
+    "action": "HOLD_NON_FF"
+  },
+  "checks": {
+    "rounds": 1,
+    "append_only_prefix_verified": true,
+    "utf8_without_bom": true,
+    "selective_staging_verified": true,
+    "preexisting_untracked_preserved": true,
+    "audit_rc": 0
+  },
+  "closing_note": "Fecho documental da mesma ronda. Nenhuma segunda ronda iniciada. G-Drive não foi acionado por XM; último carimbo de terceiro 04:10 não certifica este commit."
+}

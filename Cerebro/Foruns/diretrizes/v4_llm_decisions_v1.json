@@ -1,0 +1,54 @@
+{
+  "_doc": "Contrato V4 para auditoria append-only das decisoes do roteador LLM.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "store": {
+    "format": "jsonl",
+    "path": "agent_data/v4/llm_decisions",
+    "append_only": true,
+    "encoding": "utf-8",
+    "rotation": "daily"
+  },
+  "failure_policy": {
+    "jsonl_failed_blocks_generation": true,
+    "prometheus_failed_blocks_generation": false
+  },
+  "required_fields": [
+    "schema_version",
+    "timestamp",
+    "editoria",
+    "funcao",
+    "idempotency_key",
+    "prompt_hash",
+    "selected_provider",
+    "selected_model",
+    "selected_tier",
+    "selection_strategy",
+    "selection_reason",
+    "candidate_count",
+    "mode",
+    "expected_cost_usd"
+  ],
+  "forbidden_prometheus_labels": [
+    "idempotency_key",
+    "prompt_hash",
+    "title",
+    "titulo",
+    "url",
+    "content",
+    "conteudo"
+  ],
+  "prometheus": {
+    "metric": "v4_llm_router_decisions_total",
+    "labels": [
+      "editoria",
+      "funcao",
+      "provider",
+      "model",
+      "tier",
+      "mode",
+      "outcome"
+    ]
+  }
+}

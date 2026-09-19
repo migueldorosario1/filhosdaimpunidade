@@ -1,0 +1,74 @@
+{
+  "ref": "XM-20260911-006",
+  "at": "2026-09-11T02:54:16.047447-03:00",
+  "rounds_executed": 1,
+  "validation": {
+    "at": "2026-09-11T02:53:07.856404-03:00",
+    "sources_verified": 168,
+    "appends_verified": 3,
+    "editorial_versions_verified": 3,
+    "proposals_verified": 13,
+    "public_pages_verified": 3,
+    "future_events_verified": 8,
+    "operational_mutations": 0,
+    "rounds_executed": 1,
+    "passed": true
+  },
+  "closure_appends": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "before_sha256": "58a93b10338ad00d4b70aee782d9d26d269b31ee23746d6cf0147dd673d202ba",
+      "after_sha256": "af808e3540e30486d6546cd79b179228e7c047b28ed744f13d129b2ee6390b1b",
+      "before_bytes": 1801755,
+      "append_only": true
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "before_sha256": "c02c71c8f9b8d4b72b431c3c59f48afc66c573d5ee4988645538792c7b5725d4",
+      "after_sha256": "9680a75692324eb38dcb1c3a79dc912ae13634eee96b11d4290eb6536f33fee6",
+      "before_bytes": 128442,
+      "append_only": true
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md",
+      "before_sha256": "fe4c5880f19418c416293e785e65f8070835786a3353ec872c07e60ac3e15e76",
+      "after_sha256": "88805aa3236649a4c054454fbb5c95e58170a34c2ce4e1d0d60dbdd2a5f9a86c",
+      "before_bytes": 16741,
+      "append_only": true
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_ronda.md",
+      "sha256": "7931892e1e6bcfb1401c17eb9774107558b8a1debb1e8d4bbd27df78bad63c56"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_editorial.md",
+      "sha256": "ae5e9456e2535db986c3573af48fe8407ce594917004155f1839b4d72037be1d"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_encaminhamento_pendente.md",
+      "sha256": "78a879e86e69f06478f483412c37e771acfbfd4622338060b2a3015c13451081"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_verificacao.json",
+      "sha256": "b5010aebb47b18c096c40e4dcb37eaf543a050cf0504de00c187c29f4f6d75fe"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_evidencias.json",
+      "sha256": "1517df17eecf304abfcd9a42b97d23acdd6eedb7f8e6abbed619d7f286f862c4"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_fechamento.md",
+      "sha256": "e117e4417c8836e8c7cdadd7fee73dd547e8eca0891a785603f9a0aae632da75"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_025241_transporte.json",
+      "sha256": "96423ad1778d342a510ed9db654b7e3a8f7f9d3a508f8908f83b301fde02039b"
+    }
+  ],
+  "operational_mutations": 0,
+  "remote_delivery_verified": false,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "retomada": "preservada"
+}

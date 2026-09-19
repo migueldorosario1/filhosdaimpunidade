@@ -1,0 +1,21 @@
+{
+  "ref": "XM-20260910-040",
+  "at": "2026-09-10T21:27:31.170431-03:00",
+  "paths": {
+    "receipt": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_ronda.md",
+    "evidence": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_evidencias.json",
+    "editorial": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_editorial.md",
+    "message": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_mensagem.md",
+    "transport": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_transporte.json",
+    "verification": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_verificacao.json"
+  },
+  "attempts": [],
+  "state": "PENDENTE",
+  "shared_append": false,
+  "pull": {
+    "rc": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  },
+  "error": "HEAD mudou; deltas novos exigem leitura"
+}

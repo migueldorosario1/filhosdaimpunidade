@@ -224,3 +224,5 @@ Produção preparada:
 - **Contador**: FILES agora inclui `.1 .2.gz .3.gz .4.gz .5.gz` (janela 2→~6 dias; antes a rotação diária zerava o by_day). Série desde 26/08 = mescla historico.jsonl (max por dia entre janelas) + resumo corrente.
 - **Série real (página /bot-news/):** 26/08: 13 bots · 5 hum; 27/08: 2 · 4; 28/08: 2 · 4; 29/08→03/09: 0 bots · 2-6 hum/dia (humanos = falsos navegadores de datacenter; humano real zero).
 - Backups: painel `.bak_pre_botnews_20260903`; contador `.bak_pre_gz_push_20260903`. Restart: `sudo -n systemctl restart cctv-v6` (validação AST 3.12 antes; py_compile do Dell falha por PEP 701 pré-existente).
+--- nota na memoria ---
+**15/09 — MODO LLM DIÁRIO (ordem Miguel):** edição redigida por DeepSeek deepseek-chat (06:10 BRT diário; fallback DLP-safe; cards em signals; sem URLs por DLP). Ver fórum adendo 15/09.

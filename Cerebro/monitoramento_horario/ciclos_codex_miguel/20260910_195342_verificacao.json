@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-10T19:53:42.608725-03:00",
+  "ref": "XM-20260910-037",
+  "rounds_executed": 1,
+  "files": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_195342_ronda.md",
+      "sha256": "31bdf013df2ac65927390ba2135879be5d1c805999feaf6a899ebd23cddb8319",
+      "bytes": 6793
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_195342_evidencias.json",
+      "sha256": "90be0109b589961f334c41317396f30d20d0d5b41d44bbb91cf3b3e73fc520d8",
+      "bytes": 160583
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_195342_editorial.md",
+      "sha256": "c3c5058a608ab90c537c808f17622c18e62ee54a3251d2d1e96d3feb41872685",
+      "bytes": 9958
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_195342_encaminhamento_pendente.md",
+      "sha256": "5d630f956d84fbd876a6388dcc91f112052a53c7fc57044a17ff75db17de12d9",
+      "bytes": 3419
+    }
+  ],
+  "findings": {
+    "editorial_articles": 3,
+    "exact_proposals": 10,
+    "writes": 0,
+    "same_readback_versions": true,
+    "delivery": "PENDENTE_HOLD_TRANSPORTE",
+    "public_rest_confirmed": false,
+    "state_latest_matches": true
+  },
+  "shared_files_unchanged": true
+}

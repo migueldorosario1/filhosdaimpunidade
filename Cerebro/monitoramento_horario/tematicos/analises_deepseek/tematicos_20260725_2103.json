@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_2103",
+  "ts_brt": "2026-07-25T21:03:44-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_2103\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou HTTP status 0 (indicando inacessibilidade) mas não foi gerado alerta; problema não detectado pelo coletor.\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum alerta\",\n      \"deepseek_diz\": \"deveria ter alerta (P1 ou P2) pois site está inacessível (status 0)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Investigar site ceara_digital (HTTP 0) e corrigir monitoramento para gerar alerta de site inacessível.\",\n  \"confianca\": 0.9,\n  \"notas\": \"ceara_digital com status 0 sem alerta; mapa_rio e aiatolah com P2 suprimido (shadow) por estagnação de 58h, plausível de ser esperado; demais sites saudáveis.\"\n}"
+}

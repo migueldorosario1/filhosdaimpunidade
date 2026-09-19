@@ -1,0 +1,85 @@
+{
+  "observed_at": "2026-09-10T14:49:09.552491-03:00",
+  "head": "7a23a11ac2bf0b8610dc36b8f41f623a81cd68e8",
+  "zero_byte_loose_objects": 0,
+  "hooks": [],
+  "core_hooksPath": {
+    "rc": 1,
+    "output": ""
+  },
+  "recovery_files": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_bytes": 0,
+      "bytes": 1455631,
+      "sha256": "25e774a250cafe063d7000b2214c76472c8f5c59b4fafbef1711d7bd562e7640"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_bytes": 0,
+      "bytes": 1455631,
+      "sha256": "25e774a250cafe063d7000b2214c76472c8f5c59b4fafbef1711d7bd562e7640"
+    },
+    {
+      "path": "cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "previous_bytes": 0,
+      "bytes": 366311,
+      "sha256": "9c8308a80a8126c1cfe22d3ae5380c087ad4e74173e90d4458a0cd054d13b892"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "previous_bytes": 0,
+      "bytes": 366311,
+      "sha256": "9c8308a80a8126c1cfe22d3ae5380c087ad4e74173e90d4458a0cd054d13b892"
+    },
+    {
+      "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "previous_bytes": 0,
+      "bytes": 698447,
+      "sha256": "019d5d6b68026c35b3b5750164d6922a5ee1945bd72a64cd050bba6a18358c5d"
+    },
+    {
+      "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+      "previous_bytes": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md",
+      "previous_bytes": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "remote_files": {
+    "observed_at": "2026-09-10T14:49:51.960267-03:00",
+    "remote_blobs": [
+      {
+        "path": "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md",
+        "origin_bytes": 65238,
+        "origin_sha256": "0f8d165b965d3127793166a5c0360687757b37b978fc3e3020393fc8c6d444fd",
+        "worktree_bytes": 0
+      },
+      {
+        "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+        "origin_bytes": 140519,
+        "origin_sha256": "dba9f0895b1850a190ce95fecffc7212c376d9086eae58c42962132f758d539a",
+        "worktree_bytes": 0
+      }
+    ]
+  },
+  "append_prefixes": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 1455631,
+      "sha256": "25e774a250cafe063d7000b2214c76472c8f5c59b4fafbef1711d7bd562e7640"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 129956,
+      "sha256": "49b8aa2e3428fc6457b3aff239b04eff3aafe1c572ee4a052d9b68eee802fe7d"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "bytes": 119200,
+      "sha256": "2077d18f325e1731bf8aa7e0d523457238cc4ab65b052abb0879ce0e28832919"
+    }
+  }
+}

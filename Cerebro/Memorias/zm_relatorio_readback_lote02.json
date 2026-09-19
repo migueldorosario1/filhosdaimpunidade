@@ -1,0 +1,21 @@
+{
+ "gpg_sha_ok": true,
+ "gpg_bytes": 407591584,
+ "tar_sha_ok": true,
+ "tar_bytes": 1593907200,
+ "membros": 38,
+ "journals_conferidos": "36/36",
+ "problemas": "nenhum",
+ "journalctl": {
+  "00065985d48e656a.journal": {
+   "exit": 0,
+   "entradas": 2,
+   "json_valido": true
+  },
+  "00065abed115a7bf.journal": {
+   "exit": 0,
+   "entradas": 2,
+   "json_valido": true
+  }
+ }
+}

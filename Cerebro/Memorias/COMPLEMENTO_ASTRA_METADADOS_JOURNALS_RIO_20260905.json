@@ -1,0 +1,897 @@
+{
+  "allowed_xattr_names": [
+    "system.posix_acl_access",
+    "user.crtime_usec"
+  ],
+  "captured_at_epoch": 1788607758.5900218,
+  "captured_at_utc": "2026-09-05T11:29:18.590022+00:00",
+  "host": "159.89.185.209",
+  "hostname": "Rio-Carta-Agentes",
+  "limitations": [
+    "Metadata capture is not a test of restoring ACLs, ownership or service operation.",
+    "No original journal content was read by this metadata capture.",
+    "atime_ns is the observation at metadata capture; the initial content inventory did not retain atime.",
+    "inode and ctime are audit references and cannot be recreated exactly by ordinary file restoration.",
+    "No new B2 upload was performed for this complement; durable replication and restoration tests remain to be verified."
+  ],
+  "members": [
+    {
+      "content_sha256_reference": "bf1ebd1843f6c0d91f72c728778f0d1de79a8627a66d75126b857f629ffc5aad",
+      "metadata_after": {
+        "atime_ns": 1788604241969118115,
+        "blocks": 16392,
+        "ctime_ns": 1784771421984917719,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556425,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784771421984917719,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241969118115,
+        "blocks": 16392,
+        "ctime_ns": 1784771421984917719,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556425,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784771421984917719,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000000022d6f1-0006573c8a1d1987.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "a270dbffc6b7090ca4768db3432368adabab132985a5eec7a8e69bc442b20eb0",
+          "value_base64": "yD8dijxXBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "c1ee8e1d516d7bd3af249daaf30dcbc6d4defebba0262dfc2c01e519f06a85aa",
+      "metadata_after": {
+        "atime_ns": 1788604241973118235,
+        "blocks": 16392,
+        "ctime_ns": 1784777403882701978,
+        "device": 64769,
+        "gid": 999,
+        "inode": 554675,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784777403882701978,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241973118235,
+        "blocks": 16392,
+        "ctime_ns": 1784777403882701978,
+        "device": 64769,
+        "gid": 999,
+        "inode": 554675,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784777403882701978,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000000022f301-0006573d7a988c9a.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "e671a6bfc269b694be12bb8f15669b491e07397ee0ac01da6627c8c70bc090aa",
+          "value_base64": "iauYej1XBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "35f35132c137e7b9238ce1517bb1e91128ad406a647773abc5a414f3e3a370f9",
+      "metadata_after": {
+        "atime_ns": 1788604241934117060,
+        "blocks": 16392,
+        "ctime_ns": 1784793284639937571,
+        "device": 64769,
+        "gid": 999,
+        "inode": 554691,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784793284639937571,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241934117060,
+        "blocks": 16392,
+        "ctime_ns": 1784793284639937571,
+        "device": 64769,
+        "gid": 999,
+        "inode": 554691,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784793284639937571,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000000230fa2-0006573edf22d202.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "7a5570f295f408f0954ecbc5f7e4e3d647543ddb2080c3e2dbf81037b0bf870d",
+          "value_base64": "hwgj3z5XBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "41cfc5118690f1585ec6f3d16ecb7171c1067487129da0d3ca6b71b6d9b25875",
+      "metadata_after": {
+        "atime_ns": 1788604241918116578,
+        "blocks": 32776,
+        "ctime_ns": 1784843654614089581,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556501,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784843654614089581,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 16777216,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241918116578,
+        "blocks": 32776,
+        "ctime_ns": 1784843654614089581,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556501,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784843654614089581,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 16777216,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000000232ac8-0006574291b5a679.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "112d7b0f5eb6971670ecc485ffba1498151e6708ae64a9a9badaa5540b1bc234",
+          "value_base64": "Ws61kUJXBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "a96bb09a83e3d75c570af2585ef3aee8813b4e21c46cebcc01515887fdb08a7f",
+      "metadata_after": {
+        "atime_ns": 1788604241982118506,
+        "blocks": 16392,
+        "ctime_ns": 1784875094335156149,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556678,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784875094335156149,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241982118506,
+        "blocks": 16392,
+        "ctime_ns": 1784875094335156149,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556678,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784875094335156149,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000000237705-0006574e4c00a563.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "135a66b92f6108e1321869ad0d6d5db5cadbb319c149dc6d56f9676932ce2777",
+          "value_base64": "fMwATE5XBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "2d1a7f23ce8fa135847180baf3af8903fec3ec5304bfe193c8ebfb413a2b62c2",
+      "metadata_after": {
+        "atime_ns": 1788604241991118778,
+        "blocks": 16392,
+        "ctime_ns": 1784878356887559662,
+        "device": 64769,
+        "gid": 999,
+        "inode": 553922,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784878356887559662,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241991118778,
+        "blocks": 16392,
+        "ctime_ns": 1784878356887559662,
+        "device": 64769,
+        "gid": 999,
+        "inode": 553922,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1784878356887559662,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000002391e5-000657559df62b15.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "a2a37911d9e2c366f5d0075122826b4439292b95382225f2c7bb9a5da56819cd",
+          "value_base64": "JFP2nVVXBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "e42db95bef4353c2f550df161ffc666da22ffb1d136727531e17e56d74d86c65",
+      "metadata_after": {
+        "atime_ns": 1788604241943117331,
+        "blocks": 16392,
+        "ctime_ns": 1785542407662056599,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556815,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1785542407662056599,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241943117331,
+        "blocks": 16392,
+        "ctime_ns": 1785542407662056599,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556815,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1785542407662056599,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000000e42ebf6-000657f0f7900a1c.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "854e9f5d085a01e2e60fb60e987c202b8f38738f679f56d3fd3c80c389b71495",
+          "value_base64": "9oXb/PBXBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "606177f7fce1c92e5cd17f5ebd61321764689cdd50a1d8b217e30c42761e1116",
+      "metadata_after": {
+        "atime_ns": 1788604241932117000,
+        "blocks": 16392,
+        "ctime_ns": 1785542541390163549,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556840,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1785542541390163549,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241932117000,
+        "blocks": 16392,
+        "ctime_ns": 1785542541390163549,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556840,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1785542541390163549,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000000e431a39-000657f0f9564a28.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "e61a9454135fea7b0b785085427a00a975d8b52b11ed5e36bafdf50cf73ff698",
+          "value_base64": "qffu/PBXBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "6b5ec04c572281312fb225c327ad817bd137f5d35f5d8b174df1ac879d4c2a7f",
+      "metadata_after": {
+        "atime_ns": 1788604241935117090,
+        "blocks": 16392,
+        "ctime_ns": 1785544207701644187,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556841,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1785544207701644187,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241935117090,
+        "blocks": 16392,
+        "ctime_ns": 1785544207701644187,
+        "device": 64769,
+        "gid": 999,
+        "inode": 556841,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1785544207701644187,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 8388608,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000000e434c12-000657f104e4f257.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "3392e70dba83ab63502be5edceb69995e36a1c4707b5aa6c7eea1788e0759947",
+          "value_base64": "AQvlBPFXBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "8cdc71237d22e530357f90420f811dcde0c7f3e32fad129282d24fe528dc27f1",
+      "metadata_after": {
+        "atime_ns": 1788604241946117422,
+        "blocks": 19488,
+        "ctime_ns": 1786031646374371357,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524671,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786031646374371357,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 16777216,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241946117422,
+        "blocks": 19488,
+        "ctime_ns": 1786031646374371357,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524671,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786031646374371357,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 16777216,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017f9f5b7-00065862e0439795.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "bec092fffc999bb70ac50517918272410a0ad46e57b4d4a9484f0db91f1495b9",
+          "value_base64": "61Sq4mJYBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "1e34adbca30e3fac35c1f597ce48e2cec102e6193f2a2b214aeaec3554dd94e5",
+      "metadata_after": {
+        "atime_ns": 1788604241910116337,
+        "blocks": 91696,
+        "ctime_ns": 1786197311393661062,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524835,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786197311393661062,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241910116337,
+        "blocks": 91696,
+        "ctime_ns": 1786197311393661062,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524835,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786197311393661062,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017fa458f-00065862e5d6343f.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "44fec50b3610ac7985dddc68d8337dc50628ad756737f42a1acc4cf3432d67ae",
+          "value_base64": "fmjW5WJYBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "3dd62ee15e3fd01d440857205c6de17e7fece7b18ce42e447a039d13217cf94b",
+      "metadata_after": {
+        "atime_ns": 1788604241915116488,
+        "blocks": 89920,
+        "ctime_ns": 1786403058152490733,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524642,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786403058152490733,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241915116488,
+        "blocks": 89920,
+        "ctime_ns": 1786403058152490733,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524642,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786403058152490733,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017fb4296-000658897835a7bc.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "8c87da61df0090437ee9681e45340fa987f286ac72c7e9360cf9921dc9d9322e",
+          "value_base64": "/Mg1eIlYBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "3d24996a22046116ee9756d7da413254eba164c49c4b49d07d2426aa18985e91",
+      "metadata_after": {
+        "atime_ns": 1788604241907116247,
+        "blocks": 87944,
+        "ctime_ns": 1786507058577062668,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524640,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786507058577062668,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241907116247,
+        "blocks": 87944,
+        "ctime_ns": 1786507058577062668,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524640,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786507058577062668,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017fc3873-000658b95faebe5d.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "cde2422610f8deebc43552d5815083dfa5968f7b086edc3794851e26d223c18b",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAQABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "d782535989bdf13db8046631f4adfa1641001578407e540134770d763eece58f",
+          "value_base64": "a+KuX7lYBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "88e023438dd4ea12f7349440f7b2ed5bce46ffba525f2ec2d64910e70a63c2b9",
+      "metadata_after": {
+        "atime_ns": 1788604241948117482,
+        "blocks": 89848,
+        "ctime_ns": 1786728923464957922,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524639,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786728923464957922,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241948117482,
+        "blocks": 89848,
+        "ctime_ns": 1786728923464957922,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524639,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786728923464957922,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017fd25f0-000658d19696c7ce.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "df0d9920f1ddbf413f435693433d7e2e235a6c5f0720546a3249f3935361b920",
+          "value_base64": "AAqXltFYBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "4ae8a53dca489f3b99c155ed2a18601e98019ccbb1747db919a05cabb898861f",
+      "metadata_after": {
+        "atime_ns": 1788604241950117542,
+        "blocks": 89824,
+        "ctime_ns": 1786911820701947101,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524645,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786911820701947101,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241950117542,
+        "blocks": 89824,
+        "ctime_ns": 1786911820701947101,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524645,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1786911820701947101,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017fe1f5a-000659053ec2cd72.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "623c6073d447793b5d6d94d01890541625343aaa669bb326973d36cefec4d689",
+          "value_base64": "LAHDPgVZBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "ff046ccc61214557121589cdad5d29a97c04e8a5ed08784cc0dab1ed93a7505b",
+      "metadata_after": {
+        "atime_ns": 1788604241941117271,
+        "blocks": 92328,
+        "ctime_ns": 1787043650969638497,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524709,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1787043650969638497,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241941117271,
+        "blocks": 92328,
+        "ctime_ns": 1787043650969638497,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524709,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1787043650969638497,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000017ff179f-0006592fd44a94d5.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "8382c0f697dd2091fe6805c3f2dd8025ab9e11bfb0654eb276ae308a53dabd10",
+          "value_base64": "VNdK1C9ZBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    },
+    {
+      "content_sha256_reference": "cb7d638c38eb1143c9d600206f1d78a532165a445e87b5ab6aaf88dfd7b285ba",
+      "metadata_after": {
+        "atime_ns": 1788604241966118024,
+        "blocks": 91040,
+        "ctime_ns": 1787281192280937200,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524715,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1787281192280937200,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_before": {
+        "atime_ns": 1788604241966118024,
+        "blocks": 91040,
+        "ctime_ns": 1787281192280937200,
+        "device": 64769,
+        "gid": 999,
+        "inode": 524715,
+        "mode": 416,
+        "mode_octal": "0o640",
+        "mtime_ns": 1787281192280937200,
+        "nlink": 1,
+        "path_type": "regular",
+        "size": 50331648,
+        "uid": 0
+      },
+      "metadata_stable": true,
+      "other_xattr_names_not_captured": [],
+      "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001800233a-0006594e85fc3383.journal",
+      "xattrs": {
+        "system.posix_acl_access": {
+          "bytes": 44,
+          "encoding": "base64",
+          "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4",
+          "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8="
+        },
+        "user.crtime_usec": {
+          "bytes": 8,
+          "encoding": "base64",
+          "sha256": "4951b4a242afb22cd2bdf6ae74e0a914a6f85d916e4c87d14e24dd3d0dc9570f",
+          "value_base64": "cVj8hU5ZBgA="
+        }
+      },
+      "xattrs_stable_two_reads": true
+    }
+  ],
+  "operation": "read_only_metadata_complement_no_upload_no_removal",
+  "schema_version": 1,
+  "source_archive_sha256": "c2bfce6c75aeb0f5653add1cfa45cf839a874bedd23a86c2e53d811ad52f0e94",
+  "source_base": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010",
+  "source_inventory_path": "Cerebro/Memorias/INVENTARIO_ASTRA_BACKUP_RIO_20260905.json",
+  "source_inventory_sha256": "de44ac2af0c1f55c15c1bebc196946b67140db674a82a03687718adf8f3d8520",
+  "summary": {
+    "all_stable": true,
+    "members": 17,
+    "unexpected_xattr_names_present": false
+  }
+}

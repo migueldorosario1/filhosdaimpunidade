@@ -1,0 +1,43 @@
+{
+  "_doc": "Contrato V4 para recomputacao append-only de custos antigos sem editar recibos originais.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "source_receipts_dir": "agent_data/v4/receipts",
+  "output_dir": "agent_data/v4/receipts/recomputed",
+  "append_only": true,
+  "never_modify_original": true,
+  "recompute_when": {
+    "pricing_table_version_in": [
+      "pending"
+    ],
+    "cost_usd_estimated_lte": 0.0,
+    "requires_llm_model": true
+  },
+  "output_schema_version": "v1",
+  "required_fields": [
+    "schema_version",
+    "timestamp",
+    "source_receipt_file",
+    "item_id",
+    "vertical",
+    "operation",
+    "provider",
+    "model",
+    "old_cost_usd_estimated",
+    "new_cost_usd_estimated",
+    "old_pricing_table_version",
+    "new_pricing_table_version",
+    "tokens_in",
+    "tokens_out",
+    "status"
+  ],
+    "statuses": [
+        "recomputed",
+        "skipped_already_recorded",
+        "skipped_no_llm",
+        "skipped_not_needed",
+        "skipped_no_token_basis",
+        "skipped_unknown_model"
+  ]
+}

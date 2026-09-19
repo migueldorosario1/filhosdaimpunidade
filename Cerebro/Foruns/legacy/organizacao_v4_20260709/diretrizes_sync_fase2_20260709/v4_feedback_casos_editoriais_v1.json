@@ -1,0 +1,58 @@
+{
+  "_doc": "Contrato V4 para memoria editorial viva em formato de casos. Nao substitui o ranking de modelos.",
+  "_version": "v1",
+  "_status": "fase_1_dry_run",
+  "_updated": "2026-07-09",
+  "store": {
+    "format": "jsonl",
+    "path": "agent_data/v4/feedback/casos_editoriais.jsonl",
+    "append_only": true,
+    "encoding": "utf-8"
+  },
+  "principios": {
+    "casos_entram_como_pergunta_na_curadoria": true,
+    "critica_e_elogio_sao_registrados": true,
+    "memoria_nao_vira_lista_infinita_de_proibicoes": true,
+    "promocao_para_regra_exige_shadow_e_aprovacao_editorial": true
+  },
+  "required_fields": [
+    "schema_version",
+    "timestamp_brt",
+    "case_id",
+    "item_id",
+    "vertical",
+    "editor",
+    "comentario_bruto",
+    "rejection_class",
+    "rejection_subclass",
+    "praised_dimensions",
+    "diagnostico_operacional",
+    "conserto_recomendado",
+    "perguntas_para_casos_semelhantes"
+  ],
+  "case_seed": {
+    "schema_version": "v1",
+    "timestamp_brt": "2026-07-09T00:00:00-03:00",
+    "case_id": "BUG-EDITORIAL-V4-001",
+    "item_id": "v4_real_001",
+    "post_id": 261439,
+    "vertical": "v4_politica_economia",
+    "editor": "miguel",
+    "comentario_bruto": "Materia correta, mas sem graca, obvia e repetitiva; gostei da mescla das noticias.",
+    "rejection_class": "obvia",
+    "rejection_subclass": "sumario_sem_tese",
+    "praised_dimensions": [
+      "mescla_fontes",
+      "prudencia_juridica"
+    ],
+    "diagnostico_operacional": "O texto explicou o caso, mas nao escolheu a contradicao que organizava a noticia.",
+    "conserto_recomendado": "Inserir curadoria de tese antes da redacao, com leitura corrente timestamped, promessa ao leitor e advogado do obvio.",
+    "perguntas_para_casos_semelhantes": [
+      "Qual e a leitura corrente da grande midia agora?",
+      "Que contradicao concreta o lead da agencia nao entrega?",
+      "Quem ganha e quem perde materialmente?",
+      "A promessa ao leitor muda o texto final?",
+      "Estamos fazendo sumario sem tese de novo?"
+    ]
+  }
+}

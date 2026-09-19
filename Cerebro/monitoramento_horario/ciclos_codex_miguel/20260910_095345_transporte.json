@@ -1,0 +1,41 @@
+{
+  "ref": "XM-20260910-020",
+  "content_commit": "8438360f0ad5c7cb312bdf8310166437dbe6f9cc",
+  "github_push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   52e2d3e1c..8438360f0  main -> main\n",
+    "timestamp_brt": "2026-09-10T09:54:27.421027-03:00"
+  },
+  "github_remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "8438360f0ad5c7cb312bdf8310166437dbe6f9cc\trefs/heads/main\n",
+    "stderr": "",
+    "timestamp_brt": "2026-09-10T09:54:31.330550-03:00"
+  },
+  "github_delivery_confirmed": true,
+  "nyc": "HOLD_NON_FF",
+  "gdrive": "NAO_TESTADO",
+  "tencent_reserva": "NAO_TESTADO",
+  "rounds_executed": 1,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "closing_read_cut": "52e2d3e1c556ca49594d80758019b391adcc41c1",
+  "closed_at": "2026-09-10T09:55:04.389984-03:00",
+  "append_prefixes_verified": true,
+  "preexisting_untracked_preserved": 221,
+  "closing_pull_exit_code": 0,
+  "receipt_before_closing_sha256": "6a3560898384a596b0b70590eb02f5696e9e283516467485963b5501928377d3",
+  "late_deltas": []
+}

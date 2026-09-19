@@ -1,0 +1,70 @@
+{
+  "observed_at_utc": "2026-09-10T11:49:50.642304+00:00",
+  "host": "nyc",
+  "read_only": true,
+  "artifacts": [
+    {
+      "path": "/root/v4_labs/dados/v41_ciclo/20260910_0726.json",
+      "exists": true,
+      "sha256": "7ce4eba3109b6234cf49217ec4242abbd662ba31e41199ea5ed4272894f9f15d",
+      "bytes": 1764,
+      "fields": {
+        "ts": "20260910_0726",
+        "vertical": "nacional",
+        "item_key": "7ad40e838622f622",
+        "curadoria_estado": "tese_dinamica_aprovada",
+        "redator_returncode": 1,
+        "redator_stderr": "     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/v4_labs/codigo/v4_vertical_redactor_runtime.py\", line 241, in _post_draft\n    content = _paragraphs(article.get(\"texto\"))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/v4_labs/codigo/v4_vertical_redactor_runtime.py\", line 156, in _paragraphs\n    raise RuntimeError(\"v41_body_html_escape_detectado (redator escapou duas vezes a saida)\")\nRuntimeError: v41_body_html_escape_detectado (redator escapou duas vezes a saida)\n",
+        "post_id": null,
+        "status": "redator_falhou",
+        "juiz_qualidade": {}
+      }
+    },
+    {
+      "path": "/root/v4_labs/dados/v41_ciclo/20260909_2325.json",
+      "exists": true,
+      "sha256": "229d6941d699d8d7f93770eb39afad4b8720353c81ec80616db8f6739afd6c4f",
+      "bytes": 1216,
+      "fields": {
+        "ts": "20260909_2325",
+        "vertical": "nacional",
+        "item_key": "7ad40e838622f622",
+        "curadoria_estado": "cluster_inter_vertical:lista_publicados_indisponivel",
+        "status": "sem_tese_ancorada_nao_escreve",
+        "juiz_qualidade": {}
+      }
+    },
+    {
+      "path": "/root/v4_labs/dados/v41_ciclo/20260910_0456.json",
+      "exists": true,
+      "sha256": "f289ef2d257f892ff8d449b6a8fe24547736b9924a080b20089bf52c25f8d14b",
+      "bytes": 1638,
+      "fields": {
+        "ts": "20260910_0456",
+        "vertical": "geopolitica",
+        "item_key": "dad41cd9a7a6ed2d",
+        "curadoria_estado": "cluster_inter_vertical:lista_publicados_indisponivel",
+        "status": "sem_tese_ancorada_nao_escreve",
+        "juiz_qualidade": {}
+      }
+    }
+  ],
+  "runtime": {
+    "path": "/root/v4_labs/codigo/v4_vertical_redactor_runtime.py",
+    "sha256": "d0f0b8da925fc3ffdbb8ecdf0110575cd52842b65291f529cc58b81430fd0603",
+    "functions": [
+      {
+        "name": "_body_markup",
+        "line_start": 100,
+        "line_end": 117,
+        "source": "def _body_markup(value: Any) -> str:\n    \"\"\"Normaliza o corpo sem transformar preferência editorial em bloqueio.\"\"\"\n    text = html.unescape(str(value or \"\"))\n    # V4_FIX_CONTENT_END_20260813: idem _plain — metalinguagem de pipeline não vaza.\n    text = re.sub(r\"<!--\\s*CONTENT\\s*(?:END|START)\\s*\\d*\\s*-->\", \"\", text, flags=re.I)\n    text = re.sub(r\"^\\s*[-–—]*\\s*CONTENT\\s*(?:END|START)\\s*\\d*\\s*[-–—]*\\s*$\", \"\", text, flags=re.I | re.M)\n    text = re.sub(r\"\\s*\\(\\[[a-z0-9.\\-]+\\.[a-z]{2,}\\]\\([^)]+\\)\\)\\s*\", \" \", text, flags=re.I)  # V4_FIX_FONTE_MD_20260815: fonte markdown inline ([dominio](url)) nao vaza\n    text = re.sub(r\" {2,}\", \" \", text)  # pos-strip fonte-md: colapsa espacos duplos\n    text = re.sub(r\"<(?:strong|b)\\b[^>]*>\", \"**\", text, flags=re.I)\n    text = re.sub(r\"</(?:strong|b)>\", \"**\", text, flags=re.I)\n    # ZM_HTML_ESCAPE_20260909 (CL-007 09/09 06:21; 269549 trecho / 269559 corpo\n    # inteiro c/ &lt;em&gt; no draft): o redator manda <em>/<i> REAIS e o re-escape\n    # do _paragraphs virava &lt;em&gt; visivel ao leitor. Converte p/ _ (markdown\n    # de italico), como o <strong> real ja vira **.\n    text = re.sub(r\"<(?:em|i)\\b[^>]*>\", \"_\", text, flags=re.I)\n    text = re.sub(r\"</(?:em|i)>\", \"_\", text, flags=re.I)\n    text = re.sub(r\"</?a\\b[^>]*>\", \"\", text, flags=re.I)\n    return text.strip()"
+      },
+      {
+        "name": "_paragraphs",
+        "line_start": 133,
+        "line_end": 159,
+        "source": "def _paragraphs(value: Any) -> str:\n    raw = _body_markup(value)\n    raw = re.sub(r\"^TEXTO\\s*:?\\s*\", \"\", raw, flags=re.I)\n    blocks = [part.strip() for part in re.split(r\"\\n\\s*\\n\", raw) if part.strip()]\n    if len(blocks) < 3:\n        blocks = [part.strip() for part in re.split(r\"(?<=[.!?])\\s+(?=[A-ZÁÀÂÃÉÊÍÓÔÕÚÇ])\", raw) if part.strip()]\n        blocks = [\" \".join(blocks[i:i + 2]) for i in range(0, len(blocks), 2)]\n    rendered = []\n    for block in blocks:\n        block = re.sub(r\"^#{1,6}\\s*\", \"\", block)\n        wrapped = re.fullmatch(r\"<p\\b[^>]*>(.*?)</p>\", block, flags=re.I | re.S)\n        if wrapped:\n            block = wrapped.group(1).strip()\n        safe = html.escape(block, quote=False)\n        safe = re.sub(r\"\\*\\*(.+?)\\*\\*\", r\"<strong>\\1</strong>\", safe, flags=re.S)\n        safe = re.sub(r\"__(.+?)__\", r\"<strong>\\1</strong>\", safe, flags=re.S)\n        safe = re.sub(r\"_(.+?)_\", r\"<em>\\1</em>\", safe, flags=re.S)  # ZM_HTML_ESCAPE_20260909\n        rendered.append(f\"<p>{safe}</p>\")\n    body = \"\\n\".join(rendered)\n    # ZM_HTML_ESCAPE_20260909 rede 2: se ainda sobrar marca de TAG escapada (ex.\n    # &amp;lt;em&amp;gt; = escape triplo que o unescape 1x nao resolve), RECUSA —\n    # o ciclo trata recusa do redator (nunca vira post, descida de lista).\n    if re.search(r\"&(?:lt|gt);(?:/)?[a-zA-Z]\", body) or \"&amp;lt;\" in body:\n        raise RuntimeError(\"v41_body_html_escape_detectado (redator escapou duas vezes a saida)\")\n    if len(re.sub(r\"<[^>]+>\", \"\", body)) < 900:\n        raise RuntimeError(\"v4_body_too_short\")\n    return body"
+      }
+    ]
+  }
+}

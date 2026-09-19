@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_1833",
+  "ts_brt": "2026-07-25T18:33:56-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_1833\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"HTTP status 0 (site offline) mas o coletor não emitiu alerta. Deveria ter sido classificado como P1 ou P2.\",\n      \"evidencia\": \"http_status: 0, problemas: [], alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"P1 (site offline)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar lógica de alertas para HTTP status 0 (ex.: ceara_digital). Pode ser que o coletor ignore erros de rede sem notificações.\",\n  \"confianca\": 0.95,\n  \""
+}

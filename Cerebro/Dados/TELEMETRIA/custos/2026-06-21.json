@@ -1,0 +1,869 @@
+{
+  "schema_version": "governanca_financeira_mvp0_v0_1",
+  "post_cost_schema_reference": "post_cost_log_v0_1",
+  "generated_at": "2026-06-21T23:07:05.786380-03:00",
+  "periodo": {
+    "inicio": "2026-06-21",
+    "fim": "2026-06-21",
+    "dias": 1
+  },
+  "root": "/root",
+  "fontes": {
+    "custos_jsonl": [
+      "/root/agent_data/banco_custos.jsonl",
+      "/root/agent_data/banco_custos_2026-06.jsonl"
+    ],
+    "api_usage": [
+      "/root/agent_data/governanca_financeira_api_usage.jsonl"
+    ],
+    "transcricoes": [
+      "/root/agent_data/youtube_transcript_stats.jsonl",
+      "/root/agent_data/transkriptor_usage_20260424.json",
+      "/root/agent_data/transkriptor_usage_20260425.json",
+      "/root/agent_data/transkriptor_usage_20260508.json",
+      "/root/agent_data/transkriptor_usage_20260510.json",
+      "/root/agent_data/transkriptor_usage_20260511.json",
+      "/root/agent_data/transkriptor_usage_20260512.json",
+      "/root/agent_data/transkriptor_usage_20260513.json",
+      "/root/agent_data/transkriptor_usage_20260514.json",
+      "/root/agent_data/transkriptor_usage_20260515.json",
+      "/root/agent_data/transkriptor_usage_20260616.json",
+      "/root/agent_data/transkriptor_usage_20260620.json",
+      "/root/agent_data/transkriptor_usage_20260621.json"
+    ],
+    "augusto": [
+      {
+        "path": "/root/agent_data/augusto.log",
+        "size_bytes": 3226476,
+        "mtime": "2026-05-11T11:29:46.875709-03:00"
+      },
+      {
+        "path": "/root/agent_data/augusto_bot.log",
+        "size_bytes": 1886,
+        "mtime": "2026-05-11T09:11:51.703448-03:00"
+      }
+    ]
+  },
+  "qualidade_dados": {
+    "registros_custo": 86710,
+    "linhas_invalidas": 0,
+    "faltantes": [
+      "logs_roteador_llm_dedicados",
+      "conciliacao_cartao"
+    ]
+  },
+  "totais": {
+    "custo_usd": 53.939552,
+    "chamadas": 7768,
+    "tokens_in": 33248599,
+    "tokens_out": 4075622
+  },
+  "por_dia": {
+    "2026-06-21": {
+      "custo_usd": 53.939552,
+      "chamadas": 7768,
+      "tokens_in": 33248599,
+      "tokens_out": 4075622
+    }
+  },
+  "historico_anomalia_relativa": {
+    "2026-06-15": {
+      "custo_usd": 16.539615,
+      "chamadas": 13631,
+      "tokens_in": 27208319,
+      "tokens_out": 3067479
+    },
+    "2026-06-16": {
+      "custo_usd": 26.376297,
+      "chamadas": 13812,
+      "tokens_in": 27179997,
+      "tokens_out": 3769880
+    },
+    "2026-06-17": {
+      "custo_usd": 24.655603,
+      "chamadas": 16718,
+      "tokens_in": 42188975,
+      "tokens_out": 4592249
+    },
+    "2026-06-18": {
+      "custo_usd": 27.03372,
+      "chamadas": 13046,
+      "tokens_in": 51760079,
+      "tokens_out": 5643923
+    },
+    "2026-06-19": {
+      "custo_usd": 24.569016,
+      "chamadas": 11366,
+      "tokens_in": 48125979,
+      "tokens_out": 5041624
+    },
+    "2026-06-20": {
+      "custo_usd": 80.346154,
+      "chamadas": 10369,
+      "tokens_in": 41386950,
+      "tokens_out": 2225792
+    },
+    "2026-06-21": {
+      "custo_usd": 53.939552,
+      "chamadas": 7768,
+      "tokens_in": 33248599,
+      "tokens_out": 4075622
+    }
+  },
+  "por_agente": {
+    "youtube_transcriber_autonomo": {
+      "custo_usd": 23.7784,
+      "chamadas": 12,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "motor_coletor:curadoria": {
+      "custo_usd": 9.608368,
+      "chamadas": 5852,
+      "tokens_in": 25093352,
+      "tokens_out": 2556272
+    },
+    "master_trends_v9_revisor": {
+      "custo_usd": 3.808676,
+      "chamadas": 40,
+      "tokens_in": 277018,
+      "tokens_out": 74011
+    },
+    "motor_auditoria_extra": {
+      "custo_usd": 3.483168,
+      "chamadas": 40,
+      "tokens_in": 1142901,
+      "tokens_out": 14846
+    },
+    "autocura_v4_consenso": {
+      "custo_usd": 2.747289,
+      "chamadas": 679,
+      "tokens_in": 1172761,
+      "tokens_out": 5471
+    },
+    "master_trends_v9_auditor": {
+      "custo_usd": 2.000636,
+      "chamadas": 35,
+      "tokens_in": 271438,
+      "tokens_out": 115659
+    },
+    "motor_fact_check_final": {
+      "custo_usd": 1.863692,
+      "chamadas": 34,
+      "tokens_in": 647191,
+      "tokens_out": 5939
+    },
+    "cafezinho_social_fio": {
+      "custo_usd": 1.021351,
+      "chamadas": 87,
+      "tokens_in": 315478,
+      "tokens_out": 316007
+    },
+    "cafezinho_social_tw": {
+      "custo_usd": 0.854616,
+      "chamadas": 78,
+      "tokens_in": 228910,
+      "tokens_out": 311715
+    },
+    "master_trends_v9": {
+      "custo_usd": 0.791933,
+      "chamadas": 42,
+      "tokens_in": 924351,
+      "tokens_out": 109496
+    },
+    "flavio_revisor_corretor": {
+      "custo_usd": 0.444894,
+      "chamadas": 2,
+      "tokens_in": 124768,
+      "tokens_out": 4706
+    },
+    "Eleicoes Auditor": {
+      "custo_usd": 0.388512,
+      "chamadas": 7,
+      "tokens_in": 44496,
+      "tokens_out": 5416
+    },
+    "tribunal_visual": {
+      "custo_usd": 0.37322,
+      "chamadas": 174,
+      "tokens_in": 367433,
+      "tokens_out": 6948
+    },
+    "curador_social": {
+      "custo_usd": 0.363417,
+      "chamadas": 145,
+      "tokens_in": 442238,
+      "tokens_out": 54880
+    },
+    "cafezinho_social_fb": {
+      "custo_usd": 0.316402,
+      "chamadas": 65,
+      "tokens_in": 232704,
+      "tokens_out": 86034
+    },
+    "fantastico": {
+      "custo_usd": 0.305485,
+      "chamadas": 41,
+      "tokens_in": 247425,
+      "tokens_out": 82844
+    },
+    "flavio_revisor": {
+      "custo_usd": 0.303543,
+      "chamadas": 3,
+      "tokens_in": 94396,
+      "tokens_out": 1357
+    },
+    "cafezinho_social_ig": {
+      "custo_usd": 0.233983,
+      "chamadas": 65,
+      "tokens_in": 201022,
+      "tokens_out": 56356
+    },
+    "motor_publicador_curadoria": {
+      "custo_usd": 0.2107,
+      "chamadas": 42,
+      "tokens_in": 122310,
+      "tokens_out": 65493
+    },
+    "eleicoes2026": {
+      "custo_usd": 0.204529,
+      "chamadas": 14,
+      "tokens_in": 205949,
+      "tokens_out": 41670
+    },
+    "youtube_v2_materializador": {
+      "custo_usd": 0.147719,
+      "chamadas": 15,
+      "tokens_in": 109496,
+      "tokens_out": 39953
+    },
+    "agente_comentarista": {
+      "custo_usd": 0.104479,
+      "chamadas": 93,
+      "tokens_in": 246452,
+      "tokens_out": 33474
+    },
+    "agente_memoria_v9": {
+      "custo_usd": 0.09415,
+      "chamadas": 1,
+      "tokens_in": 340952,
+      "tokens_out": 1903
+    },
+    "minicheck_titulo_corpo": {
+      "custo_usd": 0.09297,
+      "chamadas": 8,
+      "tokens_in": 35594,
+      "tokens_out": 607
+    },
+    "generico": {
+      "custo_usd": 0.051427,
+      "chamadas": 14,
+      "tokens_in": 45345,
+      "tokens_out": 12094
+    },
+    "flavio_redator": {
+      "custo_usd": 0.048925,
+      "chamadas": 4,
+      "tokens_in": 37122,
+      "tokens_out": 13017
+    },
+    "interlink_motor_publicador": {
+      "custo_usd": 0.045787,
+      "chamadas": 16,
+      "tokens_in": 44665,
+      "tokens_out": 9690
+    },
+    "politica_v3:redacao": {
+      "custo_usd": 0.037785,
+      "chamadas": 3,
+      "tokens_in": 32727,
+      "tokens_out": 9034
+    },
+    "gerador_imagem_editorial": {
+      "custo_usd": 0.035,
+      "chamadas": 14,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "interlink_eleicoes": {
+      "custo_usd": 0.026531,
+      "chamadas": 5,
+      "tokens_in": 14587,
+      "tokens_out": 8451
+    },
+    "politica_v3_brutas_plus:brutas_plus_websearch": {
+      "custo_usd": 0.023738,
+      "chamadas": 12,
+      "tokens_in": 34608,
+      "tokens_out": 5342
+    },
+    "politica_v3_brutas_plus:brutas_plus_evidencias": {
+      "custo_usd": 0.018903,
+      "chamadas": 4,
+      "tokens_in": 12744,
+      "tokens_out": 5431
+    },
+    "Fantastico Auditor": {
+      "custo_usd": 0.014394,
+      "chamadas": 13,
+      "tokens_in": 36100,
+      "tokens_out": 1425
+    },
+    "flavio_redator_expansao": {
+      "custo_usd": 0.011669,
+      "chamadas": 1,
+      "tokens_in": 11536,
+      "tokens_out": 2431
+    },
+    "factcheck_qwen_segunda_camada": {
+      "custo_usd": 0.009895,
+      "chamadas": 4,
+      "tokens_in": 5148,
+      "tokens_out": 259
+    },
+    "tematico:AGENTE INFLACAO": {
+      "custo_usd": 0.009675,
+      "chamadas": 1,
+      "tokens_in": 4372,
+      "tokens_out": 3320
+    },
+    "Analytics Auditor": {
+      "custo_usd": 0.009244,
+      "chamadas": 2,
+      "tokens_in": 10228,
+      "tokens_out": 5893
+    },
+    "eleicoes_factcheck_moonshot": {
+      "custo_usd": 0.008388,
+      "chamadas": 6,
+      "tokens_in": 8298,
+      "tokens_out": 30
+    },
+    "eleicoes_auditor_moonshot": {
+      "custo_usd": 0.008027,
+      "chamadas": 7,
+      "tokens_in": 7901,
+      "tokens_out": 42
+    },
+    "politica_v3:tese": {
+      "custo_usd": 0.007065,
+      "chamadas": 1,
+      "tokens_in": 2962,
+      "tokens_out": 2482
+    },
+    "Repetidor_Estatal": {
+      "custo_usd": 0.006874,
+      "chamadas": 1,
+      "tokens_in": 5415,
+      "tokens_out": 1779
+    },
+    "tribunal_visual_crosscheck": {
+      "custo_usd": 0.006341,
+      "chamadas": 66,
+      "tokens_in": 20190,
+      "tokens_out": 113
+    },
+    "publicador_tematicos_AGENTE INFLACAO": {
+      "custo_usd": 0.005,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "analytics_queries": {
+      "custo_usd": 0.003381,
+      "chamadas": 2,
+      "tokens_in": 5646,
+      "tokens_out": 1688
+    },
+    "Repetidor Auditor": {
+      "custo_usd": 0.003262,
+      "chamadas": 1,
+      "tokens_in": 5159,
+      "tokens_out": 1699
+    },
+    "politica_v3_auditoria_final:fact_check": {
+      "custo_usd": 0.002608,
+      "chamadas": 1,
+      "tokens_in": 7176,
+      "tokens_out": 182
+    },
+    "interlink_AGENTE INFLACAO": {
+      "custo_usd": 0.001958,
+      "chamadas": 1,
+      "tokens_in": 2926,
+      "tokens_out": 159
+    },
+    "motor_factcheck_noticia_atual": {
+      "custo_usd": 0.001543,
+      "chamadas": 1,
+      "tokens_in": 5109,
+      "tokens_out": 4
+    },
+    "motor_reciclador": {
+      "custo_usd": 0.0,
+      "chamadas": 3,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "motor_militar": {
+      "custo_usd": 0.0,
+      "chamadas": 2,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "motor_sheinbaum": {
+      "custo_usd": 0.0,
+      "chamadas": 3,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "motor_soberania": {
+      "custo_usd": 0.0,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "motor_latam": {
+      "custo_usd": 0.0,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "motor_crime": {
+      "custo_usd": 0.0,
+      "chamadas": 3,
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  },
+  "por_provider": {
+    "transkriptor": {
+      "custo_usd": 23.7784,
+      "chamadas": 12,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "deepseek": {
+      "custo_usd": 13.998511,
+      "chamadas": 6483,
+      "tokens_in": 28472754,
+      "tokens_out": 3799059
+    },
+    "anthropic": {
+      "custo_usd": 13.501101,
+      "chamadas": 572,
+      "tokens_in": 2980330,
+      "tokens_out": 99795
+    },
+    "openai": {
+      "custo_usd": 1.470622,
+      "chamadas": 27,
+      "tokens_in": 290597,
+      "tokens_out": 108894
+    },
+    "alibaba": {
+      "custo_usd": 1.187858,
+      "chamadas": 351,
+      "tokens_in": 1034159,
+      "tokens_out": 34589
+    },
+    "google": {
+      "custo_usd": 0.354227,
+      "chamadas": 384,
+      "tokens_in": 788762,
+      "tokens_out": 47038
+    },
+    "fal": {
+      "custo_usd": 0.035,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "desconhecido": {
+      "custo_usd": 0.016415,
+      "chamadas": 26,
+      "tokens_in": 16199,
+      "tokens_out": 72
+    },
+    "moonshot": {
+      "custo_usd": 0.016415,
+      "chamadas": 13,
+      "tokens_in": 16199,
+      "tokens_out": 72
+    },
+    "brave": {
+      "custo_usd": 0.01,
+      "chamadas": 2,
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  },
+  "por_modelo": {
+    "transkriptor_url_direto": {
+      "custo_usd": 21.95,
+      "chamadas": 9,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "claude-sonnet-4-6": {
+      "custo_usd": 13.501101,
+      "chamadas": 559,
+      "tokens_in": 2980330,
+      "tokens_out": 99795
+    },
+    "deepseek-v4-flash": {
+      "custo_usd": 9.752147,
+      "chamadas": 5910,
+      "tokens_in": 25531327,
+      "tokens_out": 2598801
+    },
+    "deepseek-v4-pro": {
+      "custo_usd": 4.246364,
+      "chamadas": 573,
+      "tokens_in": 2941427,
+      "tokens_out": 1200258
+    },
+    "transkriptor_via_s3": {
+      "custo_usd": 1.8284,
+      "chamadas": 3,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "gpt-5": {
+      "custo_usd": 1.362888,
+      "chamadas": 21,
+      "tokens_in": 243997,
+      "tokens_out": 105789
+    },
+    "qwen-vl-plus": {
+      "custo_usd": 0.372694,
+      "chamadas": 173,
+      "tokens_in": 365755,
+      "tokens_out": 6939
+    },
+    "gemini-2.5-flash": {
+      "custo_usd": 0.354227,
+      "chamadas": 384,
+      "tokens_in": 788762,
+      "tokens_out": 47038
+    },
+    "qwen-max": {
+      "custo_usd": 0.336845,
+      "chamadas": 48,
+      "tokens_in": 163740,
+      "tokens_out": 11697
+    },
+    "gpt-4o": {
+      "custo_usd": 0.086755,
+      "chamadas": 2,
+      "tokens_in": 26734,
+      "tokens_out": 1992
+    },
+    "qwen-plus": {
+      "custo_usd": 0.070737,
+      "chamadas": 41,
+      "tokens_in": 170462,
+      "tokens_out": 2128
+    },
+    "fal-ai": {
+      "custo_usd": 0.035,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "gpt-4.1": {
+      "custo_usd": 0.020979,
+      "chamadas": 4,
+      "tokens_in": 19866,
+      "tokens_out": 1113
+    },
+    "moonshot-v1-32k": {
+      "custo_usd": 0.016415,
+      "chamadas": 13,
+      "tokens_in": 16199,
+      "tokens_out": 72
+    },
+    "brave-search": {
+      "custo_usd": 0.005,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "wan2.6-t2i": {
+      "custo_usd": 0.0,
+      "chamadas": 13,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "Claude/GPT": {
+      "custo_usd": 0.0,
+      "chamadas": 13,
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  },
+  "por_tarefa": {
+    "transcricao_youtube": {
+      "custo_usd": 23.7784,
+      "chamadas": 12,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    "curadoria": {
+      "custo_usd": 14.424677,
+      "chamadas": 5977,
+      "tokens_in": 26417031,
+      "tokens_out": 2805272
+    },
+    "auditoria": {
+      "custo_usd": 6.018327,
+      "chamadas": 130,
+      "tokens_in": 1609974,
+      "tokens_out": 146094
+    },
+    "outro": {
+      "custo_usd": 5.289455,
+      "chamadas": 1013,
+      "tokens_in": 2510919,
+      "tokens_out": 779463
+    },
+    "fact_check": {
+      "custo_usd": 1.888973,
+      "chamadas": 47,
+      "tokens_in": 686908,
+      "tokens_out": 11285
+    },
+    "draft": {
+      "custo_usd": 1.119249,
+      "chamadas": 216,
+      "tokens_in": 1027619,
+      "tokens_out": 247131
+    },
+    "revisao": {
+      "custo_usd": 0.827155,
+      "chamadas": 17,
+      "tokens_in": 299895,
+      "tokens_out": 27542
+    },
+    "tribunal_visual": {
+      "custo_usd": 0.379561,
+      "chamadas": 240,
+      "tokens_in": 387623,
+      "tokens_out": 7061
+    },
+    "comentario": {
+      "custo_usd": 0.104479,
+      "chamadas": 93,
+      "tokens_in": 246452,
+      "tokens_out": 33474
+    },
+    "interlink": {
+      "custo_usd": 0.074276,
+      "chamadas": 22,
+      "tokens_in": 62178,
+      "tokens_out": 18300
+    },
+    "imagem_geracao": {
+      "custo_usd": 0.035,
+      "chamadas": 1,
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  },
+  "transkriptor": {
+    "invalid_rows": 0,
+    "chamadas": 24,
+    "cache_hits": 0,
+    "custo_usd": 23.7784,
+    "por_metodo": {
+      "transkriptor_url_direto": {
+        "custo_usd": 21.95,
+        "chamadas": 9
+      },
+      "transkriptor_via_s3": {
+        "custo_usd": 1.8284,
+        "chamadas": 3
+      },
+      "desconhecido": {
+        "custo_usd": 0.0,
+        "chamadas": 12
+      }
+    }
+  },
+  "api_usage": {
+    "invalid_rows": 0,
+    "requests": 103,
+    "por_provider": {
+      "alibaba": {
+        "custo_usd": 0.407582,
+        "chamadas": 89,
+        "tokens_in": 334202,
+        "tokens_out": 13825
+      },
+      "moonshot": {
+        "custo_usd": 0.016415,
+        "chamadas": 13,
+        "tokens_in": 16199,
+        "tokens_out": 72
+      },
+      "brave": {
+        "custo_usd": 0.005,
+        "chamadas": 1,
+        "tokens_in": 0,
+        "tokens_out": 0
+      }
+    },
+    "por_servico": {
+      "chat-completions": {
+        "custo_usd": 0.423997,
+        "chamadas": 102,
+        "tokens_in": 350401,
+        "tokens_out": 13897
+      },
+      "brave-search": {
+        "custo_usd": 0.005,
+        "chamadas": 1,
+        "tokens_in": 0,
+        "tokens_out": 0
+      }
+    }
+  },
+  "augusto": {
+    "arquivos": [
+      {
+        "path": "/root/agent_data/augusto.log",
+        "size_bytes": 3226476,
+        "mtime": "2026-05-11T11:29:46.875709-03:00"
+      },
+      {
+        "path": "/root/agent_data/augusto_bot.log",
+        "size_bytes": 1886,
+        "mtime": "2026-05-11T09:11:51.703448-03:00"
+      }
+    ],
+    "observacao": "inventario local; conteudo nao interpretado no MVP 0"
+  },
+  "anomalias": [
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "motor_coletor:curadoria",
+      "custo_usd": 9.608368
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "youtube_transcriber_autonomo",
+      "custo_usd": 23.7784
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "cafezinho_social_fio",
+      "custo_usd": 1.021351
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "autocura_v4_consenso",
+      "custo_usd": 2.747289
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "motor_auditoria_extra",
+      "custo_usd": 3.483168
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "master_trends_v9_revisor",
+      "custo_usd": 3.808676
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "master_trends_v9_auditor",
+      "custo_usd": 2.000636
+    },
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "motor_fact_check_final",
+      "custo_usd": 1.863692
+    },
+    {
+      "tipo": "provider_custo_alto",
+      "provider": "deepseek",
+      "custo_usd": 13.998511
+    },
+    {
+      "tipo": "provider_custo_alto",
+      "provider": "transkriptor",
+      "custo_usd": 23.7784
+    },
+    {
+      "tipo": "provider_custo_alto",
+      "provider": "anthropic",
+      "custo_usd": 13.501101
+    },
+    {
+      "tipo": "provider_sem_log_uso",
+      "provider": "zhipu",
+      "billing_mode": "prepaid_credit",
+      "observacao": "Credito inicial informado em 2026-05-06 23:41 BRT; leitura por painel/API ainda nao automatizada."
+    },
+    {
+      "tipo": "custo_diario_relativo_alto",
+      "data": "2026-06-21",
+      "custo_usd": 53.939552,
+      "media_historica_usd": 33.253401,
+      "multiplicador": 1.62,
+      "janela_historica_dias": 6
+    }
+  ],
+  "governanca_mvp1": {
+    "policy_path": "/root/config/governanca_financeira_mvp1.json",
+    "deepseek_curadoria_enabled": false,
+    "deepseek_curadoria_dry_run": true,
+    "relative_threshold_multiplier": 1.5,
+    "provedores_monitorados": {
+      "zhipu": {
+        "display": "Zhipu AI / GLM",
+        "billing_mode": "prepaid_credit",
+        "custo_usd": 0.0,
+        "chamadas": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "missing_usage_log": true,
+        "painel": "https://z.ai/manage-apikey/billing",
+        "observacao": "Credito inicial informado em 2026-05-06 23:41 BRT; leitura por painel/API ainda nao automatizada.",
+        "known_credit_usd": 3.0,
+        "credito_restante_estimado_usd": 3.0
+      },
+      "alibaba": {
+        "display": "Alibaba Cloud / Qwen",
+        "billing_mode": "pay_as_you_go",
+        "custo_usd": 1.187858,
+        "chamadas": 351,
+        "tokens_in": 1034159,
+        "tokens_out": 34589,
+        "missing_usage_log": false,
+        "painel": "usercenter2-intl.aliyun.com/billing/#/payment/list",
+        "observacao": "Cartao validado em 2026-05-06 23:59 BRT; monitorar para evitar surpresa em fatura pos-paga."
+      },
+      "brave": {
+        "display": "Brave Search API",
+        "billing_mode": "request_quota",
+        "custo_usd": 0.01,
+        "chamadas": 2,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "missing_usage_log": false,
+        "painel": null,
+        "observacao": "BRAVE_API_KEY ativada em 2026-05-07 00:19 BRT; consumo mensal ainda sem log dedicado local.",
+        "monthly_free_requests": 2000
+      }
+    }
+  },
+  "restricoes_mvp0": {
+    "read_only": true,
+    "sem_rede": true,
+    "sem_login": true,
+    "sem_rpa": true,
+    "sem_downgrade_automatico": true,
+    "sem_teste_pago": true
+  }
+}

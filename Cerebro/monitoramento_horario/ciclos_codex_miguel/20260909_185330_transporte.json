@@ -1,0 +1,71 @@
+{
+  "ref": "XM-20260909-018",
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_185330_ronda.md",
+  "evidence": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_185330_evidencias.json",
+  "transport_file": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_185330_transporte.json",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_185330_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_185330_ronda.md"
+  ],
+  "commit": "20fbedb1e5a964ad44a441d5aceb35227cb9c13b",
+  "same_round": true,
+  "nyc": {
+    "timestamp_brt": "2026-09-09T18:50:11.692194-03:00",
+    "command": "git ls-remote nyc refs/heads/main",
+    "exit_code": 0,
+    "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_of_head_rc": 1,
+    "action": "HOLD_NYC_NON_FF; sem push forçado"
+  },
+  "timestamp": "2026-09-09T18:53:30.880782-03:00",
+  "checks": {
+    "utf8_without_bom": true,
+    "append_only": true,
+    "staged_paths_exact": true,
+    "diff_check_passed": true,
+    "rounds_executed": 1,
+    "wordpress_calls": 0,
+    "failover_laura": "DESENHADO_NAO_ATIVO",
+    "preexisting_untracked_preserved": true
+  },
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   12d70c59e..20fbedb1e  main -> main\n"
+  },
+  "remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "20fbedb1e5a964ad44a441d5aceb35227cb9c13b\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "delivery_confirmed": true,
+  "closed_at": "2026-09-09T18:54:21.521970-03:00",
+  "transport_limit": "GitHub confirmado; NYC disponível mas divergente, não forçado; Drive/Tencent não sondados. Exatamente uma ronda.",
+  "closure_pull": {
+    "command": [
+      "git",
+      "pull",
+      "--ff-only",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  }
+}

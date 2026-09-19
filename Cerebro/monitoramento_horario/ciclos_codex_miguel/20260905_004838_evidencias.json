@@ -1,0 +1,46 @@
+{
+  "ref": "XM-20260905_004838-HOLD",
+  "captured_brt": "2026-09-05T00:48:38.892401-03:00",
+  "head": {
+    "exit_code": 0,
+    "stdout": "7fc0898f89065a061bbfbe80ddae7c3bb7588c9b\n",
+    "stderr": ""
+  },
+  "status_before_receipt": {
+    "exit_code": 0,
+    "stdout": "UU cerebro/Foruns/ponte_laura_completa/de_dell.md\nM  cerebro/Foruns/ponte_laura_completa/escuta/conversa_48h.jsonl\nM  cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md\nM  cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md\nA  cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_0019_evidencias.json\nA  cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_0019_ronda.md\n",
+    "stderr": ""
+  },
+  "unmerged": {
+    "exit_code": 0,
+    "stdout": "cerebro/Foruns/ponte_laura_completa/de_dell.md\n",
+    "stderr": ""
+  },
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 128,
+    "error": "Pulling is not possible because you have unmerged files."
+  },
+  "sources": {
+    "LOOP_MIGUEL_CODEX.md": {
+      "bytes": 5018,
+      "sha256": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a"
+    },
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": {
+      "bytes": 6955,
+      "sha256": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb"
+    },
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": {
+      "bytes": 4802,
+      "sha256": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280"
+    },
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_0019_ronda.md": {
+      "bytes": 3616,
+      "sha256": "1de5e46152cb9662bcde707021eb11b022f8f16f041397c7c1e3572bdbf6a9ba"
+    },
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_0019_evidencias.json": {
+      "bytes": 1930,
+      "sha256": "a7556ee2c3712909fc68232a7b175fbb3b9cf8fd9b3a50a970ad9c8e359617d5"
+    }
+  }
+}

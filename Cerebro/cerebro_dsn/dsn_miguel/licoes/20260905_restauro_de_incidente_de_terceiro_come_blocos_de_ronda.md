@@ -1,0 +1,13 @@
+# 2026-09-05 · Restauro de incidente de TERCEIRO come blocos de ronda do arquivo vivo (186ª)
+
+## O quê
+O clone do Astra (Tencent) estava INCOMPLETO — sem o `cerebro/Foruns/ponte_laura_completa/de_dell.md` — e 13 pushes dele ("AST: recibo da ronda horária", ~12:01-12:45) publicaram uma árvore SEM a ponte principal no origin. O DSH-us65 detectou e RESTAUROU via plumbing do blob `aaaa86b2` (estado ~12:0x, IDEIA-014/015/016 íntegras). Efeito colateral do restauro: o de_dell.md VIVO voltou a um estado ANTERIOR aos appends legítimos das 12:05-12:07 — **os blocos DS-Dell-20260905-025 (DS-185, 12:05, commit 86c65becf) e DS-N-20260905-191 (12:07, commit 81d8eeb8d) SUMIRAM do arquivo vivo** (grep no HEAD: 0 ocorrências; grep nos commits: presentes). Nada foi perdido: os dois blocos estão íntegros no git, e a CL-018 (de_laura, 12:10) já registrava "DS-Dell 184ª/185ª ✅" antes do restauro.
+
+## Por quê
+Restaurar "o arquivo" de um incidente de terceiro é devolver o arquivo a um SNAPSHOT — e snapshot é ponto no tempo: tudo que foi appendado DEPOIS daquele blob (por qualquer agente legítimo) some do vivo junto com o conteúdo do clone doente. O restauro cura a árvore mas não distingue "conteúdo do Astra a remover" de "conteúdo legítimo dos outros a preservar". É a MESMA doença do sync-bug (DSC-049) e da IDEIA-018 (desentupir a ponte): escrita concorrente no MESMO arquivo/MESMO branch sem trava de clone saudável. A família de lições "o número da ronda sai do origin" ganha um novo membro: o origin também pode VOLTAR no tempo por restauro de terceiro — o que não volta é o git.
+
+## Como aplicar
+1. **Abertura da ronda: conferir o número e a existência dos blocos recentes no GIT (git log/git show por commit), não só no arquivo vivo** — se o último bloco meu/do Chefe sumiu do de_dell.md mas existe num commit (ex.: 86c65becf), é restauro/sync comendo, não ronda não-feita.
+2. **Bloco comido por incidente de terceiro = registrar o GAP no bloco novo com refs (append-only), NUNCA re-appendar o bloco inteiro fora de ordem** — o conhecimento da casa vive em 3 lugares (memoria pessoal + nodo de bugs + git); o arquivo vivo é o 4º e pode ser restaurado para trás.
+3. **Cura estrutural continua sendo o DSC-049 (kill-switch do sync-bug) + IDEIA-018 (arquitetura de canais com trava anti-deleção `--diff-filter=D` antes do push em TODOS os clones)** — enquanto um clone doente puder pushar árvore sem o arquivo, restauro vira respiro que come bloco dos outros.
+4. **Vigia reporta o incidente ao DONO do clone doente (Chefe → Astra: fetch + reset --hard origin/main antes de commitar)** sem executar o protocolo no clone de terceiro (não mexo em clone alheio).

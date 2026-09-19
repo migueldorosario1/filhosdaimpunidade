@@ -1,0 +1,153 @@
+{
+  "_doc": "Contrato V4 para imagem destacada: banco de midia, direitos, avaliacao visual e selecao auditavel.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+    "sem_imagem_hardcoded_no_produtor": true,
+    "produtor_nao_busca_midia_bruta": true,
+    "publicador_usa_apenas_midia_auditada": true,
+    "direitos_obrigatorios": true,
+    "pessoa_do_titulo_deve_aparecer_grande_central": true,
+    "avaliacao_visual_obrigatoria_para_pessoa": true,
+    "metadados_nao_bastam_para_pessoa": true,
+    "preferir_acervo_auditado_antes_de_busca_externa": true,
+    "frame_visual_da_curadoria_obrigatorio_em_editoria_nobre": true
+  },
+  "stores": {
+    "candidate_dir": "agent_data/v4/media/candidates",
+    "audit_dir": "agent_data/v4/media/audited",
+    "decision_dir": "agent_data/v4/media/decisions",
+    "quarantine_dir": "agent_data/v4/media/quarantine"
+  },
+  "sources": [
+    {
+      "name": "ouro_sqlite",
+      "enabled": true,
+      "type": "sqlite",
+      "path_env": "BANCO_MIDIA_OURO_DB",
+      "fallback_path": "/root/agent_data/banco_midia_ouro_v3/banco_midia_ouro_v3.db",
+      "trust_tier": "alto_se_auditado"
+    },
+    {
+      "name": "biblioteca_editorial",
+      "enabled": true,
+      "type": "http_local",
+      "base_url_env": "BIBLIOTECA_EDITORIAL_URL",
+      "trust_tier": "alto_se_online"
+    },
+    {
+      "name": "wordpress_media",
+      "enabled": true,
+      "type": "wordpress_db_or_api",
+      "trust_tier": "medio_requer_revalidacao"
+    },
+    {
+      "name": "r2_catalog",
+      "enabled": true,
+      "type": "catalog",
+      "trust_tier": "medio_requer_revalidacao"
+    },
+    {
+      "name": "flickr_candidates",
+      "enabled": false,
+      "type": "external_search",
+      "trust_tier": "baixo_requer_vision_direitos"
+    }
+  ],
+  "candidate_required_fields": [
+    "image_id",
+    "source",
+    "url",
+    "title",
+    "credit",
+    "license",
+    "rights_status",
+    "width",
+    "height",
+    "entity",
+    "score"
+  ],
+  "rights": {
+    "accepted_statuses": [
+      "licenca_confirmada",
+      "fonte_oficial",
+      "fonte_rastreavel",
+      "licenca_do_banco_legado"
+    ],
+    "credit_required": true,
+    "license_required": true,
+    "source_url_required": true
+  },
+  "deterministic_filters": {
+    "min_width": 640,
+    "min_height": 360,
+    "min_aspect_ratio": 1.2,
+    "max_aspect_ratio": 2.4,
+    "reject_url_patterns": [
+      "thumb",
+      "thumbnail",
+      "150x150",
+      "120x120",
+      "avatar",
+      "logo"
+    ],
+    "reject_content_types": [
+      "image/svg+xml",
+      "application/pdf"
+    ],
+    "person_min_score": 70,
+    "generic_min_score": 55
+  },
+  "vision": {
+    "provider": "gemini",
+    "function": "tribunal_visual",
+    "mode_default": "mock",
+    "real_calls_enabled": false,
+    "required_for_person": true,
+    "prompt_requirements": [
+      "confirmar se a entidade principal aparece",
+      "confirmar se a pessoa esta grande e central",
+      "rejeitar multidao generica quando a materia pede pessoa",
+      "rejeitar print de TV, documento, montagem e miniatura para pessoa",
+      "retornar confidence, reason_class e safe_to_publish"
+    ],
+    "accepted_reason_classes": [
+      "person_central",
+      "institutional_clear",
+      "theme_clear"
+    ]
+  },
+  "selection": {
+    "input_from_curadoria": {
+      "required_fields": [
+        "curadoria_id",
+        "frame_visual.entidade_principal",
+        "frame_visual.conflito_visual",
+        "frame_visual.evitar",
+        "frame_visual.prioridade"
+      ]
+    },
+    "prefer_sources": [
+      "ouro_sqlite",
+      "biblioteca_editorial",
+      "wordpress_media",
+      "r2_catalog",
+      "flickr_candidates"
+    ],
+    "min_final_score": 70,
+    "tie_breakers": [
+      "higher_visual_confidence",
+      "higher_score",
+      "better_rights_status",
+      "source_priority"
+    ]
+  },
+  "failure_policy": {
+    "no_audited_image_blocks_publication": true,
+    "candidate_collection_failure_does_not_block_text": true,
+    "vision_failure_for_person_blocks_image_approval": true,
+    "manual_editor_override_allowed": true,
+    "manual_override_requires_reason": true
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: A expansao de data centers para inteligencia artificial pressiona energia, agua, redes de transmissao e politica industrial no Brasil.. Tese escolhida: Quando os fatos auditados sobre infraestrutura de IA no Brasil saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a consequencia concreta do fato, nao apenas a declaracao publica. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Data centers recolocam energia, IA e soberania no centro da politica industrial.",
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica",
+    "evidencias_ref": [
+      "fatos_travados:IBGE",
+      "fatos_travados:setor_produtivo"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+    "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+    "tipo": "economica"
+  },
+  "contradicao_central": "a consequencia concreta do fato, nao apenas a declaracao publica",
+  "curador_modelo": "mock-curador-v4",
+  "curadoria_id": "cur_2c7192474f372c6d",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "fato_novo": "A expansao de data centers para inteligencia artificial pressiona energia, agua, redes de transmissao e politica industrial no Brasil.",
+  "fatos_travados": [
+    {
+      "fato": "A expansao de data centers para inteligencia artificial pressiona energia, agua, redes de transmissao e politica industrial no Brasil.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:data_centers_ia_soberania"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta conecta infraestrutura digital, soberania tecnologica e disputa por valor agregado: sem planejamento publico, a IA pode consumir recursos locais e exportar renda para plataformas estrangeiras; com planejamento, pode fortalecer setor produtivo, pesquisa nacional e servicos de alto valor.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:data_centers_ia_soberania"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O texto deve tratar data centers como infraestrutura material, nao como abstracao de software, preservando cautela sobre investimentos ainda anunciados e nao executados.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:data_centers_ia_soberania"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a consequencia concreta do fato, nao apenas a declaracao publica",
+    "entidade_principal": "infraestrutura de IA no Brasil",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "d9e85ec720803e54eee729e8719a0b23f268ec1cc6320edab52b8ecb6422c04c",
+  "item_id": "v4_real_006",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "acervo_local_tecnologia",
+      "referencias_setor_eletrico"
+    ],
+    "resumo_consenso": "A leitura corrente costuma tratar data centers de IA como noticia de investimento, sem discutir energia, soberania e valor agregado.",
+    "timestamp_brt": "2026-07-10T10:45:00-03:00"
+  },
+  "manifesto_curadoria": {
+    "agent": "curador",
+    "contract": "contratos/v4_curadoria_tese_v1.json",
+    "issues": [],
+    "leitura_corrente_timestamped": true,
+    "ok": true,
+    "teses_candidatas": 3
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de infraestrutura de IA no Brasil revela a consequencia concreta do fato, nao apenas a declaracao publica.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "A expansao de data centers para inteligencia artificial pressiona energia, agua, redes de transmissao e politica industrial no Brasil. A pauta conecta infraestrutura digital, soberania tecnologica e disputa por valor agregado: sem planejamento publico, a IA pode consumir recursos locais e exportar renda para plataformas estrangeiras; com planejamento, pode fortalecer setor produtivo, pesquisa nacional e servicos de alto valor. O texto deve tratar data centers como infraestrutura material, nao como abstracao de software, preservando cautela sobre investimentos ainda anunciados e nao executados.",
+    "primary_entity": "infraestrutura de IA no Brasil",
+    "source_status": "auditado_fixture",
+    "titulo": "Data centers recolocam energia, IA e soberania no centro da politica industrial"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+      "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando os fatos auditados sobre infraestrutura de IA no Brasil saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-10T12:04:08.783316-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: USTR, setor produtivo",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

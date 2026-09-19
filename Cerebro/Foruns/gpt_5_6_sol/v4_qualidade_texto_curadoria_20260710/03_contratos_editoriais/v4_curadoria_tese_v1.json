@@ -1,0 +1,239 @@
+{
+  "_doc": "Contrato canonico V4 para curadoria de tese. A curadoria decide o que a materia revela; a producao decide como a materia respira.",
+  "_version": "v1",
+  "_status": "fase_1_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+    "diretrizes_externas": true,
+    "sem_hardcode_editorial_no_agente": true,
+    "curadoria_e_camada_real": true,
+    "produtor_nao_le_auditado_cru_em_editoria_nobre": true,
+    "curador_diferente_de_redator": true,
+    "imagem_le_frame_visual_da_curadoria": true,
+    "schema_enxuto": true,
+    "campo_que_nao_muda_texto_nao_vira_discursivo": true,
+    "leitura_corrente_timestamped_obrigatoria": true,
+    "advogado_do_obvio_fase_1": true,
+    "feedback_editorial_como_caso": true
+  },
+  "required_fields": [
+    "schema_version",
+    "curadoria_id",
+    "item_id",
+    "editoria",
+    "timestamp_brt",
+    "curador_modelo",
+    "fato_novo",
+    "fatos_travados",
+    "consequencia_material",
+    "leitura_corrente_timestamped",
+    "contradicao_central",
+    "teses_candidatas",
+    "tese_escolhida_idx",
+    "promessa_ao_leitor",
+    "briefing_produtor",
+    "frame_visual",
+    "collection_request",
+    "validacoes"
+  ],
+  "leitura_corrente_timestamped": {
+    "required_fields": [
+      "fonte",
+      "timestamp_brt",
+      "resumo_consenso",
+      "fontes_consultadas"
+    ],
+    "fonte_enum": [
+      "manual_editor",
+      "brave_api",
+      "outra_api"
+    ],
+    "aliases_aceitos_na_entrada": {
+      "source": "fonte",
+      "manual_timestamped": "manual_editor",
+      "brave": "brave_api"
+    },
+    "fase_1": {
+      "manual_editor_allowed_only_for": [
+        "dry_run",
+        "dry_run_ab_261439"
+      ],
+      "publicacao_real_exige_fonte_nao_manual": true
+    }
+  },
+  "fatos_travados": {
+    "min_items": 2,
+    "required_fields": [
+      "idx",
+      "fato",
+      "fonte_ref",
+      "obrigatorio_no_texto"
+    ],
+    "produtor_deve_cobrir": true
+  },
+  "consequencia_material": {
+    "required_fields": [
+      "tipo",
+      "quem_ganha",
+      "quem_perde",
+      "descricao",
+      "evidencias_ref",
+      "nivel_concretude"
+    ],
+    "tipo_enum": [
+      "economica",
+      "eleitoral",
+      "institucional",
+      "tecnologica",
+      "economica_eleitoral",
+      "soberania"
+    ],
+    "nivel_concretude_min": 3,
+    "bloqueia_generico": true
+  },
+  "teses_candidatas": {
+    "min_items": 3,
+    "required_fields": [
+      "idx",
+      "tese",
+      "quem_ganha",
+      "quem_perde",
+      "evidencias_ref",
+      "risco_editorial",
+      "status",
+      "motivo_rejeicao"
+    ],
+    "status_enum": [
+      "escolhida",
+      "rejeitada"
+    ],
+    "exactly_one_escolhida": true
+  },
+  "frame_visual": {
+    "required_fields": [
+      "entidade_principal",
+      "conflito_visual",
+      "evitar",
+      "prioridade"
+    ],
+    "prioridade_enum": [
+      "pessoa",
+      "instituicao",
+      "documento",
+      "setor_produtivo",
+      "infraestrutura"
+    ]
+  },
+  "validacoes": {
+    "advogado_do_obvio": {
+      "strategy": "lexical_semantic_phase_2",
+      "required_concrete_anchors": [
+        "tarifa",
+        "USTR",
+        "Pix",
+        "Trump",
+        "Washington",
+        "soberania",
+        "setor produtivo",
+        "exportador",
+        "eleicao"
+      ],
+      "reject_if_only_generic_terms": [
+        "disputa",
+        "narrativa",
+        "consequencia material",
+        "leitura do caso",
+        "campos opostos"
+      ]
+    },
+    "advogado_do_obvio_status_enum": [
+      "aprovada",
+      "rejeitada"
+    ],
+    "checklist_required": [
+      "fatos_travados",
+      "consequencia_material",
+      "angulo_diferente_do_consenso",
+      "risco_juridico_revisado",
+      "teses_distintas",
+      "promessa_clara"
+    ],
+    "anti_eco_template": {
+      "enabled": true,
+      "blocked_prefixes": [
+        "Material auditado indica novo tratamento editorial para:"
+      ],
+      "applies_to": [
+        "fato_novo",
+        "contradicao_central",
+        "tese_escolhida"
+      ]
+    }
+  },
+  "collection_request": {
+    "required_fields": [
+      "status",
+      "reason",
+      "queries",
+      "required_before"
+    ],
+    "status_enum": [
+      "none",
+      "resolved",
+      "recommended",
+      "required"
+    ],
+    "required_before_enum": [
+      "none",
+      "shadow_redacao",
+      "redator_real_llm",
+      "publicacao_real"
+    ],
+    "semantics": {
+      "none": "nao bloqueia",
+      "resolved": "pendencia encerrada com evidencia ou decisao editorial registrada",
+      "recommended": "nao bloqueia etapas anteriores, mas vira bloqueio no estagio indicado por required_before",
+      "required": "bloqueia imediatamente no estagio indicado por required_before e nas etapas posteriores",
+      "policy_fase4_auditfix": "recommended e required compartilham o mesmo gate mecanico por estagio; a diferenca atual e editorial/semantica: recommended indica pendencia prudencial, required indica pendencia forte. Qualquer simplificacao futura deve passar pelo forum antes de producao real."
+    },
+    "max_iterations_fase_2": 1
+  },
+  "modo_experimento": {
+    "permite_producao_sem_curadoria_id": true,
+    "allowed_only_when": {
+      "mode": "dry_run",
+      "external_publish": false,
+      "real_wordpress_draft": false,
+      "receipt_logged": true
+    },
+    "forbidden_when": [
+      "real",
+      "draft_wordpress",
+      "pending_wordpress",
+      "publish_wordpress"
+    ]
+  },
+  "routing_constraints": {
+    "curador_deve_ser_diferente_do_redator": true,
+    "vertical_sensitive_defaults": {
+      "v4_politica_economia": {
+        "disallowed_default_curator_families": [
+          "claude_solene",
+          "chineses_economicos_sem_shadow_aprovado"
+        ],
+        "manual_override_allowed": true,
+        "manual_override_requires_reason": true
+      }
+    }
+  },
+  "ab_experiments": {
+    "v4_real_001_261439": {
+      "enabled": true,
+      "mode": "dry_run_ab_261439",
+      "variant_a_may_skip_curadoria_id": true,
+      "variant_b_requires_curadoria_id": true,
+      "blind_review_required": true,
+      "n_equals_1_is_smoke_test_only": true
+    }
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "schema_version": "governanca_financeira_mvp0_v0_1",
+  "post_cost_schema_reference": "post_cost_log_v0_1",
+  "generated_at": "2026-07-05T07:07:05.772558-03:00",
+  "periodo": {
+    "inicio": "2026-07-05",
+    "fim": "2026-07-05",
+    "dias": 1
+  },
+  "root": "/root",
+  "fontes": {
+    "custos_jsonl": [
+      "/root/agent_data/banco_custos.jsonl",
+      "/root/agent_data/banco_custos_2026-07.jsonl"
+    ],
+    "api_usage": [
+      "/root/agent_data/governanca_financeira_api_usage.jsonl"
+    ],
+    "transcricoes": [
+      "/root/agent_data/youtube_transcript_stats.jsonl",
+      "/root/agent_data/transkriptor_usage_20260424.json",
+      "/root/agent_data/transkriptor_usage_20260425.json",
+      "/root/agent_data/transkriptor_usage_20260508.json",
+      "/root/agent_data/transkriptor_usage_20260510.json",
+      "/root/agent_data/transkriptor_usage_20260511.json",
+      "/root/agent_data/transkriptor_usage_20260512.json",
+      "/root/agent_data/transkriptor_usage_20260513.json",
+      "/root/agent_data/transkriptor_usage_20260514.json",
+      "/root/agent_data/transkriptor_usage_20260515.json",
+      "/root/agent_data/transkriptor_usage_20260616.json",
+      "/root/agent_data/transkriptor_usage_20260620.json",
+      "/root/agent_data/transkriptor_usage_20260621.json",
+      "/root/agent_data/transkriptor_usage_20260622.json",
+      "/root/agent_data/transkriptor_usage_20260623.json",
+      "/root/agent_data/transkriptor_usage_20260624.json",
+      "/root/agent_data/transkriptor_usage_20260625.json",
+      "/root/agent_data/transkriptor_usage_20260626.json",
+      "/root/agent_data/transkriptor_usage_20260627.json",
+      "/root/agent_data/transkriptor_usage_20260628.json",
+      "/root/agent_data/transkriptor_usage_20260629.json"
+    ],
+    "augusto": [
+      {
+        "path": "/root/agent_data/augusto.log",
+        "size_bytes": 121,
+        "mtime": "2026-04-13T01:18:45.382107-03:00"
+      },
+      {
+        "path": "/root/agent_data/augusto_bot.log",
+        "size_bytes": 575,
+        "mtime": "2026-04-13T01:18:45.411107-03:00"
+      },
+      {
+        "path": "/root/augusto.log",
+        "size_bytes": 324,
+        "mtime": "2026-04-22T07:21:01.655654-03:00"
+      }
+    ]
+  },
+  "qualidade_dados": {
+    "registros_custo": 37416,
+    "linhas_invalidas": 0,
+    "faltantes": [
+      "logs_roteador_llm_dedicados",
+      "conciliacao_cartao"
+    ]
+  },
+  "totais": {
+    "custo_usd": 6.567473,
+    "chamadas": 3429,
+    "tokens_in": 14471527,
+    "tokens_out": 153999
+  },
+  "por_dia": {
+    "2026-07-05": {
+      "custo_usd": 6.567473,
+      "chamadas": 3429,
+      "tokens_in": 14471527,
+      "tokens_out": 153999
+    }
+  },
+  "historico_anomalia_relativa": {
+    "2026-07-01": {
+      "custo_usd": 6.373504,
+      "chamadas": 3361,
+      "tokens_in": 13039832,
+      "tokens_out": 1342651
+    },
+    "2026-07-02": {
+      "custo_usd": 19.89835,
+      "chamadas": 10452,
+      "tokens_in": 40666606,
+      "tokens_out": 2819406
+    },
+    "2026-07-03": {
+      "custo_usd": 21.565588,
+      "chamadas": 10842,
+      "tokens_in": 43063036,
+      "tokens_out": 1375579
+    },
+    "2026-07-04": {
+      "custo_usd": 20.179491,
+      "chamadas": 9332,
+      "tokens_in": 38206564,
+      "tokens_out": 568082
+    },
+    "2026-07-05": {
+      "custo_usd": 6.567473,
+      "chamadas": 3429,
+      "tokens_in": 14471527,
+      "tokens_out": 153999
+    }
+  },
+  "por_agente": {
+    "motor_coletor:curadoria": {
+      "custo_usd": 5.912203,
+      "chamadas": 3383,
+      "tokens_in": 14238046,
+      "tokens_out": 117657
+    },
+    "agente_comentarista": {
+      "custo_usd": 0.467506,
+      "chamadas": 45,
+      "tokens_in": 108590,
+      "tokens_out": 33177
+    },
+    "agente_memoria_v9": {
+      "custo_usd": 0.187764,
+      "chamadas": 1,
+      "tokens_in": 124891,
+      "tokens_out": 3165
+    }
+  },
+  "por_provider": {
+    "alibaba": {
+      "custo_usd": 11.644066,
+      "chamadas": 6746,
+      "tokens_in": 28406432,
+      "tokens_out": 234694
+    },
+    "openai": {
+      "custo_usd": 0.74544,
+      "chamadas": 56,
+      "tokens_in": 268311,
+      "tokens_out": 36652
+    }
+  },
+  "por_modelo": {
+    "qwen-plus": {
+      "custo_usd": 5.822033,
+      "chamadas": 3373,
+      "tokens_in": 14203216,
+      "tokens_out": 117347
+    },
+    "gpt-5-mini": {
+      "custo_usd": 0.65527,
+      "chamadas": 46,
+      "tokens_in": 233481,
+      "tokens_out": 36342
+    },
+    "gpt-4o-mini": {
+      "custo_usd": 0.09017,
+      "chamadas": 10,
+      "tokens_in": 34830,
+      "tokens_out": 310
+    }
+  },
+  "por_tarefa": {
+    "curadoria": {
+      "custo_usd": 5.912203,
+      "chamadas": 3383,
+      "tokens_in": 14238046,
+      "tokens_out": 117657
+    },
+    "comentario": {
+      "custo_usd": 0.467506,
+      "chamadas": 45,
+      "tokens_in": 108590,
+      "tokens_out": 33177
+    },
+    "outro": {
+      "custo_usd": 0.187764,
+      "chamadas": 1,
+      "tokens_in": 124891,
+      "tokens_out": 3165
+    }
+  },
+  "transkriptor": {
+    "invalid_rows": 0,
+    "chamadas": 20,
+    "cache_hits": 0,
+    "custo_usd": 0.0,
+    "por_metodo": {
+      "desconhecido": {
+        "custo_usd": 0.0,
+        "chamadas": 20
+      }
+    }
+  },
+  "api_usage": {
+    "invalid_rows": 0,
+    "requests": 3373,
+    "por_provider": {
+      "alibaba": {
+        "custo_usd": 5.822033,
+        "chamadas": 3373,
+        "tokens_in": 14203216,
+        "tokens_out": 117347
+      }
+    },
+    "por_servico": {
+      "chat-completions": {
+        "custo_usd": 5.822033,
+        "chamadas": 3373,
+        "tokens_in": 14203216,
+        "tokens_out": 117347
+      }
+    }
+  },
+  "augusto": {
+    "arquivos": [
+      {
+        "path": "/root/agent_data/augusto.log",
+        "size_bytes": 121,
+        "mtime": "2026-04-13T01:18:45.382107-03:00"
+      },
+      {
+        "path": "/root/agent_data/augusto_bot.log",
+        "size_bytes": 575,
+        "mtime": "2026-04-13T01:18:45.411107-03:00"
+      },
+      {
+        "path": "/root/augusto.log",
+        "size_bytes": 324,
+        "mtime": "2026-04-22T07:21:01.655654-03:00"
+      }
+    ],
+    "observacao": "inventario local; conteudo nao interpretado no MVP 0"
+  },
+  "anomalias": [
+    {
+      "tipo": "agente_custo_alto",
+      "agente": "motor_coletor:curadoria",
+      "custo_usd": 5.912203
+    },
+    {
+      "tipo": "provider_custo_alto",
+      "provider": "alibaba",
+      "custo_usd": 11.644066
+    },
+    {
+      "tipo": "provider_sem_log_uso",
+      "provider": "zhipu",
+      "billing_mode": "prepaid_credit",
+      "observacao": "Credito inicial informado em 2026-05-06 23:41 BRT; leitura por painel/API ainda nao automatizada."
+    },
+    {
+      "tipo": "provider_sem_log_uso",
+      "provider": "brave",
+      "billing_mode": "request_quota",
+      "observacao": "BRAVE_API_KEY ativada em 2026-05-07 00:19 BRT; consumo mensal ainda sem log dedicado local."
+    }
+  ],
+  "governanca_mvp1": {
+    "policy_path": "/root/config/governanca_financeira_mvp1.json",
+    "deepseek_curadoria_enabled": false,
+    "deepseek_curadoria_dry_run": true,
+    "relative_threshold_multiplier": 1.5,
+    "provedores_monitorados": {
+      "zhipu": {
+        "display": "Zhipu AI / GLM",
+        "billing_mode": "prepaid_credit",
+        "custo_usd": 0.0,
+        "chamadas": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "missing_usage_log": true,
+        "painel": "https://z.ai/manage-apikey/billing",
+        "observacao": "Credito inicial informado em 2026-05-06 23:41 BRT; leitura por painel/API ainda nao automatizada.",
+        "known_credit_usd": 3.0,
+        "credito_restante_estimado_usd": 3.0
+      },
+      "alibaba": {
+        "display": "Alibaba Cloud / Qwen",
+        "billing_mode": "pay_as_you_go",
+        "custo_usd": 11.644066,
+        "chamadas": 6746,
+        "tokens_in": 28406432,
+        "tokens_out": 234694,
+        "missing_usage_log": false,
+        "painel": "usercenter2-intl.aliyun.com/billing/#/payment/list",
+        "observacao": "Cartao validado em 2026-05-06 23:59 BRT; monitorar para evitar surpresa em fatura pos-paga."
+      },
+      "brave": {
+        "display": "Brave Search API",
+        "billing_mode": "request_quota",
+        "custo_usd": 0.0,
+        "chamadas": 0,
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "missing_usage_log": true,
+        "painel": null,
+        "observacao": "BRAVE_API_KEY ativada em 2026-05-07 00:19 BRT; consumo mensal ainda sem log dedicado local.",
+        "monthly_free_requests": 2000
+      }
+    }
+  },
+  "restricoes_mvp0": {
+    "read_only": true,
+    "sem_rede": true,
+    "sem_login": true,
+    "sem_rpa": true,
+    "sem_downgrade_automatico": true,
+    "sem_teste_pago": true
+  }
+}

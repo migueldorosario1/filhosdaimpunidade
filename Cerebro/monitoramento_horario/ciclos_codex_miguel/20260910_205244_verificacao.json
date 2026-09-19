@@ -1,0 +1,39 @@
+{
+  "ref": "XM-20260910-039",
+  "at": "2026-09-10T20:52:54.240278-03:00",
+  "rounds_executed": 1,
+  "files": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_ronda.md",
+      "sha256": "e3186b527fa4dcf6eba11f317010f1c07d54ee96510faedfd2911419c53c5d88",
+      "bytes": 5351
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_evidencias.json",
+      "sha256": "4d1089b18f795525ca74ccf801f2b91b2fc8ecd79a0ff7a9dba98d8c85129da9",
+      "bytes": 153079
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_editorial.md",
+      "sha256": "8cdebcf14fbb7fa7df441680318b4de206edb8f04bbbfdc1710d52a23bef6fad",
+      "bytes": 11095
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_transporte.json",
+      "sha256": "c0b00490a9b15f5bb3005b1eed3481bbdffcdb2c3d3fd0f7019383cc79ddfec4",
+      "bytes": 3052
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_mensagem.md",
+      "sha256": "a866724c63ff700594a74869484dcd454225337e441102511173c8c71d88dac8",
+      "bytes": 2995
+    }
+  ],
+  "editorial_articles": 3,
+  "proposals": 8,
+  "wordpress_writes": 0,
+  "same_readback_versions": true,
+  "delivery": "C1_ENTREGUE_C2_PENDENTE",
+  "commit": "12bbd80578763ff941e814b0abeea0aa88fc4f87",
+  "prohibited_actions_executed": []
+}

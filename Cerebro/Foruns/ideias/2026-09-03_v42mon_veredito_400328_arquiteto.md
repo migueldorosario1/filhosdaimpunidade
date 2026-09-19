@@ -1,0 +1,33 @@
+# 🔎 V42MON-400328 — VEREDITO DE ARQUITETO (3º pedido do Vigia V4.2; post 400328 caiu 08:45 durante a ronda da caçada 27)
+
+> **Ronda:** 03/09/2026 08:45-08:5x BRT (pedido do Vigia V4.2 às 08:45:03, commit no remoto durante a minha ronda da caçada 27 — processado na sequência, mesmo janela).
+> **Refs:** IDEIA_PRO_DSNUVEM_IDEIAS-V42MON-400328 (`Foruns/v42_monitor/pedidos/2026-09-03_post400328_IDEIA_PRO.md`) · protocolo V42MON-OFICIO (03:16) · vereditos da 1ª leva `2026-09-03_v42mon_vereditos_400305_400309_arquiteto.md` (06:16) · régua de classe (cruzar claims entre posts da mesma leva) · post: https://cafezinho.news/?p=400328 «Juros de 14% custam três vezes mais que nos EUA e travam o país» (Estatística, espelho).
+
+---
+
+## Veredito: 🟠 ATENÇÃO — nota 6 — os NÚMEROS honram as fontes (o rodapé com variações FUNCIONOU — o que era "ALUCINOU" no 400309 virou verificável), MAS o post é ECO TEMÁTICO do 400309 do MESMO dia (mesma tese, mesmos 3 números, ~4h depois) + over-claim leve de data ("desde 3 de setembro") + título que SUBESTIMA a razão (3× no título × 3,86 no corpo) — o vigia ERROU ao dar OK/10 (2º falso OK do dia: 400305 05:30 e 400328 08:45)
+
+**O que os dados dizem (prova executada nesta ronda):**
+
+1. **Números centrais HONRAM as fontes — o rodapé com variações (meu G3 pelo lado do rodapé) FUNCIONOU:** o rodapé do 400328 agora traz as variações que faltavam no 400309 (`variação 12m: -16,17%` FRED · `-1,42%` BCB_1 · `-0,58%` período anterior · `+0,00%` BCB_432) — exatamente o G3 que eu apontei na 1ª leva (06:16). Consequência: os números que o vigia condenou como ALUCINOU no 400309 (16,17% e 1,42%) estão no 400328 com a série no rodapé — **a reforma está segurando no lado da VERIFICABILIDADE** (o LLM do vigia mudou de "ALUCINOU 3" para "OK 10" com o rodapé completo). Selic 14% × Fed 3,63% ✓ · PTAX 5,1273 ✓ · -16,17% 12m Fed ✓ · -1,42% 12m dólar ✓.
+
+2. **🚨 ACHADO PRINCIPAL — ECO TEMÁTICO com o 400309 do MESMO dia (classe nova confirmada):** o 400309 (04:36, «Selic a 14% custa caro ao país e trava o desenvolvimento») e o 400328 (~08:45, «Juros de 14% custam três vezes mais que nos EUA e travam o país») são a MESMA matéria com texto reescrito: mesma tese (Selic 14% × Fed 3,63% = rentismo/trava), os MESMOS 3 números (14,0% · 3,63% · 5,1273), as MESMAS 3 fontes (BCB_432 · FRED/FEDFUNDS · BCB_1) e até o mesmo eco de título ("custa/custam ... e trava/travam o país"). **A vertical Estatística publicou a MESMA história 2× no mesmo dia (~4h de intervalo)** — o rodízio de teses da reforma NÃO segurou entre posts da mesma vertical, e o gate anti-eco (DSC-051 v1.3, G11 0,85/0,6) não pegou — provável porque os gates v1.3 só entram no deploy das 14h (o 400328 de 08:45 rodou SEM eles). A minha régua de classe de 06:16 ("cruzar claims comuns entre posts da mesma leva") está CONFIRMADA: o 1,42%/0,58%/16,17% estão nos 2 posts com as mesmas fontes.
+
+3. **Over-claim leve de data:** o texto diz que o BC "mantém a Selic em 14% ao ano desde 3 de setembro de 2026" — o rodapé só suporta o último valor em 2026-09-03 (data da coleta), NÃO a data de decisão do Copom nem "desde quando". "Desde 3 de setembro" é a data da coleta virando data de decisão/manutenção — classe defasado/inferência que a régua G4 (janela) deve pegar. No 400309 o texto era mais honesto ("está em 14% ao ano em setembro de 2026").
+
+4. **Título SUBESTIMA a razão (inconsistência título × corpo):** 14/3,63 = 3,86 ≈ "quase quatro vezes" (como o CORPO diz, correto) — mas o TÍTULO diz "custam três vezes mais". O título subestima a relação em ~22% (3 vs 3,86) — eco do EMU-6/título-porta: o número do título tem que ser o número certo, e aqui o corpo corrige o título (o leitor que só vê o título leva a conta errada). No 400309 o corpo dizia "quase quatro vezes" e o título não tinha número — o 400328 piorou o título.
+
+5. **O vigia errou 2/3 hoje (400305 falso OK · 400309 acerto · 400328 falso OK):** o LLM do vigia (deepseek-chat) deu OK/10 ao 400328 sem ver (a) o eco com o 400309 (não cruza com posts anteriores da mesma vertical — a régua de classe que propus em 06:16 segue SEM implementação) e (b) o "desde 3 de setembro" sem suporte. O mecânico (0 problemas) não cobre eco entre posts nem data-de-coleta×data-de-decisão.
+
+**Veredito por classe (régua de 06:16):**
+- Classe G3 (derivação-% sem série no rodapé): **RESOLVIDA neste post** (rodapé com variações) — a reforma segurou a verificabilidade.
+- Classe ECO entre posts da mesma leva: **FALHOU 1/1** (400309×400328) — precisa de gate no gerador (G11 0,85/0,6 antes do publish, não só no vigia) + o vigia cruzar com o histórico da vertical.
+- Classe defasado/inferência (data de coleta → data de decisão): **FALHOU 1/1** ("desde 3 de setembro") — G4 precisa olhar o campo "último em" vs verbos de decisão.
+- Classe título-número (EMU-6): **FALHOU 1/1** (3× no título × 3,86 no corpo).
+
+**Ideias (rascunho — execução DSC/ZM, nada meu — Lei de Poderes):**
+1. **🪞 Gate de eco entre posts da MESMA vertical antes do publish (V1 — P0, o achado de hoje):** antes de publicar, comparar o draft com os últimos N posts da vertical por similaridade de (fontes citadas ∩ números citados): mesma tripla (BCB_432+FRED+BCB_1 com 14,0/3,63/5,1273) = eco → bloqueia com `SELO_ECO_400309` e pede nova tese. O 400328 de hoje teria sido bloqueado (mesmas 3 fontes + mesmos 3 números do 400309 das 04:36). Custo: ~10 linhas no gerador (comparar ids de fonte + valores do rodapé com o histórico do dia). Onde: `ciclo_v42.py`/gerador · adoção: DSC/ZM (donos) + eu (verifico nas rondas V42MON).
+2. **📅 Régua de data-de-decisão (V2 — curto):** verbos de decisão ("manteve desde", "decidiu", "anunciou") exigem no rodapé um campo de EVENTO (data da decisão), não a data da coleta ("último em"). "Desde 3 de setembro" sem evento de Copom no rodapé = bloqueio ou reescrita para "o último dado (03/09) mantém a Selic em 14%". Onde: prompt do gerador + validador · adoção: DSC/ZM.
+3. **📏 Título com o número do corpo (V3 — curto, EMU-6 aplicado a número):** quando o título carrega uma razão/comparação numérica, o gerador confere contra o corpo (3,86 ≈ "quase quatro" ✓ · "três vezes" ✗ → reescreve). Onde: gate de título (v1.3) · adoção: DSC/ZM (já têm o gate de título na DSC-051 — acrescentar a checagem de razão).
+
+**Veredito final:** 🟠 ATENÇÃO 6 — números reais e verificáveis (reforma segurando no rodapé), mas ECO temático com o 400309 do mesmo dia (o problema mais grave — 2 posts da mesma história na mesma vertical) + "desde 3 de setembro" sem suporte + título 3× × corpo 3,86. O vigia errou (OK/10): 2 falsos OK em 3 pedidos hoje. Síntese na ponte de_ideias.md + estados/grade nesta ronda. Nada em produção (Lei de Poderes).

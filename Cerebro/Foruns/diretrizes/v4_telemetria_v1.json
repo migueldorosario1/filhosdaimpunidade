@@ -1,0 +1,98 @@
+{
+  "_doc": "Contrato de telemetria V4: recibo JSONL detalhado obrigatorio e Prometheus agregado de baixa cardinalidade.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "principios": {
+    "jsonl_detalhado_obrigatorio": true,
+    "prometheus_agregado_opcional": true,
+    "prometheus_failure_graceful": true,
+    "jsonl_failure_blocks_publication": true,
+    "baixa_cardinalidade_prometheus": true
+  },
+  "receipts": {
+    "base_dir": "agent_data/v4/receipts",
+    "filename_pattern": "{vertical}_{yyyymmdd}.jsonl",
+    "append_only": true,
+    "required_before_publish": true,
+    "schema_version": "v1",
+    "pricing_table_version_default": "pending",
+    "required_fields": [
+      "schema_version",
+      "timestamp",
+      "event_type",
+      "item_id",
+      "vertical",
+      "agent",
+      "operation",
+      "status",
+      "llm",
+      "idempotency_key",
+      "duration_ms",
+      "cost_usd_estimated",
+      "pricing_table_version"
+    ],
+    "llm_required_fields": [
+      "provider",
+      "model",
+      "tier",
+      "tokens_in",
+      "tokens_out",
+      "duration_ms_llm",
+      "prompt_hash",
+      "error_class"
+    ]
+  },
+  "prometheus": {
+    "enabled": false,
+    "failure_blocks_pipeline": false,
+    "metric_prefix": "v4",
+    "allowed_labels": [
+      "vertical",
+      "agent",
+      "provider",
+      "model",
+      "operation",
+      "status",
+      "direction",
+      "tier",
+      "portal",
+      "outcome",
+      "reason_class",
+      "source",
+      "correction_class"
+    ],
+    "forbidden_labels": [
+      "post_id",
+      "item_id",
+      "title",
+      "titulo",
+      "url",
+      "content",
+      "conteudo",
+      "prompt",
+      "prompt_hash"
+    ],
+    "metrics": [
+      "v4_posts_published_total",
+      "v4_posts_rejected_total",
+      "v4_llm_calls_total",
+      "v4_llm_tokens_total",
+      "v4_llm_cost_usd_total",
+      "v4_llm_call_duration_seconds",
+      "v4_post_pipeline_duration_seconds",
+      "v4_images_selected_total",
+      "v4_images_rejected_total",
+      "v4_editor_corrections_total",
+      "v4_agent_last_publish_timestamp",
+      "v4_queue_pending",
+      "v4_freios_llm_denied_count"
+    ]
+  },
+  "ownership": {
+    "jsonl_rotation_owner": "codex_v4_core",
+    "prometheus_cluster_auditor": "claude_code",
+    "cardinality_gate_owner": "claude_code",
+    "implementation_owner": "codex"
+  }
+}

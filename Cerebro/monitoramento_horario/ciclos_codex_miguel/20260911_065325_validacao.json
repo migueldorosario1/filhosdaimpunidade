@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-11T06:53:48.176182-03:00",
+  "status": "PASS",
+  "checks_count": 391,
+  "summary": [
+    "Snapshots e cursores históricos conferidos; ausências explícitas.",
+    "12 normativos por hash; três appends próprios sem exclusão.",
+    "Três versões/backups e campos protegidos iguais; três páginas completas HTTP 200.",
+    "12 propostas exatas privadas, zero aplicação.",
+    "Oito future/capas/eventos únicos nos timestamps esperados.",
+    "Contraprovas de log, SLOWLOG/commandstats, campos de cliente, Qwen e Nexus registradas.",
+    "Holds e proibições preservados; transporte institucional pendente."
+  ],
+  "artifact_sha256": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": "7db5463001291a3f5c29cb3f353405cbaeb8ad8ec4d86c65ed5fa19c6b6dee8e",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "ecf28dfce5be0ef258b923efdcefa77412418d833ae4652e838c450a02007312",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "aa36a8e27a7da9a0bc27cd89739e44f97da250e636847afc28f5bc114e993c9e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_ronda.md": "4dce9f5d8f8f35c06ef39bc915280e70c3fc1f196ad921c61ced70d2de15c937",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_evidencias.json": "f4807a4f98f7935d8cb35d8bb114bed84362ff5bfa5db1fc43be7a8332f048d7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_verificacao.json": "6fa10d10b47593e19a932fbd0596d87ce77aecec03bed91db8ef8ff5d5919276",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_editorial.md": "f90bbfeaadb152e64e3764862bb5e5188c3d4683dc71153b574085e53795e3b6",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_transporte.json": "3f0f3cea43d46dcf5fff0582174c9fa4ce317dbe39d2b0753b0889d02772970c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_065325_encaminhamento_pendente.md": "7a5c8bf92b607076f1ec9eaaa99f7f73df5745d401383131f7d22e6319678a75"
+  }
+}

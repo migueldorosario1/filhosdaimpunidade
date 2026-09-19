@@ -1,0 +1,37 @@
+fonte,"GACC english.customs.gov.cn — Preliminary Release, publicado 2026-09-09"
+periodo,"Agosto 2026 (mensal) e Janeiro-Agosto 2026 (acumulado), em USD 1 milhão"
+
+indicador,ago_2026,jan_ago_2026,yoy_pct_acumulado
+China Total Export & Import,683796.7,5042171.6,+22.4
+China Total Export,401441.0,2923838.6,+19.3
+China Total Import,282355.8,2118332.9,+27.0
+China-Brazil Export & Import,20753.6,148239.3,+23.9
+China export p/ Brazil,8088.9,57354.5,+22.4
+China import do Brazil,12664.7,90884.8,+24.9
+China-ASEAN,118612.9,862750.6,+25.6*
+China-EU,78089.9,608099.6,+12.4
+China-US,55768.0,400839.8,+5.5
+China-Latin America,57592.2,422639.9,+19.1
+Belt and Road,350189.3,2572447.6,+20.7
+RCEP,224040.5,1628959.7,+30.2
+
+=== SOJA — CHINA (fontes combinadas, coleta 09/09/2026) ===
+GACC (alfândega chinesa, release 09/09/2026): importações TOTAIS de soja
+ago_2026_qty_10kt,ago_2026_val_USDmi,jan_ago_2026_qty_10kt,jan_ago_2026_val_USDmi,yoy_qty_pct,yoy_val_pct
+1214.1,5848.3,7410.7,35244.7,+1.1,+8.2
+preco_medio_jan_ago_USD_t,475.6
+
+ComexStat (Brasil): exportações de soja (NCM 1201) p/ China, US$ FOB
+ago_2026_USDmi,jan_ago_2026_USDmi
+3140.0,27496
+
+Derivados (espelho; GACC=CIF-like, ComexStat=FOB — share com margem)
+share_brasil_no_valor_jan_ago_pct,~78
+share_brasil_no_valor_ago_pct,~54
+residuo_outras_origens_jan_ago_USDmi,~7749 (22%)
+residuo_outras_origens_ago_USDmi,~2708 (46% — entressafra BR)
+
+Bloqueios p/ cruzamento oficial commodity×país do GACC:
+stats.customs.gov.cn/indexEn,WAF Ruishu — webview IAB passou 1º estágio (SF_cookie) mas 2º estágio reprova fingerprint (Electron); fetch same-origin c/ cookies = 412
+UN Comtrade preview,China (156) count=0 em todos os períodos 2025-11→2026-07 — China não reporta mensal ao Comtrade
+US Census intltrade API,exige key grátis (missing_key.html) — pendo chave p/ perna EUA (HS 12010000, E_COUNTRY=5700)

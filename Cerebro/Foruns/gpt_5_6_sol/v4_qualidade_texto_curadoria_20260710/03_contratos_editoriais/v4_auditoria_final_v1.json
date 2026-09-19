@@ -1,0 +1,26 @@
+{
+  "_doc": "Contrato V4 para auditoria final em dry-run. Promove texto revisado/fact-checkado para auditado_final, mantendo publicacao real bloqueada.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "source": {
+    "required_fields": [
+      "item_id",
+      "curadoria_id",
+      "editoria",
+      "texto_revisado",
+      "manifesto_revisao",
+      "manifesto_fact_check"
+    ]
+  },
+  "gates": {
+    "block_if_revisao_not_ok": true,
+    "block_if_fact_check_not_ok": true,
+    "block_if_collection_blocks_publicacao_real": false,
+    "publication_real_always_false_in_labs": true
+  },
+  "output": {
+    "path": "dados/auditado",
+    "suffix": "auditado_final"
+  }
+}

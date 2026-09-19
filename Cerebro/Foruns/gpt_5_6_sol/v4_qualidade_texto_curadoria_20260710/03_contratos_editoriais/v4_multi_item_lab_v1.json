@@ -1,0 +1,103 @@
+{
+  "_doc": "Contrato Fase 7 lab: gerenciador multi-item formal com curadoria congelada, sem WordPress real e sem promocao para root/v4.",
+  "_version": "v1",
+  "_status": "fase_7_lab",
+  "_updated": "2026-07-10",
+  "principios": {
+    "curadoria_congelada_durante_rodada": true,
+    "sem_wordpress_real": true,
+    "sem_publicacao_externa": true,
+    "sem_promocao_real": true,
+    "relatorio_por_lote": true,
+    "casos_novos_entre_editorias": true,
+    "nao_alterar_curadoria_para_fazer_caso_passar": true
+  },
+  "frozen_sources": [
+    "codigo/curadoria_tese.py",
+    "contratos/v4_curadoria_tese_v1.json"
+  ],
+  "base_flow_contract": "contratos/v4_fluxo_dry_run_v1.json",
+  "editorial_coherence_contract": "contratos/v4_editoria_coerencia_v1.json",
+  "output_path": "dados/promocao/v4_labs_fase7_multi_item_lab_20260710.json",
+  "batch_id": "v4_fase7_lab_20260710",
+  "expected_new_items_min": 3,
+  "required_editorias_min": 3,
+  "items": [
+    {
+      "item_id": "v4_real_005",
+      "editoria": "v4_internacional",
+      "titulo": "Carta escrita e depoimento no USTR abrem nova frente sobre Flavio",
+      "primary_entity": "Flavio Bolsonaro",
+      "fonte": "followup_ustr_2026_0331_pdf",
+      "fontes": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf",
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.json",
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "conteudo": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back. A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula. A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva. O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.",
+      "leitura_corrente_timestamped": {
+        "fonte": "manual_editor",
+        "timestamp_brt": "2026-07-10T10:45:00-03:00",
+        "resumo_consenso": "A leitura corrente trata o caso como disputa comercial entre Brasil e Estados Unidos, mas a comparacao entre carta e fala oral pode revelar mudanca de enfase politica.",
+        "fontes_consultadas": [
+          "PDF USTR-2026-0331 espelhado",
+          "USTR Day 2 transcript"
+        ]
+      }
+    },
+    {
+      "item_id": "v4_real_006",
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "titulo": "Data centers recolocam energia, IA e soberania no centro da politica industrial",
+      "primary_entity": "infraestrutura de IA no Brasil",
+      "fonte": "pauta_local_tecnologia_ia",
+      "fontes": [
+        "pauta_local_cafezinho:data_centers_ia_soberania",
+        "referencias_publicas_setor_eletrico_e_cloud"
+      ],
+      "conteudo": "A expansao de data centers para inteligencia artificial pressiona energia, agua, redes de transmissao e politica industrial no Brasil. A pauta conecta infraestrutura digital, soberania tecnologica e disputa por valor agregado: sem planejamento publico, a IA pode consumir recursos locais e exportar renda para plataformas estrangeiras; com planejamento, pode fortalecer setor produtivo, pesquisa nacional e servicos de alto valor. O texto deve tratar data centers como infraestrutura material, nao como abstracao de software, preservando cautela sobre investimentos ainda anunciados e nao executados.",
+      "leitura_corrente_timestamped": {
+        "fonte": "manual_editor",
+        "timestamp_brt": "2026-07-10T10:45:00-03:00",
+        "resumo_consenso": "A leitura corrente costuma tratar data centers de IA como noticia de investimento, sem discutir energia, soberania e valor agregado.",
+        "fontes_consultadas": [
+          "acervo_local_tecnologia",
+          "referencias_setor_eletrico"
+        ]
+      }
+    },
+    {
+      "item_id": "v4_real_007",
+      "editoria": "v4_cultura",
+      "titulo": "Audiovisual brasileiro disputa soberania cultural nas plataformas",
+      "primary_entity": "audiovisual brasileiro",
+      "fonte": "pauta_local_cultura_streaming",
+      "fontes": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural",
+        "referencias_publicas_regulacao_streaming"
+      ],
+      "conteudo": "A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural. A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras. O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas. O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.",
+      "leitura_corrente_timestamped": {
+        "fonte": "manual_editor",
+        "timestamp_brt": "2026-07-10T10:45:00-03:00",
+        "resumo_consenso": "A leitura corrente reduz streaming a cota ou entretenimento, sem mostrar a disputa por soberania cultural e valor economico.",
+        "fontes_consultadas": [
+          "acervo_local_cultura",
+          "referencias_regulacao_streaming"
+        ]
+      }
+    }
+  ],
+  "gates": {
+    "fail_if_frozen_source_changes": true,
+    "fail_if_wordpress_real": true,
+    "fail_if_external_publish": true,
+    "fail_if_promocao_real_executada": true,
+    "allow_image_warning_in_lab": true,
+    "editorial_coherence": {
+      "enabled": true,
+      "warning_only_in_lab": true,
+      "human_review_required_when_warning": true
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "_doc": "Orquestracao inteligente de LLMs V4: tiers, rotacao, telemetria, revisao conservadora e separacao entre produtor e revisor.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "principios": {
+    "inteligencia_e_central": true,
+    "sem_hardcode_de_modelo": true,
+    "rotas_externas": true,
+    "telemetria_obrigatoria": true,
+    "comparativo_por_tema": true,
+    "revisor_diferente_do_produtor": true,
+    "revisao_conservadora": true,
+    "evitar_desperdicio": true
+  },
+  "tiers": {
+    "super_luxo": {
+      "qualidade_minima": 5,
+      "uso": [
+        "redacao_nobre",
+        "revisao_nobre",
+        "auditoria_final",
+        "fact_check_sensivel"
+      ]
+    },
+    "luxo": {
+      "qualidade_minima": 4,
+      "uso": [
+        "curadoria",
+        "imagem",
+        "repetidor_melhorado",
+        "perifericos_editoriais"
+      ]
+    },
+    "padrao": {
+      "qualidade_minima": 3,
+      "uso": [
+        "tarefas_mecanicas",
+        "classificacao_simples",
+        "dedupe",
+        "normalizacao"
+      ]
+    }
+  },
+  "funcoes": {
+    "redacao": {
+      "tier_preferencial": "super_luxo",
+      "selection_strategy": "rotate_valid_by_idempotency",
+      "contexto_llm": "v4_super_luxo_redacao"
+    },
+    "revisao": {
+      "tier_preferencial": "super_luxo",
+      "selection_strategy": "rotate_valid_by_idempotency",
+      "contexto_llm": "v4_revisao_luxo",
+      "must_exclude_previous_provider": true,
+      "modo": "conservador"
+    },
+    "auditoria": {
+      "tier_preferencial": "super_luxo",
+      "selection_strategy": "rotate_valid_by_idempotency",
+      "contexto_llm": "v4_auditoria_luxo"
+    },
+    "fact_check": {
+      "tier_preferencial": "super_luxo",
+      "selection_strategy": "rotate_valid_by_idempotency",
+      "contexto_llm": "v4_fact_check_luxo"
+    },
+    "curadoria": {
+      "tier_preferencial": "luxo",
+      "selection_strategy": "rotate_valid_by_idempotency",
+      "contexto_llm": "v4_curadoria_luxo"
+    }
+  },
+  "modelos_chineses": {
+    "usar_quando_possivel": true,
+    "ativos_com_uso_controlado": [
+      {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "papel": "luxo_fallback",
+        "motivo": "autorizado por Miguel em 2026-07-09; nao fica na frente da redacao super_luxo, mas permanece disponivel por rota externa e telemetria."
+      }
+    ],
+    "candidatos_pendentes": [
+      {
+        "provider": "alibaba",
+        "model": "qwen3-max",
+        "motivo_pendente": "ratings local marca qualidade 5 e status ativo, mas funcoes_permitidas esta vazio; nao entra em rota nobre ate cadastro permitir funcoes editoriais."
+      },
+      {
+        "provider": "zhipu",
+        "model": "glm-5.1",
+        "motivo_pendente": "status pendente_teste; permitido localmente apenas para auditoria."
+      }
+    ],
+    "regra": "Modelos chineses entram no V4 quando tiverem status ativo, funcao permitida e passarem pelo validador; nao entram por desejo editorial sem cadastro limpo."
+  },
+  "revisao_conservadora": {
+    "objetivo": "Melhorar sem apagar autoria, ritmo e qualidade de um texto bom.",
+    "nao_reescrever_tudo_se_texto_bom": true,
+    "preferir_patch_cirurgico": true,
+    "reescrita_total_exige": [
+      "erro factual grave",
+      "risco juridico",
+      "texto confuso",
+      "tom editorial inadequado",
+      "pedido explicito do editor"
+    ],
+    "telemetria_obrigatoria": [
+      "provider_produtor",
+      "model_produtor",
+      "provider_revisor",
+      "model_revisor",
+      "grau_intervencao",
+      "motivo_intervencao"
+    ]
+  },
+  "telemetria": {
+    "store": "v4_memoria/eventos.jsonl",
+    "event_type": "llm_quality",
+    "campos": [
+      "item_id",
+      "editoria",
+      "funcao",
+      "tema",
+      "provider",
+      "model",
+      "tier",
+      "route_context",
+      "prompt_hash",
+      "idempotency_key",
+      "modo",
+      "resultado",
+      "avaliacao_editor"
+    ]
+  }
+}

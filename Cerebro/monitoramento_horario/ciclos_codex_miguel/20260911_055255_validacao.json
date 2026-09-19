@@ -1,0 +1,59 @@
+{
+  "ref": "XM-20260911-012",
+  "at": "2026-09-11T05:53:46.684724-03:00",
+  "status": "PASS",
+  "checks": [
+    "169 fontes: hashes de snapshots e cursores históricos preservados; ausências explícitas",
+    "12 normativos conferidos por SHA-256",
+    "3 versões/readbacks/campos protegidos; 3 páginas completas HTTP 200; 15 propostas exatas sem aplicação",
+    "8 future com capa e evento único no timestamp esperado; nenhum atraso",
+    "4 registros SLOWLOG, soma exata 9285287 µs e metadados do cliente sem identificação do programa",
+    "3 appends próprios, zero exclusões; backups conferidos",
+    "Commit de trabalho contém somente os 9 arquivos exatos; índice limpo"
+  ],
+  "work_commit": "878980595c0f7f936e84cf8cf0fdf55d4dcfd475",
+  "artifacts": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_055255_ronda.md",
+      "sha256": "bacefba6062042ae939c72bcebba23339859b2f68683c7efd868f75c3eed8e91"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_055255_editorial.md",
+      "sha256": "4248bb45409a3ebd46cab3f5862caa76c0019ec8ab343623355a61985a6a564d"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_055255_encaminhamento_pendente.md",
+      "sha256": "12165ec5b88c99b8990f71dece3714a25cf5ae5eedc2a515d3f3659378f5449b"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_055255_verificacao.json",
+      "sha256": "d8ebd7e849c39f9a41c971f8ff17f71e2822f8f785b861fd89a4e4eb982fae95"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_055255_transporte.json",
+      "sha256": "f0fb14b6a41d2c00cd39e8a1f2eac24d542800fe4d34729357804c99c4473330"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "49346158ab61165f4340a1022fc5c2458f05d10bc38109aaabdf2b41e61a9dcf"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "3df6a610d43b6e2575daa9e144c58d17c53b6ac82592dbda73690c805897e3ed"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "dc8f2f5240627d11e852c9848b6e442afa15ce711e10ec86b9fa3566b6c50337"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_055255_evidencias.json",
+      "sha256": "0ef41431f9f20666bba30ba99d62963831c3b9e247fdca5b54817184e880814b"
+    }
+  ],
+  "limitations": [
+    "Propostas não aplicadas; holds permanecem.",
+    "Zero escrita WordPress; conferência pública por amostra de três matérias.",
+    "Dados da ponte cortados em 05:51:02; mensagens posteriores ficam para próxima ronda.",
+    "Transporte não reconciliado, sem push nesta ronda."
+  ]
+}

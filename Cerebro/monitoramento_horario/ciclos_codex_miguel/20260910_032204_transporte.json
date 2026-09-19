@@ -1,0 +1,54 @@
+{
+  "ref": "XM-20260910-007",
+  "timestamp_brt": "2026-09-10T03:22:11.381497-03:00",
+  "commit": "e68dced0aaf3fd41ac6ecdf16898109407247ad8",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_032204_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_032204_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_032204_auditoria_ponte.py"
+  ],
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_032204_ronda.md",
+  "evidence_sha256": "c4994c979f318c1c0fcfc7e6578a2e9bcb816cb08cf2ff8348db2439a161b955",
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   81945baa4..e68dced0a  main -> main\n"
+  },
+  "origin_verification": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "e68dced0aaf3fd41ac6ecdf16898109407247ad8\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "nyc": {
+    "remote_main": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "remote_read_method": "git ls-remote nyc refs/heads/main, RC 0 nesta ronda",
+    "is_ancestor_rc": 1,
+    "action": "HOLD_NON_FF",
+    "push_attempted": false
+  },
+  "checks": {
+    "rounds": 1,
+    "append_only_prefix_verified": true,
+    "utf8_without_bom": true,
+    "selective_staging_verified": true,
+    "preexisting_untracked_preserved": true,
+    "audit_rc": 0
+  },
+  "closing_note": "Fecho documental da mesma ronda; não inicia outra. Transporte em commit seletivo próprio."
+}

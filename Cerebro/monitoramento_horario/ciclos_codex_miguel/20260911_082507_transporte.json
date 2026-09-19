@@ -1,0 +1,139 @@
+{
+  "ref": "XM-20260911-017",
+  "at": "2026-09-11T08:26:26.803319-03:00",
+  "work_commit": "7036338f74b287e0fe9a2ba0fd89bec185faa76c",
+  "origin_head": "1377f7d88977056a74c19cc57d94111e6971640c",
+  "nyc_head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+  "initial_pull_rc": 0,
+  "second_pull_rc": 0,
+  "push_origin_rc": 1,
+  "push_origin_result": "rejected non-fast-forward",
+  "final_pull_rc": 128,
+  "final_pull_result": "Not possible to fast-forward, aborting",
+  "delivery": "PENDENTE",
+  "remote_receipt_verified": false,
+  "remote_message_header_present": false,
+  "holds": [
+    "HOLD_INTEGRIDADE_PONTE",
+    "DIVERGENCIA_LOOP_ATIVO_RESERVAS",
+    "HOLD_GIT_NON_FAST_FORWARD",
+    "NYC_NON_FAST_FORWARD"
+  ],
+  "prohibited_recovery_not_used": [
+    "merge",
+    "rebase",
+    "autostash",
+    "reset",
+    "force_push"
+  ],
+  "remote_files": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "remote_exists": true,
+      "same_bytes": false,
+      "local_sha256": "3b10a2f9446f6f74532793f773d800944a17981b981786a20f42ecf71fcf71a1"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "remote_exists": true,
+      "same_bytes": false,
+      "local_sha256": "91bf88660a54ec9dfe03f06d508ef528b6d36b03e2a75b356d752e8800b55dda"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "remote_exists": true,
+      "same_bytes": false,
+      "local_sha256": "0f317670f53d6788b7707851a02683495c1a8d6006b9101ab4e303ebcb5b9813"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_082507_ronda.md",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "77787e74f0336ef4e91aa4684d3055448c195a7298af462f0b8fd4b51bbfbf16"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_082507_evidencias.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "529c66ea1da87a25b419ab8389f8921c5047a70dfee359c40aa13e0fbea74ed2"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_082507_editorial.md",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "7536f41b853d4d2239bd8c36e7f83b52ebdb2a8786e85752e96b8f9914994579"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_082507_verificacao.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "351644a0f76a41a4f1f667c2691ac138e9c91ae036ef2203ce12b3a502a8f2ca"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_082507_recuperacao.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "91a7d7311eb74e0f1785690cc96bf2863a02da5dd9de6146b59622d74203a59f"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_editorial.md",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "7a91f194f4dcd78d5efc1a4f3b9637a0540e91a45e62b203bd5a42e806ff4ab8"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_encaminhamento_pendente.md",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "6b68aba055711109334de5d3e278140879ed391dc242da9bfa433309daebf503"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_evidencias.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "021b02a422deff8fdc4aa732aaa1086a2456173802c3a4e64b6f3dbcad8da675"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_fechamento.md",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "51c6b80c9073844891525388f84b1594a317f6b81cde60326000e5b11dcf7329"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_ronda.md",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "3cf79f7e61f8255259f3dcade18b3156a84449655f35b2e61fe0e15ef810b45d"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_transporte.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "60e86d3acc374ec6fb1d2fd6640e6e34c57e326427fd41fa68a020e4eed056d4"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_validacao.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "d72b3df8a20d77da73ee0a1bff993c27a5d406e31003ea5d4197bf5b13ba7189"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_validacao_final.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "75bf3449806951cc60a5c1df8460937cab82598a3f6d1f6f0a1a4ded83db9fc4"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_075310_verificacao.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "d3d0d86efecad00f9a96863ad727fedcb3e586b78d4fc2794ede63fa68f3a2e2"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_082507_validacao.json",
+      "remote_exists": false,
+      "same_bytes": false,
+      "local_sha256": "92e306086e1579716634b2ec759ddb51bb80710a09078f1b955a5d70f4988f5a"
+    }
+  ]
+}

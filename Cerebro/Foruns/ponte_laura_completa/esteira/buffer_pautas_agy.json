@@ -1,0 +1,105 @@
+{
+  "schema": "buffer_pautas_agy/v0.2 (reforma renomeada V5 por ordem do Miguel 20/08 13:15)",
+  "gerado_em": "2026-08-20T13:10:00-03:00",
+  "gerado_por": "ZCode Miguel (Kimi K3) — ranqueador fase 0, prova de conceito",
+  "fontes_de_sinal": {
+    "tracao_longa": "/root/agent_data/performance_weights.json (NYC, GA4 property 374552425, janela 14d, atualizado hoje)",
+    "dedup": "REST público www.ocafezinho.com (busca por termo, after=2026-08-18)",
+    "modulos_canonicos": ["memoria_estilo_editorial_v5.md", "acoplamento_performance_audiencia_v5.md", "memoria_autoaprendizado_bugs_v5.md"]
+  },
+  "regras_aplicadas": [
+    "7 regras canônicas de título (memoria_estilo_v4_1 §1)",
+    "Score de Tração: V*0.40 + T*0.30 + S*0.20 + C*0.10 — fase 0 usa V normalizado + proxies (T e S entram na fase 1 via patch no agente_performance.py; C na fase 2 via Search Console)",
+    "Anti-canibalização: nenhum desdobramento de tema com 3+ posts nas últimas 24h ou pending aberto do mesmo assunto",
+    "Rotação de vertical: cotas atuais (geo 2 / nacional 3 / trends 1) NÃO cobrem Cultura/Ciência — o buffer reserva slot para vertical sub-atendida com tração comprovada",
+    "Calibração de tamanho: hard news 300-500 palavras (meta >=90s) / análise 600-900 palavras (meta >=180s)"
+  ],
+  "pautas": [
+    {
+      "rank": 1,
+      "tema": "Patrulha naval conjunta China-Rússia no Pacífico — o que muda",
+      "categoria_id": 5003,
+      "categoria_nome": "Geopolítica",
+      "score": 95,
+      "classe": "ALTA",
+      "sinais": {
+        "post_mae": {"id": 264499, "views_14d": 5518, "obs": "campeão absoluto da janela; cauda longa de 14 dias ainda tracionando (Discover)"},
+        "pesos_temas": {"geopolitica": 0.19, "china": 0.083, "russia": 0.06},
+        "macrotema": "geopolitica_expandida 0.476 (maior do painel)",
+        "dedup_48h": "LIVRE — sem nenhum follow-up desde 06/08"
+      },
+      "angulo_desdobramento": "Além do fato (já coberto em 06/08): o que a coordenação naval sino-russa muda no equilíbrio do Pacífico Ocidental, na resposta do Japão (orçamento de defesa recorde) e nas rotas de comércio e energia que ligam a Ásia ao Brasil — camadas 3 e 4 do modelo E-E-A-T.",
+      "tamanho_alvo_palavras": [600, 900],
+      "meta_engajamento_s": 180,
+      "fontes_sugeridas": ["Reuters", "Al Jazeera", "IISS", "CSIS", "Ministério da Defesa do Japão"],
+      "janela_validade_h": 48
+    },
+    {
+      "rank": 2,
+      "tema": "Lei Rouanet — para onde vai o dinheiro liberado pelo MinC",
+      "categoria_id": 79,
+      "categoria_nome": "Cultura",
+      "score": 88,
+      "classe": "ALTA",
+      "sinais": {
+        "post_mae": {"views_14d": 2806, "obs": "2º maior da janela; tráfego ativo sem nenhum reforço editorial"},
+        "dedup_48h": "LIVRE — zero posts com 'Rouanet' desde 18/08 (REST canônico)",
+        "rotacao": "Cultura (79) FORA das cotas editoriais atuais (geo 2 / nacional 3 / trends 1) — vertical sub-atendida com demanda real medida"
+      },
+      "angulo_desdobramento": "Mapa do dinheiro: quais estados e setores concentram os projetos contemplados nesta leva, critérios do MinC e o contraste com o desmonte anterior do fundo — serviço + análise (E-E-A-T camadas 1, 2 e 3).",
+      "tamanho_alvo_palavras": [600, 900],
+      "meta_engajamento_s": 180,
+      "fontes_sugeridas": ["Ministério da Cultura", "Diário Oficial da União", "Agência Brasil"],
+      "janela_validade_h": 96
+    },
+    {
+      "rank": 3,
+      "tema": "Pernambuco 2026 — o xadrez de Raquel Lyra, João Campos e o Planalto",
+      "categoria_id": 22,
+      "categoria_nome": "Política",
+      "score": 78,
+      "classe": "ALTA",
+      "sinais": {
+        "post_mae": {"views_14d": 706, "obs": "3º post nacional mais visto da janela"},
+        "macrotema": "eleitoral_expandido 0.202 (2º maior)",
+        "dedup_48h": "LIVRE — zero posts com 'Raquel Lyra' desde 18/08"
+      },
+      "angulo_desdobramento": "O gesto de Raquel Lyra (PSDB) em direção a Lula lido como peça do tabuleiro de 2026: o cálculo do PSB de João Campos, o efeito dominó nos palanques do Nordeste e o custo para a oposição — análise de cenários (camada 4).",
+      "tamanho_alvo_palavras": [600, 900],
+      "meta_engajamento_s": 180,
+      "fontes_sugeridas": ["Folha de S.Paulo", "Estadão", "AtlasIntel/Bloomberg", "TSE"],
+      "janela_validade_h": 72
+    },
+    {
+      "rank": 4,
+      "tema": "Bancos endurecem crédito para baixa renda — inadimplência e Desenrola",
+      "categoria_id": 22,
+      "categoria_nome": "Política (nacional/economia)",
+      "score": 74,
+      "classe": "MEDIA_ALTA",
+      "sinais": {
+        "post_mae": {"views_14d": 705},
+        "peso_macro": "nacional 0.524 (peso editorial vigente)",
+        "dedup_48h": "LIVRE para este ângulo (IPCA 266709 e Evergrande 266764 são fatos distintos)"
+      },
+      "angulo_desdobramento": "Do fato à consequência: spread, inadimplência recorde nas faixas de baixa renda e o efeito sobre o Desenrola Brasil — serviço direto ao leitor (o que muda no bolso) + contexto de política monetária.",
+      "tamanho_alvo_palavras": [600, 900],
+      "meta_engajamento_s": 180,
+      "fontes_sugeridas": ["Banco Central", "Febraban", "Valor Econômico", "Agência Brasil"],
+      "janela_validade_h": 72
+    }
+  ],
+  "bloqueadas_pelo_motor": [
+    {
+      "tema": "Estreito de Ormuz / Irã-EUA",
+      "motivo": "ANTI-CANIBALIZAÇÃO: 3 posts em 24h (266556, 266580, 266671) + piloto E-E-A-T 266751 pending — nenhum desdobramento até decantar ou surgir ângulo radicalmente novo (ex.: impacto no frete marítimo do Brasil)",
+      "views_relacionadas_14d": 644
+    },
+    {
+      "tema": "Lula e o debate da Band",
+      "motivo": "TEMA BATIDO: post 265953 já teve ciclo completo (inclusive correção factual em produção) — follow-up só com fato novo (ex.: pesquisa pós-debate)",
+      "views_relacionadas_14d": 1319
+    }
+  ],
+  "consumo": "LAURA-AGY lê este arquivo no início do loop de 30 min, escolhe da lista (ou descarta com motivo registrado), apura multi-fonte (3+), redige nas 4 camadas E-E-A-T e entrega pending com capa >=1200px; auditoria final dos Claudes (7 regras) antes de publish. Nada aqui publica sozinho."
+}

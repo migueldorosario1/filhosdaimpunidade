@@ -1,0 +1,197 @@
+{
+  "at": "2026-09-11T12:47:56.757920-03:00",
+  "stamp": "20260911_124756",
+  "dir": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756",
+  "base": "bcab22ac83ffe62f8afbbcca3551a6f1db3cbee1",
+  "head": "da8c51b945deccaa2b1d8705112029b3a04d2a02",
+  "sources": [
+    {
+      "path": "Foruns/ponte_laura_completa/de_laura.md",
+      "remote_sha256": "6f571584eae77909c238061d7071c3988c76c88bb690deb2589891ae6c62f107",
+      "canonical_sha256": "6f571584eae77909c238061d7071c3988c76c88bb690deb2589891ae6c62f107",
+      "matches": true,
+      "canonical_changed_since_last": true,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_0",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_0",
+      "delta_bytes": 11079
+    },
+    {
+      "path": "Foruns/ponte_laura_completa/de_dell.md",
+      "remote_sha256": "68a417b8b7b495d788178a8dbe64d974bccc64b02762c718f50a8c49a05094c7",
+      "canonical_sha256": "3f380fbea24c6050cd85df592d050de8c3c55a547b5fe154332601c51abf2a96",
+      "matches": false,
+      "canonical_changed_since_last": true,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_1",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_1",
+      "delta_bytes": 0
+    },
+    {
+      "path": "Foruns/canal_trindade.md",
+      "remote_sha256": "1fa3a9abd8d7a3e23b80b2fe00d9624467eff128f084fd4860317802335b113d",
+      "canonical_sha256": "175cecc658b272f544b7e58c394fa9bc4a638715cac4481bccad9804d8a3b518",
+      "matches": false,
+      "canonical_changed_since_last": false,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_2",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_2",
+      "delta_bytes": 0
+    },
+    {
+      "path": "Foruns/inbox_trindade/codex.md",
+      "remote_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "canonical_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "matches": true,
+      "canonical_changed_since_last": false,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_3",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_3",
+      "delta_bytes": 0
+    },
+    {
+      "path": "Foruns/inbox_trindade/zcode.md",
+      "remote_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "canonical_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "matches": true,
+      "canonical_changed_since_last": false,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_4",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_4",
+      "delta_bytes": 0
+    },
+    {
+      "path": "Foruns/inbox_trindade/claude.md",
+      "remote_sha256": "eda2641d34adbd138347625bee9ff80a5e63b0d0af634a212982b52b893105ca",
+      "canonical_sha256": "a69269f364130f85f371f97d50767a48432400761b723287a3d8cd075834e6e4",
+      "matches": false,
+      "canonical_changed_since_last": false,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_5",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_5",
+      "delta_bytes": 0
+    },
+    {
+      "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+      "remote_sha256": "9040773c2547695f1398ee4ad1c294ae9ee66ddffe01fa17f650a403a348cad9",
+      "canonical_sha256": "9040773c2547695f1398ee4ad1c294ae9ee66ddffe01fa17f650a403a348cad9",
+      "matches": true,
+      "canonical_changed_since_last": true,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_6",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_6",
+      "delta_bytes": 840
+    },
+    {
+      "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+      "remote_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+      "matches": false,
+      "canonical_changed_since_last": false,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_7",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_7",
+      "delta_bytes": 0
+    },
+    {
+      "path": "Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "remote_sha256": "a2d916c46423e588bff5ce472616de86a8c2d7a2fd0bc95f892e55f8aa1c638b",
+      "canonical_sha256": "a2d916c46423e588bff5ce472616de86a8c2d7a2fd0bc95f892e55f8aa1c638b",
+      "matches": true,
+      "canonical_changed_since_last": true,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_8",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_8",
+      "delta_bytes": 1803
+    },
+    {
+      "path": "Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "remote_sha256": "dc8aa826d83ce3a30331befffec3b04ab1ead55c94b3c92b66bad7846fe9d4bc",
+      "canonical_sha256": "ef24fa2aca760588c914eb51a338de421016a9d63f7d89d61285654320a4346f",
+      "matches": false,
+      "canonical_changed_since_last": true,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/remote_9",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911_124756/canonical_9",
+      "delta_bytes": 0
+    }
+  ],
+  "rest_error": "HTTP Error 403: Forbidden",
+  "ref": "XM-20260911-023",
+  "previous_receipt": "20260911_121909_ronda.md",
+  "closed_at": "2026-09-11T12:50:00.534746-03:00",
+  "public_verification": {
+    "http_status": 200,
+    "tool": "curl GET, max-time 25",
+    "sha256": "963caa02bf344850596feeabe440e59b28e0de9131206031a382da3b6cc81b28",
+    "posts": [
+      {
+        "id": 269811,
+        "date": "2026-09-11T11:30:00",
+        "date_gmt": "2026-09-11T14:30:00",
+        "modified_gmt": "2026-09-11T01:20:56",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/11/anthropic-bane-contas-que-usavam-claude-para-tornar-chikungunya-mais-nocivo/",
+        "title": {
+          "rendered": "Anthropic bane contas que usavam Claude para tornar chikungunya mais nocivo"
+        },
+        "featured_media": 269812
+      },
+      {
+        "id": 269996,
+        "date": "2026-09-11T11:16:15",
+        "date_gmt": "2026-09-11T14:16:15",
+        "modified_gmt": "2026-09-11T14:16:15",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/11/stf-abre-investigacao-sobre-ligacao-do-prefeito-de-sao-paulo-com-o-banco-master/",
+        "title": {
+          "rendered": "STF abre investigação sobre ligação do prefeito de São Paulo com o Banco Master"
+        },
+        "featured_media": 269995
+      },
+      {
+        "id": 269965,
+        "date": "2026-09-11T10:39:11",
+        "date_gmt": "2026-09-11T13:39:11",
+        "modified_gmt": "2026-09-11T14:16:12",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/11/os-dois-exercitos-de-vorcaro-a-turma-e-os-meninos/",
+        "title": {
+          "rendered": "Os dois exércitos de Vorcaro: a Turma e os Meninos"
+        },
+        "featured_media": 269244
+      },
+      {
+        "id": 269980,
+        "date": "2026-09-11T10:06:52",
+        "date_gmt": "2026-09-11T13:06:52",
+        "modified_gmt": "2026-09-11T13:06:52",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/11/contrato-do-escritorio-da-mulher-de-moraes-previa-expressamente-consultoria-estrategica-perante-a-propria-policia-federal/",
+        "title": {
+          "rendered": "Contrato do escritório da mulher de Moraes previa expressamente &#8220;consultoria estratégica&#8221; perante a própria Polícia Federal"
+        },
+        "featured_media": 269981
+      },
+      {
+        "id": 269801,
+        "date": "2026-09-11T10:00:00",
+        "date_gmt": "2026-09-11T13:00:00",
+        "modified_gmt": "2026-09-11T13:20:12",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/11/planos-terao-de-cobrir-mamografia-digital-sem-limite-de-idade/",
+        "title": {
+          "rendered": "Planos terão de cobrir mamografia digital sem limite de idade"
+        },
+        "featured_media": 269803
+      }
+    ],
+    "new_since_last": []
+  },
+  "mode": "OBSERVACAO_HOLD_CONTROLES",
+  "failover": "DESENHADO_NAO_ATIVO",
+  "mutations": {
+    "wordpress": 0,
+    "reservations": 0,
+    "images": 0,
+    "publish": 0,
+    "schedule": 0,
+    "failover": 0
+  },
+  "limitations": [
+    "Controles divergentes; nenhum hold operacional levantado",
+    "Sem leitura editorial integral nova ou visão de capas",
+    "Baseline canônico anterior só hash; de_dell triado por timestamp, sem afirmar detecção de toda edição sem data",
+    "Entrega da ponte pendente: helper faz rebase autostash e transporte de arquivos compartilhados modificados; não executado sob hold"
+  ]
+}

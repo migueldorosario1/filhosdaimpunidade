@@ -1,0 +1,106 @@
+{
+  "_doc": "Contrato V4 Fase 5 para preflight de promocao do laboratorio para diretorio final auditado. Nao promove automaticamente.",
+  "_version": "v1",
+  "_status": "fase_5_shadow_preflight",
+  "_updated": "2026-07-09",
+  "principios": {
+    "sem_promocao_automatica": true,
+    "sem_wordpress_real": true,
+    "sem_chamada_llm_real": true,
+    "nao_e_gate_de_rascunho_editorial": true,
+    "rascunho_editorial_segue_com_relatorio": true,
+    "foruns_nao_sao_fonte_viva": true,
+    "fonte_viva_laboratorio": "v4_labs",
+    "destino_final_planejado": "../v4",
+    "promocao_exige_decisao_humana_explicita": true
+  },
+  "source": {
+    "required_paths": [
+      "README_V4_LABS.md",
+      "AUDITOR_NOTE_FASE4_AGENTS_PIPELINE_20260709.md",
+      "codigo/test_contracts.py",
+      "contratos/v4_fluxo_dry_run_v1.json",
+      "contratos/v4_fact_check_v1.json",
+      "contratos/v4_wordpress_publicador_v1.json",
+      "contratos/v4_rascunho_primeiro_v1.json",
+      "contratos/v4_curadoria_tese_v1.json",
+      "contratos/v4_redator_shadow_v1.json"
+    ]
+  },
+  "gates": {
+    "required_contract_tests_defined_min": 88,
+    "forbid_symlinks": true,
+    "forbid_pycache": true,
+    "forbid_pyc": true,
+    "forbid_env_files": true,
+    "forbid_secret_patterns": true,
+    "require_wordpress_real_disabled": true,
+    "require_collection_request_gate_on_publicador": true,
+    "require_fact_check_text_presence": true,
+    "require_numeric_token_guard": true,
+    "require_regen_disabled_in_production_promotion": true,
+    "require_recommended_required_policy_documented": true,
+    "require_decision_evidence_when_true": true,
+    "block_promotion_if_policy_not_ratified": true,
+    "block_promotion_if_collection_open_for_publicacao_real": true
+  },
+  "decisions": {
+    "fable_auditfix2_approved": true,
+    "fable_fase5_mechanical_closed": true,
+    "gpt55_auditfix2_approved": false,
+    "recommended_required_policy_ratified": true,
+    "publication_real_opened": false,
+    "human_promotion_authorized": false
+  },
+  "decision_evidence": {
+    "fable_auditfix2_approved": {
+      "by": "Fable",
+      "at": "2026-07-09",
+      "audit_doc": "Cerebro/Foruns/carta_fable_auditoria_fase4_auditfix_20260709.md",
+      "summary": "Fable aprovou auditfix2 sem ressalvas bloqueantes."
+    },
+    "recommended_required_policy_ratified": {
+      "by": "Miguel",
+      "at": "2026-07-09",
+      "forum_doc": "Cerebro/Foruns/forum_v4_rascunho_primeiro_autocura_20260709.md",
+      "reason": "Miguel aceitou a politica conservadora: rascunho-primeiro apenas em dry-run/laboratorio; qualquer chamada real ao WordPress e promocao para root/v4 mantem gates duros ate decisao explicita."
+    },
+    "fable_fase5_mechanical_closed": {
+      "by": "Fable",
+      "at": "2026-07-10",
+      "audit_doc": "Cerebro/Foruns/carta_fable_adendo_final_fase5_typefix_20260710.md",
+      "summary": "Fable encerrou formalmente a auditoria mecanica da Fase 5: F5.2 resolvido e verificado; pendencia remanescente e editorial/factual."
+    }
+  },
+  "decision_evidence_required_fields": [
+    "by",
+    "at"
+  ],
+  "decision_evidence_required_any_of": [
+    "forum_doc",
+    "audit_doc",
+    "reason"
+  ],
+  "secret_scan": {
+    "patterns": [
+      "sk-[A-Za-z0-9_\\-]{20,}",
+      "sk-proj-[A-Za-z0-9_\\-]{20,}",
+      "sk-ant-[A-Za-z0-9_\\-]{20,}",
+      "AIza[0-9A-Za-z_\\-]{20,}",
+      "gsk_[0-9A-Za-z_\\-]{20,}",
+      "pplx-[0-9A-Za-z_\\-]{20,}"
+    ],
+    "ignore_paths": [
+      "codigo/test_contracts.py",
+      "codigo/redator_real.py"
+    ]
+  },
+  "warnings": {
+    "gpt55_audit_recommended_before_promotion": true,
+    "numeric_dates_may_false_block_when_written_extenso": true
+  },
+  "output": {
+    "path": "dados/promocao",
+    "filename": "v4_labs.promocao_preflight.json"
+  }
+}

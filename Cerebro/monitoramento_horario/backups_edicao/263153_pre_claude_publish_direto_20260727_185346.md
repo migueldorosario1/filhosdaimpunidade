@@ -1,0 +1,13 @@
+# Backup 263153 (sem patch — Índia/China sul Ásia todos os fatos confirmados)
+# sha: 9c1be93e6094d7837805cdd6c60f83746edbb89f1dab8e327f6226051829a45b
+
+<p>Segundo o <a href="https://www.scmp.com/opinion/asia-opinion/article/3361501/india-losing-its-regional-primacy-beijing-and-washington-move" rel="noopener">SCMP</a>, o sul da Ásia vive uma reconfiguração de poder silenciosa, mas estrutural.</p>
+<p>A primazia histórica da Índia na região começa a ceder terreno de forma consistente, enquanto pequenos Estados acumulam opções diplomáticas e econômicas que antes não tinham.</p>
+<p>O diagnóstico é do South China Morning Post, publicado em 27 de julho: liderança regional não se sustenta apenas pela geografia.</p>
+<p>O maior desafio à influência indiana vem da China, e começa na fronteira. Os dois países travaram uma guerra em 1962, disputam cerca de 3.500 quilômetros de fronteira e tiveram o confronto mais letal em décadas no vale de Galwan, em 2020. A rivalidade estratégica segue sem solução, mesmo após uma normalização cautelosa das relações.</p>
+<p>A dependência econômica aprofunda o problema. A Índia importou cerca de US$ 132 bilhões em produtos chineses no ano encerrado em março, mais do que de qualquer outro país. Um levantamento do governo indiano identificou aproximadamente US$ 51 bilhões em insumos críticos que poderiam ser substituídos por produção doméstica, justamente para reduzir a exposição a Pequim.</p>
+<p>O Paquistão é a expressão mais clara da estratégia regional chinesa. Entre 2020 e 2024, a China forneceu 81% das importações de armas pesadas paquistanesas, e este ano o país comissionou o primeiro de oito submarinos da classe Hangor, de projeto chinês, em um programa de US$ 5 bilhões. O Paquistão também emitiu seu primeiro título soberano em yuan, captando 1,75 bilhão de yuans no mercado chinês.</p>
+<p>Bangladesh ilustra outro risco: o de apostar em um parceiro político em vez de construir uma relação de Estado. A proximidade da Índia com a ex-primeira-ministra Sheikh Hasina fortaleceu a cooperação bilateral, mas sua queda em 2024, após um movimento popular que baniu seu partido, expôs a fragilidade dessa estratégia. A permanência de Hasina em Nova Délhi deteriora ainda mais as relações com o novo governo de Dhaka.</p>
+<p>O governo interino de Bangladesh, liderado por Muhammad Yunus, incluiu a China em sua primeira viagem internacional. Em Pequim no mês passado, representantes se reuniram com o presidente Xi Jinping e buscaram investimentos e maior cooperação. A visita sinalizou que Bangladesh pretende usar seus laços crescentes com Pequim como alavanca nas negociações com a Índia.</p>
+
+<!-- zizi_job_id: v4d_ciencia_82569e003d4f497f -->

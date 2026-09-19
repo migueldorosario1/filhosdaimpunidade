@@ -1,0 +1,36 @@
+{
+  "ref": "XM-20260910-032",
+  "commit": "a9185f6c513c6a92472ec40aab0ec987aca3ec31",
+  "started_at": "2026-09-10T16:53:17.903628-03:00",
+  "attempts": [
+    {
+      "remote": "origin",
+      "at": "2026-09-10T16:53:17.903670-03:00",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   7aab37ded..a9185f6c5  a9185f6c513c6a92472ec40aab0ec987aca3ec31 -> main\n",
+      "readback": {
+        "rc": 0,
+        "stdout": "a9185f6c513c6a92472ec40aab0ec987aca3ec31\trefs/heads/main\n",
+        "stderr": ""
+      },
+      "exact_commit_confirmed": true
+    },
+    {
+      "remote": "nyc",
+      "at": "2026-09-10T16:53:23.730606-03:00",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            a9185f6c513c6a92472ec40aab0ec987aca3ec31 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "readback": {
+        "rc": 0,
+        "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n"
+      },
+      "exact_commit_confirmed": false
+    }
+  ],
+  "recorded_at": "2026-09-10T16:54:04.782904-03:00",
+  "verification_path": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260910-032/verification.json",
+  "status": "C1_CONFIRMADA_C2_NON_FF"
+}

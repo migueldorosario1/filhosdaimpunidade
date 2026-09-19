@@ -1,0 +1,28 @@
+{
+  "schema": "cafezinho.faxina.audit-summary.v1",
+  "created_utc": "2026-08-11T08:25:23.341992+00:00",
+  "host": "Rio-Carta-Agentes",
+  "candidate": "/root/gsn_remote",
+  "classification": "recent_copy_not_eligible_for_waste_classification",
+  "decision": "preserve_in_place",
+  "reason": "Último commit e pausa operacional em 07/08/2026; com 15 dias ou menos não pode ser tratado como lixo. Depois de mais de 15 dias ainda exige consulta explícita a Miguel.",
+  "repo_head": "36f86dfac0576201a82bf5dd906bec0dc57042e8",
+  "origin_main": "36f86dfac0576201a82bf5dd906bec0dc57042e8",
+  "origin_url": "git@github.com:migueldorosario1/global-south-news.git",
+  "git_status_porcelain": "",
+  "ahead_behind_origin_main": "0\t0",
+  "inventory_counts": {
+    "directory": 1445,
+    "file": 12036,
+    "symlink": 21,
+    "special": 0
+  },
+  "indexed_file_bytes": 1756394367,
+  "sensitive_items": [
+    {
+      "path": "/root/gsn_remote/gsn/.env.local",
+      "handling": "metadata_only_no_content_no_hash"
+    }
+  ],
+  "mutation": "none_to_candidate"
+}

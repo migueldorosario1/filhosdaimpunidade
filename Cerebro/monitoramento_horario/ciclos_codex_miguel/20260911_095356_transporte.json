@@ -1,0 +1,99 @@
+{
+  "at": "2026-09-11T09:55:03.178924-03:00",
+  "local_head": "a7e3bca3c745f9c354b017d7b9b6737da95f9225",
+  "origin_head": "55999051cfc8fafaf428335bed60af33b5bdcaf1",
+  "opening_pulls": "ff_only_ok",
+  "final_pull": "fatal: Not possible to fast-forward, aborting.",
+  "hold": "HOLD_GIT_NAO_FAST_FORWARD",
+  "commit_performed": false,
+  "push_performed": false,
+  "bridge_receipt_delivery": "pending",
+  "nyc_git_head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+  "nyc_git_ancestor": false,
+  "quality_forum_delivery": {
+    "at": "2026-09-11T12:52:22.357907+00:00",
+    "forum": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/FORUM_QUALIDADE_POS_PUBLICACAO_ASTRA.md",
+    "forum_sha256": "cff05f786053917ceff934cdc8ddd3a985062ace8c938a7ad939871e910d45dd",
+    "github": {
+      "blob_sha": "e794024493257f1993db1f739d52ab61896876ac",
+      "status": "verified"
+    },
+    "lessons_sha256": "18b01bc564b9b57d511bbdaf2ea731d7289ba0c4ebfc4d3efeaca498856bf627",
+    "nyc": {
+      "actual_v41_reader_fixture": true,
+      "after_sha256": "b589a7eaa14effd1211fced4d90f9569a9fb5d1e73f532a2c9b05a1ae734fcd6",
+      "at": "2026-09-11T12:52:29.536854+00:00",
+      "backup": "/root/v4_labs/dados/backups_astra_qualidade/20260911T125222357806Z.md",
+      "before_sha256": "a30941a9aac6a98ed44679499574ef521f0711a9dbb23526401f01af0baa122d",
+      "changed": true,
+      "path": "/root/v4_labs/dados/diretriz_qualidade_viva.md",
+      "production_cycle_consumption": "not_yet_observed",
+      "status": "verified"
+    }
+  },
+  "e5_v3": {
+    "blob": "cda554a9d424858176921d227595e149a1121b32",
+    "sha256": "0bfed4a1d3721dfe19669482980f918d37151f34bbf347a3cf77cc5606fcc0a3",
+    "clauses_sha256": "f5cb41d1d7b948fc25c523779e18a873d794105a1bd0f97c3b92e41cd4573e03",
+    "read_entire": true,
+    "own_signature": "ASSINO E5 v3",
+    "signature_delivery": "pending"
+  },
+  "files": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_095356_ronda.md",
+      "sha256": "5b1e2dca0f848c05d55597f4abcfc7626fb892bf4664965acefffe383f1a6846",
+      "bytes": 6405
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_095356_editorial.md",
+      "sha256": "ca741d078dd6096fb17d9fd04251c8b19ea70a880010f16d2e4a2a99102d89e8",
+      "bytes": 6198
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_095356_evidencias.json",
+      "sha256": "e187c2db30c0241f502775af3bdf1db77ecd8949a8db59547b128d1900f7e9ae",
+      "bytes": 150952
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_095356_verificacao.json",
+      "sha256": "c12148604cf786780c5dce3b4fcc0662000e4b6120762797726a6d6b87d35175",
+      "bytes": 19552
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "98edfa31870761591789601443e508c985913ea35d78b1bc7baa15206beaafd6",
+      "bytes": 2162988
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "2423b329f3e3c66e38f56ede03da438b8e140d244dc2ad71f0507b63734910ed",
+      "bytes": 158849
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "bcbf2a63789ad5bec090b19241039b9998c263446710e3ee6898abbf2a6fccdf",
+      "bytes": 135497
+    },
+    {
+      "path": "cerebro/Foruns/canal_trindade.md",
+      "sha256": "175cecc658b272f544b7e58c394fa9bc4a638715cac4481bccad9804d8a3b518",
+      "bytes": 197871
+    },
+    {
+      "path": "cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+      "sha256": "6069933f741b1c8618eb461a3549e18b1c4a103fa49b358bb9d9354804fc4bf8",
+      "bytes": 1492
+    },
+    {
+      "path": "cerebro/Relatorios/astra/ronda_horaria/XM-20260911-019-EDITORIAL.md",
+      "sha256": "ca741d078dd6096fb17d9fd04251c8b19ea70a880010f16d2e4a2a99102d89e8",
+      "bytes": 6198
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_095356_e5_v3_parecer.md",
+      "sha256": "ad414952f57fae839b9bb113eb74db0a1a98eae7a47f1446bdfa27b8078d6b40",
+      "bytes": 2215
+    }
+  ]
+}

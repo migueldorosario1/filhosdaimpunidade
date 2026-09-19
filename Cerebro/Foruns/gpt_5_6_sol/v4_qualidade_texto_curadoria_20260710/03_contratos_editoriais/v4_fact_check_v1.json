@@ -1,0 +1,61 @@
+{
+  "_doc": "Contrato V4 para agente fact-check em dry-run. Checa fatos travados, fontes, presenca textual minima e lacunas antes da auditoria final.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "check_type": "metadata_plus_text_presence_heuristic",
+  "source": {
+    "required_fields": [
+      "item_id",
+      "curadoria_id",
+      "editoria",
+      "fatos_travados",
+      "texto_revisado"
+    ],
+    "text_fields_any": [
+      "texto_revisado",
+      "texto_real",
+      "texto_dry_run",
+      "texto_shadow"
+    ]
+  },
+  "gates": {
+    "min_required_facts": 2,
+    "required_fact_must_have_source_ref": true,
+    "required_fact_must_appear_in_text": true,
+    "block_collection_required_for_publication": false,
+    "collection_required_generates_warning": true
+  },
+  "text_presence_heuristic": {
+    "enabled": true,
+    "min_matched_tokens": 3,
+    "min_overlap_ratio": 0.35,
+    "min_token_len": 4,
+    "numeric_tokens_always_preserved": true,
+    "numeric_tokens_must_match": true,
+    "stopwords": [
+      "para",
+      "pela",
+      "pelo",
+      "sobre",
+      "entre",
+      "como",
+      "com",
+      "dos",
+      "das",
+      "que",
+      "uma",
+      "num",
+      "nas",
+      "nos",
+      "mais",
+      "menos",
+      "tambem",
+      "oficial"
+    ]
+  },
+  "output": {
+    "path": "dados/producao",
+    "suffix": "fact_check"
+  }
+}

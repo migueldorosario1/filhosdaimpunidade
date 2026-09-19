@@ -1,0 +1,85 @@
+{
+  "at": "2026-09-10T15:19:52.299558-03:00",
+  "recovery_files": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_bytes": 1455631,
+      "bytes": 1464314,
+      "sha256": "4872a2f75213c19cdd10bcbf1291c1e30070f292853d1921b9d574784f5a8088"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_bytes": 1455631,
+      "bytes": 1464314,
+      "sha256": "4872a2f75213c19cdd10bcbf1291c1e30070f292853d1921b9d574784f5a8088"
+    },
+    {
+      "path": "cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "previous_bytes": 366311,
+      "bytes": 366617,
+      "sha256": "6e81a2f0f0eafe395ee63b68d8fbb6fff48212cb67efa58526769d5b33de5806"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "previous_bytes": 366311,
+      "bytes": 367168,
+      "sha256": "3d7a33caea75889195da1fc2f5eb1ee3a06f2d135b3506aaf8866384db131339"
+    },
+    {
+      "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "previous_bytes": 698447,
+      "bytes": 699533,
+      "sha256": "835507358e71a7bf750153d945297561845d54a9142cb0543180812445d7389d"
+    },
+    {
+      "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+      "previous_bytes": 0,
+      "bytes": 140519,
+      "sha256": "dba9f0895b1850a190ce95fecffc7212c376d9086eae58c42962132f758d539a"
+    },
+    {
+      "path": "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md",
+      "previous_bytes": 0,
+      "bytes": 65238,
+      "sha256": "0f8d165b965d3127793166a5c0360687757b37b978fc3e3020393fc8c6d444fd"
+    }
+  ],
+  "previously_empty_recovered": [
+    {
+      "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+      "current_bytes": 140519,
+      "origin_bytes": 140519,
+      "matches_origin": true,
+      "current_sha256": "dba9f0895b1850a190ce95fecffc7212c376d9086eae58c42962132f758d539a",
+      "baseline": "7412d355",
+      "delta_chars": 2741
+    },
+    {
+      "path": "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md",
+      "current_bytes": 65238,
+      "origin_bytes": 65238,
+      "matches_origin": true,
+      "current_sha256": "0f8d165b965d3127793166a5c0360687757b37b978fc3e3020393fc8c6d444fd",
+      "baseline": "7412d355",
+      "delta_chars": 4893
+    }
+  ],
+  "hooks_non_sample": [],
+  "core_hooksPath_rc": 1,
+  "zero_byte_loose_objects": 0,
+  "append_prefixes": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 1464314,
+      "sha256": "4872a2f75213c19cdd10bcbf1291c1e30070f292853d1921b9d574784f5a8088"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 131768,
+      "sha256": "1a32a5b2d4d6bea9f25154f29c708cfd3f20c6b4e7b176f081a3c2e03f17ab07"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "bytes": 119825,
+      "sha256": "2920e08c961c3883ab50427d7557cdf8972214bb572d0cf5218a93647f972ba2"
+    }
+  },
+  "prefixes_preserved": true
+}

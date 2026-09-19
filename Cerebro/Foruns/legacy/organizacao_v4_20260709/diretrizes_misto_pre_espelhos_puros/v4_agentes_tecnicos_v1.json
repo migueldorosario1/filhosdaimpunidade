@@ -1,0 +1,110 @@
+{
+  "_doc": "Contrato dos agentes tecnicos V4. Agentes nao carregam diretriz editorial nem configuracao LLM hardcoded.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+    "sem_diretriz_hardcoded": true,
+    "sem_modelo_hardcoded": true,
+    "contratos_externos": true,
+    "permissao_por_camadas": true,
+    "curadoria_de_tese_em_camada_real": true,
+    "produtor_so_curadoria_em_editoria_nobre": true,
+    "imagem_le_frame_visual_da_curadoria": true
+  },
+  "agents": {
+    "coletor": {
+      "role": "coletor",
+      "descricao": "Coleta materiais brutos e escreve somente na camada bruto.",
+      "default_read_layers": [],
+      "default_write_layers": [
+        "bruto",
+        "quarentena"
+      ],
+      "requires_editorial_contract": false
+    },
+    "processador": {
+      "role": "processador",
+      "descricao": "Normaliza, deduplica e prepara material intermediario.",
+      "default_read_layers": [
+        "bruto"
+      ],
+      "default_write_layers": [
+        "intermediario",
+        "quarentena"
+      ],
+      "requires_editorial_contract": false
+    },
+    "auditor": {
+      "role": "auditor",
+      "descricao": "Promove material de intermediario para auditado ou quarentena.",
+      "default_read_layers": [
+        "bruto",
+        "intermediario",
+        "auditado",
+        "quarentena"
+      ],
+      "default_write_layers": [
+        "auditado",
+        "quarentena"
+      ],
+      "requires_editorial_contract": true
+    },
+    "curador": {
+      "role": "curador",
+      "descricao": "Escolhe a tese editorial a partir de material auditado, leitura corrente timestamped e memoria de casos.",
+      "default_read_layers": [
+        "auditado"
+      ],
+      "default_write_layers": [
+        "curadoria",
+        "quarentena"
+      ],
+      "requires_editorial_contract": true
+    },
+    "produtor": {
+      "role": "produtor",
+      "descricao": "Produz texto em editorias nobres a partir da camada de curadoria, sem ler auditado cru.",
+      "default_read_layers": [
+        "curadoria"
+      ],
+      "default_write_layers": [
+        "producao",
+        "quarentena"
+      ],
+      "requires_editorial_contract": true
+    },
+    "imagem": {
+      "role": "imagem",
+      "descricao": "Seleciona e valida imagem destacada a partir do frame visual da curadoria e banco de midia auditado.",
+      "default_read_layers": [
+        "curadoria"
+      ],
+      "default_write_layers": [
+        "producao",
+        "quarentena"
+      ],
+      "requires_editorial_contract": true
+    },
+    "publicador": {
+      "role": "publicador",
+      "descricao": "Publica somente materiais auditados e registra saida em publicado.",
+      "default_read_layers": [
+        "auditado"
+      ],
+      "default_write_layers": [
+        "publicado"
+      ],
+      "requires_editorial_contract": false
+    },
+    "observabilidade": {
+      "role": "observabilidade",
+      "descricao": "Le metricas, logs, backups, publicacoes e saude do sistema.",
+      "default_read_layers": [
+        "publicado"
+      ],
+      "default_write_layers": [],
+      "requires_editorial_contract": false
+    }
+  }
+}

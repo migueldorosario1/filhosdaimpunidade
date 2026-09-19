@@ -1,0 +1,11 @@
+{
+  "schema": "loop_miguel_bridge_config_v1",
+  "cycles_minutes": {
+    "claude": [2, 32],
+    "zcode": [0, 30],
+    "grok": [17, 47]
+  },
+  "retention_days": 3,
+  "stale_after_minutes": 720,
+  "channel_warning_bytes": 150000
+}

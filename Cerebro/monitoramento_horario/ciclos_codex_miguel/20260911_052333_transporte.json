@@ -1,0 +1,66 @@
+{
+  "ref": "XM-20260911-011",
+  "at": "2026-09-11T05:23:49.594767-03:00",
+  "baseline": "57717b8180670626f60364fc050783284734a8d2",
+  "commit": "4d9e182058681a9b053410a51f555a5503257734",
+  "attempts": [
+    {
+      "remote": "origin",
+      "at": "2026-09-11T05:23:52.280866-03:00",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [rejected]            4d9e182058681a9b053410a51f555a5503257734 -> main (fetch first)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_052333_ronda.md",
+      "sha256": "12290db53a838f4764869e0ac088270788089b902796a769303fc3e4a46532c6"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_052333_editorial.md",
+      "sha256": "cbf86a4a9bffabdcb459c38085572f3e045031123612780fca3cad196c4fed08"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_052333_verificacao.json",
+      "sha256": "6a86ea85fc09ca7534ee2785174c0ee59402ef631d997c29fc177d8c755ecae3"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_052333_encaminhamento.md",
+      "sha256": "5705ff902ea1cc1041135f8503faed5e37537ca7157019e704861b78988ca202"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "1acf98fbe0127569bcaf761de2668fd365869f527e7fefa07d370c20816275f8"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "0eae82d00ddb374a9a26ae938c30bc3356cfabea0dc5675817d610f38a03f376"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "946fcdec9613022d18927c5e47ab47ab3f0b2dffc3d1733a3f317be784926012"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_052333_evidencias.json",
+      "sha256": "053f72ff3598742360953cbf8518a1513b9658502959e2190b904e603ded8fe8"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_052333_validacao.json",
+      "sha256": "0028e181e2efb62a915ab315c759739328f4b1c6b0cfda6ea73ece89f3080cea"
+    }
+  ],
+  "state": "ENTREGA_PENDENTE",
+  "nyc": {
+    "attempted": false,
+    "reason": "non-fast-forward registrado na XM010; sem reconciliação conhecida, não repetir push condenado"
+  },
+  "remote_check": {
+    "rc": 0,
+    "stdout": "f8e6d25837605686e6afe4ffa1e3ec2e34bb59ed\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "origin_head_equals_commit": false,
+  "scope": "Entrega desta ronda; não declara rede global indisponível. Sem rebase/merge/reset/force, cópia ampla ou acionamento ponte_push.sh.",
+  "previous_message_receipt": "DS-Dell/DS-N-20260911-011 citam XM010; entrega atual medida pelo push e consulta remota."
+}

@@ -1,0 +1,32 @@
+# Histórico — ponta tripla
+
+- 2026-08-20 19:51 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266798/266796 publish limpos; 266806 CE=1 persiste (título 18c); 266817 draft CE=1; 266739 ESC=1; 0 ping novo.
+- 2026-08-20 18:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; PING 266806 no ar CE=1 (mod 18:23); 266791 publish 18:03 limpo; 266804 fm=266808; 266739 ESC=1 persiste; 1 ping.
+- 2026-08-20 17:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266804 p/ Laura; 266796 agora fm=266801; 266806/266785 no ar; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 16:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266796 p/ Laura; 266791 agora fm=266794; 266776 publish 16:13 limpo; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 15:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266791 p/ Laura (media 266792 sem thumbnail); 266751 publish 15:06 fm=266750; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 14:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266752 publish 14:09 limpo; 266776 agora fm=266777; 266739 ESC=1 persiste (sem re-ping); GL-016 dest TODOS sem ACK; 0 ping novo.
+- 2026-08-20 13:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266776 p/ Laura; 266751 retítulo TIT=76; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 12:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266747 publish 12:09 limpo; 266771 pending fm=266773; 266739 ESC=1 persiste no ar (sem re-ping); AL-007 dest TODOS sem ACK; 0 ping novo.
+- 2026-08-20 11:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; PING 266739 publish 11:29 ESC=1 (17× &lt;p); novos pending 266752/266751 c/ capa; no ar 266739/266735; CL-011 dest AGY sem ACK.
+- 2026-08-20 10:51 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266742 agora fm=266748; 266739 ESC=1 ainda pending; no ar 266735/266733; CL-011 dest AGY sem ACK; 0 ping.
+- 2026-08-20 09:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266742 pending fm=0 p/ Laura; 266739 ESC=1 pending (ticket GL); no ar 266727/266728; ACK CL-010; 0 ping.
+- 2026-08-20 08:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266733 agora fm=266738; no ar 266722/266721; 266726 TIT=114 pending; 0 ping.
+- 2026-08-20 07:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266733 pending fm=0 p/ Laura; no ar 266721 07:49; 266726 TIT=114 pending; 0 ping.
+- 2026-08-20 06:52 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266721 agora fm=266723; no ar ainda 266713; 266726 TIT=114 pending; 0 ping.
+- 2026-08-20 05:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266721 pending fm=0 p/ Laura; 266717 agora fm=266720; no ar 266713; CL-009 lido sem ACK; 0 ping.
+- 2026-08-20 04:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266717 pending fm=0 p/ Laura; no ar 266710; 266697 (5780) publish 04:45; CL-008 lido sem ACK; 0 ping.
+- 2026-08-20 03:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; no ar 266709/704/510/404; 266713 fm=266716; GL-005 lido sem ACK; 0 ping.
+- 2026-08-20 02:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266709 agora fm=266711; no ar 266699/266189; GL-004 lido sem ACK; 0 ping.
+- 2026-08-20 01:50 BRT — Grok observador: 0 capas; future=0 fm=0=0; 266709 pending fm=0 p/ Laura; no ar 266633/689/691; ACK GL-003; 0 ping.
+- 2026-08-18 09:58 BRT — Grok observador: 0 capas; future fm=0=0; 266437/266431/266424 fm=0 p/ Laura; 0 ping.
+- 2026-08-18 08:59 BRT — Grok observador: 0 capas; future fm=0=0; 266414/266424 fm=0 p/ Laura; 0 ping.
+- 2026-08-18 08:42 BRT — Emenda 4: LAURA-GROK assume capas; MIGUEL-GROK observador. Pacote pendrive + ponte 8 agentes. GM-20260818-001.
+- 2026-08-18 00:59 · Grok · ciclo 00:51: fm=0=4→2; 3 aplicadas 266360→266365 White House CC BY 2.0 + 266361→266366 MS CC BY 2.0 + 266362→266367 PF CC BY 2.0; residual 266363/364 teto; fall-back 0; 49 vivos; ping Claude recibos
+- 2026-08-18 01:59 · Grok · ciclo 01:51: fm=0=4→1; 3 aplicadas 266363→266374 Congresso CC BY 2.0 + 266364→266375 USS Stout PD + 266372→266376 Braskem CC BY-SA 4.0; residual 266373 teto; fall-back 0; 47 vivos; ping Claude recibos
+- 2026-08-18 03:00 · Grok · ciclo 02:51: fm=0=2→0; 3 aplicadas 266373→266379 Alvorada CC BY-SA 3.0 + 266377→266380 webcam CC BY-SA 4.0 + 266378→266381 MINREX CC BY-SA 4.0; fall-back 0; 46 vivos; ping Claude recibos
+- 2026-08-18 03:59 · Grok · ciclo 03:51: fm=0=1→0; 1 aplicada 266385→266387 visita sonda Petrobras CC BY-SA 4.0; fall-back 0; 45 vivos; ping Claude recibo
+- 2026-08-18 04:59 · Grok · ciclo 04:51: fm=0=2→0; 2 aplicadas 266388→266390 Mascate CC BY-SA 2.0 + 266389→266391 plenário TSE PD; fall-back 0; 42 vivos; ping Claude recibos
+- 2026-08-18 06:02 · Grok · ciclo 05:51: fm=0=3→0; 3 aplicadas 266392→266395 Freedom Shield PD-Army + 266393→266396 quermesse CC BY-SA 4.0 + 266394→266397 Marçal Talks CC BY 3.0; fall-back CE=1 (266394) ABr/Flux=0; 40 vivos; ping Claude recibos + CE 266394
+- 2026-08-18 07:00 · Grok · ciclo 06:51: fm=0=1→0; 1 aplicada 266398→266401 USS Princeton PD-Navy; fall-back CE=266394 (já ping) Flux=266399 Emenda 1 ABr=0; 42 vivos; ping Claude recibo 266398
+- 2026-08-18 08:00 · Grok · ciclo 07:51: fm=0=2→0; 2 aplicadas 266402→266411 Redenção CC BY-SA 4.0 + 266410→266412 Moraes CC BY 2.0; fall-back CE=266394 (já ping) Flux=399/404 Emenda 1 ABr=0; 43 vivos; ping Claude recibos

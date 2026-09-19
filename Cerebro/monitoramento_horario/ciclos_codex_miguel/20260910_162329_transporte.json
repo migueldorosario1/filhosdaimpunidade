@@ -1,0 +1,84 @@
+{
+  "commit": "06f9806c48735366513a4c6400e8095b6a56b736",
+  "started_at": "2026-09-10T16:23:59.015213-03:00",
+  "method": "push explícito origin + nyc; sem ponte_push.sh (rebase autostash e cópia ampla proibidos neste loop)",
+  "channels": {
+    "origin": {
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   a422cb763..06f9806c4  06f9806c48735366513a4c6400e8095b6a56b736 -> main\n",
+      "at": "2026-09-10T16:24:03.737361-03:00",
+      "readback": {
+        "rc": 0,
+        "stdout": "06f9806c48735366513a4c6400e8095b6a56b736\trefs/heads/main\n",
+        "stderr": "",
+        "at": "2026-09-10T16:24:09.294186-03:00"
+      }
+    },
+    "nyc": {
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            06f9806c48735366513a4c6400e8095b6a56b736 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "at": "2026-09-10T16:24:06.815553-03:00",
+      "readback": {
+        "rc": 0,
+        "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+        "at": "2026-09-10T16:24:13.154294-03:00"
+      }
+    }
+  },
+  "closed_at": "2026-09-10T16:24:50.141590-03:00",
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_162329_ronda.md",
+  "result": "GITHUB_CONFIRMADO_NYC_NON_FAST_FORWARD",
+  "verification": {
+    "commit": "06f9806c48735366513a4c6400e8095b6a56b736",
+    "files": [
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "sha256": "d9ad1fddecaa135b420a72b67afc656133725475c4b6675ca48988f95cc29320",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "sha256": "e3d11f7015e12ea15439eeeb6e2c10b61e777ff6417232ac74b94e2a4c1cffe5",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+        "sha256": "f472865bfa94e99d87c86f9dedfc5b1e5eee2963176d988cff56507449337bd8",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_162329_ronda.md",
+        "sha256": "eebc7a82e1a27718a3bfa7ae512d6982642fe3388e1ff9f4e9b85801db0eef85",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_162329_evidencias.json",
+        "sha256": "4bd310149eb388b67d3a70f1893d4de21b7a996e9a429581d15848ae8be34121",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_162329_integridade.json",
+        "sha256": "adfe6d0c3f04d66df50948b7939f8b2adda335753a71efff179ae7e67a72cdb0",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_162329_editorial.md",
+        "sha256": "e05189c77d55c8d8798c0319fcbbf1302a60f5adb1c771820766e92634d88ca0",
+        "matches_commit": true,
+        "utf8_without_bom": true
+      }
+    ],
+    "shared_prefixes_preserved": true,
+    "index_empty": true
+  },
+  "rounds_executed": 1
+}

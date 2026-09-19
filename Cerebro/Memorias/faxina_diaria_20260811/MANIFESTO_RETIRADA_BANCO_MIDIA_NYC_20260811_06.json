@@ -1,0 +1,35 @@
+{
+  "schema": "cafezinho.faxina.removal-manifest.v1",
+  "created_utc": "2026-08-11T09:03:00Z",
+  "authorized_by": "Miguel do Rosário",
+  "authorization_context": "Autorização explícita no chat após apresentação dos lotes local e NYC",
+  "host": "198.199.121.136",
+  "source": "/root/legacy/banco_midia_20260626",
+  "classification": "legacy_inactive_over_15_days_authorized",
+  "source_logical_bytes": 470083676,
+  "source_entries": 11,
+  "inventory": {
+    "file": "INVENTARIO_BANCO_MIDIA_LEGACY_NYC_20260811_04.jsonl",
+    "sha256": "fcf8c3cd5ff506fc1e7dd966faace9cd42d59f4b234225dfce12d23f7047ea2d"
+  },
+  "archive": {
+    "object": "b2:failover-cafezinho1/faxina/nyc/legacy-data/2026-08/rodada_20260811_06/banco_midia_legacy_nyc_exact_20260811_06.tar.gz",
+    "bytes": 89634424,
+    "sha256": "acb227ee0008a049e79f331908b35916ccebf5c9e83fe259f618f890fd76d9fd",
+    "entries": 11,
+    "remote_hash_verified": true,
+    "full_restore_diff_verified": true
+  },
+  "dependency_proof": {
+    "processes": 0,
+    "open_file_descriptors": 0,
+    "cron_systemd_or_path_references": 0,
+    "sqlite_quick_check": "ok_5_of_5",
+    "canonical_database": "/root/agent_data/banco_midia/banco_imagens_reais.db"
+  },
+  "restore": {
+    "method": "Baixar o tar em diretório temporário, extrair e revisar /root/legacy/banco_midia_20260626 antes de recolocar qualquer arquivo em caminho operacional.",
+    "requires_human_review": true
+  },
+  "removal_scope": "Somente o diretório exato /root/legacy/banco_midia_20260626; nenhum banco canônico ou outro diretório legacy entra no corte."
+}

@@ -1,0 +1,267 @@
+{
+  "aggregate": {
+    "curadoria_frozen": true,
+    "editorial_review_required_items": [
+      "v4_real_006",
+      "v4_real_007"
+    ],
+    "editorias": [
+      "v4_ciencia_tecnologia_ia",
+      "v4_cultura",
+      "v4_internacional"
+    ],
+    "failed_items": 0,
+    "ok_items": 3,
+    "total_items": 3
+  },
+  "batch_id": "v4_fase7_lab_20260710",
+  "contract": "contratos/v4_multi_item_lab_v1.json",
+  "created_at": "2026-07-10T16:36:36.215247+00:00",
+  "external_publish": false,
+  "frozen_sources": [
+    {
+      "path": "codigo/curadoria_tese.py",
+      "sha256_after": "c1c5f3f592a537089030328fbd8906209de727ae5a8e4ae965eda3256c52a521",
+      "sha256_before": "c1c5f3f592a537089030328fbd8906209de727ae5a8e4ae965eda3256c52a521",
+      "unchanged": true
+    },
+    {
+      "path": "contratos/v4_curadoria_tese_v1.json",
+      "sha256_after": "c06885ce89cb4ef5f227c378f6257d67a57ce48155002afeb519beb9a9e8dc3f",
+      "sha256_before": "c06885ce89cb4ef5f227c378f6257d67a57ce48155002afeb519beb9a9e8dc3f",
+      "unchanged": true
+    }
+  ],
+  "issues": [],
+  "items": [
+    {
+      "editoria": "v4_internacional",
+      "editorial_coherence": {
+        "editoria": "v4_internacional",
+        "human_review_required": false,
+        "issues": [],
+        "schema_version": "v1",
+        "status": "not_applicable",
+        "warnings": []
+      },
+      "fixture_path": "dados/auditado/v4_real_005.json",
+      "issues": [],
+      "item_id": "v4_real_005",
+      "ok": true,
+      "steps": [
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "curadoria_dry_run",
+          "target_path": "dados/curadoria/v4_real_005.curadoria.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "produzir_dry_run",
+          "target_path": "dados/producao/v4_real_005.producao.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "revisar_dry_run",
+          "target_path": "dados/producao/v4_real_005.revisao.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "fact_check_dry_run",
+          "target_path": "dados/producao/v4_real_005.fact_check.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "auditar_final_dry_run",
+          "target_path": "dados/auditado/v4_real_005.auditado_final.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "publicar_dry_run",
+          "target_path": "dados/publicado/v4_real_005.publicado_dry_run.json",
+          "warnings": [
+            "imagem_destacada_pendente:sem_midia_auditada:Flavio Bolsonaro"
+          ]
+        }
+      ],
+      "warnings": [
+        "imagem_destacada_pendente:sem_midia_auditada:Flavio Bolsonaro"
+      ]
+    },
+    {
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "editorial_coherence": {
+        "claim_text": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.",
+        "contract": "contratos/v4_editoria_coerencia_v1.json",
+        "editoria": "v4_ciencia_tecnologia_ia",
+        "gate_kind": "keyword_first_line_warning",
+        "human_review_required": true,
+        "issues": [],
+        "negative_template_hits": [
+          "dados do setor produtivo",
+          "indicador isolado",
+          "industria",
+          "numero mensal",
+          "politica economica",
+          "setor produtivo",
+          "valor agregado"
+        ],
+        "positive_claim_hits": [],
+        "schema_version": "v1",
+        "status": "warning",
+        "warnings": [
+          "tese_ia_desalinhada_com_objeto"
+        ]
+      },
+      "fixture_path": "dados/auditado/v4_real_006.json",
+      "issues": [],
+      "item_id": "v4_real_006",
+      "ok": true,
+      "steps": [
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "curadoria_dry_run",
+          "target_path": "dados/curadoria/v4_real_006.curadoria.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "produzir_dry_run",
+          "target_path": "dados/producao/v4_real_006.producao.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "revisar_dry_run",
+          "target_path": "dados/producao/v4_real_006.revisao.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "fact_check_dry_run",
+          "target_path": "dados/producao/v4_real_006.fact_check.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "auditar_final_dry_run",
+          "target_path": "dados/auditado/v4_real_006.auditado_final.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "publicar_dry_run",
+          "target_path": "dados/publicado/v4_real_006.publicado_dry_run.json",
+          "warnings": [
+            "imagem_destacada_pendente:sem_midia_auditada:infraestrutura de IA no Brasil"
+          ]
+        }
+      ],
+      "warnings": [
+        "imagem_destacada_pendente:sem_midia_auditada:infraestrutura de IA no Brasil",
+        "tese_ia_desalinhada_com_objeto"
+      ]
+    },
+    {
+      "editoria": "v4_cultura",
+      "editorial_coherence": {
+        "claim_text": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.",
+        "contract": "contratos/v4_editoria_coerencia_v1.json",
+        "editoria": "v4_cultura",
+        "gate_kind": "keyword_first_line_warning",
+        "human_review_required": true,
+        "issues": [],
+        "negative_template_hits": [
+          "dados do setor produtivo",
+          "indicador isolado",
+          "industria",
+          "numero mensal",
+          "politica economica",
+          "setor produtivo",
+          "valor agregado"
+        ],
+        "positive_claim_hits": [],
+        "schema_version": "v1",
+        "status": "warning",
+        "warnings": [
+          "tese_cultura_desalinhada_com_objeto"
+        ]
+      },
+      "fixture_path": "dados/auditado/v4_real_007.json",
+      "issues": [],
+      "item_id": "v4_real_007",
+      "ok": true,
+      "steps": [
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "curadoria_dry_run",
+          "target_path": "dados/curadoria/v4_real_007.curadoria.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "produzir_dry_run",
+          "target_path": "dados/producao/v4_real_007.producao.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "revisar_dry_run",
+          "target_path": "dados/producao/v4_real_007.revisao.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "fact_check_dry_run",
+          "target_path": "dados/producao/v4_real_007.fact_check.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "auditar_final_dry_run",
+          "target_path": "dados/auditado/v4_real_007.auditado_final.json",
+          "warnings": []
+        },
+        {
+          "issues": [],
+          "mode": "skipped_existing",
+          "step": "publicar_dry_run",
+          "target_path": "dados/publicado/v4_real_007.publicado_dry_run.json",
+          "warnings": [
+            "imagem_destacada_pendente:sem_midia_auditada:audiovisual brasileiro"
+          ]
+        }
+      ],
+      "warnings": [
+        "imagem_destacada_pendente:sem_midia_auditada:audiovisual brasileiro",
+        "tese_cultura_desalinhada_com_objeto"
+      ]
+    }
+  ],
+  "mode": "executed",
+  "promocao_real_executada": false,
+  "schema_version": "v1",
+  "status": "multi_item_lab_ok",
+  "wordpress_real": false
+}

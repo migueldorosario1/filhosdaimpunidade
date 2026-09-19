@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260726_2113",
+  "ts_brt": "2026-07-26T21:13:04-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260726_2113\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou HTTP status 0 (indisponível) mas não foi gerado alerta pelo coletor. Todos os outros sites estão operacionais.\",\n      \"evidencia\": \"http_status=0, alerta.nivel=\\\"nenhum\\\"\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum/motivo vazio\",\n      \"deepseek_diz\": \"HTTP 0 indica site fora do ar; deveria ter alerta mínimo P3\",\n      \"sugestao\": \"elevar para P3 ou P2 conforme política de indisponibilidade\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar regra de alerta para HTTP status 0: ceara_digital ficou sem alerta no ciclo. Avaliar se é necessário incluir allowlist ou ajuste no coletor.\",\n  \"confianca\": 0.95,\n  \"notas\": \"Os demais sites estão com métricas de frescor e HTTP consistentes. O ceara_digital teve commit hoje mas site inacessível no momento da coleta. Não há evidência de allowlist ou supressão programada.\"\n}"
+}

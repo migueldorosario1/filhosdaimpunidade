@@ -1,0 +1,178 @@
+{
+  "_doc": "Ordem editorial por contexto. Cada item referencia provider_tier em modelos_vivos.json; fallback_models vem de llm_providers.json.",
+  "_updated": "2026-07-01 17:40 BRT — contextos editoriais V3 em frontier/super_luxo; curadoria usa Gemini 3.5 Flash via gemini_luxo.",
+  "contexts": {
+    "luxo": [
+      "deepseek_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "padrao": [
+      "deepseek_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "economico": [
+      "deepseek_economico",
+      "gemini_economico",
+      "mistral_economico",
+      "moonshot_economico",
+      "alibaba_economico",
+      "groq_economico",
+      "openai_economico"
+    ],
+    "revisor": [
+      "gemini_luxo",
+      "gemini_economico",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "auditor": [
+      "gemini_economico",
+      "gemini_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "eleicoes_redacao": [
+      "deepseek_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "eleicoes_auditoria": [
+      "gemini_economico",
+      "gemini_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "eleicoes_revisao": [
+      "gemini_economico",
+      "gemini_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "eleicoes_chines": [
+      "deepseek_luxo",
+      "alibaba_luxo",
+      "zhipu_luxo",
+      "moonshot_luxo"
+    ],
+    "comentario_site": [
+      "deepseek_economico",
+      "alibaba_economico",
+      "moonshot_economico",
+      "zhipu_economico"
+    ],
+    "comentario_site_resposta": [
+      "deepseek_economico",
+      "alibaba_economico",
+      "moonshot_economico",
+      "zhipu_economico"
+    ],
+    "analise_sentimento": [
+      "deepseek_economico",
+      "alibaba_economico",
+      "moonshot_economico",
+      "zhipu_economico"
+    ],
+    "dinamico": [
+      "deepseek_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "editorial": [
+      "deepseek_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "social_redator": [
+      "deepseek_luxo",
+      "alibaba_luxo",
+      "moonshot_luxo",
+      "zhipu_luxo",
+      "mistral_luxo",
+      "gemini_luxo",
+      "openai_luxo",
+      "anthropic_luxo"
+    ],
+    "frontier": [
+      "anthropic_luxo",
+      "openai_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ],
+    "super_luxo": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ],
+    "super_luxo_auditoria": [
+      "anthropic_luxo",
+      "openai_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ],
+    "producao_editorial_v3_super_luxo": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ],
+    "brutas_plus_v3_super_luxo": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ],
+    "auditoria_final_v3_super_luxo": [
+      "anthropic_luxo",
+      "openai_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ],
+    "tribunal_visual_gemini_luxo": [
+      "gemini_luxo"
+    ],
+    "curadoria": [
+      "gemini_luxo",
+      "anthropic_luxo",
+      "openai_luxo",
+      "xai_luxo"
+    ],
+    "fact_check": [
+      "gemini_luxo",
+      "anthropic_luxo",
+      "openai_luxo",
+      "xai_luxo"
+    ],
+    "revisao_frontier": [
+      "anthropic_luxo",
+      "openai_luxo",
+      "gemini_luxo",
+      "xai_luxo"
+    ]
+  },
+  "auto_provider_order": [
+    "openai",
+    "deepseek",
+    "gemini",
+    "xai",
+    "mistral",
+    "groq",
+    "moonshot",
+    "alibaba",
+    "zhipu"
+  ],
+  "provider_hard_fallback_chain": [
+    "moonshot",
+    "alibaba",
+    "zhipu",
+    "deepseek",
+    "groq",
+    "mistral",
+    "gemini",
+    "xai",
+    "openai",
+    "anthropic"
+  ]
+}

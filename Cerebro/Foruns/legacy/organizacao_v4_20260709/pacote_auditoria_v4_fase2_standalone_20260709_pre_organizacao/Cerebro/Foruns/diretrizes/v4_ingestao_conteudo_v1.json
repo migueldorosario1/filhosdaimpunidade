@@ -1,0 +1,56 @@
+{
+  "_doc": "Contrato V4 para ingestao de conteudo: coleta bruta, normalizacao intermediaria e promocao auditada.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "principios": {
+    "coletor_so_escreve_bruto": true,
+    "processador_le_bruto_escreve_intermediario": true,
+    "auditor_le_intermediario_escreve_auditado": true,
+    "produtor_nao_le_bruto_nem_intermediario": true,
+    "dedupe_por_hash_conteudo": true,
+    "manifesto_obrigatorio": true,
+    "append_only": true
+  },
+  "fixture": {
+    "item_id": "v4_ingest_001",
+    "editoria": "v4_politica_economia",
+    "titulo": "Teste V4 de ingestao em tres camadas",
+    "primary_entity": "Flavio Bolsonaro",
+    "fonte": "fixture_ingestao_local",
+    "url": "https://controle.ocafezinho.com/teste-v4-ingestao",
+    "conteudo": "Material bruto de teste para validar coleta, normalizacao, dedupe e promocao auditada no V4."
+  },
+  "required_raw_fields": [
+    "item_id",
+    "editoria",
+    "titulo",
+    "fonte",
+    "conteudo",
+    "manifesto_origem"
+  ],
+  "required_intermediate_fields": [
+    "item_id",
+    "editoria",
+    "titulo",
+    "conteudo_normalizado",
+    "hash_conteudo",
+    "dedupe_check",
+    "manifesto_processamento"
+  ],
+  "required_audited_fields": [
+    "item_id",
+    "editoria",
+    "titulo",
+    "conteudo",
+    "primary_entity",
+    "manifesto_auditoria"
+  ],
+  "audit_policy": {
+    "fonte_validada_default": true,
+    "risco_juridico_revisado_default": true,
+    "qualidade_minima_default": true,
+    "bloquear_conteudo_vazio": true,
+    "bloquear_titulo_vazio": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "_doc": "Contrato V4 para painel local de comparacao LLM por editoria/modelo.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "inputs": {
+    "feedback": "agent_data/v4/feedback/editor_feedback.jsonl",
+    "receipts": "agent_data/v4/receipts/*.jsonl",
+    "recomputed_costs": "agent_data/v4/receipts/recomputed/*.jsonl",
+    "llm_decisions": "agent_data/v4/llm_decisions/*.jsonl"
+  },
+  "outputs": {
+    "dir": "agent_data/v4/reports",
+    "json": "llm_dashboard_latest.json",
+    "markdown": "llm_dashboard_latest.md"
+  },
+  "principios": {
+    "local_first": true,
+    "sem_prometheus_obrigatorio": true,
+    "sem_chamada_externa": true,
+    "usa_recomputed_costs_quando_existir": true,
+    "comparacao_por_editoria_modelo": true
+  },
+  "required_sections": [
+    "summary",
+    "quality_ranking",
+    "decision_counts",
+    "receipt_costs",
+    "open_gaps"
+  ],
+  "open_gap_rules": {
+    "few_feedback_samples_lt": 3,
+    "missing_feedback_for_decision": true,
+    "missing_cost_for_receipt": true
+  }
+}

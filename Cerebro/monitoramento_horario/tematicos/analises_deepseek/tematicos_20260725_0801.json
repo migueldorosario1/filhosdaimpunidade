@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_0801",
+  "ts_brt": "2026-07-25T08:01:30-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_0801\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornando http_status 0 (indisponível) mas não foi gerado alerta nem registrado problema\",\n      \"evidencia\": \"http_status=0, problemas=[], alerta.nivel=nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"deveria ter alerta P1 ou P2 por site down (http_status 0)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar ceara_digital: site offline sem alerta; verificar conectividade e rotina de monitoria.\",\n  \"confianca\": 0.8,\n  \"notas\": \"Global_south_news, rail_post e discover_brazil exibem P2 por estagnação mas suprimidos por shadow — consistente com ciclos anteriores. Nenhum falso positivo identificado. Ceara_digital é o único desalinhamento relevante.\"\n}"
+}

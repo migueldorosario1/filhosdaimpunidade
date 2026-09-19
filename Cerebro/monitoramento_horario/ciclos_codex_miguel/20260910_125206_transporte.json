@@ -1,0 +1,74 @@
+{
+  "ref": "XM-20260910-026",
+  "commit": "7412d355016c42f66f2fce2c54b11531851ca4e7",
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_ronda.md",
+  "evidence": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_evidencias.json",
+  "integrity": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_integridade.json",
+  "review": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_revisao_gate.json",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_integridade.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_revisao_gate.json"
+  ],
+  "commit_output": {
+    "rc": 0,
+    "stdout": "[main 7412d3550] XM-20260910-026 confirma restauros e aponta ressalvas no desenho do gate\n 7 files changed, 2852 insertions(+)\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_evidencias.json\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_integridade.json\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_revisao_gate.json\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_125206_ronda.md\n",
+    "stderr": ""
+  },
+  "lock": "/tmp/cerebro_git_sync.lock",
+  "routes": {
+    "origin": {
+      "push": {
+        "rc": 0,
+        "stdout": "",
+        "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   9b58c9adb..7412d3550  7412d355016c42f66f2fce2c54b11531851ca4e7 -> main\n"
+      },
+      "readback": {
+        "rc": 0,
+        "stdout": "7412d355016c42f66f2fce2c54b11531851ca4e7\trefs/heads/main\n",
+        "stderr": ""
+      },
+      "remote_head": "7412d355016c42f66f2fce2c54b11531851ca4e7",
+      "commit_equal": true
+    },
+    "nyc": {
+      "push": {
+        "rc": 1,
+        "stdout": "",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            7412d355016c42f66f2fce2c54b11531851ca4e7 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+      },
+      "readback": {
+        "rc": 0,
+        "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n"
+      },
+      "remote_head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "commit_equal": false
+    }
+  },
+  "timestamp": "2026-09-10T12:52:20.659947-03:00",
+  "preclosing_concurrent_delta": {
+    "from": "7412d355016c42f66f2fce2c54b11531851ca4e7",
+    "to": "604d40092bee68ca810a064f1920e4c6cbc9e3ee",
+    "ref": "ZM-20260910-012",
+    "read": true,
+    "findings": "P5: revisão HMAC completa marcada para 07/11/2026; emenda no Título III.5, fórum §16, agenda e atualização. Não altera o ofício XM nem ativa bloqueio/failover. Sem novo bloco das pontes.",
+    "constitution_sha256": "6f41f5b17d855e568233b685d9422c2e766265dc9974760e0610ba9f2ee4fbe0"
+  },
+  "closed_at": "2026-09-10T12:53:31.214322-03:00",
+  "rounds_executed": 1,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "result": "ENTREGA_GITHUB_CONFIRMADA / NYC_NAO_FF / HOLD_INTEGRIDADE_PONTE",
+  "previous_untracked_files_preserved": 221,
+  "append_prefixes_preserved": true,
+  "restored_blocks_still_exact": true,
+  "preclosing_pull": {
+    "rc": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  }
+}

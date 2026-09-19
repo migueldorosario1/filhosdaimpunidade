@@ -1,0 +1,74 @@
+{
+  "ref": "XM-20260909-002",
+  "round_commit": "f7a1824cb7eb4e77f42742d8db0bf7da3d6d5d19",
+  "finalized_at": "2026-09-09T10:54:59.297821-03:00",
+  "initial_attempt": {
+    "ref": "XM-20260909-002",
+    "commit": "f7a1824cb7eb4e77f42742d8db0bf7da3d6d5d19",
+    "started_at": "2026-09-09T10:52:51.289290-03:00",
+    "files": [
+      "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_105229_ronda.md",
+      "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_105229_evidencias.json"
+    ],
+    "github": {
+      "returncode": 0,
+      "output": "To github.com:migueldorosario1/cerebro-miguel.git\n   5f86fe389..f7a1824cb  HEAD -> main\n",
+      "at": "2026-09-09T10:52:54.921631-03:00",
+      "remote_check_returncode": 0,
+      "remote_head": "f7a1824cb7eb4e77f42742d8db0bf7da3d6d5d19",
+      "exact_commit_verified": true
+    },
+    "gdrive": [
+      {
+        "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "destination": "gdrive:ponte_laura_completa/ledger/codex_miguel.md",
+        "expected_sha256": "f2221fdabf360bad5c5b1b7b19b23c0836c83a9633a0f45c219013b986facd63",
+        "preflight_returncode": 124,
+        "remote_is_prefix": false,
+        "status": "HOLD: sem prefixo comum comprovado; destino preservado",
+        "at": "2026-09-09T10:53:22.915978-03:00"
+      },
+      {
+        "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+        "destination": "gdrive:ponte_laura_completa/estado/codex_miguel.md",
+        "expected_sha256": "c18ae5477568db0e80dba012154426d649b7100eeb328fb783bc0c4a4dea2dd5",
+        "preflight_returncode": 0,
+        "remote_is_prefix": true,
+        "copy_returncode": 0,
+        "readback_returncode": 0,
+        "readback_sha256": "c18ae5477568db0e80dba012154426d649b7100eeb328fb783bc0c4a4dea2dd5",
+        "verified": true,
+        "at": "2026-09-09T10:53:40.358755-03:00"
+      }
+    ],
+    "finished_at": "2026-09-09T10:53:40.358863-03:00",
+    "dual_transport_ok": false,
+    "artifact_sha256": {
+      "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "f2221fdabf360bad5c5b1b7b19b23c0836c83a9633a0f45c219013b986facd63",
+      "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "c18ae5477568db0e80dba012154426d649b7100eeb328fb783bc0c4a4dea2dd5",
+      "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_105229_ronda.md": "c2666d964582b8c89efdf8ab0d0fa4837d5cb5d66b58c7c952977244060ae961",
+      "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_105229_evidencias.json": "02cd20fe1d547b6a5dd089ab33679ca0ef68a0068b7b513016dd171036d85af6"
+    },
+    "tracked_status_at_end": "",
+    "staged_at_end": "",
+    "no_operational_mutation": true
+  },
+  "ledger_retry": {
+    "ref": "XM-20260909-002",
+    "at_start": "2026-09-09T10:54:00.365655-03:00",
+    "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "destination": "gdrive:ponte_laura_completa/ledger/codex_miguel.md",
+    "reason": "Uma retentativa apos timeout de leitura; sem escrita se prefixo nao comprovado.",
+    "preflight_returncode": 0,
+    "remote_is_prefix": true,
+    "copy_returncode": 0,
+    "readback_returncode": 0,
+    "verified": true,
+    "sha256": "f2221fdabf360bad5c5b1b7b19b23c0836c83a9633a0f45c219013b986facd63",
+    "at_finish": "2026-09-09T10:54:32.696528-03:00"
+  },
+  "dual_transport_ok": true,
+  "note": "O timeout inicial foi resolvido com uma retentativa de leitura/copia do ledger proprio. GitHub e G-Drive verificados. Proibicoes preservadas; nenhuma segunda ronda."
+}

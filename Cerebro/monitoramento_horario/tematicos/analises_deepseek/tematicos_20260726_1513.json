@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260726_1513",
+  "ts_brt": "2026-07-26T15:13:04-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260726_1513\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou HTTP 0 (falha de conexão) mas não foi gerado alerta.\",\n      \"evidencia\": \"http_status=0, alerta.nivel=nenhum, data_max_conteudo_home=null, last_commit_git=2026-07-22\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"HTTP 0 indica site fora do ar; deveria ter alerta nível P3.\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Verificar ceara_digital: HTTP 0 sem alerta; possível site fora do ar ou falha de coleta.\",\n  \"confianca\": 0.95,\n  \"notas\": \"Demais sites com conteúdo fresco e sem problemas. Apenas ceara_digital apresenta anomalia não detectada pelo coletor.\"\n}"
+}

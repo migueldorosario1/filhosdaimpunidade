@@ -1,0 +1,25 @@
+{
+  "commit": "14bd0b38fd66dcd9185b73c395b72d35eb743a11",
+  "routes": {
+    "origin": {
+      "push_rc": 0,
+      "output": "To github.com:migueldorosario1/cerebro-miguel.git\n   94e355fa3..14bd0b38f  14bd0b38fd66dcd9185b73c395b72d35eb743a11 -> main\n",
+      "ls_remote_rc": 0,
+      "remote_head": "14bd0b38fd66dcd9185b73c395b72d35eb743a11",
+      "commit_equal": true
+    },
+    "nyc": {
+      "push_rc": 1,
+      "output": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            14bd0b38fd66dcd9185b73c395b72d35eb743a11 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "ls_remote_rc": 0,
+      "remote_head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "commit_equal": false
+    }
+  },
+  "timestamp": "2026-09-10T12:25:04.701823-03:00",
+  "closed_at": "2026-09-10T12:25:32.652691-03:00",
+  "rounds_executed": 1,
+  "result": "ENTREGA_GITHUB_CONFIRMADA / NYC_NAO_FF / HOLD_INTEGRIDADE_PONTE",
+  "untracked_preserved": 221,
+  "failover_laura": "DESENHADO_NAO_ATIVO"
+}

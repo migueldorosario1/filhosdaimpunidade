@@ -1,0 +1,61 @@
+# Arquivo rotacionado de HISTORICO.md
+
+Rotação: 2026-08-18T04:26:01.961629-03:00
+SHA-256 original: `d35a93fe129d5e73ee7b3e4aa20d7d669d53e50dfb857bb06fe3bcc1cb368617`
+
+---
+
+- 2026-08-15 16:21 BRT — Grok re-ACEITO carta imagens (Miguel no chat). Backlog 848/841/837/835/838/819/840+814 fechado. Scan fm=0=0. Loop segue.
+- 2026-08-15 00:16 · Grok · ciclo 00:16: fm=0=0; 0 aplicadas; 44 vivos; 265803 publish 00:00; 265876 novo c/ capa; 0 ping
+- 2026-08-15 00:46 · Grok · ciclo 00:46: fm=0=0; 0 aplicadas; 44 vivos; 265794 publish 00:30; 265878 novo c/ capa ZCode; 0 ping
+- 2026-08-15 01:16 · Grok · ciclo 01:16: fm=0=0; 0 aplicadas; 43 vivos; 265797 publish 01:00; 265880 novo c/ capa ZCode; Redis 1 hiccup retry OK; 0 ping
+- 2026-08-15 01:46 · Grok · ciclo 01:46: fm=0=0; 0 aplicadas; 44 vivos; 265812 publish 01:30; 265884/885 novos c/ capa ZCode; 0 ping
+- 2026-08-15 02:16 · Grok · ciclo 02:16: fm=0=0; 0 aplicadas; 42 vivos; 265817 publish 02:00; 265888 novo c/ capa; fonte-base residual=0; 0 ping
+- 2026-08-15 02:46 · Grok · ciclo 02:46: fm=0=0; 0 aplicadas; 40 vivos; 265885 trash; LIDO dedup Claude (mapeio 03:17); 0 ping
+- 2026-08-15 03:17 · Grok · ciclo 03:17: fm=0=0; 0 aplicadas; 38 vivos; 265823 publish 03:00; dedup FEITO 1 clone 885←769; 0 ping
+- 2026-08-15 03:49 · Grok · ciclo 03:49: 1 aplicada 265894→265895 NSF PD; 39 vivos; 265819 publish 03:30; 0 ping
+- 2026-08-15 04:16 · Grok · ciclo 04:16: fm=0=0; 0 aplicadas; 36 vivos; 265837 publish 04:00 (capa Grok); 265894 future 14:30; 0 ping
+- 2026-08-15 04:47 · Grok · ciclo 04:47: fm=0=0; 0 aplicadas; 36 vivos; 265837 no ar (capa Grok); 265896 pending c/ capa ZCode 265897; ZCode self-dup fix 04:28; 0 ping
+- 2026-08-15 05:17 · Grok · ciclo 05:17: fm=0=0; 0 aplicadas; 36 vivos; 265835 publish 05:00; 265898 future 16:00 c/ capa ZCode 265901; 0 ping
+- 2026-08-15 05:47 · Grok · ciclo 05:47: fm=0=0; 0 aplicadas; 36 vivos; 265838 publish 05:30; 265840 sobe 06:00; 0 ping
+- 2026-08-15 06:17 · Grok · ciclo 06:17: fm=0=0; 0 aplicadas; 36 vivos; 265840 publish 06:00; 265902/903 future c/ capa ZCode; 903 residual=0; 0 ping
+- 2026-08-15 06:47 · Grok · ciclo 06:47: fm=0=0; 0 aplicadas; 36 vivos; 265839 publish 06:30; 265906 future 18:00 c/ capa ZCode 265907; ZCode meta-v2 06:26; 0 ping
+- 2026-08-15 07:17 · Grok · ciclo 07:17: fm=0=0; 0 aplicadas; 36 vivos; 265908 pending c/ capa ZCode 265911; PING Claude 265908 `data da fonte original`
+- 2026-08-15 07:47 · Grok · ciclo 07:47: fm=0=0; 0 aplicadas; 36 vivos; 265841 publish 07:30; 265908 future 19:00 residual=0; 265912 pending c/ capa ZCode; 0 ping
+- 2026-08-15 08:17 · Grok · ciclo 08:17: fm=0=0; 0 aplicadas; 36 vivos; 265814 publish 08:00; 265912 future 20:00; 265848 sobe 08:30; 0 ping
+- 2026-08-15 08:47 · Grok · ciclo 08:47: fm=0=0; 0 aplicadas; 36 vivos; 265848 publish 08:30; 265914/915 c/ capa ZCode; prompt-meta FECHADO; 0 ping
+- 2026-08-15 09:17 · Grok · ciclo 09:17: fm=0=0; 0 aplicadas; 36 vivos; 265791 publish 09:00; 265918 pending c/ capa ZCode 265921; 265915 future 21:00; 0 ping
+- 2026-08-15 09:47 · Grok · ciclo 09:47: fm=0=0; 0 aplicadas; 38 vivos; 265922/923 pending c/ capa ZCode; 265918 future 21:30; 265876 sobe 10:00; 0 ping
+- 2026-08-15 10:17 · Grok · ciclo 10:17: fm=0=0; 0 aplicadas; 38 vivos; 265876 publish 10:00; 265926 pending c/ capa ZCode 265927; 265922 future 22:00; 0 ping
+- 2026-08-15 10:47 · Grok · ciclo 10:47: fm=0=0; 0 aplicadas; 38 vivos; 265845 publish 10:30; 265928 pending c/ capa ZCode 265930; 265923 future 22:30; 0 ping
+- 2026-08-15 11:17 · Grok · ciclo 11:17: fm=0=0; 0 aplicadas; 36 vivos; 265878 publish 11:00; 265928 NO-HOME 11:04; 265926 future 23:00; PING 265880 utm_openai
+- 2026-08-15 11:47 · Grok · ciclo 11:47: fm=0=0; 0 aplicadas; 37 vivos; 265880 publish 11:30 utm=0; 265937/939 pending c/ capa; lote utm 894+ intacto; 0 ping novo
+- 2026-08-15 12:17 · Grok · ciclo 12:17: fm=0=0; 0 aplicadas; 37 vivos; lote utm zerado; 937/939 future 00:00/23:30; 265884 sobe 12:30; 0 ping
+- 2026-08-15 12:47 · Grok · ciclo 12:47: fm=0=0; 0 aplicadas; 38 vivos; 265884 publish 12:30; 941/942 pending c/ capa ZCode; 928 ainda 20699; 0 ping
+- 2026-08-15 13:17 · Grok · ciclo 13:17: fm=0=0 (947 worker 265948); 0 aplicadas; 38 vivos; 265888 publish 13:00; 941/942 future 01:00/00:30; 928 cats=22; 0 ping
+- 2026-08-15 13:47 · Grok · ciclo 13:47: fm=0=0; 0 aplicadas; 40 vivos; 949/950 pending c/ capa ZCode; 265892 sobe 14:00; 0 ping
+- 2026-08-15 14:17 · Grok · ciclo 14:17: fm=0=0; 0 aplicadas; 39 vivos; 265892 publish 14:00; 950/947 future 01:30/02:00; 950 lead OK; 0 ping
+- 2026-08-15 14:47 · Grok · ciclo 14:47: fm=0=0; 0 aplicadas; 39 vivos; 265894 publish 14:30 (capa Grok); 953/954 pending c/ capa ZCode; PING 265953 CONTENT END; 950 lead OK
+- 2026-08-15 15:17 · Grok · ciclo 15:17: fm=0=0; 0 aplicadas; 39 vivos; 953 residual=0 FECHADO-CLAUDE; 954/953 future 02:30/03:00; 265896 sobe 15:30; 0 ping
+- 2026-08-15 15:47 · Grok · ciclo 15:47: fm=0=0; 0 aplicadas; 39 vivos; 265896 publish 15:30; 959/960 pending c/ capa; LIDO 265959 pós-jogo; 0 ping
+- 2026-08-15 16:17 · Grok · ciclo 16:17: fm=0=0; 0 aplicadas; 39 vivos; 265898 publish 16:00; 960/949 future 03:30/04:00; 959 pending; 0 ping
+- 2026-08-15 16:47 · Grok · ciclo 16:47: fm=0=0; 0 aplicadas; 39 vivos; 265898 no ar; 963/965 pending c/ capa; 959 pending pós-18:30; 0 ping
+- 2026-08-15 17:17 · Grok · ciclo 17:17: fm=0=0; 0 aplicadas; 39 vivos; 265902 publish 17:00; 965/963 future 04:30/05:00; 967 pending c/ capa; 0 ping
+- 2026-08-15 17:47 · Grok · ciclo 17:47: fm=0=0; 0 aplicadas; 39 vivos; 265903 publish 17:30; 967 future 05:30; 971/972 pending c/ capa; 0 ping
+- 2026-08-15 18:17 · Grok · ciclo 18:17: fm=0=0; 0 aplicadas; 39 vivos; 265906 publish 18:00; 972 future 06:00; 959 pending pós-18:30; 0 ping
+- 2026-08-15 18:47 · Grok · ciclo 18:47: fm=0=0; 0 aplicadas; 39 vivos; 265906 no ar; 959 FECHADO-ZCODE 3x1; 975 pending c/ capa; 0 ping
+- 2026-08-15 19:17 · Grok · ciclo 19:17: fm=0=0; 0 aplicadas; 39 vivos; 265908 publish 19:00; 959/971 future 06:30/07:00; 977 pending c/ capa; 0 ping
+- 2026-08-15 19:47 · Grok · ciclo 19:47: fm=0=0; 0 aplicadas; 39 vivos; 265908 no ar; 265912 sobe 20:00; 981 pending c/ capa ZCode; 0 ping
+- 2026-08-15 20:17 · Grok · ciclo 20:17: fm=0=0; 0 aplicadas; 39 vivos; 265912 publish 20:00; 977/975 future 07:30/08:00; 983 pending c/ capa worker; 0 ping
+- 2026-08-15 20:47 · Grok · ciclo 20:47: fm=0=0; 0 aplicadas; 39 vivos; 265914 publish 20:30; 985 pending c/ capa ZCode; PING Claude 265985 CONTENT END
+- 2026-08-15 21:17 · Grok · ciclo 21:17: fm=0=0; 0 aplicadas; 39 vivos; 265915 publish 21:00; 985 future 09:00 residual=0 FECHADO; 987 pending c/ capa; 0 ping
+- 2026-08-15 21:47 · Grok · ciclo 21:47: fm=0=1 (265992); 0 aplicadas (ZCode PULADO 21:38); 39 vivos; 265918 publish 21:30; 0 ping
+- 2026-08-15 22:17 · Grok · ciclo 22:17: fm=0=0; 0 aplicadas; 39 vivos; 265922 publish 22:00; 992 capa ZCode 265997; 983/991 future 09:30/10:00; 0 ping
+- 2026-08-15 22:47 · Grok · ciclo 22:47: fm=0=0; 0 aplicadas; 39 vivos; 265923 publish 22:30; 992 future 10:30; 266000/001 pending c/ capa; 0 ping
+- 2026-08-15 23:17 · Grok · ciclo 23:17: fm=0=0; 0 aplicadas; 39 vivos; 265926 publish 23:00; 987 future 11:00; 266004 pending c/ capa ZCode; 0 ping
+- 2026-08-15 23:47 · Grok · ciclo 23:47: fm=0=0; 0 aplicadas; 39 vivos; 265939 publish 23:30; 266000 future 11:30; 266011 pending c/ capa; 0 ping
+- 2026-08-15 02:40 · Claude · FECHOU [CLAUDE→ZCODE-METALINGUAGEM-SUTIL-3A-OCORRENCIA] após ZCode aplicar fix upstream em 18min (worker v4_vertical_draft_worker.py, backup .bak_pre_meta_strip_20260815). Meu paliativo cai pra audit-only.
+- 2026-08-15 02:40 · Claude · APPEND fila_para_grok [CLAUDE→GROK-INVESTIGAR-DEDUP-WORKER-VS-REPETIDOR-20260815-0240] — tarefa de mapeamento (não intervenção) enquanto ZCode zera fila de imagens; 2 dups hoje sugerem worker V4 lê mesma fonte que repetidor sem checar
+- 2026-08-15 03:35 · Claude · FECHOU [GROK→CLAUDE-DEDUP-MAPEAMENTO-PRONTO] + APPEND fila_para_zcode [CLAUDE→ZCODE-DEDUP-INTAKE-WORKER-V4-20260815-0335] — Grok entregou análise em 30min; achado real é self-dup worker V4 (3 casos 24h) > dup com repetidor (1 caso); escalado ZCode com snippet Python conceitual
+- 2026-08-15 11:32 · Claude · RESPOSTA formal incidente 265876 em `Foruns/resposta_claude_miguel_incidente_265876_20260815.md` — assumiu responsabilidade editorial, mapeou causa (regex texto sem parser href), aplicou fix imediato no agendar(), escalou ZCode fix worker upstream
+- 2026-08-15 11:45 · Claude · REGRA META criada por ordem Miguel: autoaprendizado 5 fases (registro+indexação+diretriz+integração+re-leitura). Artefatos: memory feedback_processo_autoaprendizado + MEMORY topo + Foruns/V4_DIRETRIZES_APRENDIDAS.md + cópia NYC contratos/. Ritual Vigília ampliado: ler memória top ANTES de cada Slot.

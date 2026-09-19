@@ -1,0 +1,2410 @@
+{
+  "first_clock_observation_brt": "2026-09-06T08:47:40.402744-03:00",
+  "snapshot_brt": "2026-09-06T08:48:06.643357-03:00",
+  "previous_receipt": "20260906_082058_ronda.md",
+  "previous_evidence_sha256": "2aaba4f3337b588869db04b8251173f4626cfd700925c1be671a01fa49bd7cb9",
+  "head": "33d0ac927537c9db245b4d70a85d4250d4f5150b",
+  "temporary_directory": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q",
+  "sources": {
+    "/home/migueldorosario/cerebro-miguel/LOOP_MIGUEL_CODEX.md": {
+      "exists": true,
+      "sha256": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+      "bytes": 5018,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_000.bin",
+      "same_as_previous": true,
+      "previous_sha256": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+      "reading": "normativa obrigatória integral lida nesta ronda"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": {
+      "exists": true,
+      "sha256": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+      "bytes": 6955,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_001.bin",
+      "same_as_previous": true,
+      "previous_sha256": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+      "reading": "normativa obrigatória integral lida nesta ronda"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/claude_memory/project_cadencias_trindade_20260817.md": {
+      "exists": true,
+      "sha256": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+      "bytes": 4802,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_002.bin",
+      "same_as_previous": true,
+      "previous_sha256": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+      "reading": "normativa obrigatória integral lida nesta ronda"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/MEMORY.md": {
+      "exists": true,
+      "sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "bytes": 7251,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_003.bin",
+      "same_as_previous": true,
+      "previous_sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "reading": "normativa obrigatória integral lida nesta ronda"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/CONTRATO_PONTE_COMPLETA.md": {
+      "exists": true,
+      "sha256": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380",
+      "bytes": 12613,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_004.bin",
+      "same_as_previous": true,
+      "previous_sha256": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380",
+      "reading": "normativa obrigatória integral lida nesta ronda"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "exists": true,
+      "sha256": "d900b38c4a57af0a007e33762462e26d0e0a0af7784d5c2e76847a6605f784b2",
+      "bytes": 2324786,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_005.bin",
+      "same_as_previous": false,
+      "previous_sha256": "741241d7416339e9e52a9a7bdff5ac7763583a799e3fe05497302f88127c4a0b",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "exists": true,
+      "sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "bytes": 171,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_006.bin",
+      "same_as_previous": true,
+      "previous_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "exists": true,
+      "sha256": "4d49087ddf765d1f58bd5308c38067e83abec9a9455466ab67b7c95a29267757",
+      "bytes": 12856,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_007.bin",
+      "same_as_previous": true,
+      "previous_sha256": "4d49087ddf765d1f58bd5308c38067e83abec9a9455466ab67b7c95a29267757",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "exists": true,
+      "sha256": "f6e397a74bc6f4242c88014bb9faa23377099f1aae6fb08c24c05aa934f3cc6f",
+      "bytes": 243904,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_008.bin",
+      "same_as_previous": false,
+      "previous_sha256": "a1712aa8f31ac5f18aa0cd6f9af03f17d38d50029eae875587948c1dfc5db2a5",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/canal_trindade.md": {
+      "exists": true,
+      "sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "bytes": 34534,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_009.bin",
+      "same_as_previous": true,
+      "previous_sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_imagens_v4_LOG.md": {
+      "exists": true,
+      "sha256": "5b5fc8feb7b8580852919cb5c3edcf7a2ef9c6987e08e59c1c842349c13ac970",
+      "bytes": 322879,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_010.bin",
+      "same_as_previous": true,
+      "previous_sha256": "5b5fc8feb7b8580852919cb5c3edcf7a2ef9c6987e08e59c1c842349c13ac970",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/codex.md": {
+      "exists": true,
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "bytes": 11403,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_011.bin",
+      "same_as_previous": true,
+      "previous_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/claude.md": {
+      "exists": true,
+      "sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb",
+      "bytes": 1036878,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_012.bin",
+      "same_as_previous": true,
+      "previous_sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/zcode.md": {
+      "exists": true,
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "bytes": 48590,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_013.bin",
+      "same_as_previous": true,
+      "previous_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/grok.md": {
+      "exists": true,
+      "sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "bytes": 18816,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_014.bin",
+      "same_as_previous": true,
+      "previous_sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "exists": true,
+      "sha256": "a29f3988ea5a9e0ef1f46a0ceb53199bf72356af198d68459d0a1aea26c5786d",
+      "bytes": 7130963,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_015.bin",
+      "same_as_previous": false,
+      "previous_sha256": "6b56aa71e109aea80cedcfae23cd31e4338a6efd1ea9313d75d99006b41c8d68",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "exists": true,
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "bytes": 76859,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_016.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "exists": true,
+      "sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "bytes": 93356,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_017.bin",
+      "same_as_previous": true,
+      "previous_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "exists": true,
+      "sha256": "d900b38c4a57af0a007e33762462e26d0e0a0af7784d5c2e76847a6605f784b2",
+      "bytes": 2324786,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_018.bin",
+      "same_as_previous": false,
+      "previous_sha256": "741241d7416339e9e52a9a7bdff5ac7763583a799e3fe05497302f88127c4a0b",
+      "reading": "delta equivalente ao par já lido; igualdade por SHA256"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "exists": true,
+      "sha256": "a29f3988ea5a9e0ef1f46a0ceb53199bf72356af198d68459d0a1aea26c5786d",
+      "bytes": 7130963,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_019.bin",
+      "same_as_previous": false,
+      "previous_sha256": "6b56aa71e109aea80cedcfae23cd31e4338a6efd1ea9313d75d99006b41c8d68",
+      "reading": "delta equivalente ao par já lido; igualdade por SHA256"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "exists": true,
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "bytes": 76859,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_020.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "exists": true,
+      "sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "bytes": 93356,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_021.bin",
+      "same_as_previous": true,
+      "previous_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "exists": true,
+      "sha256": "8f0acbce6ce30c4bc39e998fbc6c77133a8c0bba557e50001437423c6a0d449f",
+      "bytes": 154,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_022.bin",
+      "same_as_previous": true,
+      "previous_sha256": "8f0acbce6ce30c4bc39e998fbc6c77133a8c0bba557e50001437423c6a0d449f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Estilo/MANUAL_DE_COMUNICACAO_INTERNA.md": {
+      "exists": true,
+      "sha256": "c2e4802129fe4c6d01cb03aad66f1130b977acc605401eccc59e89db0dab4753",
+      "bytes": 6985,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_023.bin",
+      "same_as_previous": true,
+      "previous_sha256": "c2e4802129fe4c6d01cb03aad66f1130b977acc605401eccc59e89db0dab4753",
+      "reading": "normativa obrigatória integral lida nesta ronda"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md": {
+      "exists": true,
+      "sha256": "df871c53d1ef4f4c5db966a127ea96671e9d7870c7ec891f6ea0e274ff9a1707",
+      "bytes": 18577,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_024.bin",
+      "same_as_previous": false,
+      "previous_sha256": "1c7381c01671bbbed274ac0fbdbb7c9a54af2262061b41be5c8412b5dacf5ebe",
+      "reading": "delta inventariado; trechos pertinentes lidos; linhas derivadas longas parcialmente exibidas"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/astra.md": {
+      "exists": true,
+      "sha256": "e25154bee60dce7c16285cb9ede17c5884fba27d2dbe5201591c9cf12be4c27a",
+      "bytes": 14189,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_025.bin",
+      "same_as_previous": true,
+      "previous_sha256": "e25154bee60dce7c16285cb9ede17c5884fba27d2dbe5201591c9cf12be4c27a",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "exists": true,
+      "sha256": "b16ea9ad24064f23ebcef82023bc1324262f2a2c2271abe34afa96249daaa092",
+      "bytes": 155687,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_026.bin",
+      "same_as_previous": false,
+      "previous_sha256": "f94ced029b571ebc17f3a0ffcc04db2f227dc092dcd96943f3a9f2298bc91848",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/astra.md": {
+      "exists": true,
+      "sha256": "75da47ed15b529d8ef4fa3725e97cf41f9a42be34b41cedd97ef06014a2d3a89",
+      "bytes": 9599,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_027.bin",
+      "same_as_previous": true,
+      "previous_sha256": "75da47ed15b529d8ef4fa3725e97cf41f9a42be34b41cedd97ef06014a2d3a89",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md": {
+      "exists": true,
+      "sha256": "e2bce2ebb6fe2d5c94c3384a000314fde953cf93e0c90d5a52b32a519310f2f0",
+      "bytes": 658227,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_028.bin",
+      "same_as_previous": false,
+      "previous_sha256": "133e14bfc95238f6e54302fbe6c44ffed30cb9c6e106eb3335ada066407475e8",
+      "reading": "delta inventariado; trechos pertinentes lidos; linhas derivadas longas parcialmente exibidas"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_astra.md": {
+      "exists": true,
+      "sha256": "0873b963d5a83ffbac510276c4aea2553cd765cb1e21887879a5c07d27b39927",
+      "bytes": 66294,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_029.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0873b963d5a83ffbac510276c4aea2553cd765cb1e21887879a5c07d27b39927",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Estilo/manual_do_publicador.md": {
+      "exists": true,
+      "sha256": "33b9b0fdec23e2942116b4db04bc097f5852b15f45251d07452eba34e363d536",
+      "bytes": 7979,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_030.bin",
+      "same_as_previous": true,
+      "previous_sha256": "33b9b0fdec23e2942116b4db04bc097f5852b15f45251d07452eba34e363d536",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CONTRATO_GERAL_ECOSISTEMA.md": {
+      "exists": true,
+      "sha256": "52207f3d8fca172a38a1b4b14abc69775274787063f2238a1c0cd5cde13d43bc",
+      "bytes": 46798,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_031.bin",
+      "same_as_previous": true,
+      "previous_sha256": "52207f3d8fca172a38a1b4b14abc69775274787063f2238a1c0cd5cde13d43bc",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/memoria_comum/memoria_comum.md": {
+      "exists": true,
+      "sha256": "7d39392d1ec084b2ddecc21aa718fe9a5814d90c397a1f0a9de0e0d9c023a6a5",
+      "bytes": 14221,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_032.bin",
+      "same_as_previous": true,
+      "previous_sha256": "7d39392d1ec084b2ddecc21aa718fe9a5814d90c397a1f0a9de0e0d9c023a6a5",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/inbox_trindade/claude.md": {
+      "exists": true,
+      "sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "bytes": 35767,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_033.bin",
+      "same_as_previous": true,
+      "previous_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "exists": true,
+      "sha256": "a1712aa8f31ac5f18aa0cd6f9af03f17d38d50029eae875587948c1dfc5db2a5",
+      "bytes": 241934,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_034.bin",
+      "same_as_previous": true,
+      "previous_sha256": "a1712aa8f31ac5f18aa0cd6f9af03f17d38d50029eae875587948c1dfc5db2a5",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_ideias.md": {
+      "exists": true,
+      "sha256": "99e8f5bb4fcbfc0f7d18ff0f1c788aac3011b647260acd31d80381ba7b893f33",
+      "bytes": 477364,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_035.bin",
+      "same_as_previous": false,
+      "previous_sha256": "640ecafc01d200a461f58c2623c4ea875937a9e424b4c630e6b9d73f66885c0c",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/telegram_dsc/INBOX_MIGUEL.md": {
+      "exists": true,
+      "sha256": "c78e14968a5ba2f3ad66368f6ad2262914e262d555a02b70cb2511c31abc23ba",
+      "bytes": 73708,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_036.bin",
+      "same_as_previous": true,
+      "previous_sha256": "c78e14968a5ba2f3ad66368f6ad2262914e262d555a02b70cb2511c31abc23ba",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-05_bloco018_desentupir_ponte_canais.md": {
+      "exists": true,
+      "sha256": "e6736c3f5edd918a58f00aaac59a8789b519aa4cd97f561a6207f6b2dd60405d",
+      "bytes": 23398,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_037.bin",
+      "same_as_previous": true,
+      "previous_sha256": "e6736c3f5edd918a58f00aaac59a8789b519aa4cd97f561a6207f6b2dd60405d",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/revisao/canal_dsn_revisores.md": {
+      "exists": true,
+      "sha256": "135fb2d3e005720017176594d0c8be946ca89d02aae5537a5d62b77ca76be182",
+      "bytes": 398962,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_038.bin",
+      "same_as_previous": false,
+      "previous_sha256": "63a0f7ecfa2a2f936298d2a4d7b8bb84c2e0dd190ad9963e05b4fe5485a893d0",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/forum_ronda_zm_vigia_1h_20260903.md": {
+      "exists": true,
+      "sha256": "38356f90106fd1986990d4bdb59939396bfdabb5818688ee168806166e1aeaac",
+      "bytes": 21742,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_039.bin",
+      "same_as_previous": true,
+      "previous_sha256": "38356f90106fd1986990d4bdb59939396bfdabb5818688ee168806166e1aeaac",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/escuta/entrada_1609.json": {
+      "exists": true,
+      "sha256": "d6b135e2cf9f4ac068e4e201f9940216792939788820b30fe8429bb2d1cf1358",
+      "bytes": 133,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_040.bin",
+      "same_as_previous": true,
+      "previous_sha256": "d6b135e2cf9f4ac068e4e201f9940216792939788820b30fe8429bb2d1cf1358",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/escuta/conversa_48h.jsonl": {
+      "exists": true,
+      "sha256": "43e1d423dd962a4c3a41eb495cc8d221e9d7c8ca5e211d64638b39984d0f5126",
+      "bytes": 5734,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_041.bin",
+      "same_as_previous": true,
+      "previous_sha256": "43e1d423dd962a4c3a41eb495cc8d221e9d7c8ca5e211d64638b39984d0f5126",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md": {
+      "exists": true,
+      "sha256": "0e8f25bada1d15237b1646542e245ee8750f586eae1d073061d149af79bface3",
+      "bytes": 645789,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_042.bin",
+      "same_as_previous": false,
+      "previous_sha256": "bf2994a7de7cf3fdb69db2f3f0f9585871a5412c12411f735d27c56e1a67c83f",
+      "reading": "delta inventariado; trechos pertinentes lidos; linhas derivadas longas parcialmente exibidas"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/youtube/canal_ds_youtube.md": {
+      "exists": true,
+      "sha256": "8d0648090040a2f809551c7751decdef378dfe9606304e8ef78ebf7797bb921e",
+      "bytes": 158577,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_043.bin",
+      "same_as_previous": true,
+      "previous_sha256": "8d0648090040a2f809551c7751decdef378dfe9606304e8ef78ebf7797bb921e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/FORUM_ASTRA_TELEGRAM_CEREBRO_20260905.md": {
+      "exists": true,
+      "sha256": "35872f21b7a778b3df8814ae87e4703ba9f18072849b5d4c492776aa06d907b0",
+      "bytes": 18651,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_044.bin",
+      "same_as_previous": true,
+      "previous_sha256": "35872f21b7a778b3df8814ae87e4703ba9f18072849b5d4c492776aa06d907b0",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-CORRECAO-16H-20260905.md": {
+      "exists": true,
+      "sha256": "cb47771d918d74e9b5f2bb79e62af24927b8bf334915e3576fc6277ee72f1062",
+      "bytes": 6677,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_045.bin",
+      "same_as_previous": true,
+      "previous_sha256": "cb47771d918d74e9b5f2bb79e62af24927b8bf334915e3576fc6277ee72f1062",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/telegram_dsc/RESPOSTAS.md": {
+      "exists": true,
+      "sha256": "57363f009d239336a6d01593ca363369906770ed9ad6f8667008c47d3a4df74a",
+      "bytes": 118465,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_046.bin",
+      "same_as_previous": true,
+      "previous_sha256": "57363f009d239336a6d01593ca363369906770ed9ad6f8667008c47d3a4df74a",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/projeto_cafezinho_agentes/foruns/canal_trindade.md": {
+      "exists": true,
+      "sha256": "02827d735dfa3ddf9f8f769fb9eb351bcb08e2ebd4b2b119503096ef4c76f017",
+      "bytes": 107858,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_047.bin",
+      "same_as_previous": true,
+      "previous_sha256": "02827d735dfa3ddf9f8f769fb9eb351bcb08e2ebd4b2b119503096ef4c76f017",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260905_baleia_azul_painel_v6_sync.md": {
+      "exists": true,
+      "sha256": "4b4b53d2aac2557903794b9ccf4a5719fe4624da523839717219a3f93a0f4496",
+      "bytes": 2091,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_048.bin",
+      "same_as_previous": true,
+      "previous_sha256": "4b4b53d2aac2557903794b9ccf4a5719fe4624da523839717219a3f93a0f4496",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-170001-1788638401308511441.md": {
+      "exists": true,
+      "sha256": "67f069f99985a2e01148ac56739ef5d121bf6a2f32aa8f7f168d196c1075158d",
+      "bytes": 3687,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_049.bin",
+      "same_as_previous": true,
+      "previous_sha256": "67f069f99985a2e01148ac56739ef5d121bf6a2f32aa8f7f168d196c1075158d",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/FORUM_ASTRA_RONDAS_AUTOMATICAS.md": {
+      "exists": true,
+      "sha256": "440493692a9d4d6588b9be178cd2d38fc5de238900087f9eebc0a4e2f5a29e90",
+      "bytes": 9181,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_050.bin",
+      "same_as_previous": true,
+      "previous_sha256": "440493692a9d4d6588b9be178cd2d38fc5de238900087f9eebc0a4e2f5a29e90",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-05_v42mon_veredito_400567_arquiteto.md": {
+      "exists": true,
+      "sha256": "0e97a36568a6a687ec1150b0a26a3e3ccb5ac2acc2db2a5d5d1089a774363d47",
+      "bytes": 10488,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_051.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0e97a36568a6a687ec1150b0a26a3e3ccb5ac2acc2db2a5d5d1089a774363d47",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CEREBRO_NODE_BUGS_ATIVOS.md": {
+      "exists": true,
+      "sha256": "f0885d88f6edcfc89970c165f1eb5e59ebf58bb32fdb8a3e2e244239164071da",
+      "bytes": 578860,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_052.bin",
+      "same_as_previous": false,
+      "previous_sha256": "d2605892859cdeb29412510786242103de0589d9d82333a98d99439248849e96",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260905_cl172_nota_246762_executada.md": {
+      "exists": true,
+      "sha256": "3b45ed36e5d774d0eab6dc5e50f2851b0734135322d0dbf5ec04049ddfb9fbb2",
+      "bytes": 2621,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_053.bin",
+      "same_as_previous": true,
+      "previous_sha256": "3b45ed36e5d774d0eab6dc5e50f2851b0734135322d0dbf5ec04049ddfb9fbb2",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-180001-1788642001506513381.md": {
+      "exists": true,
+      "sha256": "434dc649b09a7c2c6a6720d4c0d42c96e12290eb035becc9e24af82bc0b4d13f",
+      "bytes": 3381,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_054.bin",
+      "same_as_previous": true,
+      "previous_sha256": "434dc649b09a7c2c6a6720d4c0d42c96e12290eb035becc9e24af82bc0b4d13f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/escuta/entrada_1615.json": {
+      "exists": true,
+      "sha256": "972cb8943a891833587c63deae08cadb1d1273310b2e5efd001a544c04e25e28",
+      "bytes": 138,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_055.bin",
+      "same_as_previous": true,
+      "previous_sha256": "972cb8943a891833587c63deae08cadb1d1273310b2e5efd001a544c04e25e28",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_ordem_sem_ack_o_dono_pergunta_e_o_vigia_sondeia.md": {
+      "exists": true,
+      "sha256": "6e84dd986ed1aea5ef285377711aee14d0c2417021bdcb54b9603cdb30e520d6",
+      "bytes": 2561,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_056.bin",
+      "same_as_previous": true,
+      "previous_sha256": "6e84dd986ed1aea5ef285377711aee14d0c2417021bdcb54b9603cdb30e520d6",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CEREBRO_NODE_AGENTES.md": {
+      "exists": true,
+      "sha256": "d45f58dda0a44303ebfebed99240b07f2bf162e6f759d0f3dc4cccdf4f6e8f18",
+      "bytes": 52011,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_057.bin",
+      "same_as_previous": true,
+      "previous_sha256": "d45f58dda0a44303ebfebed99240b07f2bf162e6f759d0f3dc4cccdf4f6e8f18",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CEREBRO_NODE_ATUALIZACOES.md": {
+      "exists": true,
+      "sha256": "fef15cf621e72fb72276fea9566c355dac85f7ac6e4329b509faca2471dec9ee",
+      "bytes": 184248,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_058.bin",
+      "same_as_previous": true,
+      "previous_sha256": "fef15cf621e72fb72276fea9566c355dac85f7ac6e4329b509faca2471dec9ee",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/GRADE_DE_CONTROLE_AGENTES.md": {
+      "exists": true,
+      "sha256": "d50609410aa4eedff002322b587231272c50094bf482367d1114c9c2228a8840",
+      "bytes": 372938,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_059.bin",
+      "same_as_previous": false,
+      "previous_sha256": "d678abe3e8435cb33fdfaa19c4aee908d9a9e5692a3ac135bba3a064f9980606",
+      "reading": "delta inventariado; trechos pertinentes lidos; linhas derivadas longas parcialmente exibidas"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_404_de_link_secreto_e_o_guard_nao_a_queda.md": {
+      "exists": true,
+      "sha256": "287fd2dc22dc5aba5b9e45278630e89c87a2e787d19b25f128fe1e6538d281d9",
+      "bytes": 3003,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_060.bin",
+      "same_as_previous": true,
+      "previous_sha256": "287fd2dc22dc5aba5b9e45278630e89c87a2e787d19b25f128fe1e6538d281d9",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260905_ordem_ao_zm_so_chega_pelas_pernas_que_ele_le.md": {
+      "exists": true,
+      "sha256": "5e15270c5313c4e1c1fbd31dde46f38d4870e56db34e6a879958f95f0924f43e",
+      "bytes": 2548,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_061.bin",
+      "same_as_previous": true,
+      "previous_sha256": "5e15270c5313c4e1c1fbd31dde46f38d4870e56db34e6a879958f95f0924f43e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/controle/memorias_agentes/claude/2026-09-05.md": {
+      "exists": true,
+      "sha256": "879cdb98c4ca4b5cff4fb048224746b210c72d8cdbb3adf80445e5705dba16ca",
+      "bytes": 37822,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_062.bin",
+      "same_as_previous": true,
+      "previous_sha256": "879cdb98c4ca4b5cff4fb048224746b210c72d8cdbb3adf80445e5705dba16ca",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/memoria_loop_laura/2026-09-05.md": {
+      "exists": true,
+      "sha256": "879cdb98c4ca4b5cff4fb048224746b210c72d8cdbb3adf80445e5705dba16ca",
+      "bytes": 37822,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_063.bin",
+      "same_as_previous": true,
+      "previous_sha256": "879cdb98c4ca4b5cff4fb048224746b210c72d8cdbb3adf80445e5705dba16ca",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/youtube/queue_youtube.md": {
+      "exists": true,
+      "sha256": "d36daa3acedeb9fd6677ad3fcab5eca5a561134e4f7c2195ec2e166497a7c030",
+      "bytes": 19425,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_064.bin",
+      "same_as_previous": true,
+      "previous_sha256": "d36daa3acedeb9fd6677ad3fcab5eca5a561134e4f7c2195ec2e166497a7c030",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_lembrete_pautado_morre_com_o_check_que_chega_antes.md": {
+      "exists": true,
+      "sha256": "dc95f3b06f3ee557d1ee89d7f5bb247e7baed52b5ec03d21f518283d3bbcce7b",
+      "bytes": 1752,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_065.bin",
+      "same_as_previous": true,
+      "previous_sha256": "dc95f3b06f3ee557d1ee89d7f5bb247e7baed52b5ec03d21f518283d3bbcce7b",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/baleia_azul/boletim_baleia_azul_20260905_tarde.md": {
+      "exists": true,
+      "sha256": "3d084eff777969cad0e1134024f8572aa21a21ccc389c2334fa636a6ad11bd9d",
+      "bytes": 5352,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_066.bin",
+      "same_as_previous": true,
+      "previous_sha256": "3d084eff777969cad0e1134024f8572aa21a21ccc389c2334fa636a6ad11bd9d",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/MEMORIA_VIVA.md": {
+      "exists": true,
+      "sha256": "90d2d5daf11ce2e477aeda7e5b1733c171d7ac804c52f44fa70b9456d35d8b8c",
+      "bytes": 140175,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_067.bin",
+      "same_as_previous": false,
+      "previous_sha256": "c33741ba34aa26ec698f81a7072491f4c5b9a900c11b92be2df267de64be6928",
+      "reading": "delta inventariado; trechos pertinentes lidos; linhas derivadas longas parcialmente exibidas"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260905_pull_rebase_append_concorrente_e_escrita_alheia.md": {
+      "exists": true,
+      "sha256": "e346b68aa9ebce4b72286271b3cf441b7efa7859b34b18b9762e4ddb4fac5dcd",
+      "bytes": 2443,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_068.bin",
+      "same_as_previous": true,
+      "previous_sha256": "e346b68aa9ebce4b72286271b3cf441b7efa7859b34b18b9762e4ddb4fac5dcd",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/memorias_provisorias/memoria_ds_ceo_viva.md": {
+      "exists": true,
+      "sha256": "522fe38a759ad5ca174a8ef22c2fb521fc11b30c64f920119a477020403f1d23",
+      "bytes": 1696206,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_069.bin",
+      "same_as_previous": false,
+      "previous_sha256": "524ccc44ec98598fadac0f4ea4c2cfa13d1592a41a102730aaea6e4f8dcef2fb",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/memorias_provisorias/memoria_ds_n_viva.md": {
+      "exists": true,
+      "sha256": "d463e31f24b02b445a548dd6df45138782f284c96b4ae8d2f11893c1e74b9a6c",
+      "bytes": 1714458,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_070.bin",
+      "same_as_previous": false,
+      "previous_sha256": "31fd40f305844c3808fb28d212ece145e0e2ecfadb795133abdd1db300681f17",
+      "reading": "delta inventariado; trechos pertinentes lidos; linhas derivadas longas parcialmente exibidas"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/baleia_azul/DIRETRIZ_QUALIDADE_BALEIA_AZUL.md": {
+      "exists": true,
+      "sha256": "0e6e645b2a92b0c0e95d6bfd8ca06028d140345fff6f5ca64337bd9061e293a6",
+      "bytes": 6267,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_071.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0e6e645b2a92b0c0e95d6bfd8ca06028d140345fff6f5ca64337bd9061e293a6",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-200001-1788649201577796545.md": {
+      "exists": true,
+      "sha256": "dcf8cf11784e44200ade9057db94831c8f3af9c36492022d5351eadec2bf7ae8",
+      "bytes": 4344,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_072.bin",
+      "same_as_previous": true,
+      "previous_sha256": "dcf8cf11784e44200ade9057db94831c8f3af9c36492022d5351eadec2bf7ae8",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/astra_rondas/AST-20260905-200001-1788649201577796545.md": {
+      "exists": true,
+      "sha256": "d6871fb5afbf85e7160b019209a1b6bd55bde899d4267745b87399e2a38e526f",
+      "bytes": 1629,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_073.bin",
+      "same_as_previous": true,
+      "previous_sha256": "d6871fb5afbf85e7160b019209a1b6bd55bde899d4267745b87399e2a38e526f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/MEMORIA_VIVA.md": {
+      "exists": true,
+      "sha256": "a8659066784312ed155e14853beae45f093db81dda5528ad86679b3e5f6bbe2e",
+      "bytes": 95423,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_074.bin",
+      "same_as_previous": false,
+      "previous_sha256": "b3fca79344a4015a5d204cee7a753b66e521320b65c41ea6ef8403c9cbba59fe",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_duas_torneiras_no_espelho_declare_o_metodo_junto_do_numero.md": {
+      "exists": true,
+      "sha256": "c7dc31ab9a42d0db155fe7c808e20dbb947f22aeeabe22ed2577cc0b4052d87e",
+      "bytes": 2531,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_075.bin",
+      "same_as_previous": true,
+      "previous_sha256": "c7dc31ab9a42d0db155fe7c808e20dbb947f22aeeabe22ed2577cc0b4052d87e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/forum_faxina_rio_lote01_zm_20260905.md": {
+      "exists": true,
+      "sha256": "73f831e93a3116898935948ce42fa24560120667541845bee7d89cb7884718e5",
+      "bytes": 9214,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_076.bin",
+      "same_as_previous": true,
+      "previous_sha256": "73f831e93a3116898935948ce42fa24560120667541845bee7d89cb7884718e5",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/forum_painel_youtube_reforma_20260905.md": {
+      "exists": true,
+      "sha256": "4efccf01e84a9c8cdf1edf8e1a7186e6b61c41f72033c61a2e803803deb83901",
+      "bytes": 4268,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_077.bin",
+      "same_as_previous": true,
+      "previous_sha256": "4efccf01e84a9c8cdf1edf8e1a7186e6b61c41f72033c61a2e803803deb83901",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-ACESSOS-TELEGRAM-20260905.md": {
+      "exists": true,
+      "sha256": "70eeb17f1c6d6f95da3d7a6cbdab6e302bee978d6596a3e77f954ba88723d04d",
+      "bytes": 10270,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_078.bin",
+      "same_as_previous": true,
+      "previous_sha256": "70eeb17f1c6d6f95da3d7a6cbdab6e302bee978d6596a3e77f954ba88723d04d",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-DRIVE-REPARO-20260905.md": {
+      "exists": true,
+      "sha256": "334c1dc4cb034b5b399c168b11dcbcdda4f43f26b3220b2767af838a78286c9c",
+      "bytes": 8386,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_079.bin",
+      "same_as_previous": true,
+      "previous_sha256": "334c1dc4cb034b5b399c168b11dcbcdda4f43f26b3220b2767af838a78286c9c",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CEREBRO_NODE_BACKUPS_BACKBLAZE.md": {
+      "exists": true,
+      "sha256": "4f2868cd1be34d5758a5a34c6d46ce2b5c732bba2be464f19d1f31092560ecab",
+      "bytes": 12593,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_080.bin",
+      "same_as_previous": true,
+      "previous_sha256": "4f2868cd1be34d5758a5a34c6d46ce2b5c732bba2be464f19d1f31092560ecab",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260905_relatorio_4_4h_canal_certo.md": {
+      "exists": true,
+      "sha256": "d9b76a86f2af98ab4c3198c04e9b8eb4417a8aa5dea50d18a0acd9ddf49a68b0",
+      "bytes": 1977,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_081.bin",
+      "same_as_previous": true,
+      "previous_sha256": "d9b76a86f2af98ab4c3198c04e9b8eb4417a8aa5dea50d18a0acd9ddf49a68b0",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-WP-SSH-20260905.md": {
+      "exists": true,
+      "sha256": "f13fc246c9591882a575af0d140812815e32ea3721291a7b1e53e3acec80ef3e",
+      "bytes": 12381,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_082.bin",
+      "same_as_previous": true,
+      "previous_sha256": "f13fc246c9591882a575af0d140812815e32ea3721291a7b1e53e3acec80ef3e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-210001-1788652801646419848.md": {
+      "exists": true,
+      "sha256": "b993b2bc9ed750903019c705c64d8f055cdd67d7c06e087bfb2b58e101149a9d",
+      "bytes": 4732,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_083.bin",
+      "same_as_previous": true,
+      "previous_sha256": "b993b2bc9ed750903019c705c64d8f055cdd67d7c06e087bfb2b58e101149a9d",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/MANIFESTO_ZM_BACKUP_RIO_LOTE02_20260905.md": {
+      "exists": true,
+      "sha256": "ca1ba89ac3828f23b4e8ba986282149bdab94a9b7b63bc1ceb35e51e70be5d88",
+      "bytes": 4551,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_084.bin",
+      "same_as_previous": true,
+      "previous_sha256": "ca1ba89ac3828f23b4e8ba986282149bdab94a9b7b63bc1ceb35e51e70be5d88",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-05_bloco015_rotina_publicacao_twitter_x_facebook.md": {
+      "exists": true,
+      "sha256": "f7d07198fcc4605659f1f216532095c98bdec367c0496f10c431f7fbcfcb3cc7",
+      "bytes": 25663,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_085.bin",
+      "same_as_previous": true,
+      "previous_sha256": "f7d07198fcc4605659f1f216532095c98bdec367c0496f10c431f7fbcfcb3cc7",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-05_cacada_48_link_1o_comentario_fb_perna_dono_zm_v42_silencio_flip_autor.md": {
+      "exists": true,
+      "sha256": "474de5cac731a5603e19809ea60dcd1e6359aaee9ddf26cab88d863ee131f7f0",
+      "bytes": 17825,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_086.bin",
+      "same_as_previous": true,
+      "previous_sha256": "474de5cac731a5603e19809ea60dcd1e6359aaee9ddf26cab88d863ee131f7f0",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/AUTORIZACAO_MIGUEL_ASTRA_ACESSO_IGUAL_CM_20260905.md": {
+      "exists": true,
+      "sha256": "a3438fa058d9d5633438d400992e341a9b121d5a2394ca3defbe1006841d71fd",
+      "bytes": 8003,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_087.bin",
+      "same_as_previous": true,
+      "previous_sha256": "a3438fa058d9d5633438d400992e341a9b121d5a2394ca3defbe1006841d71fd",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-ACESSOS-ADMIN-DECISAO-20260905.md": {
+      "exists": true,
+      "sha256": "9b9f4d03c350ee50863af94561221678ff98d0cef6a8b7546085db09aec02ced",
+      "bytes": 1903,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_088.bin",
+      "same_as_previous": true,
+      "previous_sha256": "9b9f4d03c350ee50863af94561221678ff98d0cef6a8b7546085db09aec02ced",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/zm_relatorio_readback_lote02.json": {
+      "exists": true,
+      "sha256": "ee6c1f9c28c895851e568d3681a6b08591928770646e801cc596a23e0d67be99",
+      "bytes": 372,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_089.bin",
+      "same_as_previous": true,
+      "previous_sha256": "ee6c1f9c28c895851e568d3681a6b08591928770646e801cc596a23e0d67be99",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/FORUM_ASTRA_PREFLIGHT_AMPLIACAO_20260905.md": {
+      "exists": true,
+      "sha256": "108b8c1402f68a1471dea150310e6337fc742f1793ba1261370cad65c32fcd17",
+      "bytes": 6054,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_090.bin",
+      "same_as_previous": true,
+      "previous_sha256": "108b8c1402f68a1471dea150310e6337fc742f1793ba1261370cad65c32fcd17",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/INVENTARIO_ZM_LOTE02_RIO_20260905.json": {
+      "exists": true,
+      "sha256": "d6e3da9aea6ecdc1d420c4a3be92240327d2798f1c046936817e68926aae9141",
+      "bytes": 38817,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_091.bin",
+      "same_as_previous": true,
+      "previous_sha256": "d6e3da9aea6ecdc1d420c4a3be92240327d2798f1c046936817e68926aae9141",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-220002-1788656402160366602.md": {
+      "exists": true,
+      "sha256": "2ce6e4a9b660c6ccdb798f775fa2fb25ec9c5952282f1d8496e71e1855d7315f",
+      "bytes": 5001,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_092.bin",
+      "same_as_previous": true,
+      "previous_sha256": "2ce6e4a9b660c6ccdb798f775fa2fb25ec9c5952282f1d8496e71e1855d7315f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-230002-1788660002198733355.md": {
+      "exists": true,
+      "sha256": "b106501168f1401397c2cb25dbdaf021c5020ad13473d37aabad94a1ca885c9e",
+      "bytes": 5305,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_093.bin",
+      "same_as_previous": true,
+      "previous_sha256": "b106501168f1401397c2cb25dbdaf021c5020ad13473d37aabad94a1ca885c9e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/astra_rondas/AST-20260905-230002-1788660002198733355.md": {
+      "exists": true,
+      "sha256": "ce7544b30e73a6229f0b4c3677f674e851406ed75fd63413f5b8527e758b089f",
+      "bytes": 653,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_094.bin",
+      "same_as_previous": true,
+      "previous_sha256": "ce7544b30e73a6229f0b4c3677f674e851406ed75fd63413f5b8527e758b089f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_consenso_convocado_parecer_complementa_sem_executar.md": {
+      "exists": true,
+      "sha256": "0feef4f580fb64d93da0b69f3be421c6f0860c51a9d9a0cb3603dc17f531c30a",
+      "bytes": 1881,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_095.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0feef4f580fb64d93da0b69f3be421c6f0860c51a9d9a0cb3603dc17f531c30a",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-05_cacada_49_check_geral_gate_geo_consenso_dono_269170_v42_5h40_agy24h.md": {
+      "exists": true,
+      "sha256": "e2f75473bc6817be4ece404e6ed00f15f4bf262417d8162a1dca607494ed6392",
+      "bytes": 15833,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_096.bin",
+      "same_as_previous": true,
+      "previous_sha256": "e2f75473bc6817be4ece404e6ed00f15f4bf262417d8162a1dca607494ed6392",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260905_transcricao_cl_resolve_pendencia_inbox_e_fluxo_redes.md": {
+      "exists": true,
+      "sha256": "62750f7c92a2898c43711ff5920264cfcbd55d0b1c0ea5891b85381be64f7234",
+      "bytes": 2613,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_097.bin",
+      "same_as_previous": true,
+      "previous_sha256": "62750f7c92a2898c43711ff5920264cfcbd55d0b1c0ea5891b85381be64f7234",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-05_plano_redes_10x10_x_fb_prompt_zcode.md": {
+      "exists": true,
+      "sha256": "33fafbf8c2580a5168b474d3b64aee4f309bfcda1a2ffe5c1c15e0a8a429a98a",
+      "bytes": 29092,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_098.bin",
+      "same_as_previous": true,
+      "previous_sha256": "33fafbf8c2580a5168b474d3b64aee4f309bfcda1a2ffe5c1c15e0a8a429a98a",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/astra_rondas/AST-20260906-000001-1788663602026829104.md": {
+      "exists": true,
+      "sha256": "69c6a61cdc816fc0d6fea5e073138b099ccc50a1b8e336fcfa491f22dacfd874",
+      "bytes": 1922,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_099.bin",
+      "same_as_previous": true,
+      "previous_sha256": "69c6a61cdc816fc0d6fea5e073138b099ccc50a1b8e336fcfa491f22dacfd874",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-000001-1788663602026829104.md": {
+      "exists": true,
+      "sha256": "66c9c31159d87903307b1495f2ca5251cd1a4d798023331132d44c96ffc44add",
+      "bytes": 3495,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_100.bin",
+      "same_as_previous": true,
+      "previous_sha256": "66c9c31159d87903307b1495f2ca5251cd1a4d798023331132d44c96ffc44add",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260906_sonda_espelho_metodo_htm_vs_rest_perid.md": {
+      "exists": true,
+      "sha256": "8d98448b1a1a5275a994690feba983ed5405cfa1b72dc334b09d1ef88bf2f7bb",
+      "bytes": 1791,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_101.bin",
+      "same_as_previous": true,
+      "previous_sha256": "8d98448b1a1a5275a994690feba983ed5405cfa1b72dc334b09d1ef88bf2f7bb",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/.tencent_v6_oficina/reforma_v3_status_SEED.json": {
+      "exists": true,
+      "sha256": "778d77fab22e084ee9d8143fe3af0250da1c54afd6263ce0f698f40ea4a80782",
+      "bytes": 4779,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_102.bin",
+      "same_as_previous": false,
+      "previous_sha256": "cf437c788c6dacf19249a4f6e4d213400c803c05f8622db20640a0e015c53ee7",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/obra_reforma_v3_status.md": {
+      "exists": true,
+      "sha256": "cd42da8f750b9e4851f36c7c1144d875c02da0c4856ce6b14052240a116e4674",
+      "bytes": 25501,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_103.bin",
+      "same_as_previous": true,
+      "previous_sha256": "cd42da8f750b9e4851f36c7c1144d875c02da0c4856ce6b14052240a116e4674",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/.dsn_ideias/estado.json": {
+      "exists": true,
+      "sha256": "7fcf4daf0ac765ed66f3813dc48aedd09b8e74dc1955f5de805140deb4bd2bc6",
+      "bytes": 192239,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_104.bin",
+      "same_as_previous": false,
+      "previous_sha256": "1c08496b43e06f81546a8b48502992f0b33dd985e872aefb8cfbdc6122e58ce0",
+      "reading": "delta semântico JSON: 173→174, uma entrada V42MON-400575, zero remoções; campos de resumo lidos por trechos"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_cacada_50_v42_7h10_sla_vertical_vigilia_noturna_manifesto_envelope_200.md": {
+      "exists": true,
+      "sha256": "ba5449db2b0db5ea557d3f2bd772aafedfea5c2b2d933c46f54251ec518d0fdc",
+      "bytes": 14368,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_105.bin",
+      "same_as_previous": true,
+      "previous_sha256": "ba5449db2b0db5ea557d3f2bd772aafedfea5c2b2d933c46f54251ec518d0fdc",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/estado.json": {
+      "exists": true,
+      "sha256": "7fcf4daf0ac765ed66f3813dc48aedd09b8e74dc1955f5de805140deb4bd2bc6",
+      "bytes": 192239,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_106.bin",
+      "same_as_previous": false,
+      "previous_sha256": "1c08496b43e06f81546a8b48502992f0b33dd985e872aefb8cfbdc6122e58ce0",
+      "reading": "delta semântico JSON: 173→174, uma entrada V42MON-400575, zero remoções; campos de resumo lidos por trechos"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260906_veredito_convergente_entre_torneiras_fecha_divergencia_de_metodo.md": {
+      "exists": true,
+      "sha256": "a5339e8bdbe38a3982afbbf269c6847f692c0ff8a8e64df17e774908c44308d6",
+      "bytes": 2406,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_107.bin",
+      "same_as_previous": true,
+      "previous_sha256": "a5339e8bdbe38a3982afbbf269c6847f692c0ff8a8e64df17e774908c44308d6",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/financeiro/canal_dsn_financeiro.md": {
+      "exists": true,
+      "sha256": "0e27b8777e2d2dc334f329e8a41f3160c90570ca78b6a2d26888474fb436d210",
+      "bytes": 110419,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_108.bin",
+      "same_as_previous": true,
+      "previous_sha256": "0e27b8777e2d2dc334f329e8a41f3160c90570ca78b6a2d26888474fb436d210",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260906_primeiro_atraso_real_da_cl_noturna_confirmado.md": {
+      "exists": true,
+      "sha256": "cf9e17400921c0dd0380119e7643cd3a219f60dffd5ebff765bb697ea471df61",
+      "bytes": 9992,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_109.bin",
+      "same_as_previous": true,
+      "previous_sha256": "cf9e17400921c0dd0380119e7643cd3a219f60dffd5ebff765bb697ea471df61",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_cacada_51_caso_cl_incidente_vigilia_v42_9h10_sla_vertical_cl178_pendente.md": {
+      "exists": true,
+      "sha256": "9fc7213c474b4514f5bcc55cd43cc8bf58d113b67f7064a1171869972af6d6e7",
+      "bytes": 13450,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_110.bin",
+      "same_as_previous": true,
+      "previous_sha256": "9fc7213c474b4514f5bcc55cd43cc8bf58d113b67f7064a1171869972af6d6e7",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260906_fecho_caso_cl.md": {
+      "exists": true,
+      "sha256": "f30c64b21f4954f6430daecb26ffe26b0cc6861ee269e89911a84491c880dbea",
+      "bytes": 2328,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_111.bin",
+      "same_as_previous": true,
+      "previous_sha256": "f30c64b21f4954f6430daecb26ffe26b0cc6861ee269e89911a84491c880dbea",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/CONTRATO_DA_CASA_V3_20260901.md": {
+      "exists": true,
+      "sha256": "97d5290c5eb613c8a7e6d3519b5515673f8dc8d0ee3461bbc890da832b1301da",
+      "bytes": 19180,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_112.bin",
+      "same_as_previous": true,
+      "previous_sha256": "97d5290c5eb613c8a7e6d3519b5515673f8dc8d0ee3461bbc890da832b1301da",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/tmp/watchdog_loop_ativo_state.json": {
+      "exists": true,
+      "sha256": "a00117044b288297ec825b250d36e84798c8096685bd56d7f7d560d6e3179c47",
+      "bytes": 74,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_113.bin",
+      "same_as_previous": true,
+      "previous_sha256": "a00117044b288297ec825b250d36e84798c8096685bd56d7f7d560d6e3179c47",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_cacada_52_caso_cl_fecho_5a_ronda_v42_12h_sla_contagem_cl178_baleia36.md": {
+      "exists": true,
+      "sha256": "cce5cb0e2c7c91d9c7a0a285b4f77d4137be508625d1b504163e9a9e63fa6b18",
+      "bytes": 14524,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_114.bin",
+      "same_as_previous": true,
+      "previous_sha256": "cce5cb0e2c7c91d9c7a0a285b4f77d4137be508625d1b504163e9a9e63fa6b18",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260906_volume_rest_after_fuso_local.md": {
+      "exists": true,
+      "sha256": "6f0bc40791a0f3fec272b4eb988bd126c1f956690f3e593a95a968156ed3cc06",
+      "bytes": 1710,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_115.bin",
+      "same_as_previous": true,
+      "previous_sha256": "6f0bc40791a0f3fec272b4eb988bd126c1f956690f3e593a95a968156ed3cc06",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/forum_plano_contingencia_queda_cl_cm_20260903.md": {
+      "exists": true,
+      "sha256": "e2075025ae40e493f0ae859c49e2744a540db17da5f2192199f6cc4c6a5c19d6",
+      "bytes": 41591,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_116.bin",
+      "same_as_previous": true,
+      "previous_sha256": "e2075025ae40e493f0ae859c49e2744a540db17da5f2192199f6cc4c6a5c19d6",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_bloco019_sucessao_publicador_failover_pessoa_ordem.md": {
+      "exists": true,
+      "sha256": "6ac651271a874da31f7b3e93097d4738a32b80d933435acaea57715904920f7e",
+      "bytes": 23504,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_117.bin",
+      "same_as_previous": true,
+      "previous_sha256": "6ac651271a874da31f7b3e93097d4738a32b80d933435acaea57715904920f7e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_cacada_53_caso_cl_8a_em_risco_janela_0712_v42_13h10_sla_marco_72h_banda_domingo.md": {
+      "exists": true,
+      "sha256": "841ece73e38e45f6bf4dba6bd80533a88aa3f1ac5b7a0125db85eff18e02c35f",
+      "bytes": 16875,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_118.bin",
+      "same_as_previous": true,
+      "previous_sha256": "841ece73e38e45f6bf4dba6bd80533a88aa3f1ac5b7a0125db85eff18e02c35f",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/controle/memorias_agentes/claude/2026-09-06.md": {
+      "exists": true,
+      "sha256": "3ec38da74083cad2078ca457fcbccf42dbbdc5121892b61d175416663341087a",
+      "bytes": 4554,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_119.bin",
+      "same_as_previous": false,
+      "previous_sha256": "1c1e428cb94034bfd454b648bfeb9724039f3858fcd21ce0218641157f20971a",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/memoria_loop_laura/2026-09-06.md": {
+      "exists": true,
+      "sha256": "2b6fd88d05b2668388e39348aa4cb5332f42580ee557f9d0a0112d82fcaca301",
+      "bytes": 5145,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_120.bin",
+      "same_as_previous": false,
+      "previous_sha256": "9509e77e19335074e5cdb8804dc5e6b70a84bba8133ff26760cd432b8c1cedad",
+      "reading": "delta equivalente ao par já lido; igualdade por SHA256"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/baleia_azul/boletim_baleia_azul_20260906_manha.md": {
+      "exists": true,
+      "sha256": "17e0e687df056fea6e096afe3c8048ee636f0b3426d6f98d584b3888bb33201a",
+      "bytes": 5281,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_121.bin",
+      "same_as_previous": true,
+      "previous_sha256": "17e0e687df056fea6e096afe3c8048ee636f0b3426d6f98d584b3888bb33201a",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md": {
+      "exists": true,
+      "sha256": "baf873ec823d0736547e7e4d6e7f0a7b201893ce7290c0a8b2295ad0282fef28",
+      "bytes": 1398,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_122.bin",
+      "same_as_previous": false,
+      "previous_sha256": "c639380f2111956903ada1771aff8e4ab2f476f03a5705dffbba58232089ae81",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/claude_miguel.md": {
+      "exists": true,
+      "sha256": "97550bc036b3f319f42ded3af185ea508ced97b2401adf96e50e02ed384b5f13",
+      "bytes": 1932,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_123.bin",
+      "same_as_previous": true,
+      "previous_sha256": "97550bc036b3f319f42ded3af185ea508ced97b2401adf96e50e02ed384b5f13",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md": {
+      "exists": true,
+      "sha256": "eba6ba98694b60b1607285541186503b3c9bfa313c454d1e1901b1972349eb51",
+      "bytes": 380012,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_124.bin",
+      "same_as_previous": false,
+      "previous_sha256": "df65dff648aa03ef879239be3e4b57938a72404540ec0c07b3d527732992de14",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md": {
+      "exists": true,
+      "sha256": "8faa6b11e20918907dce487497bf3c27f10e3eda81a1403a925898f32dc7b3fa",
+      "bytes": 270884,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_125.bin",
+      "same_as_previous": false,
+      "previous_sha256": "8a61085559e2abd1a79e349649c54a6fab9ba425fc1d54856c9d7e39919c7b42",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md": {
+      "exists": true,
+      "sha256": "abf69a8ead60fe98ad185dc77a999ca66d96b5b3509e6418ea55495127ec648c",
+      "bytes": 502270,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_126.bin",
+      "same_as_previous": false,
+      "previous_sha256": "cc0a5f00d1f2ac16827225a09c6de5c238f3874cc84fd615b09535bf1370ad7c",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260906_baleia_ed36_audiencia_fontes_radar.md": {
+      "exists": true,
+      "sha256": "2116d319abf916c52dfd28d4d42efea800cd853ed5151851a84a8fff6ec7c0a5",
+      "bytes": 2873,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_127.bin",
+      "same_as_previous": true,
+      "previous_sha256": "2116d319abf916c52dfd28d4d42efea800cd853ed5151851a84a8fff6ec7c0a5",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/licoes/20260906_caso_cl_causa_fisica_colchao_8h_sucessao.md": {
+      "exists": true,
+      "sha256": "5cf98613c8d982539ada8f91da0e849955965fbf9e7e668b370aa1f7f865666a",
+      "bytes": 3878,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_128.bin",
+      "same_as_previous": true,
+      "previous_sha256": "5cf98613c8d982539ada8f91da0e849955965fbf9e7e668b370aa1f7f865666a",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260906_tomada_derrubou_o_site_e_nasceram_colchao_e_sucessao.md": {
+      "exists": true,
+      "sha256": "77896b3f4ef89b4035bf494620c150e5ccd34758675e9c87d3a5c1e5f6d3e730",
+      "bytes": 3564,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_129.bin",
+      "same_as_previous": true,
+      "previous_sha256": "77896b3f4ef89b4035bf494620c150e5ccd34758675e9c87d3a5c1e5f6d3e730",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/CONSTITUICAO_DA_CASA_V3_MINUTA_FINAL_20260902.md": {
+      "exists": true,
+      "sha256": "80f9e1c5d7976e58bf9a696b78c4ee877e6078e19437f887b38462250beaa4da",
+      "bytes": 10248,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_130.bin",
+      "same_as_previous": true,
+      "previous_sha256": "80f9e1c5d7976e58bf9a696b78c4ee877e6078e19437f887b38462250beaa4da",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_bloco019_sucessao_publicador_failover_pessoa_ordem_v2.md": {
+      "exists": true,
+      "sha256": "30df3fbe8c347f392b70c762bd589688581d29b7716c776bab9969ffff60843e",
+      "bytes": 18754,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_131.bin",
+      "same_as_previous": true,
+      "previous_sha256": "30df3fbe8c347f392b70c762bd589688581d29b7716c776bab9969ffff60843e",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Memorias/astra_rondas/AST-20260906-080002-1788692402121813633.md": {
+      "exists": true,
+      "sha256": "5c35f9377832901714a54ee545037c0f3ac4c8dc78186fa552ccbf7ea0108c87",
+      "bytes": 1804,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_132.bin",
+      "same_as_previous": true,
+      "previous_sha256": "5c35f9377832901714a54ee545037c0f3ac4c8dc78186fa552ccbf7ea0108c87",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-080002-1788692402121813633.md": {
+      "exists": true,
+      "sha256": "a5de8b855cc7021bca0bc3e26d886e626cc1f4233b9de89104af293bc5900bdf",
+      "bytes": 3571,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_133.bin",
+      "same_as_previous": true,
+      "previous_sha256": "a5de8b855cc7021bca0bc3e26d886e626cc1f4233b9de89104af293bc5900bdf",
+      "reading": "hash sem delta; cursor anterior preservado"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_pico_1400_farol_padrao_de_horario_confirmado.md": {
+      "exists": true,
+      "sha256": "85c6436fd981dff5c2e6034b5961061c788b1017dea81c61033f6ab3708df72e",
+      "bytes": 5351,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_134.bin",
+      "same_as_previous": false,
+      "previous_sha256": "b6f55b80facddee440564a4fe4d96b4ebf0c5e9f44c54b1168bfc9824a98c611",
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_v42mon_veredito_400575_arquiteto.md": {
+      "exists": true,
+      "sha256": "e78c9f9ef0968c9c317393e95ede82368847c4e223bb2615721f381e1d6a166c",
+      "bytes": 11927,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_135.bin",
+      "same_as_previous": false,
+      "previous_sha256": null,
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md": {
+      "exists": true,
+      "sha256": "d5b80f92a2125634a13af91fea450d8b2f484bca2bf43aca678a8d315b05dd69",
+      "bytes": 11393,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_136.bin",
+      "same_as_previous": false,
+      "previous_sha256": null,
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/bugs_encontrados/bugs_2026-09-06.jsonl": {
+      "exists": true,
+      "sha256": "0de0550b9af9a8b58a262506f9f1c020bb4271bc698cebf4a128648145a6658c",
+      "bytes": 1558,
+      "snapshot": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/source_137.bin",
+      "same_as_previous": false,
+      "previous_sha256": null,
+      "reading": "delta substantivo lido; contexto histórico preservado no cursor"
+    }
+  },
+  "deltas": {
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_005.txt",
+      "lines": 27,
+      "bytes": 5859,
+      "method": "snapshot anterior validado",
+      "sha256": "c33745a3a3e43e897e499436b577522eae7e051667f7d499cce361e4b582b5fb"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_008.txt",
+      "lines": 11,
+      "bytes": 4242,
+      "method": "snapshot anterior validado",
+      "sha256": "3018c92734a40bc7a9185bf165c1c8adb887ad3d69a383ccf6801275eea29b7d"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_015.txt",
+      "lines": 44,
+      "bytes": 22581,
+      "method": "snapshot anterior validado",
+      "sha256": "bb98a440c8451ff69ea86d9349edd0aac8a3431df9ed19180b071ef3aa05efb6"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_018.txt",
+      "lines": 27,
+      "bytes": 5859,
+      "method": "snapshot anterior validado",
+      "sha256": "c33745a3a3e43e897e499436b577522eae7e051667f7d499cce361e4b582b5fb"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_019.txt",
+      "lines": 44,
+      "bytes": 22581,
+      "method": "snapshot anterior validado",
+      "sha256": "bb98a440c8451ff69ea86d9349edd0aac8a3431df9ed19180b071ef3aa05efb6"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_024.txt",
+      "lines": 17,
+      "bytes": 34835,
+      "method": "snapshot anterior validado",
+      "sha256": "2756a79190a9d4269f5fdc3cc0563cb6c36ea7623b6fae0cb2ec366161c1e7e8"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_026.txt",
+      "lines": 7,
+      "bytes": 852,
+      "method": "snapshot anterior validado",
+      "sha256": "f1a730fd51eec489d69b7674c07ba232a02c56407a10bebc34c62838ebcd66c5"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_028.txt",
+      "lines": 8,
+      "bytes": 12281,
+      "method": "snapshot anterior validado",
+      "sha256": "3d2762ac28230d1e44e0891959842f03d392b0ec58cd5c522b5a605e8c7c522e"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_ideias.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_035.txt",
+      "lines": 14,
+      "bytes": 6018,
+      "method": "snapshot anterior validado",
+      "sha256": "a24f3c0e46dcf8a61f849be5ca02584d00e8b11596933709a37058feb38c4ab5"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/revisao/canal_dsn_revisores.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_038.txt",
+      "lines": 12,
+      "bytes": 4105,
+      "method": "snapshot anterior validado",
+      "sha256": "23a084380db2f257d158b8e27ec5ee42c9c66862568d90c6740ca0da8d81550b"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_042.txt",
+      "lines": 10,
+      "bytes": 5973,
+      "method": "snapshot anterior validado",
+      "sha256": "35de4f38d2c4e64a031c7be6ccd1ac61aaff08f318864dc608f88d3c173d892f"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/CEREBRO_NODE_BUGS_ATIVOS.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_052.txt",
+      "lines": 10,
+      "bytes": 4086,
+      "method": "snapshot anterior validado",
+      "sha256": "448943c862664179d184ead14920fab387f155550f581b26ee2763d44b927d99"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/GRADE_DE_CONTROLE_AGENTES.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_059.txt",
+      "lines": 8,
+      "bytes": 8930,
+      "method": "snapshot anterior validado",
+      "sha256": "0e1ecf82d6b83c886604a6cc0f947ad6f43b80d428e9d19ca1223bc8f99445e4"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_chefe/MEMORIA_VIVA.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_067.txt",
+      "lines": 8,
+      "bytes": 13489,
+      "method": "snapshot anterior validado",
+      "sha256": "55d5e5d286e0111626ef083ba5e3fb4d884dc559258df833df7269c0333b302b"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/memorias_provisorias/memoria_ds_ceo_viva.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_069.txt",
+      "lines": 18,
+      "bytes": 6188,
+      "method": "snapshot anterior validado",
+      "sha256": "3c11722a4a9495be0a0df6d9bb98643d3a5525e148720990587e63747ee0e24d"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/memorias_provisorias/memoria_ds_n_viva.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_070.txt",
+      "lines": 8,
+      "bytes": 14122,
+      "method": "snapshot anterior validado",
+      "sha256": "faeb36a1dd498e070d1d4f76ff17bd5a4d852c4af60a1ceccd91d6e71aa469e9"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/MEMORIA_VIVA.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_074.txt",
+      "lines": 7,
+      "bytes": 6026,
+      "method": "snapshot anterior validado",
+      "sha256": "4937444fc2e3b9facece28d0fce019e9862ea6fe2935df11ae4c38ede549e00c"
+    },
+    "/home/migueldorosario/cerebro-miguel/.tencent_v6_oficina/reforma_v3_status_SEED.json": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_102.txt",
+      "lines": 13,
+      "bytes": 1655,
+      "method": "snapshot anterior validado",
+      "sha256": "546b812c7bfca588bf0215930393a64bd3e772c19e94e133bad4df740543e572"
+    },
+    "/home/migueldorosario/cerebro-miguel/.dsn_ideias/estado.json": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_104.txt",
+      "lines": 28,
+      "bytes": 18152,
+      "method": "snapshot anterior validado",
+      "sha256": "46c9b3a1a6f4eae96600e553c74901735236d23e30b7ab38676acb092cbf92e3"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/estado.json": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_106.txt",
+      "lines": 28,
+      "bytes": 18152,
+      "method": "snapshot anterior validado",
+      "sha256": "46c9b3a1a6f4eae96600e553c74901735236d23e30b7ab38676acb092cbf92e3"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/controle/memorias_agentes/claude/2026-09-06.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_119.txt",
+      "lines": 10,
+      "bytes": 907,
+      "method": "snapshot anterior validado",
+      "sha256": "aef80820286463a741dcfcd1eb9014e9f104983c3627576d0a859cbf8f82fe76"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/memoria_loop_laura/2026-09-06.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_120.txt",
+      "lines": 10,
+      "bytes": 907,
+      "method": "snapshot anterior validado",
+      "sha256": "aef80820286463a741dcfcd1eb9014e9f104983c3627576d0a859cbf8f82fe76"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_122.txt",
+      "lines": 21,
+      "bytes": 2602,
+      "method": "snapshot anterior validado",
+      "sha256": "b612b0470acf51299670b24faa0700d4008fcba1a609d09435a6b3ab1157941f"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_124.txt",
+      "lines": 9,
+      "bytes": 4203,
+      "method": "snapshot anterior validado",
+      "sha256": "4d69b972677adb76752bc5b7e7d0e47e763e5057ae00cc6c109d168e1fa44010"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_125.txt",
+      "lines": 8,
+      "bytes": 4632,
+      "method": "snapshot anterior validado",
+      "sha256": "77bb5182c66dbe8a8d7190ae808d5f7ddbd7416c59ec0c56ddc6c668f4266898"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_126.txt",
+      "lines": 19,
+      "bytes": 4282,
+      "method": "snapshot anterior validado",
+      "sha256": "b01b8db7a01de12c2664d187b37970c3085c2d9d899c2a1996ab5ee76a797905"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_pico_1400_farol_padrao_de_horario_confirmado.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_134.txt",
+      "lines": 8,
+      "bytes": 1731,
+      "method": "snapshot anterior validado",
+      "sha256": "5e45f4c09e5c0ab7aa3184621dc77aa408bb2cb1771ee413ee7c22b43da19086"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_v42mon_veredito_400575_arquiteto.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_135.txt",
+      "lines": 44,
+      "bytes": 11927,
+      "method": "fonte nova",
+      "sha256": "e78c9f9ef0968c9c317393e95ede82368847c4e223bb2615721f381e1d6a166c"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_136.txt",
+      "lines": 8,
+      "bytes": 2138,
+      "method": "git anterior",
+      "sha256": "134a9871738cbe44e0374a4a2f355ded7faa8f1a4d1ee701f7991895aef15a42"
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/bugs_encontrados/bugs_2026-09-06.jsonl": {
+      "file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/delta_137.txt",
+      "lines": 2,
+      "bytes": 1558,
+      "method": "fonte nova",
+      "sha256": "0de0550b9af9a8b58a262506f9f1c020bb4271bc698cebf4a128648145a6658c"
+    }
+  },
+  "git_changes": [
+    ".dsn_ideias/estado.json",
+    ".tencent_v6_oficina/reforma_v3_status_SEED.json",
+    "cerebro/CEREBRO_NODE_BUGS_ATIVOS.md",
+    "cerebro/Foruns/GRADE_DE_CONTROLE_AGENTES.md",
+    "cerebro/Foruns/ideias/2026-09-06_v42mon_veredito_400575_arquiteto.md",
+    "cerebro/Foruns/ideias/estado.json",
+    "cerebro/Foruns/loop_trindade_laura/controle/memorias_agentes/claude/2026-09-06.md",
+    "cerebro/Foruns/loop_trindade_laura/memoria_loop_laura/2026-09-06.md",
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/de_ideias.md",
+    "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+    "cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md",
+    "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+    "cerebro/cerebro_dsn/dsn_chefe/MEMORIA_VIVA.md",
+    "cerebro/cerebro_dsn/dsn_miguel/MEMORIA_VIVA.md",
+    "cerebro/cerebro_dsn/dsn_miguel/licoes/20260905_pico_1400_farol_padrao_de_horario_confirmado.md",
+    "cerebro/memorias_provisorias/memoria_ds_ceo_viva.md",
+    "cerebro/memorias_provisorias/memoria_ds_n_viva.md",
+    "cerebro/monitoramento_horario/bugs_encontrados/bugs_2026-09-06.jsonl"
+  ],
+  "git_commits": [
+    "33d0ac927 CL-20260906-004: ronda 08:42 — 269180 Hospital de Amor no ar (HTTP 200; 3º); 269183 entra 08:40; fila 09:00/09:20/09:40; 269197 Copa BTG Trader fica (publi); lock do ZM limpo; feedback CL nº 136",
+    "2d419aee9 CM-20260906-004: reativa ledger CM (17d parado) + JSONL bugs 3 camadas (11d parado)",
+    "a4edb806f AGY-LAURA: AL-20260906-630 ronda 08:35 (CHECK barato, mutirao CL ativo)",
+    "0846b5f41 DS-Laura ronda 08:30 (06/09): observador 30/30 - CASO CL encerrado + mutirao CL em ponto (269180 08:20, 3o de 06/09) + ACKs; sem ordem enderecada -> heartbeat silencioso (sem bloco DSL)",
+    "ca78cc030 DS-224 ronda 08:30 (06/09): 2a ronda pos-fecho do CASO CL — mutirao em ponto (269180 Hospital de Amor 08:20 no ar, X-WP 78963; 3/3 do dia) + 97a vigilia DSC-064 (400490=200) + VEREDITO DO RECUO FECHADO (salto 08:00 943h regrediu 354h = coletor confirmado, adendo licao 193a) + volume 3h=3/12h=8/24h=26 sem alerta formal (causa fechada + agulhas) + colchao WP-CLI 4 agulhas <8h recomposicao diurna + espelho 120a (269184 PROPAGADO 49min; 269064 404 35h16 63a) + nota 269180 DREAM/pos-cancer + memoria/VIVA/nodo",
+    "9c60e7ef9 DS-N Chefe ronda 231 (06/09 08:30): mutirao da CL em ponto - 3 posts no ar (269180 Hospital de Amor 08:20), CHECK ponte, CONTEXTO_MINI, memorias, seed obra",
+    "e4cd840a5 DSN Revisores: checks do ciclo",
+    "53aa1d8b8 DS-N Ideias ronda 08:18 06/09: VEREDITO V42MON-400575 (13o post da vertical Estatistica 06/09 07:35:58 — eco de familia politica_monetaria_comparada 8a peca em ~10 dias, refresh ~14h do 400571, mesmos 3 numeros/fontes; bandeira de tom 3o seguido; capa AUSENTE featured_media=0 1a quebra; DESCOBERTA: o silencio ~14h era em parte propagacao do espelho ~40min — janela 07:36 VEIO, cron vivo, SLA 24h reinicia base 07:35:58, alerta I2 reabre ~03:36 07/09, contagem 13:36 de hoje CANCELA; gate anti-eco prova n8 13a cobranca; rodape G3 11o seguido, 0 numero inventado 17o auditado; pull divergente resolvido por rebase do commit do Revisores sem force push; VIGIA sync 121a limpa; 174 processadas)"
+  ],
+  "initial_untracked": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json": "0aa953be1be6c0e137c7e11ce0625ebb0d195f6ccbc6e670b4a196dc720b72fb",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md": "1b6fc704c1d492cc13985267f346247078c7b01ec352d5d796003f0f5870df5a",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_evidencias.json": "a6d6d58562038115bc3c0e34e0644484a3341036fa58458954cbfd2fd27f7dd7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_ronda.md": "ed86994fe3432a39b0cb2e8500542c31e14ed19e5627e6f112bb4ef38a304bb0",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_evidencias.json": "0fb5b01b95894ef72cf0094f7f29b6370757097d869dfc191d72b0a9da5a57e7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_ronda.md": "485b730f403d7c65127788c473ee9f2fff791974d7a52b745a6a594bd009c432",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_evidencias.json": "6db9508193fc56b3a07e207c4fcb6ffc99438f18c6eb3f85f779c3560a43118b",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_ronda.md": "641266908b0ca9cbd4b03d11c845bdb48dabc8eabc3a77fe4ae06d9383c85ffa",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_evidencias.json": "a1027aa0f6fe58a9ab47253a3aeda5cb73a4067478e830cd5626aff8463928d9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_ronda.md": "019fc4eed439d1558833a78aac848d5ea6f1a86f876ca04fa77ccad444f14a11",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_evidencias.json": "14284b172ba2d12c9d9ec017c4a2f6ebd5fb2287f53c350e8175e1180f3b1a63",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_ronda.md": "863edd02b7ccc609dc504386579ef7e78220066748821d7f05bce295fabfd43d",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_evidencias.json": "39894cb47cb0d6bc89cf1fc5510f6b80b560bfc01953fa3685d31aeef6dcc7a8",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_ronda.md": "08196e6e16014b835b83b1041519c0a2e30c0bce6998e0702b9beffc46e7ce7e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_evidencias.json": "dab0755e695ce6037fb796ceadf808d31da27a52ed88996b0cdbb6d269a44929",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_ronda.md": "461b3da10a8d63f8ba5938d78337b47f7bd63652841ba5100bc460aec34a2ec2",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_evidencias.json": "50bf076ba08f241310914519d27a0e4979af6a137af7a7e6c2c627c3108c957e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_ronda.md": "f01d2307fe503f45ca540a79668b93bbb0bf18633b8d0aa704d8e8ead8cf766e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_evidencias.json": "9d86bf27481a611edfe8687b2c8608a2141d90b21cdfa7e7344aa774f771530c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_ronda.md": "4bbaa10168859c74c0fb8a17d45dd8aafa49b1a62d52adb51c5a5b2106ae8093",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_evidencias.json": "a78e12d713fd5aa482a6eb8c9dd99e054211f45ff9249180948d456a8a7af89e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_ronda.md": "08e034382e1ecb08104213fc43957d987a9dbc589a4267c0048cc713113e8b47",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_evidencias.json": "3ee3952841c8c26daaff04071924df025a0e5dcfa4c8f96fc3b5decd8341e044",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_ronda.md": "8dbac90b06cc672b6ee101dfd00df7428925c5f1efd7f258c4c57c4d07cd5081",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_evidencias.json": "e2788536c4b30a6680411cd4ec11c82ef8b9e16d84190336ba3e052cb6dcecb9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_ronda.md": "6c84942bb92e25b9b2c2596a177bb4519ef74a09afc83d22db6d3048587663f8",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_evidencias.json": "7e2717fc5cf12163350b57a9ee63f50d4103c18f11ebd289c0ba6d7727257c5c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_ronda.md": "4cce4aa933a0a519eff23afc53140e54f414f17140d86d9a7b8c0cc80eb360ac",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_105151_evidencias.json": "598954b50392bdea083e5d19c1be74d13c42f3b139fba7361d9da01a89db1cb7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_105151_ronda.md": "f47dcf3dca3f79e5eb8572f131c994c3c4bb014e0f54f6fa789c2c8e4f2c7b78",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_112220_evidencias.json": "e8bca8baaa83aeaa11c474cf1d747d120363e4477caa995e688b7ab18347be82",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_112220_ronda.md": "13091cf5569c7efa549528d029180b4b491ca6f91cb2f0d7fc2f7a430a9e41c7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_115234_evidencias.json": "568109d6290a17f34b6de4a91589ced328f2e7dd39cc040e79a406df4afb7856",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_115234_ronda.md": "afe78e724e916cf050be34282ad0441f94db59f4229232eaa51d79fb2a638b49",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_122340_evidencias.json": "821175c47f212f5fed6f09deeca6974b3c97e40a492b20124ad8faa80f51f3bb",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_122340_ronda.md": "9a964215c944f2dc60f6246e83f8e3f3667ec23879185b542993ff36a8f29633",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_125030_evidencias.json": "275d356a678ed1f9769dab42a8023c4df0c7e982482d398126e138719a041606",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_125030_ronda.md": "a0ce98b3d82a18ea59d87bcead0a15711512be7a14bf6e9bc0b969a18a8297df",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_132230_evidencias.json": "9523b5f0e889121bd4ba67415bfe61feaf447ca6c5ce026977531c90f02fa0a2",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_132230_ronda.md": "2b133ab8ae3c76290c6ba3c5efd0ba996d8a9ac6f2740d4379a50ccc18fd44a1",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_135108_evidencias.json": "07755fa6c53e3f56c4ae6ce6305268177b128b3a73514633a2a2e9207bb950dc",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_135108_ronda.md": "90300838f4345bcb23e0464f8af77558a0ba86a41fe96ebbd9fa5324f3ea019d",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_142059_evidencias.json": "63bf1694518dec2e1fd4d01aeb330a3fd87249e40e7ea6a2bc1ca0b5dcbf08a7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_142059_ronda.md": "21c4c2c95a44837ef10b04dc6cb90d7fa86e257ae62ef54dca66144867b1b31c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_145127_evidencias.json": "48348afc369f43ef4a6627678e975ca694c623cc462c720f6ab6e31eb4631e9f",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_145127_ronda.md": "46c3dbf2d6c4083eee4814ce96af685e0ae358244be0aa2828498cb5a5c17e35",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_152244_evidencias.json": "e4f567220ef2ed4e540ca4dcbc8954e7ab9ad05590967b31882c7ab03ea3f2aa",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_152244_ronda.md": "7841cb0ea4281f2b03df7e7a4610740ca034b56d91a2cfd05f0ef83ed0bd99f9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_155334_evidencias.json": "3ffd02249ef66c6c2802f1e84c7e7c0e0e8c4ec999a61705b83d9fb580168c28",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_155334_ronda.md": "0901a0c91df4cf43b3e480d914f14fc394d6b4ef1be3316b09b7dfac9140282f",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_162237_evidencias.json": "c5af9b5a9e5590aa40da87e3dd019d1d4f40bc01a566d0e29a5a2ba463090b99",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_162237_ronda.md": "b0162002becaa9006c2d1d8a1fa554b39299ddda1599d5a511823100bb0c68e0",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_165223_evidencias.json": "38c7965294d9fed7a661eb12f49c60ca54f19e53fc6bf6d123f3bc24b958edc8",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_165223_ronda.md": "c4f62cc91670294cc92203533f011e29ae51ae6ca9d05f6cdcbceb6de08b1a75",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_172238_evidencias.json": "9825502903983129300650478e2f97090e1fa6ac71a621fd4acf2781d71f5e2d",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_172238_ronda.md": "e6c53d6d553c30a78b0d5dcbecf87da0ad0a7343d0fde1ecee2304adbff3bd0e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_175136_evidencias.json": "5a3d53b4881aac3565de28658c1bca238fa6756b60a52c17f34c53572a84f97c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_175136_ronda.md": "91249321902a2c056b8b669826f1637d926cc418c3c9d032b98a9e97eeabdc24",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_182321_evidencias.json": "22bedf9afbb0391d99b9890b74063d138eaa36ac299eef5f9b76c589ca39f2fe",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_182321_ronda.md": "d9d22ba229c391ce1ffa63c82c20c1479f66e52e4fa1d8f97e976b287fca32a2",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_185351_evidencias.json": "b5a83f4fcba7f5ffb977cb73c293d2204b0b7600ceaf4679d8c66325a6dda572",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_185351_ronda.md": "3951a754e3549b76a86ae70cbe122dc2686dd275048d185c8028082c49b2425d",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_192314_evidencias.json": "ddff401c35cc38b982fa1b01c6297796aa4573704bb63be48315083fa4bd7c14",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_192314_ronda.md": "3763865bd16f140f70cf1ee60ce078728f3e4adab1313326741dbfbf84510ca3",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_195418_evidencias.json": "be215252530cf885624d66d515a6eefd3d25be9141b8b0fbd25e569bfa7657f1",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_195418_ronda.md": "89e9daa8e8a1e53cab5a04a0df3fc015dba5e28286f4a7f0da9b0d0f36b5518a",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_202304_evidencias.json": "381ed7280e61fa0ac8fae8abb8e1e812d9f236a40089496e3ba7ec7dee656782",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_202304_ronda.md": "933f5ba506ac309fb8707922f901c01690f6686c6b84ab12427a201ae2b108a1",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_205317_evidencias.json": "66775ed2ce236c4712238f5166f011acd6a56dcd5739ef5037da059283a09cf9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_205317_ronda.md": "63c8fc47867b3d0b3f26c75c26b4323a5483399c76393ae97f07d588906f9307",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_212248_evidencias.json": "16f51e9e5fb47fef78d0b11a760016f28a40de73cee3a9e49b8e8346ba79a661",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_212248_ronda.md": "54a798d94e0b93deb8258b7f08a05e9e977a9b682eee09394fcf7b204a217ba9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_215323_evidencias.json": "67fbc21b9bdf89c8f922a9c1e3a4af4ac87df52ebd5532d73a58b8a370960f56",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_215323_ronda.md": "b99850c401b6895d6ffc2d1a95a0ac7a2cd00d433761760bc28c4454c6b51db2",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_222238_evidencias.json": "edd8398443e8e0729e2d19081a92a5ae03dbf8f40d018ef3753ffe4b5805334a",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_222238_ronda.md": "23f4ccfe67977e55a43077e00045ee27556053a77080945399988e3a2d3622fc",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_225255_evidencias.json": "03f0f3cb07b99cc6232164ff9906b7bfb35ac9948606b33748d4a920d45b3af2",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_225255_ronda.md": "98745c6b923e62ce9f0582be7b5433e1970d90f980a3dfc63fa148a1f243b741",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_232322_evidencias.json": "020a1e15c2b9027a68d918dbc067c54151a099e7376161a4f47486225c31acc8",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_232322_ronda.md": "067458f0078ca73df1ed43177f0e7ea5ef91052bb82af2890c00d56f0c4f1990",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_235240_evidencias.json": "e86dcb9d86d9c8948fb304be96c289ae6b1f4a11ff2401a32119afbe04ffd350",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_235240_ronda.md": "cfaa18904a4ebb4e8d16ac2be9f6ab6ae2026f529c315e03bf6ec07d2aecccf6",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_002324_evidencias.json": "6974ff6ae489374f0b46ddd83fc09a94ed5e48eb82f4bac254edac9c2676b6f1",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_002324_ronda.md": "a0e65b2a6511a3064135092d8c98950e0799e5c1bd69e289f82b3deff3627d83",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_005355_evidencias.json": "79fbfdfadd9343a8249f946e64871141ee6a765f736dde025f0f1d9bb2bdb637",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_005355_ronda.md": "6d203d75044a5dedb5541353e8c5029d047c3f6c759e41ea78a5dbdd8ff13071",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_012019_evidencias.json": "090d31a786d1991ab8fc51914c23a5f151eff7caaec742c693595212052f33b7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_012019_ronda.md": "10815837d2d2c7f3c4789cb4c1dc7292efe0868e85c22a07e9ddad03d4031a21",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_015148_evidencias.json": "2f72017a6e6253ef2439399a7934ba5b57db3b0368f62542cd9161f6df0f2274",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_015148_ronda.md": "09f4bb0335853654d2e3fbddd92a092637835f4e728f7660cbb9c8079494150e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_022031_evidencias.json": "105ce62c75d8e94beeb7c86596f260cb1eaee09901e456e4a5e5a78e561ccda5",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_022031_ronda.md": "15f0298323fecf8d9d38d803da2543ab2b1b40d92e5e9c6feb401801ae101214",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_025047_evidencias.json": "0ccd4c90b729a58c09bf96adeed73d653217607f431efa8c375aadaa454065ff",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_025047_ronda.md": "dd56ff630f6d26110d7bf35cd1d5b59f61ad7742f7fc0f730f3347d59e7740d9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_032036_evidencias.json": "0fafa62e7187e4c552208267e59971118c72e9683daaa03f6fb03fdd6a23d5cc",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_032036_ronda.md": "0ca73ff83ba18db0f0b3b1bb49d05fcbeac071b00f4c85440092112f058db911",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_035040_evidencias.json": "4057e3a11502f043dc34fda7d61851bf640f28bad0b354f2fdf51e21cf478275",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_035040_ronda.md": "c699a9c0a82bfbe6d9e579fa39e886d305b07e4e67de7df5f2478577abb7d992",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_042027_evidencias.json": "395cfd929a14d22eef861ce825f7c9bff353e5c66269b6c4651d7edfb2b51c6c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_042027_ronda.md": "c3743b83bbdd13c323e1491d0934d467940795f048301c95af1a30ecead7335e",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_045004_evidencias.json": "5856356e6463c21277cc12e1426433abe33bd570ce06c8d576a753c5bd72b58c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_045004_ronda.md": "fb41eb2fb8e97b2dae38b064b0e75264d09ebd9832840638badac07564e46456",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_052049_evidencias.json": "25b8d0819f1d99ba8341708f2cc9b5178a38a781aa51dffd5e4456c88234ef89",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_052049_ronda.md": "85cae93e0f4619ae08e7b1ea9e71e4f1df6f23c0f835b174f3cf45ce5eba103b",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_055131_evidencias.json": "6e0b780a7934f80121010e08282b2367c3ec0a7ad1ba34026fdf00eedcda387a",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_055131_ronda.md": "93f11500494124ac29368ddd4eb7ff2f63c144cacd74c68b93429d816d51216f",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_062120_evidencias.json": "d8d76c0b6694fbb4ac1ce41b3ce8ab99d66f5f97f0b05d0bc7df3eec52d6ed6a",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_062120_ronda.md": "fb3e7d49ce336386c22b9505074060354ef1ede8f142434cbd98df253ce56cb5",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_065231_evidencias.json": "2ed74a2c1f9e261f44f65bb2f0ecbb0982fe876f5e1f580f002d8c8076652e7c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_065231_ronda.md": "e2ce454fedac93d9e62d166fa723a824ee2bb26c217037f4e022ebb53a30fa93",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_075251_evidencias.json": "9ef84134f6c2b6b7fa748f11bd9a80fc70e5473a6935e4a38d8ec9d4fe2984cc",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_075251_ronda.md": "43e72d1d223cea870e94d8323f2171b2ce7289af1c9c251113883c2a554cb068",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_082058_evidencias.json": "2aaba4f3337b588869db04b8251173f4626cfd700925c1be671a01fa49bd7cb9",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_082058_ronda.md": "4a3f78891f96392b731fe1d371c7751758fbb2a7e82d6e60585444bc4616e8ca"
+  },
+  "initial_tracked_diff": "",
+  "initial_index_diff": "",
+  "canonical_counterparts": [
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+      "canonical_sha256": "df871c53d1ef4f4c5db966a127ea96671e9d7870c7ec891f6ea0e274ff9a1707",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+      "canonical_sha256": "b16ea9ad24064f23ebcef82023bc1324262f2a2c2271abe34afa96249daaa092",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md",
+      "canonical_sha256": "e2bce2ebb6fe2d5c94c3384a000314fde953cf93e0c90d5a52b32a519310f2f0",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_ideias.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_ideias.md",
+      "canonical_sha256": "99e8f5bb4fcbfc0f7d18ff0f1c788aac3011b647260acd31d80381ba7b893f33",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "canonical_sha256": "135fb2d3e005720017176594d0c8be946ca89d02aae5537a5d62b77ca76be182",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md",
+      "canonical_sha256": "0e8f25bada1d15237b1646542e245ee8750f586eae1d073061d149af79bface3",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/GRADE_DE_CONTROLE_AGENTES.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/GRADE_DE_CONTROLE_AGENTES.md",
+      "canonical_sha256": "d50609410aa4eedff002322b587231272c50094bf482367d1114c9c2228a8840",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ideias/estado.json",
+      "clone": "/home/migueldorosario/cerebro-miguel/.dsn_ideias/estado.json",
+      "canonical_sha256": "7fcf4daf0ac765ed66f3813dc48aedd09b8e74dc1955f5de805140deb4bd2bc6",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/loop_trindade_laura/controle/memorias_agentes/claude/2026-09-06.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/controle/memorias_agentes/claude/2026-09-06.md",
+      "canonical_sha256": "3ec38da74083cad2078ca457fcbccf42dbbdc5121892b61d175416663341087a",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/loop_trindade_laura/memoria_loop_laura/2026-09-06.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/loop_trindade_laura/memoria_loop_laura/2026-09-06.md",
+      "canonical_sha256": "2b6fd88d05b2668388e39348aa4cb5332f42580ee557f9d0a0112d82fcaca301",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md",
+      "canonical_sha256": "baf873ec823d0736547e7e4d6e7f0a7b201893ce7290c0a8b2295ad0282fef28",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md",
+      "canonical_sha256": "eba6ba98694b60b1607285541186503b3c9bfa313c454d1e1901b1972349eb51",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+      "canonical_sha256": "8faa6b11e20918907dce487497bf3c27f10e3eda81a1403a925898f32dc7b3fa",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+      "canonical_sha256": "abf69a8ead60fe98ad185dc77a999ca66d96b5b3509e6418ea55495127ec648c",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ideias/2026-09-06_v42mon_veredito_400575_arquiteto.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ideias/2026-09-06_v42mon_veredito_400575_arquiteto.md",
+      "canonical_sha256": "e78c9f9ef0968c9c317393e95ede82368847c4e223bb2615721f381e1d6a166c",
+      "same_content": true
+    },
+    {
+      "canonical": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md",
+      "clone": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md",
+      "canonical_sha256": "d5b80f92a2125634a13af91fea450d8b2f484bca2bf43aca678a8d315b05dd69",
+      "same_content": true
+    }
+  ],
+  "integrity": {
+    "health_conflict_markers": [
+      {
+        "line": 110,
+        "text": "<<<<<<< HEAD"
+      },
+      {
+        "line": 111,
+        "text": "======="
+      },
+      {
+        "line": 112,
+        "text": "<<<<<<< HEAD"
+      },
+      {
+        "line": 114,
+        "text": "======="
+      },
+      {
+        "line": 116,
+        "text": ">>>>>>> ponte_health: carimbo 03/09 04:05"
+      },
+      {
+        "line": 119,
+        "text": ">>>>>>> ponte_health: carimbo 03/09 04:08"
+      }
+    ],
+    "health_matches_head": true,
+    "claude_inbox_canonical_sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb",
+    "claude_inbox_clone_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+    "claude_inbox_explained": false,
+    "bridges_equal": true,
+    "monitoramento_equal": false,
+    "monitoramento_difference": "Canônico acrescentou duas linhas de trabalhos ZCode concluídos 08:27/08:35; clone permanece no cursor anterior. Diferença observada de sincronização, sem reparo.",
+    "loop_indicators": {
+      "clone": {
+        "ativo": "laura",
+        "desde": "2026-08-18T08:40:00-03:00",
+        "motivo": "ordem Miguel 18/08 ~08:35 — Laura primária, Miguel redundância (skip)",
+        "failover_para": "miguel"
+      },
+      "canonical": {
+        "ativo": "laura",
+        "desde": "2026-09-06T07:55:06-03:00",
+        "motivo": "Laura fresca no GitHub por >= 20 min (reversão automática)",
+        "failover_para": null
+      }
+    },
+    "failover_authorization": "Nenhuma. Prompt atual mantém DESENHADO_NAO_ATIVO; indicadores não ampliam ofício."
+  },
+  "public_read_only_checks": [
+    {
+      "label": "canonical_latest",
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts?per_page=12&orderby=date&order=desc&_fields=id,date,date_gmt,status,link,featured_media",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:49:33.114533-03:00",
+      "finished_brt": "2026-09-06T08:49:34.504437-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/canonical_latest_curl.json",
+      "bytes": 2846,
+      "sha256": "641b90e81c6842ea29b25334db159b440c131a71e71592081e3822cd2c72d492",
+      "data": [
+        {
+          "id": 269183,
+          "date": "2026-09-06T08:40:00",
+          "date_gmt": "2026-09-06T11:40:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/06/katie-taylor-encerra-carreira-como-campea-mundial-incontestavel/",
+          "featured_media": 269190
+        },
+        {
+          "id": 269180,
+          "date": "2026-09-06T08:20:00",
+          "date_gmt": "2026-09-06T11:20:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/06/hospital-de-amor-inaugura-centro-gratuito-de-reabilitacao-oncologica/",
+          "featured_media": 269188
+        },
+        {
+          "id": 269184,
+          "date": "2026-09-06T07:45:00",
+          "date_gmt": "2026-09-06T10:45:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/06/cvm-mantem-consultores-responsaveis-por-recomendacoes-feitas-por-ia/",
+          "featured_media": 269130
+        },
+        {
+          "id": 269178,
+          "date": "2026-09-06T07:18:00",
+          "date_gmt": "2026-09-06T10:18:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/06/o-que-e-a-inteligencia-artificial-geral-que-a-openai-diz-ter-alcancado/",
+          "featured_media": 269187
+        },
+        {
+          "id": 269176,
+          "date": "2026-09-05T23:40:00",
+          "date_gmt": "2026-09-06T02:40:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/mais-de-31-mil-clientes-ficam-sem-luz-durante-chuva-em-sao-paulo/",
+          "featured_media": 269177
+        },
+        {
+          "id": 269170,
+          "date": "2026-09-05T22:34:00",
+          "date_gmt": "2026-09-06T01:34:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/putin-discute-propostas-dos-eua-para-encerrar-guerra-na-ucrania/",
+          "featured_media": 269174
+        },
+        {
+          "id": 269173,
+          "date": "2026-09-05T22:20:50",
+          "date_gmt": "2026-09-06T01:20:50",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/quaest-ce-o-raio-x-independente-e-sem-torcida-da-disputa-elmano-x-ciro/",
+          "featured_media": 269175
+        },
+        {
+          "id": 269166,
+          "date": "2026-09-05T22:00:00",
+          "date_gmt": "2026-09-06T01:00:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/seattle-times-e-newsday-processam-openai-e-microsoft-por-uso-de-jornalismo/",
+          "featured_media": 269168
+        },
+        {
+          "id": 269163,
+          "date": "2026-09-05T21:08:00",
+          "date_gmt": "2026-09-06T00:08:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/anp-aprova-indicacao-de-24-blocos-na-bacia-potiguar/",
+          "featured_media": 269164
+        },
+        {
+          "id": 269158,
+          "date": "2026-09-05T19:48:00",
+          "date_gmt": "2026-09-05T22:48:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/anvisa-autoriza-remedio-experimental-para-piloto-com-doenca-rara/",
+          "featured_media": 269162
+        },
+        {
+          "id": 269156,
+          "date": "2026-09-05T19:28:00",
+          "date_gmt": "2026-09-05T22:28:00",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/caixa-aceita-renda-de-aplicativos-no-financiamento-habitacional/",
+          "featured_media": 269161
+        },
+        {
+          "id": 269155,
+          "date": "2026-09-05T18:39:33",
+          "date_gmt": "2026-09-05T21:39:33",
+          "status": "publish",
+          "link": "https://www.ocafezinho.com/2026/09/05/como-encontrar-iphone-barato/",
+          "featured_media": 269157
+        }
+      ],
+      "headers": [
+        "HTTP/2 200 ",
+        "date: Sun, 06 Sep 2026 11:49:34 GMT",
+        "content-type: application/json; charset=UTF-8",
+        "x-wp-total: 78964",
+        "cf-cache-status: DYNAMIC"
+      ]
+    },
+    {
+      "label": "mirror_400575",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/400575?_fields=id,date,date_gmt,status,link,featured_media,author",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:49:33.115043-03:00",
+      "finished_brt": "2026-09-06T08:49:35.075749-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/mirror_400575_curl.json",
+      "bytes": 208,
+      "sha256": "b65575d5a17cfbf87da301b244bdab18a01ab1fcdade7b47fabd22398134460e",
+      "data": {
+        "id": 400575,
+        "date": "2026-09-06T07:35:58",
+        "date_gmt": "2026-09-06T10:35:58",
+        "status": "publish",
+        "link": "https://cafezinho.news/v42-20260906-politica_monetaria_comparada.htm",
+        "author": 5470,
+        "featured_media": 0
+      },
+      "headers": [
+        "HTTP/1.1 200 OK",
+        "Date: Sun, 06 Sep 2026 11:49:34 GMT",
+        "Content-Type: application/json; charset=UTF-8"
+      ]
+    },
+    {
+      "label": "mirror_previous",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/400571?_fields=id,date,date_gmt,status,link,featured_media,author",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:49:33.115369-03:00",
+      "finished_brt": "2026-09-06T08:49:35.073058-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/mirror_previous_curl.json",
+      "bytes": 210,
+      "sha256": "b8f4f1d69f6444bfc857f369217f886a5a25b4adbdceb1e6559c1ed17a2d3a0a",
+      "data": {
+        "id": 400571,
+        "date": "2026-09-05T17:36:04",
+        "date_gmt": "2026-09-05T20:36:04",
+        "status": "publish",
+        "link": "https://cafezinho.news/v42-20260905-politica_monetaria_comparada-2.htm",
+        "author": 5470,
+        "featured_media": 0
+      },
+      "headers": [
+        "HTTP/1.1 200 OK",
+        "Date: Sun, 06 Sep 2026 11:49:35 GMT",
+        "Content-Type: application/json; charset=UTF-8"
+      ]
+    },
+    {
+      "label": "mirror_page_400575",
+      "url": "https://cafezinho.news/v42-20260906-politica_monetaria_comparada.htm",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:50:10.881825-03:00",
+      "finished_brt": "2026-09-06T08:50:16.672318-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/mirror_page_400575.body",
+      "bytes": 200340,
+      "sha256": "3f988ab7c060db346c012d34cb88d710f9a82c884e0b58dda6368fba85205162",
+      "meta": [
+        {
+          "property": "og:title",
+          "content": "Selic a 14% custa caro ao Brasil e rende ao rentismo"
+        },
+        {
+          "property": "og:image",
+          "content": "https://cafezinho.news/wp-content/uploads/2026/09/bcb-bcb-432-line-6-scaled.png"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cafezinho.news/wp-content/uploads/2026/09/fred-fedfunds-line-6-scaled.png",
+          "alt": "Taxa básica de juros dos Estados Unidos (Fed)"
+        }
+      ],
+      "image_count": 34,
+      "canonical": [
+        "https://www.ocafezinho.com/v42-20260906-politica_monetaria_comparada.htm"
+      ]
+    },
+    {
+      "label": "mirror_page_400571",
+      "url": "https://cafezinho.news/v42-20260905-politica_monetaria_comparada-2.htm",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:50:10.882177-03:00",
+      "finished_brt": "2026-09-06T08:50:16.701367-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/mirror_page_400571.body",
+      "bytes": 199589,
+      "sha256": "0f33531218834538a24d0e6670db618207b5a4959595705dff6601f18405026e",
+      "meta": [
+        {
+          "property": "og:title",
+          "content": "O peso dos juros altos na economia brasileira e suas consequências"
+        },
+        {
+          "property": "og:image",
+          "content": "https://cafezinho.news/wp-content/uploads/2026/09/bcb-bcb-432-line-5-scaled.png"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cafezinho.news/wp-content/uploads/2026/09/fred-fedfunds-line-5-scaled.png",
+          "alt": "Taxa básica de juros dos Estados Unidos (Fed)"
+        }
+      ],
+      "image_count": 33,
+      "canonical": [
+        "https://www.ocafezinho.com/v42-20260905-politica_monetaria_comparada-2.htm"
+      ]
+    },
+    {
+      "label": "canonical_269183",
+      "url": "https://www.ocafezinho.com/2026/09/06/katie-taylor-encerra-carreira-como-campea-mundial-incontestavel/",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:50:10.890157-03:00",
+      "finished_brt": "2026-09-06T08:50:13.573518-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/canonical_269183.body",
+      "bytes": 236270,
+      "sha256": "1d228299c7ed550c5e4cdeeab6d534a198e657d0f2f8843d6f02615b3e480622",
+      "meta": [
+        {
+          "property": "og:title",
+          "content": "Katie Taylor encerra carreira como campeã mundial incontestável"
+        },
+        {
+          "property": "og:image",
+          "content": "https://www.ocafezinho.com/wp-content/uploads/2026/09/cl174-capa-269183.jpg"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://www.ocafezinho.com/wp-content/smush-webp/2026/09/cl174-capa-269183-1024x682.jpg.webp",
+          "class": "w-100 img-fluid rounded wp-post-image",
+          "alt": "Boxeadora de uniforme vermelho aplaude no ringue com cordas brancas, cercada por fotógrafos e um árbitro de camisa branca"
+        }
+      ],
+      "image_count": 38,
+      "canonical": [
+        "https://www.ocafezinho.com/2026/09/06/katie-taylor-encerra-carreira-como-campea-mundial-incontestavel/"
+      ]
+    },
+    {
+      "label": "canonical_v42_slug",
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts?slug=v42-20260906-politica_monetaria_comparada&_fields=id,date,status,link,featured_media,author",
+      "method": "GET",
+      "authenticated": false,
+      "started_brt": "2026-09-06T08:50:10.894933-03:00",
+      "finished_brt": "2026-09-06T08:50:14.424404-03:00",
+      "curl_exit": 0,
+      "http_status": "200",
+      "stderr": "",
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/canonical_v42_slug.body",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "data": []
+    }
+  ],
+  "additional_urllib_checks": [
+    {
+      "label": "canonical_latest",
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts?per_page=12&orderby=date&order=desc&_fields=id,date,date_gmt,status,link,featured_media",
+      "method": "GET",
+      "authenticated": false,
+      "time_brt": "2026-09-06T08:48:46.144073-03:00",
+      "status": 200,
+      "final_url": "https://www.ocafezinho.com/wp-json/wp/v2/posts?per_page=12&orderby=date&order=desc&_fields=id,date,date_gmt,status,link,featured_media",
+      "bytes": 2846,
+      "sha256": "641b90e81c6842ea29b25334db159b440c131a71e71592081e3822cd2c72d492",
+      "headers": {
+        "Date": "Sun, 06 Sep 2026 11:49:31 GMT",
+        "Content-Type": "application/json; charset=UTF-8",
+        "x-wp-total": "78964",
+        "x-wp-totalpages": "6581",
+        "cf-cache-status": "DYNAMIC"
+      },
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/canonical_latest.json"
+    },
+    {
+      "label": "mirror_400575",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/400575?_fields=id,date,date_gmt,status,link,featured_media,author",
+      "method": "GET",
+      "authenticated": false,
+      "time_brt": "2026-09-06T08:48:46.145243-03:00",
+      "status": 200,
+      "final_url": "https://cafezinho.news/wp-json/wp/v2/posts/400575?_fields=id,date,date_gmt,status,link,featured_media,author",
+      "bytes": 208,
+      "sha256": "b65575d5a17cfbf87da301b244bdab18a01ab1fcdade7b47fabd22398134460e",
+      "headers": {
+        "Date": "Sun, 06 Sep 2026 11:48:48 GMT",
+        "Content-Type": "application/json; charset=UTF-8"
+      },
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/mirror_400575.json"
+    },
+    {
+      "label": "mirror_previous",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/400571?_fields=id,date,date_gmt,status,link,featured_media,author",
+      "method": "GET",
+      "authenticated": false,
+      "time_brt": "2026-09-06T08:48:46.146078-03:00",
+      "status": 200,
+      "final_url": "https://cafezinho.news/wp-json/wp/v2/posts/400571?_fields=id,date,date_gmt,status,link,featured_media,author",
+      "bytes": 210,
+      "sha256": "b8f4f1d69f6444bfc857f369217f886a5a25b4adbdceb1e6559c1ed17a2d3a0a",
+      "headers": {
+        "Date": "Sun, 06 Sep 2026 11:48:48 GMT",
+        "Content-Type": "application/json; charset=UTF-8"
+      },
+      "raw_file": "/tmp/codex-miguel-ronda-20260906-0847-zlshp26q/mirror_previous.json"
+    }
+  ],
+  "network_diagnostics": {
+    "web_open": "safe-open errors; não demonstram indisponibilidade. GET público via urllib/curl funcionou.",
+    "urllib_timing": "time_brt registra início; sem horário local de conclusão. curl tem início/fim e é a base temporal do recibo."
+  },
+  "public_counts": {
+    "at_brt": "2026-09-06T08:49:34.504437-03:00",
+    "sample_size": 12,
+    "oldest": "2026-09-05T18:39:33",
+    "today": 4,
+    "3h": 4,
+    "12h": 9,
+    "covers_12h": true,
+    "new_ids_since_previous": [
+      269180,
+      269183
+    ],
+    "x_wp_total": 78964
+  },
+  "html_structure_checks": [
+    {
+      "label": "mirror_page_400575",
+      "wp_post_image_class_count": 3,
+      "og_image_present": true,
+      "graph_in_body": true
+    },
+    {
+      "label": "mirror_page_400571",
+      "wp_post_image_class_count": 2,
+      "og_image_present": true,
+      "graph_in_body": true
+    }
+  ],
+  "semantic_json_deltas": {
+    "ideas_counter": {
+      "before": 173,
+      "after": 174,
+      "added": "VEREDITO V42MON-400575",
+      "removed": 0,
+      "twin_json_sha_equal": true
+    }
+  },
+  "arithmetic_checks": {
+    "v42_interval_seconds": 50394,
+    "v42_24h_timestamp_if_applied": "2026-09-07T07:35:58-03:00",
+    "v42_minus_4h_alert_if_applied": "2026-09-07T03:35:58-03:00",
+    "trigger_executed": false
+  },
+  "time_brt": "2026-09-06T08:52:28.654677-03:00",
+  "ref": "XM-20260906_085228-HOLD",
+  "mode": "OBSERVACAO_FASE2_HOLD_INTEGRIDADE",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "rounds_executed": 1,
+  "operational_mutations": 0,
+  "hold_reason": "Ponte_health mantém seis marcadores de conflito também no HEAD; inbox Claude canônico/clone sem reconciliação explicada. MONITORAMENTO tem duas adições canônicas de trabalhos ZCode ainda não refletidas no clone.",
+  "authority_resolution": "LOOP + Emenda 4: observador; segunda vista somente se pedida. Constituição 02/09 reconhece CL cobrindo CM, mas não concede ao Codex publicação, escrita Laura ou failover. Prompt desta ronda prevalece; DESENHADO_NAO_ATIVO preservado.",
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "result": "Already up to date.",
+    "head_at_snapshot": "33d0ac927537c9db245b4d70a85d4250d4f5150b"
+  },
+  "git_commit_push": {
+    "commit": false,
+    "push": false,
+    "reason": "HOLD de integridade; só recibo/evidências locais novos, sem transporte nem mutações na ponte."
+  },
+  "coordination": {
+    "new_laura_refs": [
+      "CL-20260906-004",
+      "AL-20260906-630"
+    ],
+    "new_direct_query_to_codex_miguel": 0,
+    "second_view_requested": false,
+    "new_closes_ref": false,
+    "own_ledger_state_unchanged": true,
+    "ack_delivery": "Não enviado por HOLD; ciência local neste recibo.",
+    "other_deltas": [
+      "DS-N-20260906-231",
+      "DS-Dell-20260906-016",
+      "V42MON-400575",
+      "CM-20260906-004 (ledger reativado + JSONL bugs)",
+      "R2 CORREÇÕES 269102/269150/269179/269169/268982; feedback CL nº136 269197 retido"
+    ],
+    "cl_owned_items": [
+      269182,
+      269171,
+      269189,
+      269197,
+      269179,
+      269102,
+      269169,
+      269150,
+      269165,
+      267542
+    ]
+  },
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0,
+    "signed_receipts": 0,
+    "metadata_and_html_only": [
+      400575,
+      400571,
+      269183
+    ]
+  },
+  "reservation_evidence": "MONITORAMENTO canônico por delta + hash; quatro inboxes canônicos, canal e ponte_imagens_v4_LOG sem delta. CL-004 mantém fila e rascunhos sob dona; nenhuma disponibilidade ou expiração de reserva presumida.",
+  "findings": [
+    {
+      "id": "XM-20260906_085228-HOLD-F1",
+      "status": "CONFIRMADO_METADATA_COM_LIMITE",
+      "owner": "ZCode Miguel / DS-N Ideias / publicador responsável",
+      "finding": "REST público do espelho confirma 400575 publish autor 5470 featured_media=0. Controle 400571 também retorna featured_media=0, diferente de 400569 citado no parecer. Ambos HTML HTTP 200 com og:image de gráfico e gráfico no corpo. Ausência de featured_media não demonstra ausência de toda imagem; exclusividade da regressão ao post novo não comprovada.",
+      "canonical_check": "Busca pública no www pelo slug V4.2 retornou []; não demonstra inexistência privada nem mapeia IDs.",
+      "action": "Registrar evidência para auditoria do vínculo de capa/renderização por dono; zero aplicação. Fora de 5786/draft/pending.",
+      "visual_verdict": false,
+      "fix_executed": false
+    },
+    {
+      "id": "XM-20260906_085228-HOLD-F2",
+      "status": "DIVERGENCIA_DOCUMENTAL_CONFIRMADA_POR_REST",
+      "owner": "DS-N Chefe / DS Miguel Dell / DS-N Ideias",
+      "finding": "Blocos Chefe 231ª e DS-Dell 224ª ainda repetem V4.2 silencioso ~17h30/18h e prazo SLA 17:36 apesar do V42MON-400575: REST confirma data 06/09 07:35:58. Gap entre datas dos posts 400571/400575 é 13h59m54s. Se a régua for 24h desde essa data, prazo 07/09 07:35:58; alerta -4h 07/09 03:35:58.",
+      "limit": "Data pública e HTML provam disponibilidade, não horário efetivo de geração/propagação nem execução por cron. Causa runtime continua sem prova independente.",
+      "action": "Anotar correção de cursor para vigias, sem ligar/desligar cron e sem encerrar ticket.",
+      "fix_executed": false
+    }
+  ],
+  "pending": [
+    "Reconciliar ponte_health e inbox Claude pelos responsáveis; depois transportar ciência/ACKs e achados acumulados.",
+    "Auditar featured_media=0 no espelho para 400575 e 400571, distinguindo vínculo, HTML e visão; nenhuma capa aplicada.",
+    "Atualizar régua V4.2 nas sínteses que ainda repetem 17h30/18h sem publicação; horário da geração/cron não verificado.",
+    "Fila futura CL até 09:40 é relato, cobertura >=8h não demonstrada; fila privada não consultada.",
+    "Achados herdados IDEIA-019 v2 (fuso do script e cobertura 21:42→05:30=7h48) sem delta e sem correção presumida.",
+    "CL relata V4.1 retomado 08:35 com 269197 retido; servidor privado não consultado."
+  ],
+  "prohibitions_preserved": true,
+  "prohibited_actions_check": {
+    "publish_future": 0,
+    "status_title_body_taxonomy_author": 0,
+    "visual_receipt_exemption": 0,
+    "sql_deploy_plugin_theme_cron_users": 0,
+    "grok_laura_credentials": 0,
+    "secret_exposure": 0,
+    "overwrite_third_party": 0,
+    "git_add_A_force_push_reset": 0,
+    "laura_failover_activation": 0,
+    "ssh": 0,
+    "subagents": 0,
+    "outbound_agent_messages": 0
+  },
+  "coverage": {
+    "sources_total": 138,
+    "unchanged": 108,
+    "with_deltas": 30,
+    "git_commits": 8,
+    "git_paths": 27,
+    "canonical_counterparts_checked": 16
+  },
+  "reading_notes": "Operacionais por deltas desde 20260906_082058; snapshots anteriores validados por hash, alterações internas incluídas. Normativas obrigatórias renovadas. Dump inicial do JSON anterior foi truncado, sem alegar leitura integral; baseline operativo obtido dos snapshots. Derivados longos por trechos, limites registrados por fonte. Arquivos canônicos de outros trabalhos ZCode só inventariados; índices derivados não substituíram as fontes operacionais. LI O MANUAL DE COMUNICAÇÃO INTERNA (cerebro/Estilo/MANUAL_DE_COMUNICACAO_INTERNA.md).",
+  "html_structure_checks_note": "Classes wp-post-image encontradas nos espelhos pertencem a miniaturas de matérias relacionadas; não foram usadas como prova de capa do artigo. Não houve visão de bitmap.",
+  "later_changes": [
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "snapshot_sha256": "f6e397a74bc6f4242c88014bb9faa23377099f1aae6fb08c24c05aa934f3cc6f",
+      "current_sha256": "d3f09399aef1b5a54ee5c05366e73eb36881d2c99bfcdd5742caacd95df7c828",
+      "action": "delta fica para próxima ronda; cursor não avançado além do snapshot"
+    }
+  ],
+  "preexisting_untracked_preserved": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_105151_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_105151_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_112220_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_112220_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_115234_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_115234_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_122340_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_122340_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_125030_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_125030_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_132230_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_132230_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_135108_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_135108_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_142059_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_142059_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_145127_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_145127_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_152244_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_152244_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_155334_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_155334_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_162237_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_162237_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_165223_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_165223_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_172238_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_172238_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_175136_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_175136_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_182321_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_182321_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_185351_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_185351_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_192314_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_192314_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_195418_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_195418_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_202304_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_202304_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_205317_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_205317_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_212248_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_212248_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_215323_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_215323_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_222238_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_222238_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_225255_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_225255_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_232322_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_232322_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_235240_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_235240_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_002324_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_002324_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_005355_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_005355_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_012019_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_012019_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_015148_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_015148_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_022031_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_022031_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_025047_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_025047_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_032036_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_032036_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_035040_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_035040_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_042027_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_042027_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_045004_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_045004_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_052049_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_052049_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_055131_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_055131_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_062120_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_062120_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_065231_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_065231_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_075251_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_075251_ronda.md": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_082058_evidencias.json": true,
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_082058_ronda.md": true
+  },
+  "tracked_diff_at_close": "",
+  "index_diff_at_close": "",
+  "head_at_close": "33d0ac927537c9db245b4d70a85d4250d4f5150b",
+  "writes": [
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_085228_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260906_085228_ronda.md"
+  ]
+}

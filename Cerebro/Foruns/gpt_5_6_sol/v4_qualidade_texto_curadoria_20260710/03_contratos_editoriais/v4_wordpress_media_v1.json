@@ -1,0 +1,38 @@
+{
+  "_doc": "Contrato V4 para reconciliacao entre acervo auditado e WordPress Media.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "principios": {
+    "append_only": true,
+    "nao_editar_audited_original": true,
+    "lookup_local_antes_de_upload": true,
+    "upload_real_desabilitado_inicialmente": true,
+    "wp_media_id_obrigatorio_para_publicacao_real": true
+  },
+  "store": {
+    "format": "jsonl",
+    "path": "agent_data/v4/media/wp_mappings",
+    "filename_prefix": "wp_media_mappings",
+    "append_only": true
+  },
+  "required_fields": [
+    "schema_version",
+    "timestamp",
+    "image_id",
+    "wp_media_id",
+    "source",
+    "url",
+    "credit",
+    "license",
+    "operator"
+  ],
+  "real_upload": {
+    "enabled": false,
+    "env": {
+      "url": "V4_WORDPRESS_URL",
+      "user": "V4_WORDPRESS_USER",
+      "app_password": "V4_WORDPRESS_APP_PASSWORD"
+    }
+  }
+}

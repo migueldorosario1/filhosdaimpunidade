@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "enabled": false,
+  "model": "gpt-6-astra",
+  "timezone": "America/Sao_Paulo",
+  "repository": "migueldorosario1/cerebro-miguel",
+  "state_dir": "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/state/ronda_horaria",
+  "prompt_file": "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/ronda_horaria/PROMPT.md",
+  "codex_binary": "/home/migueldorosario/.nvm/versions/node/v22.22.2/bin/codex",
+  "node_binary": "/home/migueldorosario/.nvm/versions/node/v22.22.2/bin/node",
+  "approvals": {
+    "dsn": {
+      "approved": false,
+      "reference": ""
+    },
+    "zm": {
+      "approved": false,
+      "reference": ""
+    }
+  },
+  "human_authorization": "Pedido direto de Miguel em 05/09/2026: preparar, validar e ativar somente conforme revisões vigentes; assinatura existente, mesmo modelo, sem gasto/produção.",
+  "sources": [
+    {
+      "kind": "github",
+      "path": "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md",
+      "max_chars": 12000,
+      "must_complete": true,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/MEMORY.md",
+      "max_chars": 16000,
+      "must_complete": true,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/CONSTITUICAO_DA_CASA_V3_MINUTA_FINAL_20260902.md",
+      "max_chars": 20000,
+      "must_complete": true,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "max_chars": 20000,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/ponte_laura_completa/de_astra.md",
+      "max_chars": 42000,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "max_chars": 12000,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "max_chars": 10000,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/memorias_provisorias/PONTO_DE_RETOMADA_ASTRA.md",
+      "max_chars": 12000,
+      "required": true,
+      "common": true
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/FORUM_ASTRA_PLANO_INTEGRADO_CAFEZINHO_MOKA_20260905.md",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Memorias/PLANO_ASTRA_RETIRADA_REVISAO_DSN_ZM_20260905.md",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/FORUM_ASTRA_FASE1_DISCO_NASSIF_PENDENCIAS_20260905.md",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/PLANO_ASTRA_MOKA_GRATUITO_GOOGLE_PLAY_20260905.md",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/ESTUDO_ASTRA_AUDIENCIA_RECEITA_20260905.md",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Memorias/EVIDENCIA_ASTRA_AUDIENCIA_CACHE_20260905.json",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/PROPOSTA_ASTRA_CONTROLE_DESPESAS_TRANSPARENTE_20260905.md",
+      "max_chars": 32000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/financeiro/canal_dsn_financeiro.md",
+      "max_chars": 18000,
+      "required": true,
+      "common": false
+    },
+    {
+      "kind": "github",
+      "path": "cerebro/Foruns/DIAGNOSTICO_ASTRA_PRINTS_PLAYSTORE_20260905.md",
+      "max_chars": 26000,
+      "required": true,
+      "common": false
+    }
+  ],
+  "tasks": [
+    {
+      "id": "AST-RIO-ESTUDO",
+      "title": "Diagnóstico estrutural do disco do Rio: o que já está medido, o que falta medir e plano de médio prazo, sem apagar nem executar",
+      "ownership_terms": [
+        "AST-RIO-ESTUDO",
+        "diagnóstico estrutural do disco",
+        "disco Rio",
+        "disco do Rio"
+      ],
+      "sources": [
+        "cerebro/Foruns/FORUM_ASTRA_PLANO_INTEGRADO_CAFEZINHO_MOKA_20260905.md",
+        "cerebro/Memorias/PLANO_ASTRA_RETIRADA_REVISAO_DSN_ZM_20260905.md",
+        "cerebro/Foruns/FORUM_ASTRA_FASE1_DISCO_NASSIF_PENDENCIAS_20260905.md"
+      ]
+    },
+    {
+      "id": "AST-PLAY-PREPARO",
+      "title": "Mapa das pendências de aprovação do Android Moka, distinguindo código/documentos de prova atual do Play Console; sem build, deploy ou reenvio",
+      "ownership_terms": [
+        "AST-PLAY-PREPARO",
+        "Play Store",
+        "Google Play",
+        "Play Console"
+      ],
+      "sources": [
+        "cerebro/Foruns/FORUM_ASTRA_PLANO_INTEGRADO_CAFEZINHO_MOKA_20260905.md",
+        "cerebro/Foruns/PLANO_ASTRA_MOKA_GRATUITO_GOOGLE_PLAY_20260905.md",
+        "cerebro/Foruns/DIAGNOSTICO_ASTRA_PRINTS_PLAYSTORE_20260905.md"
+      ]
+    },
+    {
+      "id": "AST-PATROCINIO-PREPARO",
+      "title": "Preparar proposta de piloto de patrocínio Cafezinho/Moka gratuito, com formatos, publicidade identificada, independência editorial e conta de preço explícita, sem contato ou lançamento",
+      "ownership_terms": [
+        "AST-PATROCINIO-PREPARO",
+        "piloto de patrocínio",
+        "mídia kit"
+      ],
+      "sources": [
+        "cerebro/Foruns/FORUM_ASTRA_PLANO_INTEGRADO_CAFEZINHO_MOKA_20260905.md",
+        "cerebro/Foruns/ESTUDO_ASTRA_AUDIENCIA_RECEITA_20260905.md",
+        "cerebro/Memorias/EVIDENCIA_ASTRA_AUDIENCIA_CACHE_20260905.json"
+      ]
+    },
+    {
+      "id": "AST-AUDIENCIA-ANALISE",
+      "title": "Explicar a variação +1,34% somente até onde os dados permitem; separar contribuição de páginas/fontes ainda não disponíveis e definir comparação correta",
+      "ownership_terms": [
+        "AST-AUDIENCIA-ANALISE",
+        "análise de audiência",
+        "estudo de audiência"
+      ],
+      "sources": [
+        "cerebro/Foruns/FORUM_ASTRA_PLANO_INTEGRADO_CAFEZINHO_MOKA_20260905.md",
+        "cerebro/Foruns/ESTUDO_ASTRA_AUDIENCIA_RECEITA_20260905.md",
+        "cerebro/Memorias/EVIDENCIA_ASTRA_AUDIENCIA_CACHE_20260905.json"
+      ]
+    },
+    {
+      "id": "AST-P01-RECONCILIACAO",
+      "title": "Reconciliar a explicação do tutor para resets/rollover/medição DSN-F com evidências existentes; registrar faltas e dono, sem escrever no ledger/painel",
+      "ownership_terms": [
+        "AST-P01-RECONCILIACAO",
+        "reconciliação DSN-F",
+        "reconciliar DSN-F"
+      ],
+      "sources": [
+        "cerebro/Foruns/PROPOSTA_ASTRA_CONTROLE_DESPESAS_TRANSPARENTE_20260905.md",
+        "cerebro/Foruns/financeiro/canal_dsn_financeiro.md"
+      ]
+    }
+  ]
+}

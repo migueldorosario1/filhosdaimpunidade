@@ -402,4 +402,605 @@ Cada DSN tem cérebro próprio simplificado em `cerebro_dsn/<robô>/` (MEMORIA_V
 
 ## 🎬 Vertical YouTube do V4.1 consolidado (03/09/2026 — ordem Miguel 02/09 ~23h)
 O vertical YouTube do V4.1 É o pipeline `youtube_v2` do NYC (alimentador Tencent :05/:35 → fetcher Dell → DS-N decupador :07/:22/:37/:52 → ficha rica no repo → ingestor NYC :55 → pipeline 11/17 UTC produtor→auditor→publicador draft-only → R1/R2 → CL publica). Redator = ultra-luxo gpt-5.6-sol (fallback qwen-max → kimi-k2.5) com os princípios herdados das melhores versões: PERSONAGENS primeiro, TESE com VILÃO como motor, linha editorial esquerda pró-Lula, título EMU-2, aspas literais. **NOMES SEM ERRO em 3 camadas:** memória `personagens_youtube.json` (248 personagens, portada Dell→NYC e Dell→Tencent) injetada no prompt + correção pós-LLM alias→canônico + regra "na dúvida, omita o nome". Coletor DSN rico: link + decupagem + thumb + descrição + título + seção "## Texto corrigido" (DeepSeek flash fail-open, só limpeza — DSN NUNCA escreve matéria). Fóruns: `Foruns/forum_vertical_youtube_v41_consolidacao_20260902.md` (decisões) + `Foruns/forum_nomes_agentes_youtube_websearch_memoria_20260816.md` (camada de nomes) + adendos 47-57 do `Foruns/forum_maestro_faz_tudo_20260831.md` (cadeia). Memória: `Memorias/memoria_vertical_youtube_v41_consolidacao_20260902.md`.
+- **Painel /v6/youtube REFORMADO (05/09 noite, ordem Miguel):** abas Publicado/Rascunho viraram tabela com 4 colunas — **Onde foi publicado** (☕ Cafezinho + chips GSN/Rio Carta/Mapa Rio por vídeo via ledger) · **Link público REAL confirmado** (`https://ocafezinho.com/AAAA/MM/DD/slug/`, nunca o domínio `controle.`; HTTP 200 ao vivo com UA navegador, cache 10 min) · **Transcrição por** (🤖 Whisper local / 📹 legenda do YouTube / 🎙️ Transkriptor — lidos da pasta `~/ds_youtube/artifacts/<vid>/` e do ledger de custos; comparação case-insensitive porque o WP grava filename da capa em minúsculas). Novo modo `cat28` no `transkriptor_status.php` (ADITIVO). Detalhes: `Foruns/forum_painel_youtube_reforma_20260905.md` + `Memorias/memoria_painel_youtube_reforma_20260905.md`.
 - **[03/09/2026] V4.1 Player — robô da nuvem do carrossel de vídeos** (Tencent `~/v41_player/`, ordem do Miguel ~10h): fonte→whisper→seletor DeepSeek→ffmpeg corte vertical blur→redator DeepSeek (regras casa)→rascunho cat 28 espelho via ssh+wp-cli; cron varredura :41/h; E2E provado (400348/400350); QA 1ª rodada + prompts v1.1. Tema Duplo: `Foruns/forum_v41_player_robo_carrossel_20260903.md` + `Memorias/memoria_v41_player_20260903.md`. Rollback: linha do crontab.
+
+## 🔄 Ronda ZM 1/1h do ecossistema (03/09/2026 — ordem Miguel ~13h; VIGIA desde ~15:5x)
+Automação ZCode automation-877aeabb (cron 5 * * * *, âncora :05): engaja o ZM no loop Laura×Miguel (mesmo com loop_ativo=laura, sem violar ofícios do contrato), fila DSC-024 do Telegram do Miguel (3º, rede de segurança ~1h), ponte ZM↔us65 (refs ZD), DSNs todos (relatórios do Chefe + caixa_agentes.jsonl do Tencent como rede de segurança) e provas de vida dos robôs Telegram (@Dsnchefe_bot, @Dsnfinancas_bot, bot news). Tema Duplo: `Foruns/forum_ronda_zm_loop_ecossistema_20260903.md` + `Memorias/memoria_ronda_zm_loop_ecossistema_20260903.md`.
+- **[03/09 15:5x→16h] REENCARNAÇÃO VIGIA — RONDA ZM VIGIA 1/1h** (ordem Miguel ~15:5x; a ronda de script foi desligada 15:13 na reforma da grade): automação de AGENTE `automation-2a8954e2` (cron `12 * * * *`, âncora :12) — pontes Laura + **Telegram do Miguel** (escuta `conversa_48h.jsonl` + saúde do serviço `ponte_cafezinho`) + DSC (caixa tencent + ZD) + **ajuda técnica ao CL/Clodo de Lara** (inbox claude + canal_trindade, atendida do Dell) + **vigilância do sistema em pé** (CCTV `http://43.156.151.165/v6/` no Tencent, canônico, espelho, uptime tencent/nyc, provas de vida dos robôs) + **PODER de correção direta de coisa SÉRIA** (prova→backup→mínima→prova→registro; nunca post publicado/esteira CL-CM). Telegram ao Miguel SÓ com novidade (grade enxuta). Tema Duplo: `Foruns/forum_ronda_zm_vigia_1h_20260903.md` + `Memorias/memoria_ronda_zm_vigia_1h_20260903.md`. Rollback: CronDelete.
+
+
+AST-20260905-017 — 05/09/2026 10:41:36 BRT: leitura efetiva V3/anexos, funções e auditoria Telegram documentadas em Foruns/PROPOSTA_ADENDO_ASTRA_V3_E_ATIVACAO_20260905.md; memória Memorias/MEMORIA_ASTRA_V3_TELEGRAM_20260905.md; prompt único Foruns/PROMPT_UNICO_ATIVACAO_ASTRA_V3_20260905.md. Miguel dispensou revisão prévia DSN/ZM apenas da ronda: autorização não está pendente. Adendo continua PROPOSTA; suplência pode seguir protocolo previamente autorizado, sem licença humana por ocorrência, respeitando ordem, escopo e exclusividade. Astra não é XM e não publica. Registro manual das decisões Telegram realizado; incorporação automática/controles novos ainda pendentes. Ronda desativada, Telegram ativo; nenhum cron, serviço alheio ou produção alterado.
+
+
+<!-- AST-INSTITUCIONAL:MANUAL-INTEGRACAO-20260905-1120 -->
+
+AST-20260905-019 | 2026-09-05T11:20:50-03:00 | Controles implementados e análise real validada; ativação é a próxima etapa
+
+Tarefa: AST-PEDIDO-3079a8327006c038fa4a. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/MANUAL-INTEGRACAO-20260905-1120.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-79. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-018-ATIVACAO -->
+
+AST-20260905-018 | 2026-09-05T11:42:54-03:00 | Configuração horária Astra ativada às 11h39; primeira rodada prevista às 12h
+
+Tarefa: AST-CONFIGURACAO-HORARIA. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-018-ATIVACAO.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-120001-1788620401869890846 -->
+
+AST-20260905-020 | 2026-09-05T12:01:15-03:00 | Rio: reconciliação da margem de disco e plano de medição estrutural
+
+Tarefa: AST-RIO-ESTUDO. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-120001-1788620401869890846.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-20260905-023:INTEGRACAO-RECEBIDA -->
+
+AST-20260905-023 | 2026-09-05T15:13:29-03:00 | Miguel autorizou integração do atendimento Telegram ao Cérebro, memória mínima e fila própria. Tarefa reservada no monitor; implementação/testes em andamento. Ronda temporariamente desabilitada; Telegram preservado. Sem ampliar permissões, publicar, excluir ou gastar. Fórum: cerebro/Foruns/FORUM_ASTRA_TELEGRAM_CEREBRO_20260905.md. O questionário antigo reenviado é registro histórico, não mudança de agenda.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-023-INTEGRACAO-FINAL -->
+
+AST-20260905-023 | 2026-09-05T15:40:07-03:00 | Astra: atendimento integrado e ronda reativada
+
+Tarefa: AST-INTEGRACAO-TELEGRAM-CEREBRO. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-023-INTEGRACAO-FINAL.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-CORRECAO-16H-20260905 -->
+
+AST-20260905-024 | 2026-09-05T16:47:19-03:00 | Astra: corrigida a rejeição de fonte da ronda16h
+
+Tarefa: AST-CORRECAO-SNAPSHOT-16H. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-CORRECAO-16H-20260905.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-170001-1788638401308511441 -->
+
+AST-20260905-025 | 2026-09-05T17:01:15-03:00 | Incidente da ponte: leitura reconhecida e critério de proteção reconciliado
+
+Tarefa: AST-PEDIDO-971deed9666f773ee74e. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-170001-1788638401308511441.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-39f76fd617a889ef8bd3f59b. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-180001-1788642001506513381 -->
+
+AST-20260905-026 | 2026-09-05T18:01:17-03:00 | Google Drive: o que ficou pendente e como explicar nas rondas
+
+Tarefa: AST-PEDIDO-9e9195efa2dcf39d04df. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-180001-1788642001506513381.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-107. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-190001-1788645601275426901 -->
+
+AST-20260905-027 | 2026-09-05T19:01:23-03:00 | Rio: diagnóstico aguarda medições de crescimento e custos
+
+Tarefa: AST-RIO-ESTUDO. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-190001-1788645601275426901.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-200001-1788649201577796545 -->
+
+AST-20260905-028 | 2026-09-05T20:01:22-03:00 | TG-112: minuta para revisão da limpeza do Rio
+
+Tarefa: AST-PEDIDO-cbfe312ab2587203fff8. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-200001-1788649201577796545.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-112. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-DRIVE-REPARO-20260905 -->
+
+AST-20260905-029 | 2026-09-05T20:25:51-03:00 | Drive: transporte corrigido; quota compartilhada ainda impede regularização
+
+Tarefa: AST-DRIVE-REPARO-20260905. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-DRIVE-REPARO-20260905.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-ACESSOS-TELEGRAM-20260905 -->
+
+AST-20260905-030 | 2026-09-05T20:37:12-03:00 | Acessos conferidos e prompt de integração Telegram preparado; operação WordPress não ativada
+
+Tarefa: AST-ACESSOS-TELEGRAM-PROMPT. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-ACESSOS-TELEGRAM-20260905.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-210001-1788652801646419848 -->
+
+AST-20260905-032 | 2026-09-05T21:02:08-03:00 | TG-115: prompt de retomada do Google Drive atualizado
+
+Tarefa: AST-PEDIDO-4f47a3182e828e61bef6. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-210001-1788652801646419848.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-115. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-WP-SSH-20260905 -->
+
+AST-20260905-031 | 2026-09-05T21:14:38-03:00 | Acesso direto WP/SSH testado; post269165 pending; contas restritas aguardam aprovação
+
+Tarefa: AST-ACESSO-DIRETO-WP-SSH. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-WP-SSH-20260905.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-ACESSOS-ADMIN-DECISAO-20260905 -->
+
+AST-20260905-033 | 2026-09-05T21:30:41-03:00 | Miguel dispensa contas restritas; Astra mantém acessos administrativos existentes
+
+Tarefa: AST-ACESSOS-ADMIN-DECISAO-20260905. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-ACESSOS-ADMIN-DECISAO-20260905.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-220002-1788656402160366602 -->
+
+AST-20260905-035 | 2026-09-05T22:01:30-03:00 | Patrocínio: ficha do piloto e cálculo de preço para decisão
+
+Tarefa: AST-PATROCINIO-PREPARO. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-220002-1788656402160366602.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260905-230002-1788660002198733355 -->
+
+AST-20260905-036 | 2026-09-05T23:01:36-03:00 | Patrocínio: critérios de aceite e tratamento de entrega incompleta
+
+Tarefa: AST-PATROCINIO-PREPARO. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260905-230002-1788660002198733355.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-000001-1788663602026829104 -->
+
+AST-20260906-019 | 2026-09-06T00:01:35-03:00 | Drive: correção de orientação reconhecida; trabalho técnico permanece com Claude Miguel
+
+Tarefa: AST-PEDIDO-0c775fc2b463cd593a5b. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-000001-1788663602026829104.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-5fa2da3018eba523b6801cc8. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-080002-1788692402121813633 -->
+
+AST-20260906-020 | 2026-09-06T08:01:38-03:00 | Parecer sobre geopolítica: retomada comprovada por relatos, cura estrutural ainda sem prova
+
+Tarefa: AST-PEDIDO-4ac765a7c1db000c65e5. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-080002-1788692402121813633.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-698881913b73c58fbe4ac65a. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-090001-1788696001905438261 -->
+
+AST-20260906-021 | 2026-09-06T09:01:34-03:00 | Patrocínio: separar apoio identificado de promoção de produto
+
+Tarefa: AST-PATROCINIO-PREPARO. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-090001-1788696001905438261.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-100001-1788699601450852500 -->
+
+AST-20260906-022 | 2026-09-06T10:01:41-03:00 | Audiência: quais dias compõem a alta de 1,34%
+
+Tarefa: AST-AUDIENCIA-ANALISE. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-100001-1788699601450852500.md). Sem publicação, produção, exclusão ou despesa nova.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-110001-1788703201467653612 -->
+
+AST-20260906-023 | 2026-09-06T11:03:17-03:00 | TG-133: identificar os medidores e esclarecer os registros pendentes
+
+Tarefa: AST-PEDIDO-1c55829011dd6e77c6fb. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-110001-1788703201467653612.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-133. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-120001-1788706801302822787 -->
+
+AST-20260906-024 | 2026-09-06T12:01:42-03:00 | CL-008: curadoria reconciliada com a migração já concluída
+
+Tarefa: AST-PEDIDO-d59f2a64f508d83c6eaa. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-120001-1788706801302822787.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-3b0cd0fadba0f1b0d203322b. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-DRIVE-MANUAL:2026-09-06T12:36:12-03:00 -->
+
+AST-20260906-025 | 2026-09-06T12:36:12-03:00 | Recuperação das cópias Drive e correção do Manual
+
+Resultado concreto: recuperador explícito passou a incluir o preflight externo com origem/hash fixos; avisos distinguem andamento de conclusão e entregam próximo passo/prompt. 187 testes da ronda e 45 do atendimento passaram. Manual corrigido conforme CM-005, §10 e CL-008/009: memória coletiva é do Presidente em exercício, atualmente CL; ZM conserva curadoria técnica. Histórico preservado.
+
+Drive NÃO regularizado: 20 entregas da fila + 1 preflight requerem reconciliação; seis arquivos têm recibo histórico de gravação, não são presumidos ausentes. Nenhuma análise refeita, nenhuma cópia GitHub/Tencent reenviada. Último erro comprovado: quota de requisições por minuto do projeto. Espera local vigente até 06/09 13h02min19,770936s BRT, sem garantia de liberação. Teste manual 12h33min37s confirmou recuo antes da rede. Próxima ronda prevista 13h; cron único e pausa preservados.
+
+Inventário por arquivo/hash, testes, fontes, reversão e prompt para colar no Claude Code: cerebro/Foruns/FORUM_ASTRA_COPIAS_DRIVE_E_MANUAL_20260906.md. Não pedir token pelo chat, não alterar gdrive compartilhado nem serviços de colegas. Estado: correção local concluída; confirmação do Drive pendente. Registro informativo, sem disparar conversa automática e sem closes_ref de entrega não concluída.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-130001-1788710401330423135 -->
+
+AST-20260906-026 | 2026-09-06T13:01:38-03:00 | TG-138: recado claro sobre o Manual Astra e as cópias no Drive
+
+Tarefa: AST-PEDIDO-d2672792bdf26beada42. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-130001-1788710401330423135.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-138. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-140002-1788714002319049675 -->
+
+AST-20260906-027 | 2026-09-06T14:01:33-03:00 | CL-009: limites da cobertura e provas da rotação da memória
+
+Tarefa: AST-PEDIDO-5115934949d1b2f93a2e. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-140002-1788714002319049675.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-2cb96aae77681780c65a3fa6. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-150001-1788717601750077594 -->
+
+AST-20260906-028 | 2026-09-06T15:01:23-03:00 | CL-009: anúncio repetido de migração já analisada
+
+Tarefa: AST-PEDIDO-06d9a95008aa5cb72393. Resultado da análise: no_change. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-150001-1788717601750077594.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-b30d67a3df604ee70e929c61. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-160001-1788721201871842598 -->
+
+AST-20260906-029 | 2026-09-06T16:02:14-03:00 | CL-010: pendências das 11h49 reconciliadas com os relatos da tarde
+
+Tarefa: AST-PEDIDO-28cb009e354e6505e2cb. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-160001-1788721201871842598.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-f98206582429a0d9cee82677. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-170002-1788724802318104337 -->
+
+AST-20260906-030 | 2026-09-06T17:01:45-03:00 | CL-012: pendências reconciliadas e duração da cobertura noturna corrigida
+
+Tarefa: AST-PEDIDO-540941d9831df3fec470. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-170002-1788724802318104337.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-3cbb9dc29356d5f6da3abb28. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-180001-1788728402069410727 -->
+
+AST-20260906-031 | 2026-09-06T18:01:43-03:00 | CL-011: correção do tutorial reconhecida e limite da checagem esclarecido
+
+Tarefa: AST-PEDIDO-ae69ad24645a601898b1. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-180001-1788728402069410727.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-be3b5325ab77e45f5ac3f50b. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-190001-1788732002138280572 -->
+
+AST-20260906-032 | 2026-09-06T19:01:47-03:00 | CL-014: previsão de escassez superada; correção do coletor segue sem prova
+
+Tarefa: AST-PEDIDO-c603dfb75dbba21b4227. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-190001-1788732002138280572.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-4f48752b9835f6923c943b44. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-200001-1788735601894644717 -->
+
+AST-20260906-033 | 2026-09-06T20:01:57-03:00 | CL-013: aprovação de revisão não encerra retenção editorial
+
+Tarefa: AST-PEDIDO-f00242dee04bb2b50365. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-200001-1788735601894644717.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-680ce3162f9bb58c080bc19e. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST034-REMOTO-EXCLUSIVO -->
+AST-20260906-034 — Astra → AGY / ZM / Miguel  
+06/09/2026, 20:55 BRT.
+
+Remoto exclusivo parametrizado e selecionado no executor próprio. 253 testes offline aprovados; leitura real em gdrive-astra às 20:53:52 com hash registrado. Nenhum reenvio e nenhuma análise repetida. A fila permanece pendente: 28 outbox + preflight + avulso AST023. Avulso apenas com manifesto preparatório; ainda não é coberto pelo recuperador.
+
+Remotos e serviços alheios intocados. Cron único e pausa preservados. Próximo passo: reconciliação coordenada por arquivo/hash; não tratar sucesso de leitura como recuperação da fila. Relatório: [AST-REMOTE-PARAM-20260906](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-REMOTE-PARAM-20260906.md).
+
+— Astra · gpt-6-astra · 20260906 20:55 BRT
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-210001-1788739201755618373 -->
+
+AST-20260906-035 | 2026-09-06T21:03:34-03:00 | CL-016: critérios preparados para verificar formatação e categoria
+
+Tarefa: AST-PEDIDO-0241a138348fa100f57c. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-210001-1788739201755618373.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-7ac46bf8fdba1a92210b8e27. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260906-220002-1788742802185965772 -->
+
+AST-20260906-036 | 2026-09-06T22:02:55-03:00 | CL-015: omissões editoriais reconciliadas com o balanço do dia
+
+Tarefa: AST-PEDIDO-9af82935fe51584e089b. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260906-220002-1788742802185965772.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-f118c4a1477f488458f47dd3. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-000002-1788750002262553950 -->
+
+AST-20260907-019 | 2026-09-07T00:02:55-03:00 | CL-018: publicação prevista confirmada em relato posterior
+
+Tarefa: AST-PEDIDO-a12f95ae0341c707fcec. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-000002-1788750002262553950.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-04d49098532ac94829ff321f. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-080002-1788778802603293685 -->
+
+AST-20260907-020 | 2026-09-07T08:02:22-03:00 | TG-157: critérios de qualidade precisam acompanhar a reforma já em curso
+
+Tarefa: AST-PEDIDO-a4fd0334890ea1a9872b. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-080002-1788778802603293685.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-157. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-090001-1788782401358522580 -->
+
+AST-20260907-021 | 2026-09-07T09:01:44-03:00 | CL-017: título de Atoms reconciliado com correção posterior
+
+Tarefa: AST-PEDIDO-1134be7e47d992d86e94. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-090001-1788782401358522580.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-77da498d9a105671a775c43d. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-100001-1788786001565805157 -->
+
+AST-20260907-023 | 2026-09-07T10:01:44-03:00 | CL-020: reserva editorial de Miguel reconciliada com os relatos posteriores
+
+Tarefa: AST-PEDIDO-83c30b1bd2e39c850e32. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-100001-1788786001565805157.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-9f324814a70111f1c31f5065. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-110001-1788789602049312023 -->
+
+AST-20260907-025 | 2026-09-07T11:01:39-03:00 | CL-019: correção factual reconhecida e limites da revisão de vídeos
+
+Tarefa: AST-PEDIDO-f492be2b43e7e49d22a1. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-110001-1788789602049312023.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-ba7d9a2c9ef7145904b96e62. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-RETOMADA-AUTOCURA-20260907 -->
+
+## Ordem vigente de Miguel — 07/09/2026
+
+Astra deve retomar a ronda com foco permanente em audiencia, qualidade jornalistica, aprendizado e ajuda a autocura. Horarios BRT:07,09,11,13,15,17,19,23,03; exatamente duas rondas noturnas entre21h e07h, separadas por4h. Um recado factual em cada rodada. Esta ordem substitui os horarios00h+08h–23h e a pausa integral da madrugada citados acima. Os outros loops preservam seu estado.
+
+Em toda rodada: publicacoes1h/2h contra media comparavel; GA4,FAROL,LUMINA,SOL com frescor e detalhes por pagina/tipo/categoria/assunto; revisao de amostra conforme Bom Gosto; uma ideia e ajuda concreta aos responsaveis. Abaixo da media gera alerta; dados ausentes nao viram zero. Alertas sao deduplicados e exigem duas leituras validas para encerrar a condicao. Corrigir exige prova; proposta nao equivale a execucao.
+
+Mandato e criterios: cerebro/Memorias/MEMORIA_ASTRA_RETOMADA_AUTOCURA_20260907.md. A agenda ainda depende do recibo de ativacao desta implementacao; esta nota nao e prova antecipada de disparo.
+
+
+<!-- AST-INSTITUCIONAL:AST-ANALISE-INICIAL-AUTOCURA-20260907 -->
+
+AST-20260907-026 | 2026-09-07T12:17:58-03:00 | CL-022 reconciliada: retenções preservadas e correções editoriais preparadas
+
+Tarefa: AST-PEDIDO-302098bfaf7f5d9cc99b. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-ANALISE-INICIAL-AUTOCURA-20260907.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-caf00934faeb29ab64276d67. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-130002-1788796802401484083 -->
+
+AST-20260907-027 | 2026-09-07T13:07:19-03:00 | CL-021 reconciliada: retenção explica volume menor; revisão ainda exige provas
+
+Tarefa: AST-PEDIDO-f64af09d2d56ff805467. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-130002-1788796802401484083.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-cf0d1c4edface587d2c3f7dd. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-150001-1788804001765758145 -->
+
+AST-20260907-028 | 2026-09-07T15:06:26-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-e76ed40c284dfd9940cc. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-150001-1788804001765758145.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-af6d8e0d6cc5a0495b91210b. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260907-170001-1788811201705713621 -->
+
+AST-20260907-029 | 2026-09-07T17:06:34-03:00 | CL-024 reconciliada: correções reconhecidas e alerta de título inconsistente
+
+Tarefa: AST-PEDIDO-c239a8fe6346aa890c03. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260907-170001-1788811201705713621.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-c9f8e1db2ff4ec0b9802b079. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-090001-1788868801778844735 -->
+
+AST-20260908-019 | 2026-09-08T09:11:35-03:00 | CL-025 reconciliada: dengue publicada; revisão precisa ir além dos sinais automáticos
+
+Tarefa: AST-PEDIDO-f19b86b04b60cfc719b1. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-090001-1788868801778844735.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-fdde205463c569e863a820bc. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-110001-1788876001802737735 -->
+
+AST-20260908-020 | 2026-09-08T11:06:17-03:00 | CL-028 reconciliada; produção acima da média e revisão de pesquisas preparada
+
+Tarefa: AST-PEDIDO-c8da3af1f6b109c69aaf. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-110001-1788876001802737735.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-0b0d0ec61f7546eab389ec5f. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-130002-1788883202389879389 -->
+
+AST-20260908-021 | 2026-09-08T13:03:11-03:00 | CL-027 reconciliada: série publicada; volume menor exige conferir o disparo das 13h
+
+Tarefa: AST-PEDIDO-905cadd45f74665aa9b7. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-130002-1788883202389879389.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-eed079e78382fee864892eaa. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-150001-1788890402025650296 -->
+
+AST-20260908-022 | 2026-09-08T15:06:51-03:00 | CL-029 reconciliada: teste do escape de marcação preparado e revisão editorial atual
+
+Tarefa: AST-PEDIDO-c01b3b6a9909a23e6822. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-150001-1788890402025650296.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-06e2c700610840207bfb3355. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-170002-1788897602352970757 -->
+
+AST-20260908-023 | 2026-09-08T17:06:38-03:00 | CL-030 reconciliada; duas horas sem publicação exigem conferir o post 269476
+
+Tarefa: AST-PEDIDO-ea6ea9740d12e050609d. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-170002-1788897602352970757.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-8acf72d76450757eeb0bcb31. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-190002-1788904802126720449 -->
+
+AST-20260908-024 | 2026-09-08T19:06:07-03:00 | CL-030 reconciliada: produção retomada e revisão de pesquisas preparada
+
+Tarefa: AST-PEDIDO-dcc89b2fe0feb7b1543a. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-190002-1788904802126720449.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-de407aac301415ec3234c4ae. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260908-230001-1788919201430278581 -->
+
+AST-20260908-025 | 2026-09-08T23:06:19-03:00 | CL-032 reconciliada; produção recuperada e contradições editoriais identificadas
+
+Tarefa: AST-PEDIDO-f9f53f80dffea35dd9a1. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260908-230001-1788919201430278581.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-6a5e10447f87083e1f63105d. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-030001-1788933601782040045 -->
+
+AST-20260909-019 | 2026-09-09T03:04:02-03:00 | CL-031 reconciliada; volume noturno explicado e revisão editorial preparada
+
+Tarefa: AST-PEDIDO-7a86d62ceb1d7650cc51. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-030001-1788933601782040045.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-b05d1764f0b2409a40d3292b. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-070002-1788948002240136352 -->
+
+AST-20260909-020 | 2026-09-09T07:08:39-03:00 | CL-003 reconciliada: corte editorial esclarecido e disparo das 07h pendente de prova
+
+Tarefa: AST-PEDIDO-1b590f7f900e80fc7a1d. Resultado da análise: needs_review. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-070002-1788948002240136352.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-024f8b264969d58abd35aa75. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-110002-1788962402212724956 -->
+
+AST-20260909-021 | 2026-09-09T11:06:31-03:00 | CL-007 reconciliada: falha histórica sem causa comprovada; revisão atual preparada
+
+Tarefa: AST-PEDIDO-b61b0326da0d59c59317. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-110002-1788962402212724956.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-1af51320f23e18019a7a7e4c. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-130001-1788969602098450104 -->
+
+AST-20260909-022 | 2026-09-09T13:06:19-03:00 | CL-008 reconciliada: próxima candidata confirmada; disparo das 13h ainda sem prova
+
+Tarefa: AST-PEDIDO-7c02095967f9e80a9acc. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-130001-1788969602098450104.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-22f8f05c92858c4715357527. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-150001-1788976802019453517 -->
+
+AST-20260909-023 | 2026-09-09T15:06:12-03:00 | CL-005 reconciliada: fila preservada e correções de precisão preparadas
+
+Tarefa: AST-PEDIDO-fc5ca4fc37df828706e6. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-150001-1788976802019453517.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-6479fe06f0ed5dfa77a1f49e. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-170002-1788984002223158652 -->
+
+AST-20260909-024 | 2026-09-09T17:03:33-03:00 | CL-006: horário do agendador esclarecido; volume baixo explicado pela janela
+
+Tarefa: AST-PEDIDO-8d8c178f2116f949f26f. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-170002-1788984002223158652.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-6ff2db41bc946c4a2959432d. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-190002-1788991202252069089 -->
+
+AST-20260909-025 | 2026-09-09T19:04:14-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-3b5e9bf1720d536291fe. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-190002-1788991202252069089.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-9fa8cad1ac519f38fe0bd10a. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260909-230001-1789005601369972800 -->
+
+AST-20260909-026 | 2026-09-09T23:04:22-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-e772b0dab3e90857b931. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260909-230001-1789005601369972800.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-a6ffa7d1d1e799280830ad50. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260910-030001-1789020001948715303 -->
+
+AST-20260910-019 | 2026-09-10T03:04:28-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-881b160ab92d034f1abe. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260910-030001-1789020001948715303.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-dd349d6a99091ac44665dae9. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260910-070001-1789034401414255648 -->
+
+AST-20260910-020 | 2026-09-10T07:06:43-03:00 | CL-004 reconciliada: revisão antes do agendamento e correções de precisão preparadas
+
+Tarefa: AST-PEDIDO-436828d86816eab6735e. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260910-070001-1789034401414255648.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-e8225beecbed31383b58d1fa. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260910-090002-1789041602321071949 -->
+
+AST-20260910-021 | 2026-09-10T09:06:25-03:00 | CL-011 reconciliada: retenção preservada, produção melhora e revisão preparada
+
+Tarefa: AST-PEDIDO-bfbd8ee85edb04eb8aae. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260910-090002-1789041602321071949.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-4e4cde55a0cd2fe44656da2f. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260910-110002-1789048802266003597 -->
+
+AST-20260910-022 | 2026-09-10T11:06:25-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-989a61fe034dfc18523a. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260910-110002-1789048802266003597.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-8e72d53463db587cdcb28ae9. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260910-130002-1789056002251886161 -->
+
+AST-20260910-023 | 2026-09-10T13:07:03-03:00 | CL-010 respondida: auditoria semanal preparada e revisão de precisão encaminhada
+
+Tarefa: AST-PEDIDO-5cbd8865b7cb276ad3b8. Resultado da análise: completed. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260910-130002-1789056002251886161.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-d533736e2c66a5c5df9ff90a. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260911-030002-1789106402171738874 -->
+
+AST-20260911-019 | 2026-09-11T03:09:12-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-069f1f4cf20ad9768b31. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260911-030002-1789106402171738874.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: TG-193. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260911-070002-1789120802332960668 -->
+
+AST-20260911-020 | 2026-09-11T07:04:18-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-ff981e0cbaf1d438c859. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260911-070002-1789120802332960668.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-3162860952a864050fb6ee3e. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+
+
+<!-- AST-INSTITUCIONAL:AST-20260911-090001-1789128002005404834 -->
+
+AST-20260911-021 | 2026-09-11T09:06:05-03:00 | Rodada interrompida com segurança
+
+Tarefa: AST-PEDIDO-683118d87151e1182475. Resultado da análise: progress. [Relatório](https://github.com/migueldorosario1/cerebro-miguel/blob/main/cerebro/Relatorios/astra/ronda_horaria/AST-20260911-090001-1789128002005404834.md). Sem publicação, produção, exclusão ou despesa nova.
+
+ref: PONTE-55fd3ce45b9cf5094f28c738. A resposta/avaliação não concede nova permissão nem encerra uma operação externa.
+- [💸 Sangramento Transkriptor×GSN 13/09 (ZM-20260913-010)](Foruns/forum_transkriptor_gsn_pipeline_sangramento_20260913.md) — esteira 11/17 UTC do NYC ficou fora do pause de 12/09; transcreveu US$ 33 em 10-13/09 com consumidor morto; 8 JSONs na gsn_fila; kworker malware no NYC desde 10/09; + [memória](Memorias/memoria_transkriptor_gsn_pipeline_sangramento_20260913.md)
+
+- 15/09/2026 00:3x — ZM/ZCode GLM-5.3 — PAINEL DE COMANDO MANUAL DO AGENTE YOUTUBE no /v6/youtube (ordem Miguel 14-15/09): campo URL + prompt opcional do editor + 5 marcadores (Cafezinho/GSN/Mapa Rio/Aiatolah/Rio Carta) + botão PRODUZIR + status ao vivo; executor youtube_manual.py no NYC com padrão V2 Cafezinho para TODOS (correção de nomes, entrevistado citado, gate de idioma, auditoria com retry fail-closed); transporte ssh com chave command= forçada; provas E2E (draft 270973 real, US$ 0 por reuso) e prints. Fórum: Foruns/forum_painel_comando_youtube_manual_20260915.md · Memória: Memorias/memoria_painel_comando_youtube_manual_20260915.md
+
+- 16/09/2026 10:2x BRT — ZM/ZCode GLM-5.3 (ZM-20260916-025) — PARECER plano AGENTES HUMANOS GABRIEL & PEDRO (DSC-010/011, ordem Miguel; NADA construído): viável com 5 correções de desenho (instalador Windows-first sem segredo embutido + beacon HTTP na etapa 1; teto GLM via proxy fino da casa com apelidos glm-gabriel/glm-pedro no banco_custos — Z.ai não tem teto por chave; org GitHub nova + sync a partir do espelho GitHub com allowlist fail-closed e duas linhas de escrita casa/×agente/; bots novos por pessoa no BotFather; Rio Carta reerguido em sede nova com camada de aprovação por protocolo pro Pedro) + RETIFICAÇÃO: Rio Carta ≠ GSN/NYC — esteira parada desde 14/07/2026, Droplet 159.89.185.209 morto (SSH timeout), site+login vivos via Vercel, esforço 1-2 sessões. Parecer: Foruns/ponte_zm_dsc/de_zm.md (repo) bloco ZM-20260916-025 · Memória: Memorias/memoria_parecer_agentes_humanos_20260916.md (repo) · commit b2e68bf19.

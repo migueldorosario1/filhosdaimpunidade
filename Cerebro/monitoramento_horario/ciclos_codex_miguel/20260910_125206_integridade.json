@@ -1,0 +1,80 @@
+{
+  "base_commit": "ade5045dddbcf67387f7670cf7997954f00db75c",
+  "head": "9b58c9adbdb02ba48d31f835885c9a62c52cdc50",
+  "blocks": [
+    {
+      "ref": "DS-N-20260910-025",
+      "expected_sha256": "41eea92bfaf28727cad2ca7b031d0da95fc9e49945f3ceec6a9c6179f90971a9",
+      "proof_sha256": "41eea92bfaf28727cad2ca7b031d0da95fc9e49945f3ceec6a9c6179f90971a9",
+      "full_bytes_occurrences": 1,
+      "header_occurrences": 1,
+      "bytes": 6891,
+      "restored_exactly": true
+    },
+    {
+      "ref": "DS-Dell-20260910-019",
+      "expected_sha256": "fe4b61695ab859c5371d122345cbf3df08e53b0422e26429cd0c9d8e999fb5eb",
+      "proof_sha256": "fe4b61695ab859c5371d122345cbf3df08e53b0422e26429cd0c9d8e999fb5eb",
+      "full_bytes_occurrences": 1,
+      "header_occurrences": 1,
+      "bytes": 12510,
+      "restored_exactly": true
+    }
+  ],
+  "first_parent_edges": [
+    {
+      "commit": "9b58c9adbdb02ba48d31f835885c9a62c52cdc50",
+      "numstat": "3\t0\tcerebro/Foruns/ponte_laura_completa/de_dell.md"
+    },
+    {
+      "commit": "2bdbca59cbdf9c2b1d3ae8bc4b5df91ed6f642bf",
+      "numstat": "40\t0\tcerebro/Foruns/ponte_laura_completa/de_dell.md"
+    },
+    {
+      "commit": "148a7736d05e5209563c7e9623b7438f1e7f4949",
+      "numstat": "3\t0\tcerebro/Foruns/ponte_laura_completa/de_laura.md"
+    },
+    {
+      "commit": "86ddea8cf7ec4610ea49a6c883e42dd9ff95222b",
+      "numstat": "27\t0\tcerebro/Foruns/ponte_laura_completa/de_dell.md"
+    },
+    {
+      "commit": "3149bfa3153c1935bf6e760aa5ed9f618b141719",
+      "numstat": "2\t0\tcerebro/Foruns/ponte_laura_completa/de_dell.md"
+    }
+  ],
+  "prior_proof": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_integridade.json",
+  "own_previous_documents": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_evidencias.json",
+      "expected_sha256": "b33877bf9c89fb675c3ca435e71ec32933592d92de9699441f6d04421fcb0ac6",
+      "actual_sha256": "b33877bf9c89fb675c3ca435e71ec32933592d92de9699441f6d04421fcb0ac6",
+      "intact": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_ronda.md",
+      "expected_sha256": "e4241e04bc39608858ea6c3241b70f06f6ab85d17e91e47db46ae085d32ef78d",
+      "actual_sha256": "e4241e04bc39608858ea6c3241b70f06f6ab85d17e91e47db46ae085d32ef78d",
+      "intact": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_entrega_final.json",
+      "expected_sha256": "bf8e37e11f2af15bca32d279e85c195e607c9da09ccec0c5dcde01c937954a33",
+      "actual_sha256": "bf8e37e11f2af15bca32d279e85c195e607c9da09ccec0c5dcde01c937954a33",
+      "intact": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_transporte.json",
+      "expected_sha256": "411ca237cfdf70db68aa087469258d35243cdf523976c254876c79406e5a9d5b",
+      "actual_sha256": "411ca237cfdf70db68aa087469258d35243cdf523976c254876c79406e5a9d5b",
+      "intact": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_integridade.json",
+      "expected_sha256": "3d5242481fde48ff236f5fa2c1c0bd8a53808c0b3a87f6cf136e873f4ed346bc",
+      "actual_sha256": "3d5242481fde48ff236f5fa2c1c0bd8a53808c0b3a87f6cf136e873f4ed346bc",
+      "intact": true
+    }
+  ],
+  "verified_at": "2026-09-10T12:52:06.523708-03:00"
+}

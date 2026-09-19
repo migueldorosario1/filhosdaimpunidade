@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260726_1053",
+  "ts_brt": "2026-07-26T10:53:43-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260726_1053\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site offline (http_status 0) mas alerta não foi disparado. Deveria ter sido classificado com ao menos nível P3.\",\n      \"evidencia\": \"http_status=0, alerta.nivel=nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"deveria ser P3 (site inacessível)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar lógica de alerta do coletor para sites com http_status=0. Possível falha na detecção de offline.\",\n  \"confianca\": 0.95,\n  \"notas\": \"ceara_digital é a única anomalia. Demais 7 sites operacionais com conteúdo fresco.\"\n}"
+}

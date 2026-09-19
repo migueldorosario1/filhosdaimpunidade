@@ -1,0 +1,106 @@
+{
+  "ref": "XM-20260909-014",
+  "closed_at": "2026-09-09T16:52:00.275574-03:00",
+  "rounds_executed": 1,
+  "operational_cut": "68f10123f15228a3191e86b8de00e846c0de121c",
+  "github": {
+    "at": "2026-09-09T16:51:23.886217-03:00",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   3ee1bee03..68f10123f  HEAD -> main\n",
+    "commit": "68f10123f15228a3191e86b8de00e846c0de121c",
+    "ls_remote_returncode": 0,
+    "ls_remote_main": "68f10123f15228a3191e86b8de00e846c0de121c"
+  },
+  "second_route": "PENDENTE",
+  "preflight": [
+    [
+      {
+        "route": "gdrive",
+        "path": "de_dell.md",
+        "at": "2026-09-09T16:48:17.033704-03:00",
+        "returncode": 1,
+        "rate_limit": true,
+        "remote_sha256": null,
+        "remote_is_prefix": false,
+        "mutation": false
+      },
+      {
+        "remaining": "ledger/estado",
+        "skipped": "primeira leitura falhou; sem copia nem rajada de retries"
+      }
+    ],
+    {
+      "route": "nyc",
+      "at": "2026-09-09T16:48:17.034666-03:00",
+      "returncode": 0,
+      "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "is_ancestor_of_local": false,
+      "mutation": false
+    },
+    {
+      "route": "tencent",
+      "at": "2026-09-09T16:48:17.035999-03:00",
+      "returncode": 0,
+      "files": [
+        {
+          "sha256": "e0fc94b7be0e80b6d01a0655d4d02b3128c76a1b6c16aa2a1739064efc493056",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/de_dell.md"
+        },
+        {
+          "sha256": "1f6763fe50d2b0d4201fd4436b775902f97543b7a1cac21b172ec9a2d437b8a8",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/ledger/codex_miguel.md"
+        },
+        {
+          "sha256": "bf10240959d16ffd2f37957ae71e8779bef63644d53407193ca4e59d7764d29a",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/estado/codex_miguel.md"
+        }
+      ],
+      "mutation": false
+    }
+  ],
+  "files_verification": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "d5f1657ed226f36932914605b3692f8c634e25b1c21a447f8c356f719e0051d0",
+      "utf8_valid": true,
+      "bom": false,
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "8d076aadc5787f0d32de8af18359642633c5ecb3869a0fe317cecd0c351e351e",
+      "utf8_valid": true,
+      "bom": false,
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "3c1e5f4addff6251c98fc3265cf29132cf13aacacd1b1740099ef96eb3a92872",
+      "utf8_valid": true,
+      "bom": false,
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_165117_ronda.md",
+      "sha256": "87de88a3c9b3b170c7c2f6cbba406a26181ebe966f56aea888c8b3f3965a99c5",
+      "utf8_valid": true,
+      "bom": false
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_165117_evidencias.json",
+      "sha256": "f2b3152e197bef0198ca0038941424d7368cd3972ee3a318470297c6c45e672a",
+      "utf8_valid": true,
+      "bom": false
+    }
+  ],
+  "closure_append": {
+    "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_165117_ronda.md",
+    "previous_sha256": "87de88a3c9b3b170c7c2f6cbba406a26181ebe966f56aea888c8b3f3965a99c5",
+    "sha256": "6bdf11b6d814fb7398a10a8e535dcf7d97674996e863b3d504bad025e706bd55",
+    "prefix_preserved": true
+  },
+  "status_before_close_matches_initial": true,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_165117_ronda.md"
+}

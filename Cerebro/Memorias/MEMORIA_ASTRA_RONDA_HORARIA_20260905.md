@@ -1,0 +1,25 @@
+# Memória AST-20260905-015 — ronda horária solicitada por Miguel
+
+05/09/2026, início 09:05 BRT. Tarefa: preparar, testar e ativar apenas conforme autorizações vigentes uma rodada às 00h e 08h–23h America/Sao_Paulo, sem novos inícios 01h–07h59, mantendo Telegram independente. Sem API de modelo, créditos, migração ou operações de produção. Fórum `Foruns/FORUM_ASTRA_RONDA_HORARIA_20260905.md`.
+
+Leituras: skill OpenAI Docs integral + rota official-docs; páginas oficiais automations/noninteractive/auth/config; regras .agents, minuta, MEMORY, cânone, Constituição v3, monitor e pontes. Tutor AST-012 respondeu avaliação/confirmou limites; AST-014 aprovou candidatos Rio com condições e mudou prioridades de estudo. Não reabrir problema de comunicação. Revisão concreta DS-N+ZM do executor permanece requisito; o novo pedido humano define cadência e autoriza preparar/testar, mas não dispensa a revisão expressamente solicitada quando exigida.
+
+Inventário independente: ZM automação GLM no app, não launcher Codex; cron Codex Miguel existente às :17/:47; observador só Python; nenhuma duplicata Astra. Telegram serviço user ativo, intocado. Codex0.153.4 e gpt-6-astra atuais, login ChatGPT confirmado. ghCLI usa keyring existente; não ler auth.json/cofres para o modelo.
+
+Implementação própria: runner.py por apoio hourly_runner; delivery.py por agenda_audit; config/prompt/README/manifesto pelo principal. Revisão independente por play_screens após concluir AST-016. Problemas detectados e encaminhados: PATH cron escolhia Node10; corrigido launcherNode22 absoluto. Pseudomemória recusada; silêncio/nochange falhava; lock não herdado; inferência iniciava tarde demais. Ajustados e testes adicionados. Antes de concluir, confirmar bateria final e teste real; nenhum parecer interno substitui DS-N/ZM.
+
+Primeira bateria61testespassou. Coleta real das fontes atuais pelo GitHub passou all_current=true, selecionando AST-RIO-ESTUDO; pontes grandes (de_dell≈6MB,de_laura≈2MB) usam blobSHAexato, sem ler arquivo vazio como sucesso. Monitor para decisão é lido integralmente; contexto limitado foi ajustado para mostrar início atual. Instruções obrigatórias são completas. Ambiente mínimo sem DBUS/XDG/variáveisAPI ainda confirmou ghGET e ChatGPTlogin; Node22 explícito evita dependência do PATHcron.
+
+Teste controlado --live iniciado09:25 em ambiente mínimo. Ele só lê e analisa; não reserva ou publica recibos de teste noCérebro/ponte, nem enviaTelegram. Estado/resultado privado em astra_operacoes/state/ronda_horaria/tests. Rotina enabled=false e crontab.proposta comentado. Esperar recibo real antes de declarar sucesso. Nenhum cron/timer/serviço existente foi editado.
+
+Adendo de usuário durante o trabalho: prints Moka enviados e pesquisa para continuar sem nova resposta Google. Resolvido como AST-016 em documento/memória próprios, sem perder a missão do agendamento. Fonte nova do diagnóstico foi incluída na lista permitida da tarefa Play; não pedir os prints novamente nem bloquear por e-mail que Miguel não recebeu. Telegrampergunta51 superada peloresultado52confirmado; não reenviar.
+
+Recibo09:28BRT: teste real completed09:25:03–09:25:57, IDTEST-20260905-092503-1788611103882644356. LLM43,301s,input55150/output1267/cache0,exit0,tool_events0,external_writesfalse. MainleurelatoriocomparativoRio e considerou compatível com fontes/limites. Não publicouresultado de teste nemacionouTelegram. Configuraçãofalse,reviewfalse,slotsautomáticos0,nexteligible=null;10:00é apenascalendáriocondicional. Bateria62testesintegradospassou. Botactive/running,NRestarts0, intocado. Ainda falta revisão realDS-N+ZM e instalação/primeirodisparo;não chamar teste deativação.
+
+Fechamento técnico 09:35 BRT: 63 testes passaram após limitar a três avanços por tarefa com os mesmos dados e orientação do tutor. Pausas operacionais não contam. Pacote final tem oito arquivos e manifesto SHA-256 para revisão remota. Nenhuma ativação; referências de aprovação vazias. Tarefa ocupada é pulada com registro privado de coordenação pendente; pedir ao tutor/ZM revisão dessa limitação, sem fingir conversa já feita.
+
+
+09:41 BRT: pedido de revisão real publicado no de_astra (01e33759e449512b1368ad29e1d562445ea4847a) e ping de_dell (492eaf268ca65276271b3db4f933ea9ef6af3348, readback confirmado). Manifesto c7ffaddefa25ef877e9f0a07e0a96f666182d085. Crontab 140 linhas, mesmo SHA256 49f32c39131537320b841dab34a6587f34ffd57273a2225c9c83c521e3006096; zero linhas Astra. Bot user active/running, NRestarts0. Não há ativação nem próxima rodada real. Preparação concluída; aguardam os pareceres externos, não tarefa abandonada nem aprovação pelo silêncio.
+
+
+Recibo de entrega — 05/09/2026 09:44 BRT: resumo final confirmado no Telegram privado do Miguel, `message_id=59`. Informou preparação/testes concluídos, agendamento NÃO ATIVO, revisão DS-N+ZM pendente e nenhuma próxima rodada automática marcada. Não reenviar esse resumo. Pesquisa Moka já entregue anteriormente na mensagem52. O envio59 não é prova de disparo da ronda horária.

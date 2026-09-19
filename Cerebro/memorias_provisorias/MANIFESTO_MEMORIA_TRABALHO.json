@@ -1,0 +1,135 @@
+{
+  "schema": "memoria_trabalho_manifesto.v2",
+  "atualizado_em": "2026-06-20 (Grok — publicação WP Cafezinho todos LLMs)",
+  "cerebro_canonico": {
+    "local": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/",
+    "remoto": "/root/Cerebro/",
+    "confirmacao": "Cerebro/00_CEREBRO_CANONICO.md",
+    "forum_unificacao": "Projeto Cafezinho Agentes/Foruns/forum_organizacao_unificacao_cerebro_20260613.md"
+  },
+  "legacy_nao_usar": [
+    "Projeto Cafezinho Agentes/Legacy_Cerebro/",
+    "Projeto Cafezinho Agentes/Legacy_CEREBRO_CANONICO_STAGING_20260610/",
+    "Projeto Cafezinho Agentes/Legacy_Cerebro_duplicata_inbox_20260620/",
+    "Projeto Cafezinho Agentes/A_GRANDE_REFORMA_LOCAL_20260610/cafezinho/Cerebro/"
+  ],
+  "politica": {
+    "janela_viva_horas": 3,
+    "hardcode_permitido": false,
+    "despertar_leve_primeiro": true,
+    "nota": "Cada agente lê despertar_leve_<agente>.md antes da memória viva completa."
+  },
+  "arquivos_globais": {
+    "cerebro_master": "Cerebro/CEREBRO_INDEX_MASTER.md",
+    "cerebro_canonico_doc": "Cerebro/00_CEREBRO_CANONICO.md",
+    "indice_despertar_leve": "Cerebro/memorias_provisorias/INDICE_DESPERTAR_LEVE.md",
+    "node_memoria_trabalho": "Cerebro/CEREBRO_NODE_MEMORIA_TRABALHO.md",
+    "memory_governanca": "Cerebro/MEMORY.md",
+    "memoria_maestro": "Cerebro/memorias_provisorias/memoria_maestro_viva.md",
+    "canal_trindade": "Projeto Cafezinho Agentes/Foruns/canal_trindade.md",
+    "indice_foruns": "Projeto Cafezinho Agentes/Foruns/INDICE_FORUNS_SEMANAL.md",
+    "cofre_chaves": "Cerebro/CEREBRO_NODE_COFRE_CHAVES.md",
+    "politica_llm": "Cerebro/CEREBRO_NODE_CHAVES_E_LLMS.md",
+    "env_local": "Projeto Cafezinho Agentes/root/chaves_novas.env",
+    "acorde_sh": "Projeto Cafezinho Agentes/acorde.sh",
+    "publicacao_wp_cafezinho": "Cerebro/CEREBRO_NODE_PUBLICACAO_WP_CAFEZINHO.md",
+    "tutorial_wp_todos_llms": "Projeto Cafezinho Agentes/Foruns/forum_tutorial_publicar_wordpress_cafezinho_todos_llms_20260620.md",
+    "script_publicar_wp": "scratch/publicar_cafezinho_wp.py",
+    "cofre_wp": "Outros/chaves/agentes_labs/.env.unificado",
+    "cartao_wp_chatbots": "Outros/chaves/wp_cafezinho_chatbots.md",
+    "sync_wp_chatbots": "Cerebro/CARTAO_BOLSO_WP_CAFEZINHO_SYNC_CHATBOTS.md",
+    "gerar_cartao_wp": "Cerebro/scripts/gerar_cartao_wp_chatbots.py"
+  },
+  "sub_cerebros": {
+    "antigravity_desktop": "Projeto Cafezinho Agentes/Foruns/sub_cerebro_antigravity_desktop.md",
+    "antigravity_miguel": "Projeto Cafezinho Agentes/Foruns/sub_cerebro_antigravity_miguel.md"
+  },
+  "agentes": {
+    "codex": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/codex.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_codex.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_codex_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_codex_code.md"
+    },
+    "claude": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/claude.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_claude.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_maestro_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_claude_code.md"
+    },
+    "deepseek": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/deepseek.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_deepseek.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_deepseek_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_deepseek_code.md"
+    },
+    "kimi": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/kimi.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_kimi.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_kimi_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_kimi_code.md"
+    },
+    "glm": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/glm.md",
+      "inbox_coding": "Projeto Cafezinho Agentes/Foruns/inbox_trindade/glm_coding.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_glm.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_glm_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_glm_coding.md"
+    },
+    "grok": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/grok.md",
+      "inbox_coding": "Projeto Cafezinho Agentes/Foruns/inbox_trindade/grok_coding.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_grok.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_grok_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_grok_coding.md"
+    },
+    "qwen": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/qwen.md",
+      "inbox_coding": "Projeto Cafezinho Agentes/Foruns/inbox_trindade/qwen_coding.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_qwen.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_qwen_viva.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_qwen_code.md",
+      "bloqueio_editorial": "Cerebro/memorias_provisorias/feedback_qwen_bloqueado_para_editorial_por_censura_20260615.md"
+    },
+    "antigravity": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/antigravity.md",
+      "inbox_desktop": "Projeto Cafezinho Agentes/Foruns/inbox_trindade/antigravity_desktop.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_antigravity.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_antigravity_viva.md",
+      "sub_cerebro_desktop": "Projeto Cafezinho Agentes/Foruns/sub_cerebro_antigravity_desktop.md",
+      "sub_cerebro_miguel": "Projeto Cafezinho Agentes/Foruns/sub_cerebro_antigravity_miguel.md",
+      "memoria_geral": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_antigravity.md"
+    },
+    "agy": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/agy.md",
+      "inbox_cli": "Projeto Cafezinho Agentes/Foruns/inbox_trindade/agy_cli.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_agy.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_agy_viva.md"
+    },
+    "kilo": {
+      "inbox": "Cerebro/Foruns/inbox_trindade/kilo.md",
+      "despertar_leve": "Cerebro/memorias_provisorias/despertar_leve_kilo.md",
+      "memoria_viva": "Cerebro/memorias_provisorias/memoria_kilo_viva.md"
+    }
+  },
+  "sprints_ativos": {
+    "politica_v2_20260620": {
+      "forum": "Projeto Cafezinho Agentes/Foruns/forum_novas_ideias_arquitetura_politica_v2_20260620.md",
+      "forum_execucao": "Projeto Cafezinho Agentes/Foruns/forum_sprint_politica_v2_execucao_kilo_trindade_20260619.md",
+      "dono_codigo": "kilo",
+      "coordenador": "codex"
+    },
+    "memoria_trabalho_20260527": {
+      "forum": "Cerebro/Foruns/forum_sprint_memoria_trabalho_20260527.md",
+      "memoria_sprint": "Projeto Cafezinho Agentes/Legacy20260610/Memorias/memoria_sprint_memoria_trabalho_20260527.md"
+    }
+  },
+  "backup": {
+    "diretorio": "Cerebro/Backups/memorias_vivas",
+    "padrao_arquivo": "{agente}_{YYYYMMDD}_{HHMM}.md",
+    "indexar_em": [
+      "CEREBRO_NODE_MEMORIA_TRABALHO.md",
+      "memoria_geral_do_agente"
+    ]
+  }
+}

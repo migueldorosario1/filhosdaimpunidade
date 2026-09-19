@@ -1,0 +1,49 @@
+{
+  "_doc": "Contrato do adaptador LLM V4. Modo mock por padrao; chamadas reais exigem habilitacao explicita futura.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "mode_default": "mock",
+  "allow_real_calls": false,
+  "source_routes": "contratos/v4_rotas_llm_limpas_v1.json",
+  "orchestration": "contratos/v4_orquestracao_llm_v1.json",
+  "real": {
+    "enabled": false,
+    "runtime_enabled_env": "V4_LABS_REAL_ENABLED",
+    "runtime_allow_calls_env": "V4_LABS_ALLOW_REAL_CALLS",
+    "require_healthcheck": true,
+    "temperature": 0.7,
+    "max_tokens": 4000,
+    "thinking_budget": 0,
+    "healthcheck": {
+      "check_env_keys": true,
+      "check_provider_enabled": true,
+      "check_model_rating": true,
+      "network_call": false
+    },
+    "selection": {
+      "strategy": "first_valid_by_route_order",
+      "respect_route_order": true
+    }
+  },
+  "principios": {
+    "sem_modelo_hardcoded": true,
+    "sem_diretriz_hardcoded": true,
+    "usa_rotas_v4_limpas": true,
+    "mock_por_padrao": true,
+    "real_exige_flag_explicita": true
+  },
+  "mock": {
+    "provider": "mock",
+    "model": "v4-mock-local",
+    "quality": 5,
+    "allowed_functions": [
+      "redacao",
+      "revisao",
+      "auditoria",
+      "fact_check",
+      "curadoria",
+      "tribunal_visual"
+    ]
+  }
+}

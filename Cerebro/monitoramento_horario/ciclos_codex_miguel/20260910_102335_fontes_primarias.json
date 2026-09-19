@@ -1,0 +1,294 @@
+{
+  "ref": "XM-20260910-021",
+  "wordpress_cli_read_calls": 4,
+  "initial_cli_observation": {
+    "command": "wp post list --post_type=post --post_status=future --format=json --fields=ID,post_status,post_date",
+    "as_user": "www-data",
+    "ssh_alias": "cafezinho-wp",
+    "exit_code": 0,
+    "row_ids": [
+      269021,
+      269713,
+      269705,
+      269700,
+      269697,
+      269696,
+      269693,
+      269679
+    ],
+    "row_statuses": [
+      "publish",
+      "future",
+      "future",
+      "future",
+      "future",
+      "future",
+      "future",
+      "future"
+    ],
+    "provenance": "Saida observada diretamente na ferramenta desta ronda antes das tres sondas registradas abaixo; nao reexecutada; nao foi preservado timestamp individual."
+  },
+  "probes": [
+    {
+      "label": "count",
+      "argv": [
+        "sudo",
+        "-n",
+        "-u",
+        "www-data",
+        "/usr/local/bin/wp",
+        "--path=/var/www/ocafezinho",
+        "post",
+        "list",
+        "--post_type=post",
+        "--post_status=future",
+        "--format=count"
+      ],
+      "at": "2026-09-10T10:20:44.652799-03:00",
+      "exit_code": 0,
+      "stdout": "7",
+      "stderr": ""
+    },
+    {
+      "label": "json_ignore_sticky",
+      "argv": [
+        "sudo",
+        "-n",
+        "-u",
+        "www-data",
+        "/usr/local/bin/wp",
+        "--path=/var/www/ocafezinho",
+        "post",
+        "list",
+        "--post_type=post",
+        "--post_status=future",
+        "--ignore_sticky_posts=1",
+        "--format=json",
+        "--fields=ID,post_status,post_date"
+      ],
+      "at": "2026-09-10T10:20:49.193673-03:00",
+      "exit_code": 0,
+      "stdout": "[{\"ID\":269713,\"post_status\":\"future\",\"post_date\":\"2026-09-10 19:45:00\"},{\"ID\":269705,\"post_status\":\"future\",\"post_date\":\"2026-09-10 18:30:00\"},{\"ID\":269700,\"post_status\":\"future\",\"post_date\":\"2026-09-10 17:15:00\"},{\"ID\":269697,\"post_status\":\"future\",\"post_date\":\"2026-09-10 16:00:00\"},{\"ID\":269696,\"post_status\":\"future\",\"post_date\":\"2026-09-10 14:30:00\"},{\"ID\":269693,\"post_status\":\"future\",\"post_date\":\"2026-09-10 13:00:00\"},{\"ID\":269679,\"post_status\":\"future\",\"post_date\":\"2026-09-10 11:30:00\"}]",
+      "stderr": ""
+    },
+    {
+      "label": "wp_query_control",
+      "argv": [
+        "sudo",
+        "-n",
+        "-u",
+        "www-data",
+        "/usr/local/bin/wp",
+        "--path=/var/www/ocafezinho",
+        "eval",
+        "$out=[\"sticky_posts\"=>get_option(\"sticky_posts\")]; foreach([false,true] as $ignore){$q=new WP_Query([\"post_type\"=>\"post\",\"post_status\"=>\"future\",\"posts_per_page\"=>100,\"ignore_sticky_posts\"=>$ignore,\"cache_results\"=>false,\"update_post_meta_cache\"=>false,\"update_post_term_cache\"=>false]);$rows=[];foreach($q->posts as $p){$rows[]=[\"id\"=>$p->ID,\"status\"=>$p->post_status,\"date\"=>$p->post_date];}$out[$ignore?\"ignore_true\":\"ignore_false\"]=[\"found_posts\"=>$q->found_posts,\"post_count\"=>$q->post_count,\"rows\"=>$rows];} echo json_encode($out);"
+      ],
+      "at": "2026-09-10T10:20:55.337451-03:00",
+      "exit_code": 0,
+      "stdout": "{\"sticky_posts\":[269021],\"ignore_false\":{\"found_posts\":7,\"post_count\":8,\"rows\":[{\"id\":269021,\"status\":\"publish\",\"date\":\"2026-09-04 12:00:00\"},{\"id\":269713,\"status\":\"future\",\"date\":\"2026-09-10 19:45:00\"},{\"id\":269705,\"status\":\"future\",\"date\":\"2026-09-10 18:30:00\"},{\"id\":269700,\"status\":\"future\",\"date\":\"2026-09-10 17:15:00\"},{\"id\":269697,\"status\":\"future\",\"date\":\"2026-09-10 16:00:00\"},{\"id\":269696,\"status\":\"future\",\"date\":\"2026-09-10 14:30:00\"},{\"id\":269693,\"status\":\"future\",\"date\":\"2026-09-10 13:00:00\"},{\"id\":269679,\"status\":\"future\",\"date\":\"2026-09-10 11:30:00\"}]},\"ignore_true\":{\"found_posts\":7,\"post_count\":7,\"rows\":[{\"id\":269713,\"status\":\"future\",\"date\":\"2026-09-10 19:45:00\"},{\"id\":269705,\"status\":\"future\",\"date\":\"2026-09-10 18:30:00\"},{\"id\":269700,\"status\":\"future\",\"date\":\"2026-09-10 17:15:00\"},{\"id\":269697,\"status\":\"future\",\"date\":\"2026-09-10 16:00:00\"},{\"id\":269696,\"status\":\"future\",\"date\":\"2026-09-10 14:30:00\"},{\"id\":269693,\"status\":\"future\",\"date\":\"2026-09-10 13:00:00\"},{\"id\":269679,\"status\":\"future\",\"date\":\"2026-09-10 11:30:00\"}]}}",
+      "stderr": ""
+    }
+  ],
+  "curadoria": {
+    "path": "/root/v4_labs/dados/v41_ciclo/20260910_1005.json",
+    "sha256": "b9c432eb1db1c329744eb9d8272475bd2b776148955f959c89fed2d9d52e1bae",
+    "data": {
+      "ok": true,
+      "ts": "20260910_1005",
+      "vertical": "meio_ambiente",
+      "pauta": "PF faz operação contra desvios de dinheiro de emendas parlamentares",
+      "item_key": "813ce4ddfade1331",
+      "juiz_qualidade": {
+        "notas": {
+          "clareza": 9.0,
+          "interesse_br": 10.0,
+          "importancia_global": 3.0,
+          "importancia_economia": 7.0,
+          "audiencia": 9.0,
+          "encaixe_vertical": 1.0,
+          "linha_casa": 9.0
+        },
+        "total": 7.04,
+        "aprova": false,
+        "motivo": "Escândalo de emendas com centenas de milhões desviados é pauta forte de política/economia, mas não pertence à vertical d",
+        "modelo": "deepseek:deepseek-chat"
+      },
+      "juiz_historico": [
+        {
+          "pauta": "PF faz operação contra desvios de dinheiro de emendas parlamentares",
+          "total": 7.04,
+          "aprova": false,
+          "motivo": "Escândalo de emendas com centenas de milhões desviados é pau",
+          "notas": {
+            "clareza": 9.0,
+            "interesse_br": 10.0,
+            "importancia_global": 3.0,
+            "importancia_economia": 7.0,
+            "audiencia": 9.0,
+            "encaixe_vertical": 1.0,
+            "linha_casa": 9.0
+          }
+        },
+        {
+          "pauta": "Indigenous fisherwoman finds ‘lost’ spinach pipefish, not seen by scie",
+          "total": 4.37,
+          "aprova": false,
+          "motivo": "Redescoberta científica legítima e bem narrada, mas sem prot",
+          "notas": {
+            "clareza": 8.0,
+            "interesse_br": 2.0,
+            "importancia_global": 4.0,
+            "importancia_economia": 1.0,
+            "audiencia": 2.0,
+            "encaixe_vertical": 9.0,
+            "linha_casa": 5.0
+          }
+        },
+        {
+          "pauta": "Mega-Sena sorteia prêmio acumulado de R$ 76 milhões nesta quinta",
+          "total": 2.44,
+          "aprova": false,
+          "motivo": "Loteria é serviço puro, fora da vertical de meio ambiente e ",
+          "notas": {
+            "clareza": 9.0,
+            "interesse_br": 4.0,
+            "importancia_global": 0.0,
+            "importancia_economia": 1.0,
+            "audiencia": 2.0,
+            "encaixe_vertical": 0.0,
+            "linha_casa": 1.0
+          }
+        },
+        {
+          "pauta": "Japan wants to plant no-pollen trees to solve its hay fever crisis",
+          "total": 5.0,
+          "aprova": false,
+          "motivo": "Pauta ambiental japonesa bem contada, mas sem protagonista, ",
+          "notas": {
+            "clareza": 8.0,
+            "interesse_br": 3.0,
+            "importancia_global": 5.0,
+            "importancia_economia": 4.0,
+            "audiencia": 3.0,
+            "encaixe_vertical": 9.0,
+            "linha_casa": 4.0
+          }
+        },
+        {
+          "pauta": "The EU approved an antideforestation law. The US paper lobby sought to",
+          "total": 6.44,
+          "aprova": false,
+          "motivo": "Boa denúncia de lobby madeireiro dos EUA contra lei antidesm",
+          "notas": {
+            "clareza": 7.0,
+            "interesse_br": 4.0,
+            "importancia_global": 8.0,
+            "importancia_economia": 7.0,
+            "audiencia": 5.0,
+            "encaixe_vertical": 9.0,
+            "linha_casa": 7.0
+          }
+        },
+        {
+          "pauta": "Two wild Przewalski’s horse foals born in Kazakhstan after 200 years",
+          "total": 5.07,
+          "aprova": false,
+          "motivo": "Fato ambiental real e bem contado, mas distante do leitor br",
+          "notas": {
+            "clareza": 8.0,
+            "interesse_br": 3.0,
+            "importancia_global": 6.0,
+            "importancia_economia": 2.0,
+            "audiencia": 3.0,
+            "encaixe_vertical": 9.0,
+            "linha_casa": 5.0
+          }
+        },
+        {
+          "pauta": "Crianças desaparecidas em Bacabal podem entrar em alerta da Interpol",
+          "total": 6.2,
+          "aprova": false,
+          "motivo": "Caso humano de grande repercussão nacional, mas é pauta poli",
+          "notas": {
+            "clareza": 8.0,
+            "interesse_br": 9.0,
+            "importancia_global": 6.0,
+            "importancia_economia": 2.0,
+            "audiencia": 8.0,
+            "encaixe_vertical": 2.0,
+            "linha_casa": 6.0
+          }
+        },
+        {
+          "pauta": "Anac permite voos após as 23h em Congonhas em situações excepcionais",
+          "total": 4.22,
+          "aprova": false,
+          "motivo": "Pauta de aviação/regulação aeroportuária sem nexo com meio a",
+          "notas": {
+            "clareza": 7.0,
+            "interesse_br": 6.0,
+            "importancia_global": 2.0,
+            "importancia_economia": 4.0,
+            "audiencia": 5.0,
+            "encaixe_vertical": 1.0,
+            "linha_casa": 4.0
+          }
+        }
+      ],
+      "fontes_bloqueadas_filtradas": 0,
+      "curadoria_estado": "juiz_qualidade:Escândalo de emendas com centenas de milhões desviados é pau",
+      "status": "sem_tese_ancorada_nao_escreve"
+    },
+    "ssh_alias": "nyc",
+    "read_exit_code": 0,
+    "captured_during_round": true
+  },
+  "threshold_matches_same_artifact": [
+    {
+      "pauta": "PF faz operação contra desvios de dinheiro de emendas parlamentares",
+      "total": 7.04,
+      "aprova": false,
+      "motivo": "Escândalo de emendas com centenas de milhões desviados é pau",
+      "notas": {
+        "clareza": 9.0,
+        "interesse_br": 10.0,
+        "importancia_global": 3.0,
+        "importancia_economia": 7.0,
+        "audiencia": 9.0,
+        "encaixe_vertical": 1.0,
+        "linha_casa": 9.0
+      }
+    },
+    {
+      "pauta": "Crianças desaparecidas em Bacabal podem entrar em alerta da Interpol",
+      "total": 6.2,
+      "aprova": false,
+      "motivo": "Caso humano de grande repercussão nacional, mas é pauta poli",
+      "notas": {
+        "clareza": 8.0,
+        "interesse_br": 9.0,
+        "importancia_global": 6.0,
+        "importancia_economia": 2.0,
+        "audiencia": 8.0,
+        "encaixe_vertical": 2.0,
+        "linha_casa": 6.0
+      }
+    }
+  ],
+  "limitations": [
+    "BUG-191 confirmado para future; outros status e formatos do relato nao reproduzidos.",
+    "ignore_sticky_posts nao exclui um sticky que satisfaca normalmente o filtro.",
+    "Artefato de curadoria confirma reprovacao nesse ciclo; fila e runtime de reencaminhamento nao consultados, sem prova de perda definitiva.",
+    "Hora nominal post_date nao prova horario efetivo de publicacao."
+  ],
+  "documentation": [
+    {
+      "url": "https://developer.wordpress.org/cli/commands/post/list/",
+      "finding": "post list aceita argumentos WP_Query e formatos de saida."
+    },
+    {
+      "url": "https://developer.wordpress.org/reference/classes/wp_query/",
+      "finding": "ignore_sticky_posts desativa promocao dos fixados; nao exclui resultados legitimos."
+    }
+  ]
+}

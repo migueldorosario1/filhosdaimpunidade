@@ -1,0 +1,154 @@
+{
+  "_doc": "Mapa editorial V4 para ligar verticais, funcoes e diretrizes externas aos contextos LLM limpos do V4. O roteador legado fica como referencia, nao como fonte operacional do V4.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "source_llm_context_routes": "diretrizes/v4_rotas_llm_limpas_v1.json",
+  "reference_llm_context_routes": "Projeto Cafezinho Agentes/root/config/llm_context_routes.json",
+  "defaults": {
+    "nucleo_editorial": "diretrizes/v4_nucleo_editorial_comum_v1.md",
+    "freios_llm": "diretrizes/v4_freios_llm_v1.json",
+    "operacao": "diretrizes/v4_operacao_limpeza_ordem_backup_v1.json",
+        "bancos_camadas": "diretrizes/v4_bancos_camadas_v1.json",
+        "ingestao_conteudo": "diretrizes/v4_ingestao_conteudo_v1.json",
+        "memoria_autocura": "diretrizes/v4_memoria_autocura_v1.json",
+    "agentes_tecnicos": "diretrizes/v4_agentes_tecnicos_v1.json",
+    "fluxo_dry_run": "diretrizes/v4_fluxo_dry_run_v1.json",
+    "llm_adapter": "diretrizes/v4_llm_adapter_v1.json",
+    "orquestracao_llm": "diretrizes/v4_orquestracao_llm_v1.json",
+  "telemetria": "diretrizes/v4_telemetria_v1.json",
+  "feedback_editor": "diretrizes/v4_feedback_editor_v1.json",
+  "pricing_llm": "diretrizes/v4_pricing_llm_v1.json",
+  "model_router": "diretrizes/v4_model_router_v1.json",
+  "llm_decisions": "diretrizes/v4_llm_decisions_v1.json",
+  "llm_dashboard": "diretrizes/v4_llm_dashboard_v1.json",
+  "imagem_destacada": "diretrizes/v4_imagem_destacada_v1.json",
+  "wordpress_publicador": "diretrizes/v4_wordpress_publicador_v1.json",
+  "wordpress_media": "diretrizes/v4_wordpress_media_v1.json",
+  "operational_dashboard": "diretrizes/v4_operational_dashboard_v1.json",
+  "recompute_costs": "diretrizes/v4_recompute_costs_v1.json",
+    "memoria_bugs": [
+      "memoria_bugs_ativa_v3.md",
+      "memoria_bugs_ativa.md"
+    ],
+    "fallback_editoria": "v4_repetidor"
+  },
+  "funcoes": {
+    "redacao": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "qualidade_minima": 5
+    },
+    "revisao": {
+      "contexto_llm": "v4_revisao_luxo",
+      "qualidade_minima": 5
+    },
+    "auditoria": {
+      "contexto_llm": "v4_auditoria_luxo",
+      "qualidade_minima": 5
+    },
+    "fact_check": {
+      "contexto_llm": "v4_fact_check_luxo",
+      "qualidade_minima": 5
+    },
+    "curadoria": {
+      "contexto_llm": "v4_curadoria_luxo",
+      "qualidade_minima": 5
+    },
+    "imagem": {
+      "contexto_llm": "v4_imagem_destacada_gemini",
+      "qualidade_minima": 5
+    },
+    "repetidor": {
+      "contexto_llm": "v4_repetidor_limpo",
+      "qualidade_minima": 4
+    }
+  },
+  "editorias": {
+    "v4_politica_economia": {
+      "label": "V4 Politica/Economia",
+      "diretriz": "diretrizes/v4_politica_economia_v1.md",
+      "nobre": true,
+      "funcoes": {
+        "redacao": "v4_super_luxo_redacao",
+        "revisao": "v4_revisao_luxo",
+        "auditoria": "v4_auditoria_luxo",
+        "fact_check": "v4_fact_check_luxo",
+        "imagem": "v4_imagem_destacada_gemini"
+      }
+    },
+    "v4_cultura": {
+      "label": "V4 Cultura",
+      "diretriz": "diretrizes/v4_cultura_v1.md",
+      "nobre": true,
+      "funcoes": {
+        "redacao": "v4_super_luxo_redacao",
+        "revisao": "v4_revisao_luxo",
+        "auditoria": "v4_auditoria_luxo",
+        "fact_check": "v4_fact_check_luxo",
+        "imagem": "v4_imagem_destacada_gemini"
+      }
+    },
+    "v4_internacional": {
+      "label": "V4 Internacional",
+      "diretriz": "diretrizes/v4_internacional_v1.md",
+      "nobre": true,
+      "funcoes": {
+        "redacao": "v4_super_luxo_redacao",
+        "revisao": "v4_revisao_luxo",
+        "auditoria": "v4_auditoria_luxo",
+        "fact_check": "v4_fact_check_luxo",
+        "imagem": "v4_imagem_destacada_gemini"
+      }
+    },
+    "v4_ciencia_tecnologia_ia": {
+      "label": "V4 Ciencia/Tecnologia/IA",
+      "diretriz": "diretrizes/v4_ciencia_tecnologia_ia_v1.md",
+      "nobre": true,
+      "funcoes": {
+        "redacao": "v4_super_luxo_redacao",
+        "revisao": "v4_revisao_luxo",
+        "auditoria": "v4_auditoria_luxo",
+        "fact_check": "v4_fact_check_luxo",
+        "imagem": "v4_imagem_destacada_gemini"
+      }
+    },
+    "v4_repetidor": {
+      "label": "V4 Repetidor",
+      "diretriz": "diretrizes/v4_repetidor_v1.md",
+      "nobre": false,
+      "funcoes": {
+        "redacao": "v4_repetidor_limpo",
+        "revisao": "v4_revisao_luxo",
+        "auditoria": "v4_auditoria_luxo",
+        "fact_check": "v4_fact_check_luxo",
+        "imagem": "v4_imagem_destacada_gemini"
+      }
+    },
+    "v4_gsn": {
+      "label": "V4 GSN Espelho",
+      "diretriz": "diretrizes/v4_gsn_espelho_ingles_v1.md",
+      "nobre": true,
+      "funcoes": {
+        "redacao": "v4_super_luxo_redacao",
+        "revisao": "v4_revisao_luxo",
+        "auditoria": "v4_auditoria_luxo",
+        "fact_check": "v4_fact_check_luxo",
+        "imagem": "v4_imagem_destacada_gemini"
+      }
+    }
+  },
+  "aliases": {
+    "politica": "v4_politica_economia",
+    "politica_economia": "v4_politica_economia",
+    "economia": "v4_politica_economia",
+    "cultura": "v4_cultura",
+    "internacional": "v4_internacional",
+    "mundo": "v4_internacional",
+    "ciencia": "v4_ciencia_tecnologia_ia",
+    "tecnologia": "v4_ciencia_tecnologia_ia",
+    "ia": "v4_ciencia_tecnologia_ia",
+    "repetidor": "v4_repetidor",
+    "padrao": "v4_repetidor",
+    "gsn": "v4_gsn"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "_doc": "Contrato V4 do publicador WordPress seguro.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+    "dry_run_por_padrao": true,
+    "publicacao_real_exige_flag_explicita": true,
+    "publicacao_real_desabilitada_no_contrato_inicial": true,
+    "featured_media_obrigatoria": true,
+    "recibo_jsonl_obrigatorio": true,
+    "prometheus_nao_bloqueia": true,
+    "publicador_nao_chama_llm": true,
+    "publicador_nao_busca_imagem_bruta": true,
+    "curadoria_id_obrigatorio": true,
+    "modo_experimento_nao_pode_criar_draft_real": true
+  },
+  "real_publish": {
+    "enabled": false,
+    "allowed_statuses": [
+      "draft",
+      "pending"
+    ],
+    "forbidden_statuses": [
+      "publish",
+      "future",
+      "private"
+    ],
+    "env": {
+      "url": "V4_WORDPRESS_URL",
+      "user": "V4_WORDPRESS_USER",
+      "app_password": "V4_WORDPRESS_APP_PASSWORD"
+    }
+  },
+  "source": {
+    "required_fields": [
+      "item_id",
+      "curadoria_id",
+      "editoria",
+      "titulo",
+      "featured_media",
+      "primary_entity",
+      "manifesto"
+    ],
+    "featured_media_required_fields": [
+      "image_id",
+      "url",
+      "credit",
+      "license",
+      "safe_to_publish"
+    ],
+    "wp_media_id_field": "wp_media_id"
+  },
+  "store": {
+    "format": "jsonl",
+    "path": "agent_data/v4/publication",
+    "filename_prefix": "wordpress_attempts",
+    "append_only": true
+  },
+  "wordpress_payload": {
+    "status_default": "pending",
+    "title_field": "title",
+    "content_field": "content",
+    "featured_media_field": "featured_media"
+  },
+  "encoding_validation": {
+    "enabled_for_real_publish": true,
+    "reject_mojibake_markers": [
+      "Ã",
+      "�"
+    ],
+    "reject_ascii_only_long_portuguese_payload": true,
+    "min_letters_for_ascii_check": 120
+  }
+}

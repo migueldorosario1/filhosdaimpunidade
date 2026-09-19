@@ -1,0 +1,324 @@
+{
+  "checks": [
+    {
+      "details": {
+        "path": "README_V4_LABS.md"
+      },
+      "name": "required_path:README_V4_LABS.md",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "AUDITOR_NOTE_FASE4_AGENTS_PIPELINE_20260709.md"
+      },
+      "name": "required_path:AUDITOR_NOTE_FASE4_AGENTS_PIPELINE_20260709.md",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "codigo/test_contracts.py"
+      },
+      "name": "required_path:codigo/test_contracts.py",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "contratos/v4_fluxo_dry_run_v1.json"
+      },
+      "name": "required_path:contratos/v4_fluxo_dry_run_v1.json",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "contratos/v4_fact_check_v1.json"
+      },
+      "name": "required_path:contratos/v4_fact_check_v1.json",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "contratos/v4_wordpress_publicador_v1.json"
+      },
+      "name": "required_path:contratos/v4_wordpress_publicador_v1.json",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "contratos/v4_rascunho_primeiro_v1.json"
+      },
+      "name": "required_path:contratos/v4_rascunho_primeiro_v1.json",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "contratos/v4_curadoria_tese_v1.json"
+      },
+      "name": "required_path:contratos/v4_curadoria_tese_v1.json",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "path": "contratos/v4_redator_shadow_v1.json"
+      },
+      "name": "required_path:contratos/v4_redator_shadow_v1.json",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "no_symlinks",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "no_pycache",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "no_pyc",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "no_env_files",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "no_secret_patterns",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 93,
+        "min": 88
+      },
+      "name": "contract_tests_defined_min",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "enabled": false
+      },
+      "name": "wordpress_real_disabled",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "gate": {
+          "block_required_before": [
+            "shadow_redacao",
+            "redator_real_llm",
+            "publicacao_real"
+          ],
+          "block_statuses": [
+            "recommended",
+            "required"
+          ],
+          "enabled_for_real_publish": true,
+          "fail_closed_unknown_values": true,
+          "missing_blocks_real_publish": true,
+          "resolved_statuses": [
+            "none",
+            "resolved"
+          ],
+          "source_field": "collection_request"
+        }
+      },
+      "name": "publicador_collection_request_gate",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "check_type": "metadata_plus_text_presence_heuristic"
+      },
+      "name": "fact_check_text_presence",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "heuristic": {
+          "enabled": true,
+          "min_matched_tokens": 3,
+          "min_overlap_ratio": 0.35,
+          "min_token_len": 4,
+          "numeric_tokens_always_preserved": true,
+          "numeric_tokens_must_match": true,
+          "stopwords": [
+            "para",
+            "pela",
+            "pelo",
+            "sobre",
+            "entre",
+            "como",
+            "com",
+            "dos",
+            "das",
+            "que",
+            "uma",
+            "num",
+            "nas",
+            "nos",
+            "mais",
+            "menos",
+            "tambem",
+            "oficial"
+          ]
+        }
+      },
+      "name": "fact_check_numeric_token_guard",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "promocao_para_producao": {
+          "artefato_bloqueado_evidencia_append_only": true,
+          "motivo": "A regeneracao automatica e conveniencia de laboratorio. Em producao, artefato bloqueado e evidencia e nao pode ser apagado por reexecucao. Isto nao se confunde com rascunho editorial: pendencias de rascunho devem virar relatorio e nao perda de material.",
+          "producao_nao_sobrescreve_bloqueio": true,
+          "regenera_artefato_fixture_invalido_deve_ser_false": true
+        }
+      },
+      "name": "production_regen_disabled_contract",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "curadoria_policy": "recommended e required compartilham o mesmo gate mecanico por estagio; a diferenca atual e editorial/semantica: recommended indica pendencia prudencial, required indica pendencia forte. Qualquer simplificacao futura deve passar pelo forum antes de producao real.",
+        "shadow_policy": "recommended e required tem o mesmo comportamento de gate por estagio; diferem na severidade editorial declarada. Esta politica deve ser ratificada antes de abrir publicacao real."
+      },
+      "name": "recommended_required_policy_documented",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "decision": "fable_auditfix2_approved",
+        "evidence": {
+          "at": "2026-07-09",
+          "audit_doc": "Cerebro/Foruns/carta_fable_auditoria_fase4_auditfix_20260709.md",
+          "by": "Fable",
+          "summary": "Fable aprovou auditfix2 sem ressalvas bloqueantes."
+        },
+        "required_any_of": [
+          "forum_doc",
+          "audit_doc",
+          "reason"
+        ],
+        "required_fields": [
+          "by",
+          "at"
+        ]
+      },
+      "name": "decision_evidence:fable_auditfix2_approved",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "decision": "fable_fase5_mechanical_closed",
+        "evidence": {
+          "at": "2026-07-10",
+          "audit_doc": "Cerebro/Foruns/carta_fable_adendo_final_fase5_typefix_20260710.md",
+          "by": "Fable",
+          "summary": "Fable encerrou formalmente a auditoria mecanica da Fase 5: F5.2 resolvido e verificado; pendencia remanescente e editorial/factual."
+        },
+        "required_any_of": [
+          "forum_doc",
+          "audit_doc",
+          "reason"
+        ],
+        "required_fields": [
+          "by",
+          "at"
+        ]
+      },
+      "name": "decision_evidence:fable_fase5_mechanical_closed",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "decision": "recommended_required_policy_ratified",
+        "evidence": {
+          "at": "2026-07-09",
+          "by": "Miguel",
+          "forum_doc": "Cerebro/Foruns/forum_v4_rascunho_primeiro_autocura_20260709.md",
+          "reason": "Miguel aceitou a politica conservadora: rascunho-primeiro apenas em dry-run/laboratorio; qualquer chamada real ao WordPress e promocao para root/v4 mantem gates duros ate decisao explicita."
+        },
+        "required_any_of": [
+          "forum_doc",
+          "audit_doc",
+          "reason"
+        ],
+        "required_fields": [
+          "by",
+          "at"
+        ]
+      },
+      "name": "decision_evidence:recommended_required_policy_ratified",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "ratified": true
+      },
+      "name": "recommended_required_policy_ratified",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "approved": false
+      },
+      "name": "gpt55_audit_recommended_before_promotion",
+      "status": "warning"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "collection_request_publicacao_real_resolvida",
+      "status": "ok"
+    },
+    {
+      "details": {
+        "count": 0,
+        "matches": []
+      },
+      "name": "collection_request_valores_conhecidos",
+      "status": "ok"
+    }
+  ],
+  "contract": "contratos/v4_promocao_preflight_v1.json",
+  "decisions": {
+    "fable_auditfix2_approved": true,
+    "fable_fase5_mechanical_closed": true,
+    "gpt55_auditfix2_approved": false,
+    "human_promotion_authorized": false,
+    "publication_real_opened": false,
+    "recommended_required_policy_ratified": true
+  },
+  "external_call": false,
+  "issues": [],
+  "ok": true,
+  "promocao_real_executada": false,
+  "schema_version": "v1",
+  "status": "promocao_shadow_aprovada",
+  "timestamp": "2026-07-10T16:36:36.224123+00:00",
+  "warnings": [
+    "gpt55_audit_recommended_before_promotion"
+  ],
+  "wordpress_real": false
+}

@@ -1,0 +1,455 @@
+{
+  "ref": "XM-20260905_105151-HOLD",
+  "time_brt": "2026-09-05T10:51:51.426596-03:00",
+  "started_brt": "2026-09-05T10:48:02.759157-03:00",
+  "mode": "OBSERVACAO_FASE2_HOLD_INTEGRIDADE",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "rounds_executed": 1,
+  "previous_receipt": "20260905_101939_ronda.md",
+  "previous_evidence_sha256": "7e2717fc5cf12163350b57a9ee63f50d4103c18f11ebd289c0ba6d7727257c5c",
+  "head": "aba62cac9ffdaa877df896982286bc239c5a10c5",
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "result": "Fast-forward a7ef4b3c3..8bfff8998"
+  },
+  "sources": {
+    "LOOP_MIGUEL_CODEX.md": {
+      "sha256": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+      "bytes": 5018,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": {
+      "sha256": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+      "bytes": 6955,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": {
+      "sha256": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+      "bytes": 4802,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/MEMORY.md": {
+      "sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "bytes": 7251,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/Foruns/ponte_laura_completa/CONTRATO_PONTE_COMPLETA.md": {
+      "sha256": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380",
+      "bytes": 12613,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "sha256": "136d59f8ab830f46b27cb8aa6ed5613b773a7f4ba72f78f920359ab1afba4ab1",
+      "bytes": 2175395,
+      "same_as_previous": false,
+      "previous_prefix_matches": true
+    },
+    "cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "bytes": 171,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+      "bytes": 12668,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "sha256": "fa8675910b08c04a3a8133b9df0d021e13ed1ffb3037a72a8be473f32ba3ebf7",
+      "bytes": 231964,
+      "same_as_previous": false,
+      "previous_prefix_matches": false
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/canal_trindade.md": {
+      "sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "bytes": 34534,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_imagens_v4_LOG.md": {
+      "sha256": "5b5fc8feb7b8580852919cb5c3edcf7a2ef9c6987e08e59c1c842349c13ac970",
+      "bytes": 322879,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/codex.md": {
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "bytes": 11403,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/claude.md": {
+      "sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb",
+      "bytes": 1036878,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/zcode.md": {
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "bytes": 48590,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/grok.md": {
+      "sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "bytes": 18816,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "sha256": "136d59f8ab830f46b27cb8aa6ed5613b773a7f4ba72f78f920359ab1afba4ab1",
+      "bytes": 2175395,
+      "same_as_previous": false,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "sha256": "a87045812f00fabd6d281a99c9fbf6670b1462c1699a09ca28de2f0d98fe9ed9",
+      "bytes": 6210302,
+      "same_as_previous": false,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "bytes": 76859,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "bytes": 93356,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "bytes": 171,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "sha256": "7dedac91c190288850e185f95b36b26d812a9f29a39f1c746f3b7080a72046a9",
+      "bytes": 2169944,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "sha256": "3d2c6323b4b2fd487293c355a8a3a4209fde12607a997157e3b92cea213e1084",
+      "bytes": 6209482,
+      "same_as_previous": false,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+      "bytes": 76859,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+      "bytes": 93356,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14",
+      "bytes": 154,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/Estilo/MANUAL_DE_COMUNICACAO_INTERNA.md": {
+      "sha256": "9f172d66e7433183f2be741615ed6f41a46497afe6e022b81ad4999944db43da",
+      "bytes": 4884,
+      "same_as_previous": true,
+      "previous_prefix_matches": true
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md": {
+      "sha256": "315754303c2942dc74cb8a78ac00ee3d9ee6431ed130013f6e2ba30ec11e81e6",
+      "bytes": 18206,
+      "same_as_previous": false,
+      "previous_prefix_matches": false,
+      "baseline_git": "6c48d2cdd3e4cfdfed2ce304caefa1110ef177da",
+      "baseline_sha256": "7f9efd03a93a740c87f7eb65068274ff46177772a69b17b816ee95b0af0f94b9",
+      "baseline_bytes": 18263,
+      "reading": "delta de caracteres; contexto inalterado omitido"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/astra.md": {
+      "sha256": "f4cf210005b259657fea0ca1636c11df39d0989e6bdcc31616dd3e5267ef341d",
+      "bytes": 400,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "baseline_git": "6c48d2cdd3e4cfdfed2ce304caefa1110ef177da",
+      "baseline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseline_bytes": 0,
+      "reading": "delta de caracteres; contexto inalterado omitido"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "sha256": "9cfc6771a1549f48cd8ca3929b3abcd7cc990f25e4a81c49f565b9a5a4a09179",
+      "bytes": 150720,
+      "same_as_previous": false,
+      "previous_prefix_matches": true,
+      "baseline_git": "6c48d2cdd3e4cfdfed2ce304caefa1110ef177da",
+      "baseline_sha256": "66781ceb1210ec7fa6c4d7dead35cd5343ca800237230c0f33168a9415434c58",
+      "baseline_bytes": 150523,
+      "reading": "delta de caracteres; contexto inalterado omitido"
+    }
+  },
+  "deltas": [
+    {
+      "source": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "delta_file": "/tmp/codex-miguel-ronda-20260905-ppc6b2pg/delta_0.txt",
+      "bytes": 5451,
+      "append": true,
+      "sha256": "4d9f0b31ce7cf7e3bd724c382ccbfeb209bdce476a05d5e33f5a5a37f5ad25dc"
+    },
+    {
+      "source": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "delta_file": "/tmp/codex-miguel-ronda-20260905-ppc6b2pg/delta_1.txt",
+      "bytes": 231964,
+      "append": false,
+      "sha256": "fa8675910b08c04a3a8133b9df0d021e13ed1ffb3037a72a8be473f32ba3ebf7"
+    },
+    {
+      "source": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "delta_file": "/tmp/codex-miguel-ronda-20260905-ppc6b2pg/delta_2.txt",
+      "bytes": 24130,
+      "append": true,
+      "sha256": "82110585e9e493bcca465f2d3139cee34ae5a8f64bb06205de307f20034993f6"
+    },
+    {
+      "source": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "delta_file": "/tmp/codex-miguel-ronda-20260905-ppc6b2pg/delta_3.txt",
+      "bytes": 23310,
+      "append": true,
+      "sha256": "c2b16bba607e6822da1b515dcae9b2a91c642054ca7e8e1c3d3f683f7ef55210"
+    }
+  ],
+  "integrity": {
+    "checked_brt": "2026-09-05T10:49:32.623065-03:00",
+    "copies": {
+      "de_laura.md": {
+        "equal": false,
+        "clone_sha256": "136d59f8ab830f46b27cb8aa6ed5613b773a7f4ba72f78f920359ab1afba4ab1",
+        "canonical_sha256": "7dedac91c190288850e185f95b36b26d812a9f29a39f1c746f3b7080a72046a9",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": false
+      },
+      "de_dell.md": {
+        "equal": false,
+        "clone_sha256": "a87045812f00fabd6d281a99c9fbf6670b1462c1699a09ca28de2f0d98fe9ed9",
+        "canonical_sha256": "3d2c6323b4b2fd487293c355a8a3a4209fde12607a997157e3b92cea213e1084",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": false
+      },
+      "ledger/codex_miguel.md": {
+        "equal": true,
+        "clone_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+        "canonical_sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": true
+      },
+      "estado/codex_miguel.md": {
+        "equal": true,
+        "clone_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+        "canonical_sha256": "1bb0e21d80a0bed1db640a18313b7cb067422cbfa67fb46a3098f89e9e85b94f",
+        "canonical_is_prefix_of_clone": true,
+        "clone_is_prefix_of_canonical": true
+      },
+      "loop_ativo.json": {
+        "equal": false,
+        "clone_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14",
+        "canonical_is_prefix_of_clone": false,
+        "clone_is_prefix_of_canonical": false
+      }
+    },
+    "ref_occurrences": {
+      "clone/ledger/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      },
+      "canonical/ledger/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      },
+      "clone/estado/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      },
+      "canonical/estado/codex_miguel.md": {
+        "XM-20260905-004": 0,
+        "XM-20260905-005": 0
+      }
+    },
+    "ponte_health_conflict_lines": [
+      110,
+      111,
+      112,
+      114,
+      116,
+      119
+    ],
+    "claude_inbox": {
+      "canonical_sha256": "f58b3425243076a5e4d0112352dccd01571935e76e87b8c51a8479e06ec5b5fb",
+      "clone_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "equal": false
+    }
+  },
+  "public_rest": [
+    {
+      "target": "canonico",
+      "id": 269116,
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269116?_fields=id,status,date,modified,author,featured_media,title,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T10:50:13.359282-03:00",
+      "http": 200,
+      "body_sha256": "036d0e53c3da5f3b9f4b003ec5b33e4db27785ab467fc76da7da066a480d3064",
+      "data": {
+        "id": 269116,
+        "date": "2026-09-05T10:28:00",
+        "modified": "2026-09-05T09:41:00",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/05/aplicativo-brasileiro-traduz-livro-inteiro-em-ingles-por-centavos-usando-a-propria-chave-de-ia-do-leitor/",
+        "title": {
+          "rendered": "Aplicativo brasileiro traduz livro inteiro em inglês por centavos usando a própria chave de IA do leitor"
+        },
+        "author": 5795,
+        "featured_media": 269118
+      },
+      "server_date": "Sat, 05 Sep 2026 13:50:14 GMT"
+    },
+    {
+      "target": "espelho",
+      "id": 269116,
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/269116?_fields=id,status,date,modified,author,featured_media,title,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T10:50:13.360039-03:00",
+      "http": 404,
+      "body_sha256": "2f6d8723c215f1d9cc1480fcedec48efc27a4a63544d72d84bd16e4e7b997a5e",
+      "data": {
+        "code": "rest_post_invalid_id",
+        "message": "ID inválido de post.",
+        "data": {
+          "status": 404
+        }
+      }
+    },
+    {
+      "target": "canonico",
+      "id": 269119,
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269119?_fields=id,status,date,modified,author,featured_media,title,link",
+      "method": "GET",
+      "time_brt": "2026-09-05T10:50:13.360405-03:00",
+      "http": 200,
+      "body_sha256": "a0fc051dca5d7de83f32ce2ad15fb1b846659ae34cc98f7ce39a446edf01c937",
+      "data": {
+        "id": 269119,
+        "date": "2026-09-05T10:48:00",
+        "modified": "2026-09-05T10:12:25",
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/05/mergulhadores-cacam-peixe-leao-para-proteger-recifes-de-honduras/",
+        "title": {
+          "rendered": "Mergulhadores caçam peixe-leão para proteger recifes de Honduras"
+        },
+        "author": 5470,
+        "featured_media": 269121
+      },
+      "server_date": "Sat, 05 Sep 2026 13:50:14 GMT"
+    }
+  ],
+  "web_tool_attempt": {
+    "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269116?_fields=id,status,date,modified,author,featured_media,title",
+    "result": "ferramenta web recusou abertura; GET direto publico confirmou os campos registrados, sem autenticacao"
+  },
+  "coordination": {
+    "laura_new_refs_read": [
+      "CL-20260905-015"
+    ],
+    "dell_new_refs_read": [
+      "ZM-20260905-007",
+      "DS-Dell-20260905-022 (ronda 182)",
+      "DS-N-20260905-188",
+      "relay CL-20260905-015"
+    ],
+    "ledger_deltas_read": [
+      "CL-20260905-015",
+      "AST-20260905-017"
+    ],
+    "new_direct_queries_to_codex_miguel": 0,
+    "ack_delivered": false,
+    "pending_ack": "CL-20260905-015 (ciencia); transporte suspenso por HOLD",
+    "external_orders_not_assumed": [
+      "auditor de titulos: ZM; coordenacao DS-N Chefe",
+      "YouTube/canais IA/email: ZM/DS-N/DS YouTube",
+      "AST-018: ronda/controles proprios Astra",
+      "269122: fila editorial CL"
+    ]
+  },
+  "reservations": {
+    "baseline_git": "6c48d2cdd3e4cfdfed2ce304caefa1110ef177da",
+    "baseline_sha256": "b1e0eb4109b20255352dcc8d76cb85645bc91f24fd76d28212ffeb7baf268d4e",
+    "delta": "--- ultimo_recibo\n+++ snapshot_ronda\n@@ -10,8 +10,9 @@\n \n | 🗄️ **SESSÃO ZM ARQUIVADA pelo Miguel às ~09:4x de 03/09** — entrega completa em `memorias_provisorias/ENTREGA_SESSAO_ZM_20260903.md` (prompt de continuação + estado + pendências). Tudo commitado no GitHub; automação do monitor (automation-d6095d3d) segue ativa e assume a nova sessão; default do app = GLM-5.3 | 03/09 09:4x | — | ✅ ENTREGUE |\n ## 📌 Em andamento AGORA\n+| Astra (AST) — AST-20260905-017: leitura V3/anexos, funções, memória Telegram, proposta de adendo e prompt único | 05/09 10:27→10:42 | Fórum, memória e prompt próprios, verificados no GitHub; registro de recebimento/estado; sem cargo alheio | ✅ LEITURA E DOCUMENTOS ENTREGUES — suplência por protocolo autorizado dispensa nova licença por ocorrência. Adendo ainda PROPOSTA. Ronda não ativada; implementação dos controles novos pendente, não revisão DSN/ZM. Espelho Drive desta entrega ainda sem recibo. |\n | Astra (AST) — AST-20260905-016: prints enviados por Miguel, caso Moka na Play Store | 05/09 09:14→09:43 | Diagnóstico das 10 imagens e pesquisa oficial registrados no Cérebro/GitHub | ✅ ANÁLISE ENTREGUE — resumo Telegram52 confirmado; plano para continuar sem esperar novo e-mail Google e minuta de suporte. Nada alterado no app/Console, nenhum contato Google ou gasto. Execução futura depende de autorização. |\n-| Astra (AST) — AST-20260905-015: ronda horária 00h e 08h–23h BRT, preparação/testes/revisão DS-N+ZM | 05/09 09:05→09:43 | astra_operacoes/ronda_horaria; oito arquivos e manifesto para revisão no Cérebro; cron e Telegram preservados | ✅ PREPARAÇÃO E TESTES ENTREGUES · ⏳ DESATIVADA, AGUARDA DS-N+ZM — 63 testes + uma análise real pela assinatura gpt-6-astra. Pedido publicado no de_astra e de_dell. Sem cron instalado, sem próxima execução automática; nenhum serviço alheio alterado. |\n+| Astra (AST) — AST-20260905-015: ronda horária 00h e 08h–23h BRT, preparação/testes/revisão DS-N+ZM | 05/09 09:05→09:43 | astra_operacoes/ronda_horaria; oito arquivos e manifesto para revisão no Cérebro; cron e Telegram preservados | ✅ PREPARAÇÃO E TESTES ENTREGUES · ⏳ DESATIVADA — revisão prévia dispensada posteriormente por Miguel (AST-017); controles novos pendentes — 63 testes + uma análise real pela assinatura gpt-6-astra. Pedido publicado no de_astra e de_dell. Sem cron instalado, sem próxima execução automática; nenhum serviço alheio alterado. |\n | Astra (AST) — nova mediação Miguel: índice de retirada Rio + recuperação para revisão DS-N e execução futura ZM; audiência/receita Cafezinho, Moka gratuito e Google Play | 05/09 08:24–08:46 | Somente diagnóstico/estudos/documentos próprios; nada removido, publicado, contratado ou alterado em produção | ✅ ENTREGAS CONCLUÍDAS — índice/recuperação + complemento, estudos de audiência/receita e Moka gratuito/Play no Cérebro/GitHub; recado e resumo ao Miguel confirmados no Telegram (40/41). Limpeza NÃO executada; parecer DS-N, testes ZM e Console atual continuam pendentes. AST-20260905-013. |\n | ZCode (**GLM-5.3**) — ordem Miguel 05/09 ~07:2x: **COLETOR COMPLEMENTAR NOTURNO (IDEIA-012)** — adapter NYC + produtor Tencent + E2E + idempotência + cadência + rollback | 05/09 07:2x→08:2x | nyc `/root/v4_labs/scripts/dsn_adapter_v41.py` + tencent `/home/ubuntu/dsn_coletores/` + Cérebro | ✅ **CONCLUÍDO** — 5 etapas provadas na ordem (5 itens reais do Senado na fila nacional; commit eb6aea150; crons com flock; rollback no ROLLBACK_INDEX); fase 1.5 (mais fontes via proxy) aguarda Miguel |\n | Astra (AST) — ordem Miguel 05/09 + adendo NÃO APAGAR: disco Rio, Nassif, Fase 1, pendências e sondagem | 05/09 07:29→08:01 | Inventário + registro prévio + B2 cifrado + download/decifragem/17 hashes; documentos próprios | ✅ ENTREGAS CONCLUÍDAS — 17 journals/432 MiB protegidos, originais intactos, 0 apagamentos/0 bytes liberados; Rio ainda96%. Nassif transcrito07:49; ⏳ entrega editorial do tutor e retorno novoAST007 pendentes. AST011commit8acdde7e; manifesto56332212; sondagemb22ba6f3; resumoTelegram35confirmado;5áudiosreaisOK. Sem produção/ledger/painel/serviços alheios/crons novos. |\n",
+    "active_new": "AST-20260905-018 — ronda/controles Astra; nao assumida pelo XM",
+    "created": 0,
+    "changed": 0,
+    "released": 0
+  },
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0,
+    "private_queue_examined": false,
+    "reason": "HOLD de integridade; sem inferir disponibilidade de posts"
+  },
+  "sources_changed_after_read": [
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md"
+  ],
+  "preexisting_untracked_files_at_start": 28,
+  "git_status_before_receipt": [
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_034834_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_044933_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_051950_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_054936_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_061934_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_064831_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_071950_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_074944_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_081919_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_085005_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_091905_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_095000_ronda.md",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_evidencias.json",
+    "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_101939_ronda.md"
+  ],
+  "transport": "PENDENTE; HOLD integridade; sem ponte/ledger/estado/commit/push nesta ronda",
+  "prohibitions_preserved": true,
+  "operational_mutations": 0,
+  "writes": [
+    "recibo novo UTF-8 sem BOM",
+    "evidencias novas UTF-8 sem BOM",
+    "diagnosticos temporarios em /tmp"
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "schema": "loop_miguel_bridge_health_v1",
+  "generated_at_brt": "2026-09-19T16:15:01.587245-03:00",
+  "status": "critico",
+  "messages": 166,
+  "active": 147,
+  "alerts": 155,
+  "contradictions": [],
+  "append_only_mutations": [
+    {
+      "expected_sha256": "0637fa0924ea825404c33dfc5360e979109fa7161ecfb5d55b66445493b0a9c7",
+      "first_seen_brt": "2026-08-26T02:50:01.539117-03:00",
+      "id": "GROK→CLAUDE-BUG-SEM-FM-267592-20260826-0038",
+      "incident_id": "MUT-212fc51416996bdc",
+      "key": "fila_para_claude.md::GROK→CLAUDE-BUG-SEM-FM-267592-20260826-0038",
+      "observed_sha256": "c17e0647f7edbd1b8f4d9125272c724dcf0c08d4b61f34c073a202ae40e8f41a",
+      "queue": "fila_para_claude.md",
+      "reason": "ID duplicado no canal corrente",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "33993409439ab82c5461ac7fd0cb2a19af98647ec847f15d05a59bc611e6fe69",
+      "first_seen_brt": "2026-08-23T09:50:01.856296-03:00",
+      "id": "LAURA-GROK→CLAUDE-DEDUP-267225-267228-20260823-0841",
+      "incident_id": "MUT-2c909b00cc3c9f0a",
+      "key": "fila_para_claude.md::LAURA-GROK→CLAUDE-DEDUP-267225-267228-20260823-0841",
+      "observed_sha256": "0937d5a95058378b3617cdff74a5ad17bfcb94c6419989bfaa57ef1d4e38d26e",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "a92cbe4fc47219ad367cabdbd83cd80073e7df87a27df6e34a6f18a1ba9f4a5d",
+      "first_seen_brt": "2026-08-22T20:20:01.106197-03:00",
+      "id": "LAURA-GROK→CLAUDE-CE-267090-NO-AR-20260822-1645",
+      "incident_id": "MUT-797c8e800ad547e6",
+      "key": "fila_para_claude.md::LAURA-GROK→CLAUDE-CE-267090-NO-AR-20260822-1645",
+      "observed_sha256": "6b15d99560ced0b6aed290a2859a9e497051ab0b9b7f7d13578d46d0ed06acaf",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "2102874d50dfb86069156d7b3c72800c2c3e6a3f159cb7cfc416c5e8efe84d42",
+      "first_seen_brt": "2026-08-23T07:05:02.037791-03:00",
+      "id": "LAURA-GROK→CLAUDE-HTML-267192-20260823-0541",
+      "incident_id": "MUT-8e02475c9d0e4bed",
+      "key": "fila_para_claude.md::LAURA-GROK→CLAUDE-HTML-267192-20260823-0541",
+      "observed_sha256": "c7083d9bed50ce2ee1503333c74664eb299fa67b1968d5ec057297e2066776a7",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "c2d7e1ad56c5dcac0163dc1ed929a6edeacf4ca51713edb856d15f9c6b20b374",
+      "first_seen_brt": "2026-08-23T08:50:01.751318-03:00",
+      "id": "LAURA-GROK→CLAUDE-HTML-267216-20260823-0740",
+      "incident_id": "MUT-af89812abaf8af5d",
+      "key": "fila_para_claude.md::LAURA-GROK→CLAUDE-HTML-267216-20260823-0740",
+      "observed_sha256": "aa9250f0680cde356466b364cec55d3276dfcfd41ccbcb557ffcafbc65ebf862",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "229730fe9d481f3f7d9df331782c3f84223c0b1ff9ce32533caf9d9730071115",
+      "first_seen_brt": "2026-08-27T23:05:01.435982-03:00",
+      "id": "GROK→CLAUDE-BUG-CAPA-ERRADA-268032-20260827-2158",
+      "incident_id": "MUT-b202ddd44b79a247",
+      "key": "fila_para_claude.md::GROK→CLAUDE-BUG-CAPA-ERRADA-268032-20260827-2158",
+      "observed_sha256": "d8117735bc27585daf9b6029155dca8f823c7485f2ef244301ab33eb4ec803de",
+      "queue": "fila_para_claude.md",
+      "reason": "ID duplicado no canal corrente",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "c2d7e1ad56c5dcac0163dc1ed929a6edeacf4ca51713edb856d15f9c6b20b374",
+      "first_seen_brt": "2026-08-23T08:20:01.401619-03:00",
+      "id": "LAURA-GROK→CLAUDE-HTML-267216-20260823-0740",
+      "incident_id": "MUT-d31c51b4560fe9c9",
+      "key": "fila_para_claude.md::LAURA-GROK→CLAUDE-HTML-267216-20260823-0740",
+      "observed_sha256": "427b35d86185339e7adfc0c030e9ffa29f862d6fd1a4585d78b9f98e6bc0aefa",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_by": [],
+      "state": "aberto"
+    },
+    {
+      "expected_sha256": "fe8d71c362fa74f6589480e86ebf32bc41384819f1689395887ec3318728c835",
+      "first_seen_brt": "2026-08-25T17:50:01.687891-03:00",
+      "id": "GROK→CLAUDE-BUG-SEM-FM-267648-20260825-1638",
+      "incident_id": "MUT-f1c4b37b5219869d",
+      "key": "fila_para_claude.md::GROK→CLAUDE-BUG-SEM-FM-267648-20260825-1638",
+      "observed_sha256": "0f7b5990f58d524a4033b89468653df55e7f123bcdf6fd972f44fc1f80d4877f",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_by": [],
+      "state": "aberto"
+    }
+  ],
+  "append_only_mutations_reconciled": [
+    {
+      "expected_sha256": "4d76d1c76fcc261a994a6534e59e5fe0832bb5b29718ed608fe92fcfd144090f",
+      "first_seen_brt": "2026-08-16T09:50:01.353464-03:00",
+      "id": "CLAUDE-MIGUEL-FECHAMENTO-GATE-INDEX-ATIVO-TODOS-REMETENTES-DEMONSTRADO-20260816-0539",
+      "incident_id": "MUT-040728618ae15768",
+      "justificativa": "O histórico Git prova que o bloco 05:39 não teve texto removido ou reescrito. No commit 09:52, um novo ticket YouTube foi acrescentado com o heading malformado `## ABERTO — ...`, sem `[ID]`. Como o indexador delimita mensagens por `## [ID]`, esse apêndice foi incorporado ao bloco anterior e mudou seu hash. Causa confirmada: fronteira sintática ausente, não merge, rsync ou ação do PC Laura. Os bytes observados ficam preservados; o ticket ganha abaixo uma fronteira canônica nova.",
+      "key": "fila_para_claude.md::CLAUDE-MIGUEL-FECHAMENTO-GATE-INDEX-ATIVO-TODOS-REMETENTES-DEMONSTRADO-20260816-0539",
+      "observed_sha256": "5fea0cb46a12adf6d9a347826d894b389e57074897bc46aa9e72babdccf0d62f",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_at_brt": "2026-08-16T19:41:32.425817-03:00",
+      "resolved_by": [
+        "CODEX-MIGUEL-RECONCILIACAO-MUT0407-FRONTEIRA-YOUTUBE-20260816-1940"
+      ],
+      "state": "reconciliado"
+    },
+    {
+      "expected_sha256": "e9f9fb159a53ba19653a7fa997bd8826d875356d012038fd70ca6de228b569d0",
+      "first_seen_brt": "2026-08-16T22:45:01.169824-03:00",
+      "id": "ZCODE-CONTRATO-V02-RODADA-3-NOVA-CONSULTA-20260816-2231",
+      "incident_id": "MUT-201827f6106a596b",
+      "justificativa": "Bloco reescrito in-place após o registro do SHA; conteúdo atual é a versão vigente da consulta, já respondida pelo Grok; mutirão 17/08 ordem Miguel; bytes observados preservados no arquivo morto.",
+      "key": "fila_para_grok.md::ZCODE-CONTRATO-V02-RODADA-3-NOVA-CONSULTA-20260816-2231",
+      "observed_sha256": "66e4d3187c54c0b664c7b2c2012f721aee6425671a7aa0cc8a2b316ef648af13",
+      "queue": "fila_para_grok.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_at_brt": "2026-08-17T15:16:24.100058-03:00",
+      "resolved_by": [
+        "ZCODE-RECONCILIA-MUT-201827f6106a596b-V2-20260817-1520"
+      ],
+      "state": "reconciliado"
+    },
+    {
+      "expected_sha256": "d3f98bdb4d9a3af5ac2c5dbb731c9b006635fc1f1f70054b60efc06f2fbd72cb",
+      "first_seen_brt": "2026-08-17T08:55:01.168912-03:00",
+      "id": "GROK→CLAUDE-RECIBO-266238-266239-CAPAS-20260817-0849",
+      "incident_id": "MUT-6029fe03c2de8b2d",
+      "justificativa": "ID duplicado no canal corrente (1ª ocorrência é canônica; 2ª é cópia do mesmo recibo de capas 266238/266239); recibo tratado como lido; duplicata segue para o arquivo morto na rotação.",
+      "key": "fila_para_claude.md::GROK→CLAUDE-RECIBO-266238-266239-CAPAS-20260817-0849",
+      "observed_sha256": "d3f98bdb4d9a3af5ac2c5dbb731c9b006635fc1f1f70054b60efc06f2fbd72cb",
+      "queue": "fila_para_claude.md",
+      "reason": "ID duplicado no canal corrente",
+      "resolved_at_brt": "2026-08-17T15:16:24.100058-03:00",
+      "resolved_by": [
+        "ZCODE-RECONCILIA-MUT-6029fe03c2de8b2d-V2-20260817-1520"
+      ],
+      "state": "reconciliado"
+    },
+    {
+      "expected_sha256": "6046586a210e7bfd4fc4ed026020ae4dc03e0a2520e5d6098fcebdec1349a83d",
+      "first_seen_brt": "2026-08-15T20:07:46.732300-03:00",
+      "id": "CLAUDE-MIGUEL→CODEX-MIGUEL-RESPOSTA-TIMESTAMPS-FUTUROS-LEDGER-20260815-2005",
+      "incident_id": "MUT-915a8695a401884e",
+      "justificativa": "primeira resposta truncada por colisão de delimitador; segunda resposta 20:05:29 é a versão autoritativa",
+      "key": "fila_para_claude.md::CLAUDE-MIGUEL→CODEX-MIGUEL-RESPOSTA-TIMESTAMPS-FUTUROS-LEDGER-20260815-2005",
+      "observed_sha256": "fbe96bfceef68a17c9e778e3512b3b31ae350337a9d0c699ccc9625dd25bde04",
+      "queue": "fila_para_claude.md",
+      "reason": "ID duplicado no canal corrente",
+      "resolved_at_brt": "2026-08-15T21:39:31.810005-03:00",
+      "resolved_by": [
+        "CLAUDE-MIGUEL-REGULARIZACAO-EVENTO-B-RECONCILIA-MUT915-INCIDENTE-20260815-2134"
+      ],
+      "state": "reconciliado"
+    },
+    {
+      "expected_sha256": "e57fce2f0a36815299ec2a23a601a7f00c287191279adbe102765fb512a0ea6b",
+      "first_seen_brt": "2026-08-15T13:53:46.857421-03:00",
+      "id": "CODEX-MIGUEL→CLAUDE-MIGUEL-CORRIGIR-V6-NO-HOME-20699-20260815-1326",
+      "incident_id": "MUT-c991eebbcdc792af",
+      "justificativa": "O histórico Git confirma que, entre os commits 13:27 e 13:37 de 15/08, Claude Miguel fechou o ticket NO-HOME editando o próprio bloco original: trocou `status: ABERTO` por `status: FECHADO-CLAUDE` e inseriu 23 linhas de resposta dentro dele. O conteúdo do fechamento é válido, mas a forma violou append-only. Nenhuma perda ou ação do PC Laura foi encontrada. Preservamos os bytes observados e reconciliamos por este novo evento imutável; fechamentos futuros devem nascer em bloco separado com `closes_ref`.",
+      "key": "fila_para_claude.md::CODEX-MIGUEL→CLAUDE-MIGUEL-CORRIGIR-V6-NO-HOME-20699-20260815-1326",
+      "observed_sha256": "34de29ebd241efcce2f83ceb85805b10ab112fc410244ff6974f0245204aad40",
+      "queue": "fila_para_claude.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_at_brt": "2026-08-16T19:42:16.718345-03:00",
+      "resolved_by": [
+        "CODEX-MIGUEL-RECONCILIACAO-MUTC991-FECHAMENTO-INPLACE-NOHOME-20260816-1942"
+      ],
+      "state": "reconciliado"
+    },
+    {
+      "expected_sha256": "5c3ac63dea5187a377c9d75cbe74e4b3eafecd48180adf419da207d402572f2d",
+      "first_seen_brt": "2026-08-16T23:25:01.590847-03:00",
+      "id": "CLAUDE-MIGUEL-ESCALACAO-GROK-CAPA-266166-IRA-30K-CAPTURA-EUA-20260816-2306",
+      "incident_id": "MUT-e68133796619ce3e",
+      "justificativa": "Resposta do Grok foi escrita dentro do bloco do Claude (violação append-only); desfecho reafirmado em bloco próprio: escalação respondida, 266166 ficou com o ZCode, sem ação pendente.",
+      "key": "fila_para_grok.md::CLAUDE-MIGUEL-ESCALACAO-GROK-CAPA-266166-IRA-30K-CAPTURA-EUA-20260816-2306",
+      "observed_sha256": "5e7a69ad4bef03739295d435a3b902461a29334c99a63a61fe74da8503ad6206",
+      "queue": "fila_para_grok.md",
+      "reason": "bloco conhecido foi reescrito in-place",
+      "resolved_at_brt": "2026-08-17T15:16:24.100058-03:00",
+      "resolved_by": [
+        "ZCODE-RECONCILIA-MUT-e68133796619ce3e-V2-20260817-1520"
+      ],
+      "state": "reconciliado"
+    }
+  ],
+  "channel_bytes": {
+    "fila_para_claude.md": 103675,
+    "fila_para_zcode.md": 26326,
+    "fila_para_grok.md": 4060,
+    "MURAL.md": 279,
+    "HISTORICO.md": 31
+  },
+  "rotation": {}
+}

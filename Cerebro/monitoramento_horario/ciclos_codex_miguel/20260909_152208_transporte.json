@@ -1,0 +1,139 @@
+{
+  "ref": "XM-20260909-011",
+  "rounds_executed": 1,
+  "finished_at": "2026-09-09T15:23:23.691496-03:00",
+  "result": "HOLD_TRANSPORTE_GIT",
+  "operational_result": "ALERTA_RECORRENCIA_PONTE",
+  "commit": "f6341a04714dbb5eabcc27c3e34b70bfab42b6ae",
+  "github": {
+    "push_rc": 1,
+    "pull_ff_only_rc": 128,
+    "origin_head": "584b5039e3acc018161d932f5182dae2b4887db4",
+    "common_base": "13d49e076e27a5b0915ce1caad1d5565ab999a1c",
+    "round_commit_verified": false,
+    "delivered": false,
+    "reason": "atualizacao concorrente; pull nao fast-forward; regra do loop exige hold"
+  },
+  "gdrive": [
+    {
+      "route": "gdrive",
+      "path": "de_dell.md",
+      "at": "2026-09-09T15:18:10.029043-03:00",
+      "returncode": 1,
+      "rate_limit": true,
+      "remote_sha256": null,
+      "remote_is_prefix": false,
+      "mutation": false
+    },
+    {
+      "remaining": "ledger/estado",
+      "skipped": "primeira leitura falhou; sem copia nem rajada de retries"
+    }
+  ],
+  "backup_preflight": [
+    {
+      "route": "nyc",
+      "at": "2026-09-09T15:18:10.029182-03:00",
+      "returncode": 0,
+      "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "is_ancestor_of_local": false,
+      "mutation": false
+    },
+    {
+      "route": "tencent",
+      "at": "2026-09-09T15:18:10.029283-03:00",
+      "returncode": 0,
+      "files": [
+        {
+          "sha256": "e0fc94b7be0e80b6d01a0655d4d02b3128c76a1b6c16aa2a1739064efc493056",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/de_dell.md"
+        },
+        {
+          "sha256": "1f6763fe50d2b0d4201fd4436b775902f97543b7a1cac21b172ec9a2d437b8a8",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/ledger/codex_miguel.md"
+        },
+        {
+          "sha256": "bf10240959d16ffd2f37957ae71e8779bef63644d53407193ca4e59d7764d29a",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/estado/codex_miguel.md"
+        }
+      ],
+      "mutation": false
+    }
+  ],
+  "copy_performed": false,
+  "dual_transport_ok": false,
+  "pending_transport": [
+    "GitHub: commit operacional e fecho local",
+    "G-Drive: arquivos seletivos da ronda"
+  ],
+  "remote_deltas_read": "diff --git a/cerebro/Foruns/revisao/canal_dsn_revisores.md b/cerebro/Foruns/revisao/canal_dsn_revisores.md\nindex 58822961f..aa83f3dc9 100644\n--- a/cerebro/Foruns/revisao/canal_dsn_revisores.md\n+++ b/cerebro/Foruns/revisao/canal_dsn_revisores.md\n@@ -1591,0 +1592,3 @@ Agravante: o carimbo SEM busca listou \"fontes\" (URLs Wikipedia Petro/Boluarte) *\n+- 09/09/2026 15:20 · 🟠 R2 269614 «O império da semente: como a soja brasileira alimenta o sécu» veredito CORREÇÕES (gpt-5) · pendências: CATEGORIA: post em categoria(s) de nome numerico (2, 4, 0, 3) — provavel defeito de comando slug x ID, conferir; TÍTULO fora da régua EMU (poético, com dois-pontos e sem agente/açã · meta HTTP 200 · — DSN Revisor 2 (R2 Título/Categoria) · 20260909 15:20:35 BRT\n+- 09/09/2026 15:20 · 🟠 R2 269616 «O império da semente: o milagre tropical e o duelo com os Es» veredito CORREÇÕES (gpt-5) · pendências: CATEGORIA: post em categoria(s) de nome numerico (2, 4, 0, 3) — provavel defeito de comando slug x ID, conferir; TÍTULO viola EMU-2: é vago, tem dois temas e usa dois-pontos; troca · meta HTTP 200 · — DSN Revisor 2 (R2 Título/Categoria) · 20260909 15:20:58 BRT\n+- 09/09/2026 15:21 · 🟠 R2 269618 «O império da semente: o 'buraco negro' chinês e a sobrevivên» veredito CORREÇÕES (gpt-5) · pendências: CATEGORIA: post em categoria(s) de nome numerico (2, 4, 0, 3) — provavel defeito de comando slug x ID, conferir; TÍTULO viola EMU (metáfora, dois-pontos, sem agente/ação/objeto cla · meta HTTP 200 · — DSN Revisor 2 (R2 Título/Categoria) · 20260909 15:21:47 BRT\ndiff --git a/cerebro/Foruns/youtube/canal_ds_youtube.md b/cerebro/Foruns/youtube/canal_ds_youtube.md\nindex 265fd8980..f42aed037 100644\n--- a/cerebro/Foruns/youtube/canal_ds_youtube.md\n+++ b/cerebro/Foruns/youtube/canal_ds_youtube.md\n@@ -799,0 +800 @@ PRONTO.\n+- 09/09/2026 15:22 · CHECK — fila: {'ENTREGUE_GATE': 2, 'DECUPADO_ENTREGUE_V4': 32, 'TRANSCREVENDO_CHEFE': 1, 'BAIXADO': 11, 'ERRO': 6}. — DS Nuvem YouTube (DS YouTube) · 20260909 15:22:05 BRT\n",
+  "validation": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "1d61e1d9f4ea6f31005c72b02e7b14f621372c80465cda8edf66f507ff845d64",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true,
+      "old_prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "d9ad5aa52c54a423927681452dcac19b2430d5b390963e882a1a99593514014e",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true,
+      "old_prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "ac85d4c5e679f5ccfdb754955c6fdfc5ddaad660e58e2745af4cc892f0498c45",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true,
+      "old_prefix_preserved": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_ronda.md",
+      "sha256": "8a17f1e36121ead4321fe013c90ee6a94c1beea8ba41ba9c2668a1526e0c703f",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_evidencias.json",
+      "sha256": "a9b3c677f0ede57af8d87c4e0e674260ca9e1e14ed4eef2bfd681019806356fd",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_blocos_removidos.md",
+      "sha256": "df95537cc6ddfa1766e0f174ea8f29ec7d131c39211bbfb88c622cd5389c7ab7",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true
+    }
+  ],
+  "closure_appends": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_ronda.md",
+      "previous_sha256": "8a17f1e36121ead4321fe013c90ee6a94c1beea8ba41ba9c2668a1526e0c703f",
+      "sha256": "3904763727bd79fd87d604b70de6f4b277f4b7e22c7c291042259c355e7447da",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_sha256": "1d61e1d9f4ea6f31005c72b02e7b14f621372c80465cda8edf66f507ff845d64",
+      "sha256": "13e00ba2cc7b1d604f7737e5393b274046ec121166f7b9d1efc68ace32d130f1",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "previous_sha256": "d9ad5aa52c54a423927681452dcac19b2430d5b390963e882a1a99593514014e",
+      "sha256": "0553d2fdf0adafa171679799f440f8ccfb5844b6c39986918fa69f492d95cd71",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "previous_sha256": "ac85d4c5e679f5ccfdb754955c6fdfc5ddaad660e58e2745af4cc892f0498c45",
+      "sha256": "ad92e5be1b6c33630f8d704fd7bb94365d4242becd59e07fdec8b73c51fb47b5",
+      "prefix_preserved": true
+    }
+  ],
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "prohibited_actions_executed": []
+}

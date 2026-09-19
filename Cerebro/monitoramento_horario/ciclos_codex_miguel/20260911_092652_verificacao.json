@@ -1,0 +1,493 @@
+{
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T09:18:38.271313-03:00",
+      "since": "2026-09-11T08:18:21.879111-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "a7e54b64af6432ac27f34b6db15385617efb3f4c030b13020160949397611878",
+          "requests": 27,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "2d8afe7e4ef4f32b581575e6c473a666c34bac97bbff5c8dcaeff4624747522a",
+          "requests": 22349,
+          "errors": {
+            "500": 22
+          },
+          "by_minute": {
+            "08:25": 15,
+            "09:00": 7
+          },
+          "last_5xx": "2026-09-11T09:00:23-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "b52edac0a89c94d35344b173759baf0162eb17e60206413100c9bd887a122633",
+        "total": 26,
+        "by_minute": {
+          "08:25": 19,
+          "09:00": 7
+        }
+      },
+      "redis_info": {
+        "uptime_in_seconds": "20820",
+        "used_memory": "504077408",
+        "used_memory_peak": "1292986176",
+        "expired_keys": "577",
+        "evicted_keys": "0",
+        "db0": "keys=405195,expires=96,avg_ttl=37765751118"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "wordpress": {
+    "rc": 0,
+    "at": "2026-09-11T09:22:55.697193-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T09:22:55-03:00",
+      "ativo": "1",
+      "modo": "consultivo",
+      "gate_sha256": "eef7943d0d3c4777a27b86e0b9ebc47886402d56411f2b1c02f5e2e252d2951d",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269882,
+          "hash": "8355ff0b7c399ac56f0cb7b407dce7e074025eb4c2e84a0ca5a06e7f460e6b0a",
+          "status": "publish",
+          "title": "Lula defende abrir sigilos do STF e promete presídios de segurança máxima",
+          "author": "2018",
+          "date": "2026-09-11 07:57:14",
+          "slug": "lula-entrevista-sbt-serie-presidenciais-2026",
+          "fm": 269883,
+          "categories": [
+            5088,
+            21141,
+            22,
+            28
+          ],
+          "edit_lock": "1789120950:2018",
+          "audit": "[{\"revisor\":\"ast\",\"ts\":\"2026-09-11 09:22:28\",\"titulo\":\"Lula defende abrir sigilos do STF e promete presu00eddios de seguranu00e7a mu00e1xima\",\"sha_conteudo\":\"8385c4486d3d645d05d97c4c9c2155d9c7edbd1490eb213cbbf10835d0fd01b3\",\"titulo_anterior\":\"Lula defende abrir sigilos do STF e promete presu00eddios de seguranu00e7a mu00e1xima\"}]",
+          "edit_active": false,
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269792,
+          "hash": "5ddebcfbe8625c6b24d4da3b08deab6e98720f40eb236e39acb9eb861516766b",
+          "status": "publish",
+          "title": "Brasileiros tiveram passaporte retido em recrutamento russo, diz Anistia",
+          "author": "5470",
+          "date": "2026-09-11 08:30:00",
+          "slug": "brasileiros-tiveram-passaporte-retido-em-recrutamento-russo-diz-anistia",
+          "fm": 269796,
+          "categories": [
+            5003,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "audit": "",
+          "edit_active": false,
+          "protection": ""
+        },
+        {
+          "id": 269868,
+          "hash": "e90b71e732167fd69931d4a3c2a6fb80c06c97dfbd2f2264c6718ec3a149139b",
+          "status": "publish",
+          "title": "Documentos liberados pelo STF ligam “Dark Horse” ao PCC",
+          "author": "5470",
+          "date": "2026-09-11 08:29:57",
+          "slug": "documentos-liberados-pelo-stf-ligam-dark-horse-ao-pcc",
+          "fm": 222993,
+          "categories": [
+            21141,
+            22,
+            2403
+          ],
+          "edit_lock": "1789129094:2018",
+          "audit": "",
+          "edit_active": false,
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "apply": {
+    "post_id": 269882,
+    "author": "Codex Miguel (XM), porta AST",
+    "started_at": "2026-09-11T09:22:21.121960-03:00",
+    "write_attempted": true,
+    "changes": [
+      {
+        "before": "dos oito anos do primeiro governo",
+        "after": "dos oito anos dos dois primeiros mandatos",
+        "reason": "O período de oito anos abrange dois mandatos; correção pontual fora de aspas."
+      },
+      {
+        "before": "O último crescimento acima de 3% ocorreu em 2010, seu último ano de mandato, quando o PIB avançou 7,5%.",
+        "after": "Em 2010, último ano do segundo mandato de Lula, o PIB avançou 7,5%. Houve crescimento acima de 3% depois disso: em 2024, a alta foi de 3,4%, segundo <a href=\"https://www.gov.br/planejamento/pt-br/centrais-de-conteudo/publicacoes/indicadores-economicos/pib-4t24.pdf/@@display-file/file\">dados do IBGE divulgados em março de 2025</a>.",
+        "reason": "Corrigir exclusividade cronológica falsa fora de aspas, preservando referência a 2010 e acrescentando contraprova oficial."
+      }
+    ],
+    "live_lock": {
+      "lock": "1789120950:2018",
+      "protection": "post_publicado_por_humano"
+    },
+    "attempted_at": "2026-09-11T09:22:25.833843-03:00",
+    "changed_fields": [
+      "content"
+    ],
+    "write_http": 200,
+    "protected_fields_unchanged": true,
+    "content_matches": true,
+    "after_sha256": "8355ff0b7c399ac56f0cb7b407dce7e074025eb4c2e84a0ca5a06e7f460e6b0a",
+    "status": "salvo_verificado_publico_pendente",
+    "finished_at": "2026-09-11T09:22:30.422716-03:00"
+  },
+  "public": {
+    "at": "2026-09-11T09:23:58.701057-03:00",
+    "http": 200,
+    "url": "https://www.ocafezinho.com/2026/09/11/lula-entrevista-sbt-serie-presidenciais-2026/",
+    "sha256": "5ab3c320e9ae3bd7e7558f8e88b8d0861bd026ba5c8c08b8843b8e6716356f83",
+    "all_paragraphs_present": true,
+    "target_present": [
+      true,
+      true
+    ],
+    "internal_markers": []
+  },
+  "seo": [
+    {
+      "id": 269792,
+      "titles": [
+        "Brasileiros tiveram passaporte retido em recrutamento russo, diz Anistia - O Cafezinho",
+        "Brasileiros tiveram passaporte retido em recrutamento russo, diz Anistia - O Cafezinho"
+      ],
+      "canonical": [
+        "https://www.ocafezinho.com/2026/09/11/brasileiros-tiveram-passaporte-retido-em-recrutamento-russo-diz-anistia/"
+      ],
+      "meta": {
+        "robots": "max-image-preview:large",
+        "description": "Relatório reúne denúncias de estrangeiros recrutados pela Rússia, mas admite que não investiga as condições dos 16 mil cidadãos de outros países que, segundo Kiev, servem às forças ucranianas.",
+        "og:title": "Brasileiros tiveram passaporte retido em recrutamento russo, diz Anistia",
+        "og:description": "Relatório reúne denúncias de estrangeiros recrutados pela Rússia, mas admite que não investiga as condições dos 16 mil cidadãos de outros países que, segundo Kiev, servem às forças ucranianas.",
+        "og:image": "https://www.ocafezinho.com/wp-content/uploads/2026/09/cl-capa-269792.jpg"
+      },
+      "h1": [
+        "Brasileiros tiveram passaporte retido em recrutamento russo, diz Anistia"
+      ],
+      "jsonld": 1,
+      "image_dimensions": [
+        1600,
+        1131
+      ]
+    },
+    {
+      "id": 269882,
+      "titles": [
+        "Lula defende abrir sigilos do STF e promete presídios de segurança máxima - O Cafezinho",
+        "Lula defende abrir sigilos do STF e promete presídios de segurança máxima - O Cafezinho"
+      ],
+      "canonical": [
+        "https://www.ocafezinho.com/2026/09/11/lula-entrevista-sbt-serie-presidenciais-2026/"
+      ],
+      "meta": {
+        "robots": "max-image-preview:large",
+        "description": "Presidente abriu a série de entrevistas do SBT Brasil com os seis primeiros colocados nas pesquisas e defendeu a abertura total dos sigilos das investigações",
+        "og:title": "Lula defende abrir sigilos do STF e promete presídios de segurança máxima",
+        "og:description": "Presidente abriu a série de entrevistas do SBT Brasil com os seis primeiros colocados nas pesquisas e defendeu a abertura total dos sigilos das investigações",
+        "og:image": "https://www.ocafezinho.com/wp-content/uploads/2026/09/thumb-sddefault.jpg"
+      },
+      "h1": [
+        "Lula defende abrir sigilos do STF e promete presídios de segurança máxima"
+      ],
+      "jsonld": 1,
+      "image_dimensions": [
+        640,
+        480
+      ]
+    }
+  ],
+  "integrity": {
+    "at": "2026-09-11T09:18:17.880128-03:00",
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "local_sha256": "8fe7fffcc097de4771f853a3134ed40e219219123dfb86748030d5895d195a15",
+        "canonical_sha256": "8fe7fffcc097de4771f853a3134ed40e219219123dfb86748030d5895d195a15",
+        "origin_sha256": "8fe7fffcc097de4771f853a3134ed40e219219123dfb86748030d5895d195a15",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "local_sha256": "1c0ae52b71f6c6855e65271d85bc6f84d4e0b667c425dd190c5eb430258b4496",
+        "canonical_sha256": "1c0ae52b71f6c6855e65271d85bc6f84d4e0b667c425dd190c5eb430258b4496",
+        "origin_sha256": "1c0ae52b71f6c6855e65271d85bc6f84d4e0b667c425dd190c5eb430258b4496",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "local_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01",
+        "origin_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "local_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "canonical_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "origin_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+        "local_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+        "origin_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      }
+    ],
+    "remote_ref_present": {
+      "XM-20260910-039": false,
+      "XM-20260911-013": true
+    },
+    "pre_push_exists": false
+  },
+  "quality_forum": {
+    "at": "2026-09-11T12:25:22.109317+00:00",
+    "forum": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/FORUM_QUALIDADE_POS_PUBLICACAO_ASTRA.md",
+    "forum_sha256": "1bdfba7deec949b07bd8e28e1006b34ba483bea26e8c36afced094f32f09b460",
+    "github": {
+      "blob_sha": "38f55af9135f4607ef15dd4679633246d8145720",
+      "status": "verified"
+    },
+    "lessons_sha256": "4dfe3c8e90e1a47eb8a906493ae8b9129e4126159f2fba8a5b87ae3f6d0f6cf1",
+    "nyc": {
+      "actual_v41_reader_fixture": true,
+      "after_sha256": "a30941a9aac6a98ed44679499574ef521f0711a9dbb23526401f01af0baa122d",
+      "at": "2026-09-11T12:25:29.234390+00:00",
+      "backup": "/root/v4_labs/dados/backups_astra_qualidade/20260911T122522109238Z.md",
+      "before_sha256": "6bc542c4395416b2474986700848a0d0d335d88922e3968156984188543d0d48",
+      "changed": true,
+      "path": "/root/v4_labs/dados/diretriz_qualidade_viva.md",
+      "production_cycle_consumption": "not_yet_observed",
+      "status": "verified"
+    }
+  }
+}

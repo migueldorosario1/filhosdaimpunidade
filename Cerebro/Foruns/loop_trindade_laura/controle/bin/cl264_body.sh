@@ -1,0 +1,5 @@
+
+echo "=== cl264 — capa do 269716 (sem ela o §86 derruba as 00:30) ==="
+capa 269716 "https://upload.wikimedia.org/wikipedia/commons/1/1f/Xi_Jinping_%282025-08-31%29_%28cropped%29.jpg" "O presidente da China, Xi Jinping, em foto de agosto de 2025. Foto: Wikimedia Commons (CC BY 4.0)" "Homem de terno azul e gravata vermelha em retrato oficial, diante de fundo claro" "684x480+0+60"
+selo 269716 "Confirmacao do Ministerio das Relacoes Exteriores da China divulgada em 10/09/2026 (imprensa indiana e agencias: «Xi Jinping to attend BRICS Summit in New Delhi, announces Chinese Foreign Ministry»; chegada prevista para 12/09) — o texto original dizia «provavel visita» e «Pequim ainda nao confirmou», e eu havia RETIDO a peca as 08:42 por isso; com a confirmacao, corrigi os dois trechos citando a chancelaria chinesa e mantive a ressalva verdadeira: o encontro bilateral com Modi segue sem anuncio. Armada para 11/09 00:30, vespera da cupula"
+echo "post=269716 thumb=$($W post meta get 269716 _thumbnail_id) status=$($W post get 269716 --field=post_status) date=$($W post get 269716 --field=post_date) evento=$(tem_evento 269716)"

@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-11T05:52:55.488322-03:00",
+  "origin_head_observed": "5a75ad704d3ca72f6e28e72daf6d281b57ff5e89",
+  "nyc_head_observed": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+  "probe": "git ls-remote origin/nyc refs/heads/main, ambos rc=0",
+  "pull": {
+    "at": "2026-09-11T05:50:44.078609-03:00",
+    "rc": 128,
+    "stdout": "",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\nfatal: Not possible to fast-forward, aborting.\n",
+    "head": "355e790d545c9f93f2c19656dbb7944b71741281",
+    "origin": "5a75ad704d3ca72f6e28e72daf6d281b57ff5e89"
+  },
+  "origin_delivery": false,
+  "nyc_delivery": false,
+  "push_attempted": false,
+  "reason": "HOLD_GIT_NON_FAST_FORWARD; HEAD/origin divergentes (2/18 antes deste recibo); NYC divergente herdado e ponta atual conferida. Não repetir push condenado, merge, rebase, force ou reset. Script ponte_push.sh adiado por este hold; não declarar queda das vias."
+}

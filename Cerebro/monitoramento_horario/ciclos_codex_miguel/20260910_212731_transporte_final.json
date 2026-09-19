@@ -1,0 +1,67 @@
+{
+  "ref": "XM-20260910-040",
+  "at": "2026-09-10T21:28:14.497922-03:00",
+  "attempts": [
+    {
+      "remote": "origin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   5862c6b05..cc347ec02  cc347ec02c32e0a8cf10af86885065599845c055 -> main\n",
+      "at": "2026-09-10T21:28:19.288144-03:00"
+    },
+    {
+      "remote": "nyc",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            cc347ec02c32e0a8cf10af86885065599845c055 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "at": "2026-09-10T21:28:23.688130-03:00"
+    }
+  ],
+  "baseline_final": "5862c6b05",
+  "initial_transport": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_transporte.json",
+  "commit": "cc347ec02c32e0a8cf10af86885065599845c055",
+  "origin_remote_verified": "cc347ec02c32e0a8cf10af86885065599845c055",
+  "state": "C1_ENTREGUE_C2_PENDENTE",
+  "artifact_hashes": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "9bf552c5ffb37a8cad63dab4feeb93f1ca58941f051506b7723f542c5dca4718"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "b04f4a8eadf8a6b9e38487af7acbb621b602255ef3356d8ba95e7b5ffca20e90"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "a2832178e2b755d806362365ecffb83ce3ba8490b8e59b8f92874e229fa91b4e"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_ronda.md",
+      "sha256": "cf95965ee88e025eeb298c03aedd47653f9de81e27cc6c1b2df3b46a0219121f"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_evidencias.json",
+      "sha256": "6c170075d72be415a52041ed15ae33ba3ef53cc4b583f93801384c3bcdb62011"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_editorial.md",
+      "sha256": "e7b9920c83548b822ec11433f26dd9a6a4ad5a229eda0d78418a5c56132a1551"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_mensagem.md",
+      "sha256": "5c354e3c37630010d96b70c3474caffd2e4a7ccdac1336cf2caddf65b3a23f22"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_transporte.json",
+      "sha256": "6a732b163dcf84bdca34908ca2a6d18489d8c407f206806b8d007f757064dadf"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_verificacao.json",
+      "sha256": "e8d1654e0fc620340f6150eb0c934804d00056486ee2d46e21952f604b053888"
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_212731_fechamento.md",
+      "sha256": "f7b65eed7c1511aaf07f4ef53b079d35fa51ba870874948cee4d105b96506155"
+    }
+  ]
+}

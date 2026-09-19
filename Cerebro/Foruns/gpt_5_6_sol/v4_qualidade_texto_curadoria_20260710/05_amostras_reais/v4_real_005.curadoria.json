@@ -1,0 +1,150 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.. Tese escolhida: Quando Flavio Bolsonaro entra no centro da pressao externa, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Carta escrita e depoimento no USTR abrem nova frente sobre Flavio.",
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira",
+    "evidencias_ref": [
+      "fatos_travados:tarifa",
+      "fatos_travados:USTR",
+      "fatos_travados:Pix"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "Lula e o campo que disputa soberania economica e financeira",
+    "quem_perde": "Flavio Bolsonaro e a direita alinhada a Trump",
+    "tipo": "economica_eleitoral"
+  },
+  "contradicao_central": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+  "curador_modelo": "mock-curador-v4",
+  "curadoria_id": "cur_f155dadffb0c2a4a",
+  "editoria": "v4_internacional",
+  "fato_novo": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.",
+  "fatos_travados": [
+    {
+      "fato": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+    "entidade_principal": "Flavio Bolsonaro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "390616535bec5cdc06fb979f185406bc5ed03b7c450672aed111942f72df688e",
+  "item_id": "v4_real_005",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "PDF USTR-2026-0331 espelhado",
+      "USTR Day 2 transcript"
+    ],
+    "resumo_consenso": "A leitura corrente trata o caso como disputa comercial entre Brasil e Estados Unidos, mas a comparacao entre carta e fala oral pode revelar mudanca de enfase politica.",
+    "timestamp_brt": "2026-07-10T10:45:00-03:00"
+  },
+  "manifesto_curadoria": {
+    "agent": "curador",
+    "contract": "contratos/v4_curadoria_tese_v1.json",
+    "issues": [],
+    "leitura_corrente_timestamped": true,
+    "ok": true,
+    "teses_candidatas": 3
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de Flavio Bolsonaro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back. A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula. A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva. O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.",
+    "primary_entity": "Flavio Bolsonaro",
+    "source_status": "auditado_fixture",
+    "titulo": "Carta escrita e depoimento no USTR abrem nova frente sobre Flavio"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "Lula e o campo que disputa soberania economica e financeira",
+      "quem_perde": "Flavio Bolsonaro e a direita alinhada a Trump",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando Flavio Bolsonaro entra no centro da pressao externa, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-10T12:04:08.754376-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: tarifa, Pix, Trump, soberania",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

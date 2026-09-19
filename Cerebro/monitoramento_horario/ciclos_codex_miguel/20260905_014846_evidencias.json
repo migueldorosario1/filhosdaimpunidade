@@ -1,0 +1,27 @@
+{
+  "time_brt": "2026-09-05T01:48:46.716734-03:00",
+  "mode": "HOLD_NON_FAST_FORWARD",
+  "round_count": 1,
+  "head": "915a28869dc0b539231f5d5ada739508279e58f3",
+  "origin_main": "5312903c24cb30db9dc029a3a359ee73521d765a",
+  "divergence": "4\t37",
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit": 128,
+    "error": "fatal: Not possible to fast-forward, aborting."
+  },
+  "previous_receipt": "20260905_012004_ronda.md",
+  "last_consumed_delta_anchor": "6b881cc06a230240061439486c5d726ae9a4b9aa",
+  "delta_cursor_advanced": false,
+  "sources_sha256": {
+    "LOOP_MIGUEL_CODEX.md": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280"
+  },
+  "preexisting_preserved_sha256": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json": "0aa953be1be6c0e137c7e11ce0625ebb0d195f6ccbc6e670b4a196dc720b72fb",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md": "1b6fc704c1d492cc13985267f346247078c7b01ec352d5d796003f0f5870df5a"
+  },
+  "git_status_before": "?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json\n?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md",
+  "failover": "DESENHADO_NAO_ATIVO"
+}

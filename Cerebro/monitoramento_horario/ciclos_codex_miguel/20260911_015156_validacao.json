@@ -1,0 +1,136 @@
+{
+  "validation": {
+    "at": "2026-09-11T01:52:43.708765-03:00",
+    "checks": {
+      "rounds": true,
+      "sources_hashes": true,
+      "three_complete": true,
+      "zero_applied": true,
+      "proposal_count": true,
+      "readback_equal": true,
+      "public_three_200": true,
+      "public_content_matches": true,
+      "appends_intact": true
+    },
+    "ancestry": [
+      {
+        "pid": 290578,
+        "ppid": 290576,
+        "comm": "python3"
+      },
+      {
+        "pid": 290576,
+        "ppid": 287806,
+        "comm": "bash"
+      },
+      {
+        "pid": 287806,
+        "ppid": 287789,
+        "comm": "codex"
+      },
+      {
+        "pid": 287789,
+        "ppid": 287787,
+        "comm": "node"
+      },
+      {
+        "pid": 287787,
+        "ppid": 287783,
+        "comm": "timeout"
+      },
+      {
+        "pid": 287783,
+        "ppid": 287773,
+        "comm": "flock"
+      },
+      {
+        "pid": 287773,
+        "ppid": 287770,
+        "comm": "bash"
+      },
+      {
+        "pid": 287770,
+        "ppid": 287769,
+        "comm": "sh"
+      },
+      {
+        "pid": 287769,
+        "ppid": 1247,
+        "comm": "cron"
+      },
+      {
+        "pid": 1247,
+        "ppid": 1,
+        "comm": "cron"
+      }
+    ],
+    "append_manifest": [
+      {
+        "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "before_sha256": "ffb732b8b214880d80886ef358905b0bc0dca354f5cb1154451b51a5e469f459",
+        "after_sha256": "0a50ade2e8e643ff3b303fee3a1df5019c6c8dc8d92e4a5c7776fba9d9a22c93",
+        "append_only": true
+      },
+      {
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "before_sha256": "ffb732b8b214880d80886ef358905b0bc0dca354f5cb1154451b51a5e469f459",
+        "after_sha256": "0a50ade2e8e643ff3b303fee3a1df5019c6c8dc8d92e4a5c7776fba9d9a22c93",
+        "append_only": true
+      },
+      {
+        "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "before_sha256": "2f4d073829c2492d533412ad23b6b45d451631821abc1d4aba919c8b0f547e83",
+        "after_sha256": "6ea8cf3454a589eb2966b3a2b9a943ce960ed0c7ef575deb8564d5d3f9144122",
+        "append_only": true
+      },
+      {
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "before_sha256": "2f4d073829c2492d533412ad23b6b45d451631821abc1d4aba919c8b0f547e83",
+        "after_sha256": "6ea8cf3454a589eb2966b3a2b9a943ce960ed0c7ef575deb8564d5d3f9144122",
+        "append_only": true
+      },
+      {
+        "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+        "before_sha256": "366b8cf0d993043f9d93508dcaf95458f1c5151a55e71a96eedaa5fc1423b372",
+        "after_sha256": "b1955193aa6ffe753422bba70d78b7d53932eaeee485aa9692eefbc1db7fa654",
+        "append_only": true
+      },
+      {
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+        "before_sha256": "366b8cf0d993043f9d93508dcaf95458f1c5151a55e71a96eedaa5fc1423b372",
+        "after_sha256": "b1955193aa6ffe753422bba70d78b7d53932eaeee485aa9692eefbc1db7fa654",
+        "append_only": true
+      }
+    ],
+    "retomada_sha256": "382bb66ea4c4dcb0a9126d6fc31d50e86ced3a88821eb628a547a3e4c07c4f6d",
+    "tracked_changes": ""
+  },
+  "closing_appends": [
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md",
+      "before_sha256": "1ade579900f79008b372f6beeba9f8f28758f63de8e12fe4015bbcece546ec83",
+      "after_sha256": "9fb7c57bf0f3cb1ccc3475c7be0114fd6682197d6452a5226ad1a97c88ad6859",
+      "append_only": true
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md",
+      "before_sha256": "1ade579900f79008b372f6beeba9f8f28758f63de8e12fe4015bbcece546ec83",
+      "after_sha256": "9fb7c57bf0f3cb1ccc3475c7be0114fd6682197d6452a5226ad1a97c88ad6859",
+      "append_only": true
+    },
+    {
+      "path": "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "before_sha256": "b1955193aa6ffe753422bba70d78b7d53932eaeee485aa9692eefbc1db7fa654",
+      "after_sha256": "39a08cd37bb152e36c9131c9f860c6cd2f7a10f09840b391b031f56fe04cd2e1",
+      "append_only": true
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "before_sha256": "b1955193aa6ffe753422bba70d78b7d53932eaeee485aa9692eefbc1db7fa654",
+      "after_sha256": "39a08cd37bb152e36c9131c9f860c6cd2f7a10f09840b391b031f56fe04cd2e1",
+      "append_only": true
+    }
+  ],
+  "closed_at": "2026-09-11T01:53:23.214576-03:00",
+  "transport_state": "MODO_ILHA_ENTREGA_LOCAL"
+}

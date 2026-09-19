@@ -1,0 +1,38 @@
+{
+  "conteudo": "Material auditado minimo para validar telemetria V4 com recibo JSONL obrigatorio, adapter mock, diretrizes externas e sem publicacao externa.",
+  "created_at": "2026-07-08T16:52:33.982381+00:00",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "idempotency_key": "9558e8d3e3d37d8032acfd5c272a3827308bb620d9036b8e47c7fbb05284beef",
+  "item_id": "v4_fixture_003",
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "2ee31aaa60af233d6611dd8389c5665087caca4c9e069aed8a4a1b4b3f98d98e",
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "from": "auditado",
+    "imagem_destacada_validada": true,
+    "manifesto_auditoria_final": true,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "manifesto_publicacao",
+      "imagem_destacada_validada",
+      "idempotency_key"
+    ],
+    "role": "publicador",
+    "step": "publicar_dry_run",
+    "texto_revisado": true,
+    "to": "publicado"
+  },
+  "publicacao_dry_run": {
+    "external_publish": false,
+    "wp_post_id": null
+  },
+  "source_status": "auditar_final_dry_run",
+  "status": "publicar_dry_run",
+  "titulo": "Fixture V4 valida telemetria obrigatoria"
+}

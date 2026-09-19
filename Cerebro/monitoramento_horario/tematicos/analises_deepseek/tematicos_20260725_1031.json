@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_1031",
+  "ts_brt": "2026-07-25T10:31:53-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_1031\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou http_status 0 (offline) mas não recebeu alerta no coletor.\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"status=0 indica site offline; deveria ter alerta P2/P3\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar site ceara_digital (offline) e ajustar alerta do coletor para http_status=0.\",\n  \"confianca\": 0.9,\n  \"notas\": \"ceara_digital com http_status=0 não recebeu alerta. Demais alertas (P2 por estagnação em global_south_news, rail_post, discover_brazil) estão coerentes com as medições.\"\n}"
+}

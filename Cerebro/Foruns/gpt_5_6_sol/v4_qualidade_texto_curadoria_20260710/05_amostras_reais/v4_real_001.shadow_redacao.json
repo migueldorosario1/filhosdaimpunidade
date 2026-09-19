@@ -1,0 +1,152 @@
+{
+  "collection_request": {
+    "fontes_coletadas": [
+      "https://www.federalregister.gov/documents/2026/06/04/2026-11158/notice-of-determination-and-request-for-comments-concerning-action-pursuant-to-section-301-brazils",
+      "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/public-hearing-proposed-responsive-action-section-301-investigation-certain-acts-policies-and",
+      "https://ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-brazils-acts-policies-and-practices-related-digital-trade-and-electronic-payment",
+      "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf",
+      "https://static.poder360.com.br/uploads/2026/06/Pedido-comparecimento-audiencia-EUA-Flavio-Bolsonaro.pdf"
+    ],
+    "queries": [
+      "comments.ustr.gov USTR-2026-0331 Flavio Bolsonaro written comments",
+      "USTR-2026-0331 Senator Flavio Bolsonaro written comment",
+      "USTR-2026-0397 Flavio Bolsonaro request to appear",
+      "USTR Brazil 301 Day 2 transcript Flavio Bolsonaro Panel 8"
+    ],
+    "reason": "Decisao editorial de Miguel: seguir com prudencia usando a transcricao oficial do USTR, o Federal Register e fontes auditadas; nao basear a afirmacao central no comentario escrito do docket USTR-2026-0331 enquanto ele nao estiver localizado.",
+    "required_before": "none",
+    "resolved_at": "2026-07-10",
+    "resolved_by": "Miguel",
+    "resolution_doc": "Cerebro/Foruns/forum_v4_fase6_multicase_dryrun_20260710.md",
+    "resolution_type": "editorial_prudence",
+    "resolved_for": [
+      "shadow_redacao",
+      "redator_real_llm",
+      "publicacao_real"
+    ],
+    "status": "resolved"
+  },
+  "consequencia_material": {
+    "descricao": "a tarifa proposta pelo USTR e a pressão sobre o Pix deixam de ser apenas disputa narrativa e passam a envolver empresas brasileiras, importadores americanos, consumidores dos EUA, soberania financeira e custo eleitoral para a direita brasileira",
+    "evidencias_ref": [
+      "Federal Register 2026-11158",
+      "USTR Day 2 transcript Panel 8",
+      "docket USTR-2026-0397",
+      "fatos_travados:Pix",
+      "fatos_travados:tarifa"
+    ],
+    "nivel_concretude": 5,
+    "quem_ganha": "Lula e o campo que disputa soberania econômica e financeira",
+    "quem_perde": "Flávio Bolsonaro, exportadores expostos à tarifa, importadores americanos afetados e a direita alinhada a Trump",
+    "tipo": "economica_eleitoral"
+  },
+  "curadoria_id": "cur_63d2d34a351a7e9c",
+  "editoria": "v4_politica_economia",
+  "external_call": false,
+  "fatos_travados": [
+    {
+      "fato": "O Federal Register publicou em 4 de junho de 2026 o notice oficial do USTR, documento 2026-11158, citação 91 FR 33854, sobre a investigação Section 301 envolvendo práticas do Brasil.",
+      "fonte_ref": [
+        "https://www.federalregister.gov/documents/2026/06/04/2026-11158/notice-of-determination-and-request-for-comments-concerning-action-pursuant-to-section-301-brazils"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O notice do USTR informa que o docket de comentários é USTR-2026-0331, que o docket de pedidos para audiência é USTR-2026-0397 e que a audiência pública foi agendada para 6 de julho de 2026, com possibilidade de continuar no dia útil seguinte.",
+      "fonte_ref": [
+        "https://www.federalregister.gov/documents/2026/06/04/2026-11158/notice-of-determination-and-request-for-comments-concerning-action-pursuant-to-section-301-brazils"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O USTR realizou a audiência pública em 6 e 7 de julho de 2026 e publicou em sua página oficial as transcrições dos dois dias, com a transcrição do Dia 2 sujeita a revisão de errata.",
+      "fonte_ref": [
+        "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/public-hearing-proposed-responsive-action-section-301-investigation-certain-acts-policies-and",
+        "https://ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-brazils-acts-policies-and-practices-related-digital-trade-and-electronic-payment",
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A transcrição oficial do Dia 2 lista Sen. Flavio Bolsonaro entre as testemunhas e registra sua fala no Painel 8 em 7 de julho de 2026.",
+      "fonte_ref": [
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Na transcrição oficial, Flávio Bolsonaro declara ser senador, líder da oposição e pré-candidato presidencial para a eleição de outubro, e afirma ter se reunido com Trump, o vice-presidente Vance e o secretário Rubio para pedir que os EUA não impusessem tarifas a empresas brasileiras.",
+      "fonte_ref": [
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "idx": 4,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Na mesma fala, Flávio afirma que tarifas anteriores foram exploradas politicamente pelo governo brasileiro, que novas tarifas fortaleceriam o governo que pretendiam pressionar, e cita comércio Brasil-China de US$ 171 bilhões contra US$ 83 bilhões com os EUA.",
+      "fonte_ref": [
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "idx": 5,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Flávio defende o Pix na transcrição, afirma que o sistema foi criado durante o governo Bolsonaro, pede preservar seu sucesso, cancelar a ação e negociar.",
+      "fonte_ref": [
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "idx": 6,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Em resposta a pergunta do USTR, Flávio afirma que os EUA poderiam esperar ou suspender a decisão, mencionando expectativa de mudança política no Brasil a partir de janeiro.",
+      "fonte_ref": [
+        "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+      ],
+      "idx": 7,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O Federal Register registra que a proposta inclui ação com tarifas sobre artigos do Brasil e certas isenções, e que digital trade/electronic payment services, incluindo Pix, está entre os eixos da investigação.",
+      "fonte_ref": [
+        "https://www.federalregister.gov/documents/2026/06/04/2026-11158/notice-of-determination-and-request-for-comments-concerning-action-pursuant-to-section-301-brazils"
+      ],
+      "idx": 8,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A Associated Press informou que Lula e Flávio Bolsonaro entraram em confronto político em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.",
+      "fonte_ref": [
+        "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+      ],
+      "idx": 9,
+      "obrigatorio_no_texto": false
+    }
+  ],
+  "gates": {
+    "allow_external_llm_call": false,
+    "allow_wordpress_real": false,
+    "requires_audit_before_publish": true,
+    "requires_blind_review": true
+  },
+  "issues": [],
+  "item_id": "v4_real_001",
+  "mode": "shadow_super_luxo",
+  "prompt_shadow": "Escreva uma materia jornalistica V4 em portugues brasileiro, com tese clara e prosa viva.\n\nPromessa ao leitor: O leitor vai entender por que o testemunho de Flávio no USTR transforma tarifa e Pix em problema econômico e eleitoral para a direita brasileira, não apenas em disputa Lula x Bolsonaro.\nBriefing: Abrir pela transcrição oficial do USTR, não pela troca de acusações. Mostrar que Flávio testemunhou no Painel 8 e pediu que os EUA não impusessem tarifas ao Brasil nem medidas contra o Pix porque a pressão poderia fortalecer Lula. Usar o Federal Register para travar o procedimento e a página do USTR para travar a audiência/transcrição. Preservar a limitação: não afirmar conteúdo do comentário escrito USTR-2026-0331 como fato auditado; se o docket for citado, explicar que a apuração usa a transcrição oficial sujeita a errata e o pedido de comparecimento hospedado por terceiro.\nConsequencia material: a tarifa proposta pelo USTR e a pressão sobre o Pix deixam de ser apenas disputa narrativa e passam a envolver empresas brasileiras, importadores americanos, consumidores dos EUA, soberania financeira e custo eleitoral para a direita brasileira\nQuem ganha: Lula e o campo que disputa soberania econômica e financeira\nQuem perde: Flávio Bolsonaro, exportadores expostos à tarifa, importadores americanos afetados e a direita alinhada a Trump\n\nFatos travados obrigatorios:\n- O Federal Register publicou em 4 de junho de 2026 o notice oficial do USTR, documento 2026-11158, citação 91 FR 33854, sobre a investigação Section 301 envolvendo práticas do Brasil.\n- O notice do USTR informa que o docket de comentários é USTR-2026-0331, que o docket de pedidos para audiência é USTR-2026-0397 e que a audiência pública foi agendada para 6 de julho de 2026, com possibilidade de continuar no dia útil seguinte.\n- O USTR realizou a audiência pública em 6 e 7 de julho de 2026 e publicou em sua página oficial as transcrições dos dois dias, com a transcrição do Dia 2 sujeita a revisão de errata.\n- A transcrição oficial do Dia 2 lista Sen. Flavio Bolsonaro entre as testemunhas e registra sua fala no Painel 8 em 7 de julho de 2026.\n- Na transcrição oficial, Flávio Bolsonaro declara ser senador, líder da oposição e pré-candidato presidencial para a eleição de outubro, e afirma ter se reunido com Trump, o vice-presidente Vance e o secretário Rubio para pedir que os EUA não impusessem tarifas a empresas brasileiras.\n- Na mesma fala, Flávio afirma que tarifas anteriores foram exploradas politicamente pelo governo brasileiro, que novas tarifas fortaleceriam o governo que pretendiam pressionar, e cita comércio Brasil-China de US$ 171 bilhões contra US$ 83 bilhões com os EUA.\n- Flávio defende o Pix na transcrição, afirma que o sistema foi criado durante o governo Bolsonaro, pede preservar seu sucesso, cancelar a ação e negociar.\n- Em resposta a pergunta do USTR, Flávio afirma que os EUA poderiam esperar ou suspender a decisão, mencionando expectativa de mudança política no Brasil a partir de janeiro.\n- O Federal Register registra que a proposta inclui ação com tarifas sobre artigos do Brasil e certas isenções, e que digital trade/electronic payment services, incluindo Pix, está entre os eixos da investigação.\n- A Associated Press informou que Lula e Flávio Bolsonaro entraram em confronto político em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.\n\nCollection request: resolved — Miguel decidiu seguir com prudência usando a transcrição oficial do USTR, o Federal Register e fontes auditadas; não basear afirmação central no comentário escrito USTR-2026-0331 enquanto ele não estiver localizado.\nNao invente fatos. Se um fato primario estiver ausente, escreva com prudencia ou marque a limitacao.",
+  "schema_version": "v1",
+  "selected_route": {
+    "external_call": false,
+    "funcao": "redacao",
+    "real_call_requires_human_approval": true,
+    "route_context": "v4_super_luxo_redacao"
+  },
+  "status": "shadow_redacao_pronta",
+  "texto_shadow": "<p>Flavio Bolsonaro entrou na disputa das tarifas americanas em um ponto delicado: a tarifa proposta pelo USTR e a pressão sobre o Pix deixam de ser apenas disputa narrativa e passam a envolver empresas brasileiras, importadores americanos, consumidores dos EUA, soberania financeira e custo eleitoral para a direita brasileira.</p>\n\n<p>O Federal Register publicou em 4 de junho de 2026 o notice oficial do USTR, documento 2026-11158, citação 91 FR 33854, sobre a investigação Section 301 envolvendo práticas do Brasil.</p>\n\n<p>O Pix torna a contradição mais concreta. Flávio defende o Pix na transcrição, afirma que o sistema foi criado durante o governo Bolsonaro, pede preservar seu sucesso, cancelar a ação e negociar. A pauta deixa de ser apenas disputa verbal e passa a tocar infraestrutura financeira, soberania e custo eleitoral.</p>\n\n<p>Esse deslocamento favorece Lula e o campo que disputa soberania econômica e financeira. Ao mesmo tempo, expõe Flávio Bolsonaro, exportadores expostos à tarifa, importadores americanos afetados e a direita alinhada a Trump ao custo de uma pressão externa que já não cabe apenas na guerra de narrativas.</p>",
+  "timestamp": "2026-07-09T05:51:34.461057+00:00",
+  "titulo_shadow": "Flavio Bolsonaro enfrenta o custo político da pressão dos EUA sobre tarifa e Pix",
+  "wordpress_real": false
+}

@@ -1,0 +1,71 @@
+{
+  "_doc": "Contrato V4 de feedback do editor e ranking de qualidade por provider/model/editoria.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "store": {
+    "format": "jsonl",
+    "path": "agent_data/v4/feedback/editor_feedback.jsonl",
+    "append_only": true,
+    "encoding": "utf-8"
+  },
+  "required_fields": [
+    "schema_version",
+    "timestamp",
+    "item_id",
+    "vertical",
+    "editor",
+    "score",
+    "sentiment",
+    "comment",
+    "correction_class",
+    "provider",
+    "model",
+    "operation"
+  ],
+  "score": {
+    "min": 1,
+    "max": 5,
+    "meaning": {
+      "1": "ruim, precisa refazer",
+      "2": "fraco, muita correcao",
+      "3": "publicavel com edicao",
+      "4": "bom",
+      "5": "excelente"
+    }
+  },
+  "sentiments": [
+    "positivo",
+    "neutro",
+    "negativo"
+  ],
+  "correction_classes": [
+    "nenhuma",
+    "estilo",
+    "fato",
+    "titulo",
+    "lead",
+    "imagem",
+    "tom",
+    "juridico",
+    "estrutura",
+    "reescrita_total"
+  ],
+  "ranking": {
+    "min_samples_for_recommendation": 3,
+    "group_by": [
+      "vertical",
+      "provider",
+      "model",
+      "operation"
+    ]
+  },
+  "prometheus": {
+    "metric": "v4_editor_corrections_total",
+    "labels": [
+      "vertical",
+      "correction_class"
+    ],
+    "detail_goes_to_jsonl": true
+  }
+}

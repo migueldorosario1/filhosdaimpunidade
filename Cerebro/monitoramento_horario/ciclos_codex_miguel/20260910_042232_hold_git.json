@@ -1,0 +1,33 @@
+{
+  "ref": "XM-20260910-009",
+  "timestamp_brt": "2026-09-10T04:23:50.314155-03:00",
+  "rounds_executed": 1,
+  "result": "HOLD_GIT_NON_FF",
+  "head_before": "b86a125977701b3f34ce784d2555445e52481331",
+  "head_after_pull": "b86a125977701b3f34ce784d2555445e52481331",
+  "origin_main": "063f99fd13738baa4b85779400f64e34ee56ff06",
+  "divergence_local_remote": "2\t1",
+  "pull": {
+    "command": [
+      "git",
+      "pull",
+      "--ff-only",
+      "origin",
+      "main"
+    ],
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n   4b20bd9c5..063f99fd1  main       -> origin/main\nfatal: Not possible to fast-forward, aborting.\n"
+  },
+  "receipt_commit": "b287471cd020dc9835a604385b071c110efeee0a",
+  "transport_commit": "b86a125977701b3f34ce784d2555445e52481331",
+  "delivery_confirmed": false,
+  "actions_not_taken": [
+    "merge",
+    "rebase",
+    "reset",
+    "force_push",
+    "alternate_delivery"
+  ],
+  "note": "Recibo e alerta existem localmente. Não enviados com sucesso à ponte remota. Nova tentativa dependerá da reconciliação autorizada por quem mantém o Git; ronda encerrada em HOLD conforme LOOP."
+}

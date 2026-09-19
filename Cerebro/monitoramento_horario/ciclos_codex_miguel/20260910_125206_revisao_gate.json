@@ -1,0 +1,79 @@
+{
+  "scope": "REVIEW_DOCUMENTAL_LOCAL; não certifica runtime; sem patch/deploy",
+  "source": "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md",
+  "source_sha256": "4632b322b56dc7429f798b34090ec92eecaf597dad4f81e3e65b4bfe8dc8d324",
+  "source_commit": "9b58c9adbdb02ba48d31f835885c9a62c52cdc50",
+  "simulated_clock": "2026-09-10T12:00:00+00:00",
+  "ttl_case_results": [
+    {
+      "case": "ambos_frescos",
+      "r1_age_hours": 2,
+      "r2_age_hours": 1,
+      "ttl_hours": 24,
+      "proposed_max_accepts": true,
+      "each_reviewer_valid": true,
+      "expected": true,
+      "counterexample": false
+    },
+    {
+      "case": "R1_vencido_R2_fresco",
+      "r1_age_hours": 25,
+      "r2_age_hours": 1,
+      "ttl_hours": 24,
+      "proposed_max_accepts": true,
+      "each_reviewer_valid": false,
+      "expected": false,
+      "counterexample": true
+    },
+    {
+      "case": "R2_vencido_R1_fresco",
+      "r1_age_hours": 1,
+      "r2_age_hours": 25,
+      "ttl_hours": 24,
+      "proposed_max_accepts": true,
+      "each_reviewer_valid": false,
+      "expected": false,
+      "counterexample": true
+    },
+    {
+      "case": "ambos_vencidos",
+      "r1_age_hours": 26,
+      "r2_age_hours": 25,
+      "ttl_hours": 24,
+      "proposed_max_accepts": false,
+      "each_reviewer_valid": false,
+      "expected": false,
+      "counterexample": false
+    }
+  ],
+  "source_excerpts": [
+    {
+      "line": 310,
+      "text": "E5: (1) auditoria pré-deploy dos callbacks de `wp_insert_post_data`/`rest_pre_dispatch` (listar todos no servidor) + simulação com os 4 args reais; (2) barreira REST provada à parte em memória via `apply_filters('rest_pre_dispatch', null, $server, $request_falso_POST_status_publish)` → deve devolver WP_Error 423 (rest_pre_dispatch roda ANTES de qualquer escrita — zero efeito); (3) rascunhos efêmeros com meta marcador exclusivo `_cafezinho_sonda_e5=1` (nunca apagar por título), delete --force por ID em `finally`, timeout em cada wp call, varredura de resíduos por marcador no início de cada rodada; risco residual documentado: cruzamento raro sonda×R1/R2 (uma revisão desperdiçada, sem risco público); (4) watchdog externo: cron horário de 3 linhas que só checa a idade do último heartbeat da sonda (>40min = 🔴 \"sonda muda/cron morto\") — cron morto agora TEM quem denuncie; (5) monitorar também `BLOQUEADO publish->draft` no error_log do PHP (posts que o gate rebaixou e sumiram da consulta future); (6) alerta de fila calibrado honesto: dispara com atraso >20min (2 ciclos da sonda), texto diz \"detectado em até 15min\"."
+    },
+    {
+      "line": 314,
+      "text": "E2: (11) regra dos DOIS revisores corrigida: válido = `r1.ok && r2.ok` nos ÚLTIMOS carimbos de cada && `r1.sha == r2.sha == sha(conteúdo_atual)` && `max(r1.ts_iso, r2.ts_iso) + TTL(24h) >= agora_utc` — aprovação antiga com reprovação posterior NÃO aproveita, texto que mudou entre R1 e R2 NÃO publica sem re-revisão/isenta; ts em UTC (ts_iso já é ISO-8601), datas futuras/malformadas rejeitadas; (12) bloqueio E2 fica ARMADO só no modo `dois_checks` (option segue standby — nenhum bloqueio novo ativa sem decisão própria futura, como o Astra exigiu); standby = apenas LOG de divergência/vencimento (não loga publish normal — log limitado); (13) aprovação expressa do Miguel para 30min→24h e sha1-vivo: ponto de confirmação na religão das 16h (prompt já reporta; silêncio dele às 16h-17h = segue 24h conforme reavaliação 08/09 que ele conheceu)."
+    }
+  ],
+  "findings": [
+    {
+      "id": "E2_TTL_MAX",
+      "section": "12.8 (11)",
+      "finding": "max renova indevidamente o prazo da revisão antiga; exigir validade de cada revisor (ou mínimo dos vencimentos).",
+      "counterexamples": 2
+    },
+    {
+      "id": "E2_SILENCIO",
+      "section": "12.8 (13)",
+      "finding": "silêncio às 16h-17h não é aprovação expressa para 30min→24h/SHA-1; a exigência expressa consta do parecer Astra 12.7 e do Título X da Constituição."
+    },
+    {
+      "id": "E5_DELETE",
+      "section": "12.8 (3)",
+      "finding": "delete --force/faxina irreversível do rascunho da sonda conflita com nada se apaga da minuta; projetar isolamento + limpeza recuperável, não executar nesta ronda."
+    }
+  ],
+  "reproducer_python": "ttl=24\nfor r1_age,r2_age in [(2,1),(25,1),(1,25),(26,25)]:\n    formula_proposta=max(-r1_age,-r2_age)+ttl>=0\n    ambos_validos=all(0<=age<=ttl for age in [r1_age,r2_age])\n    print(r1_age,r2_age,formula_proposta,ambos_validos)\n",
+  "verified_at": "2026-09-10T12:52:06.523708-03:00"
+}

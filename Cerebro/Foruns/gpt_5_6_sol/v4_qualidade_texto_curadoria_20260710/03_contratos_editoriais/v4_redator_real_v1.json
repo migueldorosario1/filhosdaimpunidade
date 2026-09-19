@@ -1,0 +1,79 @@
+{
+  "_doc": "Contrato V4 Fase 3 para preflight do redator real/super_luxo. Este contrato prepara a chamada externa, mas nao a executa sem liberacao explicita do adaptador LLM.",
+  "_version": "v1",
+  "_status": "fase_3_preflight",
+  "_updated": "2026-07-09",
+  "principios": {
+    "redator_le_curadoria": true,
+    "redator_nao_le_auditado_cru": true,
+    "fatos_travados_obrigatorios": true,
+    "collection_request_respeitado": true,
+    "sem_wordpress_real": true,
+    "chamada_externa_exige_adapter_real": true,
+    "chamada_externa_exige_aprovacao_humana": true
+  },
+  "source": {
+    "required_fields": [
+      "curadoria_id",
+      "item_id",
+      "editoria",
+      "fato_novo",
+      "fatos_travados",
+      "consequencia_material",
+      "teses_candidatas",
+      "tese_escolhida_idx",
+      "promessa_ao_leitor",
+      "briefing_produtor",
+      "frame_visual",
+      "collection_request",
+      "validacoes"
+    ]
+  },
+  "routing": {
+    "funcao": "redacao",
+    "route_context": "v4_super_luxo_redacao",
+    "mode": "real_super_luxo_preflight",
+    "external_call": false,
+    "external_call_requires_human_approval": true,
+    "adapter_contract": "contratos/v4_llm_adapter_v1.json"
+  },
+  "real_output_quality": {
+    "min_chars": 3500,
+    "target_words_min": 700,
+    "target_words_max": 1000,
+    "block_if_ends_with": [
+      "-",
+      "—",
+      ",",
+      ":",
+      ";"
+    ]
+  },
+  "fallback": {
+    "enabled": true,
+    "max_attempts": 4,
+    "retry_on_error": true,
+    "retry_on_incomplete": true,
+    "retry_scope": "model",
+    "preserva_fallback_intra_provider": true,
+    "provider_order_source": "contratos/v4_rotas_llm_limpas_v1.json",
+    "sem_provider_hardcoded_no_codigo": true,
+    "deepseek_v4_pro_entra_por_rota_externa": true
+  },
+  "gates": {
+    "block_if_collection_blocks_redator_real": true,
+    "block_if_advogado_obvio_rejected": true,
+    "block_if_consequencia_material_generic": true,
+    "block_wordpress_real": true,
+    "block_if_adapter_real_unavailable": true,
+    "block_if_missing_env_key": true
+  },
+  "output": {
+    "path": "dados/producao_shadow",
+    "suffix": "redator_real_preflight",
+    "real_suffix": "redator_real",
+    "include_prompt": true,
+    "include_healthcheck": true,
+    "include_collection_request": true
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "ref": "XM-20260905-004",
+  "captured_brt": "05/09/2026 03:19:06 BRT",
+  "anchor": "6cf6a8fc4d3f181ace1329de8f7e434384bde5d1",
+  "read_cut": "100543c45ecde74e7d00ebe2640588e264eda70d",
+  "http": [
+    {
+      "url": "https://www.ocafezinho.com/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/feed/",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269085?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269089?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269096?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269097?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269032?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269050?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269034?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269064?_fields=id,status,date,featured_media,author,slug",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269097?_fields=id,status,date,featured_media",
+      "user_agent": "Mozilla/5.0",
+      "http": 200,
+      "data": {
+        "id": 269097,
+        "date": "2026-09-05T02:58:00",
+        "status": "publish",
+        "featured_media": 269099
+      }
+    },
+    {
+      "url": "https://controle.ocafezinho.com/wp-json/wp/v2/posts/269097?_fields=id,status,date,featured_media",
+      "user_agent": "Mozilla/5.0",
+      "http": 200,
+      "data": {
+        "id": 269097,
+        "date": "2026-09-05T02:58:00",
+        "status": "publish",
+        "featured_media": 269099
+      }
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269085?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269085,
+        "date": "2026-09-05T00:28:00",
+        "status": "publish",
+        "featured_media": 269082
+      },
+      "user_agent": "Mozilla/5.0"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269089?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269089,
+        "date": "2026-09-05T01:38:00",
+        "status": "publish",
+        "featured_media": 269095
+      },
+      "user_agent": "Mozilla/5.0"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269096?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269096,
+        "date": "2026-09-05T02:38:00",
+        "status": "publish",
+        "featured_media": 269098
+      },
+      "user_agent": "Mozilla/5.0"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269032?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269032,
+        "date": "2026-09-04T19:08:00",
+        "status": "publish",
+        "featured_media": 269051
+      },
+      "user_agent": "Mozilla/5.0"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269050?_fields=id,status,date,featured_media",
+      "http": 200,
+      "data": {
+        "id": 269050,
+        "date": "2026-09-04T16:20:00",
+        "status": "publish",
+        "featured_media": 269049
+      },
+      "user_agent": "Mozilla/5.0"
+    },
+    {
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269034?_fields=id,status,date,featured_media",
+      "error": "HTTP Error 401: Unauthorized",
+      "user_agent": "Mozilla/5.0"
+    }
+  ],
+  "sources": {
+    "LOOP_MIGUEL_CODEX.md": {
+      "bytes": 5018,
+      "sha256": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a"
+    },
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": {
+      "bytes": 6955,
+      "sha256": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb"
+    },
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": {
+      "bytes": 4802,
+      "sha256": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280"
+    },
+    "cerebro/Foruns/ponte_laura_completa/CONTRATO_PONTE_COMPLETA.md": {
+      "bytes": 12613,
+      "sha256": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380"
+    },
+    "cerebro/MEMORY.md": {
+      "bytes": 7251,
+      "sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8"
+    },
+    "cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "bytes": 228262,
+      "sha256": "e72a67f83e4ff5fe47f8f6638221a16f7c0977f8a73ed79ee0df6ab07f025773"
+    },
+    "cerebro/Foruns/canal_trindade.md": {
+      "bytes": 34534,
+      "sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2"
+    },
+    "cerebro/Foruns/inbox_trindade/codex.md": {
+      "bytes": 11403,
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689"
+    },
+    "cerebro/Foruns/inbox_trindade/zcode.md": {
+      "bytes": 48590,
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf"
+    },
+    "cerebro/Foruns/inbox_trindade/claude.md": {
+      "bytes": 35767,
+      "sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741"
+    },
+    "cerebro/Foruns/inbox_trindade/grok.md": {
+      "bytes": 18816,
+      "sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4"
+    },
+    "cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md": {
+      "bytes": 652,
+      "sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac"
+    },
+    "cerebro/Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md": {
+      "bytes": 29441,
+      "sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b"
+    },
+    "cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "bytes": 2113164,
+      "sha256": "33fdeab71cc23d02bcae71ab6c67eef1dcfbe7e70e27fbe0f951c40fd0828537"
+    },
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 5860724,
+      "sha256": "6f6c0352e7a4b18db22cbbfe40fb8dbfd3460a4ea2215f7fe55ce7584bae8259"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 76859,
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "bytes": 148813,
+      "sha256": "a1bf2d406e416ae8bf02de9bff234dc2859aace49a9325b4b8c68e69ac5c36c4"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/grok_miguel.md": {
+      "bytes": 31954,
+      "sha256": "bea36e7c70eaa59d312b56fc20691b0addbc88ef24e6a08d2d5250c2076375e8"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/claude_miguel.md": {
+      "bytes": 1305,
+      "sha256": "5750e3b42f006959539dc11bf3efe207fb1c0d3f6f078e37a8cfc6ca205adb9b"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "bytes": 12668,
+      "sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df"
+    },
+    "cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "bytes": 171,
+      "sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MEMORY.md": {
+      "bytes": 7251,
+      "sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md": {
+      "bytes": 229618,
+      "sha256": "3dced43eccd821d9ef90ddc98edf16637b4eed4d163d0166b062b4efff59ccd7"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/canal_trindade.md": {
+      "bytes": 34534,
+      "sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/codex.md": {
+      "bytes": 11403,
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/zcode.md": {
+      "bytes": 48590,
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/claude.md": {
+      "bytes": 35767,
+      "sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/grok.md": {
+      "bytes": 18816,
+      "sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md": {
+      "bytes": 652,
+      "sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md": {
+      "bytes": 29441,
+      "sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md": {
+      "bytes": 2108195,
+      "sha256": "a1125fff4a40fc49f0eddb7d42183f67a3ffe2783b433f7b17cc53a28befb740"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 5860022,
+      "sha256": "fa7ceb72cd973f3cd1b56865c859e257737aeea46433ce36ddf6c03bb982df36"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 76859,
+      "sha256": "0dbe4c56e39fe517cbda0ee28fc2de66e50ab5c615a9ed4215bd5280acb7e335"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md": {
+      "bytes": 148632,
+      "sha256": "091b9b0f95856cec07ec46fda02c3284676cf4b3c058741a9bf343b966abfc64"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/grok_miguel.md": {
+      "bytes": 31954,
+      "sha256": "bea36e7c70eaa59d312b56fc20691b0addbc88ef24e6a08d2d5250c2076375e8"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/claude_miguel.md": {
+      "bytes": 1305,
+      "sha256": "5750e3b42f006959539dc11bf3efe207fb1c0d3f6f078e37a8cfc6ca205adb9b"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "bytes": 12668,
+      "sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df"
+    },
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+      "bytes": 154,
+      "sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14"
+    }
+  },
+  "preexisting_untracked": [
+    "20260905_004838_ronda.md",
+    "20260905_004838_evidencias.json"
+  ],
+  "git_preflight": "ff-only b5815f65a..100543c45; no unmerged files",
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0
+  },
+  "transport_final": {
+    "time_brt": "05/09/2026 03:19:57 BRT",
+    "rebase_merge_exists": false,
+    "rebase_apply_exists": true,
+    "head": "02cf0c9a2944d5dcf05806a25caa54c80b33063e",
+    "local_commit": "02cf0c9a2944d5dcf05806a25caa54c80b33063e",
+    "push_main_returncode": 1,
+    "push_HEAD": "NOT_EXECUTED_REBASE_ACTIVE",
+    "head_origin_counts": "1\t0"
+  }
+}

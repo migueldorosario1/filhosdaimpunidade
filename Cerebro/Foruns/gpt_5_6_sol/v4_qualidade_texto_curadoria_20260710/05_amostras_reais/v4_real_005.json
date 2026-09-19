@@ -1,0 +1,29 @@
+{
+  "conteudo": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back. A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula. A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva. O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.",
+  "created_at": "2026-07-10T15:04:08.751151+00:00",
+  "editoria": "v4_internacional",
+  "fonte": "followup_ustr_2026_0331_pdf",
+  "fontes": [
+    "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf",
+    "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.json",
+    "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf"
+  ],
+  "item_id": "v4_real_005",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "PDF USTR-2026-0331 espelhado",
+      "USTR Day 2 transcript"
+    ],
+    "resumo_consenso": "A leitura corrente trata o caso como disputa comercial entre Brasil e Estados Unidos, mas a comparacao entre carta e fala oral pode revelar mudanca de enfase politica.",
+    "timestamp_brt": "2026-07-10T10:45:00-03:00"
+  },
+  "manifesto_auditoria": {
+    "fonte_validada": true,
+    "qualidade_minima": true,
+    "risco_juridico_revisado": true
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "status": "auditado_fixture",
+  "titulo": "Carta escrita e depoimento no USTR abrem nova frente sobre Flavio"
+}

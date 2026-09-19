@@ -1,0 +1,69 @@
+{
+  "_doc": "Contrato V4 Fase 2 para redator shadow/super_luxo. Prepara prompt e saida local sem chamada externa e sem WordPress real.",
+  "_version": "v1",
+  "_status": "fase_2_shadow_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+    "shadow_por_padrao": true,
+    "sem_chamada_llm_real": true,
+    "sem_wordpress_real": true,
+    "redator_le_curadoria": true,
+    "redator_nao_le_auditado_cru": true,
+    "fatos_travados_obrigatorios": true,
+    "consequencia_material_obrigatoria": true,
+    "collection_request_visivel": true,
+    "julgamento_cego_continua_gate": true
+  },
+  "source": {
+    "required_fields": [
+      "curadoria_id",
+      "item_id",
+      "editoria",
+      "fato_novo",
+      "fatos_travados",
+      "consequencia_material",
+      "teses_candidatas",
+      "tese_escolhida_idx",
+      "promessa_ao_leitor",
+      "briefing_produtor",
+      "frame_visual",
+      "collection_request",
+      "validacoes"
+    ]
+  },
+  "routing": {
+    "funcao": "redacao",
+    "route_context": "v4_super_luxo_redacao",
+    "mode": "shadow_super_luxo",
+    "external_call": false,
+    "real_call_requires_human_approval": true
+  },
+  "gates": {
+    "block_if_missing_curadoria_id": true,
+    "block_if_collection_required_before_shadow": true,
+    "block_if_advogado_obvio_rejected": true,
+    "block_if_consequencia_material_generic": true,
+    "block_wordpress_real": true,
+    "requires_blind_review_before_institutionalization": true
+  },
+  "collection_request_semantics": {
+    "none": "nao bloqueia",
+    "recommended": "nao bloqueia shadow_redacao; bloqueia quando stage >= required_before",
+    "required": "bloqueia no required_before e em etapas posteriores",
+    "policy_fase4_auditfix": "recommended e required tem o mesmo comportamento de gate por estagio; diferem na severidade editorial declarada. Esta politica deve ser ratificada antes de abrir publicacao real.",
+    "stage_order": [
+      "shadow_redacao",
+      "redator_real_llm",
+      "publicacao_real"
+    ],
+    "pending_decision_for_fase_3": "Antes de qualquer chamada externa, recommended com required_before=redator_real_llm deve ser tratado como bloqueio."
+  },
+  "output": {
+    "path": "dados/producao_shadow",
+    "suffix": "shadow_redacao",
+    "include_prompt": true,
+    "include_selected_route": true,
+    "include_fatos_travados": true,
+    "include_collection_request": true
+  }
+}

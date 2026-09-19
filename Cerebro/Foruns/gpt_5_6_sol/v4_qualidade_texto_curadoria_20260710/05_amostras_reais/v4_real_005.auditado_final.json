@@ -1,0 +1,166 @@
+{
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira",
+    "evidencias_ref": [
+      "fatos_travados:tarifa",
+      "fatos_travados:USTR",
+      "fatos_travados:Pix"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "Lula e o campo que disputa soberania economica e financeira",
+    "quem_perde": "Flavio Bolsonaro e a direita alinhada a Trump",
+    "tipo": "economica_eleitoral"
+  },
+  "conteudo": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back. A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula. A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva. O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.",
+  "created_at": "2026-07-10T15:04:08.758685+00:00",
+  "curadoria_id": "cur_f155dadffb0c2a4a",
+  "editoria": "v4_internacional",
+  "fatos_travados": [
+    {
+      "fato": "O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.",
+      "fonte_ref": [
+        "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+    "entidade_principal": "Flavio Bolsonaro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "29b4484a23a11b8d768476d85ee8f3553ae2ed310fb62c46c5accad8db31f0fb",
+  "issues": [],
+  "item_id": "v4_real_005",
+  "llm_response": {
+    "content": "[MOCK V4/gemini/gemini-3.5-flash/v4_internacional/redacao] Carta escrita e depoimento no USTR abrem nova frente sobre Flavio. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.. Tese escolhida: Quando Flavio Bolsonaro entra no centro da pressao externa, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Carta escrita e depoimento no USTR abrem nova frente sobre Flavio.\n\nFatos travados obrigatorios para cobrir no texto:\n- O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.\n- A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula.\n- A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva.\n- O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+    "cost_usd_estimated": 0.00023265,
+    "duration_ms_llm": 0,
+    "error_class": null,
+    "mode": "mock",
+    "model": "gemini-3.5-flash",
+    "model_parameters": {
+      "max_tokens": null,
+      "temperature": null,
+      "thinking_budget": null
+    },
+    "pricing_table_version": "2026-07-09-official-deepseek",
+    "prompt_hash": "01b02da9f83ab5acc205147d183bbcd584a818d446e0fe88e6100dce2c0e31f5",
+    "provider": "gemini",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo",
+      "deepseek_luxo"
+    ],
+    "selected_tier": "gemini_luxo",
+    "selection_reason": "exploration: qualidade=1.000, custo=1.000, rota=0.250, samples=0",
+    "selection_strategy": "quality_cost_router",
+    "tokens_in": 414,
+    "tokens_out": 672
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "f69f94530bf783ff23cea0f0b56a4cc089bac3aa92ad38fbd5020af29a436abb",
+      "editoria": "v4_internacional",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "curadoria_id": "cur_f155dadffb0c2a4a",
+    "from": "curadoria",
+    "imagem_destacada_validada": false,
+    "manifesto_auditoria_final": true,
+    "manifesto_curadoria": false,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "curadoria_id",
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "manifesto_auditoria_final": {
+    "agent": "auditor",
+    "contract": "contratos/v4_auditoria_final_v1.json",
+    "curadoria_id": "cur_f155dadffb0c2a4a",
+    "fact_check_ok": true,
+    "issues": [],
+    "ok": true,
+    "publication_real": false,
+    "revisao_ok": true
+  },
+  "manifesto_fact_check": {
+    "agent": "fact_checker",
+    "check_type": "metadata_plus_text_presence_heuristic",
+    "contract": "contratos/v4_fact_check_v1.json",
+    "curadoria_id": "cur_f155dadffb0c2a4a",
+    "issues": [],
+    "ok": true,
+    "required_facts": 4,
+    "warnings": []
+  },
+  "manifesto_revisao": {
+    "agent": "revisor",
+    "contract": "contratos/v4_revisao_v1.json",
+    "curadoria_id": "cur_f155dadffb0c2a4a",
+    "issues": [],
+    "ok": true,
+    "promessa_ao_leitor": "O leitor vai entender por que o movimento de Flavio Bolsonaro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso."
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de Flavio Bolsonaro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.",
+  "schema_version_auditoria_final": "v1",
+  "schema_version_fact_check": "v1",
+  "schema_version_revisao": "v1",
+  "source_status": "curadoria_dry_run",
+  "status": "auditado_final",
+  "tese_escolhida_idx": 0,
+  "texto_dry_run": "[MOCK V4/gemini/gemini-3.5-flash/v4_internacional/redacao] Carta escrita e depoimento no USTR abrem nova frente sobre Flavio. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.. Tese escolhida: Quando Flavio Bolsonaro entra no centro da pressao externa, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Carta escrita e depoimento no USTR abrem nova frente sobre Flavio.\n\nFatos travados obrigatorios para cobrir no texto:\n- O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.\n- A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula.\n- A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva.\n- O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+  "texto_revisado": "[MOCK V4/gemini/gemini-3.5-flash/v4_internacional/redacao] Carta escrita e depoimento no USTR abrem nova frente sobre Flavio. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.. Tese escolhida: Quando Flavio Bolsonaro entra no centro da pressao externa, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Carta escrita e depoimento no USTR abrem nova frente sobre Flavio.\n\nFatos travados obrigatorios para cobrir no texto:\n- O PDF integral atribuido a Flavio Bolsonaro no docket USTR-2026-0331 declara submissao em 1 de julho de 2026 e pede suspensao da acao proposta, negociacao bilateral e janela de 180 dias com automatic snap-back.\n- A transcricao oficial do USTR, Dia 2, registra dias depois que Flavio defendeu o Pix, pediu cancelar a acao e afirmou que novas tarifas fortaleceriam Lula.\n- A pauta internacional compara carta escrita e depoimento oral para mostrar como Washington, Trump, USTR e eleicao brasileira aparecem em registros diferentes da mesma ofensiva.\n- O texto deve preservar a limitacao: o PDF foi obtido por espelhos jornalisticos identicos, ainda sem download direto do portal comments.ustr.gov nesta rodada.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+  "timestamp_auditoria_final": "2026-07-10T15:04:08.776397+00:00",
+  "timestamp_fact_check": "2026-07-10T15:04:08.774027+00:00",
+  "timestamp_revisao": "2026-07-10T15:04:08.770951+00:00",
+  "titulo": "Carta escrita e depoimento no USTR abrem nova frente sobre Flavio",
+  "warnings": [],
+  "wordpress_real": false
+}

@@ -1,0 +1,111 @@
+{
+  "at": "2026-09-10T23:23:35.932517-03:00",
+  "ref": "CL-20260910-034",
+  "rc": 0,
+  "stderr": "",
+  "head": "f20116d709fc50e32ac44387c5022d88c8c5f567",
+  "data": {
+    "at": "2026-09-10T23:23:35-03:00",
+    "future": [
+      {
+        "id": 269813,
+        "status": "future",
+        "fm": 269842,
+        "date": "2026-09-11 13:00:00",
+        "events": 1
+      },
+      {
+        "id": 269811,
+        "status": "future",
+        "fm": 269812,
+        "date": "2026-09-11 11:30:00",
+        "events": 1
+      },
+      {
+        "id": 269801,
+        "status": "future",
+        "fm": 269803,
+        "date": "2026-09-11 10:00:00",
+        "events": 1
+      },
+      {
+        "id": 269792,
+        "status": "future",
+        "fm": 269796,
+        "date": "2026-09-11 08:30:00",
+        "events": 1
+      },
+      {
+        "id": 269770,
+        "status": "future",
+        "fm": 269774,
+        "date": "2026-09-11 07:00:00",
+        "events": 1
+      },
+      {
+        "id": 269719,
+        "status": "future",
+        "fm": 269762,
+        "date": "2026-09-11 05:30:00",
+        "events": 1
+      },
+      {
+        "id": 269758,
+        "status": "future",
+        "fm": 269761,
+        "date": "2026-09-11 02:30:00",
+        "events": 1
+      },
+      {
+        "id": 269716,
+        "status": "future",
+        "fm": 269755,
+        "date": "2026-09-11 00:30:00",
+        "events": 1
+      }
+    ],
+    "watch": [
+      {
+        "id": 269813,
+        "status": "future",
+        "title": "Secas põem 1.699 municípios, 30% do país, sob risco de falta d'água",
+        "fm": 269842,
+        "date": "2026-09-11 13:00:00"
+      },
+      {
+        "id": 269837,
+        "status": "draft",
+        "title": "Esposa de Maduro pede prisão domiciliar após piora cardíaca nos EUA",
+        "fm": 0,
+        "date": "2026-09-10 23:21:58"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "source": "git",
+      "sha256": "1e9b9bf923371986a95aa20083d655da698a93ad2f5a02ebc95a4348c09d559b",
+      "bytes": 654012,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260910-043/final_source_16",
+      "read_status": "delta_CL034_integral_lido"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+      "source": "git",
+      "sha256": "6f2886208a36dd06938abf93a93dfc74d9378fe40549c45b9d078f37e53d0d24",
+      "bytes": 226076,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260910-043/final_source_30",
+      "read_status": "delta_CL034_integral_lido"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+      "source": "git",
+      "sha256": "8771f28202b3596fb4f00949a6e735a45b3575d870b0f39753f855b4ae0bb8f8",
+      "bytes": 3447,
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260910-043/final_source_60",
+      "read_status": "delta_CL034_integral_lido"
+    }
+  ],
+  "note": "Delta recebido no pull final; CL034 lida e verificada. Arquivo cl272_body.sh identificado, não executado nem declarado integralmente lido."
+}

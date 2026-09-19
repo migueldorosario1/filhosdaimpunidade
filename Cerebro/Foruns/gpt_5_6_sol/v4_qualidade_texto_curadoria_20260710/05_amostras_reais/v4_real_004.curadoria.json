@@ -1,0 +1,157 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: A Pesquisa Industrial Anual Produto 2024 do IBGE registrou receita liquida de vendas de cerca de R$ 5,3 trilhoes na industria brasileira, distribuida em aproximadamente 3,4 mil produtos e servicos industriais.. Tese escolhida: Quando os fatos auditados sobre setor produtivo brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a consequencia concreta do fato, nao apenas a declaracao publica. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: IBGE mostra uma indústria bilionária ainda presa a commodities.",
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica",
+    "evidencias_ref": [
+      "fatos_travados:IBGE",
+      "fatos_travados:setor_produtivo"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+    "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+    "tipo": "economica"
+  },
+  "contradicao_central": "a consequencia concreta do fato, nao apenas a declaracao publica",
+  "curador_modelo": "mock-curador-v4",
+  "curadoria_id": "cur_fef5149dabc9230f",
+  "editoria": "v4_politica_economia",
+  "fato_novo": "A Pesquisa Industrial Anual Produto 2024 do IBGE registrou receita liquida de vendas de cerca de R$ 5,3 trilhoes na industria brasileira, distribuida em aproximadamente 3,4 mil produtos e servicos industriais.",
+  "fatos_travados": [
+    {
+      "fato": "A Pesquisa Industrial Anual Produto 2024 do IBGE registrou receita liquida de vendas de cerca de R$ 5,3 trilhoes na industria brasileira, distribuida em aproximadamente 3,4 mil produtos e servicos industriais.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_anual_2024.md"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Oleos brutos de petroleo lideraram o ranking pelo terceiro ano seguido, com R$ 278,2 bilhoes e 5,3% do total nacional.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_anual_2024.md"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Minerios de ferro ficaram em segundo lugar, com R$ 159,5 bilhoes e 3,0%, seguidos por oleo diesel, com R$ 149,8 bilhoes e 2,8%.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_anual_2024.md"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Os dez principais produtos responderam por 20,9% da receita industrial.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_anual_2024.md"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O Sudeste concentrou 55,3% da receita, o Sul 20,5%, o Nordeste 9,8%, o Norte 7,4% e o Centro-Oeste 6,9%.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_anual_2024.md"
+      ],
+      "idx": 4,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a consequencia concreta do fato, nao apenas a declaracao publica",
+    "entidade_principal": "setor produtivo brasileiro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "38227a02c58d7ef191f9bc9b9fae4cd34fdd6aa9db040ed6454d98b139d81eea",
+  "item_id": "v4_real_004",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "IBGE",
+      "acervo_local_cafezinho"
+    ],
+    "resumo_consenso": "A leitura corrente tende a destacar o ranking de produtos industriais e a concentracao regional, sem transformar o dado em tese sobre reprimarizacao e valor agregado.",
+    "timestamp_brt": "2026-07-10T00:10:00-03:00"
+  },
+  "manifesto_curadoria": {
+    "agent": "curador",
+    "contract": "contratos/v4_curadoria_tese_v1.json",
+    "issues": [],
+    "leitura_corrente_timestamped": true,
+    "ok": true,
+    "teses_candidatas": 3
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de setor produtivo brasileiro revela a consequencia concreta do fato, nao apenas a declaracao publica.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "A Pesquisa Industrial Anual Produto 2024 do IBGE registrou receita liquida de vendas de cerca de R$ 5,3 trilhoes na industria brasileira, distribuida em aproximadamente 3,4 mil produtos e servicos industriais. Oleos brutos de petroleo lideraram o ranking pelo terceiro ano seguido, com R$ 278,2 bilhoes e 5,3% do total nacional. Minerios de ferro ficaram em segundo lugar, com R$ 159,5 bilhoes e 3,0%, seguidos por oleo diesel, com R$ 149,8 bilhoes e 2,8%. Os dez principais produtos responderam por 20,9% da receita industrial. O Sudeste concentrou 55,3% da receita, o Sul 20,5%, o Nordeste 9,8%, o Norte 7,4% e o Centro-Oeste 6,9%. O material estruturado pelo Cafezinho aponta a contradicao economica: parte relevante da industria medida em receita e sustentada por extracao, combustiveis e commodities, o que recoloca o debate sobre setor produtivo, reprimarizacao e valor agregado.",
+    "primary_entity": "setor produtivo brasileiro",
+    "source_status": "auditado_local_preliminar",
+    "titulo": "IBGE mostra uma indústria bilionária ainda presa a commodities"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+      "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando os fatos auditados sobre setor produtivo brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-10T00:10:41.160539-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: USTR, setor produtivo",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[2026-08-11 14:18:32] INICIANDO: B2-16 (top-ups pastas vivas + verificação final)
+=== TOP-UPS ===
+[2026-08-11 14:19:22] ZCodeProject top-up: rc=0
+[2026-08-11 14:20:31] Cerebro top-up: rc=6
+[2026-08-11 14:20:39] scratch top-up: rc=0
+[2026-08-11 14:20:49] agent_data top-up: rc=0
+
+=== VERIFICAÇÃO FINAL (rclone size local × B2) ===
+  /home/migueldorosario/ZCodeProject:
+    local: Total size: 771.491 MiB (808967161 Byte)
+    B2:    Total size: 771.491 MiB (808967161 Byte)
+  /home/migueldorosario/Downloads/Antigravity Google/Cerebro:
+    local: Total size: 257.790 MiB (270312461 Byte)
+    B2:    Total size: 257.675 MiB (270191361 Byte)
+  /home/migueldorosario/Downloads/Antigravity Google/scratch:
+    local: Total size: 509.891 MiB (534659085 Byte)
+    B2:    Total size: 509.891 MiB (534659085 Byte)
+  /home/migueldorosario/Downloads/Antigravity Google/agent_data:
+    local: Total size: 1.942 GiB (2084803570 Byte)
+    B2:    Total size: 1.942 GiB (2084803570 Byte)
+[2026-08-11 14:21:05] TERMINADO: B2-16 (RC_TOTAL=0)
+EXIT=0

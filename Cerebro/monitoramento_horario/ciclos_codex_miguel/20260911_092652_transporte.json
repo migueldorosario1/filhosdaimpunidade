@@ -1,0 +1,38 @@
+{
+  "reference": "XM-20260911-018",
+  "closed_at": "2026-09-11T09:28:47.198937-03:00",
+  "rounds_executed": 1,
+  "main_commit": "9f0636b87fe136ceeac5be8c2777e9bfb902b452",
+  "origin_remote_commit": "9f0636b87fe136ceeac5be8c2777e9bfb902b452",
+  "origin_delivery_verified": true,
+  "origin_verification": {
+    "code": 0,
+    "stdout": "9f0636b87fe136ceeac5be8c2777e9bfb902b452\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "files_sha256": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_092652_ronda.md": "ee599ff343e4c88832506dc1671e13b3b4a6587336d66cd4afd9cbae40404bd4",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_092652_editorial.md": "df8f72079b2298460d85890fbdb9eee166badc4ede4f7d8150cf550281afd8f0",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_092652_evidencias.json": "74bd62bb0d64aa81f5e249a3bee6fb89040d46966c6870a534622bf46c26afe6",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_092652_verificacao.json": "01cd45c9ea39e12dfe596339d120a9b9ce05163f012bbc96bfdff22dcf457aa7",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_092652_e5_assinatura.md": "89bbeaaa7f082438031fda1e49a8b1f307e80f0a64f4ebbe3a381412fc292b7b",
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": "58c553683eae9df714ec30ea6eb856f25c63175df227365461bd28f874dae22a",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "e7e3d498f5bff67119663f24ce2352189582c10d48d57208f72b50527109d9f6",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "dc8aa826d83ce3a30331befffec3b04ab1ead55c94b3c92b66bad7846fe9d4bc",
+    "cerebro/Foruns/canal_trindade.md": "1fa3a9abd8d7a3e23b80b2fe00d9624467eff128f084fd4860317802335b113d",
+    "cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md": "b8ec86f59e2af05767272af1c03318552106f08444722239a0e767e4ab8ca369"
+  },
+  "nyc_git_delivery_verified": false,
+  "nyc_git_status": "HOLD: HEAD a5ca4f801 sem ancestralidade local; sem push/rebase/merge/reset/force. Entrega específica do fórum V4.1 foi verificada separadamente.",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "active_editorial_reservations_this_round": 0,
+  "pending": [
+    "CL: contraprova 269792 e consolidação E5 v2/sucessão",
+    "propagação de cache NYC do post 269882",
+    "alt da mídia 269883 após conferir compartilhamento",
+    "BUG-208 com us65/ZM",
+    "integridade dos controles e Git NYC",
+    "fila editorial 108 IDs e deltas posteriores ao corte"
+  ],
+  "note": "O snapshot evidencias.json foi produzido antes do transporte; este fechamento acrescenta a prova final sem reescrever esse snapshot."
+}

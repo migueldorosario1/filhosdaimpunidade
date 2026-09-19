@@ -1,0 +1,127 @@
+{
+  "ref": "XM-20260910-029",
+  "commit": "8d2bf05cc322e4969bba2168ebfee7df173b0c5a",
+  "started_at": "2026-09-10T15:24:49.918495-03:00",
+  "attempts": [
+    {
+      "command": [
+        "git",
+        "push",
+        "origin",
+        "main"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [rejected]            main -> main (fetch first)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "observed_at": "2026-09-10T15:24:52.215220-03:00"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "rc": 0,
+      "stdout": "d5d0b260470c60d29dd9779a56d94a60d0f48df1\trefs/heads/main\n",
+      "stderr": "",
+      "observed_at": "2026-09-10T15:24:54.190476-03:00"
+    },
+    {
+      "command": [
+        "git",
+        "push",
+        "nyc",
+        "main"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            main -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "observed_at": "2026-09-10T15:24:56.935135-03:00"
+    },
+    {
+      "command": [
+        "git",
+        "ls-remote",
+        "nyc",
+        "refs/heads/main"
+      ],
+      "rc": 0,
+      "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+      "observed_at": "2026-09-10T15:24:59.160954-03:00"
+    }
+  ],
+  "finished_at": "2026-09-10T15:26:40.838037-03:00",
+  "rounds_executed": 1,
+  "result": "HOLD_TRANSPORTE_GIT; ENTREGA_REMOTA_NAO_CONFIRMADA",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "followup_pull": {
+    "command": [
+      "git",
+      "pull",
+      "--ff-only",
+      "origin",
+      "main"
+    ],
+    "rc": 128,
+    "stderr": "fatal: Not possible to fast-forward, aborting."
+  },
+  "verification": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "matches_committed_blob": true,
+      "sha256": "341a95f687868d2c8a14abb12a42b653d0455479d6d3d31b5c31c5ae8fafc586",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "matches_committed_blob": true,
+      "sha256": "4bb4bf6320686b7d9d199670bba699af5050545135c1bf6c090d758f7b6efdf6",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "matches_committed_blob": true,
+      "sha256": "5f456a1ebb73cf276898eac10358ab5576e8775557b115d7ec92e8a528f14e6a",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_152425_ronda.md",
+      "matches_committed_blob": true,
+      "sha256": "70c83462ee1a5bb56320cbd9143266e0823fb7b259da7ee816c1429be111d362",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_152425_evidencias.json",
+      "matches_committed_blob": true,
+      "sha256": "3d54ba0d83f723f17c8681dea347ee482936e38fb40ae74311f7b274a6eb95aa",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_152425_integridade.json",
+      "matches_committed_blob": true,
+      "sha256": "8a0f4b966bba10347b2dca36f2f4dc485272a6909e32a3af6aa38d9f2c7bce7f",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_152425_editorial.md",
+      "matches_committed_blob": true,
+      "sha256": "bb34802e29873520bed3ff4be20904e60dbdbb12167f5c5ff9b96ea9aa7b586e",
+      "utf8_no_bom": true
+    }
+  ],
+  "origin_head": "d5d0b260470c60d29dd9779a56d94a60d0f48df1",
+  "nyc_head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+  "prohibited_actions_executed": [],
+  "note": "Nenhum merge/rebase/reset/force push nem novo executor; documentos e appends locais, entrega pendente; nenhuma cura ou ACK remoto fabricado.",
+  "late_remote_delta": {
+    "commit": "d5d0b260470c60d29dd9779a56d94a60d0f48df1",
+    "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+    "lines_added": 5,
+    "read_status": "delta_lido_em_origin_sem_merge",
+    "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260910-029/late_reviewers_delta.txt",
+    "sha256": "c28a3a4aa46d61f10d3c042f291de15846f25e353a9fc861b98b5ce6ae2a486c",
+    "findings": "R2 CORREÇÕES 269758/269716/269630/269633/269636. CL/CM conferir em especial o colchão 269758/269716; metadados vivos desses cinco não auditados."
+  }
+}

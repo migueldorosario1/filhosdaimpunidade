@@ -1,0 +1,58 @@
+{
+  "_doc": "Politica operacional V4: rascunho primeiro, relatorio de pendencias e autocura.",
+  "_version": "v1",
+  "_status": "fase_5_labs",
+  "_updated": "2026-07-09",
+  "principios": {
+    "rascunho_primeiro": true,
+    "rascunho_primeiro_padrao_em_dry_run_laboratorio": true,
+    "nao_perder_material": true,
+    "pendencias_de_rascunho_viram_warnings": true,
+    "relatorio_de_pendencias_obrigatorio": true,
+    "cura_e_autocura_preferidas_a_bloqueio": true,
+    "editor_humano_revisa_rascunhos": true
+  },
+  "escopo_atual": {
+    "dry_run_laboratorio": "pendencias_viram_warnings",
+    "wordpress_real_draft_pending_publish": "gates_duros_ate_ratificacao_explicita_do_forum",
+    "motivo": "Draft real no WordPress pode virar publicacao por acao humana no wp-admin; por isso nao herda automaticamente a tolerancia do dry-run."
+  },
+  "hard_blocks_permitidos": [
+    "publicacao_final",
+    "promocao_para_root_v4",
+    "acao_destrutiva",
+    "segredo_ou_credencial_exposta",
+    "credencial_necessaria_ausente_para_acao_de_rede",
+    "risco_juridico_ou_operacional_irreversivel"
+  ],
+  "politicas": {
+    "sem_midia_auditada": {
+      "rascunho": "seguir_sem_midia_com_warning",
+      "wordpress_real": "exigir_midia_ou_override_editorial_registrado",
+      "publicacao_final": "exigir_midia_ou_override_editorial_registrado"
+    },
+    "collection_request_aberto": {
+      "rascunho": "seguir_com_relatorio_de_pendencia",
+      "wordpress_real": "exigir_resolucao_ou_decisao_editorial_explicita",
+      "publicacao_final": "exigir_resolucao_ou_decisao_editorial_explicita",
+      "promocao": "manter_pendente_de_cura"
+    },
+    "curadoria_id_ausente": {
+      "rascunho_dry_run": "registrar_warning",
+      "wordpress_real": "exigir_rastreabilidade",
+      "publicacao_final": "exigir_rastreabilidade"
+    }
+  },
+  "vocabulario": {
+    "rascunho": "material de trabalho revisavel pelo editor",
+    "warning": "pendencia registrada que nao impede rascunho",
+    "pendente_de_cura": "estado que pede acao humana ou autocura permitida antes de promocao/publicacao final",
+    "bloqueio": "termo reservado para risco irreversivel ou promocao/publicacao final sem requisito minimo"
+  },
+  "cura_permitida": {
+    "ratificacao_editorial": "humana",
+    "collection_request_publicacao_real": "humana",
+    "midia_pendente": "automatica_ou_humana",
+    "formatacao_ou_encoding": "automatica_ou_humana"
+  }
+}

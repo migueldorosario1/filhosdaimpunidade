@@ -1,0 +1,21 @@
+# Histórico — ponta tripla
+
+- 2026-08-20 19:51 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266798/266796 publish limpos; 266806 CE=1 persiste (título 18c); 266817 draft CE=1; 266739 ESC=1; 0 ping novo.
+- 2026-08-20 18:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; PING 266806 no ar CE=1 (mod 18:23); 266791 publish 18:03 limpo; 266804 fm=266808; 266739 ESC=1 persiste; 1 ping.
+- 2026-08-20 17:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266804 p/ Laura; 266796 agora fm=266801; 266806/266785 no ar; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 16:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266796 p/ Laura; 266791 agora fm=266794; 266776 publish 16:13 limpo; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 15:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266791 p/ Laura (media 266792 sem thumbnail); 266751 publish 15:06 fm=266750; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 14:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266752 publish 14:09 limpo; 266776 agora fm=266777; 266739 ESC=1 persiste (sem re-ping); GL-016 dest TODOS sem ACK; 0 ping novo.
+- 2026-08-20 13:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0 future=0; pending fm=0=266776 p/ Laura; 266751 retítulo TIT=76; 266739 ESC=1 persiste (sem re-ping); 0 ping novo.
+- 2026-08-20 12:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266747 publish 12:09 limpo; 266771 pending fm=266773; 266739 ESC=1 persiste no ar (sem re-ping); AL-007 dest TODOS sem ACK; 0 ping novo.
+- 2026-08-20 11:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; PING 266739 publish 11:29 ESC=1 (17× &lt;p); novos pending 266752/266751 c/ capa; no ar 266739/266735; CL-011 dest AGY sem ACK.
+- 2026-08-20 10:51 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266742 agora fm=266748; 266739 ESC=1 ainda pending; no ar 266735/266733; CL-011 dest AGY sem ACK; 0 ping.
+- 2026-08-20 09:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266742 pending fm=0 p/ Laura; 266739 ESC=1 pending (ticket GL); no ar 266727/266728; ACK CL-010; 0 ping.
+- 2026-08-20 08:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266733 agora fm=266738; no ar 266722/266721; 266726 TIT=114 pending; 0 ping.
+- 2026-08-20 07:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266733 pending fm=0 p/ Laura; no ar 266721 07:49; 266726 TIT=114 pending; 0 ping.
+- 2026-08-20 06:52 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266721 agora fm=266723; no ar ainda 266713; 266726 TIT=114 pending; 0 ping.
+- 2026-08-20 05:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266721 pending fm=0 p/ Laura; 266717 agora fm=266720; no ar 266713; CL-009 lido sem ACK; 0 ping.
+- 2026-08-20 04:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266717 pending fm=0 p/ Laura; no ar 266710; 266697 (5780) publish 04:45; CL-008 lido sem ACK; 0 ping.
+- 2026-08-20 03:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; no ar 266709/704/510/404; 266713 fm=266716; GL-005 lido sem ACK; 0 ping.
+- 2026-08-20 02:50 BRT — Grok observador: 0 capas; V4 future=0 fm=0=0; 266709 agora fm=266711; no ar 266699/266189; GL-004 lido sem ACK; 0 ping.
+- 2026-08-20 01:50 BRT — Grok observador: 0 capas; future=0 fm=0=0; 266709 pending fm=0 p/ Laura; no ar 266633/689/691; ACK GL-003; 0 ping.

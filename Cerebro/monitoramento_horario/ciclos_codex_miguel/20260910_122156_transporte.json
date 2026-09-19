@@ -1,0 +1,81 @@
+{
+  "commit": "97014780674e714f5387f20c69613c88ecd9fe24",
+  "started_at": "2026-09-10T12:22:09.670087-03:00",
+  "routes": {
+    "origin": {
+      "push_rc": 1,
+      "push_output": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [remote rejected]     97014780674e714f5387f20c69613c88ecd9fe24 -> main (cannot lock ref 'refs/heads/main': is at 70c3c85c0d010ea9352985a9f29ee7a47c54a5ac but expected 47dd9db3bb3f6938bb5dd22bc6248ecf46389a2d)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\n",
+      "ls_remote_rc": 0,
+      "remote_head": "70c3c85c0d010ea9352985a9f29ee7a47c54a5ac",
+      "commit_equal": false
+    },
+    "nyc": {
+      "push_rc": 1,
+      "push_output": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            97014780674e714f5387f20c69613c88ecd9fe24 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "ls_remote_rc": 0,
+      "remote_head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "commit_equal": false
+    }
+  },
+  "completed_at": "2026-09-10T12:22:25.187959-03:00",
+  "recovery_at": "2026-09-10T12:24:48.919544-03:00",
+  "result": "PRIMEIRA_ENTREGA_REJEITADA; RECUPERACAO_DOCUMENTAL_PROPRIA",
+  "non_ff_pull": {
+    "exit_code": 128,
+    "remote_head": "dd6e71ebdb0168061173e4089be7e4b5fd552801",
+    "local_head": "97014780674e714f5387f20c69613c88ecd9fe24"
+  },
+  "external_reset_evidence": {
+    "reflog": "94e355fa3ccad8286f6373386a5b77d32491dcab pull --ff-only origin main: Fast-forward\n38c9af80d576948474dc81fbf9036e4003357899 commit: ZM: email ao Gabriel enviado (conteudo comercial = PAGINA, nao post — ordem do Miguel); item do forum de vazamento cumprido; ZM-20260910-008\ndd6e71ebdb0168061173e4089be7e4b5fd552801 reset: moving to origin/main\n97014780674e714f5387f20c69613c88ecd9fe24 commit: XM-20260910-025 verifica nova perda na ponte e ressalva BUG-193; ronda unica em hold\n47dd9db3bb3f6938bb5dd22bc6248ecf46389a2d commit: ZM: 269729 post->PAGINA (ordem direta do Miguel; porta HUMAN_OVERRIDE do proprio plugin de protecao) — ZM-20260910-007\n23347df7714324b8fd27b11704ba70e9426e2034 reset: moving to origin/main",
+    "head_after_external_reset_and_next_commit": "94e355fa3ccad8286f6373386a5b77d32491dcab",
+    "actor": "não identificado pela evidência de reflog",
+    "performed_by_this_round": false
+  },
+  "own_recovery": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_evidencias.json",
+      "source_commit": "97014780674e714f5387f20c69613c88ecd9fe24",
+      "sha256": "b33877bf9c89fb675c3ca435e71ec32933592d92de9699441f6d04421fcb0ac6",
+      "byte_identical_before_closure": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_integridade.json",
+      "source_commit": "97014780674e714f5387f20c69613c88ecd9fe24",
+      "sha256": "3d5242481fde48ff236f5fa2c1c0bd8a53808c0b3a87f6cf136e873f4ed346bc",
+      "byte_identical_before_closure": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_122156_ronda.md",
+      "source_commit": "97014780674e714f5387f20c69613c88ecd9fe24",
+      "sha256": "633e2cb24cd2bfa4941fde59f59242300a1043c57e4798bef64d1635444e34bb",
+      "byte_identical_before_closure": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "restored_own_suffix_sha256": "507d6ad621ae95f4fdc34440a55013fed92f9f56bbc9bda214bcade51ef58832",
+      "preserved_current_prefix_sha256": "b8fb7e003fbd057668608d3e3c1e3cbe26d6518c5392c594c3a5bdbf7394d83d",
+      "preserved_current_prefix_bytes": 1339952
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "restored_own_suffix_sha256": "cdf397110377581d4cec6ca80f113ea582928f67daae4e779194e24de061c00e",
+      "preserved_current_prefix_sha256": "e3a6b3cfd10412865ecd952f13616072c8a253476ff45e24e09c5760fe3f94d6",
+      "preserved_current_prefix_bytes": 126712
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "restored_own_suffix_sha256": "869a3e9c3677b3c7314fc31209c5283d4a4ff54778af674aa0f1425637441e8d",
+      "preserved_current_prefix_sha256": "6518a46191c86bbb159dceef0012a06a7b162d092ba3bbbebd7fedca763a6361",
+      "preserved_current_prefix_bytes": 117698
+    }
+  ],
+  "preexisting_untracked_verified": 221,
+  "rounds_executed": 1,
+  "closure_deltas_read": [
+    "CL-20260910-016 + estado/ledger CL",
+    "ZM-20260910-008",
+    "R2 269735/269630/269633/269636; sem novo parecer 269727"
+  ],
+  "prohibited_recovery_actions": [],
+  "recovery_delivery": "PENDENTE"
+}

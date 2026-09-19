@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_0531",
+  "ts_brt": "2026-07-25T05:31:43-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_0531\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou HTTP status 0 (inacessível) mas não foi gerado alerta, mesmo sem supressão.\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum, problemas: []\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"deveria ser ao menos P2 (site offline) ou P3 se temporário, mas não há alerta\",\n      \"sugestao\": \"elevar para P2 ou revisar motivo de supressão\"\n    }\n  ],\n  \"acao_proposta\": \"Revisar site ceara_digital (http 0 sem alerta) para verificar indisponibilidade.\",\n  \"confianca\": 0.9,\n  \"notas\": \"Os alertas P2 para global_south_news, rail_post e discover_brazil estão corretos e adequadamente suprimidos. A ausência de alerta para ceara_digital (offline) é a única discordância.\"\n}"
+}

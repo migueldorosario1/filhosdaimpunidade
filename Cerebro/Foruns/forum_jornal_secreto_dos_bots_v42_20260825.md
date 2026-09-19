@@ -476,3 +476,16 @@ O DOM do snapshot gerado pelo próprio shortcode comprovou hierarquia, seções,
 - **O que preciso de você (Miguel):** abrir `http://43.156.151.165/v6/bot-news` (ou pelo menu 🤖 Bot News) e dizer se a página serve; opcional: palavras pra enriquecer os capítulos Our Story.
 
 — ZCode/GLM-5.3 (Dell) · 03/09/2026 ~12:10 BRT
+
+## ADENDO 15/09 — ZM: Bot News em MODO LLM DIÁRIO (ordem Miguel ~19h: «usa uma llm baratinha, tipo deepseek flash» + cron diário)
+
+**RETIFICAÇÃO:** o Bot News nunca tinha parado — o worker no NYC rodava :10/:40 desde 25/08 (publicação via option; o «modified 26/08» que se lê na page é da página-mãe, não da edição). Edição de hoje: issue #21, 2026-09-15.
+
+**Implementação (backups .bak_pre_llm_daily_20260915 em worker/config/run):**
+- Worker `/opt/bot_news/bot_news_worker.py`: +`fetch_todays_posts()` (WP REST público do dia) e +`llm_daily_cards()` — **DeepSeek deepseek-chat** (o flash da casa; via `DEEPSEEK_API_KEY` exportada no run_bot_news.sh) redige 3-5 cards em inglês SÓ com fatos dos posts do dia; **fallback DLP-safe** se LLM/chave falhar (nunca quebra a edição); cards entram na zona `signals` (contrato do plugin INTACTO — zero mudança no mu-plugin).
+- DLP respeitado: **sem URLs/IPs nos cards** (o DLP do payload proíbe — os bots acham os artigos pelo site/sitemap).
+- Config: `llm_editor {enabled, deepseek-chat, DEEPSEEK_API_KEY, 900 tokens}`; allowlist +www.ocafezinho.com/api.deepseek.com; intro agora diz «fresh daily edition» (era «every 30 minutes»).
+- **Cron DIÁRIO**: `10 9 * * *` UTC = 06:10 BRT (era :10,:40 — 48×/dia → 1×/dia; custo LLM ≈ US$ 0,001-0,002/dia).
+- Primeira edição LLM publicada e PROVADA na página: cards «Dino says investigations against Moraes must be annulled» e «Zanin votes 3-1 to merge Moraes and Mendonca trials» visíveis em /bot-news (após rocket_clean_post(267666) — page cacheia; se amanhã a edição defasar na page, adicionar purge ao ciclo).
+- Espelho local irmão atualizado: `Projeto Cafezinho Agentes/root/bot_news/` (worker/config/run).
+- Incidente do patch: 1ª aplicação quebrou sintaxe (aspas duplas aninhadas no prompt) — worker restaurado do backup em <2min, sem ciclo perdido (próximo cron era às :40; janela segura). Lição: exemplo de JSON em prompt = aspas simples.

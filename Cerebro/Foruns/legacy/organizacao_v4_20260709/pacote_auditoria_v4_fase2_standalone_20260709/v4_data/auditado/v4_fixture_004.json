@@ -1,0 +1,14 @@
+{
+  "conteudo": "Material auditado minimo para validar telemetria V4 corrigida com lock, fsync, schema versionado, custo estimado e recibo JSONL obrigatorio.",
+  "created_at": "2026-07-08T17:06:01.353042+00:00",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "fonte": "fixture_local",
+  "item_id": "v4_fixture_004",
+  "manifesto_auditoria": {
+    "fonte_validada": true,
+    "qualidade_minima": true,
+    "risco_juridico_revisado": true
+  },
+  "status": "auditado_fixture",
+  "titulo": "Fixture V4 valida telemetria corrigida"
+}

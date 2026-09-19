@@ -1,0 +1,156 @@
+{
+  "schema_version": "v1",
+  "status": "multi_case_dry_run_executado",
+  "items": [
+    {
+      "item": "v4_real_002.result",
+      "ok": true,
+      "steps": [
+        {
+          "step": "curadoria_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/curadoria/v4_real_002.curadoria.json"
+        },
+        {
+          "step": "produzir_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_002.producao.json"
+        },
+        {
+          "step": "revisar_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_002.revisao.json"
+        },
+        {
+          "step": "fact_check_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_002.fact_check.json"
+        },
+        {
+          "step": "auditar_final_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/auditado/v4_real_002.auditado_final.json"
+        },
+        {
+          "step": "publicar_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [
+            "imagem_destacada_pendente:sem_midia_auditada:Jason Miller"
+          ],
+          "target_path": "dados/publicado/v4_real_002.publicado_dry_run.json"
+        }
+      ]
+    },
+    {
+      "item": "v4_real_003.result",
+      "ok": true,
+      "steps": [
+        {
+          "step": "curadoria_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/curadoria/v4_real_003.curadoria.json"
+        },
+        {
+          "step": "produzir_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_003.producao.json"
+        },
+        {
+          "step": "revisar_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_003.revisao.json"
+        },
+        {
+          "step": "fact_check_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_003.fact_check.json"
+        },
+        {
+          "step": "auditar_final_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/auditado/v4_real_003.auditado_final.json"
+        },
+        {
+          "step": "publicar_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [
+            "imagem_destacada_pendente:sem_midia_auditada:indústria brasileira"
+          ],
+          "target_path": "dados/publicado/v4_real_003.publicado_dry_run.json"
+        }
+      ]
+    },
+    {
+      "item": "v4_real_004.result",
+      "ok": true,
+      "steps": [
+        {
+          "step": "curadoria_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/curadoria/v4_real_004.curadoria.json"
+        },
+        {
+          "step": "produzir_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_004.producao.json"
+        },
+        {
+          "step": "revisar_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_004.revisao.json"
+        },
+        {
+          "step": "fact_check_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/producao/v4_real_004.fact_check.json"
+        },
+        {
+          "step": "auditar_final_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [],
+          "target_path": "dados/auditado/v4_real_004.auditado_final.json"
+        },
+        {
+          "step": "publicar_dry_run",
+          "mode": "created",
+          "issues": [],
+          "warnings": [
+            "imagem_destacada_pendente:sem_midia_auditada:setor produtivo brasileiro"
+          ],
+          "target_path": "dados/publicado/v4_real_004.publicado_dry_run.json"
+        }
+      ]
+    }
+  ]
+}

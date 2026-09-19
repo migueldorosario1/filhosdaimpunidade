@@ -1,0 +1,51 @@
+{
+  "ref": "XM-20260910-019",
+  "content_commit": "f9c4391edcb10253fb17cc56b4bdc1463139ff01",
+  "github_push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   2f21551fb..f9c4391ed  main -> main\n",
+    "timestamp_brt": "2026-09-10T09:22:03.247090-03:00"
+  },
+  "github_remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "f9c4391edcb10253fb17cc56b4bdc1463139ff01\trefs/heads/main\n",
+    "stderr": "",
+    "timestamp_brt": "2026-09-10T09:22:05.006521-03:00"
+  },
+  "github_delivery_confirmed": true,
+  "nyc": "HOLD_NON_FF",
+  "gdrive": "NAO_TESTADO",
+  "tencent_reserva": "NAO_TESTADO",
+  "closed_at": "2026-09-10T09:23:33.596493-03:00",
+  "append_prefixes_verified": true,
+  "preexisting_untracked_preserved": 221,
+  "closing_pull_exit_code": 0,
+  "rounds_executed": 1,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "late_deltas": [
+    {
+      "commit": "b61013241",
+      "path": "cerebro/Foruns/youtube/canal_ds_youtube.md",
+      "description": "CHECK horário 09:22, uma linha; nenhuma ordem XM."
+    },
+    {
+      "commit": "29c7db132ee1955b07ed5331bf4ddb3bb2016e59",
+      "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "description": "Quatro pareceres R2 novos: 269713/269705/269719/269716; repetição de categoria numérica relatada, demais objeções de título preservadas; sem diagnóstico primário novo."
+    }
+  ],
+  "closing_read_cut": "29c7db132ee1955b07ed5331bf4ddb3bb2016e59"
+}

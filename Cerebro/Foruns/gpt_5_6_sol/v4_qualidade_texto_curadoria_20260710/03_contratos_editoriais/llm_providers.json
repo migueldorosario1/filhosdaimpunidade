@@ -1,0 +1,238 @@
+{
+  "_doc": "Registry de providers LLM. Objetivo: adicionar providers/modelos por JSON, mantendo codigo apenas para engines de execucao.",
+  "_updated": "2026-07-01 17:40 BRT — Gemini 3.5 Flash adicionado ao tier luxo/frontier por ordem Miguel; 2.5 Flash permanece economico.",
+  "providers": {
+    "anthropic": {
+      "label": "Anthropic/Claude",
+      "engine": "anthropic_native",
+      "env_keys": [
+        "ANTHROPIC_API_KEY",
+        "CLAUDE_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "claude-opus-4-8",
+          "claude-sonnet-4-6"
+        ],
+        "economico": [
+          "claude-sonnet-4-6"
+        ]
+      },
+      "aliases": [
+        "claude"
+      ],
+      "enabled": true,
+      "reactivated_reason": "2026-06-24: super_luxo V3 autorizado por Miguel; Opus 4.8 primeiro, Sonnet 4.6 fallback."
+    },
+    "openai": {
+      "label": "OpenAI/GPT",
+      "engine": "openai_native",
+      "env_keys": [
+        "OPENAI_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "gpt-5.5",
+          "gpt-5.4",
+          "gpt-5"
+        ],
+        "economico": [
+          "gpt-4o-mini",
+          "gpt-4o"
+        ]
+      },
+      "aliases": [
+        "gpt"
+      ],
+      "enabled": true
+    },
+    "gemini": {
+      "label": "Google Gemini",
+      "engine": "gemini_native",
+      "env_keys": [
+        "GEMINI_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "gemini-3.5-flash",
+          "gemini-2.5-pro"
+        ],
+        "economico": [
+          "gemini-2.5-flash",
+          "gemini-flash-latest",
+          "gemini-2.0-flash"
+        ]
+      },
+      "aliases": [
+        "google"
+      ],
+      "enabled": true
+    },
+    "xai": {
+      "label": "xAI/Grok",
+      "engine": "openai_compatible",
+      "base_url": "https://api.x.ai/v1",
+      "env_keys": [
+        "XAI_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "grok-3",
+          "grok-2-1212"
+        ],
+        "economico": [
+          "grok-4-1-fast-non-reasoning",
+          "grok-3"
+        ]
+      },
+      "aliases": [
+        "grok"
+      ],
+      "enabled": false,
+      "disabled_reason": "2026-05-20 Patch B: créditos zerados (HTTP 403 19/05 21:41), roteador perde ciclos em hard fallback."
+    },
+    "mistral": {
+      "label": "Mistral",
+      "engine": "openai_compatible",
+      "base_url": "https://api.mistral.ai/v1",
+      "env_keys": [
+        "MISTRAL_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "mistral-large-latest"
+        ],
+        "economico": [
+          "mistral-small-latest",
+          "open-mistral-nemo-2407"
+        ]
+      },
+      "aliases": [],
+      "enabled": true
+    },
+    "groq": {
+      "label": "Groq",
+      "engine": "openai_compatible",
+      "base_url": "https://api.groq.com/openai/v1",
+      "env_keys": [
+        "GROQ_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "llama-3.3-70b-versatile",
+          "llama-3.1-8b-instant"
+        ],
+        "economico": [
+          "llama-3.1-8b-instant"
+        ]
+      },
+      "aliases": [],
+      "enabled": true
+    },
+    "deepseek": {
+      "label": "DeepSeek",
+      "engine": "openai_compatible",
+      "base_url": "https://api.deepseek.com",
+      "env_keys": [
+        "DEEPSEEK_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "deepseek-v4-pro"
+        ],
+        "economico": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "aliases": [],
+      "enabled": true
+    },
+    "moonshot": {
+      "label": "Moonshot/Kimi",
+      "engine": "openai_compatible",
+      "base_url": "https://api.moonshot.ai/v1",
+      "env_keys": [
+        "MOONSHOT_API_KEY",
+        "KIMI_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "moonshot-v1-32k",
+          "moonshot-v1-8k"
+        ],
+        "economico": [
+          "moonshot-v1-8k"
+        ]
+      },
+      "aliases": [
+        "kimi"
+      ],
+      "enabled": true
+    },
+    "alibaba": {
+      "label": "Alibaba/Qwen",
+      "engine": "openai_compatible",
+      "base_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+      "env_keys": [
+        "QWEN_API_KEY",
+        "DASHSCOPE_API_KEY",
+        "ALIBABA_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "qwen-max"
+        ],
+        "economico": [
+          "qwen-plus"
+        ]
+      },
+      "aliases": [
+        "qwen"
+      ],
+      "enabled": true
+    },
+    "zhipu": {
+      "label": "Zhipu/GLM",
+      "engine": "openai_compatible",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "env_keys": [
+        "ZHIPU_API_KEY",
+        "GLM_API_KEY",
+        "BIGMODEL_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "glm-4-plus"
+        ],
+        "economico": [
+          "glm-4-plus"
+        ]
+      },
+      "aliases": [
+        "glm"
+      ],
+      "enabled": true
+    },
+    "perplexity": {
+      "label": "Perplexity/Sonar",
+      "engine": "openai_compatible",
+      "base_url": "https://api.perplexity.ai",
+      "env_keys": [
+        "PERPLEXITY_API_KEY",
+        "PPLX_API_KEY"
+      ],
+      "fallback_models": {
+        "luxo": [
+          "sonar-pro"
+        ],
+        "economico": [
+          "sonar"
+        ]
+      },
+      "aliases": [
+        "sonar"
+      ],
+      "enabled": true
+    }
+  }
+}

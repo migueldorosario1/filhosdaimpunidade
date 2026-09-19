@@ -1,0 +1,72 @@
+{
+  "ref": "XM-20260910-003",
+  "timestamp_brt": "2026-09-10T01:22:43.921224-03:00",
+  "commit": "a47ac95fe431651a38f3793a9109672e6b7d6c64",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_012237_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_012237_evidencias.json"
+  ],
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_012237_ronda.md",
+  "evidence": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_012237_evidencias.json",
+  "evidence_sha256": "6f6174fce3c26bd293ebe381eeb2e06dedf5f62d944c3919b8e4ba84a18eea32",
+  "transport": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_012237_transporte.json",
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   7e02b792c..a47ac95fe  main -> main\n"
+  },
+  "origin_verification": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "a47ac95fe431651a38f3793a9109672e6b7d6c64\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "nyc": {
+    "probe": {
+      "command": [
+        "git",
+        "ls-remote",
+        "nyc",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n"
+    },
+    "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_of_head_rc": 1,
+    "action": "HOLD_NON_FF; sem push divergente",
+    "timestamp": "2026-09-10T01:20:28.631174-03:00"
+  },
+  "checks": {
+    "append_only_prefix_verified": true,
+    "utf8_without_bom": true,
+    "git_diff_check_exit_code": 0,
+    "selective_staging_verified": true,
+    "preexisting_untracked_preserved": true,
+    "rounds": 1
+  },
+  "total_distinct_round_files": 6,
+  "close_timestamp_brt": "2026-09-10T01:23:03.081614-03:00",
+  "close_base": "a47ac95fe431651a38f3793a9109672e6b7d6c64",
+  "closing_pull": "Already up to date.",
+  "closing_files": [
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_012237_transporte.json"
+  ],
+  "closing_note": "Fecho documental da mesma ronda XM-20260910-003; nao inicia outra ronda. Prova de entrega do commit operacional acima; este registro segue em commit proprio com caminho seletivo."
+}

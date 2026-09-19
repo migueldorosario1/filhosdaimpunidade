@@ -1,0 +1,57 @@
+{
+  "conteudo": "Material auditado minimo para validar estimativa de tokens, custo versionado, ranking qualidade-custo e recibo JSONL obrigatorio.",
+  "created_at": "2026-07-08T17:22:03.724753+00:00",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "idempotency_key": "d4b46e875751cd4d22da8e0a09a4994433388f4a75336e77afa844d7bf503bf5",
+  "item_id": "v4_fixture_005",
+  "llm_response": {
+    "content": "[MOCK V4/gemini/gemini-3.5-flash/v4_ciencia_tecnologia_ia/redacao] Fixture V4 valida custo estimado. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar estimativa de tokens, custo versionado, ranking qualidade-custo e recibo JSONL obrigatorio.",
+    "cost_usd_estimated": 2.378e-05,
+    "duration_ms_llm": 0,
+    "error_class": null,
+    "mode": "mock",
+    "model": "gemini-3.5-flash",
+    "pricing_table_version": "2026-07-08-local-ratings",
+    "prompt_hash": "f947e5d1800bcf1abe6cae7eb9a9fb10519c5afcf27426b649557ae4a9bed59e",
+    "provider": "gemini",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo"
+    ],
+    "selected_tier": "gemini_luxo",
+    "selection_reason": "selecionado por rotate_valid_by_idempotency; exclude_provider=None",
+    "selection_strategy": "rotate_valid_by_idempotency",
+    "tokens_in": 33,
+    "tokens_out": 71
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "2ee31aaa60af233d6611dd8389c5665087caca4c9e069aed8a4a1b4b3f98d98e",
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "from": "auditado",
+    "imagem_destacada_validada": true,
+    "manifesto_auditoria_final": true,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "source_status": "auditado_fixture",
+  "status": "produzir_dry_run",
+  "texto_dry_run": "[MOCK V4/gemini/gemini-3.5-flash/v4_ciencia_tecnologia_ia/redacao] Fixture V4 valida custo estimado. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar estimativa de tokens, custo versionado, ranking qualidade-custo e recibo JSONL obrigatorio.",
+  "titulo": "Fixture V4 valida custo estimado"
+}

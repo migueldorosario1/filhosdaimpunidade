@@ -1,0 +1,535 @@
+{
+  "ref": "XM-20260909-001",
+  "timestamp": "2026-09-09T10:46:25.139448-03:00",
+  "head": "d050b117ee9a0f46c8c8b4c89abe24c1f0ad636e",
+  "resume": {
+    "ref": "XM-RETOMADA-LOOP-MIGUEL-20260909",
+    "timestamp": "2026-09-09T10:42:44.528096-03:00",
+    "status": "resumed",
+    "schedule": "17,47 * * * *",
+    "entry": "17,47 * * * * /home/migueldorosario/cerebro-miguel/scripts/run_loop_codex_miguel.sh # LOOP_CODEX_MIGUEL",
+    "only_one_line_changed": true,
+    "before_sha256": "4cda914666bf4f121f9782e958f1bd91aab13dc8cdbd7f2e3c57d14cb17f74f8",
+    "after_sha256": "45171e012c8c4b45538de70c67b18b4b1572d052bf1f7fa877154ca48e404e8b"
+  },
+  "http_checks": [
+    {
+      "name": "ocafezinho.com_today",
+      "url": "https://ocafezinho.com/wp-json/wp/v2/posts?_fields=id%2Cdate%2Cstatus%2Cauthor%2Cfeatured_media%2Ccategories%2Ctitle%2Clink&_xm=1788961383446803620&after=2026-09-09T00%3A00%3A00&per_page=100",
+      "at": "2026-09-09T10:43:48.416617-03:00",
+      "status": 403,
+      "elapsed_seconds": 44.969,
+      "total": null,
+      "html_bytes": 146
+    },
+    {
+      "name": "ocafezinho.com_numeric_categories",
+      "url": "https://ocafezinho.com/wp-json/wp/v2/categories?include=21167%2C21168%2C21171%2C21174&hide_empty=false&_fields=id%2Cname%2Ccount%2Cslug&_xm=20260909_104303",
+      "at": "2026-09-09T10:43:48.421706-03:00",
+      "status": 403,
+      "elapsed_seconds": 44.973,
+      "total": null,
+      "html_bytes": 146
+    },
+    {
+      "name": "ocafezinho.com_home",
+      "url": "https://ocafezinho.com/?_xm=20260909_104303",
+      "at": "2026-09-09T10:43:48.426776-03:00",
+      "status": 403,
+      "elapsed_seconds": 44.978,
+      "total": null,
+      "html_bytes": 146
+    },
+    {
+      "name": "cafezinho.news_today",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts?_fields=id%2Cdate%2Cstatus%2Cauthor%2Cfeatured_media%2Ccategories%2Ctitle%2Clink&_xm=1788961383446803620&after=2026-09-09T00%3A00%3A00&per_page=100",
+      "at": "2026-09-09T10:43:05.140856-03:00",
+      "status": 200,
+      "elapsed_seconds": 1.692,
+      "total": "14",
+      "body": [
+        {
+          "id": 269577,
+          "date": "2026-09-09T10:08:47",
+          "status": "publish",
+          "link": "https://cafezinho.news/quase-metade-dos-brasileiros-diz-que-o-caso-vorcaro-pesa-contra-o-voto-em-flavio.htm",
+          "title": {
+            "rendered": "Quase metade dos brasileiros diz que o caso Vorcaro pesa contra o voto em Flávio"
+          },
+          "author": 5780,
+          "featured_media": 269580,
+          "categories": [
+            2403
+          ]
+        },
+        {
+          "id": 269560,
+          "date": "2026-09-09T10:00:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/onu-pede-proibicao-de-armas-que-escolhem-quem-atacar.htm",
+          "title": {
+            "rendered": "Alto-comissário da ONU pede proibição de armas autônomas letais"
+          },
+          "author": 5470,
+          "featured_media": 269561,
+          "categories": [
+            358,
+            5008,
+            2403
+          ]
+        },
+        {
+          "id": 269573,
+          "date": "2026-09-09T09:39:19",
+          "status": "publish",
+          "link": "https://cafezinho.news/dino-vira-o-jogo-e-manda-andrei-rodrigues-de-volta-a-pf.htm",
+          "title": {
+            "rendered": "Dino vira o jogo e manda Andrei Rodrigues de volta à PF"
+          },
+          "author": 5780,
+          "featured_media": 269575,
+          "categories": [
+            22
+          ]
+        },
+        {
+          "id": 400648,
+          "date": "2026-09-09T09:36:05",
+          "status": "publish",
+          "link": "https://cafezinho.news/v42-20260909-politica_monetaria_comparada-2.htm",
+          "title": {
+            "rendered": "Juros no Brasil seguem quase quatro vezes acima dos dos Estados Unidos"
+          },
+          "author": 5470,
+          "featured_media": 400646,
+          "categories": [
+            100005
+          ]
+        },
+        {
+          "id": 269571,
+          "date": "2026-09-09T09:29:53",
+          "status": "publish",
+          "link": "https://cafezinho.news/lula-perde-folego-e-empata-com-flavio-na-meio-ideia-mas-e-o-efeito-vorcaro-que-pode-conter-a-sangria.htm",
+          "title": {
+            "rendered": "Lula perde fôlego e empata com Flávio na Meio/Ideia, mas é o efeito Vorcaro que pode conter a sangria"
+          },
+          "author": 5780,
+          "featured_media": 269572,
+          "categories": [
+            22
+          ]
+        },
+        {
+          "id": 400644,
+          "date": "2026-09-09T08:36:15",
+          "status": "publish",
+          "link": "https://cafezinho.news/v42-20260909-inflacao_primaria.htm",
+          "title": {
+            "rendered": "A relação entre o IPCA e o câmbio na inflação brasileira"
+          },
+          "author": 5470,
+          "featured_media": 400643,
+          "categories": [
+            100005
+          ]
+        },
+        {
+          "id": 269555,
+          "date": "2026-09-09T08:30:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/ataque-russo-a-ucrania-mata-cinco-em-kiev-e-dois-na-fronteira-com-a-moldavia.htm",
+          "title": {
+            "rendered": "Ataque russo à Ucrânia mata cinco em Kiev e dois na fronteira com a Moldávia"
+          },
+          "author": 5470,
+          "featured_media": 269556,
+          "categories": [
+            5003,
+            15,
+            2403
+          ]
+        },
+        {
+          "id": 269549,
+          "date": "2026-09-09T07:45:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/radio-nacional-celebra-90-anos-com-programacao-especial.htm",
+          "title": {
+            "rendered": "Rádio Nacional celebra 90 anos com programação especial"
+          },
+          "author": 5470,
+          "featured_media": 269557,
+          "categories": [
+            21236
+          ]
+        },
+        {
+          "id": 400641,
+          "date": "2026-09-09T07:37:38",
+          "status": "publish",
+          "link": "https://cafezinho.news/v42-20260909-comercio_sul_sul.htm",
+          "title": {
+            "rendered": "Crescimento do comércio Brasil-China e a força do Sul-Sul"
+          },
+          "author": 5470,
+          "featured_media": 400638,
+          "categories": [
+            100005
+          ]
+        },
+        {
+          "id": 269545,
+          "date": "2026-09-09T07:00:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/anvisa-aprova-genericos-de-liraglutida-usada-contra-obesidade-e-diabetes.htm",
+          "title": {
+            "rendered": "Anvisa aprova genéricos de liraglutida, usada contra obesidade e diabetes"
+          },
+          "author": 5470,
+          "featured_media": 269546,
+          "categories": [
+            2403,
+            258
+          ]
+        },
+        {
+          "id": 269543,
+          "date": "2026-09-09T05:30:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/luisa-stefani-sera-a-primeira-brasileira-no-top-3-do-ranking-de-duplas.htm",
+          "title": {
+            "rendered": "Luisa Stefani será a primeira brasileira no top 3 do ranking de duplas"
+          },
+          "author": 5470,
+          "featured_media": 269544,
+          "categories": [
+            1271,
+            2403
+          ]
+        },
+        {
+          "id": 400636,
+          "date": "2026-09-09T04:35:51",
+          "status": "publish",
+          "link": "https://cafezinho.news/v42-20260909-politica_monetaria_comparada.htm",
+          "title": {
+            "rendered": "O impacto da taxa Selic alta sobre a economia brasileira"
+          },
+          "author": 5470,
+          "featured_media": 400634,
+          "categories": [
+            100005
+          ]
+        },
+        {
+          "id": 269527,
+          "date": "2026-09-09T02:30:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/mercurio-do-garimpo-ameaca-951-comunidades-no-brasil-na-bolivia-e-no-peru.htm",
+          "title": {
+            "rendered": "Mercúrio do garimpo ameaça 951 comunidades no Brasil, na Bolívia e no Peru"
+          },
+          "author": 5470,
+          "featured_media": 269532,
+          "categories": [
+            358,
+            582,
+            2403
+          ]
+        },
+        {
+          "id": 269518,
+          "date": "2026-09-09T00:30:00",
+          "status": "publish",
+          "link": "https://cafezinho.news/openai-diz-ter-resolvido-navier-stokes-um-dos-maiores-problemas-da-matematica.htm",
+          "title": {
+            "rendered": "OpenAI diz ter resolvido Navier-Stokes, um dos maiores problemas da matemática"
+          },
+          "author": 5470,
+          "featured_media": 269526,
+          "categories": [
+            735,
+            2403,
+            30,
+            21169
+          ]
+        }
+      ]
+    },
+    {
+      "name": "cafezinho.news_numeric_categories",
+      "url": "https://cafezinho.news/wp-json/wp/v2/categories?include=21167%2C21168%2C21171%2C21174&hide_empty=false&_fields=id%2Cname%2Ccount%2Cslug&_xm=20260909_104303",
+      "at": "2026-09-09T10:43:05.137246-03:00",
+      "status": 200,
+      "elapsed_seconds": 1.688,
+      "total": "4",
+      "body": [
+        {
+          "id": 21167,
+          "count": 0,
+          "name": "1656",
+          "slug": "1656"
+        },
+        {
+          "id": 21174,
+          "count": 0,
+          "name": "20751",
+          "slug": "20751"
+        },
+        {
+          "id": 21168,
+          "count": 0,
+          "name": "21070",
+          "slug": "21070"
+        },
+        {
+          "id": 21171,
+          "count": 0,
+          "name": "5087",
+          "slug": "5087"
+        }
+      ]
+    },
+    {
+      "name": "cafezinho.news_home",
+      "url": "https://cafezinho.news/?_xm=20260909_104303",
+      "at": "2026-09-09T10:43:07.591835-03:00",
+      "status": 200,
+      "elapsed_seconds": 4.142,
+      "total": null,
+      "html_bytes": 316154
+    },
+    {
+      "name": "mirror_400608",
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/400608?_fields=id%2Cdate%2Cstatus%2Cauthor%2Cfeatured_media%2Ccategories%2Ctitle%2Clink&_xm=1788961383446803620",
+      "at": "2026-09-09T10:43:06.946358-03:00",
+      "status": 200,
+      "elapsed_seconds": 1.802,
+      "total": null,
+      "body": {
+        "id": 400608,
+        "date": "2026-09-07T09:36:42",
+        "status": "publish",
+        "link": "https://cafezinho.news/v42-20260907-comercio_sul_sul.htm",
+        "title": {
+          "rendered": "Crescimento do comércio Brasil-China e o fortalecimento do Sul-Sul"
+        },
+        "author": 5470,
+        "featured_media": 0,
+        "categories": [
+          100005
+        ]
+      }
+    },
+    {
+      "name": "canonical_269570",
+      "url": "https://ocafezinho.com/wp-json/wp/v2/posts/269570?_fields=id%2Cdate%2Cstatus%2Cauthor%2Cfeatured_media%2Ccategories%2Ctitle%2Clink&_xm=1788961383446803620",
+      "at": "2026-09-09T10:43:49.484989-03:00",
+      "status": 403,
+      "elapsed_seconds": 44.337,
+      "total": null,
+      "html_bytes": 146
+    }
+  ],
+  "followup": [
+    {
+      "name": "mirror_radio",
+      "status": 200,
+      "url": "https://cafezinho.news/wp-json/wp/v2/posts/269549?_fields=id,status,featured_media,categories,link&_xm=1788961459731558969",
+      "body": {
+        "id": 269549,
+        "status": "publish",
+        "link": "https://cafezinho.news/radio-nacional-celebra-90-anos-com-programacao-especial.htm",
+        "featured_media": 269557,
+        "categories": [
+          21236
+        ]
+      }
+    },
+    {
+      "name": "mirror_category_21236",
+      "status": 200,
+      "url": "https://cafezinho.news/wp-json/wp/v2/categories/21236?_fields=id,name,count,slug&_xm=1788961459732056863",
+      "body": {
+        "id": 21236,
+        "count": 1,
+        "name": "79",
+        "slug": "79"
+      }
+    },
+    {
+      "name": "canonical_radio",
+      "status": 403,
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269549?_fields=id,status,featured_media,categories,link&_xm=1788961459732371990",
+      "body": {
+        "bytes": 146,
+        "old_attachment_mentioned": false
+      }
+    },
+    {
+      "name": "canonical_recent",
+      "status": 403,
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts?per_page=15&after=2026-09-09T00:00:00&_fields=id,status,date,featured_media,categories&_xm=1788961459732759233",
+      "body": {
+        "bytes": 146,
+        "old_attachment_mentioned": false
+      }
+    },
+    {
+      "name": "mirror_old_post",
+      "status": 200,
+      "url": "https://cafezinho.news/v42-20260907-comercio_sul_sul.htm?_xm=1788961459733203723",
+      "body": {
+        "bytes": 204361,
+        "old_attachment_mentioned": false
+      }
+    }
+  ],
+  "canonical_www": [
+    {
+      "name": "canonical_radio",
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts/269549?_fields=id,status,featured_media,categories,link",
+      "curl_rc": 0,
+      "body": {
+        "id": 269549,
+        "status": "publish",
+        "link": "https://www.ocafezinho.com/2026/09/09/radio-nacional-celebra-90-anos-com-programacao-especial/",
+        "featured_media": 269557,
+        "categories": [
+          79,
+          2403
+        ]
+      }
+    },
+    {
+      "name": "canonical_today",
+      "url": "https://www.ocafezinho.com/wp-json/wp/v2/posts?per_page=20&after=2026-09-09T00:00:00&_fields=id,status,date,featured_media,categories",
+      "curl_rc": 0,
+      "body": [
+        {
+          "id": 269582,
+          "date": "2026-09-09T10:40:30",
+          "status": "publish",
+          "featured_media": 269583,
+          "categories": [
+            4994,
+            4984,
+            22,
+            4986
+          ]
+        },
+        {
+          "id": 269577,
+          "date": "2026-09-09T10:08:47",
+          "status": "publish",
+          "featured_media": 269580,
+          "categories": [
+            2403
+          ]
+        },
+        {
+          "id": 269560,
+          "date": "2026-09-09T10:00:00",
+          "status": "publish",
+          "featured_media": 269561,
+          "categories": [
+            358,
+            5008,
+            2403
+          ]
+        },
+        {
+          "id": 269573,
+          "date": "2026-09-09T09:39:19",
+          "status": "publish",
+          "featured_media": 269575,
+          "categories": [
+            22
+          ]
+        },
+        {
+          "id": 269571,
+          "date": "2026-09-09T09:29:53",
+          "status": "publish",
+          "featured_media": 269572,
+          "categories": [
+            22
+          ]
+        },
+        {
+          "id": 269555,
+          "date": "2026-09-09T08:30:00",
+          "status": "publish",
+          "featured_media": 269556,
+          "categories": [
+            5003,
+            15,
+            2403
+          ]
+        },
+        {
+          "id": 269549,
+          "date": "2026-09-09T07:45:00",
+          "status": "publish",
+          "featured_media": 269557,
+          "categories": [
+            79,
+            2403
+          ]
+        },
+        {
+          "id": 269545,
+          "date": "2026-09-09T07:00:00",
+          "status": "publish",
+          "featured_media": 269546,
+          "categories": [
+            2403,
+            258
+          ]
+        },
+        {
+          "id": 269543,
+          "date": "2026-09-09T05:30:00",
+          "status": "publish",
+          "featured_media": 269544,
+          "categories": [
+            1271,
+            2403
+          ]
+        },
+        {
+          "id": 269527,
+          "date": "2026-09-09T02:30:00",
+          "status": "publish",
+          "featured_media": 269532,
+          "categories": [
+            358,
+            582,
+            2403,
+            21169
+          ]
+        },
+        {
+          "id": 269518,
+          "date": "2026-09-09T00:30:00",
+          "status": "publish",
+          "featured_media": 269526,
+          "categories": [
+            735,
+            2403,
+            30,
+            21169
+          ]
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "de_dell.md": "f681f19f3ce064e9aea144297dec437296ddd3ad962f8f29015b994f86253e29",
+    "de_laura.md": "38220246338455b37b795550fbd02e2ddd7fc451c461849b65b47e78226394a3",
+    "de_ideias.md": "f6cbf14cc56b7abac746d6c85c943a21da3804c5dee46ef650dd985758682b60",
+    "estado/ponte_health.md": "8e8b24703248cef3988050bb9ff7605a237ad3a2b7774015023b6edd49c6f579",
+    "loop_ativo.json": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284"
+  }
+}

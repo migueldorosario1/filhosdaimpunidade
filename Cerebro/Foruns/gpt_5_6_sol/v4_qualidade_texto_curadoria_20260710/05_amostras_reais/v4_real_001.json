@@ -1,0 +1,46 @@
+{
+  "coleta_primaria": {
+    "arquivo": "dados/auditado/v4_real_001.coleta_primaria_ustr.json",
+    "motivo_publicacao_real": "Comentario escrito detalhado no docket USTR-2026-0331 ainda nao confirmado em HTML simples; transcricao oficial destrava redator real com cautela.",
+    "publicacao_real_bloqueada": true,
+    "redator_real_llm_bloqueado": false,
+    "status": "coleta_primaria_com_transcricao_oficial_suficiente_para_redator_real",
+    "updated_at": "2026-07-09T12:30:00-03:00"
+  },
+  "conteudo": "A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros. O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados. O Federal Register publicou em 4 de junho de 2026 o notice oficial do USTR, documento 2026-11158, citando o docket USTR-2026-0331 para comentarios e o docket USTR-2026-0397 para pedidos de comparecimento a audiencia. O notice confirma que a investigacao Section 301 envolve digital trade/electronic payment services, incluindo Pix, e propoe acao com tarifas sobre artigos do Brasil e certas isencoes. O USTR realizou audiencia publica em 6 e 7 de julho de 2026 e publicou as transcricoes oficiais. Na transcricao oficial do Dia 2, Flavio Bolsonaro aparece como testemunha do Painel 8, declara ser senador, lider da oposicao e pre-candidato presidencial para a eleicao de outubro, e diz ter pedido a Trump, ao vice-presidente Vance e ao secretario Rubio que os EUA nao impusessem tarifas a empresas brasileiras. No testemunho, Flavio afirmou que novas tarifas fortaleceriam politicamente o governo Lula, defendeu o Pix como sistema criado durante o governo Bolsonaro e pediu que o comite nao impusesse tarifas ao Brasil, preservasse o Pix, cancelasse a acao e negociasse. Em resposta a pergunta do USTR, Flavio disse que os EUA poderiam esperar ou suspender a decisao diante da possibilidade de mudanca politica no Brasil a partir de janeiro.",
+  "created_at": "2026-07-08T23:16:10.536783+00:00",
+  "editoria": "v4_politica_economia",
+  "fonte": "AP + El Pais",
+  "fontes": [
+    "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a",
+    "https://elpais.com/america/2026-07-07/bolsonaro-hijo-viaja-a-washington-para-intentar-evitar-un-nuevo-castigo-arancelario-que-dane-su-campana.html",
+    "https://www.federalregister.gov/documents/2026/06/04/2026-11158/notice-of-determination-and-request-for-comments-concerning-action-pursuant-to-section-301-brazils",
+    "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/public-hearing-proposed-responsive-action-section-301-investigation-certain-acts-policies-and",
+    "https://ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-brazils-acts-policies-and-practices-related-digital-trade-and-electronic-payment",
+    "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/0707%20USTR%20Brazil%20301%20Day%202_full.pdf",
+    "https://static.poder360.com.br/uploads/2026/06/Pedido-comparecimento-audiencia-EUA-Flavio-Bolsonaro.pdf"
+  ],
+  "hash_conteudo": "c9c42f27ac6384f1393a8133e6cdab2f228eb9b48fbbb57db998fed0278bd8e8",
+  "item_id": "v4_real_001",
+  "manifesto_auditoria": {
+    "audiencia_ustr_20260706_07_realizada": true,
+    "dedupe_check": {
+      "duplicate_paths": [],
+      "hash_conteudo": "c9c42f27ac6384f1393a8133e6cdab2f228eb9b48fbbb57db998fed0278bd8e8",
+      "is_duplicate": false
+    },
+    "fonte_primaria_ustr_federal_register": true,
+    "fonte_primaria_ustr_transcricao_day2": true,
+    "fonte_validada": true,
+    "pedido_comparecimento_flavio_coletado": true,
+    "portal_ustr_html_nao_acessivel": true,
+    "publicacao_real_exige_confirmacao_final_docket": true,
+    "qualidade_minima": true,
+    "risco_juridico_revisado": true,
+    "source_agent": "codex_v4_real_draft"
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "status": "auditado_real",
+  "titulo": "Tarifa dos EUA vira disputa entre Lula e Flávio antes da eleição",
+  "url": "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+}

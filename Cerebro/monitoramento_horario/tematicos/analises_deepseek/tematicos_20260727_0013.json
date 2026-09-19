@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260727_0013",
+  "ts_brt": "2026-07-27T00:13:04-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260727_0013\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"HTTP status 0 indica site offline, mas nenhum alerta foi gerado pelo coletor.\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"P3 - site offline (HTTP 0)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"verificar ceara_digital offline e alerta omitido\",\n  \"confianca\": 0.95,\n  \"notas\": \"Ceará Digital HTTP 0 sem alerta; rio_carta P3 justificado (commit muito novo vs conteúdo antigo).\"\n}"
+}

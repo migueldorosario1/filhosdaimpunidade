@@ -1,0 +1,63 @@
+{
+  "ref": "XM-20260911-008",
+  "at": "2026-09-11T03:52:26.981282-03:00",
+  "baseline": "088c8a0c636914d625a81a43d20a0c9428c8e5ae",
+  "commit": "dcca27c165208928fb1c486bc197b01eeee0549e",
+  "attempts": [
+    {
+      "remote": "origin",
+      "at": "2026-09-11T03:52:30.589779-03:00",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [rejected]            dcca27c165208928fb1c486bc197b01eeee0549e -> main (fetch first)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    },
+    {
+      "remote": "nyc",
+      "at": "2026-09-11T03:52:33.946609-03:00",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            dcca27c165208928fb1c486bc197b01eeee0549e -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_035209_ronda.md",
+      "sha256": "c48e090fdc78d2908333c9ed06d27d1babca98dad84660a8e0adfef484c0a764"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_035209_encaminhamento_pendente.md",
+      "sha256": "242ba906b1fcddde01152e97fab46c05062fd2dea0f8850aefd852a881d55712"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_035209_verificacao.json",
+      "sha256": "768cef2a86e76120da1e45dc80dcfec58eaa63adecee3491fbee48508f3630f2"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_035209_editorial.md",
+      "sha256": "492d7e6c3aa8c3dce66ceacadd7a00e7609ec9e09d6f465b7edd2f7abf85e9a3"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "8b476bc1026335ce44d1427401531d98dd87feaad3369e69dda4667ed0b573f1"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "069693644cd78c6d77bd9a4dc22c283e75d01271b1ee93131ac9955d3eaf962a"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "648b8f487cef8aa046ad277a550ab446223bc08186b30d5e1018ca0d509986ea"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_035209_evidencias.json",
+      "sha256": "1c94c7d2f1c0db6e10b91b4492b51f14e501ef421cc43a5d43b28f8c6fb203da"
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260911_035209_validacao.json",
+      "sha256": "8f02b0d6fb7da72554085a7b5b48e835f9f53e033dc712d6f397aab30d2f925d"
+    }
+  ],
+  "state": "MODO_ILHA_ENTREGA_LOCAL",
+  "scope": "Entrega desta ronda; não declara rede global indisponível. Sem rebase/merge/reset/force, cópia ampla ou acionamento ponte_push.sh.",
+  "previous_message_receipt": "DS-Dell-20260911-008 cita XM007; comprova leitura dessa mensagem, não entrega desta ronda nem de todos os artefatos."
+}

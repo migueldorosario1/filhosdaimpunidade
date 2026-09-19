@@ -1,0 +1,711 @@
+{
+  "wp_verify.json": {
+    "rc": 0,
+    "at": "2026-09-11T01:48:28.452917-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T01:48:28-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269758,
+          "date": "2026-09-11 02:30:00",
+          "fm": 269761,
+          "events": 1,
+          "event_timestamps": [
+            1789104600
+          ],
+          "expected_utc": 1789104600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269527,
+          "hash": "d0f64b83d0109239b39016754d96bcd729c7981a72b1a2be19c09450d0134b4b",
+          "status": "publish",
+          "title": "Mercúrio do garimpo ameaça 951 comunidades no Brasil, na Bolívia e no Peru",
+          "author": "5470",
+          "date": "2026-09-09 02:30:00",
+          "slug": "mercurio-do-garimpo-ameaca-951-comunidades-no-brasil-na-bolivia-e-no-peru",
+          "fm": 269532,
+          "categories": [
+            358,
+            582,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269518,
+          "hash": "cb0656f51068cb917b4d772b5a75ab4e3fc3a7a8b1b67cd4fd8f27e680af7009",
+          "status": "publish",
+          "title": "OpenAI diz ter resolvido Navier-Stokes, um dos maiores problemas da matemática",
+          "author": "5470",
+          "date": "2026-09-09 00:30:00",
+          "slug": "openai-diz-ter-resolvido-navier-stokes-um-dos-maiores-problemas-da-matematica",
+          "fm": 269526,
+          "categories": [
+            735,
+            2403,
+            30
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269538,
+          "hash": "3a90ada676bea208de1620465b8aca0378113adc6c150412dec71ac1751ec5e9",
+          "status": "publish",
+          "title": "A mansão, o avião e o aniversário: como Flávio aparece, de novo, dentro da mesma teia patrimonial de Vorcaro",
+          "author": "5780",
+          "date": "2026-09-08 23:00:48",
+          "slug": "a-mansao-o-aviao-e-o-aniversario-como-flavio-aparece-de-novo-dentro-da-mesma-teia-patrimonial-de-vorcaro",
+          "fm": 269539,
+          "categories": [
+            22
+          ],
+          "edit_lock": "1788945923:5735",
+          "protection": "post_publicado_por_humano"
+        }
+      ]
+    }
+  },
+  "china_verify.json": {
+    "rc": 0,
+    "at": "2026-09-11T01:48:28.619161-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T01:48:28.468354-03:00",
+      "state": {
+        "path": "/home/ubuntu/ds_nuvem_chefe/estado_casa.md",
+        "mtime": "2026-09-04T01:36:19.845217-03:00",
+        "sha256": "263050638eb119d035edc7a2d423e83a53e593b6842b71e1508d3245a1e648d5",
+        "first_lines": [
+          "# ESTADO DA CASA — memória do plantão do Telegram",
+          "> Mantida pelo DS Nuvem Chefe (DS-N Chefe) na ronda 30/30 (quando o estado mudar, atualize aqui com a data — é o que o plantão usa pra conversar com o Miguel). Semente inicial: ZM/ZCode GLM-5.3 · 20260830 16:30 BRT.",
+          "",
+          "## Como o sistema funciona (resumo pra conversa)",
+          "- Casa = O Cafezinho (ocafezinho.com, jornal) + ecossistema MOKA (Moka Reader mokareader.com, Moka Vídeo, Moka Writer mokawriter.vercel.app) + Global South News (GSN, em inglês).",
+          "- Cérebro = repositório central de memória e decisões (fóruns, memórias, ponte). Ponte = canal oficial dos agentes.",
+          "- Quem é quem: DS Nuvem Chefe (DS-N Chefe) (agente completo na Tencent, ronda :00/:30, acesso ao Cérebro e à ponte) · ZCode Miguel (ZM, GLM-5.3, no Dell — hoje chefe da obra MOKA) · DS Laura · Claude Laura (gate editorial) · AGY (motor de publicação) · Codex Miguel · DSC (consolidador). Grok Miguel e Grok Laura estão sem crédito.",
+          "- O plantão (eu, quem responde rápido no Telegram) NÃO é o chefe: só conversa leve e informação rápida; pergunta séria vai pro chefe, que responde na ronda.",
+          ""
+        ]
+      },
+      "consumer": {
+        "sha256": "fce91bb8cefa355d721b593e1cb6c1ebc1f87ba76287d458316e04f2f0822fc9",
+        "lines": [
+          {
+            "line": 19,
+            "text": "ESTADO = f'{BASE}/estado_casa.md'        # estado da casa, mantido pelo DS-N Chefe (ronda)"
+          },
+          {
+            "line": 96,
+            "text": "        + '## Estado da casa (mantido pelo DS Nuvem Chefe (DS-N Chefe) na ronda):\\n' + _ler(ESTADO, 2500)"
+          }
+        ]
+      },
+      "p11_code_sha256": "276452aff61b41a2a7f670d3d7a0a836536eac7eae23f9c30b6fd89039900f38",
+      "p11_state": {
+        "ultimo_saldo": 14.48,
+        "falhas": 0,
+        "aviso_ts": 1789070401.4936125,
+        "critico_ts": 1789075803.3206332
+      },
+      "p11_log_cursor_before": 2355,
+      "p11_log_delta": "11/09/2026 01:30:02 verde: saldo 14.60\n11/09/2026 01:45:02 verde: saldo 14.48\n",
+      "p11_log_size": 2433,
+      "p11_flag_exists": false
+    }
+  },
+  "factory_delta.json": {
+    "rc": 0,
+    "at": "2026-09-11T01:48:26.962093-03:00",
+    "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+    "data": {
+      "at": "2026-09-11T04:48:26.874136+00:00",
+      "cursor_before": "20260911_0042.json",
+      "cycles": []
+    }
+  },
+  "editorial_readback.json": {
+    "rc": 0,
+    "at": "2026-09-11T01:48:56.676312-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T01:48:56-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269758,
+          "date": "2026-09-11 02:30:00",
+          "fm": 269761,
+          "events": 1,
+          "event_timestamps": [
+            1789104600
+          ],
+          "expected_utc": 1789104600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269527,
+          "hash": "d0f64b83d0109239b39016754d96bcd729c7981a72b1a2be19c09450d0134b4b",
+          "status": "publish",
+          "title": "Mercúrio do garimpo ameaça 951 comunidades no Brasil, na Bolívia e no Peru",
+          "author": "5470",
+          "date": "2026-09-09 02:30:00",
+          "slug": "mercurio-do-garimpo-ameaca-951-comunidades-no-brasil-na-bolivia-e-no-peru",
+          "fm": 269532,
+          "categories": [
+            358,
+            582,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269518,
+          "hash": "cb0656f51068cb917b4d772b5a75ab4e3fc3a7a8b1b67cd4fd8f27e680af7009",
+          "status": "publish",
+          "title": "OpenAI diz ter resolvido Navier-Stokes, um dos maiores problemas da matemática",
+          "author": "5470",
+          "date": "2026-09-09 00:30:00",
+          "slug": "openai-diz-ter-resolvido-navier-stokes-um-dos-maiores-problemas-da-matematica",
+          "fm": 269526,
+          "categories": [
+            735,
+            2403,
+            30
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269538,
+          "hash": "3a90ada676bea208de1620465b8aca0378113adc6c150412dec71ac1751ec5e9",
+          "status": "publish",
+          "title": "A mansão, o avião e o aniversário: como Flávio aparece, de novo, dentro da mesma teia patrimonial de Vorcaro",
+          "author": "5780",
+          "date": "2026-09-08 23:00:48",
+          "slug": "a-mansao-o-aviao-e-o-aniversario-como-flavio-aparece-de-novo-dentro-da-mesma-teia-patrimonial-de-vorcaro",
+          "fm": 269539,
+          "categories": [
+            22
+          ],
+          "edit_lock": "1788945923:5735",
+          "protection": "post_publicado_por_humano"
+        }
+      ]
+    }
+  },
+  "public_verified.json": [
+    {
+      "post_id": 269527,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/09/mercurio-do-garimpo-ameaca-951-comunidades-no-brasil-na-bolivia-e-no-peru/",
+      "at": "2026-09-11T01:48:47.207546-03:00",
+      "sha256_html": "cd1ec53f612b79ab8b95bdc2f7fd0e5ac537a9cf6c06bf9d6ccb5bbbbb66d57a",
+      "paragraphs": 19,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": []
+    },
+    {
+      "post_id": 269518,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/09/openai-diz-ter-resolvido-navier-stokes-um-dos-maiores-problemas-da-matematica/",
+      "at": "2026-09-11T01:48:47.266375-03:00",
+      "sha256_html": "017e2f91161d52e60f4489e75cb711d086e786cacad363f1a30e80875c657137",
+      "paragraphs": 19,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": []
+    },
+    {
+      "post_id": 269538,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/a-mansao-o-aviao-e-o-aniversario-como-flavio-aparece-de-novo-dentro-da-mesma-teia-patrimonial-de-vorcaro/",
+      "at": "2026-09-11T01:48:47.320611-03:00",
+      "sha256_html": "35e67f9a49400173e7f63b507a6dc71ace378a6161f2099f173f2b2d346056d0",
+      "paragraphs": 7,
+      "all_paragraphs_present": false,
+      "missing": [
+        "Procurado pela reportagem, Willer Tomaz confirmou o empréstimo do imóvel e negou qualquer contrapartida financeira: \"sem qualquer pagamento, contraprestação ou relação comercial\", afirmou, classificando o vínculo com o senador como \"estritamente pessoal\". Ele também negou qualquer relação com Vorcaro, dizendo desconhecê-lo pessoalmente. Fabrício Bloisi, por sua vez, disse à reportagem que não conhece Flávio Bolsonaro e que sequer foi consultado sobre a cessão da mansão ao senador, já que os cotistas usam a propriedade de forma independente entre si."
+      ],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "paragraph_method": "blocos de texto separados por linha vazia; nao dependente de p no WordPress bruto",
+      "missing_after_typographic_normalization": [],
+      "all_paragraphs_present_after_typographic_normalization": true,
+      "normalization": "espacos e aspas curvas/retas"
+    }
+  ],
+  "integrity.json": {
+    "at": "2026-09-11T01:48:28.621800-03:00",
+    "head": "18410dbcf8b28489f7adfaaf466eb88de004f4ad",
+    "baseline_commit": "7e8a2ba572333a2f7cb1f93a08a132c93a88368e",
+    "bridge_audit": [
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "removed_nonblank": 0,
+        "sha256": "ffb732b8b214880d80886ef358905b0bc0dca354f5cb1154451b51a5e469f459",
+        "xm039_present": false
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+        "removed_nonblank": 0,
+        "sha256": "b9999a9d3e997de999a82d2bd51baef1e7f0a572fc02b70922c818250b341d76",
+        "xm039_present": false
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "removed_nonblank": 0,
+        "sha256": "2f4d073829c2492d533412ad23b6b45d451631821abc1d4aba919c8b0f547e83",
+        "xm039_present": false
+      }
+    ],
+    "active_hooks": []
+  },
+  "specific_read.json": {
+    "rc": 0,
+    "at": "2026-09-11T01:48:46.190626-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T01:48:45-03:00",
+      "posts": [
+        {
+          "id": 269846,
+          "status": "future",
+          "modified": "2026-09-11 00:21:05",
+          "date": "2026-09-11 14:30:00",
+          "excerpt": "Nos primeiros nove meses do programa CNH do Brasil, os pedidos de habilitação saltaram de 2,3 milhões para 7,3 milhões e mais de 2 milhões de condutores foram habilitados. Curso teórico gratuito, menos aulas obrigatórias e etapas remotas geraram economia de quase R$ 10 bilhões, com maior alta no Nor",
+          "title": "Pedidos de habilitação saltam de 2,3 milhões para 7,3 milhões com nova CNH",
+          "content_sha256": "3e85a5a9285b87e07232790d88cf672ab5114ba954055888b474720955d57888",
+          "specific_paragraphs": [],
+          "next_cron": 1789147800,
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / janela temporal incoerente:** o texto diz \\\"primeiros nove meses do programa\\\" e \\\"entre janeiro e agosto\\\", mas o programa entrou em vigor em **dezembro de 2025** (afirmado no próprio rascunho). De dezembro/2025 a agosto/2026 são **nove meses** — porém o título e o lide falam de \\\"janeiro a agosto\\\" (8 meses). As fontes (Vale Alternativo, Piauí Hoje, Mídia Max) falam em \\\"primeiros nove meses\\\" e \\\"janeiro a agosto de 2026\\\" — a inconsistência entre \\\"nove meses\\\" e \\\"janeiro–agosto\\\" precisa ser resolvida com a fonte primária do Ministério dos Transportes antes de publicar. Fonte: https://midiamax.com.br/brasil/2026/pedidos-primeira-cnh-janeiro-agosto-crescem-216-comparacao-periodo-2025/ | https://www.valealternativo.com.br/n/23098/programa-cnh-do-brasil-aumenta-pedidos-de-habilitacao-em-mais-de-200-em-nove-meses-mais-de-2-milhoes-de-novos-condutores-foram-habilitados\", \"**CIFRA — economia de R$ 9,64 bilhões:** o rascunho detalha a conta (R$ 2,94 bi curso teórico + R$ 4,57 bi prática + R$ 1,44 bi Bom Condutor + R$ 414,6 mi exames + R$ 278,7 mi deslocamentos = R$ 9,64 bi). As evidências desta busca **não confirmam** o valor total nem a decomposição. Sem fonte oficial que sustente a cifra, ela não deve ir ao corpo como fato fechado. Fonte: evidências desta busca não cobrem o número.\", \"**CIFRA — custo médio da categoria AB em R$ 1.256 e \\\"redução de ~50%\\\":** as evidências citam \\\"custo cai até 70%\\\" (A Tarde), divergindo do \\\"~50%\\\" do rascunho. Divergência de cifra entre fontes — registrar DIVERGENCIA. Fonte: https://atarde.com.br/brasil/nova-cnh-custo-cai-ate-70-e-pedidos-disparam-216-em-2026-1401643\", \"**CIFRA — prazo médio de 210 para 147 dias (queda de 30%):** não confirmado pelas evidências desta busca. INCERTO.\", \"**CIFRA — 4,2 milhões de cursos práticos, 553 mil com instrutores autônomos (13,2%):** não confirmado pelas evidências desta busca. INCERTO.\", \"**CIFRA — 4% em até 30 dias e 40,6% esperando mais de 180 dias:** não confirmado pelas evidências desta busca. INCERTO.\"], \"fontes\": [\"https://www.valealternativo.com.br/n/23098/programa-cnh-do-brasil-aumenta-pedidos-de-habilitacao-em-mais-de-200-em-nove-meses-mais-de-2-milhoes-de-novos-condutores-foram-habilitados\", \"https://piauihoje.com/noticias/brasil/pedidos-de-cnh-crescem-216-com-novas-regras-no-brasil-465471.html\"], \"sha\": \"3a2d8cfdc68316dd0e8d895b72345164cfd4d197\", \"ts\": \"11/09/2026 00:05\", \"ts_iso\": \"2026-09-11T03:05:19.337222+00:00\"}, \"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"TÍTULO viola EMU-1/2: sem agente concreto, jargão “nova CNH” ambíguo e extrapola 80 caracteres\", \"OLHO truncado (“…com maior alta no Nor”); ajustar para texto completo e coerente\", \"SUGESTAO_TITULO: Ministério dos Transportes registra 7,3 milhões de pedidos de habilitação\", \"CATEGORIA_SUGERIDA: cat 22\"], \"sugestao_titulo\": \"Ministério dos Transportes registra 7,3 milhões de pedidos de habilitação\\nCATEGORIA_SUGERIDA: cat 22\", \"categoria_sugerida\": \"cat 22\", \"sha\": \"eee73b9008043ae26ec64030c30607410a75b669\", \"ts\": \"11/09/2026 00:21\", \"ts_iso\": \"2026-09-11T03:21:04.906515+00:00\"}}"
+        },
+        {
+          "id": 269813,
+          "status": "future",
+          "modified": "2026-09-10 23:20:52",
+          "date": "2026-09-11 13:00:00",
+          "excerpt": "Dados do AdaptaBrasil mostram que 30,5% dos municípios brasileiros estão sob risco alto ou muito alto de falta d’água durante secas. Juazeiro e Recife lideram a classificação pela combinação de exposição máxima e vulnerabilidade alta.",
+          "title": "Secas põem 1.699 municípios, 30% do país, sob risco de falta d'água",
+          "content_sha256": "d10aa49b17c44d41754d31769578b826c4446d0a00597d7a33a612ac955e1d84",
+          "specific_paragraphs": [],
+          "next_cron": 1789142400,
+          "txt_check": "{\"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"DATA_DO_FATO: o texto não informa quando a análise foi feita/publicada nem o gancho que a torna notícia hoje\", \"SUGESTAO_TITULO: Observatório do Clima aponta 1.699 municípios sob risco de falta d'água\"], \"sugestao_titulo\": \"Observatório do Clima aponta 1.699 municípios sob risco de falta d'água\", \"categoria_sugerida\": \"\", \"sha\": \"d66890a9ec35345db0892b5992324461c8237bf0\", \"ts\": \"10/09/2026 23:20\", \"ts_iso\": \"2026-09-11T02:20:51.993285+00:00\"}, \"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA** — Todos os fatos centrais do rascunho (número de 1.699 municípios em risco alto/muito alto; 30,5% dos 5.569 municípios; 15 municípios em risco muito alto todos no Nordeste; 8 dos 9 estados nordestinos com ao menos uma cidade nessa faixa; Juazeiro (BA) e Recife (PE) no maior risco nacional; Guaribas (PI) em risco muito baixo; Manaus com maior risco do AM mas faixa média; citação de Jean Ometto/INPE sobre vulnerabilidade e sobre Guaribas; atribuição do estudo ao Observatório do Clima com dados do AdaptaBrasil/MCTI). A busca web retornou apenas resultados irrelevantes (decoração com flores secas, Islas Secas no Panamá) — nenhuma evidência jornalística ou institucional sobre o estudo em questão. Sem cobertura, não há como confirmar nem negar; registro como aviso de cobertura, não como fato incorreto.\", \"**DATA_DO_FATO** — O rascunho não informa quando o estudo foi divulgado nem por que é notícia hoje (10/09/2026). Sem data do diagnóstico e sem gancho atual declarado (divulgação, atualização, desdobramento), não é possível verificar se é pauta atual ou republicação de análise anterior. Fonte: ausência de data no próprio texto; nenhuma evidência na busca.\", \"**CIFRA** — O título e o corpo afirmam \\\"1.699 municípios\\\" e \\\"30,5% das cidades\\\" sem que as evidências desta busca tragam qualquer fonte que sustente os números. Cifra em título exige fonte que a confirme; sem fonte, não pode ir ao título.\", \"**INCERTO (sem busca)** — Citações atribuídas a Jean Ometto (INPE/AdaptaBrasil): \\\"É quanto o município atuou ou atua para reduzir o risco de faltar água\\\" e \\\"Isso quer dizer que não vai ter seca? Não!\\\". Não localizadas em nenhuma fonte desta busca; não confirmadas nem negadas.\", \"FONTES: (nenhuma evidência relevante retornada — busca sem cobertura para o tema; resultados obtidos tratam de flores secas/decoração e Islas Secas, Panamá, sem relação com o rascunho)\"], \"fontes\": [], \"sha\": \"c93355fa2b7c9314f5cb9387ecf65552a56cf0c6\", \"ts\": \"10/09/2026 23:05\", \"ts_iso\": \"2026-09-11T02:05:44.316018+00:00\"}, \"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260910-034\", \"fontes\": \"Analise do Observatorio do Clima a partir do AdaptaBrasil, plataforma do Ministerio da Ciencia, Tecnologia e Inovacao: 1.699 dos 5.569 municipios brasileiros (30,5%) com risco alto ou muito alto de falta d agua em periodos de seca; os 15 municipios de risco MUITO alto estao todos no Nordeste, em oito dos nove estados; a peca traz a ressalva metodologica correta — a classificacao mede RISCO (ameaca climatica + exposicao + capacidade de reagir) e nao falta d agua ja instalada; capa e caatinga brasileira, nao deserto estrangeiro\", \"ts\": \"10/09/2026 23:18\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}}"
+        },
+        {
+          "id": 269858,
+          "status": "future",
+          "modified": "2026-09-11 01:23:12",
+          "date": "2026-09-11 16:00:00",
+          "excerpt": "Presidente do STF pede a André Mendonça a abertura dos procedimentos, com preservação de diligências, antes da sessão extraordinária de 15 de setembro.",
+          "title": "Fachin pede levantamento parcial do sigilo no caso Master",
+          "content_sha256": "9ec53e1942c3cc2b3a25d6e2dab2a14c136b25665b8c85b89d87f9c820d129a6",
+          "specific_paragraphs": [
+            "<p>O presidente do Supremo Tribunal Federal (STF), Edson Fachin, pediu nesta quinta-feira (10) ao ministro André Mendonça o levantamento do sigilo dos procedimentos ligados às investigações do caso Banco Master que tramitam na Corte. Relator do processo, Mendonça decidirá quais informações poderão ser divulgadas.</p>",
+            "\n<p>Fachin propôs manter sob reserva apenas os dados cuja publicação possa comprometer diligências necessárias a futuras operações.</p>",
+            "\n<p>O pedido não retira automaticamente o sigilo nem alcança informações protegidas por razões investigativas.</p>",
+            "\n<p>O movimento liderado por Fachin separa duas questões.</p>",
+            "\n<p>Até a decisão de Mendonça, os procedimentos continuam protegidos pelo sigilo, e a convocação do plenário não significa que uma investigação contra Moraes será aberta.</p>"
+          ],
+          "next_cron": 1789153200,
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / dia da semana:** o rascunho diz que Fachin pediu o levantamento do sigilo \\\"nesta quinta-feira (10)\\\". As evidências confirmam o pedido em 10/09/2026 (quinta-feira), mas hoje é sexta-feira, 11/09/2026 — o texto narra fato de ONTEM com \\\"nesta quinta-feira\\\", o que é aceitável, porém o título/abertura não declara o gancho de atualidade (a sessão de 15/09 é o desdobramento). Ajustar para \\\"quinta-feira (10)\\\" ou \\\"ontem (10)\\\" e explicitar o gancho (sessão extraordinária de terça, 15/09). Fonte: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/ | https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/\", \"**INCERTO — sessão extraordinária do plenário para \\\"terça-feira, 15 de setembro\\\":** as evidências desta busca NÃO confirmam a data da sessão extraordinária convocada por Fachin nem que o plenário examinará \\\"relatório da PF\\\" sobre Moraes nessa data. As fontes falam de crise no STF, suspensão de decisões rivais e prazo de sexta-feira, mas não cobrem a convocação do plenário para 15/09. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — confirmar com fonte primária (STF) ou reportagem específica antes de publicar.\", \"**INCERTO — \\\"relatório da PF a pedido de Mendonça\\\" com mensagens entre Moraes e Daniel Vorcaro:** as evidências mencionam o escândalo Banco Master, tensões entre ministros e vazamentos policiais, mas NÃO confirmam que exista relatório da PF registrando mensagens trocadas entre Alexandre de Moraes e o ex-banqueiro Daniel Vorcaro, nem que tenha sido elaborado a pedido de Mendonça. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — verificar antes de publicar.\", \"**INCERTO — \\\"Petição 15.556\\\":** o rascunho não cita o número, mas a fonte da Tribuna do Norte cita \\\"Petição 15.556\\\" como objeto do pedido de Fachin. Se o post for mencionar o número do processo, usar essa referência; caso contrário, manter genérico como está. Fonte: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/\", \"FONTES: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/ | https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/ | https://valorinternational.globo.com/politics/news/2026/09/10/top-court-chief-takes-over-fake-news-probe-to-contain-crisis.ghtml | https://www.msn.com/en-us/news/other/brazils-top-judge-suspends-justices-rulings-in-supreme-court-power-struggle/ar-AA2bUISk\"], \"fontes\": [\"https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/\", \"https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/\", \"https://valorinternational.globo.com/politics/news/2026/09/10/top-court-chief-takes-over-fake-news-probe-to-contain-crisis.ghtml\", \"https://www.msn.com/en-us/news/other/brazils-top-judge-suspends-justices-rulings-in-supreme-court-power-struggle/ar-AA2bUISk\"], \"sha\": \"e5f14c5f01aeced3252dee4316d77b95f7025876\", \"ts\": \"11/09/2026 01:05\", \"ts_iso\": \"2026-09-11T04:05:40.570968+00:00\"}, \"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"DIVERGENCIA: título e olho falam em levantamento parcial do sigilo, enquanto as evidências indicam pedido para derrubar o sigilo de todo o caso Master (https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/ e https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/). Ajustar texto/olho ao escopo do pedido conforme a versão adotada.\", \"SUGESTAO_TITULO: Fachin pede fim do sigilo no caso Master no STF\", \"CATEGORIA_SUGERIDA:\"], \"sugestao_titulo\": \"Fachin pede fim do sigilo no caso Master no STF\\nCATEGORIA_SUGERIDA:\", \"categoria_sugerida\": \"\", \"sha\": \"c01d20027d26bcfecb5ef64f0badac92ac221196\", \"ts\": \"11/09/2026 01:21\", \"ts_iso\": \"2026-09-11T04:21:21.822182+00:00\"}, \"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260911-002\", \"fontes\": \"Pedido de Edson Fachin, presidente do STF, ao ministro Andre Mendonca em 10/09/2026, para levantamento PARCIAL do sigilo nos procedimentos do caso Banco Master que tramitam na Corte — mantendo sob reserva apenas o que possa comprometer diligencias futuras; o pedido nao retira o sigilo automaticamente (a decisao e do relator) e antecede a sessao extraordinaria de terca, 15/09, que examinara relatorio da PF; a casa vem cobrindo a serie (269650 de 09/09 e 268973 de 04/09), e esta e continuacao, nao repeticao; CORRIGI um defeito de formatacao da fabrica: o corpo abria com <p><p> duplicado\", \"ts\": \"11/09/2026 01:22\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}}"
+        },
+        {
+          "id": 269868,
+          "status": "draft",
+          "modified": "2026-09-11 01:46:13",
+          "date": "2026-09-11 01:46:13",
+          "excerpt": "",
+          "title": "Exclusivo: Mendonça deu habeas corpus sigiloso para Ibaneis escapar da CPI",
+          "content_sha256": "9751f6f234b9a0954644351411c7e2908ae95b7886949102991f5ddf8d457604",
+          "specific_paragraphs": [
+            "\n<!-- wp:paragraph -->\n<p>Nesta semana, o presidente do STF, Edson Fachin, tomou uma decisão drástica para tentar conter a crise institucional que assola a Suprema Corte: determinou a quebra do sigilo da <strong>Petição 15.556</strong>, a investigação-mãe da Operação Compliance Zero, cujo relator é o ministro André Mendonça. O movimento fez com que dezenas de despachos e decisões sigilosas viessem a público, lançando luz sobre as engrenagens de um dos maiores escândalos financeiros do país, envolvendo o Banco Master, a REAG Investimentos e o empresário Daniel Vorcaro.</p>",
+            "\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Uma leitura atenta da íntegra dos documentos liberados revela o que realmente está em jogo e as <strong>conexões políticas explosivas</strong> que Mendonça manteve sob sigilo.</p>",
+            "\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">O fio solto: Ibaneis Rocha, BRB e a União Brasil</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>O Cafezinho mergulhou na íntegra das Petições 15.556 e 16.662 e encontrou detalhes que mostram que a Operação Compliance Zero não é apenas um caso de crimes financeiros, mas uma bomba que atinge governos estaduais e caciques da direita.</p>",
+            "\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Mendonça, no entanto, agiu para blindar o governador e concedeu um Habeas Corpus sigiloso a Ibaneis, garantindo-lhe o direito de não comparecer à CPI ou de permanecer em silêncio. Na decisão, o ministro despachou: <em>\"restando configurada, pelo teor da justificativa apresentada pela comissão parlamentar para embasar a sua convocação, a condição de investigado do peticionante IBANEIS ROCHA BARROS JÚNIOR [...] afasto a obrigatoriedade de comparecimento, transmudando-a em facultatividade, deixando a cargo do peticionário a decisão de comparecer, ou não, à 'CPI do Crime Organizado'.\"</em></p>",
+            "\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>A situação atinge em cheio o partido União Brasil. Nos documentos, também veio à tona, por meio de um vazamento natural do andamento das apurações, a existência de investigações sigilosas que miravam <strong>ACM Neto e Antonio Rueda</strong>, os grandes caciques da legenda. Mendonça tentou usar esse vazamento como desculpa para atacar duramente a Polícia Federal em sua liminar, criticando a exposição dos líderes partidários. A verdade é que a revelação do envolvimento de figurões da política no esquema apenas reforça a importância e a dimensão do trabalho que a PF vinha realizando — trabalho este que o ministro tentou paralisar com o afastamento de Andrei Rodrigues.</p>",
+            "\n<!-- /wp:paragraph -->\n\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Acesso à íntegra</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Para que nossos leitores e outros veículos independentes possam fazer suas próprias análises sobre o trabalho da PF e as decisões de Mendonça, disponibilizamos abaixo o acesso direto e completo a todos os arquivos e decisões que antes estavam sob sigilo nas Petições do STF.</p>",
+            "\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\">\n    <!-- wp:button {\"backgroundColor\":\"vivid-red\",\"textColor\":\"white\"} -->\n    <div class=\"wp-block-button\"><a class=\"wp-block-button__link has-white-color has-vivid-red-background-color has-text-color has-background wp-element-button\" href=\"https://controle.ocafezinho.com/wp-content/uploads/2026/09/pet15556.zip\" target=\"_blank\" rel=\"noreferrer noopener\">Baixar a íntegra: Petição 15.556 (Investigação original)</a></div>\n    <!-- /wp:button -->\n\n    <!-- wp:button {\"backgroundColor\":\"vivid-red\",\"textColor\":\"white\"} -->\n    <div class=\"wp-block-button\"><a class=\"wp-block-button__link has-white-color has-vivid-red-background-color has-text-color has-background wp-element-button\" href=\"https://controle.ocafezinho.com/wp-content/uploads/2026/09/pet16662.zip\" target=\"_blank\" rel=\"noreferrer noopener\">Baixar a íntegra: Petição 16.662 (Crise PF e relatórios)</a></div>\n    <!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n"
+          ],
+          "next_cron": false,
+          "txt_check": "{\"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"TÍTULO viola EMU-1/2/8: é trailer, tem dois-pontos e não traz um fato único claro com agente+ação+objeto.\", \"OLHO incoerente/truncado e com afirmação divergente: diz que Fachin “determinou a quebra do sigilo” da petição 15.556; as evidências indicam que ele pediu a retirada do sigilo a Mendonça, não determinou (https://www.correiodopovo.com.br/not%C3%ADcias/pol%C3%ADtica/fachin-pede-a-mendonca-que-retire-sigilo-do-caso-master-1.1746851 | https://www.msn.com/pt-br/noticias/other/presidente-do-stf-pede-retirada-de-sigilo-do-caso-master/ar-AA2bYQQE). Ajustar para “pediu” e concluir o texto truncado.\", \"DATA_DO_FATO: incluir a data do pedido de retirada de sigilo (10/9/2026) e datar os demais atos citados (ex.: liminar de 8/9 sobre a PF) para ancorar o “nesta semana” (https://www.bbc.com/portuguese/articles/cq8j79jpwjko | https://oglobo.globo.com/politica/noticia/2026/09/09/mendonca-moraes-segunda-turma-gilmar-agu-entenda-os-movimentos-de-cada-um-na-escalada-da-crise-no-stf.ghtml).\", \"NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA: referências a “Operação Compliance Zero”, BRB/Banco Master, e citações a ACM Neto/Antonio Rueda dentro das petições não aparecem nas fontes públicas listadas; incluir links/documentos públicos que sustentem esses pontos.\", \"SUGESTAO_TITULO: Fachin pede a Mendonça retirada de sigilo da petição 15.556 no STF\", \"CATEGORIA_SUGERIDA: Política\"], \"sugestao_titulo\": \"Fachin pede a Mendonça retirada de sigilo da petição 15.556 no STF\\nCATEGORIA_SUGERIDA: Política\", \"categoria_sugerida\": \"Política\", \"sha\": \"ee79cc7db02b809dab330df0f0ad8d58504232c0\", \"ts\": \"11/09/2026 01:20\", \"ts_iso\": \"2026-09-11T04:20:46.878158+00:00\"}}"
+        }
+      ],
+      "volume": [
+        {
+          "hours": 3,
+          "after_local": "2026-09-10 22:48:45",
+          "count": 2,
+          "ids": [
+            269716,
+            269852
+          ]
+        },
+        {
+          "hours": 6,
+          "after_local": "2026-09-10 19:48:45",
+          "count": 8,
+          "ids": [
+            269716,
+            269852,
+            269735,
+            269727,
+            269768,
+            269791,
+            269790,
+            269789
+          ]
+        },
+        {
+          "hours": 12,
+          "after_local": "2026-09-10 13:48:45",
+          "count": 20,
+          "ids": [
+            269716,
+            269852,
+            269735,
+            269727,
+            269768,
+            269791,
+            269790,
+            269789,
+            269713,
+            269798,
+            269705,
+            269772,
+            269700,
+            269748,
+            269767,
+            269697,
+            269745,
+            269759,
+            269696,
+            269756
+          ]
+        },
+        {
+          "hours": 24,
+          "after_local": "2026-09-10 01:48:45",
+          "count": 34,
+          "ids": [
+            269716,
+            269852,
+            269735,
+            269727,
+            269768,
+            269791,
+            269790,
+            269789,
+            269713,
+            269798,
+            269705,
+            269772,
+            269700,
+            269748,
+            269767,
+            269697,
+            269745,
+            269759,
+            269696,
+            269756,
+            269693,
+            269679,
+            269725,
+            269722,
+            269678,
+            269720,
+            269714,
+            269711,
+            269670,
+            269671,
+            269659,
+            269661,
+            269687,
+            269672
+          ]
+        }
+      ]
+    }
+  },
+  "remote_integrity": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "baseline_remote": "373c13d7699fbde64c066a3cc8d4050f70d32c0f",
+      "remote": "46f8981ea17bfa8c32ce27d06c221f713a83a40a",
+      "removed_nonblank": 0
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "baseline_remote": "373c13d7699fbde64c066a3cc8d4050f70d32c0f",
+      "remote": "46f8981ea17bfa8c32ce27d06c221f713a83a40a",
+      "removed_nonblank": 0
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "baseline_remote": "373c13d7699fbde64c066a3cc8d4050f70d32c0f",
+      "remote": "46f8981ea17bfa8c32ce27d06c221f713a83a40a",
+      "removed_nonblank": 0
+    }
+  ]
+}

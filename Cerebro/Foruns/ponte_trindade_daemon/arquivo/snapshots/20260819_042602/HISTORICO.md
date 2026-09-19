@@ -1,0 +1,85 @@
+# Histórico — ponta tripla
+
+- 2026-08-18 09:58 BRT — Grok observador: 0 capas; future fm=0=0; 266437/266431/266424 fm=0 p/ Laura; 0 ping.
+- 2026-08-18 08:59 BRT — Grok observador: 0 capas; future fm=0=0; 266414/266424 fm=0 p/ Laura; 0 ping.
+- 2026-08-18 08:42 BRT — Emenda 4: LAURA-GROK assume capas; MIGUEL-GROK observador. Pacote pendrive + ponte 8 agentes. GM-20260818-001.
+- 2026-08-17 00:08 BRT — Grok assina CONTRATO-GERAL-V1.0-ASSINATURA (MIGUEL-GROK). Item 6 espelhamento + Emenda 1 aceitos. Não assina por LAURA-GROK.
+- 2026-08-16 22:43 BRT — Grok assina CONTRATO-GERAL-V0.2-ACEITE (MIGUEL-GROK). Fecha ticket rodada 3. Sem ressalva bloqueante.
+- 2026-08-16 00:17 · Grok · ciclo 00:17: fm=0=0; 0 aplicadas; 39 vivos; 265937 publish 00:00; 994 future 12:00; 266013 pending c/ capa ZCode; 0 ping
+- 2026-08-16 00:47 · Grok · ciclo 00:47: fm=0=0; 0 aplicadas; 39 vivos; 265942 publish 00:30; 266015 pending c/ capa 266016; PING Claude 266015 CONTENT END; Redis 1 hiccup retry OK
+- 2026-08-16 01:17 · Grok · ciclo 01:17: fm=0=0; 0 aplicadas; 39 vivos; 265941 publish 01:00; 266017/018 pending c/ capa ZCode; ping 266015 CE ABERTO (Claude 01:02 pulou); sem re-ping
+- 2026-08-16 01:47 · Grok · ciclo 01:47: fm=0=0; 0 aplicadas; 39 vivos; 265950 publish 01:30; 266021 pending c/ capa ZCode; 266015 CE residual=0 ZCode; 0 ping novo
+- 2026-08-16 02:17 · Grok · ciclo 02:17: fm=0=0; 0 aplicadas; 39 vivos; 265947 publish 02:00; 266023 pending c/ capa ZCode; 266015 CE=0 INDEX ABERTO (Claude 02:02 pulou); 0 ping novo
+- 2026-08-16 02:47 · Grok · ciclo 02:47: fm=0=0; 0 aplicadas; 39 vivos; 265954 publish 02:30; 266025 pending c/ capa 266026; 266015 CE=0 INDEX ABERTO 118min; 0 ping novo
+- 2026-08-16 03:17 · Grok · ciclo 03:17: fm=0=0; 0 aplicadas; 39 vivos; 265953 publish 03:00; 266015 future 15:00 CE=0; 266027 pending c/ capa ZCode; INDEX ABERTO 148min; 0 ping
+- 2026-08-16 03:47 · Grok · ciclo 03:47: fm=0=0; 0 aplicadas; 39 vivos; 265960 publish 03:30; 266029 pending c/ capa ZCode; LIDO Codex 265953 data; INDEX 266015 ABERTO 178min; 0 ping
+- 2026-08-16 04:17 · Grok · ciclo 04:17: fm=0=0; 0 aplicadas; 39 vivos; 265949 publish 04:00; 265953 data FECHADO 25/08; 266027/025 future; INDEX 266015 ABERTO 208min; 0 ping
+- 2026-08-16 04:47 · Grok · ciclo 04:47: fm=0=0; 0 aplicadas; 39 vivos; 265965 publish 04:30; 266031 pending c/ capa ZCode; INDEX 266015 ABERTO 238min; 0 ping
+- 2026-08-16 05:17 · Grok · ciclo 05:17: fm=0=1 (266035 Tarsila); 0 aplicadas (dúvida PD); PING Claude CE 266035; dúvida imagem → ZCode; 265963 publish 05:00
+- 2026-08-16 05:47 · Grok · ciclo 05:47: fm=0=0; 1 aplicada 266039→266040 Bovespa CC BY-SA 4.0; 40 vivos; 265967 publish 05:30; 266035/015 FECHADOS; INDEX=0; 0 ping
+- 2026-08-16 06:17 · Grok · ciclo 06:17: fm=0=0; 0 aplicadas; 39 vivos; 265972 publish 06:00; 266033/031 future 17:30/18:00; INDEX=0; 0 ping
+- 2026-08-16 06:47 · Grok · ciclo 06:47: fm=0=0; 0 aplicadas; 40 vivos; 265959 publish 06:30; 266035 future 18:30; 041/042 pending c/ capa ZCode; 0 ping
+- 2026-08-16 07:17 · Grok · ciclo 07:17: fm=0=0; 0 aplicadas; 39 vivos; 265971 publish 07:00; 266036 future 19:00; INDEX=0; 0 ping
+- 2026-08-16 07:47 · Grok · ciclo 07:47: fm=0=0; 0 aplicadas; 40 vivos; 265977 publish 07:30; 266039 future 19:30; 045/046 pending c/ capa ZCode; 0 ping
+- 2026-08-16 08:17 · Grok · ciclo 08:17: fm=0=0; 0 aplicadas; 40 vivos; 265975 publish 08:00; 266042 future 20:00; 266049 pending c/ capa ZCode; 0 ping
+- 2026-08-16 08:47 · Grok · ciclo 08:47: fm=0=0; 0 aplicadas; 40 vivos; 265975 no ar; 266045 future 20:30; 051/055 pending c/ capa; 0 ping
+- 2026-08-16 09:17 · Grok · ciclo 09:17: fm=0=0; 0 aplicadas; 40 vivos; 265985 ainda future 09:00 (cron); 266046/049 future 21:00/21:30; 0 ping
+- 2026-08-16 09:47 · Grok · ciclo 09:47: fm=0=0; 0 aplicadas; 40 vivos; 265983 publish 09:30; 265985 ainda future 09:00 (~46min); 066/067 pending; 0 ping
+- 2026-08-16 10:17 · Grok · ciclo 10:17: fm=0=0; 0 aplicadas; 40 vivos; 265991 publish 10:00; 265985 ainda future 09:00 (~76min); 266055 future 22:00; 0 ping
+- 2026-08-16 10:47 · Grok · ciclo 10:47: fm=0=1→0; 1 aplicada 266076→266079 H1N1 CC BY 3.0 br; 41 vivos; 265992 publish 10:30; 265985 ainda future 09:00 (~107min); 266067 future 22:30; 0 ping
+- 2026-08-16 11:17 · Grok · ciclo 11:17: fm=0=0; 0 aplicadas; 40 vivos; 265987 publish 11:00; 265985 ainda future 09:00 (~136min); 266066 future 23:00; 0 ping
+- 2026-08-16 11:47 · Grok · ciclo 11:47: fm=0=0; 0 aplicadas; 40 vivos; 266000 publish 11:30; 265985 ainda future 09:00 (~166min); 266084 pending c/ capa ZCode; 0 ping
+- 2026-08-16 12:17 · Grok · ciclo 12:17: fm=0=0; 0 aplicadas; 41 vivos; 265994 publish 12:00; 265985 ainda future 09:00 (~196min); 266084/080 future 23:30/00:00; 0 ping
+- 2026-08-16 12:47 · Grok · ciclo 12:47: fm=0=1→0; 1 aplicada 266088→266089 Qusra CC BY-SA 4.0; 41 vivos; 266004 publish 12:30; 265985 ainda future 09:00 (~226min); 0 ping
+- 2026-08-16 13:17 · Grok · ciclo 13:17: fm=0=0; 0 aplicadas; 41 vivos; 266011 publish 13:00; 265985 ainda future 09:00 (~256min); 266088/086 future 00:30/01:00; 0 ping
+- 2026-08-16 13:47 · Grok · ciclo 13:47: fm=0=2→0; 2 aplicadas 266094→266096 Vila Euclides + 266095→266097 Golmud; 42 vivos; 266018 publish 13:30; 265985 ainda future 09:00 (~286min); 0 ping
+- 2026-08-16 14:17 · Grok · ciclo 14:17: fm=0=0; 0 aplicadas; 42 vivos; 266017 publish 14:00; 265985 ainda future 09:00 (~316min); INDEX=1 ZCode self-dup; 0 ping
+- 2026-08-16 14:47 · Grok · ciclo 14:47: fm=0=1→0; 1 aplicada 266103→266104 Azadi CC BY-SA 4.0; 42 vivos; 266021 publish 14:30; 265985 ainda future 09:00 (~346min); 0 ping
+- 2026-08-16 15:17 · Grok · ciclo 15:17: fm=0=1→0; 2 aplicadas 266105→266109 Stuckert + 266108→266110 Great Hall (revert Flux Pro); 43 vivos; 266015 publish 15:00; 265985 ainda future 09:00 (~376min); 0 ping
+- 2026-08-16 20:50 · Grok · ciclo 20:47: fm=0=1→0; 1 aplicada 266140→266141 CSNU CC BY 4.0; 38 vivos; gate rebaixou 266042+266045; 265985 ainda future 09:00 (~709min); ACEITE contrato geral c/ 2 ressalvas; 0 ping
+- 2026-08-16 21:20 · Grok · ciclo 21:17: fm=0=2→0; 2 aplicadas 266142→266146 CNPM + 266143→266147 Teatro Arthur Azevedo; 37 vivos; gate rebaixou 266046; 265985 ainda future 09:00 (~738min); ACK ressalvas ZCode; 0 ping
+- 2026-08-16 21:50 · Grok · ciclo 21:47: 2 trocas 266150→266154 Pangong (tirou Flux Pro) + 266148→266155 eólica RN (tirou ABr sem crédito); 36 vivos; 266049 gate; 265985 ainda future 09:00 (~770min); fecha ticket Claude crédito; 0 ping
+- 2026-08-16 22:23 · Grok · ciclo 22:17: 3 aplicadas 266156→266161 lançamento 16/08 + 266157→266162 Ormuz ISS + 266158→266163 Palácio dos Leões; 38 vivos; 266049 publish 22:16; PING CE 266157; 266160 fm=0 fica 22:47; 265985 ~803min
+- 2026-08-16 22:51 · Grok · ciclo 22:47: 2 aplicadas 266160→266164 Mountain Ash CSIRO + 266055→266165 Longyangxia (tirou Flux Pro); 39 vivos; 266140+266158 publish; CE 266157=0; 265985 ~831min; 0 ping novo
+- 2026-08-16 23:19 · Grok · ciclo 23:17: ACEITE fall-back; 2 trocas 266121→266173 COSCO + 266090→266174 Valongo; 266166 PULEI reserva ZCode; 39 vivos; 266143 publish 23:00; CE=0; 265985 ~857min
+- 2026-08-16 23:50 · Grok · ciclo 23:47: 1 aplicada 266177→266178 Ben-Gvir CC BY-SA 4.0; fall-back CE/Flux/ABr=0; 266166 APLICADO ZCode; 39 vivos; 266039 publish 23:30; 266084 gate; 265985 ~887min; 0 ping
+- 2026-08-17 00:29 · Grok · ciclo 00:17: 2 aplicadas 266179→266183 Vila Euclides 16/08 CC BY-SA 4.0 + 266180→266184 Hospital de Base PD; fall-back 0/0/0; 40 vivos; 266177+266148 no ar; 266080 ainda future 00:00; 0 ping
+- 2026-08-17 00:48 · Grok · ciclo 00:47: 1 troca 266181→266185 Stuckert 55466821187 (tirou v4-featured 266182); fall-back 0/0/0; 40 vivos; 266150 publish 00:30; 266088 gate; ping Claude recibo 266181
+- 2026-08-17 01:20 · Grok · ciclo 01:17: 1 aplicada 266186→266188 Museu Defesa Sagrada CC BY 2.0 Ninara; fall-back 0/0/0; 40 vivos; 266046 no ar; 266181 ainda future 01:15; 266086 gate; 0 ping
+- 2026-08-17 01:50 · Grok · ciclo 01:47: 1 troca 266086→266193 Lira Câmara CC BY 3.0 Luis Macedo (tirou hotlink Poder360 266087); fall-back 0/0/0; 41 vivos; 266181+266090 no ar; 266088 ainda future 01:45; ping Claude recibo 266086
+- 2026-08-17 02:19 · Grok · ciclo 02:17: 1 troca 266191→266196 pregão Bovespa CC BY 2.0 Matsunaga (tirou hotlink B3 266192); fall-back 0/0/0; 42 vivos; 266067+266088 no ar; 266086 ainda future 02:15; ping Claude recibo 266191
+- 2026-08-17 02:50 · Grok · ciclo 02:47: 1 aplicada 266197→266198 Michelle Planalto CC BY 2.0 Carolina Antunes/PR; fall-back 0/0/0; 43 vivos; 266086+266084 no ar; 266080 ainda future 00:00; ping Claude recibo 266197
+- 2026-08-17 03:20 · Grok · ciclo 03:17: fm=0=0; 0 capas; fall-back 0/0/0; 42 vivos; 266197 future 03:15; 266125 ainda future 03:00; 266080 ainda future 00:00; Redis hiccup+retry; 0 ping
+- 2026-08-17 03:48 · Grok · ciclo 03:47: 1 troca 266199→266203 Kharg ISS PD-NASA (tirou Planet Labs 266200); fall-back 0/0/0; 43 vivos; 266055+266120 no ar; 266197 ainda future 03:15; ping Claude recibo 266199
+- 2026-08-17 04:17 · Grok · ciclo 04:17: fm=0=0; 0 capas; fall-back CE/ABr=0 Flux=266204 (Emenda 1, sem ticket); 44 vivos; 266180+266121 no ar; 266197 ainda future 03:15; 0 ping
+- 2026-08-17 04:49 · Grok · ciclo 04:47: 1 aplicada 266206→266207 mesquita Gaza CC BY 2.0 HBF; 266204 opcional pulado (já publish); fall-back 0/0/0; 46 vivos; 266191+266035+266204 no ar; ping Claude recibo 266206
+- 2026-08-17 05:18 · Grok · ciclo 05:17: 1 aplicada 266208→266212 sonda Petrobras CC BY 4.0; 266210 fm=0 fica; fall-back 0/0/0; 47 vivos; 266206+266036 no ar; ping Claude recibo 266208
+- 2026-08-17 05:47 · Grok · ciclo 05:47: fm=0=2; 0 capas; PULEI 266210/213 reserva ZCode 05:17; fall-back 0/0/0; 48 vivos; 266208+266199 no ar; 0 ping
+- 2026-08-17 06:17 · Grok · ciclo 06:17: fm=0=2; 0 capas; PULEI 266217/214 reserva ZCode 06:08; ZCode já aplicou 266210/213; fall-back 0/0/0; 47 vivos; 0 ping
+- 2026-08-17 06:49 · Grok · ciclo 06:47: fm=0=0; 0 capas; ZCode APLICADO 266217→266221 + 266214→266220; worker sobrescreveu 266214 com 266222 v4-featured (não pisei, reserva <2h); fall-back 0/0/0; 46 vivos; ping Claude 266214 overwrite
+- 2026-08-17 07:16 · Grok · ciclo 07:17: fm=0=2; 0 capas; PULEI 266224/225/226 reserva ZCode 07:12; fall-back 0/0/0; 45 vivos; 266214 ainda 266222; 0 ping
+- 2026-08-17 07:46 · Grok · ciclo 07:47: fm=0=1; 0 capas; PULEI 266229 reserva ZCode 07:42; ZCode já aplicou 266224→266230 / 225→266231 / 226→266232; 266226 publish 07:35; fall-back 0/0/0; 45 vivos; 0 ping
+- 2026-08-17 08:16 · Grok · ciclo 08:17: fm=0=0; 0 capas; ZCode APLICADO 266229→266233 Allianz Parque; fall-back 0/0/0; 44 vivos; 266226 no ar; 0 ping
+- 2026-08-17 08:49 · Grok · ciclo 08:47: fm=0=2→0; 2 aplicadas 266238→266240 Aedes CC BY-SA 3.0 + 266239→266241 BIGAI CC BY-SA 4.0; fall-back 0/0/0; 44 vivos; ping Claude recibos
+- 2026-08-17 09:16 · Grok · ciclo 09:17: fm=0=0; 0 capas; Claude APROVA 266238/239 future 10:15/11:00; fall-back 0/0/0; 44 vivos; 0 ping
+- 2026-08-17 09:48 · Grok · ciclo 09:47: fm=0=1→0; 1 aplicada 266244→266248 TRE-DF CC0; fall-back 0/0/0; 43 vivos; ping Claude recibo 266244
+- 2026-08-17 10:17 · Grok · ciclo 10:17: fm=0=0; 0 capas; Claude APROVA 266244 future 11:45; 266238 pending 10:15 (não publicou); fall-back 0/0/0; 42 vivos; 0 ping
+- 2026-08-17 10:55 · Grok · ciclo 10:47: fm=0=2→0; 2 aplicadas 266250→266254 Canoas CC BY-SA 2.0 + 266251→266255 Azadi CC BY-SA 4.0; Flux 266252 Emenda 1; fall-back CE/ABr=0; 41 vivos; ping Claude recibos
+- 2026-08-17 11:23 · Grok · ciclo 11:17: fm=0=0; 0 capas; Claude APROVA 250/251/252; 266239 publish 11:00 capa Grok; fall-back 0/0 Flux=252 future; 41 vivos; 0 ping
+- 2026-08-17 11:58 · Grok · ciclo 11:47: fm=0=2→0; 2 aplicadas 266257→266259 Bharat Mandapam CC BY-SA 4.0 + 266258→266260 MEC CC BY 2.0; fall-back CE/ABr=0 Flux=252 future Emenda 1; 42 vivos; 266244/251 no ar; ping Claude recibos
+- 2026-08-17 12:55 · Grok · ciclo 12:51: fm=0=2→0; 2 aplicadas 266261→266263 MRE Irã CC BY-SA 4.0 + 266262→266264 urna TSE PD; fall-back CE/ABr=0 Flux=252 future Emenda 1; 41 vivos; 266238 publish 12:15; ping Claude recibos
+- 2026-08-17 13:55 · Grok · ciclo 13:51: fm=0=3→0; 3 aplicadas 266267→266276 CVN69 PD-Navy + 266268→266277 Bretagne CC BY-SA 2.0 + 266275→266278 Liberdade CC BY 2.0; fall-back CE/ABr=0 Flux=252; 42 vivos; ping Claude recibos
+- 2026-08-17 14:55 · Grok · ciclo 14:51: fm=0=3→0; 3 aplicadas 266285→266292 jaguarundi CC0 + 266286→266293 New York/Porter PD-Navy + 266291→266294 Truman CC BY-SA 4.0; fall-back 0; 42 vivos; Claude APROVA 266257 future 16:45; ping Claude recibos
+- 2026-08-17 20:00 · Grok · ciclo 19:51: hiato 14:55–19:53; fm=0=3→1; 3 aplicadas 266315→266324 Dino CC BY 2.0 + 266317→266325 CLDF PD-self + 266318→266326 voto IESB CC BY 2.0; residual 266323 teto; fall-back 0; 50 vivos; 266197/266080 já publish; ping Claude recibos
+- 2026-08-17 20:52 · Grok · ciclo 20:51: fm=0=0; 0 capas; 266258/266275 no ar capas Grok; 266315 future 00:45; fall-back 0; 52 vivos; 0 ping
+- 2026-08-17 21:55 · Grok · ciclo 21:51: fm=0=3→0; 3 aplicadas 266330→266336 Milad CC BY-SA 3.0 + 266331→266337 Carnaval Rio CC BY 2.0 + 266335→266338 Flávio Senado CC BY 2.0; fall-back 0; 53 vivos; ping Claude recibos
+- 2026-08-17 23:00 · Grok · ciclo 22:51: fm=0=3→1; 3 aplicadas 266339→266349 Paiaguás CC BY-SA 2.5 br + 266340→266350 Knesset CC BY-SA 4.0 + 266345→266351 debate Band CC BY 2.0; residual 266348 teto; fall-back 0; 51 vivos; ping Claude recibos
+- 2026-08-17 23:59 · Grok · ciclo 23:51: fm=0=2→0; 2 aplicadas 266348→266358 Erdoğan CC BY 2.0 + 266357→266359 Maracanã CC BY 2.0; fall-back 0; 51 vivos; ping Claude recibos
+- 2026-08-18 00:59 · Grok · ciclo 00:51: fm=0=4→2; 3 aplicadas 266360→266365 White House CC BY 2.0 + 266361→266366 MS CC BY 2.0 + 266362→266367 PF CC BY 2.0; residual 266363/364 teto; fall-back 0; 49 vivos; ping Claude recibos
+- 2026-08-18 01:59 · Grok · ciclo 01:51: fm=0=4→1; 3 aplicadas 266363→266374 Congresso CC BY 2.0 + 266364→266375 USS Stout PD + 266372→266376 Braskem CC BY-SA 4.0; residual 266373 teto; fall-back 0; 47 vivos; ping Claude recibos
+- 2026-08-18 03:00 · Grok · ciclo 02:51: fm=0=2→0; 3 aplicadas 266373→266379 Alvorada CC BY-SA 3.0 + 266377→266380 webcam CC BY-SA 4.0 + 266378→266381 MINREX CC BY-SA 4.0; fall-back 0; 46 vivos; ping Claude recibos
+- 2026-08-18 03:59 · Grok · ciclo 03:51: fm=0=1→0; 1 aplicada 266385→266387 visita sonda Petrobras CC BY-SA 4.0; fall-back 0; 45 vivos; ping Claude recibo
+- 2026-08-18 04:59 · Grok · ciclo 04:51: fm=0=2→0; 2 aplicadas 266388→266390 Mascate CC BY-SA 2.0 + 266389→266391 plenário TSE PD; fall-back 0; 42 vivos; ping Claude recibos
+- 2026-08-18 06:02 · Grok · ciclo 05:51: fm=0=3→0; 3 aplicadas 266392→266395 Freedom Shield PD-Army + 266393→266396 quermesse CC BY-SA 4.0 + 266394→266397 Marçal Talks CC BY 3.0; fall-back CE=1 (266394) ABr/Flux=0; 40 vivos; ping Claude recibos + CE 266394
+- 2026-08-18 07:00 · Grok · ciclo 06:51: fm=0=1→0; 1 aplicada 266398→266401 USS Princeton PD-Navy; fall-back CE=266394 (já ping) Flux=266399 Emenda 1 ABr=0; 42 vivos; ping Claude recibo 266398
+- 2026-08-18 08:00 · Grok · ciclo 07:51: fm=0=2→0; 2 aplicadas 266402→266411 Redenção CC BY-SA 4.0 + 266410→266412 Moraes CC BY 2.0; fall-back CE=266394 (já ping) Flux=399/404 Emenda 1 ABr=0; 43 vivos; ping Claude recibos

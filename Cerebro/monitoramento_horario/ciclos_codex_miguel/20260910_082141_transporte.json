@@ -1,0 +1,47 @@
+{
+  "ref": "XM-20260910-017",
+  "rounds_executed": 1,
+  "timestamp_brt": "2026-09-10T08:22:24.402972-03:00",
+  "content_commit": "48ab2a9a41812368b000eb1c9518c0d584796519",
+  "github_push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "48ab2a9a41812368b000eb1c9518c0d584796519:refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   ca004992f..48ab2a9a4  48ab2a9a41812368b000eb1c9518c0d584796519 -> main\n",
+    "timestamp_brt": "2026-09-10T08:21:55.970640-03:00"
+  },
+  "github_ls_remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "48ab2a9a41812368b000eb1c9518c0d584796519\trefs/heads/main\n",
+    "stderr": "",
+    "timestamp_brt": "2026-09-10T08:22:24.270035-03:00"
+  },
+  "delivery_confirmed": true,
+  "nyc": {
+    "main": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "ancestor_rc": 1,
+    "result": "HOLD_NON_FF",
+    "push_attempted": false
+  },
+  "gdrive": "NAO_TESTADO",
+  "tencent_reserva": "NAO_TESTADO",
+  "prefixes_preserved": true,
+  "preexisting_untracked_preserved": 221,
+  "artifact_sha256": {
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_082141_auditoria_integridade.py": "e96c2f48306f58ff14c80dfa7aea5c44d32453666b7f4cb0909939d8d8cde775",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_082141_evidencias.json": "f82d3355d39d6c754eb924e04b875bec0375035bd1dfbcb4b7b1617fbc2b3415"
+  },
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "operational_mutations": 0
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "cafezinho.faxina.audit-summary.v1",
+  "created_utc": "2026-08-11T08:39:46.892364+00:00",
+  "candidate": "/root/legacy/banco_midia_20260626",
+  "classification": "eligible_for_miguel_consultation_not_authorized_for_action",
+  "decision": "preserve_in_place",
+  "latest_file_or_symlink_mtime_utc": "2026-06-29T09:23:52.112647+00:00",
+  "elapsed_days_since_latest_file_or_symlink_mtime": 42.969,
+  "activity_proof": {
+    "running_process_references": 0,
+    "open_file_descriptors": 0,
+    "cron_systemd_or_external_path_references": 0,
+    "external_database_basename_references": 0,
+    "canonical_database": "/root/agent_data/banco_midia/banco_imagens_reais.db",
+    "canonical_database_recent_mtime": "2026-08-11T08:21:36.720741866+00:00"
+  },
+  "inventory_counts": {
+    "directory": 1,
+    "file": 10,
+    "symlink": 0,
+    "special": 0
+  },
+  "indexed_logical_file_bytes": 470083676,
+  "sqlite_quick_check": [
+    {
+      "path": "/root/legacy/banco_midia_20260626/V3_tmp_banco_imagens_reais.db",
+      "result": "ok"
+    },
+    {
+      "path": "/root/legacy/banco_midia_20260626/V3_tmp_banco_imagens_trilhos.db",
+      "result": "ok"
+    },
+    {
+      "path": "/root/legacy/banco_midia_20260626/agent_data_root_banco_imagens_reais.db",
+      "result": "ok"
+    },
+    {
+      "path": "/root/legacy/banco_midia_20260626/cafezinho_dados_agentes_banco_imagens_reais.db",
+      "result": "ok"
+    },
+    {
+      "path": "/root/legacy/banco_midia_20260626/gsn_Legacy_banco_imagens_reais.db",
+      "result": "ok"
+    }
+  ],
+  "existing_b2_archive": {
+    "object": "b2:failover-cafezinho1/faxina/tencent/backups-locais/2026-08/limpeza_bancos_midia_orfos_20260626_004335.tar.gz",
+    "sha256": "4301dfff381f48178deb688d86320607cc85735645fc04ee54c1726167b3726e",
+    "exact_database_member_hashes_verified": true,
+    "note": "Os cinco arquivos .db locais coincidem por tamanho e SHA-256 com os cinco membros correspondentes do tar; README e sidecars ainda exigem snapshot próprio se a retirada for autorizada."
+  },
+  "mutation_to_candidate": "none"
+}

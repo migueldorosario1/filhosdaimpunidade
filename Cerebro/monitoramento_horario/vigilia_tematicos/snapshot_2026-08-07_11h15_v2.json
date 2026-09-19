@@ -1,0 +1,220 @@
+{
+  "aiatolah": {
+    "nome": "aiatolah",
+    "url": "https://aiatolah.com",
+    "http": 200,
+    "final_url": "https://aiatolah.com",
+    "posts_hoje_count": 0,
+    "posts_hoje": [],
+    "diagnose": "sem posts recentes encontrados via regex — pode ter formato URL diferente"
+  },
+  "ceara": {
+    "nome": "ceara",
+    "url": "https://ceara.digital",
+    "http": 200,
+    "final_url": "https://ceara.digital",
+    "posts_hoje_count": 3,
+    "posts_hoje": [
+      [
+        "20260807",
+        "anvisa-proibe-ozempic-natural-e-manda-apreender-produto-em-t"
+      ],
+      [
+        "20260807",
+        "ceara-divulga-indicadores-de-criminalidade-de-julho-nesta-se"
+      ],
+      [
+        "20260807",
+        "copa-do-brasil-tera-impedimento-semiautomatico-nas-quartas-f"
+      ]
+    ],
+    "posts_hero_ok": 2,
+    "posts_check": [
+      {
+        "url": "https://ceara.digital/blog/20260807-anvisa-proibe-ozempic-natural-e-manda-apreender-produto-em-t/",
+        "og_image": "https://ceara.digital/hero/anvisa-proibe-ozempic-natural-e-manda-apreender-produto-em-t.jpg",
+        "hero_src": "/hero/anvisa-proibe-ozempic-natural-e-manda-apreender-produto-em-t.jpg",
+        "hero_http": null,
+        "is_ok": true
+      },
+      {
+        "url": "https://ceara.digital/blog/20260807-ceara-divulga-indicadores-de-criminalidade-de-julho-nesta-se/",
+        "og_image": "https://ceara.digital/hero/ceara-divulga-indicadores-de-criminalidade-de-julho-nesta-se.jpg",
+        "hero_src": "/hero/ceara-divulga-indicadores-de-criminalidade-de-julho-nesta-se.jpg",
+        "hero_http": null,
+        "is_ok": true
+      }
+    ],
+    "diagnose": "OK — 2 posts checked, todos com hero real HTTP 200"
+  },
+  "discoverbrazil": {
+    "nome": "discoverbrazil",
+    "url": "https://discoverbrazil.news",
+    "http": 200,
+    "final_url": "https://www.discoverbrazil.news/",
+    "posts_hoje_count": 3,
+    "posts_hoje": [
+      [
+        "20260807",
+        "sao-tome-and-principe-africa-s-leve-leve-eco-destination"
+      ],
+      [
+        "20260807",
+        "latin-american-steel-split-ternium-rises-csn-slumps-on-china"
+      ],
+      [
+        "20260806",
+        "millennials-and-gen-z-are-redefining-vacation-ownership-in-b"
+      ]
+    ],
+    "posts_hero_ok": 2,
+    "posts_check": [
+      {
+        "url": "https://www.discoverbrazil.news/blog/20260807-sao-tome-and-principe-africa-s-leve-leve-eco-destination/",
+        "og_image": "https://discoverbrazil.news/hero/sao-tome-and-principe-africa-s-leve-leve-eco-destination.jpg",
+        "hero_src": "/hero/sao-tome-and-principe-africa-s-leve-leve-eco-destination.jpg",
+        "hero_http": null,
+        "is_ok": true
+      },
+      {
+        "url": "https://www.discoverbrazil.news/blog/20260807-latin-american-steel-split-ternium-rises-csn-slumps-on-china/",
+        "og_image": "https://discoverbrazil.news/hero/latin-american-steel-split-ternium-rises-csn-slumps-on-china.jpg",
+        "hero_src": "/hero/latin-american-steel-split-ternium-rises-csn-slumps-on-china.jpg",
+        "hero_http": null,
+        "is_ok": true
+      }
+    ],
+    "diagnose": "OK — 2 posts checked, todos com hero real HTTP 200"
+  },
+  "globalsouth": {
+    "nome": "globalsouth",
+    "url": "https://globalsouth.news",
+    "http": 200,
+    "final_url": "https://www.globalsouth.news/",
+    "posts_hoje_count": 3,
+    "posts_hoje": [
+      [
+        "20260807",
+        "one-year-after-komanda-massacre-survivors-demand-peace-and-p"
+      ],
+      [
+        "20260807",
+        "comoros-moroni-residents-struggle-as-water-shortages-worsen"
+      ],
+      [
+        "20260806",
+        "armed-attack-kills-at-least-30-in-nigeria-s-kaduna-state"
+      ]
+    ],
+    "posts_hero_ok": 2,
+    "posts_check": [
+      {
+        "url": "https://www.globalsouth.news/blog/20260807-one-year-after-komanda-massacre-survivors-demand-peace-and-p/",
+        "og_image": "https://www.globalsouth.news/hero/one-year-after-komanda-massacre-survivors-demand-peace-and-p.jpg",
+        "hero_src": "/hero/one-year-after-komanda-massacre-survivors-demand-peace-and-p.jpg",
+        "hero_http": null,
+        "is_ok": true
+      },
+      {
+        "url": "https://www.globalsouth.news/blog/20260807-comoros-moroni-residents-struggle-as-water-shortages-worsen/",
+        "og_image": "https://www.globalsouth.news/hero/comoros-moroni-residents-struggle-as-water-shortages-worsen.jpg",
+        "hero_src": "/hero/comoros-moroni-residents-struggle-as-water-shortages-worsen.jpg",
+        "hero_http": null,
+        "is_ok": true
+      }
+    ],
+    "diagnose": "OK — 2 posts checked, todos com hero real HTTP 200"
+  },
+  "mapario": {
+    "nome": "mapario",
+    "url": "http://mapario.com.br",
+    "http": null,
+    "final_url": "http://mapario.com.br",
+    "diagnose": "HTTP None após retry"
+  },
+  "mundotrilhos": {
+    "nome": "mundotrilhos",
+    "url": "https://mundotrilhos.com",
+    "http": 200,
+    "final_url": "https://www.mundotrilhos.com/",
+    "posts_hoje_count": 3,
+    "posts_hoje": [
+      [
+        "20260807",
+        "hitachi-rail-inicia-nova-etapa-de-instalacao-do-etcs-na-gold"
+      ],
+      [
+        "20260806",
+        "via-rail-encomenda-45-locomotivas-hibridas-diesel-bateria-da"
+      ],
+      [
+        "20260806",
+        "knorr-bremse-vende-unidade-merak-de-hvac-para-opengate-capit"
+      ]
+    ],
+    "posts_hero_ok": 2,
+    "posts_check": [
+      {
+        "url": "https://www.mundotrilhos.com/blog/20260807-hitachi-rail-inicia-nova-etapa-de-instalacao-do-etcs-na-gold/",
+        "og_image": "https://mundotrilhos.com/hero/hitachi-rail-inicia-nova-etapa-de-instalacao-do-etcs-na-gold.jpg",
+        "hero_src": "/hero/hitachi-rail-inicia-nova-etapa-de-instalacao-do-etcs-na-gold.jpg",
+        "hero_http": null,
+        "is_ok": true
+      },
+      {
+        "url": "https://www.mundotrilhos.com/blog/20260806-via-rail-encomenda-45-locomotivas-hibridas-diesel-bateria-da/",
+        "og_image": "https://mundotrilhos.com/hero/via-rail-encomenda-45-locomotivas-hibridas-diesel-bateria-da.jpg",
+        "hero_src": "/hero/via-rail-encomenda-45-locomotivas-hibridas-diesel-bateria-da.jpg",
+        "hero_http": null,
+        "is_ok": true
+      }
+    ],
+    "diagnose": "OK — 2 posts checked, todos com hero real HTTP 200"
+  },
+  "railpost": {
+    "nome": "railpost",
+    "url": "https://railpost.news",
+    "http": null,
+    "final_url": "https://railpost.news",
+    "diagnose": "HTTP None após retry"
+  },
+  "riocarta": {
+    "nome": "riocarta",
+    "url": "https://riocarta.com",
+    "http": 200,
+    "final_url": "https://www.riocarta.com/",
+    "posts_hoje_count": 3,
+    "posts_hoje": [
+      [
+        "20260807",
+        "rio-rotativo-digital-chega-a-orla-da-zona-sul-com-1-7-mil-va"
+      ],
+      [
+        "20260806",
+        "vacinacao-antirrabica-comeca-sabado-no-rio-com-125-postos"
+      ],
+      [
+        "20260806",
+        "guardas-prendem-homem-que-furtou-ar-condicionado-no-centro-d"
+      ]
+    ],
+    "posts_hero_ok": 2,
+    "posts_check": [
+      {
+        "url": "https://www.riocarta.com/blog/20260807-rio-rotativo-digital-chega-a-orla-da-zona-sul-com-1-7-mil-va/",
+        "og_image": "https://www.riocarta.com/hero/rio-rotativo-digital-chega-a-orla-da-zona-sul-com-1-7-mil-va.jpg",
+        "hero_src": "/hero/rio-rotativo-digital-chega-a-orla-da-zona-sul-com-1-7-mil-va.jpg",
+        "hero_http": null,
+        "is_ok": true
+      },
+      {
+        "url": "https://www.riocarta.com/blog/20260806-vacinacao-antirrabica-comeca-sabado-no-rio-com-125-postos/",
+        "og_image": "https://www.riocarta.com/hero/vacinacao-antirrabica-comeca-sabado-no-rio-com-125-postos.jpg",
+        "hero_src": "/hero/vacinacao-antirrabica-comeca-sabado-no-rio-com-125-postos.jpg",
+        "hero_http": null,
+        "is_ok": true
+      }
+    ],
+    "diagnose": "OK — 2 posts checked, todos com hero real HTTP 200"
+  }
+}

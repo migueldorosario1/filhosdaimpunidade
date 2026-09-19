@@ -1,0 +1,12 @@
+# 263234 backup (sem patch)
+# sha: e29ca02a791e3280fdb14b27806e0b6dd338896bd705181cbe89206bd59b626a
+
+<p><em>Após fake news sobre urnas, empresários que controlam fatias relevantes do PIB viraram as costas para Flávio Bolsonaro e passaram a enxergar Lula como o candidato capaz de barrar o bolsonarismo em 2026.</em></p>
+<p>A <a href="https://www1.folha.uol.com.br/colunas/adriana-fernandes/2026/07/a-contencao-dos-bolsonaros.shtml" rel="noopener">Folha</a> de S.Paulo revelou nesta quarta-feira (22) o tamanho do estrago na candidatura de Flávio Bolsonaro: o presidenciável do PL propagou um dado falso sobre urnas eletrônicas durante reunião com embaixadores, repetindo o roteiro do pai e selando o afastamento definitivo da elite econômica.</p>
+<p>A repercussão foi imediata nos meios político e financeiro. Boa parte do empresariado que controla fatias relevantes do PIB, nunca entusiasmado com Lula e que preferia Tarcísio de Freitas no Planalto, fechou as portas para Flávio. Nem as reuniões de Daniella Marques, coordenadora do plano econômico da campanha e figura respeitada na Faria Lima, conseguiram reverter o quadro.</p>
+<p>O diagnóstico que circula nesses meios, segundo a Folha, é que esse empresariado já olha para 2030 e delegou a Lula a tarefa de derrotar os Bolsonaros em 2026. O cálculo mudou depois dos dois tarifaços de Donald Trump contra o Brasil: mesmo sem esperança de um bom mandato do atual presidente, o pragmatismo falou mais alto.</p>
+<p>A percepção que ronda a elite econômica é direta: os Estados Unidos podem entrar no país para tomar conta dos negócios, como fizeram abertamente na Venezuela. A pergunta que circula nos bastidores, segundo a publicação, é simples: quem vai querer esse nível de interferência econômica?</p>
+<p>O setor agroexportador queria um perfil moderado e técnico como o da senadora Tereza Cristina, mas faltaram garantias políticas. Ela não foi contra Flávio, e Tarcísio tampouco. O green card de Eduardo Bolsonaro, irmão do candidato, chegou em péssima hora: nas redes sociais, a decisão de Trump é lida como recompensa pela defesa do tarifaço.</p>
+<p>O presidente do PP, senador Ciro Nogueira, já anda elogiando Lula em encontros com prefeitos no Piauí, priorizando sua própria reeleição. O presidente nacional do PL, Valdemar Costa Neto, concluiu que Flávio simplesmente não estava preparado para concorrer à Presidência.</p>
+
+<!-- zizi_job_id: v4d_nacional_f301f0bd269f4560 -->

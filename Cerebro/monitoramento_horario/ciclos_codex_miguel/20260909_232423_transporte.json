@@ -1,0 +1,80 @@
+{
+  "ref": "XM-20260909-027",
+  "timestamp_brt": "2026-09-09T23:24:28.818434-03:00",
+  "commit": "15fc72ee2b18e90e13b18e35f1f8008d5326d05e",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_232423_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_232423_evidencias.json"
+  ],
+  "push": {
+    "command": "git push origin main",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   b410075b8..15fc72ee2  main -> main\n"
+  },
+  "origin_verification": {
+    "command": "git ls-remote origin refs/heads/main",
+    "exit_code": 0,
+    "stdout": "15fc72ee2b18e90e13b18e35f1f8008d5326d05e\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_232423_ronda.md",
+  "transport": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_232423_transporte.json",
+  "evidence_sha256": "4172fc4b3f7c9e7a65b13b4b295c57f48d05002b3429497f36bc1d55ecc55056",
+  "nyc": {
+    "command": "git ls-remote nyc refs/heads/main",
+    "exit_code": 0,
+    "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_of_head_rc": 1,
+    "action": "HOLD_NON_FF; sem push divergente"
+  },
+  "prewrite_pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  },
+  "append_prefixes": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 883640,
+      "sha256": "f6ac44c9356ce728374698d4aaa168c39edfce2e5a52041a5b7fb69ebd2d84fc"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 97899,
+      "sha256": "ce3bc1174f1815ebbf331b5df9128dcc49a253ca8b1b0b14a54bd84461a60ac6"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "bytes": 104979,
+      "sha256": "9e27220d8fc29aab31024c808cff7b4b5f853cd338c7099c731ae765546254a0"
+    }
+  },
+  "checks": {
+    "utf8_without_bom": true,
+    "append_only_prefix_verified": true,
+    "git_diff_check_exit_code": 0,
+    "selective_staging_verified": true,
+    "rounds": 1
+  },
+  "total_distinct_round_files": 6,
+  "commit_identity": "Codex Miguel <codex-miguel@localhost>",
+  "preexisting_untracked_preserved": true,
+  "close_timestamp_brt": "2026-09-09T23:25:07.554365-03:00",
+  "closing_pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  },
+  "close_base": "15fc72ee2b18e90e13b18e35f1f8008d5326d05e",
+  "receipt_before_close_sha256": "3f0bf2fa3aaa02164c097d7ea4e991de7b5b90a0b0205fc9e4078a479be3fa3f",
+  "reference_erratum": "A etiqueta R2-20260909-2320-2322 usada no ledger é um rótulo local indevidamente formatado como REF de ACK; não foi emitida pelo R2. Desconsiderá-la como REF externa. As quatro leituras reais, sem REF própria, são as linhas de 23:20:39 (269670), 23:21:13 (269671), 23:21:39 (269672) e 23:22:14 (269661) no canal_dsn_revisores.md, preservadas no JSON. Nenhum ticket foi fechado.",
+  "closing_files": [
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_232423_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_232423_transporte.json",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md"
+  ]
+}

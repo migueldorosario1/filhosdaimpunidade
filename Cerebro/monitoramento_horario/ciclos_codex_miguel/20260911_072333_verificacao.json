@@ -1,0 +1,806 @@
+{
+  "at": "2026-09-11T07:23:33.460364-03:00",
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T07:17:55.565145-03:00",
+      "since": "2026-09-11T06:48:10.564025-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "0ea3bca3ad7894dc0ef02b0d04b05e1267c8f84c4007e971ddc3078724b419d6",
+          "requests": 3,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "5014e42cb613e22594274b1990956f9ed7078bc1cf4ac85ee075687a136aad4d",
+          "requests": 6044,
+          "errors": {
+            "500": 1
+          },
+          "by_minute": {
+            "06:53": 1
+          },
+          "last_5xx": "2026-09-11T06:53:07-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "c49f9c6dd12e0a7164490301432a1e2444d2aef71c68d0515bd7628bd79232c8",
+        "total": 0,
+        "by_minute": {}
+      },
+      "redis_info": {
+        "uptime_in_seconds": "13576",
+        "used_memory": "461217568",
+        "used_memory_peak": "1019700616",
+        "expired_keys": "324",
+        "evicted_keys": "0",
+        "db0": "keys=370494,expires=81,avg_ttl=440722318"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "slowlog_delta": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "commandstats_flushdb": [
+        "cmdstat_flushdb:calls=6,usec=10556314,usec_per_call=1759385.62"
+      ],
+      "flushdb_retained_calls": 6,
+      "flushdb_retained_usec": 10556314,
+      "at": "2026-09-11T07:18:23.968872-03:00",
+      "retained_sample": 128,
+      "earliest_retained_at": "2026-09-11T03:37:05-03:00",
+      "slow_events": [],
+      "scope": "One read-only SLOWLOG GET 128; other args and client identities not logged."
+    }
+  },
+  "wordpress_readback": {
+    "rc": 0,
+    "at": "2026-09-11T07:18:26.069759-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T07:18:25-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269770,
+          "hash": "d91d09cad8ab37de1eab9359080940037d8e4ec92bd22cd7a5b856f2f07c795d",
+          "status": "publish",
+          "title": "Centro de dados de IA de 1 gigawatt ameaça a água do Cerrado em Paracatu",
+          "author": "5470",
+          "date": "2026-09-11 07:00:00",
+          "slug": "centro-de-dados-de-ia-de-1-gigawatt-ameaca-a-agua-do-cerrado-em-paracatu",
+          "fm": 269774,
+          "categories": [
+            582,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269403,
+          "hash": "782b15ae8747f5676804d35d656cea3b76a92c582d12448f44a57a0b018ed5c3",
+          "status": "publish",
+          "title": "São Paulo enfrenta o Boca com força máxima na ida das quartas da Sul-Americana",
+          "author": "5470",
+          "date": "2026-09-08 07:45:00",
+          "slug": "sao-paulo-enfrenta-o-boca-com-forca-maxima-na-ida-das-quartas-da-sul-americana",
+          "fm": 269404,
+          "categories": [
+            1271,
+            20124,
+            2403,
+            4986,
+            4988,
+            21070
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269400,
+          "hash": "f5340e505c5d82850300432181c8ad9e934ec74481a85e03faebc1b2efa33943",
+          "status": "publish",
+          "title": "Rússia volta a atacar Kyiv após fim da trégua e sem acordo com enviados de Trump",
+          "author": "5470",
+          "date": "2026-09-08 05:30:00",
+          "slug": "russia-volta-a-atacar-kyiv-apos-fim-da-tregua-e-sem-acordo-com-enviados-de-trump",
+          "fm": 269401,
+          "categories": [
+            5003,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "public": [
+    {
+      "post_id": 269770,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/11/centro-de-dados-de-ia-de-1-gigawatt-ameaca-a-agua-do-cerrado-em-paracatu/",
+      "at": "2026-09-11T07:18:26.998791-03:00",
+      "sha256_html": "23fb225e83011ce80a592db623af2dc6a37a92ef002832cda61643ff9da1df7f",
+      "paragraphs": 19,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269403,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/sao-paulo-enfrenta-o-boca-com-forca-maxima-na-ida-das-quartas-da-sul-americana/",
+      "at": "2026-09-11T07:18:27.046316-03:00",
+      "sha256_html": "5005f8b9363eecb060f4d60db15e7254d41ad8d8b9fd30e797868c524dc6f10e",
+      "paragraphs": 20,
+      "all_paragraphs_present": false,
+      "missing": [
+        "O Boca Juniors chega às quartas de final com uma invencibilidade de dez partidas. A última derrota ocorreu diante do O'Higgins, do Chile, nos playoffs da Copa Sul-Americana, confronto no qual os argentinos avançaram nos pênaltis."
+      ],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269400,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/russia-volta-a-atacar-kyiv-apos-fim-da-tregua-e-sem-acordo-com-enviados-de-trump/",
+      "at": "2026-09-11T07:18:27.095843-03:00",
+      "sha256_html": "22e5f314c77e891426a1889b1c8ccff0ce87eb75e4ec2ed034d18fc74f502f14",
+      "paragraphs": 11,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "integrity": {
+    "at": "2026-09-11T07:18:05.812621-03:00",
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "local_sha256": "7db5463001291a3f5c29cb3f353405cbaeb8ad8ec4d86c65ed5fa19c6b6dee8e",
+        "canonical_sha256": "7db5463001291a3f5c29cb3f353405cbaeb8ad8ec4d86c65ed5fa19c6b6dee8e",
+        "origin_sha256": "7834162c5a25bcb39558bb8b172bf0aae00d2c5016a6d874ba32f9f3739f7100",
+        "local_canonical_equal": true,
+        "local_origin_equal": false
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "local_sha256": "bba6ee8b5d955411d11e581ee301233babfb8bb9f439866a323a1cd0a6535f3b",
+        "canonical_sha256": "bba6ee8b5d955411d11e581ee301233babfb8bb9f439866a323a1cd0a6535f3b",
+        "origin_sha256": "598d72a68d300792aa260ba7e106049471acb63ade3b69c26c9f11f25c6284eb",
+        "local_canonical_equal": true,
+        "local_origin_equal": false
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "local_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01",
+        "origin_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "local_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "canonical_sha256": "902d63dd17f6006c4156afd14d6657617802177b77af0b11813707faa617d3e2",
+        "origin_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+        "local_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+        "origin_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      }
+    ],
+    "remote_ref_present": {
+      "XM-20260910-039": false,
+      "XM-20260911-013": false
+    },
+    "pre_push_exists": false
+  },
+  "queue_same_time": {
+    "rc": 0,
+    "data": {
+      "at": "2026-09-11T07:19:18-03:00",
+      "queries": [
+        {
+          "ignore_sticky_posts": false,
+          "found_posts": 7,
+          "rows": [
+            {
+              "id": 269021,
+              "status": "publish",
+              "date": "2026-09-04 12:00:00"
+            },
+            {
+              "id": 269892,
+              "status": "future",
+              "date": "2026-09-11 17:15:00"
+            },
+            {
+              "id": 269858,
+              "status": "future",
+              "date": "2026-09-11 16:00:00"
+            },
+            {
+              "id": 269846,
+              "status": "future",
+              "date": "2026-09-11 14:30:00"
+            },
+            {
+              "id": 269813,
+              "status": "future",
+              "date": "2026-09-11 13:00:00"
+            },
+            {
+              "id": 269811,
+              "status": "future",
+              "date": "2026-09-11 11:30:00"
+            },
+            {
+              "id": 269801,
+              "status": "future",
+              "date": "2026-09-11 10:00:00"
+            },
+            {
+              "id": 269792,
+              "status": "future",
+              "date": "2026-09-11 08:30:00"
+            }
+          ]
+        },
+        {
+          "ignore_sticky_posts": true,
+          "found_posts": 7,
+          "rows": [
+            {
+              "id": 269892,
+              "status": "future",
+              "date": "2026-09-11 17:15:00"
+            },
+            {
+              "id": 269858,
+              "status": "future",
+              "date": "2026-09-11 16:00:00"
+            },
+            {
+              "id": 269846,
+              "status": "future",
+              "date": "2026-09-11 14:30:00"
+            },
+            {
+              "id": 269813,
+              "status": "future",
+              "date": "2026-09-11 13:00:00"
+            },
+            {
+              "id": 269811,
+              "status": "future",
+              "date": "2026-09-11 11:30:00"
+            },
+            {
+              "id": 269801,
+              "status": "future",
+              "date": "2026-09-11 10:00:00"
+            },
+            {
+              "id": 269792,
+              "status": "future",
+              "date": "2026-09-11 08:30:00"
+            }
+          ]
+        }
+      ],
+      "sticky_ids": [
+        269021
+      ]
+    }
+  },
+  "queue_previous": {
+    "rc": 0,
+    "at": "2026-09-11T06:48:52.652693-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T06:48:52-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269409,
+          "hash": "5ac1033b0e5091f44a6b8fc15d9200bbeffe8c4723b4c072d1a689cac1628119",
+          "status": "publish",
+          "title": "Secretário uruguaio chama de colonialista acordo do petróleo venezuelano",
+          "author": "5470",
+          "date": "2026-09-08 09:15:00",
+          "slug": "secretario-uruguaio-chama-de-colonialista-acordo-do-petroleo-venezuelano",
+          "fm": 269414,
+          "categories": [
+            5003,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269420,
+          "hash": "4a87d0df12ce520b676c61ea5ec93971eb7b8c3e95c95a9abc4f8a925f3c526f",
+          "status": "publish",
+          "title": "BTG/Nexus já mostra Flávio à frente de Lula no 2º turno",
+          "author": "5780",
+          "date": "2026-09-08 09:12:36",
+          "slug": "btg-nexus-ja-mostra-flavio-a-frente-de-lula-no-2o-turno",
+          "fm": 269421,
+          "categories": [
+            2403
+          ],
+          "edit_lock": "1788869910:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269405,
+          "hash": "62bd5578ea8ea106460065b4081fc9d49acb911a2f47f221776a93b453ae7b26",
+          "status": "publish",
+          "title": "Petróleo perto de US$ 100 com ataques no Golfo pressiona combustíveis no Brasil",
+          "author": "5470",
+          "date": "2026-09-08 08:30:00",
+          "slug": "petroleo-perto-de-us-100-com-ataques-no-golfo-pressiona-combustiveis-no-brasil",
+          "fm": 269408,
+          "categories": [
+            43,
+            5003,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "error500_detail": {
+    "rc": 0,
+    "at": "2026-09-11T07:19:22.566812-03:00",
+    "data": {
+      "access_500": [
+        {
+          "method": "GET",
+          "path": "/2020/08/25/molon-apresenta-projeto-que-veta-instrucao-normativa-da-pf-que-expande-quantidade-de-armas-por-cidadao/amp/",
+          "query_omitted": true,
+          "status": 500,
+          "line_sha256": "d314c131a82081b06855b7cd2325411d0b7c88ae0d0850004d406f30720fa5a1"
+        }
+      ],
+      "error_minute": [
+        {
+          "line_sha256": "a4959eccb56ecf7ee7dd6e5e16e2ce0b86419a7f9c4688a82bf7db1b87b6dd67",
+          "redis": false,
+          "php_fatal": true,
+          "upstream_timeout": false,
+          "severity": "error"
+        }
+      ]
+    }
+  },
+  "error500_signature": [
+    {
+      "error": "Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /var/www/ocafezinho/wp-content/plugins/accelerated-mobile-pages/includes/vendor/amp/includes/sanitizers/class-amp-gallery-block-sanitizer-5-3.php:106",
+      "same_amp_path": false
+    }
+  ],
+  "error500_full_record": [
+    {
+      "at": "2026/09/11 06:53:07",
+      "fatal_amp_gallery": true,
+      "request_method": "GET",
+      "request_path": "/2020/08/25/molon-apresenta-projeto-que-veta-instrucao-normativa-da-pf-que-expande-quantidade-de-armas-por-cidadao/amp/",
+      "query_omitted": true,
+      "sha256_record": "47278a973c47a59f55dd08772db8bf5b4a325c26ddde57294908477441433d33"
+    }
+  ],
+  "editorial_sources": [
+    {
+      "url": "https://www.saopaulofc.net/em-buenos-aires-tricolor-inicia-decisao-com-o-boca-juniors-na-conmebol-sul-americana/",
+      "scope": "Prévia oficial de 08/09 às 00:13, anterior ao post: volta 15/09 às 21h30 e quarto árbitro Diego Seguel; confirma ida, local e duas vitórias recentes. Não valida toda lesão/série do texto."
+    },
+    {
+      "url": "https://www.saopaulofc.net/ingressos-para-sao-paulo-x-boca-juniors-pela-conmebol-sul-americana/",
+      "scope": "Aviso de ingressos de 28/08 confirma volta às 21h30; contraprova anterior à matéria."
+    },
+    {
+      "url": "https://www.saopaulofc.net/em-buenos-aires-sao-paulo-sofre-reves-para-o-boca-juniors-pela-conmebol-sul-americana/",
+      "scope": "Balanço do clube às 23h44 de 08/09: ida já terminou 1 a 0; atualização posterior não torna falsa a prévia no momento de publicação."
+    },
+    {
+      "url": "https://www.intercept.com.br/2026/09/10/data-center-cidade-mineira-falta-agua/",
+      "scope": "Reportagem original de Naira Hofmeister, 10/09 às 09h, parceria Mongabay: episódio de maio e resposta da Atlas de que o estudo era preliminar. PDF da resposta não obtido por web nesta ronda."
+    },
+    {
+      "url": "https://news.mongabay.com/2026/09/huge-ai-data-center-project-blindsides-water-stressed-town-in-brazil/",
+      "scope": "Versão da mesma investigação, não confirmação independente; nomes, projeto e declaração empresarial correspondem. Não extraí cálculo próprio de consumo de água."
+    },
+    {
+      "url": "https://www.president.gov.ua/en/news/vidnovlennya-peregovornogo-procesu-ye-vazhlivim-i-ukrayina-v-106273",
+      "scope": "Presidência ucraniana, 07/09 às 00:24: confirma encontro e discussão de formato trilateral, sem confirmar todos os ataques/declarações do post."
+    }
+  ],
+  "private_evidence": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-015"
+}

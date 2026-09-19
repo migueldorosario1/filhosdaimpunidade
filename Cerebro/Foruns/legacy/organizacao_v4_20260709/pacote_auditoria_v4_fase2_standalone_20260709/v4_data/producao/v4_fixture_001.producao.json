@@ -1,0 +1,35 @@
+{
+  "conteudo": "Material auditado minimo para validar o fluxo tecnico V4 sem chamada LLM e sem publicacao externa.",
+  "created_at": "2026-07-08T16:20:54.508675+00:00",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "idempotency_key": "61926d5b3b0ff89ca6465b04c741c589132521a047ecb5521ce03022eff83729",
+  "item_id": "v4_fixture_001",
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "2ee31aaa60af233d6611dd8389c5665087caca4c9e069aed8a4a1b4b3f98d98e",
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "from": "auditado",
+    "imagem_destacada_validada": true,
+    "manifesto_auditoria_final": true,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "source_status": "auditado_fixture",
+  "status": "produzir_dry_run",
+  "texto_dry_run": "[DRY-RUN V4] Material auditado minimo para validar o fluxo tecnico V4 sem chamada LLM e sem publicacao externa.",
+  "titulo": "Fixture V4 valida fluxo auditado sem LLM"
+}

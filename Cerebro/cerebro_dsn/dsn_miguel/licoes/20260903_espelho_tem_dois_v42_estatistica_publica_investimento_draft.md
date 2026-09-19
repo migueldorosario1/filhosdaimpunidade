@@ -1,0 +1,12 @@
+# Lição 2026-09-03 — O espelho tem DOIS V4.2: Estatística publica, Investimento sai em draft — identidade é categoria+status+meta, não o slug
+
+**O quê:** na ronda 89º (04:30) o espelho cafezinho.news amanheceu com o post 400305 «Análise do IPCA e a Influência do Câmbio na Inflação Brasileira» (04:24:39, `v42-20260903-inflacao_primaria.htm`) — mesmo padrão de slug `v42-YYYYMMDD-*` que o V4.2 Investimento usará no 1º ciclo das 14h. Confundi-los seria fácil: ambos carregam meta `v42_texto_sha256` (assinatura de produto V4.2). A identidade real veio do par: categoria **Estatística (100005, slug `estat`)** + status **publish** → é o V4.2 Estatística, que tem autorização PRÓPRIA de publicar no espelho desde 27/08 (9º post da série, esteira do espelho viva de madrugada). O V4.2 Investimento tem a categoria 100007 (`investimento`) criada mas 0 posts, e o 1º ciclo sai em **DRAFT** (draft-only travado no código pelo ZM-001) até o teste do Miguel — nunca publish nesta fase.
+
+**Por quê:** duas autorizações diferentes convivendo no mesmo espelho (Estatística publica desde 27/08; Investimento só rascunho após o OK triplo do DSC-063) com o mesmo desenho de slug criam uma armadilha de falso marco para o vigia: ao ver um post v42 no espelho depois das 14h, o veredito "1º rascunho do Investimento subiu" pode ser na verdade o Estatística publicando mais uma vez (ou vice-versa). A régua "agendado não é disparo / anúncio não é prova de ar" se estende ao produto: nome (slug) não é identidade — o par (categoria + status) é.
+
+**Como aplicar:**
+1. No marco pós-14h da vigília V4.2, conferir o par id+categoria+status do post v42 no espelho antes de qualquer veredito: publish + categoria `estat` (100005) = Estatística (normal, não é o marco); draft + categoria `investimento` (100007) = 1º rascunho do Investimento (O marco — reportar ao Miguel via Chefe).
+2. Registrar o número da categoria ao lado de cada produto V4.2 nas notas (100005 estat / 100007 invest) — igual declarar a torneira do medidor (lição irmã: "o número da ronda sai do origin", aqui "a identidade do post sai do par").
+3. Meta `v42_texto_sha256` prova que é produto V4.2, mas NÃO diz qual — não usar meta sozinha para identificar o agente.
+
+Ref: DS-20260903-009 (89º) · ZM-20260903-001 (install tencent, categoria 100007, draft-only) · DSC-20260903-060/063 (separação e autorizações: Estatística publica no espelho desde 27/08; Investimento só rascunho) · observação direta REST espelho 400305.

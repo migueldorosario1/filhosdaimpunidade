@@ -1,0 +1,74 @@
+{
+  "collection_request": {
+    "queries": [
+      "USTR Brazil 25% tariff Bolsonaro filing",
+      "Federal Register Brazil Section 301 tariff Pix Bolsonaro"
+    ],
+    "reason": "A tese cita documento ou audiencia no USTR, mas a camada auditada ainda nao inclui fonte primaria USTR/Federal Register.",
+    "required_before": "redator_real_llm",
+    "status": "recommended"
+  },
+  "consequencia_material": {
+    "descricao": "a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira",
+    "evidencias_ref": [
+      "fatos_travados:tarifa",
+      "fatos_travados:USTR",
+      "fatos_travados:Pix"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "Lula e o campo que disputa soberania economica e financeira",
+    "quem_perde": "Flavio Bolsonaro e a direita alinhada a Trump",
+    "tipo": "economica_eleitoral"
+  },
+  "curadoria_id": "cur_63d2d34a351a7e9c",
+  "editoria": "v4_politica_economia",
+  "external_call": false,
+  "fatos_travados": [
+    {
+      "fato": "A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.",
+      "fonte_ref": [
+        "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A Associated Press registra que Flavio enviou documento ao USTR defendendo adiamento da medida, sob argumento de que a pressao tarifaria fortaleceria Lula.",
+      "fonte_ref": [
+        "https://apnews.com/article/brazil-lula-bolsonaro-tariffs-d376eb50aa2b7f82b407dd0e47e8e44a"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados.",
+      "fonte_ref": [
+        "https://elpais.com/america/2026-07-07/bolsonaro-hijo-viaja-a-washington-para-intentar-evitar-un-nuevo-castigo-arancelario-que-dane-su-campana.html"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "gates": {
+    "allow_external_llm_call": false,
+    "allow_wordpress_real": false,
+    "requires_audit_before_publish": true,
+    "requires_blind_review": true
+  },
+  "issues": [],
+  "item_id": "v4_real_001",
+  "mode": "shadow_super_luxo",
+  "prompt_shadow": "Escreva uma materia jornalistica V4 em portugues brasileiro, com tese clara e prosa viva.\n\nPromessa ao leitor: O leitor vai entender por que o movimento de Flavio Bolsonaro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.\nBriefing: Abrir pela contradicao, nao pelo resumo. Fato novo: A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.. Tese escolhida: Quando Flavio Bolsonaro leva a pressao tarifaria a Washington, revela-se que a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Tarifa dos EUA vira disputa entre Lula e Flávio antes da eleição.\nConsequencia material: a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira\nQuem ganha: Lula e o campo que disputa soberania economica e financeira\nQuem perde: Flavio Bolsonaro e a direita alinhada a Trump\n\nFatos travados obrigatorios:\n- A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.\n- A Associated Press registra que Flavio enviou documento ao USTR defendendo adiamento da medida, sob argumento de que a pressao tarifaria fortaleceria Lula.\n- O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados.\n\nCollection request: recommended — A tese cita documento ou audiencia no USTR, mas a camada auditada ainda nao inclui fonte primaria USTR/Federal Register.\nNao invente fatos. Se um fato primario estiver pendente, escreva com prudencia ou marque lacuna.",
+  "schema_version": "v1",
+  "selected_route": {
+    "external_call": false,
+    "funcao": "redacao",
+    "real_call_requires_human_approval": true,
+    "route_context": "v4_super_luxo_redacao"
+  },
+  "status": "shadow_redacao_pronta",
+  "texto_shadow": "<p>Flavio Bolsonaro entrou na disputa das tarifas americanas em um ponto delicado: a tarifa e a pressao sobre o Pix deslocam a pauta de disputa narrativa para custo economico, soberania financeira e risco eleitoral para a direita brasileira.</p>\n\n<p>A Associated Press informou que Lula e Flavio Bolsonaro entraram em confronto politico em torno da proposta do governo Trump de aplicar tarifa de 25% sobre produtos brasileiros.</p>\n\n<p>O Pix torna a contradição mais concreta. O El Pais informou que Flavio viajou a Washington para tentar evitar novo castigo tarifario e destacou tambem a disputa em torno do Pix, que Washington ve como concorrencia para meios de pagamento privados. A pauta deixa de ser apenas disputa verbal e passa a tocar infraestrutura financeira, soberania e custo eleitoral.</p>\n\n<p>Esse deslocamento favorece Lula e o campo que disputa soberania economica e financeira. Ao mesmo tempo, expõe Flavio Bolsonaro e a direita alinhada a Trump ao custo de uma pressão externa que já não cabe apenas na guerra de narrativas.</p>",
+  "timestamp": "2026-07-09T04:32:30.868355+00:00",
+  "titulo_shadow": "Flavio Bolsonaro enfrenta o custo político da pressão dos EUA sobre tarifa e Pix",
+  "wordpress_real": false
+}

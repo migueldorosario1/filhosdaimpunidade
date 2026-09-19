@@ -1,0 +1,59 @@
+{
+  "ref": "XM-20260909-017",
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_182310_ronda.md",
+  "evidence": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_182310_evidencias.json",
+  "transport_file": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_182310_transporte.json",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_182310_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_182310_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_182310_blocos_removidos.md"
+  ],
+  "commit": "5a93c46918c68a3864b8802a49edd0411326c059",
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   6556d314e..5a93c4691  main -> main\n"
+  },
+  "remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "5a93c46918c68a3864b8802a49edd0411326c059\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "same_round": true,
+  "nyc": {
+    "timestamp_brt": "2026-09-09T18:21:07-03:00",
+    "command": "git ls-remote nyc refs/heads/main",
+    "exit_code": 0,
+    "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_of_head_rc": 1,
+    "action": "HOLD_NYC_NON_FF; sem push forçado"
+  },
+  "timestamp": "2026-09-09T18:23:19.862592-03:00",
+  "closed_at": "2026-09-09T18:24:00.508590-03:00",
+  "checks": {
+    "utf8_without_bom": true,
+    "append_only_own_changes": true,
+    "staged_paths_exact": true,
+    "diff_check_passed": true,
+    "removed_artifact_sha256_verified": true,
+    "rounds_executed": 1,
+    "wordpress_calls": 0,
+    "failover_laura": "DESENHADO_NAO_ATIVO"
+  },
+  "transport_limit": "GitHub confirmado; NYC disponível mas divergente. Drive/Tencent não sondados. Sem helper rebase/autostash/cópia ampla, sem MODO_ILHA."
+}

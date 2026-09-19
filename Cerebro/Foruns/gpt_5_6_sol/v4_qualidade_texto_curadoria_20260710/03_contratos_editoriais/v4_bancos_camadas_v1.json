@@ -1,0 +1,245 @@
+{
+  "_doc": "Contrato V4 de bancos em camadas para evitar contaminacao entre coleta, processamento, auditoria e producao.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+    "separacao_estrita": true,
+    "produtor_le_curadoria_em_editoria_nobre": true,
+    "curadoria_entre_auditado_e_producao": true,
+    "publicador_le_apenas_auditado_ou_publicado": true,
+    "publicador_exige_curadoria_id": true,
+    "fase_1_toda_producao_passa_por_curadoria": true,
+    "camadas_sao_append_only_por_padrao": true,
+    "promocao_exige_manifesto": true,
+    "sem_escrita_direta_em_auditado_por_coletor": true
+  },
+  "camadas": {
+    "bruto": {
+      "descricao": "Entrada inicial de coleta, transcricao, scraping, APIs e material bruto ainda nao confiavel.",
+      "path": "dados/bruto",
+      "read_roles": [
+        "coletor",
+        "processador",
+        "auditor"
+      ],
+      "write_roles": [
+        "coletor"
+      ]
+    },
+    "intermediario": {
+      "descricao": "Material normalizado, deduplicado, enriquecido e preparado para auditoria.",
+      "path": "dados/intermediario",
+      "read_roles": [
+        "processador",
+        "auditor"
+      ],
+      "write_roles": [
+        "processador"
+      ]
+    },
+    "auditado": {
+      "descricao": "Material aprovado por auditoria e liberado para curadoria, auditoria final e publicadores.",
+      "path": "dados/auditado",
+      "read_roles": [
+        "revisor",
+        "publicador",
+        "auditor",
+        "curador"
+      ],
+      "write_roles": [
+        "auditor"
+      ]
+    },
+    "curadoria": {
+      "descricao": "Tese editorial escolhida, leitura corrente timestamped, promessa ao leitor e frame visual para producao.",
+      "path": "dados/curadoria",
+      "read_roles": [
+        "produtor",
+        "revisor",
+        "fact_checker",
+        "imagem",
+        "auditor",
+        "observabilidade"
+      ],
+      "write_roles": [
+        "curador",
+        "auditor"
+      ]
+    },
+    "producao": {
+      "descricao": "Saidas geradas por produtor, revisor e imagem antes de auditoria final/publicacao.",
+      "path": "dados/producao",
+      "read_roles": [
+        "produtor",
+        "revisor",
+        "fact_checker",
+        "imagem",
+        "auditor"
+      ],
+      "write_roles": [
+        "produtor",
+        "revisor",
+        "fact_checker",
+        "imagem"
+      ]
+    },
+    "publicado": {
+      "descricao": "Registro de saida: drafts, posts, IDs WordPress, imagens destacadas e manifestos publicados.",
+      "path": "dados/publicado",
+      "read_roles": [
+        "publicador",
+        "auditor",
+        "observabilidade"
+      ],
+      "write_roles": [
+        "publicador"
+      ]
+    },
+    "quarentena": {
+      "descricao": "Material suspeito, duplicado, com erro juridico, imagem ruim ou fonte insegura.",
+      "path": "dados/quarentena",
+      "read_roles": [
+        "auditor"
+      ],
+      "write_roles": [
+        "coletor",
+        "processador",
+        "auditor",
+        "curador",
+        "revisor",
+        "fact_checker",
+        "produtor",
+        "imagem"
+      ]
+    }
+  },
+  "promocoes": [
+    {
+      "from": "bruto",
+      "to": "intermediario",
+      "role": "processador",
+      "requires": [
+        "manifesto_origem",
+        "hash_conteudo",
+        "dedupe_check"
+      ]
+    },
+    {
+      "from": "intermediario",
+      "to": "auditado",
+      "role": "auditor",
+      "requires": [
+        "manifesto_auditoria",
+        "fonte_validada",
+        "risco_juridico_revisado",
+        "qualidade_minima"
+      ]
+    },
+    {
+      "from": "auditado",
+      "to": "curadoria",
+      "role": "curador",
+      "requires": [
+        "manifesto_curadoria",
+        "leitura_corrente_timestamped",
+        "teses_candidatas",
+        "promessa_ao_leitor",
+        "frame_visual",
+        "idempotency_key"
+      ]
+    },
+    {
+      "from": "curadoria",
+      "to": "producao",
+      "role": "produtor",
+      "requires": [
+        "curadoria_id",
+        "manifesto_producao",
+        "contrato_editorial_v4",
+        "idempotency_key"
+      ]
+    },
+    {
+      "from": "producao",
+      "to": "producao",
+      "role": "revisor",
+      "requires": [
+        "curadoria_id",
+        "manifesto_revisao",
+        "texto_revisado",
+        "idempotency_key"
+      ]
+    },
+    {
+      "from": "producao",
+      "to": "producao",
+      "role": "fact_checker",
+      "requires": [
+        "curadoria_id",
+        "manifesto_fact_check",
+        "fatos_travados",
+        "idempotency_key"
+      ]
+    },
+    {
+      "from": "producao",
+      "to": "auditado",
+      "role": "auditor",
+      "requires": [
+        "manifesto_auditoria_final",
+        "texto_revisado",
+        "manifesto_fact_check",
+        "qualidade_minima"
+      ]
+    },
+    {
+      "from": "auditado",
+      "to": "publicado",
+      "role": "publicador",
+      "requires": [
+        "manifesto_publicacao",
+        "imagem_destacada_validada",
+        "idempotency_key"
+      ]
+    }
+  ],
+  "bloqueios": [
+    {
+      "role": "produtor",
+      "scope": "fase_1_global",
+      "cannot_read": [
+        "bruto",
+        "intermediario",
+        "auditado"
+      ],
+      "reason": "em editoria nobre, produtor deve partir da curadoria, nao do auditado cru"
+    },
+    {
+      "role": "imagem",
+      "scope": "fase_1_global",
+      "cannot_read": [
+        "bruto",
+        "intermediario",
+        "auditado"
+      ],
+      "reason": "imagem destacada deve receber frame visual da curadoria"
+    },
+    {
+      "role": "publicador",
+      "cannot_read": [
+        "bruto",
+        "intermediario"
+      ],
+      "reason": "publicacao deve partir de material auditado"
+    },
+    {
+      "role": "coletor",
+      "cannot_write": [
+        "auditado",
+        "publicado"
+      ],
+      "reason": "coleta nao aprova nem publica"
+    }
+  ]
+}

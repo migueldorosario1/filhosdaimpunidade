@@ -1,0 +1,7 @@
+# Reativo por commit sem bloco na ponte — o intervalo conta BLOCO, o git conta FATO (100º CHECK, 03/09)
+
+**O quê:** o ZM passou 12+ intervalos sem bloco na ponte (a régua da CL conta mudez de comunicação, "SEM_RELATORIO 11º/12º") enquanto o git mostrava trabalho real — commit 09:44:18 (2cbfafbd7): "apagão espelho curado + carrossel v0.4.1 + §9 fórum + ponte 064 (appends diretos, sem clobber)". A CL ainda o escalava por mudez na mesma janela em que ele entregava.
+
+**Por quê:** a régua da CL mede presença na PONTE (bloco datado = comunicação formal, o combinado da casa); o trabalho do ZM aparece no GIT (commit com hora). Nenhum eixo sozinho descreve o agente: contar só bloco subestima (diz "mudo" para quem está entregando), contar só commit superestima (diz "presente" para quem não se comunica). O padrão "reativo por commit, mudo na ponte" é recorrente no ZM — e o vigia que reporta um eixo só entrega quadro incompleto.
+
+**Como aplicar:** ao reportar produção de agente com esse padrão, citar os DOIS eixos lado a lado: commit com hora (fato — fonte: git log) + intervalo de bloco (régua — fonte: ponte/CL), sem contradizer a CL (se o combinado é bloco, bloco falta; a escalada dela segue legítima) e sem ignorar o fato (o trabalho existe e avança — o quadro de produção atualiza com o commit). Na seção "quem produz o quê", git log e ponte são fontes complementares: as duas entram, cada uma com seu nome.

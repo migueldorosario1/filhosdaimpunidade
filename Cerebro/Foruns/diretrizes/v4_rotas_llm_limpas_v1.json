@@ -1,0 +1,136 @@
+{
+  "_doc": "Rotas LLM limpas do V4. Lista externa, versionada e explicita para evitar herdar fallbacks legados bloqueados, desligados ou abaixo do piso editorial.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "_inherits_reference": "Projeto Cafezinho Agentes/root/config/llm_context_routes.json",
+  "contexts": {
+    "v4_super_luxo_redacao": [
+      {
+        "tier": "openai_luxo",
+        "models": [
+          "gpt-5.5"
+        ]
+      },
+      {
+        "tier": "anthropic_luxo",
+        "models": [
+          "claude-opus-4-8",
+          "claude-sonnet-4-6"
+        ]
+      },
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      }
+    ],
+    "v4_revisao_luxo": [
+      {
+        "tier": "anthropic_luxo",
+        "models": [
+          "claude-opus-4-8",
+          "claude-sonnet-4-6"
+        ]
+      },
+      {
+        "tier": "openai_luxo",
+        "models": [
+          "gpt-5.5"
+        ]
+      },
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      }
+    ],
+    "v4_auditoria_luxo": [
+      {
+        "tier": "anthropic_luxo",
+        "models": [
+          "claude-opus-4-8",
+          "claude-sonnet-4-6"
+        ]
+      },
+      {
+        "tier": "openai_luxo",
+        "models": [
+          "gpt-5.5"
+        ]
+      },
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      }
+    ],
+    "v4_fact_check_luxo": [
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      },
+      {
+        "tier": "anthropic_luxo",
+        "models": [
+          "claude-opus-4-8",
+          "claude-sonnet-4-6"
+        ]
+      },
+      {
+        "tier": "openai_luxo",
+        "models": [
+          "gpt-5.5"
+        ]
+      }
+    ],
+    "v4_curadoria_luxo": [
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      },
+      {
+        "tier": "anthropic_luxo",
+        "models": [
+          "claude-opus-4-8",
+          "claude-sonnet-4-6"
+        ]
+      },
+      {
+        "tier": "openai_luxo",
+        "models": [
+          "gpt-5.5"
+        ]
+      }
+    ],
+    "v4_imagem_destacada_gemini": [
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      }
+    ],
+    "v4_repetidor_limpo": [
+      {
+        "tier": "gemini_luxo",
+        "models": [
+          "gemini-3.5-flash"
+        ]
+      },
+      {
+        "tier": "anthropic_luxo",
+        "models": [
+          "claude-sonnet-4-6"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "conteudo": "Material auditado minimo para validar telemetria V4 com recibo JSONL obrigatorio, adapter mock, diretrizes externas e sem publicacao externa.",
+  "created_at": "2026-07-08T16:52:33.977986+00:00",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "idempotency_key": "f7a53c6f5be1e80230396a0eccafe9aae93e9572d8e6c9bafb526d0416f6a6ee",
+  "item_id": "v4_fixture_003",
+  "llm_response": {
+    "content": "[MOCK V4/gemini/gemini-3.5-flash/v4_ciencia_tecnologia_ia/redacao] Fixture V4 valida telemetria obrigatoria. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar telemetria V4 com recibo JSONL obrigatorio, adapter mock, diretrizes externas e sem publicacao externa.",
+    "mode": "mock",
+    "model": "gemini-3.5-flash",
+    "prompt_hash": "1e8da93935e736750b9e9802fcf55334bf0062917b942ed1654a6b630a5485af",
+    "provider": "gemini",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo"
+    ],
+    "selected_tier": "gemini_luxo",
+    "selection_reason": "selecionado por rotate_valid_by_idempotency; exclude_provider=None",
+    "selection_strategy": "rotate_valid_by_idempotency"
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "2ee31aaa60af233d6611dd8389c5665087caca4c9e069aed8a4a1b4b3f98d98e",
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "from": "auditado",
+    "imagem_destacada_validada": true,
+    "manifesto_auditoria_final": true,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "source_status": "auditado_fixture",
+  "status": "produzir_dry_run",
+  "texto_dry_run": "[MOCK V4/gemini/gemini-3.5-flash/v4_ciencia_tecnologia_ia/redacao] Fixture V4 valida telemetria obrigatoria. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar telemetria V4 com recibo JSONL obrigatorio, adapter mock, diretrizes externas e sem publicacao externa.",
+  "titulo": "Fixture V4 valida telemetria obrigatoria"
+}

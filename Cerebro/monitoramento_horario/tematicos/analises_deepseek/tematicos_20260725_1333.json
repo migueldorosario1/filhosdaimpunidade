@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260725_1333",
+  "ts_brt": "2026-07-25T13:33:42-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260725_1333\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site fora do ar (HTTP 0) sem alerta registrado pelo coletor\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"Deveria haver alerta (P1 ou P3) para site inacessível\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Avaliar ceara_digital: site fora do ar não gerou alerta; verificar se há razão para supressão ou falha no coletor\",\n  \"confianca\": 0.9,\n  \"notas\": \"Demais alertas P2 parecem consistentes com os limiares de 48h. Todos os alertas estão suprimidos (shadow). Nenhum outro problema identificado.\"\n}"
+}

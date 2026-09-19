@@ -1,0 +1,584 @@
+{
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T09:48:18.802189-03:00",
+      "since": "2026-09-11T09:18:38.271313-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "f54e543e8eea2c4e105c7d984e79f37e3b0fc15fbde196bdeba7f31ff7e97a1d",
+          "requests": 2,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "10f346938a2ec4c8e1cbff528dc67ab67047c4a21a100ac960f685d5c49ad2ac",
+          "requests": 10986,
+          "errors": {
+            "500": 2
+          },
+          "by_minute": {
+            "09:26": 2
+          },
+          "last_5xx": "2026-09-11T09:26:01-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "b6bad49c15ec844d9644c02ec633fae0b259842b142bb38c5867acdd98f8623d",
+        "total": 4,
+        "by_minute": {
+          "09:26": 4
+        }
+      },
+      "redis_info": {
+        "uptime_in_seconds": "22600",
+        "used_memory": "250750552",
+        "used_memory_peak": "1292986176",
+        "expired_keys": "695",
+        "evicted_keys": "0",
+        "db0": "keys=194228,expires=113,avg_ttl=32618683083"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "wordpress": {
+    "rc": 0,
+    "at": "2026-09-11T09:50:08.557163-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T09:50:08-03:00",
+      "ativo": "1",
+      "modo": "consultivo",
+      "gate_sha256": "eef7943d0d3c4777a27b86e0b9ebc47886402d56411f2b1c02f5e2e252d2951d",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269969,
+          "hash": "caa2bcedb183e835690311599708d09e2e1c8ff9269ca396e3dad32414515adc",
+          "status": "publish",
+          "title": "Rede de bots de direita mira a eleição do Brasil, diz Internacional Reacionária",
+          "author": "2018",
+          "date": "2026-09-11 09:29:58",
+          "slug": "rede-cerimedo-parscale-mira-eleicao-do-brasil-internacional-reacionaria",
+          "fm": 269970,
+          "categories": [
+            5088,
+            21141,
+            22
+          ],
+          "edit_lock": "",
+          "audit": "[{\"revisor\":\"ast\",\"ts\":\"2026-09-11 09:49:56\",\"titulo\":\"Rede de bots de direita mira a eleiu00e7u00e3o do Brasil, diz Internacional Reacionu00e1ria\",\"sha_conteudo\":\"e2c5b5f6cb1a1d3c7461392672d61d47987fb54e96ecb71f418e6e56da3e1aa5\",\"titulo_anterior\":\"Rede de bots de direita mira a eleiu00e7u00e3o do Brasil, diz Internacional Reacionu00e1ria\"}]",
+          "edit_active": false,
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269868,
+          "hash": "e90b71e732167fd69931d4a3c2a6fb80c06c97dfbd2f2264c6718ec3a149139b",
+          "status": "publish",
+          "title": "Documentos liberados pelo STF ligam “Dark Horse” ao PCC",
+          "author": "5470",
+          "date": "2026-09-11 08:29:57",
+          "slug": "documentos-liberados-pelo-stf-ligam-dark-horse-ao-pcc",
+          "fm": 222993,
+          "categories": [
+            21141,
+            22,
+            2403
+          ],
+          "edit_lock": "1789129094:2018",
+          "audit": "",
+          "edit_active": false,
+          "protection": ""
+        },
+        {
+          "id": 269882,
+          "hash": "8355ff0b7c399ac56f0cb7b407dce7e074025eb4c2e84a0ca5a06e7f460e6b0a",
+          "status": "publish",
+          "title": "Lula defende abrir sigilos do STF e promete presídios de segurança máxima",
+          "author": "2018",
+          "date": "2026-09-11 07:57:14",
+          "slug": "lula-entrevista-sbt-serie-presidenciais-2026",
+          "fm": 269883,
+          "categories": [
+            5088,
+            21141,
+            22,
+            28
+          ],
+          "edit_lock": "1789120950:2018",
+          "audit": "[{\"revisor\":\"ast\",\"ts\":\"2026-09-11 09:22:28\",\"titulo\":\"Lula defende abrir sigilos do STF e promete presu00eddios de seguranu00e7a mu00e1xima\",\"sha_conteudo\":\"8385c4486d3d645d05d97c4c9c2155d9c7edbd1490eb213cbbf10835d0fd01b3\",\"titulo_anterior\":\"Lula defende abrir sigilos do STF e promete presu00eddios de seguranu00e7a mu00e1xima\"}]",
+          "edit_active": false,
+          "protection": "post_publicado_por_humano"
+        }
+      ]
+    }
+  },
+  "apply": {
+    "post_id": 269969,
+    "author": "Codex Miguel (XM), porta AST",
+    "started_at": "2026-09-11T09:49:47.614846-03:00",
+    "write_attempted": true,
+    "changes": [
+      {
+        "before": "em live com o próprio Cerimedo.",
+        "after": "em live com o consultor argentino Fernando Cerimedo.",
+        "reason": "Identificar nome e ofício na primeira menção no corpo; informação presente na fonte e no resumo."
+      },
+      {
+        "before": "em vez de campanhar,",
+        "after": "em vez de fazer campanha,",
+        "reason": "Usar formulação corrente, preservando o sentido."
+      },
+      {
+        "before": "Na Bolívia, o presidente Rodrigo Paz nega tê-lo assessorado.",
+        "after": "Na Bolívia, o presidente Rodrigo Paz nega que Cerimedo o tenha assessorado.",
+        "reason": "Corrigir a inversão de quem assessorou quem; fonte original, trecho sobre a resposta de Paz e referência 108."
+      }
+    ],
+    "live_lock": {
+      "lock": "",
+      "protection": "post_publicado_por_humano"
+    },
+    "attempted_at": "2026-09-11T09:49:54.684245-03:00",
+    "changed_fields": [
+      "content"
+    ],
+    "write_http": 200,
+    "protected_fields_unchanged": true,
+    "content_matches": false,
+    "after_sha256": "caa2bcedb183e835690311599708d09e2e1c8ff9269ca396e3dad32414515adc",
+    "status": "verificacao_pendente",
+    "finished_at": "2026-09-11T09:49:58.320638-03:00"
+  },
+  "public": [
+    {
+      "post_id": 269969,
+      "at": "2026-09-11T09:50:04.582768-03:00",
+      "status": 200,
+      "url": "https://www.ocafezinho.com/2026/09/11/rede-cerimedo-parscale-mira-eleicao-do-brasil-internacional-reacionaria/",
+      "sha256": "7fbbc37566e9aef353956d9f9dad081ba8c5fe8b70b2cbd1e11bf170ff2706ce",
+      "titles": [
+        "Rede de bots de direita mira a eleição do Brasil, diz Internacional Reacionária - O Cafezinho",
+        "Rede de bots de direita mira a eleição do Brasil, diz Internacional Reacionária - O Cafezinho"
+      ],
+      "canonical": [
+        "https://www.ocafezinho.com/2026/09/11/rede-cerimedo-parscale-mira-eleicao-do-brasil-internacional-reacionaria/"
+      ],
+      "meta": [
+        {
+          "name": "robots",
+          "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        },
+        {
+          "name": "robots",
+          "content": "max-image-preview:large"
+        },
+        {
+          "name": "description",
+          "content": "Consórcio internacional de pesquisa reconstrói a carreira do consultor argentino Fernando Cerimedo, do triunfo de Milei à tentativa de golpe de Bolsonaro, e aponta o Brasil como próximo alvo da máquina eleitoral de Brad Parscale, ex-comandante da campanha de Trump."
+        },
+        {
+          "name": "og:title",
+          "content": "Rede de bots de direita mira a eleição do Brasil, diz Internacional Reacionária"
+        },
+        {
+          "name": "og:description",
+          "content": "Consórcio internacional de pesquisa reconstrói a carreira do consultor argentino Fernando Cerimedo, do triunfo de Milei à tentativa de golpe de Bolsonaro, e aponta o Brasil como próximo alvo da máquina eleitoral de Brad Parscale, ex-comandante da campanha de Trump."
+        },
+        {
+          "name": "og:image",
+          "content": "https://www.ocafezinho.com/wp-content/uploads/2026/09/capa-cerimedo-eduardo.jpg"
+        }
+      ],
+      "h1": [
+        "Rede de bots de direita mira a eleição do Brasil, diz Internacional Reacionária"
+      ],
+      "jsonld": 1,
+      "body_paragraphs_present": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "image": {
+        "path": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-019/image_269969.jpg",
+        "status": 200,
+        "sha256": "5960ebcd9d8224d4f8fc0e556ae53719721fa9a7f00f86ba5454d1f677c489ef",
+        "url": "https://www.ocafezinho.com/wp-content/uploads/2026/09/capa-cerimedo-eduardo.jpg"
+      },
+      "internal_marker_matches": []
+    },
+    {
+      "post_id": 269868,
+      "at": "2026-09-11T09:50:04.546590-03:00",
+      "status": 200,
+      "url": "https://www.ocafezinho.com/2026/09/11/documentos-liberados-pelo-stf-ligam-dark-horse-ao-pcc/",
+      "sha256": "e7900c8f5be8c856cfbd386e84ec435e1a77698e0447264c1ef7214fbbed9e7f",
+      "titles": [
+        "Documentos liberados pelo STF ligam “Dark Horse” ao PCC - O Cafezinho",
+        "Documentos liberados pelo STF ligam “Dark Horse” ao PCC - O Cafezinho"
+      ],
+      "canonical": [
+        "https://www.ocafezinho.com/2026/09/11/documentos-liberados-pelo-stf-ligam-dark-horse-ao-pcc/"
+      ],
+      "meta": [
+        {
+          "name": "robots",
+          "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        },
+        {
+          "name": "robots",
+          "content": "max-image-preview:large"
+        },
+        {
+          "name": "description",
+          "content": "Autos da Operação Compliance Zero mostram R$ 2,8 bilhões em câmbio do Banco Master para o circuito de lavagem do PCC e US$ 24 milhões negociados por Flávio Bolsonaro para a cinebiografia do pai."
+        },
+        {
+          "name": "og:title",
+          "content": "Documentos liberados pelo STF ligam “Dark Horse” ao PCC"
+        },
+        {
+          "name": "og:description",
+          "content": "Autos da Operação Compliance Zero mostram R$ 2,8 bilhões em câmbio do Banco Master para o circuito de lavagem do PCC e US$ 24 milhões negociados por Flávio Bolsonaro para a cinebiografia do pai."
+        },
+        {
+          "name": "og:image",
+          "content": "https://www.ocafezinho.com/wp-content/uploads/2025/12/dark-horse.webp"
+        }
+      ],
+      "h1": [
+        "Documentos liberados pelo STF ligam “Dark Horse” ao PCC"
+      ],
+      "jsonld": 1,
+      "body_paragraphs_present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "image": {
+        "path": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-019/image_269868.jpg",
+        "status": 200,
+        "sha256": "7a32bde67a3394ca42105dab84abf4cb92c9a7c44e5f57bb545182a2f4d3aa65",
+        "url": "https://www.ocafezinho.com/wp-content/uploads/2025/12/dark-horse.webp"
+      },
+      "internal_marker_matches": []
+    }
+  ],
+  "integrity": {
+    "at": "2026-09-11T09:48:16.249832-03:00",
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "local_sha256": "57257ef2fe0878c3f2be7a200d499ff56cd361592884fabc6dcb26e8c8c869d1",
+        "canonical_sha256": "fa78eff49d9628a690930d078377b2cea3ea9e2be9d7bdad043244a43c178247",
+        "origin_sha256": "57257ef2fe0878c3f2be7a200d499ff56cd361592884fabc6dcb26e8c8c869d1",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "local_sha256": "f1e83b0dd6428cb853601217d6fe04e6dbb2e623b71aae1424e17dc7077d11d8",
+        "canonical_sha256": "f1e83b0dd6428cb853601217d6fe04e6dbb2e623b71aae1424e17dc7077d11d8",
+        "origin_sha256": "f1e83b0dd6428cb853601217d6fe04e6dbb2e623b71aae1424e17dc7077d11d8",
+        "local_canonical_equal": true,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "local_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01",
+        "origin_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "local_sha256": "b8ec86f59e2af05767272af1c03318552106f08444722239a0e767e4ab8ca369",
+        "canonical_sha256": "da98a15aacf117bbda0682490183cc349357134fdfee798c76d8db0dfb32a3ed",
+        "origin_sha256": "b8ec86f59e2af05767272af1c03318552106f08444722239a0e767e4ab8ca369",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+        "local_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+        "origin_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      }
+    ],
+    "remote_ref_present": {
+      "XM-20260910-039": false,
+      "XM-20260911-013": true
+    },
+    "pre_push_exists": false
+  },
+  "quality_forum": {
+    "at": "2026-09-11T12:52:22.357907+00:00",
+    "forum": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/FORUM_QUALIDADE_POS_PUBLICACAO_ASTRA.md",
+    "forum_sha256": "cff05f786053917ceff934cdc8ddd3a985062ace8c938a7ad939871e910d45dd",
+    "github": {
+      "blob_sha": "e794024493257f1993db1f739d52ab61896876ac",
+      "status": "verified"
+    },
+    "lessons_sha256": "18b01bc564b9b57d511bbdaf2ea731d7289ba0c4ebfc4d3efeaca498856bf627",
+    "nyc": {
+      "actual_v41_reader_fixture": true,
+      "after_sha256": "b589a7eaa14effd1211fced4d90f9569a9fb5d1e73f532a2c9b05a1ae734fcd6",
+      "at": "2026-09-11T12:52:29.536854+00:00",
+      "backup": "/root/v4_labs/dados/backups_astra_qualidade/20260911T125222357806Z.md",
+      "before_sha256": "a30941a9aac6a98ed44679499574ef521f0711a9dbb23526401f01af0baa122d",
+      "changed": true,
+      "path": "/root/v4_labs/dados/diretriz_qualidade_viva.md",
+      "production_cycle_consumption": "not_yet_observed",
+      "status": "verified"
+    }
+  }
+}

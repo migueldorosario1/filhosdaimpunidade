@@ -1,0 +1,998 @@
+2026/08/11 14:18:34 NOTICE: cafezinhomediagroup/CLAUDE.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:18:35 INFO  : .vigilia_claude_state.json: Copied (replaced existing)
+2026/08/11 14:18:35 INFO  : {x[destino]}: Copied (new)
+2026/08/11 14:18:35 INFO  : scratch_teste_free_quota_qwen.py: Copied (new)
+2026/08/11 14:18:35 INFO  : scratch_teste_free_quota_qwen_visao.py: Copied (new)
+2026/08/11 14:18:35 INFO  : painel_fix/add_nginx_remove_route.py: Copied (new)
+2026/08/11 14:18:35 INFO  : mutirao_midia_v4/codigos/amostra_parecer_seed42.py: Copied (new)
+2026/08/11 14:18:35 INFO  : mutirao_midia_v4/codigos/audita_senado_qualidade.py: Copied (new)
+2026/08/11 14:18:35 INFO  : painel_fix/nomes_canonicos_ouro_ORIG_20260809.py: Copied (new)
+2026/08/11 14:18:35 INFO  : mutirao_midia_v4/codigos/backfill_parecer_canonico.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/backfill_variantes_portal_ouro.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/baixar_candidatos_geo_lote1.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/audita_5_problemas_codex.py: Copied (new)
+2026/08/11 14:18:36 INFO  : painel_fix/add_nginx_grade_routes.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_ciencia_lote2_pos_classificador.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : painel_fix/painel_cctv_v6.py: Copied (replaced existing)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_ciencia_pos_classificador.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_janela3_pos_classificador.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_nyc_ciencia.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_nyc_regional_janela2.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_regional_loteA.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_nyc_ciencia_lote2.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_sintese_lote2.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/commons_evidence_api.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/consolida_senado.py: Copied (new)
+2026/08/11 14:18:36 INFO  : painel_fix/painel_midia_ouro.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/check_nyc_regional_loteA.py: Copied (new)
+2026/08/11 14:18:36 INFO  : painel_fix/painel_midia_ouro_ORIG_20260809.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/converte_plan_requery.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/consolida_revisao_final.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/download_senado_31_tencent.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/classificar_head.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/consolida_requery_75.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/enriquece_top1.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/etapa5_persiste_completo.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/download_senado_b1.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/corrige_5_problemas.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/etapa5_visao_deduplicada.py: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/export_entidades_banco.sh: Copied (new)
+2026/08/11 14:18:36 INFO  : mutirao_midia_v4/codigos/filtra_senado_confianca.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/funil_353_codex.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/gera_urls_31.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/gera_urls_limpas.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_canario_etapa5.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_canonico_27.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_canonico_27_v2.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_canonico_27_v4.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_ciencia_lote2.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_generico.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_canonico_27_v3.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/manifesto_ingest_geo_lote1.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/examina_rejeicoes_ouro.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/patch_parecer_canonico.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/patch_tribunal_sql.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/download_senado_tencent.sh: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/investiga_master_novas.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/politica_temporal_mistos.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/processa_regional_janela2.sh: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/processa_regional_janela3.sh: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/reconsulta_review14.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/politica_temporal_v2.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/reset_tribunal_flag_visao.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/purga_falsos_resgates.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/retry_download_geo_lote1.py: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/retry_download_ciencia_lote2.sh: Copied (new)
+2026/08/11 14:18:37 INFO  : mutirao_midia_v4/codigos/revisao_manual_30.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/plan_requery_73.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/smoke_v3_imagem_portal.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/saude_provedor_gemini.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/rodar_banco_ouro_midia_controlado.sh: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/revisao_evidente.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/snapshot_sqlite_etapa5.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/taxonomia_etapa5_readonly.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/pesquisa_fontes_mutirao_v4.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/spotcheck_visao_lote_portal_v2.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/taxonomia_real_etapa5.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/terceira_passagem_inequivocos.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/top1_por_dossie.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/xray_regional_nyc.py: Copied (new)
+2026/08/11 14:18:38 INFO  : .zcode/plans/plan-sess_126dd883-4348-4e63-be0f-c765440a04f6.md: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/v3_imagem_portal.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/procura_gemini_vision_erro.py: Copied (new)
+2026/08/11 14:18:38 INFO  : .zcode/plans/plan-sess_4f481e3d-749f-4c6d-a495-ce7855e69aec.md: Copied (new)
+2026/08/11 14:18:38 INFO  : .zcode/plans/plan-sess_e6e52a29-457e-484a-8a17-4aa8e23cb70a.md: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/fontes/candidatos_ciencia_etapa3_lote1.jsonl: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/codigos/teste_visao_mutirao.py: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/fontes/candidatos_ciencia_resto.jsonl: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/fontes/candidatos_ciencia_etapa3_all.jsonl: Copied (new)
+2026/08/11 14:18:38 INFO  : mutirao_midia_v4/fontes/candidatos_regional_retry5.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/curadoria_regional_loteA.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/curadoria_regional_loteB.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/curadoria_regional_loteA_resto.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/candidatos_regional_governadores_all.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/candidatos_regional_governadores.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/download_regional_loteA.txt: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/curadoria_ciencia_lote2.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/curadoria_regional_loteB_resto.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/download_ciencia_lote1.txt: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/manifesto_ingest_ciencia_lote1.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/download_regional_loteB.txt: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/manifesto_ingest_geo_lote1.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_ciencia_etapa3_lote1.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_ciencia_etapa3_lote1_resto.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_ciencia_etapa3_lote1_extra2.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_regional_governadores_retry5.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_regional_governadores.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/candidatos_geo_etapa2_lote1.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_regional_senado_2026.json: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/manifesto_ingest_geo_mini_lote2.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/recibo_download_geo_lote1.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/inventario/entidades_master_20260809.csv: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/candidatos_ciencia_extra2.jsonl: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/inventario/fila_lacunas_portal_v2_20260809.csv: Copied (new)
+2026/08/11 14:18:39 INFO  : mutirao_midia_v4/fontes/plan_geo_etapa2_lote1.json: Copied (new)
+2026/08/11 14:18:40 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx03.jpg: Copied (new)
+2026/08/11 14:18:40 INFO  : mutirao_midia_v4/inventario/urls_existentes_ouro_20260809.txt: Copied (new)
+2026/08/11 14:18:40 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx65.jpg: Copied (new)
+2026/08/11 14:18:40 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx11.jpg: Copied (new)
+2026/08/11 14:18:41 INFO  : mutirao_midia_v4/visao_spotcheck/4750d10386a073a5_flavio-bolsonaro-anuncia-vice-para-disputa-a-presidencia_v2.jpg: Copied (new)
+2026/08/11 14:18:41 INFO  : mutirao_midia_v4/visao_spotcheck/84f8229ba545c5a2_senador-davi-alcolumbre_v2.jpg: Copied (new)
+2026/08/11 14:18:41 INFO  : mutirao_midia_v4/visao_spotcheck/e0ac5ed121721d17_senador-davi-alcolumbre_v2.jpg: Copied (new)
+2026/08/11 14:18:41 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/00_AFCENT tankers team up with NAVCENT fighters to execute mission over USCENTCOM AOR (885258: Copied (new)
+2026/08/11 14:18:41 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx79.jpg: Copied (new)
+2026/08/11 14:18:42 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx16.jpg: Copied (new)
+2026/08/11 14:18:42 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/06_Flickr - Official U.S. Navy Imagery - U.S. Navy ships transit the Strait of Hormuz..jpg: Copied (new)
+2026/08/11 14:18:43 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/10_USS Stout Strait of Hormuz May 2020.jpg: Copied (new)
+2026/08/11 14:18:43 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/11_CVN 69 transits the Strait of Hormuz (28465403076).jpg: Copied (new)
+2026/08/11 14:18:43 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx83.jpg: Copied (new)
+2026/08/11 14:18:43 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/17_Ali Khamenei - Seyyed Ali Hosseini Khamenei - 2023-11-19 - (4).jpg: Copied (new)
+2026/08/11 14:18:43 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/07_USS Essex (LHD 2), right, and USNS Wally Schirra (T-AKE 8) transit the Strait of Hormuz in: Copied (new)
+2026/08/11 14:18:44 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/22_14040616 Masoud Pezeshkian.jpg: Copied (new)
+2026/08/11 14:18:44 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/38_Atomanlage Natanz (2022).jpg: Copied (new)
+2026/08/11 14:18:45 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/39_Bongbong Marcos and Xi Jinping 3.jpg: Copied (new)
+2026/08/11 14:18:45 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/40_Xi Jinping at Kremlin (2023).jpg: Copied (new)
+2026/08/11 14:18:45 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/47_Li Qiang, Premier of China - 2025.jpg: Copied (new)
+2026/08/11 14:18:45 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/49_PM of Japan Fumio Kishida meets Premier of China Li Qiang (2024) 03.jpg: Copied (new)
+2026/08/11 14:18:46 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/28_Meeting Dr. Seyed Abbas Araghchi (01911587) (51162349234).jpg: Copied (new)
+2026/08/11 14:18:46 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx56.jpg: Copied (new)
+2026/08/11 14:18:47 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/geo_idx54_wangyi_hagel_2014.jpg: Copied (new)
+2026/08/11 14:18:47 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/37_Israeli Airstrikes on the Natanz Nuclear Facility during Operation Rising Lion.png: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026.zip: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/geo_idx57_pla_navy_gaoyang_2004.jpg: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_AL.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_AM.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_AP.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/52_20170207 Foreign Minister Bishop China Foreign Minister Wang Yi dinner.jpg: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_BR.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_AC.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx19.jpg: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_BA.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_CE.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_GO.csv: Copied (new)
+2026/08/11 14:18:48 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_MA.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_DF.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_MS.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_PA.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_MG.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_ES.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_PB.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_PE.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_PR.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_BRASIL.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_RN.csv: Copied (new)
+2026/08/11 14:18:49 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_RO.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_MT.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_RJ.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_RR.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_RS.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_SE.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_TO.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_SP.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/leiame.pdf: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/montar_roster_regional_tse.py: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/roster_regional_tse_2026.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_SC.csv: Copied (new)
+2026/08/11 14:18:50 INFO  : mutirao_midia_v4/fontes/tse/consulta_cand_2026_PI.csv: Copied (new)
+2026/08/11 14:18:51 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx06.jpg: Copied (new)
+2026/08/11 14:18:52 INFO  : mutirao_midia_v4/fontes/originais_geo_lote1/16_Ali Khamenei reading book 01.jpg: Copied (new)
+2026/08/11 14:19:22 INFO  : mutirao_midia_v4/fontes/originais_ciencia_lote1/ciencia_idx12.jpg: Copied (new)
+2026/08/11 14:19:22 INFO  :   253.127 MiB / 253.127 MiB, 100%, 3.908 MiB/s, ETA 0s
+2026/08/11 14:19:25 NOTICE: Backups/limpeza_comunicacao_reforma_v4_20260717_131257/inbox_trindade_antes/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:25 INFO  : CARTAO_BOLSO_WP_REVISTA_FORUM.md: Copied (replaced existing)
+2026/08/11 14:19:25 INFO  : CEREBRO_INDEX_GSN.md: Copied (replaced existing)
+2026/08/11 14:19:25 INFO  : CEREBRO_INDEX_AIATOLAH.md: Copied (replaced existing)
+2026/08/11 14:19:25 NOTICE: Backups/reforma_v4_abertura_sprint_20260717_1042/inbox_trindade_antes_da_limpeza/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_BUGS_ATIVOS.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_CHAVES_E_LLMS.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_OBSERVABILIDADE.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : MONITORAMENTO_DE_TRABALHO_2026_08_09_1138.md: Copied (new)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_CATALOGO_MODELOS_LLM.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_INDEX_MASTER.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_AGENTES.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_PUBLICACAO_WP_CAFEZINHO.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_INDEX_MOKA.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_BALEIA_AZUL.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_TELEMETRIA.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_INDEX_SATELITES.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_ARQUITETURA.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : backup_total_2026/ESTADO.md: Copied (replaced existing)
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_tabela.csv: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_detalhes.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/publicar_pagina_direitos.py: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/test_quaest.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_todas_br.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse6.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_custos.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/apresentacao_eidas.pdf: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/qwen_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_form.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse2.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/ming.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_processadas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/resumo_pesquisas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pedido_ponto_de_retomada_20260628.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals2.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_todas_br.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/detalhar_page_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/package.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/analise_ipca15_junho2026.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/package-lock.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/README.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_detalhar_test.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/quaest_ipec.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_home.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_detalhes.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_full.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/agy_cli.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse4.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_paginator.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_diagramada.pdf: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_20260630.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/relatorio_pesquisas_2026.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_isolated.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_fast.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals3.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/grok_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/miguel.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_full.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/glm_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse_quaest_fixed.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse5.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse_quaest.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/gerar_pdfs.py: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_diagramada.html: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_todas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_raw_modals.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/detalhar_page.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/apresentacao_eidas.html: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/vibe_mistral_cli.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_data.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/find_institutes.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse3.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_form_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:26 INFO  : MONITORAMENTO_DE_TRABALHO.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_QUALIDADE_REDACAO.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_ATUALIZACOES.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : CEREBRO_NODE_SPRINTS_ATIVOS.md: Copied (replaced existing)
+2026/08/11 14:19:26 INFO  : Memorias/memoria_arquitetura_v4_canonica_pos_cutover_20260810.md: Copied (new)
+2026/08/11 14:19:26 INFO  : Memorias/INDICE_APRENDIZADO_CANONICO_OCAFEZINHO.md: Copied (new)
+2026/08/11 14:19:26 INFO  : Memorias/memoria_comentarista_regra_autor_primeira_pessoa_20260810.md: Copied (new)
+2026/08/11 14:19:26 INFO  : Memorias/memoria_aiatolah_ordem_home_noticias_frente_videos_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : CEREBRO_NODE_ECOSSISTEMA_CANONICO.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_diagnostico_peso_painel_cafezinho_canonico_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_incidente_segredo_gsn_legacy_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_ecossistema_face_visivel_e_infraestrutura_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_home_imagem_real_nohome_4h_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_cerco_titulos_longos_v4_20260809.md: Copied (replaced existing)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_limpeza_gnome_transcritor_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_moka_fix_seletor_pdf_aviso_tts_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_moka_fix_slider_carregando_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_missao_faxina_diaria_legacy_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_mapa_ads_canonico_ocafezinho_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_diretrizes_ceo_v4_20260808.md: Copied (replaced existing)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_moka_pagina_configuracoes_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_moka_primeira_fase_publica_correcoes_20260808.md: Copied (replaced existing)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_mutirao_banco_midia_v4_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_mapa_servidores_ecossistema_20260806.md: Copied (replaced existing)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_plano_faxina_continua_droplets_20260807.md: Copied (replaced existing)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_v4_5_verticais_encanamento_local_20260811.md: Copied (new)
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_gsn_espelho_ingles_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_cultura_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_carta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/labs_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_ciencia_tecnologia_ia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 INFO  : Memorias/memoria_rotacao_free_quota_alibaba_20260809.md: Copied (new)
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/labs_MANIFESTO.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_internacional_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v2.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_MANIFESTO_PATCH_GPT56PRO_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_redacao_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_arquitetura_cafezinho_media_group_v4_20260715.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_repetidor_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_forum_v4_qualidade_editorial_ciencia_ia_20260712.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run14.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_imagens_261602_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_politica_economia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run6.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run11.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_resposta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run9.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:27 INFO  : Memorias/memoria_painel_grade_midia_ouro_20260809.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_sec86_guarda_imagem_obrigatoria_20260730.md: Copied (replaced existing)
+2026/08/11 14:19:27 INFO  : Backups/editorial_264955_20260809/post264955_before.json: Copied (new)
+2026/08/11 14:19:27 INFO  : Backups/editorial_fontes_silenciosas_20260809/posts_20260809_before_cleanup.json: Copied (new)
+2026/08/11 14:19:27 INFO  : Memorias/memoria_port_canonico_fase1_20260811.md: Copied (new)
+2026/08/11 14:19:27 INFO  : Backups/editorial_264953_20260809/post264953_before.json: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/INVENTARIO_BANCO_MIDIA_LEGACY_NYC_20260811_04.jsonl: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RELATORIO_EXECUCAO_LOCAL_05.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/MANIFESTO_RETIRADA_TEMATICOS_LOCAL_20260811_05.json: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/MANIFESTO_FAXINA_NYC_01.jsonl: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/INVENTARIO_GSN_RIO_AG_20260811_02.jsonl.gz: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RELATORIO_RODADA_LOCAL_03.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RELATORIO_RODADA_NYC_01.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RELATORIO_RODADA_NYC_04.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/MANIFESTO_RETIRADA_BANCO_MIDIA_NYC_20260811_06.json: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RELATORIO_EXECUCAO_NYC_06.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RESUMO_AUDITORIA_BANCO_MIDIA_LEGACY_NYC_20260811_04.json: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RELATORIO_RODADA_RIO_AG_02.md: Copied (new)
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_gsn_espelho_ingles_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_cultura_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_carta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/labs_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_ciencia_tecnologia_ia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/labs_MANIFESTO.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_internacional_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v2.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_MANIFESTO_PATCH_GPT56PRO_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_redacao_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_arquitetura_cafezinho_media_group_v4_20260715.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_repetidor_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_forum_v4_qualidade_editorial_ciencia_ia_20260712.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run14.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_imagens_261602_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_politica_economia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run6.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run11.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_resposta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run9.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RESUMO_AUDITORIA_GSN_RIO_AG_20260811_02.json: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/RESUMO_AUDITORIA_LEGACY_TEMATICOS_LOCAL_20260811_03.json: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/SHA256SUMS_AUDITORIA_BANCO_MIDIA_LEGACY_NYC_20260811_04: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/SHA256SUMS_AUDITORIA_GSN_RIO_AG_20260811_02: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/SHA256SUMS_NYC_01: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/SHA256SUMS_AUDITORIA_LEGACY_TEMATICOS_LOCAL_20260811_03: Copied (new)
+2026/08/11 14:19:28 INFO  : Foruns/canal_trindade.md: Copied (replaced existing)
+2026/08/11 14:19:28 INFO  : Foruns/forum_ajuda_moka_reader_20260809.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Memorias/faxina_diaria_20260811/INVENTARIO_LEGACY_TEMATICOS_LOCAL_20260811_03.jsonl.gz: Copied (new)
+2026/08/11 14:19:28 INFO  : Foruns/forum_cafezinho_analise_gsc_agosto_2026_20260811_0739.md: Copied (new)
+2026/08/11 14:19:28 INFO  : Foruns/INDICE_FORUNS_SEMANAL.md: Copied (replaced existing)
+2026/08/11 14:19:29 INFO  : Foruns/forum_cafezinho_core_web_vitals_agosto_2026_20260811_0913.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/contrato_claude_modo_enxuto_vigilia_v5_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_cafezinho_slug_duplicado_404_20260811_0654.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_cerebro_moka_alan_agente_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_aiatolah_ordem_home_noticias_frente_videos_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_faxina_cerebro_v4_legacy_20260810.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_diagnostico_peso_painel_cafezinho_canonico_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_handoff_5_verticais_v4_codex_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_comentarista_regra_autor_primeira_pessoa_20260810.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_mapa_ads_canonico_ocafezinho_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_6_reforma_config_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_missao_faxina_diaria_legacy_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_incidente_segredo_gsn_legacy_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_agente_precos_llm_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_ecossistema_face_visivel_e_infraestrutura_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_fix_seletor_pdf_aviso_tts_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_fix_slider_carregando_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_home_imagem_real_nohome_4h_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_apple_store_pesquisa_20260811.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_incidente_saude_producao_v4_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_lojas_tutorial_leigo_20260810.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_forum_comunidade_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_cerco_titulos_longos_v4_20260809.md: Copied (replaced existing)
+2026/08/11 14:19:29 INFO  : Foruns/forum_moka_pagina_configuracoes_20260809.md: Copied (new)
+2026/08/11 14:19:29 INFO  : Foruns/forum_lab_visual_cafezinho_news_20260720.md: Copied (replaced existing)
+2026/08/11 14:19:29 INFO  : Foruns/forum_diretrizes_ceo_v4_20260808.md: Copied (replaced existing)
+2026/08/11 14:19:30 INFO  : Foruns/forum_plano_port_canonico_20260811.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/forum_moka_primeira_fase_publica_correcoes_20260808.md: Copied (replaced existing)
+2026/08/11 14:19:30 INFO  : Foruns/forum_plano_faxina_continua_droplets_20260807.md: Copied (replaced existing)
+2026/08/11 14:19:30 INFO  : Foruns/forum_transfer_sprint_visual_cafezinho_zcode_20260811.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/forum_mutirao_qwen_banco_midia_v4_20260809.md: Copied (replaced existing)
+2026/08/11 14:19:30 INFO  : Foruns/forum_rotacao_free_quota_alibaba_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/forum_sec86_guarda_imagem_obrigatoria_20260730.md: Copied (replaced existing)
+2026/08/11 14:19:30 INFO  : Foruns/forum_v4_cultura_economia_planejamento_20260811.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/forum_v4_acesso_banco_midia_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_claude_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_claude_rodada3_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/plano_coluna_editor_canonico_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_claude_rodada2_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_gemini_rodada3_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_gemini_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_gemini_rodada2_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_glm_rodada2_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : monitoramento_horario/backups_pre_publish/265133_pre_b6f1890c3707c2cf.json: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/forum_transkriptor_nomes_proprios_yt_esteira_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : Foruns/resposta_glm_rodada3_forum_incidente_v4_20260809.md: Copied (new)
+2026/08/11 14:19:30 INFO  : monitoramento_horario/backups_pre_publish/265134_pre_3b8a7df147a54ca6.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265158_pre_reversao_contrato_db60b970ed067547.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265147_pre_253b0b30ce6afc88.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265167_pre_6b755ac89bc2f818.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265161_pre_2d0b7f045317b781.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265158_pre_99a10bba28d5825e.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265155_pre_fbf103307de888b2.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265172_pre_4f8dd74192d68d30.json: Copied (new)
+2026/08/11 14:19:31 INFO  : Foruns/forum_painel_grade_midia_ouro_20260809.md: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265181_pre_ac3e22472d463c3b.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265174_pre_11099d10a17e5d81.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265192_pre_5b697a4b629d9e21.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265191_pre_3df3c4dd3072a5a3.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265186_pre_d382590962cfd0e3.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265206_pre_78d6d15a93ae4087.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265220_pre_a08e0aee8acb8ca9.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265221_pre_c430f7e31b70c2d5.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265216_pre_d7713d8040e1a893.json: Copied (new)
+2026/08/11 14:19:31 INFO  : monitoramento_horario/backups_pre_publish/265178_pre_48fddaff931a2302.json: Copied (new)
+2026/08/11 14:19:31 INFO  : backup_total_2026/logs/B2-12.j1.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-13.j1.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-11.log: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-13.log: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-12.log: Copied (new)
+2026/08/11 14:19:32 INFO  : monitoramento_horario/backups_pre_publish/265230_pre_eaa7947b77cdc50e.json: Copied (new)
+2026/08/11 14:19:32 INFO  : monitoramento_horario/backups_pre_publish/265200_pre_5b3c22177bba9c1d.json: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-14.log: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-12_j1.sh: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-13_j1.sh: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-14.j1.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j1.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j11.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j13.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j10.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j16.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j14.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j12.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j17.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j19.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j15.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j22.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j21.stdout: Copied (new)
+2026/08/11 14:19:32 INFO  : backup_total_2026/logs/B2-15.j2.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j20.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j24.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-14_j1.sh: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j4.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j5.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j23.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j18.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j7.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-11.j2.stdout: Copied (replaced existing)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j8.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j6.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j3.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15_j11.sh: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15.j9.stdout: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15_j14.sh: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15_j15.sh: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15_j13.sh: Copied (new)
+2026/08/11 14:19:33 INFO  : backup_total_2026/logs/B2-15_j16.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j12.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j1.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j18.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j17.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j2.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j21.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j19.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j10.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j3.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j24.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j22.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j5.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j6.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j7.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j4.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j23.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j8.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-15_j9.sh: Copied (new)
+2026/08/11 14:19:34 INFO  : monitoramento_horario/bugs_encontrados/bugs_2026-08-10.jsonl: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-16.j1.stdout: Copied (new)
+2026/08/11 14:19:34 INFO  : backup_total_2026/logs/B2-16_j1.sh: Copied (new)
+2026/08/11 14:19:35 INFO  : monitoramento_horario/bugs_encontrados/bugs_2026-08-09.jsonl: Copied (replaced existing)
+2026/08/11 14:19:35 INFO  : monitoramento_horario/bugs_encontrados/bugs_2026-08-11.jsonl: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/cartinhas/cartinha_5_verticais_v4_codex_20260811.md: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/inbox_trindade/claude.md: Copied (replaced existing)
+2026/08/11 14:19:35 INFO  : backup_total_2026/logs/B2-15.log: Copied (new)
+2026/08/11 14:19:35 INFO  : backup_total_2026/logs/B2-15_j20.sh: Copied (new)
+2026/08/11 14:19:35 ERROR : backup_total_2026/logs/B2-16.log: corrupted on transfer: sha1 hashes differ src(Local file system at /home/migueldorosario/Downloads/Antigravity Google/Cerebro) "ec6c5bde1c6794c19396b5597c36a41c6b6372d3" vs dst(B2 bucket backup-total-local-2026 path Workspace_Vivo/Cerebro) "b335ee0138aa41d36138e3fd0fb81eab6822e828"
+2026/08/11 14:19:35 INFO  : backup_total_2026/logs/B2-16.log: Removing failed copy
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/MANIFESTO_CANONICO_27_V2_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/MANIFESTO_CANONICO_27_V3_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/MANIFESTO_CANONICO_27_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/RECIBO_V2_CORRECOES_20260809.md: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/inbox_trindade/zcode.md: Copied (replaced existing)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/commons_evidence_28_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/correcoes_removidos_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/RECIBO_20260809.md: Copied (new)
+2026/08/11 14:19:35 INFO  : monitoramento_horario/lab_visual_bugs/bugs_2026-08-11.jsonl: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/etapa5_politica_temporal_412_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/commons_evidence_review14.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/etapa5_amostra_parecer_seed42_20260809.json: Copied (new)
+2026/08/11 14:19:35 INFO  : Foruns/manifestos_mutirao_midia_v4/MANIFESTO_CANONICO_27_V4_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/requery_top1_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/manifesto_canario_etapa5_gemini_429_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/revisao_final_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/etapa5_visao_deduplicada_412_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/revisao_item_a_item_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/requery_top1_v2_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/requery_manifesto_50_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/senado_manifesto_353_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/senado_ingest_top1_20260809.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/saude_gemini_teste.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Backups/vigilia_v5/2026-08-10/265043_pre_pending_dup_863072d99896cfbd.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Backups/vigilia_v5/2026-08-10/265046_pre_publish_98c123f887ccc6da.json: Copied (new)
+2026/08/11 14:19:36 INFO  : Foruns/manifestos_mutirao_midia_v4/senado_top1_enriquecido_v2_20260809.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Foruns/manifestos_mutirao_midia_v4/senado_top1_enriquecido_20260809.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265048_pre_rewrite_b932ce273a376ee8.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265052_pre_pending_dup_d3f8760899f773be.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265063_pre_publish_7d9a8a683d3cdbbe.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265068_pre_pending_dup_d7977d593aae5fe4.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265048_pre_publish_d7562f15a6328a7c.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Foruns/manifestos_mutirao_midia_v4/etapa5_taxonomia_completa_20260809.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265071_pre_publish_c637d0b6219c14f1.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265070_pre_publish_00fc89a44c303a5f.json: Copied (new)
+2026/08/11 14:19:37 INFO  : Backups/vigilia_v5/2026-08-10/265051_pre_publish_0d73b24d0e3c1872.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265060_pre_publish_ab8ff508d712dfa4.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265075_pre_publish_2623e96b49a31660.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265061_pre_publish_e04e64176dc386dc.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265076_retif_nome_civil_857b1072f6125395.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265079_pre_publish_ae27e7b7609e61dd.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265076_pre_publish_80bb86227c32ffce.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265086_pre_publish_52b36694e34e72e8.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265099_pre_publish_073714c8baa34b18.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265099_pre_rewrite_f4264b26680cf99b.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265098_pre_publish_c0ff4a98a8214c40.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265080_pre_publish_ad48c70d1eaeb11c.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265106_pre_pending_dup_0625a847778a910a.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-09/264927_c9aa37895fcaa60e.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265128_pre_pending_dup_8ca57e147c9868ff.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265100_pre_pending_dup_worker_1acde102ec223504.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265107_pre_publish_ce6118219fb30bcd.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-09/264931_retif_bf1d82ed39f9ae22.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-10/265131_pre_publish_4ad03cdfacd55752.json: Copied (new)
+2026/08/11 14:19:38 INFO  : Backups/vigilia_v5/2026-08-09/264940_2a6ddc22b3a3d03b.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264946_pre_publish_fora_janela_b71b6bf0903cf2b9.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-10/265108_pre_publish_143b93733e6c8bf0.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264929_pre_publish_e0795c44dadbcf1b.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264953_retif2_77b079df25df8063.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264946_pre_rewrite_ciclo1947_bd6ec80832680c34.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264953_retif_c8c15049aef36753.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264953_d522ddfb92da532c.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264946_f536b32e7227ec8c.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264957_pre_publish_a51c7a20423f3f81.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264955_76b8fad31630a352.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264957_pre_fatos_c652d54884c0d7f7.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264963_pre_rewrite_c38652f112f8b492.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264961_pre_publish_b51ab84a91e051f8.json: Copied (new)
+2026/08/11 14:19:39 INFO  : Backups/vigilia_v5/2026-08-09/264963_pre_publish_7bfdbadd48ed995a.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264966_pre_pending2_eb5f9d851f68f373.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264966_pre_pending4_a8372d0922d9e3f7.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264960_pre_pending_7c6fe97152a33afa.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264968_pre_publish_f4c7ea9bd0c90665.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264961_pre_rewrite_d010794ea68c1197.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264966_pre_pending3_953371b90222b405.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264966_pre_pending_795ef88668a16053.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264968_pre_rewrite_201da53d96f7054f.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264980_pre_publish_eca806945dc33f06.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/265007_pre_publish_f4babcea4ca515d9.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264973_pre_publish_3bfd2d51973de8ed.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264995_pre_publish_11f6249c6651d079.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264997_pre_publish_e40f3ed7e66c339b.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/265011_pre_publish_6ecbe907e2053caf.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/264981_pre_pending_6558e80c75fe538a.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/265030_pre_publish_e8002c4de21434fa.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/265036_pre_publish_3395878e16ad009a.json: Copied (new)
+2026/08/11 14:19:40 INFO  : Backups/vigilia_v5/2026-08-09/265029_pre_publish_3dbb3779d69d0f09.json: Copied (new)
+2026/08/11 14:19:41 INFO  : Backups/vigilia_v5/2026-08-09/265028_pre_publish_7948ea8f8a61644c.json: Copied (new)
+2026/08/11 14:19:41 INFO  : Backups/vigilia_v5/2026-08-09/265041_pre_publish_5d3d52c9363442d5.json: Copied (new)
+2026/08/11 14:19:41 INFO  : Backups/vigilia_v5/2026-08-09/265034_pre_publish_5cb834ce9975bcef.json: Copied (new)
+2026/08/11 14:19:42 INFO  : Foruns/manifestos_mutirao_midia_v4/etapa5_politica_temporal_v2_412_20260809.json: Copied (new)
+2026/08/11 14:20:20 INFO  : CEREBRO_NODE_BUGS_RESOLVIDOS.md: Copied (replaced existing)
+2026/08/11 14:20:20 ERROR : Attempt 1/3 failed with 1 errors and: corrupted on transfer: sha1 hashes differ src(Local file system at /home/migueldorosario/Downloads/Antigravity Google/Cerebro) "ec6c5bde1c6794c19396b5597c36a41c6b6372d3" vs dst(B2 bucket backup-total-local-2026 path Workspace_Vivo/Cerebro) "b335ee0138aa41d36138e3fd0fb81eab6822e828"
+2026/08/11 14:20:22 NOTICE: Backups/limpeza_comunicacao_reforma_v4_20260717_131257/inbox_trindade_antes/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:22 ERROR : backup_total_2026/logs/B2-16.log: Failed to copy: Post "https://pod-050-1048-13.backblaze.com/b2api/v1/b2_upload_file/52db1d94c81adac39aff0d1e/c005_v0501048_t0059": can't copy - source file is being updated (size changed from 67898 to 68071)
+2026/08/11 14:20:22 NOTICE: Backups/reforma_v4_abertura_sprint_20260717_1042/inbox_trindade_antes_da_limpeza/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 INFO  :    45.578 MiB / 45.578 MiB, 100%, 209.676 KiB/s, ETA 0s
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_tabela.csv: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_detalhes.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/publicar_pagina_direitos.py: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/test_quaest.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_todas_br.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse6.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_custos.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/apresentacao_eidas.pdf: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/qwen_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_form.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse2.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/ming.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_processadas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/resumo_pesquisas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pedido_ponto_de_retomada_20260628.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals2.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_todas_br.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/detalhar_page_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/package.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/analise_ipca15_junho2026.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/package-lock.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/README.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_detalhar_test.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/quaest_ipec.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_home.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_detalhes.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_full.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/agy_cli.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse4.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_paginator.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_diagramada.pdf: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_20260630.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/relatorio_pesquisas_2026.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_isolated.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_fast.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals3.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/grok_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/miguel.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_full.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/glm_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse_quaest_fixed.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse5.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse_quaest.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/gerar_pdfs.py: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_diagramada.html: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_todas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_raw_modals.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/detalhar_page.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/apresentacao_eidas.html: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/vibe_mistral_cli.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_data.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/find_institutes.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse3.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:23 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_form_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_gsn_espelho_ingles_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_cultura_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_carta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/labs_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_ciencia_tecnologia_ia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/labs_MANIFESTO.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_internacional_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v2.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_MANIFESTO_PATCH_GPT56PRO_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_redacao_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_arquitetura_cafezinho_media_group_v4_20260715.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_repetidor_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_forum_v4_qualidade_editorial_ciencia_ia_20260712.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run14.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_imagens_261602_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_politica_economia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run6.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run11.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_resposta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run9.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_gsn_espelho_ingles_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_cultura_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_carta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/labs_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_ciencia_tecnologia_ia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/labs_MANIFESTO.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_internacional_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v2.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_MANIFESTO_PATCH_GPT56PRO_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_redacao_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_arquitetura_cafezinho_media_group_v4_20260715.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_repetidor_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_forum_v4_qualidade_editorial_ciencia_ia_20260712.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run14.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_imagens_261602_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_politica_economia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run6.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run11.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_resposta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:24 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run9.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:26 ERROR : Attempt 2/3 failed with 1 errors and: Post "https://pod-050-1048-13.backblaze.com/b2api/v1/b2_upload_file/52db1d94c81adac39aff0d1e/c005_v0501048_t0059": can't copy - source file is being updated (size changed from 67898 to 68071)
+2026/08/11 14:20:27 NOTICE: Backups/limpeza_comunicacao_reforma_v4_20260717_131257/inbox_trindade_antes/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:27 ERROR : backup_total_2026/logs/B2-16.log: Failed to copy: Post "https://pod-050-1044-07.backblaze.com/b2api/v1/b2_upload_file/52db1d94c81adac39aff0d1e/c005_v0501044_t0001": can't copy - source file is being updated (size changed from 87342 to 87515)
+2026/08/11 14:20:27 NOTICE: Backups/reforma_v4_abertura_sprint_20260717_1042/inbox_trindade_antes_da_limpeza/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_tabela.csv: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_detalhes.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/publicar_pagina_direitos.py: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/test_quaest.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_todas_br.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse6.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_custos.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/apresentacao_eidas.pdf: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/qwen_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_form.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse2.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/ming.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_processadas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/resumo_pesquisas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pedido_ponto_de_retomada_20260628.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals2.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_todas_br.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/detalhar_page_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/package.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/analise_ipca15_junho2026.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/package-lock.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/README.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_detalhar_test.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/quaest_ipec.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_home.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_detalhes.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_full.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_search.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/agy_cli.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse4.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_paginator.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_diagramada.pdf: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_20260630.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/relatorio_pesquisas_2026.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_isolated.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_fast.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/antigravity_desktop.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_modals3.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results.png: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/grok_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/miguel.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse_full.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/glm_coding.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse_quaest_fixed.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse5.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/parser_tse_quaest.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/gerar_pdfs.py: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/materia_eidas_diagramada.html: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_results_body.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_todas.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesquisas_tse_2026_raw_modals.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/detalhar_page.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/apresentacao_eidas.html: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/vibe_mistral_cli.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_data.json: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/find_institutes.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/scraper_tse3.js: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Backups/rotacao_trindade_v4_20260718_220604/projeto/inbox_trindade/pesqele_form_html.txt: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_gsn_espelho_ingles_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_cultura_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_carta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/labs_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_ciencia_tecnologia_ia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/labs_MANIFESTO.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_internacional_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v2.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_MANIFESTO_PATCH_GPT56PRO_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_redacao_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_arquitetura_cafezinho_media_group_v4_20260715.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_repetidor_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_forum_v4_qualidade_editorial_ciencia_ia_20260712.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run14.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_imagens_261602_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/contratos_v4_politica_economia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run6.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run11.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_resposta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:28 NOTICE: Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run9.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_gsn_espelho_ingles_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_cultura_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_carta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/labs_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_ciencia_tecnologia_ia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/labs_MANIFESTO.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_internacional_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_comum_v2.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_MANIFESTO_PATCH_GPT56PRO_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_nucleo_editorial_redacao_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_arquitetura_cafezinho_media_group_v4_20260715.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_repetidor_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_forum_v4_qualidade_editorial_ciencia_ia_20260712.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run14.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_imagens_261602_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/contratos_v4_politica_economia_v1.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run6.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run11.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_resposta_gpt56pro_autocura_imagens_v4_20260714.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:29 NOTICE: Backups/backup_cerebro_20260728_164635/Foruns/v4_labs_espelhos/v4_memoria_forum_retomada_v4_imagens_drafts_20260716_run9.md: Can't follow symlink without -L/--copy-links
+2026/08/11 14:20:31 ERROR : Attempt 3/3 failed with 1 errors and: Post "https://pod-050-1044-07.backblaze.com/b2api/v1/b2_upload_file/52db1d94c81adac39aff0d1e/c005_v0501044_t0001": can't copy - source file is being updated (size changed from 87342 to 87515)
+2026/08/11 14:20:31 INFO  :    45.578 MiB / 45.578 MiB, 100%, 209.676 KiB/s, ETA 0s
+2026/08/11 14:20:31 NOTICE: Failed to copy: Post "https://pod-050-1044-07.backblaze.com/b2api/v1/b2_upload_file/52db1d94c81adac39aff0d1e/c005_v0501044_t0001": can't copy - source file is being updated (size changed from 87342 to 87515)
+2026/08/11 14:20:35 INFO  : auditor_indexacao_posts_nyc_20260810.py: Copied (new)
+2026/08/11 14:20:35 INFO  : cafezinho-noindex-pages.php: Copied (new)
+2026/08/11 14:20:35 INFO  : add_cafezinho_logo.py: Copied (new)
+2026/08/11 14:20:35 INFO  : cafezinho-real-image-gate.php: Copied (new)
+2026/08/11 14:20:35 INFO  : chiquini_post_payload.json: Copied (new)
+2026/08/11 14:20:35 INFO  : delete_twitter_tweets.py: Copied (new)
+2026/08/11 14:20:35 INFO  : crop_xicara.py: Copied (new)
+2026/08/11 14:20:35 INFO  : create_chiquini_draft.py: Copied (new)
+2026/08/11 14:20:35 INFO  : atualizar_post_caes_robos.py: Copied (new)
+2026/08/11 14:20:35 INFO  : convert_and_update_wp.py: Copied (new)
+2026/08/11 14:20:35 INFO  : enviar_baleia_azul_v2.sh: Copied (replaced existing)
+2026/08/11 14:20:35 INFO  : fix_forum_inline_images.py: Copied (new)
+2026/08/11 14:20:35 INFO  : estilo_master.nyc.before.json: Copied (new)
+2026/08/11 14:20:35 INFO  : fix_post_264953_silent_link.php: Copied (new)
+2026/08/11 14:20:35 INFO  : fix_post_264955_silent_link.php: Copied (new)
+2026/08/11 14:20:35 INFO  : elmano_video_frame.jpg: Copied (new)
+2026/08/11 14:20:35 INFO  : fix_wp_post_images_and_publish.py: Copied (new)
+2026/08/11 14:20:35 INFO  : fix_posts_20260809_silent_sources.php: Copied (new)
+2026/08/11 14:20:35 INFO  : generate_6_card_carousel.py: Copied (new)
+2026/08/11 14:20:35 INFO  : front-page_home_real_20260809.php: Copied (new)
+2026/08/11 14:20:35 INFO  : inspect_current_headline_20260809.php: Copied (new)
+2026/08/11 14:20:35 INFO  : no_home_score_policy_home_real_20260809.json: Copied (new)
+2026/08/11 14:20:36 INFO  : gerar_carrossel_lula_capitais.py: Copied (new)
+2026/08/11 14:20:36 INFO  : lula_capitais_post.json: Copied (new)
+2026/08/11 14:20:36 INFO  : backup_reforma_local.log: Copied (replaced existing)
+2026/08/11 14:20:36 INFO  : post_264871_update.json: Copied (new)
+2026/08/11 14:20:36 INFO  : elmano_video_audio.wav: Copied (new)
+2026/08/11 14:20:36 INFO  : prepare_lula_capitais_forum_draft.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_6_card_instagram_carousel.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_all_platforms_final.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_ciro_elmano_draft.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_existing_carousel.py: Copied (new)
+2026/08/11 14:20:36 INFO  : nunes_marques_tse_2026_opt.jpg: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_guia_debates_band.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_lula_capitais_forum_draft.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_debates_social_media.py: Copied (new)
+2026/08/11 14:20:36 INFO  : print_tweet_gimenez_lula_maduro.png: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_page_curl.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_lula_capitais_instagram_carousel.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_ciro_elmano_draft_v2.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_trump_vacinas.py: Copied (new)
+2026/08/11 14:20:36 INFO  : rollback_and_draft.py: Copied (new)
+2026/08/11 14:20:36 INFO  : test_block_artificial_headline_20260809.php: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_publi_page.py: Copied (new)
+2026/08/11 14:20:36 INFO  : publish_twitter_thread.py: Copied (new)
+2026/08/11 14:20:37 INFO  : transcribe.py: Copied (new)
+2026/08/11 14:20:37 INFO  : update_marcola_post.py: Copied (new)
+2026/08/11 14:20:37 INFO  : update_guia_debates_wp.py: Copied (new)
+2026/08/11 14:20:37 INFO  : update_pec_seguranca_post.py: Copied (new)
+2026/08/11 14:20:37 INFO  : test_no_home_cleaner_20260809.py: Copied (new)
+2026/08/11 14:20:37 INFO  : test_home_real_gate_20260809.php: Copied (new)
+2026/08/11 14:20:37 INFO  : update_tse_post_modern_img.py: Copied (new)
+2026/08/11 14:20:37 INFO  : update_post_memes.py: Copied (new)
+2026/08/11 14:20:37 INFO  : v4_vertical_draft_worker.nyc.before.py: Copied (new)
+2026/08/11 14:20:37 INFO  : v4_vertical_draft_worker_home_real_20260809.py: Copied (new)
+2026/08/11 14:20:37 INFO  : update_wp_draft_final_accurate.py: Copied (new)
+2026/08/11 14:20:37 INFO  : update_wp_draft_with_correct_data.py: Copied (new)
+2026/08/11 14:20:37 INFO  : v4_vision_router_media_gate_20260810.py: Copied (new)
+2026/08/11 14:20:37 INFO  : v4_vertical_draft_worker_media_gate_20260810.py: Copied (new)
+2026/08/11 14:20:37 INFO  : nunes_marques_tse_2026_modern.jpg: Copied (new)
+2026/08/11 14:20:37 INFO  : v4_vertical_draft_worker_local_snapshot_20260809.py: Copied (new)
+2026/08/11 14:20:37 INFO  : published_post_link.txt: Copied (replaced existing)
+2026/08/11 14:20:37 INFO  : cafezinho_home_real_image_fix_20260809/front-page.php: Copied (new)
+2026/08/11 14:20:37 INFO  : card_v2/historico_instagram.json: Copied (replaced existing)
+2026/08/11 14:20:37 INFO  : card_v2/card_ig_night_265125.jpg: Copied (new)
+2026/08/11 14:20:37 INFO  : xicara_icon.png: Copied (new)
+2026/08/11 14:20:37 INFO  : cafezinho_home_real_image_fix_20260809/cafezinho-real-image-gate.php: Copied (new)
+2026/08/11 14:20:37 INFO  : card_v2/cron_night.log: Copied (replaced existing)
+2026/08/11 14:20:37 INFO  : backups/post_264875_backup_marcola.json: Copied (new)
+2026/08/11 14:20:37 INFO  : card_v2/card_ig_night_264966.jpg: Copied (new)
+2026/08/11 14:20:37 INFO  : codex/v4_failure_observability.py: Copied (new)
+2026/08/11 14:20:37 INFO  : codex/v4_vertical_draft_worker.nyc.py: Copied (replaced existing)
+2026/08/11 14:20:38 INFO  : codex/v4_vertical_redactor_runtime.nyc.py: Copied (replaced existing)
+2026/08/11 14:20:38 INFO  : reuniao_trindade_v4_20260809/gate_titulo.py: Copied (replaced existing)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/raw_chart_nao_polarizados.png: Copied (new)
+2026/08/11 14:20:38 INFO  : codex/test_v4_failure_observability.py: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/raw_chart_identidade.png: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/slide2_grafico_regioes.jpg: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/raw_chart_evolucao.png: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/raw_chart_tse.png: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/slide3_grafico_evolucao.jpg: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/slide5_grafico_tse.jpg: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/slide4_grafico_identidade.jpg: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/raw_chart_regioes.png: Copied (new)
+2026/08/11 14:20:38 INFO  : card_v2/carrossel_lula_capitais/slide6_grafico_nao_polarizados.jpg: Copied (new)
+2026/08/11 14:20:38 INFO  : reuniao_trindade_v4_20260809/agente_controlado_nyc_20260810.py: Copied (new)
+2026/08/11 14:20:39 INFO  : card_v2/carrossel_lula_capitais/slide1_card_capitais.jpg: Copied (new)
+2026/08/11 14:20:39 INFO  :    19.840 MiB / 19.840 MiB, 100%, 3.234 MiB/s, ETA 0s
+2026/08/11 14:20:42 INFO  : youtube_transcript_stats.jsonl: Copied (replaced existing)
+2026/08/11 14:20:42 INFO  : v4_cafezinho_youtube/vistos.json: Copied (replaced existing)
+2026/08/11 14:20:42 INFO  : v4_cafezinho_youtube/historico.jsonl: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : kimi_busca_imagem/faltas_nyc.jsonl: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : v4/banco_midia/img/ouro_cd83a728893f42ad.jpg: Updated modification time in destination
+2026/08/11 14:20:43 INFO  : v4/banco_midia/img/ouro_963aa79336474248.jpg: Updated modification time in destination
+2026/08/11 14:20:43 INFO  : v4/banco_midia_sync.log: Copied (new)
+2026/08/11 14:20:43 INFO  : kimi_busca_imagem/rounds.log: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : v4_cafezinho_youtube/cron.log: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : kimi_busca_imagem/estado.json: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : v4/banco_midia/img/ouro_78f735f4e996e6d2.jpg: Updated modification time in destination
+2026/08/11 14:20:43 INFO  : v4/ceara_youtube_cron.log: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : v4/ga4_destaques.log: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : kimi_busca_imagem/cron.log: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : v4/mundotrilhos/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:43 INFO  : indexing_calls.jsonl: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/mundotrilhos/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/painel_destaques.log: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/cron_v4.log: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/globalsouth/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/aiatolah/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/ceara/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:44 INFO  : v4/mapario/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : v4/discoverbrazil/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : v4/aiatolah/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : v4/ceara/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : v4/globalsouth/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : v4/banco_midia/index.json: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : v4/mapario/youtube_vistos.json: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : youtube_transcript_cache/autonomo_en_splY8C1qOrQ.lock: Copied (new)
+2026/08/11 14:20:45 INFO  : youtube_transcript_cache/autonomo_pt-BR_BxkzWuXwqGE.lock: Copied (new)
+2026/08/11 14:20:45 INFO  : youtube_transcript_cache/autonomo_en_z_n3KjZ34qw.lock: Copied (new)
+2026/08/11 14:20:45 INFO  : youtube_transcript_cache/autonomo_pt-BR_JNtXoQllxYs.lock: Copied (new)
+2026/08/11 14:20:45 INFO  : v4/discoverbrazil/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:45 INFO  : youtube_transcript_cache/autonomo_pt-BR_T6hOq-bzqxo.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_aREDIbeWHsE.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_NjvGxX3Ya6g.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_3624mKwagtY.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_3tqINZoQrzQ.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_deXKyPuoV7c.json: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_deXKyPuoV7c.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_gaSY4-kFMkg.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_iCrw9xQeWzE.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_aREDIbeWHsE.json: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_sD1tlJxT0d0.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_sD1tlJxT0d0.json: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_iQC25Rxi95o.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_p2L_mrA48dc.lock: Copied (new)
+2026/08/11 14:20:46 INFO  : youtube_transcript_cache/autonomo_pt-BR_w7wSbJYB1Hc.json: Copied (new)
+2026/08/11 14:20:46 INFO  : v4/railpost/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:47 INFO  : v4/railpost/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_083c09a5f9b85f21.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_0fb3f2de9e82c4f0.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_0eb7990434881092.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : youtube_transcript_cache/autonomo_pt-BR_w7wSbJYB1Hc.lock: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_29c7d49190756eec.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/riocarta/auditado.jsonl: Copied (replaced existing)
+2026/08/11 14:20:47 INFO  : publicador_alerta_throttle.json: Copied (replaced existing)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_6b7b4bf6fff34bcb.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_8041b51430009fd3.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_9269fc6ad2d7bb72.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_800142d8d9454ba5.jpg: Copied (new)
+2026/08/11 14:20:47 INFO  : v4/banco_midia/img/ouro_87b2d6b413dc1184.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_b48a52ab60cee43f.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_79e2824dec60bf38.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_d8859e556cfd1caf.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_15a32754ca4245d0.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_e807e3e61b57c7a9.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_d72f662b1c8adb7c.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_efae928a6bb21e06.jpg: Copied (new)
+2026/08/11 14:20:48 INFO  : v4/riocarta/bruto.jsonl: Copied (replaced existing)
+2026/08/11 14:20:48 INFO  : v4/banco_midia/img/ouro_9300593105fc443a.jpg: Copied (new)
+2026/08/11 14:20:49 INFO  : v4/banco_midia/img/ouro_d95e54c22a1cd130.jpg: Copied (new)
+2026/08/11 14:20:49 INFO  : v4/banco_midia/img/ouro_ce8010e502059fbd.jpg: Copied (new)
+2026/08/11 14:20:49 INFO  : indexing_fila_pendentes.jsonl: Copied (replaced existing)
+2026/08/11 14:20:49 INFO  :    30.266 MiB / 30.266 MiB, 100%, 3.363 MiB/s, ETA 0s

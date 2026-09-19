@@ -1,0 +1,87 @@
+{
+  "commit": "f0f1cf3c6d1814569ae5c7e207346857ab1248a3",
+  "started_at": "2026-09-10T15:56:52.957799-03:00",
+  "calls": [
+    {
+      "remote": "origin",
+      "command": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:main"
+      ],
+      "rc": 1,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [rejected]            HEAD -> main (non-fast-forward)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. Integrate the remote changes (e.g.\nhint: 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    },
+    {
+      "remote": "nyc",
+      "command": [
+        "git",
+        "push",
+        "nyc",
+        "HEAD:main"
+      ],
+      "rc": "timeout",
+      "delivery": "unknown"
+    }
+  ],
+  "finished_at": "2026-09-10T15:57:30.989290-03:00",
+  "delivery": "NAO_CONFIRMADA",
+  "nyc_readback": {
+    "command": "git ls-remote nyc refs/heads/main",
+    "rc": "timeout",
+    "at": "2026-09-10T15:57:59.221741-03:00"
+  },
+  "rounds_executed": 1,
+  "result": "HOLD_TRANSPORTE_GIT; ENTREGA_NAO_CONFIRMADA",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "prohibited_actions_executed": [],
+  "verification": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "matches_commit": true,
+      "sha256": "41804b8ee06afb8e874227ad659cbe092ba1dd00ede21705b6d6a89b71feadce",
+      "utf8_no_bom": true,
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "matches_commit": true,
+      "sha256": "d06d780b678cc3f8a7b40e25fe537fecd537d47a15fcdb7009128aea10c8ddc2",
+      "utf8_no_bom": true,
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "matches_commit": true,
+      "sha256": "a0fdc27c28675afcca15dbe6ec7efcb7732028f49499ef619a61879b486cdf8d",
+      "utf8_no_bom": true,
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_155638_ronda.md",
+      "matches_commit": true,
+      "sha256": "8ea4dbc5ef15dfe715db11287052cee0ae09688ac3bf36ae81cf690e195aef69",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_155638_evidencias.json",
+      "matches_commit": true,
+      "sha256": "15b9d2ba5b8da4e0675b4085491da92c711d5dc998b502b7548829e8b687eea7",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_155638_integridade.json",
+      "matches_commit": true,
+      "sha256": "a7589443426c0944e9968b5607aa64bea57fa471035c6c086010f3d73cb01a6f",
+      "utf8_no_bom": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_155638_editorial.md",
+      "matches_commit": true,
+      "sha256": "426dd0df94dc1c92eba64b95e951933b65930d4f7345b871b791d32de778c3ee",
+      "utf8_no_bom": true
+    }
+  ]
+}

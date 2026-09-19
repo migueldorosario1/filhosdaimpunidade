@@ -1,0 +1,158 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: O Cafezinho reuniu documentos judiciais dos Estados Unidos sobre Jason Miller, ex-chefe da Gettr e operador politico ligado ao trumpismo.. Tese escolhida: Quando Jason Miller entra no centro da pressao externa, revela-se que os documentos judiciais deslocam a pauta de ataque retorico para responsabilidade institucional de atores ligados a Trump, Washington e eleicao brasileira.. Desenvolver a consequencia concreta: a consequencia concreta do fato, nao apenas a declaracao publica. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Documentos judiciais expõem Jason Miller, elo de Trump com o bolsonarismo.",
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os documentos judiciais deslocam a pauta de ataque retorico para responsabilidade institucional de atores ligados a Trump, Washington e eleicao brasileira",
+    "evidencias_ref": [
+      "fatos_travados:documentos_judiciais",
+      "fatos_travados:Washington",
+      "fatos_travados:Trump"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que entende a rede de influencia politica em Washington",
+    "quem_perde": "Jason Miller e operadores que tratam pressao externa como militancia sem custo",
+    "tipo": "institucional"
+  },
+  "contradicao_central": "a consequencia concreta do fato, nao apenas a declaracao publica",
+  "curador_modelo": "mock-curador-v4",
+  "curadoria_id": "cur_09e24a39c021a4c9",
+  "editoria": "v4_politica_economia",
+  "fato_novo": "O Cafezinho reuniu documentos judiciais dos Estados Unidos sobre Jason Miller, ex-chefe da Gettr e operador politico ligado ao trumpismo.",
+  "fatos_travados": [
+    {
+      "fato": "O Cafezinho reuniu documentos judiciais dos Estados Unidos sobre Jason Miller, ex-chefe da Gettr e operador politico ligado ao trumpismo.",
+      "fonte_ref": [
+        "Outros/pautas editoriais o cafezinho/2026 Jul 09/Jason Miller - os picaretas parte 3/_strong_Série _Os quatro picaretas_, Parte 3 · documentos exclusivos da justiça americana__strong_ v4.txt"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A apuracao local registra que a Gettr foi condenada a devolver US$ 35,6 milhoes ao espolio de Miles Guo, valor destinado a credores e vitimas do golpe que levou Guo a prisao.",
+      "fonte_ref": [
+        "Outros/pautas editoriais o cafezinho/2026 Jul 09/Jason Miller - os picaretas parte 3/_strong_Série _Os quatro picaretas_, Parte 3 · documentos exclusivos da justiça americana__strong_ v4.txt"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "Os documentos tambem citam cobranca pessoal contra Miller de US$ 353 mil ligados a recursos que teriam saido de empresas associadas ao mesmo esquema.",
+      "fonte_ref": [
+        "Outros/pautas editoriais o cafezinho/2026 Jul 09/Jason Miller - os picaretas parte 3/_strong_Série _Os quatro picaretas_, Parte 3 · documentos exclusivos da justiça americana__strong_ v4.txt"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta conecta esse historico judicial ao papel de Miller como elo entre Washington, Trump, a extrema direita americana e o bolsonarismo brasileiro em ano de eleicao.",
+      "fonte_ref": [
+        "Outros/pautas editoriais o cafezinho/2026 Jul 09/Jason Miller - os picaretas parte 3/_strong_Série _Os quatro picaretas_, Parte 3 · documentos exclusivos da justiça americana__strong_ v4.txt"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O material inclui processos judiciais, prints de publicacoes e texto editorial local, mas ainda deve preservar cautela juridica: fatos devem ser atribuidos aos documentos e nenhuma intencao criminal deve ser afirmada fora do que consta nas pecas.",
+      "fonte_ref": [
+        "Outros/pautas editoriais o cafezinho/2026 Jul 09/Jason Miller - os picaretas parte 3/_strong_Série _Os quatro picaretas_, Parte 3 · documentos exclusivos da justiça americana__strong_ v4.txt"
+      ],
+      "idx": 4,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a consequencia concreta do fato, nao apenas a declaracao publica",
+    "entidade_principal": "Jason Miller",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "34fa0d6a0b103ee016b5fa0c20c29fc40adfe4e622802c2c9683b53b7302210a",
+  "item_id": "v4_real_002",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "acervo_local_cafezinho",
+      "documentos_judiciais_locais"
+    ],
+    "resumo_consenso": "A leitura corrente tende a tratar Jason Miller apenas como aliado retorico de Bolsonaro e operador de Trump, sem explorar o custo institucional dos documentos judiciais associados a Gettr.",
+    "timestamp_brt": "2026-07-10T00:10:00-03:00"
+  },
+  "manifesto_curadoria": {
+    "agent": "curador",
+    "contract": "contratos/v4_curadoria_tese_v1.json",
+    "issues": [],
+    "leitura_corrente_timestamped": true,
+    "ok": true,
+    "teses_candidatas": 3
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de Jason Miller revela a consequencia concreta do fato, nao apenas a declaracao publica.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "O Cafezinho reuniu documentos judiciais dos Estados Unidos sobre Jason Miller, ex-chefe da Gettr e operador politico ligado ao trumpismo. A apuracao local registra que a Gettr foi condenada a devolver US$ 35,6 milhoes ao espolio de Miles Guo, valor destinado a credores e vitimas do golpe que levou Guo a prisao. Os documentos tambem citam cobranca pessoal contra Miller de US$ 353 mil ligados a recursos que teriam saido de empresas associadas ao mesmo esquema. A pauta conecta esse historico judicial ao papel de Miller como elo entre Washington, Trump, a extrema direita americana e o bolsonarismo brasileiro em ano de eleicao. O material inclui processos judiciais, prints de publicacoes e texto editorial local, mas ainda deve preservar cautela juridica: fatos devem ser atribuidos aos documentos e nenhuma intencao criminal deve ser afirmada fora do que consta nas pecas.",
+    "primary_entity": "Jason Miller",
+    "source_status": "auditado_local_preliminar",
+    "titulo": "Documentos judiciais expõem Jason Miller, elo de Trump com o bolsonarismo"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "leitor que entende a rede de influencia politica em Washington",
+      "quem_perde": "Jason Miller e operadores que tratam pressao externa como militancia sem custo",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando Jason Miller entra no centro da pressao externa, revela-se que os documentos judiciais deslocam a pauta de ataque retorico para responsabilidade institucional de atores ligados a Trump, Washington e eleicao brasileira."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-10T00:10:40.479803-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: Trump, Washington, eleicao",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

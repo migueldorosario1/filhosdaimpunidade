@@ -1,0 +1,157 @@
+{
+  "briefing_produtor": "Abrir pela contradicao, nao pelo resumo. Fato novo: O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.. Tese escolhida: Quando os fatos auditados sobre indústria brasileira saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a consequencia concreta do fato, nao apenas a declaracao publica. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Indústria cresce, mas mostra a dependência do setor produtivo brasileiro.",
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica",
+    "evidencias_ref": [
+      "fatos_travados:IBGE",
+      "fatos_travados:setor_produtivo"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+    "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+    "tipo": "economica"
+  },
+  "contradicao_central": "a consequencia concreta do fato, nao apenas a declaracao publica",
+  "curador_modelo": "mock-curador-v4",
+  "curadoria_id": "cur_8909f975d2ef930b",
+  "editoria": "v4_politica_economia",
+  "fato_novo": "O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.",
+  "fatos_travados": [
+    {
+      "fato": "O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 4,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a consequencia concreta do fato, nao apenas a declaracao publica",
+    "entidade_principal": "indústria brasileira",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "3ff3286507aed0fcc8318f72d688f380350cb158aecf4779bfa6bfb83b582c33",
+  "item_id": "v4_real_003",
+  "leitura_corrente_timestamped": {
+    "fonte": "manual_editor",
+    "fontes_consultadas": [
+      "IBGE",
+      "acervo_local_cafezinho"
+    ],
+    "resumo_consenso": "A leitura corrente resume o dado como alta mensal da industria e quarto mes seguido de crescimento, com mencao regional dispersa.",
+    "timestamp_brt": "2026-07-10T00:10:00-03:00"
+  },
+  "manifesto_curadoria": {
+    "agent": "curador",
+    "contract": "contratos/v4_curadoria_tese_v1.json",
+    "issues": [],
+    "leitura_corrente_timestamped": true,
+    "ok": true,
+    "teses_candidatas": 3
+  },
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de indústria brasileira revela a consequencia concreta do fato, nao apenas a declaracao publica.",
+  "schema_version": "v1",
+  "source_material": {
+    "conteudo": "O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo. A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011. A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%. O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%. A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.",
+    "primary_entity": "indústria brasileira",
+    "source_status": "auditado_local_preliminar",
+    "titulo": "Indústria cresce, mas mostra a dependência do setor produtivo brasileiro"
+  },
+  "status": "curadoria_dry_run",
+  "tese_escolhida_idx": 0,
+  "teses_candidatas": [
+    {
+      "evidencias_ref": [
+        "auditado:item",
+        "fatos_travados",
+        "consequencia_material"
+      ],
+      "idx": 0,
+      "motivo_rejeicao": "",
+      "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+      "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+      "risco_editorial": "nao exagerar intencao nao provada",
+      "status": "escolhida",
+      "tese": "Quando os fatos auditados sobre indústria brasileira saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica."
+    },
+    {
+      "evidencias_ref": [
+        "leitura_corrente_timestamped"
+      ],
+      "idx": 1,
+      "motivo_rejeicao": "sumario_sem_tese",
+      "quem_ganha": "resumo factual rapido",
+      "quem_perde": "originalidade editorial",
+      "risco_editorial": "repetir o lead da grande midia",
+      "status": "rejeitada",
+      "tese": "A disputa deve ser narrada como confronto simetrico entre dois personagens politicos."
+    },
+    {
+      "evidencias_ref": [
+        "auditado:item"
+      ],
+      "idx": 2,
+      "motivo_rejeicao": "cronologia_sem_consequencia",
+      "quem_ganha": "prudencia formal",
+      "quem_perde": "promessa ao leitor",
+      "risco_editorial": "materia correta demais no lugar errado",
+      "status": "rejeitada",
+      "tese": "O texto deve priorizar apenas a cronologia das declaracoes publicas."
+    }
+  ],
+  "timestamp_brt": "2026-07-10T00:10:40.810874-03:00",
+  "validacoes": {
+    "advogado_do_obvio": {
+      "motivo": "tese diverge do consenso e usa ancoras concretas: USTR, setor produtivo",
+      "status": "aprovada"
+    },
+    "checklist": {
+      "angulo_diferente_do_consenso": true,
+      "consequencia_material": true,
+      "fatos_travados": true,
+      "promessa_clara": true,
+      "risco_juridico_revisado": true,
+      "teses_distintas": true
+    }
+  }
+}

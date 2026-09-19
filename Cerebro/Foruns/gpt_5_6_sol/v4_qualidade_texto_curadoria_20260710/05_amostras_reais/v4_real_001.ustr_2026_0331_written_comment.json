@@ -1,0 +1,70 @@
+{
+  "artifact_type": "written_comment_collection_followup",
+  "item_id": "v4_real_001",
+  "schema_version": "v1",
+  "created_at_brt": "2026-07-10T10:38:00-03:00",
+  "docket": "USTR-2026-0331",
+  "document_id_observed": "FLAVIO_BOLSONARO_USTR-2026-0331-00130718-CAT-17865-Public-Document",
+  "title": "Written Comment on the Proposed Action",
+  "declared_submitter": "Sen. Flavio Bolsonaro",
+  "declared_submission_date": "2026-07-01",
+  "local_pdf_path": "dados/auditado/v4_real_001.ustr_2026_0331_written_comment.pdf",
+  "pdf": {
+    "sha256": "129b1a648c5567070fd73429d4cac2f05c81190a89febffa6da1ddb5745049cd",
+    "size_bytes": 1782765,
+    "pages": 86,
+    "pdf_version": "1.7",
+    "creator": "Writer",
+    "producer": "LibreOffice 24.2",
+    "creation_date": "2026-07-02T00:16:09-03:00"
+  },
+  "source_status": {
+    "official_ustr_portal_direct_download": false,
+    "official_ustr_portal_attempt_result": "https://comments.ustr.gov/s/ retornou aplicacao dinamica/CSS Error em leitura simples.",
+    "document_integral_obtained": true,
+    "document_integral_source_class": "documento primario declarado do gabinete, hospedado por espelhos jornalisticos; nao baixado diretamente do portal oficial USTR nesta rodada",
+    "mirror_byte_identity_verified": true
+  },
+  "source_urls": [
+    {
+      "url": "https://conexaomt.com/wp-content/uploads/2026/07/FLAVIO_BOLSONARO_USTR-2026-0331-00130718-CAT-17865-Public-Document.pdf",
+      "role": "espelho_pdf_integral",
+      "sha256": "129b1a648c5567070fd73429d4cac2f05c81190a89febffa6da1ddb5745049cd"
+    },
+    {
+      "url": "https://img.band.com.br/static/2026/07/02/carta-de-flavio-aos-eua-131626.pdf",
+      "role": "espelho_pdf_integral",
+      "sha256": "129b1a648c5567070fd73429d4cac2f05c81190a89febffa6da1ddb5745049cd"
+    },
+    {
+      "url": "https://conexaomt.com/destaque/eua-audiencias-praticas-comerciais-brasil/",
+      "role": "materia_que_linka_documento_publico_e_descreve_86_paginas"
+    }
+  ],
+  "verified_facts_from_pdf": [
+    "O documento declara Docket No. USTR-2026-0331.",
+    "O documento se intitula Written Comment on the Proposed Action.",
+    "O documento declara submissao por Sen. Flavio Bolsonaro, membro do Senado Federal do Brasil.",
+    "O documento declara data de submissao em 1 de julho de 2026.",
+    "O documento declara que Flavio Bolsonaro submete o comentario em capacidade pessoal e oficial como legislador brasileiro.",
+    "O pedido principal e suspender a acao proposta e abrir mecanismo bilateral imediato de negociacao cobrindo as seis areas identificadas no Notice.",
+    "O documento propoe uma janela de 180 dias com automatic snap-back.",
+    "O documento trata Pix e electronic payments como uma das seis areas de resposta."
+  ],
+  "editorial_implications": {
+    "prudence_resolution_remains_valid": true,
+    "reason": "A materia existente nao afirmava conteudo do comentario escrito nao localizado; agora ha PDF integral em espelhos, mas ainda nao houve download direto do portal oficial USTR.",
+    "recommended_upgrade": [
+      "tratar o PDF integral como fonte auditada complementar com limitacao de origem",
+      "tentar novamente obter URL/recibo oficial direto no comments.ustr.gov",
+      "comparar carta escrita com depoimento oral do Painel 8",
+      "avaliar pauta propria sobre divergencia carta escrita versus testemunho oral"
+    ]
+  },
+  "collection_followup": {
+    "status": "partial_resolved_pdf_integral_obtido_por_espelhos",
+    "official_portal_direct_pdf_still_pending": true,
+    "required_before": "upgrade_editorial_or_publicacao_real_sem_ressalva",
+    "next_action": "obter URL oficial ou recibo do comments.ustr.gov para o documento 00130718/CAT-17865, se o portal permitir acesso direto"
+  }
+}

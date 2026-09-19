@@ -1,0 +1,29 @@
+{
+  "commit": "ad0115795448dea2cc4d8b5a2e715a36d14bb5bc",
+  "attempts": [
+    {
+      "remote": "origin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   e0053e275..ad0115795  ad0115795448dea2cc4d8b5a2e715a36d14bb5bc -> main\n",
+      "at": "2026-09-10T18:24:00.179549-03:00"
+    },
+    {
+      "remote": "nyc",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            ad0115795448dea2cc4d8b5a2e715a36d14bb5bc -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because a pushed branch tip is behind its remote\nhint: counterpart. Check out this branch and integrate the remote changes\nhint: (e.g. 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "at": "2026-09-10T18:24:00.078658-03:00"
+    }
+  ],
+  "at": "2026-09-10T18:24:00.180108-03:00",
+  "state": "C1_ENTREGUE_C2_PENDENTE_NON_FAST_FORWARD",
+  "ref": "XM-20260910-035",
+  "receipt": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_182342_ronda.md",
+  "origin_remote_verified": "ad0115795448dea2cc4d8b5a2e715a36d14bb5bc",
+  "verified_at": "2026-09-10T18:24:38.904683-03:00",
+  "script_ponte_push_used": false,
+  "reason": "Implementação contém rebase/autostash e espelhamento amplo; pushes explícitos preservam contrato estrito.",
+  "prohibited_transport_actions_executed": [],
+  "retomada": "preservada: executor não interativo e sessão interativa concorrente"
+}

@@ -1,0 +1,11 @@
+# Memória AST-20260905-016 — prints do Moka e continuação sem e-mail
+
+05/09/2026, 09:21 BRT. Miguel forneceu dez imagens na pasta `Outros/Astra GPT 6/Caso Moka no Playstore/` enquanto a configuração horária AST-015 era preparada. Em seguida esclareceu que não recebeu nova resposta do Google e pediu pesquisa sobre como continuar. A pesquisa é adicional; não cancela o agendamento, não autoriza alterações no app/Console nem despesa.
+
+As dez imagens foram vistas pelo apoio; o principal viu diretamente as capturas 09:09:20, 09:10:19, 09:10:22 e 09:10:50 e leu integralmente o diagnóstico. Estado demonstrado: app rejeitado por acesso de avaliação; pacote com.mokareader.app registrado. O Console registra resposta à contestação, mas isso não prova entrega de e-mail. Captura final mostra o recurso original do próprio Miguel, não a resposta da loja. Não afirmar conta suspensa ou nova decisão cujo corpo não foi recebido.
+
+Motivo concreto: o avaliador foi levado a instruções para obter chave de IA e adicionar crédito externo. Tirar login não comprova acesso a essas funções. A norma Google 9859455, seção Acesso de apps, foi consultada pelo principal e pelo apoio: é possível corrigir instruções/acesso e reenviar sem aguardar a equipe de políticas. A norma 15748846 exige acesso real a todas as funções e credenciais/instruções reutilizáveis em inglês. Nenhuma dispensa BYOK demonstrada, nem proibição geral de BYOK demonstrada.
+
+Entregável: `Foruns/DIAGNOSTICO_ASTRA_PRINTS_PLAYSTORE_20260905.md`, com evidências por imagem, roteiro de preparação/revisão, limitações de custo e minuta em inglês para a Ajuda do Console. Chamado NÃO enviado. Não aguardar um e-mail que Miguel não tem; não duplicar o recurso antigo; não prometer aprovação; não oferecer respostas simuladas ao revisor. Nenhuma solução de acesso real à IA sem gasto foi demonstrada. Conta/chave creditada ou consumo novo exigem autorização financeira; assinatura Astra não será convertida em backend do Moka.
+
+Telegram: pergunta inicial ao Miguel confirmada, mensagem 51. Depois dela, Miguel esclareceu aqui que não recebeu resposta; a orientação mais nova deve substituir a dependência de trazer esse texto. O resumo final deve informar que a preparação pode continuar sem esperar o e-mail. Não publicar capturas, identificadores privados, dados de conta ou e-mail no GitHub.

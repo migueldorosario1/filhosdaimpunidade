@@ -1,0 +1,73 @@
+{
+  "id": "AST-20260905-015",
+  "frozen_at": "2026-09-05T09:35:00-03:00",
+  "purpose": "Revisão DS-N Chefe e ZM; cópias para leitura, não instalação remota",
+  "enabled": false,
+  "cron_installed": false,
+  "approvals": {
+    "dsn": false,
+    "zm": false
+  },
+  "schedule": "0 0,8-23 * * *",
+  "timezone": "America/Sao_Paulo",
+  "canonical_directory": "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/ronda_horaria",
+  "review_directory": "cerebro/Foruns/artefatos_astra_ronda_horaria_20260905",
+  "test_suite": {
+    "count": 63,
+    "passed": true,
+    "mode": "offline/mocks"
+  },
+  "live_test": {
+    "id": "TEST-20260905-092503-1788611103882644356",
+    "started_at": "2026-09-05T09:25:03-03:00",
+    "finished_at": "2026-09-05T09:25:57-03:00",
+    "model": "gpt-6-astra",
+    "billing_mode": "chatgpt_subscription",
+    "exit_code": 0,
+    "tool_events": 0,
+    "external_writes": false,
+    "automatic_trigger": false
+  },
+  "files": [
+    {
+      "name": "runner.py",
+      "size_bytes": 34764,
+      "sha256": "0f290b667a465227c976ea22656c534251cdc6cc51dc1fd35db72ed513efdfa8"
+    },
+    {
+      "name": "delivery.py",
+      "size_bytes": 24194,
+      "sha256": "3bf881865767f7ecca884218f5592afd18c4675a0864d8bd46529f2ec43e360d"
+    },
+    {
+      "name": "config.json",
+      "size_bytes": 7043,
+      "sha256": "9ed24b7fca38f2e958199bfce8ed0dc612870a6ccb2560cc7c8afedb9597da35"
+    },
+    {
+      "name": "PROMPT.md",
+      "size_bytes": 5965,
+      "sha256": "a18884159db53b9d5fd0164d3eb8693c1f905b404e3b2ac1334ab11976159227"
+    },
+    {
+      "name": "test_runner.py",
+      "size_bytes": 25478,
+      "sha256": "d39ac7eedf81268fc0d8921be712c727936c70f2eea70e77747f9677c12f9e8c"
+    },
+    {
+      "name": "test_delivery.py",
+      "size_bytes": 16864,
+      "sha256": "3e095c7254066a45d540094f1c51397929009c7cbe0a03796b590da0c50f7e7f"
+    },
+    {
+      "name": "README.md",
+      "size_bytes": 8875,
+      "sha256": "53892a7ed012a56fdac45380796994110f248e3c4729419361a912cb20ddb1fe"
+    },
+    {
+      "name": "crontab.proposta",
+      "size_bytes": 475,
+      "sha256": "518481ab0b61239caaf198967d01fb7ee97e3095f3fb5a4614fab61127e5baa9"
+    }
+  ]
+}

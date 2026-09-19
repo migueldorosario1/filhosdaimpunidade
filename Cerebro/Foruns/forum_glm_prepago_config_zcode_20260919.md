@@ -40,3 +40,9 @@ A perna ZAI da **curadoria da esteira de fios** estava morta desde a expiração
 - Restou UM Z.ai no seletor: **"Z.ai API — PRÉ-PAGO"** (GLM-5.3 / GLM-4.6 / GLM-4.5-Flash)
 - `setting.json`: ponteiros mortos das famílias zai/bigmodel removidos (selectedKeys + connectionSelections); `cli/config.json`: modelo padrão repontado de `builtin:zai-coding-plan/GLM-5.3` para o pré-pago `e488030c/GLM-5.3`; `coding-plan-cache.json` removido (app regenera) — tudo com backup
 - Se algo do plano reaparecer no seletor: é o app recriando templates builtin vazios/desativados — ignorar ou mandar limpar de novo
+
+## ADENDO 2 (19/09 ~16:2x) — A DUPLICATA ERA O provider_config.json
+
+- Causa dos "dois Z.ai" no seletor: o app usa `~/.zcode/v2/provider_config.json` (schema próprio, GUI). Miguel tinha colado a chave na GUI às 15:37 — criou a regra `zai-api` (chave com 2 espaços no fim, sem modelos) E atualizou a `e488030c` (base ainda no endpoint coding morto)
+- Cura (backup `.bak_dedup_zai_20260919_162x`): regra `zai-api` removida; `e488030c` = "Z.ai API — PRÉ-PAGO", base `https://api.z.ai/api/paas/v4`, chave trimmada, modelos GLM-5.3/GLM-4.6/GLM-4.5-Flash; restam 7 regras, 1 só Z.ai
+- Lição: mexer em provider do ZCode = acertar os DOIS arquivos (config.json legado + provider_config.json da GUI); app aberto pode regravar setting.json/provider_config.json — se ressuscitar, refazer com o app fechado

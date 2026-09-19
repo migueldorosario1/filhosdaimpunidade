@@ -1,0 +1,542 @@
+{
+  "at": "2026-09-11T06:22:17.923360-03:00",
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T06:17:56.451939-03:00",
+      "since": "2026-09-11T05:47:58.373315-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "ca820d6e77c1752ba5cede59b776c89ba087acb0a4d1af828162e93264e037ca",
+          "requests": 3,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "4426a4e29d15192aa4e6210b94c204d23b11cba029cfd86fcac772c62af0c920",
+          "requests": 6490,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        }
+      ],
+      "redis_errors": {
+        "sha256": "91e380f94ffaad036c100033fcca5af9c95e92e1a725867eaf095ffc9a3dd02d",
+        "total": 0,
+        "by_minute": {}
+      },
+      "redis_info": {
+        "uptime_in_seconds": "9977",
+        "used_memory": "552111160",
+        "used_memory_peak": "1019700616",
+        "expired_keys": "244",
+        "evicted_keys": "0",
+        "db0": "keys=458142,expires=93,avg_ttl=417710546"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "slowlog": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T06:18:30.672292-03:00",
+      "retained_sample": 128,
+      "earliest_retained_at": "2026-09-11T03:36:18-03:00",
+      "slow_events": [
+        {
+          "id": 195,
+          "timestamp": 1789117201,
+          "at": "2026-09-11T06:00:01-03:00",
+          "duration_usec": 603567,
+          "command": "MGET",
+          "argc": 2,
+          "mode": null
+        },
+        {
+          "id": 192,
+          "timestamp": 1789115135,
+          "at": "2026-09-11T05:25:35-03:00",
+          "duration_usec": 911211,
+          "command": "FLUSHDB",
+          "argc": 1,
+          "mode": null
+        },
+        {
+          "id": 190,
+          "timestamp": 1789113637,
+          "at": "2026-09-11T05:00:37-03:00",
+          "duration_usec": 854026,
+          "command": "FLUSHDB",
+          "argc": 1,
+          "mode": null
+        },
+        {
+          "id": 186,
+          "timestamp": 1789111537,
+          "at": "2026-09-11T04:25:37-03:00",
+          "duration_usec": 21468,
+          "command": "FLUSHDB",
+          "argc": 1,
+          "mode": null
+        },
+        {
+          "id": 185,
+          "timestamp": 1789111529,
+          "at": "2026-09-11T04:25:29-03:00",
+          "duration_usec": 7498582,
+          "command": "FLUSHDB",
+          "argc": 1,
+          "mode": null
+        },
+        {
+          "id": 160,
+          "timestamp": 1789110209,
+          "at": "2026-09-11T04:03:29-03:00",
+          "duration_usec": 627603,
+          "command": "SET",
+          "argc": 3,
+          "mode": null
+        }
+      ],
+      "scope": "One read-only SLOWLOG GET 128; other args and client identities not logged."
+    }
+  },
+  "wordpress_readback": {
+    "rc": 0,
+    "at": "2026-09-11T06:18:32.698430-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T06:18:32-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269426,
+          "hash": "81be2bdc68569017eeb525cb4a52a76302f199484f9632aacb29686b6bc7900c",
+          "status": "publish",
+          "title": "A causa por trás da inversão: por que o cansaço com a polarização hoje favorece Flávio, não Lula",
+          "author": "5780",
+          "date": "2026-09-08 10:19:49",
+          "slug": "a-causa-por-tras-da-inversao-por-que-o-cansaco-com-a-polarizacao-hoje-favorece-flavio-nao-lula",
+          "fm": 269427,
+          "categories": [
+            21141
+          ],
+          "edit_lock": "1788875628:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269462,
+          "hash": "f1c3c8f67728d738be9be4bfd8a637141af1ba170f3da3dc0355de423f96d7a2",
+          "status": "publish",
+          "title": "Vitor Rocha Linna: Soberania sob ataque",
+          "author": "5470",
+          "date": "2026-09-08 10:00:00",
+          "slug": "vitor-rocha-linna-soberania-sob-ataque",
+          "fm": 267556,
+          "categories": [
+            5088,
+            5072,
+            22
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269415,
+          "hash": "0c5cfddf5022a64417f614359aa3a7a5ff650010abf9b98617f8322d061b0c07",
+          "status": "publish",
+          "title": "Exportações chinesas de alta tecnologia sobem 42,9% em oito meses",
+          "author": "5470",
+          "date": "2026-09-08 10:00:00",
+          "slug": "exportacoes-chinesas-de-alta-tecnologia-sobem-429-em-oito-meses",
+          "fm": 269417,
+          "categories": [
+            43,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "public": [
+    {
+      "post_id": 269426,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/a-causa-por-tras-da-inversao-por-que-o-cansaco-com-a-polarizacao-hoje-favorece-flavio-nao-lula/",
+      "at": "2026-09-11T06:19:00.688566-03:00",
+      "sha256_html": "e4aee7ac7dab8d48e162c2796ce1a24e14a087b784300397ed24a845dec53c07",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 8,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269462,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/vitor-rocha-linna-soberania-sob-ataque/",
+      "at": "2026-09-11T06:19:00.750037-03:00",
+      "sha256_html": "a9f3a380f9990d3e0f5f245bd6c4b878438b3bbfa57ca57495d8039afae3c1cb",
+      "paragraphs": 54,
+      "all_paragraphs_present": false,
+      "missing": [
+        "\"Elas podem. A pergunta mais importante é: quem ganha politicamente quando o trabalhador brasileiro paga a conta de uma política decidida em Washington?\"",
+        "\"O que acontece quando políticos ou aliados políticos que enfrentam responsabilização no próprio país conseguem continuar suas atividades a partir de uma potência estrangeira que simpatiza com seu movimento?\"",
+        "É importante não confundir essa situação com um 'governo no exílio' em sentido jurídico. Não existe um governo brasileiro no exílio reconhecido internacionalmente. Mas a expressão ajuda a descrever a dimensão política do fenômeno: figuras da oposição brasileira podem operar de fora do país, buscar apoio estrangeiro, contestar instituições nacionais e defender medidas econômicas contra o próprio Brasil.",
+        "É por isso que a reação ao chamado 'TariFlávio' adquiriu tanta força. A expressão, que combina 'tarifa' com o nome Flávio Bolsonaro, procura associar a família Bolsonaro às consequências políticas e econômicas das medidas de Washington. Mais do que um slogan, ela expressa uma acusação profundamente emocional:",
+        "\"A de que setores da oposição brasileira estariam dispostos a aceitar que trabalhadores brasileiros sofram se isso puder ajudá-los a derrotar Lula.\"",
+        "\"O Brasil deve aceitar que Washington determine as condições de sua economia ou deve defender o direito de decidir seu próprio futuro?\"",
+        "\"Os brasileiros podem simplesmente rejeitar a ideia de que seu país precisa da autorização de Washington para escolher seu próprio governo.\"",
+        "\"Porque uma potência estrangeira pode pressionar uma economia. Pode ameaçar um mercado. Pode proteger seus aliados. Mas não pode, por decreto, decidir o voto de um povo que se recusa a entregar sua soberania.\""
+      ],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269415,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/exportacoes-chinesas-de-alta-tecnologia-sobem-429-em-oito-meses/",
+      "at": "2026-09-11T06:19:00.816935-03:00",
+      "sha256_html": "fbefaeec10d8990e877192cec99d24823d3d0159c093935d0b9c72c3fb36bb11",
+      "paragraphs": 12,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "integrity": {
+    "at": "2026-09-11T06:21:02.738054-03:00",
+    "pairs": [
+      {
+        "path": "Foruns/ponte_laura_completa/de_dell.md",
+        "local_sha256": "49346158ab61165f4340a1022fc5c2458f05d10bc38109aaabdf2b41e61a9dcf",
+        "canonical_sha256": "49346158ab61165f4340a1022fc5c2458f05d10bc38109aaabdf2b41e61a9dcf",
+        "origin_sha256": "9fb95219d391cf72e3e8c6c2f93955bf9e47753ba168d6302b33f09c0a05e4ee",
+        "local_canonical_equal": true,
+        "local_origin_equal": false
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/de_laura.md",
+        "local_sha256": "bba6ee8b5d955411d11e581ee301233babfb8bb9f439866a323a1cd0a6535f3b",
+        "canonical_sha256": "bba6ee8b5d955411d11e581ee301233babfb8bb9f439866a323a1cd0a6535f3b",
+        "origin_sha256": "a460d6a38e8273a3c1e05f58bcbf1a90f53869b789e45fd23e0d22fe30dc0453",
+        "local_canonical_equal": true,
+        "local_origin_equal": false
+      },
+      {
+        "path": "Foruns/ponte_laura_completa/loop_ativo.json",
+        "local_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "canonical_sha256": "2d98e336a7842a31514e6ff5c6f67eaef4d275a8dbc5e88215f7c68e499e7a01",
+        "origin_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+        "local_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "canonical_sha256": "902d63dd17f6006c4156afd14d6657617802177b77af0b11813707faa617d3e2",
+        "origin_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      },
+      {
+        "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+        "local_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+        "origin_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+        "local_canonical_equal": false,
+        "local_origin_equal": true
+      }
+    ],
+    "remote_ref_present": {
+      "XM-20260910-039": false,
+      "XM-20260911-012": false
+    },
+    "pre_push_exists": false
+  },
+  "sync_static_verification": {
+    "scope": "Somente parser carimbo extraído por AST, sem executar módulo/sync/rede/instalação",
+    "results": {
+      "Última atualização: 20260911 06:10:00 BRT": "20260911061000",
+      "Última atualização: 20269999 99:99:99 BRT": "20269999999999",
+      "Última atualização: 20270911 06:10:00 BRT": "20270911061000"
+    },
+    "findings": [
+      "Parser aceita data impossível e data futura; compara texto numérico sem validação calendárica.",
+      "Presença do título Como o sistema funciona não compara o conteúdo estável.",
+      "Sem backup do destino, lock ou arquivo temporário único; troca atômica não é proteção de concorrência.",
+      "Agendamento e prova do conteúdo consumido continuam pendentes com dono do host."
+    ]
+  }
+}

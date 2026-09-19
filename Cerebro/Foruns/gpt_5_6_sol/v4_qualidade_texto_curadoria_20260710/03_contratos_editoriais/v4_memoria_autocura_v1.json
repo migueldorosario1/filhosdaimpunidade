@@ -1,0 +1,52 @@
+{
+  "_doc": "Contrato da memoria V4 append-only para bugs, decisoes, comentarios do editor, autocura e aprendizado operacional.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "store": {
+    "format": "jsonl",
+    "path": "v4_memoria/eventos.jsonl",
+    "append_only": true,
+    "encoding": "utf-8"
+  },
+  "event_types": [
+    "bug",
+    "decisao",
+    "comentario_editor",
+    "autocura",
+    "validacao",
+    "backup",
+    "limpeza",
+    "llm_quality",
+    "imagem_destacada"
+  ],
+  "severities": [
+    "info",
+    "warning",
+    "error",
+    "critical"
+  ],
+  "required_fields": [
+    "timestamp",
+    "event_type",
+    "severity",
+    "source",
+    "summary",
+    "tags",
+    "payload"
+  ],
+  "autocura": {
+    "promover_bug_para_regra": {
+      "min_repeticoes": 2,
+      "exige_aprovacao_editor": true,
+      "destinos_possiveis": [
+        "contratos/v4_freios_llm_v1.json",
+        "contratos/v4_operacao_limpeza_ordem_backup_v1.json",
+        "contratos/v4_rotas_llm_limpas_v1.json",
+        "contratos/v4_bancos_camadas_v1.json"
+      ]
+    },
+    "comentario_editor_tem_prioridade": true,
+    "nunca_reescrever_historico": true
+  }
+}

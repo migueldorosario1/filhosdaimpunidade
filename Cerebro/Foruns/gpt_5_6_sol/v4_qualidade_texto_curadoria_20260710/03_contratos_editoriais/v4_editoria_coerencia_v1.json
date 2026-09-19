@@ -1,0 +1,115 @@
+{
+  "_doc": "Contrato lab para gate de coerencia tese x editoria. Primeira linha barata: warnings por vocabulario; verificacao forte continua humana ou rota LLM.",
+  "_version": "v1",
+  "_status": "fase_7_lab_f7_1",
+  "_updated": "2026-07-10",
+  "principios": {
+    "keyword_gate_nao_prova_coerencia": true,
+    "warning_primeira_linha": true,
+    "arquitetura_parametrizada_por_editoria": true,
+    "fatos_verificaveis_separados_de_juizos_esteticos": true,
+    "teses_fora_familia_exigem_revisao_humana": true
+  },
+  "politica_interina": {
+    "ratificada_por": "Miguel",
+    "ratificada_em": "2026-07-10",
+    "declaracao": "ok, ratifico",
+    "regra": "Ate existir curadoria propria por editoria ou gate forte de coerencia, teses fora das familias ja calibradas sao rascunho obrigatoriamente revisado por humano, sem promocao como ok editorial automatico."
+  },
+  "default": {
+    "enabled": false,
+    "severity": "none"
+  },
+  "missing_tese_warning_id": "tese_ausente",
+  "editorias": {
+    "v4_cultura": {
+      "enabled": true,
+      "severity": "warning",
+      "warning_id": "tese_cultura_desalinhada_com_objeto",
+      "min_positive_claim_hits": 1,
+      "positive_claim_terms": [
+        "obra",
+        "roteiro",
+        "direcao",
+        "diretor",
+        "diretora",
+        "autoria",
+        "autor",
+        "autora",
+        "showrunner",
+        "personagem",
+        "atuacao",
+        "elenco",
+        "montagem",
+        "fotografia",
+        "som",
+        "trilha",
+        "genero",
+        "cena",
+        "linguagem",
+        "narrativa",
+        "dramaturgia",
+        "performance",
+        "forma audiovisual",
+        "comparacao estetica",
+        "melodrama",
+        "thriller",
+        "documentario",
+        "serie",
+        "filme",
+        "livro"
+      ],
+      "negative_template_terms": [
+        "ibge",
+        "indicador isolado",
+        "numero mensal",
+        "setor produtivo",
+        "valor agregado",
+        "politica economica",
+        "dados do setor produtivo",
+        "industria"
+      ],
+      "human_review_required_when_warning": true
+    },
+    "v4_ciencia_tecnologia_ia": {
+      "enabled": true,
+      "severity": "warning",
+      "warning_id": "tese_ia_desalinhada_com_objeto",
+      "min_positive_claim_hits": 1,
+      "positive_claim_terms": [
+        "ia",
+        "inteligencia artificial",
+        "data center",
+        "data centers",
+        "energia",
+        "agua",
+        "infraestrutura digital",
+        "infraestrutura de ia",
+        "rede de transmissao",
+        "redes de transmissao",
+        "soberania tecnologica",
+        "pesquisa nacional",
+        "cloud",
+        "nuvem",
+        "algoritmo",
+        "plataforma"
+      ],
+      "negative_template_terms": [
+        "ibge",
+        "indicador isolado",
+        "numero mensal",
+        "setor produtivo",
+        "valor agregado",
+        "politica economica",
+        "dados do setor produtivo",
+        "industria"
+      ],
+      "human_review_required_when_warning": true
+    }
+  },
+  "teste_regressao": {
+    "caso_canonico": "v4_real_007",
+    "falha_documentada": "Template industrial/IBGE aplicado a pauta de cultura/streaming.",
+    "sucesso_futuro": "Re-rodar v4_real_007 com tese cultural concreta sem disparar tese_cultura_desalinhada_com_objeto."
+  }
+}

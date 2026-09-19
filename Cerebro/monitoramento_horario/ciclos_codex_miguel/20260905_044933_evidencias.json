@@ -1,0 +1,49 @@
+{
+  "ref": "XM-20260905_044933-HOLD",
+  "time_brt": "2026-09-05T04:49:33.390626-03:00",
+  "mode": "OBSERVACAO_FASE2_HOLD_GIT_INTEGRIDADE",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "previous_receipt": "20260905_042053_ronda.md",
+  "read_cut_current": "584052b8d14a3380dd4f8b5ff3dd21a2e3986461",
+  "remote_delta_inspected_to": "9042a5d0dcd348a43884fa359a5b789d81476f73",
+  "head": "f4742670b69eef29b5d0d1dd311005fe23ab9b6d",
+  "head_origin_counts": "2\t19",
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 128,
+    "error": "Not possible to fast-forward, aborting."
+  },
+  "hashes": {
+    "LOOP_MIGUEL_CODEX.md": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+    "cerebro/MEMORY.md": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+    "cerebro/Foruns/ponte_laura_completa/CONTRATO_PONTE_COMPLETA.md": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380",
+    "cerebro/Foruns/ponte_laura_completa/de_laura.md": "86997ec9d64249c63e1aa9b954dd6b7262028f523ebcecb72a72b1c9638a8ff0",
+    "cerebro/Foruns/ponte_laura_completa/loop_ativo.json": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+    "cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md": "3dced43eccd821d9ef90ddc98edf16637b4eed4d163d0166b062b4efff59ccd7",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/canal_trindade.md": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_imagens_v4_LOG.md": "5b5fc8feb7b8580852919cb5c3edcf7a2ef9c6987e08e59c1c842349c13ac970",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/codex.md": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/claude.md": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/zcode.md": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/grok.md": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_laura.md": "86997ec9d64249c63e1aa9b954dd6b7262028f523ebcecb72a72b1c9638a8ff0",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/de_dell.md": "2ede7daf61962d1a889d0c0dc89150c1926309e52aabf29db5a8944453fb129b",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "24442af340dbd072a348f14725d6851bb9f5c2d1b39557e19c38540e231aa61f",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "6bdefbd2713f653bf895bb9fd7c2e90f03cd84e8d194dfd6da5c336c3a8c45fc",
+    "/home/migueldorosario/cerebro-miguel/cerebro/Foruns/ponte_laura_completa/loop_ativo.json": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md": "86997ec9d64249c63e1aa9b954dd6b7262028f523ebcecb72a72b1c9638a8ff0",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md": "2ede7daf61962d1a889d0c0dc89150c1926309e52aabf29db5a8944453fb129b",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "24442af340dbd072a348f14725d6851bb9f5c2d1b39557e19c38540e231aa61f",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "6bdefbd2713f653bf895bb9fd7c2e90f03cd84e8d194dfd6da5c336c3a8c45fc",
+    "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14"
+  },
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0
+  },
+  "transport": "PENDENTE; sem commit/push sob HOLD"
+}

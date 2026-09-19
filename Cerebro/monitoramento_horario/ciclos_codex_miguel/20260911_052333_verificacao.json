@@ -1,0 +1,530 @@
+{
+  "incident208.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:17:57.013463-03:00",
+      "since": "2026-09-11T04:48:00.747978-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "a988c60b11bbb796ddcd3e636cd96157fe69abd18661326b72831d6324136d49",
+          "requests": 4,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "ae7bcd6b4c6b0f99a3058ed9614eea3c713bde3483a7dbc034c9fa25da42a04e",
+          "requests": 6058,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        }
+      ],
+      "redis_errors": {
+        "sha256": "f6c74759080ed07acf5f9d6e570fbec586ccbe9d803a4ef7836091f938f87e33",
+        "total": 0,
+        "by_minute": {}
+      },
+      "redis_info": {
+        "uptime_in_seconds": "6377",
+        "used_memory": "500859864",
+        "used_memory_peak": "1019700616",
+        "expired_keys": "170",
+        "evicted_keys": "0",
+        "db0": "keys=364579,expires=58,avg_ttl=445249892"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "redis_check.json": {
+    "rc": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 8, in <module>\nAttributeError: 'dict' object has no attribute 'splitlines'\n",
+    "data": null
+  },
+  "redis_check_verified.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:19:48.671171-03:00",
+      "commandstats": [
+        "cmdstat_del:calls=4379,usec=28443,usec_per_call=6.50",
+        "cmdstat_flushdb:calls=3,usec=8374076,usec_per_call=2791358.75"
+      ],
+      "config": {
+        "lazyfree-lazy-user-flush": "\n",
+        "slowlog-log-slower-than": "slowlog-log-slower-than\n10000\n",
+        "slowlog-max-len": "slowlog-max-len\n128\n"
+      },
+      "slowlog_status": "not_collected_raw_cli_unsupported_json; commandstats not event timestamps",
+      "scope": "INFO commandstats and CONFIG GET only; no commands causing cache mutation; other slowlog arguments and clients omitted."
+    }
+  },
+  "slowlog_verified.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:20:07.366892-03:00",
+      "retained_sample": 128,
+      "earliest_retained_at": "2026-09-11T03:36:13-03:00",
+      "flush_events": [
+        {
+          "id": 190,
+          "timestamp": 1789113637,
+          "at": "2026-09-11T05:00:37-03:00",
+          "duration_usec": 854026,
+          "command": "FLUSHDB",
+          "mode": null
+        },
+        {
+          "id": 186,
+          "timestamp": 1789111537,
+          "at": "2026-09-11T04:25:37-03:00",
+          "duration_usec": 21468,
+          "command": "FLUSHDB",
+          "mode": null
+        },
+        {
+          "id": 185,
+          "timestamp": 1789111529,
+          "at": "2026-09-11T04:25:29-03:00",
+          "duration_usec": 7498582,
+          "command": "FLUSHDB",
+          "mode": null
+        }
+      ],
+      "scope": "One read-only SLOWLOG GET 128; other args and client identities not logged."
+    }
+  },
+  "editorial_readback.json": {
+    "rc": 0,
+    "at": "2026-09-11T05:18:28.599653-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T05:18:28-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269430,
+          "hash": "89936805856ce32ed2085861ddc90d9c01b7900fa440ceb7090a6966386f86ce",
+          "status": "publish",
+          "title": "Catar e China articulam reabertura do Estreito de Ormuz para encerrar a guerra",
+          "author": "5470",
+          "date": "2026-09-08 13:00:00",
+          "slug": "catar-e-china-articulam-reabertura-do-estreito-de-ormuz-para-encerrar-a-guerra",
+          "fm": 269439,
+          "categories": [
+            5087,
+            5003,
+            15,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269428,
+          "hash": "6278f0b5f29e8506659d99f9859970f15b757f9ed6ad1a3db06da3d3b960de80",
+          "status": "publish",
+          "title": "Renan Santos quer privatizar os Correios, mas poupa Petrobras e Embrapa",
+          "author": "5470",
+          "date": "2026-09-08 12:15:00",
+          "slug": "renan-santos-quer-privatizar-os-correios-mas-poupa-petrobras-e-embrapa",
+          "fm": 269429,
+          "categories": [
+            43,
+            22,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269423,
+          "hash": "442a6f3616148ebd06d19942e34a9e45676d6ef53714eab227bc7300e0e6e9c5",
+          "status": "publish",
+          "title": "Projeto que dá prioridade à infância em desastres climáticos vai à sanção",
+          "author": "5470",
+          "date": "2026-09-08 11:30:00",
+          "slug": "projeto-que-da-prioridade-a-infancia-em-desastres-climaticos-vai-a-sancao",
+          "fm": 269424,
+          "categories": [
+            5087,
+            358,
+            582,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "integrity.json": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": true,
+    "cerebro/Foruns/ponte_laura_completa/de_laura.md": true,
+    "cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md": false,
+    "cerebro/Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md": false,
+    "cerebro/Foruns/ponte_laura_completa/loop_ativo.json": false,
+    "cerebro/MONITORAMENTO_DE_TRABALHO.md": true,
+    "xm039_present": false,
+    "xm039_header_matches": [],
+    "prepush_hook_exists": false,
+    "source_delta_removals": {
+      "14": [],
+      "16": [],
+      "48": []
+    }
+  },
+  "public_verified.json": [
+    {
+      "post_id": 269430,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/catar-e-china-articulam-reabertura-do-estreito-de-ormuz-para-encerrar-a-guerra/",
+      "at": "2026-09-11T05:18:29.317280-03:00",
+      "sha256_html": "b213f1c1049f7eea96db47099c31db885ba98c6062b8a374d96757491797f4dc",
+      "paragraphs": 10,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269428,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/renan-santos-quer-privatizar-os-correios-mas-poupa-petrobras-e-embrapa/",
+      "at": "2026-09-11T05:18:29.359198-03:00",
+      "sha256_html": "6eadbd1057e0001a8323193095f2f31e5d1a51d9b978f85e1f4865a0dff7c515",
+      "paragraphs": 9,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269423,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/projeto-que-da-prioridade-a-infancia-em-desastres-climaticos-vai-a-sancao/",
+      "at": "2026-09-11T05:18:29.401356-03:00",
+      "sha256_html": "1d6fe130b8ebe950773db80cc13192213470c8c47e64795e2024d2e3262031a6",
+      "paragraphs": 13,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://mofa.gov.qa/en/qatar/latest-articles/latest-news/details/2026/09/08/prime-minister-and-minister-of-foreign-affairs-meets-foreign-minister-of-china",
+      "scope": "Nota oficial de 08/09 confirma reunião, participantes e defesa da navegação. Não contém as duas falas de Al Hashmi."
+    },
+    {
+      "url": "https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202609/t20260908_12018458.shtml",
+      "scope": "Contraprova primária chinesa da reunião de 08/09 e da coordenação diplomática; não comprova cada alegação do texto."
+    },
+    {
+      "url": "https://noticias.uol.com.br/ultimas-noticias/agencia-estado/2026/09/08/renan-santos-diz-que-e-contra-privatizacao-da-petrobras-e-embrapa-mas-nao-dos-correios.htm",
+      "scope": "Agência Estado via UOL, 08/09 09h17: confirma relato e declarações sobre Correios, Petrobras e Embrapa. Fonte jornalística secundária; vídeo integral e autos não obtidos."
+    },
+    {
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/171229",
+      "scope": "Ficha oficial: aprovação em 02/09, remessa recebida em 09/09 às 13:30:39 e prazo de sanção/veto até 29/09; autoria e relatoria conferidas."
+    },
+    {
+      "url": "https://legis.senado.leg.br/sdleg-getter/documento?disposition=inline&dm=10317067&rendition_principal=S&ts=1789066454465",
+      "scope": "Arts. 2, 4, 19–25 e 30–35 consultados. Duas políticas e ECA. Não localizei cláusula expressa de ausência de novas despesas; interpretação fiscal permanece pendente."
+    },
+    {
+      "url": "https://redis.io/docs/latest/commands/slowlog-get/",
+      "scope": "timestamp, duration and no client I/O in execution time"
+    },
+    {
+      "url": "https://redis.io/docs/latest/commands/info/",
+      "scope": "commandstats sum and average"
+    }
+  ],
+  "limitations": [
+    "SLOWLOG logs command timing; application caller not identified; no global causal closure.",
+    "Version and public readbacks concern exactly three articles.",
+    "Initial CLI JSON attempt failed; subsequent read-only evidence supersedes it."
+  ]
+}

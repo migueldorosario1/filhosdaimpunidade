@@ -1,0 +1,138 @@
+{
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica",
+    "evidencias_ref": [
+      "fatos_travados:IBGE",
+      "fatos_travados:setor_produtivo"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+    "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+    "tipo": "economica"
+  },
+  "conteudo": "O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo. A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011. A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%. O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%. A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.",
+  "created_at": "2026-07-10T03:10:40.815217+00:00",
+  "curadoria_id": "cur_8909f975d2ef930b",
+  "editoria": "v4_politica_economia",
+  "fatos_travados": [
+    {
+      "fato": "O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.",
+      "fonte_ref": [
+        "scratch/pauta_pesquisa_industrial_mensal_abril_2026.md"
+      ],
+      "idx": 4,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a consequencia concreta do fato, nao apenas a declaracao publica",
+    "entidade_principal": "indústria brasileira",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "448f7f35366c96059d9894d51ffdfc9b15b84a1cfb7e56f2cc9ba64401b28ea2",
+  "item_id": "v4_real_003",
+  "llm_response": {
+    "content": "[MOCK V4/gemini/gemini-3.5-flash/v4_politica_economia/redacao] Indústria cresce, mas mostra a dependência do setor produtivo brasileiro. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.. Tese escolhida: Quando os fatos auditados sobre indústria brasileira saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a consequencia concreta do fato, nao apenas a declaracao publica. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Indústria cresce, mas mostra a dependência do setor produtivo brasileiro.\n\nFatos travados obrigatorios para cobrir no texto:\n- O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.\n- A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011.\n- A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%.\n- O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%.\n- A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+    "cost_usd_estimated": 0.00024742,
+    "duration_ms_llm": 0,
+    "error_class": null,
+    "mode": "mock",
+    "model": "gemini-3.5-flash",
+    "model_parameters": {
+      "max_tokens": null,
+      "temperature": null,
+      "thinking_budget": null
+    },
+    "pricing_table_version": "2026-07-09-official-deepseek",
+    "prompt_hash": "cd7602acf2263486436079142d847bb3bf720449687e85cce80bcf4a53cedfc7",
+    "provider": "gemini",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo",
+      "deepseek_luxo"
+    ],
+    "selected_tier": "gemini_luxo",
+    "selection_reason": "exploration: qualidade=1.000, custo=1.000, rota=0.250, samples=0",
+    "selection_strategy": "quality_cost_router",
+    "tokens_in": 451,
+    "tokens_out": 712
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "bb3e2348fb8638872453087bd4b9e4697b5f82a48c1ba5507063d9bf53185c3f",
+      "editoria": "v4_politica_economia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "curadoria_id": "cur_8909f975d2ef930b",
+    "from": "curadoria",
+    "imagem_destacada_validada": false,
+    "manifesto_auditoria_final": true,
+    "manifesto_curadoria": false,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "curadoria_id",
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "manifesto_fact_check": null,
+  "manifesto_revisao": null,
+  "primary_entity": "indústria brasileira",
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de indústria brasileira revela a consequencia concreta do fato, nao apenas a declaracao publica.",
+  "source_status": "curadoria_dry_run",
+  "status": "produzir_dry_run",
+  "tese_escolhida_idx": 0,
+  "texto_dry_run": "[MOCK V4/gemini/gemini-3.5-flash/v4_politica_economia/redacao] Indústria cresce, mas mostra a dependência do setor produtivo brasileiro. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.. Tese escolhida: Quando os fatos auditados sobre indústria brasileira saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a consequencia concreta do fato, nao apenas a declaracao publica. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Indústria cresce, mas mostra a dependência do setor produtivo brasileiro.\n\nFatos travados obrigatorios para cobrir no texto:\n- O IBGE informou que a producao industrial brasileira cresceu 0,7% em abril de 2026 frente a marco, na serie com ajuste sazonal, completando quatro meses seguidos de alta e acumulando 4,4% no periodo.\n- A industria ficou 4,7% acima do patamar pre-pandemia de fevereiro de 2020, mas ainda 12,9% abaixo do recorde de maio de 2011.\n- A alta nacional foi acompanhada por dez dos quinze locais pesquisados, com Bahia crescendo 3,0%, Ceara 2,3%, Espirito Santo 2,1% e Minas Gerais 2,1%.\n- O material estruturado pelo Cafezinho destaca uma contradicao do setor produtivo: ha recuperacao conjuntural, mas a composicao do crescimento ainda depende de extrativa, refino e setores sensiveis a juros altos, enquanto maquinas e equipamentos recuaram 2,9% e quimicos cairam 3,9%.\n- A pauta deve tratar o indicador como sinal de recuperacao com fragilidade estrutural, nao apenas como placar positivo do mes.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+  "texto_revisado": null,
+  "titulo": "Indústria cresce, mas mostra a dependência do setor produtivo brasileiro"
+}

@@ -1,0 +1,242 @@
+{
+ "metadata": {
+  "nome": "manifesto_canario_etapa5_gemini_429",
+  "versao": "v1",
+  "max_grupos": 10,
+  "grupos_selecionados": 10,
+  "criterios": [
+   "somente Gemini (provedor)",
+   "somente 429 puro (TECH_429_CREDITO), nenhum grupo misto",
+   "URLs únicas e válidas",
+   "uma chamada por grupo, sem retry automático",
+   "saída em quarentena/staging",
+   "zero escrita no master",
+   "interrupção imediata diante de 401, 403, 429 ou cobrança inesperada"
+  ],
+  "base": "etapa5_politica_temporal_v2_412_20260809.json (sha256 a6622397…)",
+  "prova_saude": "saude_gemini_teste.json (HTTP 200, 1910ms) — rota atual funciona, mas NÃO prova continuidade com conta histórica do 429",
+  "observacao": "Os 102 grupos Qwen/SSL estão EXCLUÍDOS deste canário (precisam de teste específico da rota Qwen). Manifesto é preparação; execução SEM autorização ainda."
+ },
+ "canario": [
+  {
+   "posicao": 1,
+   "entidade": "Davi Alcolumbre",
+   "url_canonica": "https://live.staticflickr.com/65535/55075272749_247394d812_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:31:13",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 2,
+   "entidade": "Davi Alcolumbre",
+   "url_canonica": "https://live.staticflickr.com/65535/55078305543_08f34bc9f5_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:31:12",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 3,
+   "entidade": "Davi Alcolumbre",
+   "url_canonica": "https://live.staticflickr.com/65535/55207602993_9b8b5657f3_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:31:10",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 4,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55241601042_4c011fc418_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:47",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 5,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55241601207_466b14825f_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:43",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 6,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55241601227_28687cd3ac_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:44",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 7,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55241601317_df29721299_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:42",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 8,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55241601837_3dd7caf937_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:40",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 9,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55242649828_16c17dd073_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:45",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  },
+  {
+   "posicao": 10,
+   "entidade": "Jair Bolsonaro",
+   "url_canonica": "https://live.staticflickr.com/65535/55242650133_12d9351908_b.jpg",
+   "tentativas_historicas": 225,
+   "assinatura": "TECH_429_CREDITO",
+   "provedor": "gemini",
+   "erro_historico": "ResourceExhausted: 429 Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/doc",
+   "last_attempt": "2026-07-28T11:32:41",
+   "regra_canario": {
+    "uma_chamada_por_grupo": true,
+    "sem_retry_automatico": true,
+    "saida_quarentena_staging": true,
+    "zero_escrita_master": true,
+    "interrupcao_em": [
+     "401",
+     "403",
+     "429",
+     "cobranca_inesperada"
+    ]
+   }
+  }
+ ]
+}

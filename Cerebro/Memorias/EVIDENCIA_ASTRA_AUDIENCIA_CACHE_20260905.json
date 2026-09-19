@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "collected_at_utc": "2026-09-05T11:30:18.963312+00:00",
+  "source_host": "Tencent",
+  "source_directory": "/home/ubuntu/cafezinho/Projeto Cafezinho Agentes/root/agent_data/cctv/v6",
+  "method": "Leitura apenas de caches existentes; sem invocar API de analytics, importar painel, atualizar cache ou consultar credenciais.",
+  "metrics": {
+    "ga4_metric": "screenPageViews",
+    "ga4_filter": "platform = web (segundo código vivo da função ga4_serie_diaria)",
+    "current_window": {
+      "start": "2026-08-29",
+      "end": "2026-09-04",
+      "days": 7,
+      "pageviews": 77666,
+      "daily_average": 11095.142857142857
+    },
+    "previous_window": {
+      "start": "2026-08-22",
+      "end": "2026-08-28",
+      "days": 7,
+      "pageviews": 76636,
+      "daily_average": 10948
+    },
+    "change_percent": 1.3440158672164415
+  },
+  "observations": [
+    {
+      "file": "ga4_serie_374552425_14d.json",
+      "cache_ts": 1788607733.3490086,
+      "daily": [
+        {
+          "date": "2026-08-22",
+          "views": 7582
+        },
+        {
+          "date": "2026-08-23",
+          "views": 10611
+        },
+        {
+          "date": "2026-08-24",
+          "views": 11729
+        },
+        {
+          "date": "2026-08-25",
+          "views": 11533
+        },
+        {
+          "date": "2026-08-26",
+          "views": 13342
+        },
+        {
+          "date": "2026-08-27",
+          "views": 11550
+        },
+        {
+          "date": "2026-08-28",
+          "views": 10289
+        },
+        {
+          "date": "2026-08-29",
+          "views": 8984
+        },
+        {
+          "date": "2026-08-30",
+          "views": 10730
+        },
+        {
+          "date": "2026-08-31",
+          "views": 11419
+        },
+        {
+          "date": "2026-09-01",
+          "views": 11265
+        },
+        {
+          "date": "2026-09-02",
+          "views": 11783
+        },
+        {
+          "date": "2026-09-03",
+          "views": 12390
+        },
+        {
+          "date": "2026-09-04",
+          "views": 11095
+        }
+      ]
+    },
+    {
+      "file": "ga4_serie_374552425_185d.json",
+      "cache_ts": 1788581878.174553,
+      "daily": [
+        {
+          "date": "2026-08-15",
+          "views": 9773
+        },
+        {
+          "date": "2026-08-16",
+          "views": 9206
+        },
+        {
+          "date": "2026-08-17",
+          "views": 8225
+        },
+        {
+          "date": "2026-08-18",
+          "views": 8129
+        },
+        {
+          "date": "2026-08-19",
+          "views": 7280
+        },
+        {
+          "date": "2026-08-20",
+          "views": 7740
+        },
+        {
+          "date": "2026-08-21",
+          "views": 7604
+        },
+        {
+          "date": "2026-08-22",
+          "views": 7582
+        },
+        {
+          "date": "2026-08-23",
+          "views": 10611
+        },
+        {
+          "date": "2026-08-24",
+          "views": 11729
+        },
+        {
+          "date": "2026-08-25",
+          "views": 11533
+        },
+        {
+          "date": "2026-08-26",
+          "views": 13342
+        },
+        {
+          "date": "2026-08-27",
+          "views": 11550
+        },
+        {
+          "date": "2026-08-28",
+          "views": 10289
+        },
+        {
+          "date": "2026-08-29",
+          "views": 8984
+        },
+        {
+          "date": "2026-08-30",
+          "views": 10730
+        },
+        {
+          "date": "2026-08-31",
+          "views": 11419
+        },
+        {
+          "date": "2026-09-01",
+          "views": 11265
+        },
+        {
+          "date": "2026-09-02",
+          "views": 11783
+        },
+        {
+          "date": "2026-09-03",
+          "views": 12390
+        },
+        {
+          "date": "2026-09-04",
+          "views": 5866
+        }
+      ]
+    },
+    {
+      "file": "ga4_serie_374552425_92d.json",
+      "cache_ts": 1788606003.9449196,
+      "daily": [
+        {
+          "date": "2026-08-15",
+          "views": 9773
+        },
+        {
+          "date": "2026-08-16",
+          "views": 9206
+        },
+        {
+          "date": "2026-08-17",
+          "views": 8225
+        },
+        {
+          "date": "2026-08-18",
+          "views": 8129
+        },
+        {
+          "date": "2026-08-19",
+          "views": 7280
+        },
+        {
+          "date": "2026-08-20",
+          "views": 7740
+        },
+        {
+          "date": "2026-08-21",
+          "views": 7604
+        },
+        {
+          "date": "2026-08-22",
+          "views": 7582
+        },
+        {
+          "date": "2026-08-23",
+          "views": 10611
+        },
+        {
+          "date": "2026-08-24",
+          "views": 11729
+        },
+        {
+          "date": "2026-08-25",
+          "views": 11533
+        },
+        {
+          "date": "2026-08-26",
+          "views": 13342
+        },
+        {
+          "date": "2026-08-27",
+          "views": 11550
+        },
+        {
+          "date": "2026-08-28",
+          "views": 10289
+        },
+        {
+          "date": "2026-08-29",
+          "views": 8984
+        },
+        {
+          "date": "2026-08-30",
+          "views": 10730
+        },
+        {
+          "date": "2026-08-31",
+          "views": 11419
+        },
+        {
+          "date": "2026-09-01",
+          "views": 11265
+        },
+        {
+          "date": "2026-09-02",
+          "views": 11783
+        },
+        {
+          "date": "2026-09-03",
+          "views": 12390
+        },
+        {
+          "date": "2026-09-04",
+          "views": 11095
+        }
+      ]
+    },
+    {
+      "file": "audiencia_red.jsonl",
+      "rows_read": 3389,
+      "latest_keys": [
+        "gerado",
+        "hoje_bots_distintos",
+        "hoje_humanos_distintos",
+        "hoje_navegacoes",
+        "hoje_por_hora",
+        "hoje_top10_paginas",
+        "hoje_visitantes_distintos",
+        "online_30min_bots",
+        "online_30min_humanos",
+        "online_30min_visitantes",
+        "ontem_por_hora"
+      ],
+      "daily_last_read": {
+        "2026-08-24": {
+          "online_30min_visitantes": 298,
+          "hoje_navegacoes": 21241,
+          "hoje_visitantes_distintos": 4681,
+          "gerado": "2026-08-24 23:55:01"
+        },
+        "2026-08-25": {
+          "online_30min_visitantes": 270,
+          "hoje_navegacoes": 61366,
+          "hoje_visitantes_distintos": 14420,
+          "online_30min_humanos": 344,
+          "online_30min_bots": 354,
+          "hoje_humanos_distintos": 15504,
+          "hoje_bots_distintos": 7719,
+          "gerado": "2026-08-25 23:55:01"
+        },
+        "2026-08-26": {
+          "online_30min_visitantes": 776,
+          "hoje_navegacoes": 56988,
+          "hoje_visitantes_distintos": 11531,
+          "online_30min_humanos": 834,
+          "online_30min_bots": 482,
+          "hoje_humanos_distintos": 12673,
+          "hoje_bots_distintos": 7403,
+          "gerado": "2026-08-26 23:55:01"
+        },
+        "2026-08-27": {
+          "online_30min_visitantes": 402,
+          "hoje_navegacoes": 59315,
+          "hoje_visitantes_distintos": 12947,
+          "online_30min_humanos": 469,
+          "online_30min_bots": 576,
+          "hoje_humanos_distintos": 13851,
+          "hoje_bots_distintos": 5423,
+          "gerado": "2026-08-27 23:55:01"
+        },
+        "2026-08-28": {
+          "online_30min_visitantes": 310,
+          "hoje_navegacoes": 59952,
+          "hoje_visitantes_distintos": 10519,
+          "online_30min_humanos": 373,
+          "online_30min_bots": 454,
+          "hoje_humanos_distintos": 11376,
+          "hoje_bots_distintos": 5790,
+          "gerado": "2026-08-28 23:55:01"
+        },
+        "2026-08-29": {
+          "online_30min_visitantes": 275,
+          "hoje_navegacoes": 47623,
+          "hoje_visitantes_distintos": 10287,
+          "online_30min_humanos": 327,
+          "online_30min_bots": 397,
+          "hoje_humanos_distintos": 10994,
+          "hoje_bots_distintos": 5481,
+          "gerado": "2026-08-29 23:55:02"
+        },
+        "2026-08-30": {
+          "online_30min_visitantes": 239,
+          "hoje_navegacoes": 47051,
+          "hoje_visitantes_distintos": 7889,
+          "online_30min_humanos": 327,
+          "online_30min_bots": 306,
+          "hoje_humanos_distintos": 8663,
+          "hoje_bots_distintos": 4904,
+          "gerado": "2026-08-30 23:55:01"
+        },
+        "2026-08-31": {
+          "online_30min_visitantes": 272,
+          "hoje_navegacoes": 49976,
+          "hoje_visitantes_distintos": 9434,
+          "online_30min_humanos": 317,
+          "online_30min_bots": 282,
+          "hoje_humanos_distintos": 10330,
+          "hoje_bots_distintos": 3611,
+          "gerado": "2026-08-31 23:55:01"
+        },
+        "2026-09-01": {
+          "online_30min_visitantes": 232,
+          "hoje_navegacoes": 50951,
+          "hoje_visitantes_distintos": 7762,
+          "online_30min_humanos": 295,
+          "online_30min_bots": 355,
+          "hoje_humanos_distintos": 8806,
+          "hoje_bots_distintos": 4187,
+          "gerado": "2026-09-01 23:55:01"
+        },
+        "2026-09-02": {
+          "online_30min_visitantes": 393,
+          "hoje_navegacoes": 53079,
+          "hoje_visitantes_distintos": 9753,
+          "online_30min_humanos": 460,
+          "online_30min_bots": 419,
+          "hoje_humanos_distintos": 10817,
+          "hoje_bots_distintos": 4682,
+          "gerado": "2026-09-02 23:55:01"
+        },
+        "2026-09-03": {
+          "online_30min_visitantes": 332,
+          "hoje_navegacoes": 58948,
+          "hoje_visitantes_distintos": 11089,
+          "online_30min_humanos": 394,
+          "online_30min_bots": 287,
+          "hoje_humanos_distintos": 12211,
+          "hoje_bots_distintos": 4777,
+          "gerado": "2026-09-03 23:55:01"
+        },
+        "2026-09-04": {
+          "online_30min_visitantes": 521,
+          "hoje_navegacoes": 55437,
+          "hoje_visitantes_distintos": 11486,
+          "online_30min_humanos": 590,
+          "online_30min_bots": 352,
+          "hoje_humanos_distintos": 12613,
+          "hoje_bots_distintos": 4763,
+          "gerado": "2026-09-04 23:55:02"
+        },
+        "2026-09-05": {
+          "online_30min_visitantes": 305,
+          "hoje_navegacoes": 17867,
+          "hoje_visitantes_distintos": 5653,
+          "online_30min_humanos": 359,
+          "online_30min_bots": 341,
+          "hoje_humanos_distintos": 6091,
+          "hoje_bots_distintos": 2683,
+          "gerado": "2026-09-05 08:25:01"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "São leituras de cache do painel, não nova consulta direta ao GA4 nem prova de receita.",
+    "GA4 pageviews não significa pessoas únicas, audiência humana auditada ou soma com FAROL/LUMINA.",
+    "O arquivo de185dias é mais antigo e04/09parcial; não usar esse ponto para comparar com dias completos.",
+    "FAROL apresenta campos humanos distintos maiores que visitantes distintos e online humanos+bot maior que online visitantes; definições/frescor precisam do dono antes de qualificar audiência humana.",
+    "Report antigo de31/08=2346 e02/09=335 foi superado nestes caches por11419 e11783; não repetir queda de reporting como queda de público.",
+    "Sem métricas privadas de concorrentes; não criar ranking de audiência por inferência."
+  ]
+}

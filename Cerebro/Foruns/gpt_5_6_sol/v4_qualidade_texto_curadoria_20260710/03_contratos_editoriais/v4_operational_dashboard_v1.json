@@ -1,0 +1,31 @@
+{
+  "_doc": "Contrato V4 para painel operacional local consolidado.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-08",
+  "inputs": {
+    "layers": "dados/*",
+    "receipts": "agent_data/v4/receipts/**/*.jsonl",
+    "llm_decisions": "agent_data/v4/llm_decisions/*.jsonl",
+    "media_audited": "agent_data/v4/media/audited/*.jsonl",
+    "media_wp_mappings": "agent_data/v4/media/wp_mappings/*.jsonl",
+    "wordpress_attempts": "agent_data/v4/publication/*.jsonl",
+    "memory": "v4_memoria/eventos.jsonl"
+  },
+  "outputs": {
+    "dir": "agent_data/v4/reports",
+    "json": "operational_dashboard_latest.json",
+    "markdown": "operational_dashboard_latest.md"
+  },
+  "principios": {
+    "local_first": true,
+    "sem_rede": true,
+    "sem_prometheus_obrigatorio": true,
+    "apenas_leitura": true
+  },
+  "health_rules": {
+    "wordpress_blocked_attempts_warning_gt": 0,
+    "missing_wp_media_mapping_warning": true,
+    "published_without_featured_media_critical": true
+  }
+}

@@ -1,0 +1,122 @@
+{
+    "_doc": "Contrato do fluxo V4 em dry-run, com curadoria de tese, LLM mock/local, rascunho-primeiro e sem publicacao externa.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+        "sem_chamada_llm_real": true,
+        "sem_publicacao_externa": true,
+        "idempotente": true,
+        "manifestos_obrigatorios": true,
+        "respeita_camadas": true,
+        "rascunho_primeiro": true,
+        "imagem_pendente_nao_bloqueia_rascunho": true,
+        "imagem_auditada_obrigatoria_para_publicacao_final": true,
+        "pendencias_viram_relatorio": true,
+        "curadoria_obrigatoria_para_producao_nobre": true,
+        "modo_experimento_sem_curadoria_apenas_dry_run": true,
+        "regenera_artefato_fixture_invalido": true
+    },
+    "promocao_para_producao": {
+        "regenera_artefato_fixture_invalido_deve_ser_false": true,
+        "artefato_bloqueado_evidencia_append_only": true,
+        "producao_nao_sobrescreve_bloqueio": true,
+        "motivo": "A regeneracao automatica e conveniencia de laboratorio. Em producao, artefato bloqueado e evidencia e nao pode ser apagado por reexecucao. Isto nao se confunde com rascunho editorial: pendencias de rascunho devem virar relatorio e nao perda de material."
+    },
+    "fixture": {
+        "item_id": "v4_fixture_006",
+        "editoria": "v4_politica_economia",
+        "titulo": "Flavio Bolsonaro critica decisao do STF",
+        "primary_entity": "Flavio Bolsonaro",
+        "fonte": "fixture_local",
+        "conteudo": "Material auditado minimo para validar integracao de imagem destacada auditada no fluxo V4, sem publicacao externa.",
+        "leitura_corrente_timestamped": {
+            "fonte": "manual_editor",
+            "timestamp_brt": "2026-07-09T00:00:00-03:00",
+            "resumo_consenso": "A cobertura corrente resume o caso como disputa entre Lula e Flavio Bolsonaro sobre tarifa dos EUA.",
+            "fontes_consultadas": [
+                "fixture_local"
+            ]
+        }
+    },
+  "modo_experimento": {
+    "enabled": true,
+    "dry_run_only": true,
+    "external_publish": false,
+    "receipt_required": true
+  },
+  "steps": [
+    {
+      "name": "curadoria_dry_run",
+      "role": "curador",
+      "from": "auditado",
+      "to": "curadoria",
+      "requires": [
+        "manifesto_curadoria",
+        "leitura_corrente_timestamped",
+        "teses_candidatas",
+        "promessa_ao_leitor",
+        "frame_visual",
+        "idempotency_key"
+      ]
+    },
+    {
+      "name": "produzir_dry_run",
+      "role": "produtor",
+      "from": "curadoria",
+      "to": "producao",
+      "requires": [
+        "curadoria_id",
+        "manifesto_producao",
+        "contrato_editorial_v4",
+        "idempotency_key"
+      ]
+    },
+    {
+      "name": "revisar_dry_run",
+      "role": "revisor",
+      "from": "producao",
+      "to": "producao",
+      "requires": [
+        "curadoria_id",
+        "manifesto_revisao",
+        "texto_revisado",
+        "idempotency_key"
+      ]
+    },
+    {
+      "name": "fact_check_dry_run",
+      "role": "fact_checker",
+      "from": "producao",
+      "to": "producao",
+      "requires": [
+        "curadoria_id",
+        "manifesto_fact_check",
+        "fatos_travados",
+        "idempotency_key"
+      ]
+    },
+    {
+      "name": "auditar_final_dry_run",
+      "role": "auditor",
+      "from": "producao",
+      "to": "auditado",
+      "requires": [
+        "manifesto_auditoria_final",
+        "texto_revisado",
+        "manifesto_fact_check",
+        "qualidade_minima"
+      ]
+    },
+    {
+      "name": "publicar_dry_run",
+      "role": "publicador",
+      "from": "auditado",
+      "to": "publicado",
+      "requires": [
+        "manifesto_publicacao",
+        "idempotency_key"
+      ]
+    }
+  ]
+}

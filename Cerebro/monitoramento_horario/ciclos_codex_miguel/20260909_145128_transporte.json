@@ -1,0 +1,191 @@
+{
+  "ref": "XM-20260909-010",
+  "commit": "9f654c137d1365995b93287f628ae5160024426e",
+  "rounds_executed": 1,
+  "result": "TRANSPORTE_PARCIAL",
+  "finished_at": "2026-09-09T14:52:56.534147-03:00",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "github": {
+    "push_rc": 0,
+    "origin_head": "9f654c137d1365995b93287f628ae5160024426e",
+    "round_commit_verified": true
+  },
+  "initial_gdrive_preflight": [
+    {
+      "route": "gdrive",
+      "path": "de_dell.md",
+      "at": "2026-09-09T14:49:30.972411-03:00",
+      "returncode": 0,
+      "rate_limit": false,
+      "remote_sha256": "9dd37c5564b77e00cdda371774f3fbcb1f1bccb0c09b29c315c63c3b09a355b4",
+      "remote_is_prefix": true,
+      "mutation": false
+    },
+    {
+      "route": "gdrive",
+      "path": "ledger/codex_miguel.md",
+      "at": "2026-09-09T14:49:34.643606-03:00",
+      "returncode": 0,
+      "rate_limit": false,
+      "remote_sha256": "a00c1b7ec7d2ec93663e966fb736be6732c75ec5d84f1fa9f0553cc921e06539",
+      "remote_is_prefix": true,
+      "mutation": false
+    },
+    {
+      "route": "gdrive",
+      "path": "estado/codex_miguel.md",
+      "at": "2026-09-09T14:49:39.868784-03:00",
+      "returncode": 0,
+      "rate_limit": false,
+      "remote_sha256": "64923f5de6c2b61905415199cf37e34b83722a43f6330cf662a074ea2495fe96",
+      "remote_is_prefix": true,
+      "mutation": false
+    }
+  ],
+  "gdrive": [
+    {
+      "path": "de_dell.md",
+      "at": "2026-09-09T14:52:03.378198-03:00",
+      "preflight_rc": 1,
+      "preflight_sha256": null,
+      "expected_sha256": "7bb25d2b1d2a5f6a4f769dc93e86589c791f3e5ce832ec5e84c40e8fc526ff8d",
+      "remote_is_prefix": false,
+      "copy_performed": false,
+      "verified": false,
+      "hold": "leitura invalida ou destino divergente; nenhuma sobrescrita",
+      "rate_limit": true
+    },
+    {
+      "path": "ledger/codex_miguel.md",
+      "at": "2026-09-09T14:52:06.987659-03:00",
+      "preflight_rc": 3,
+      "preflight_sha256": null,
+      "expected_sha256": "24337da4370691d7ea5b63fdd9957a63482feae91cf055283b27f51872e9bb82",
+      "remote_is_prefix": false,
+      "copy_performed": false,
+      "verified": false,
+      "hold": "leitura invalida ou destino divergente; nenhuma sobrescrita",
+      "rate_limit": false
+    },
+    {
+      "path": "estado/codex_miguel.md",
+      "at": "2026-09-09T14:52:10.219076-03:00",
+      "preflight_rc": 1,
+      "preflight_sha256": null,
+      "expected_sha256": "303208577597c63d84ecd32204af3117b5af208219bb1b1861779e7e5fb7c87c",
+      "remote_is_prefix": false,
+      "copy_performed": false,
+      "verified": false,
+      "hold": "leitura invalida ou destino divergente; nenhuma sobrescrita",
+      "rate_limit": true
+    }
+  ],
+  "backup_preflight": [
+    {
+      "route": "nyc",
+      "at": "2026-09-09T14:49:30.974514-03:00",
+      "returncode": 0,
+      "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "is_ancestor_of_local": false,
+      "mutation": false
+    },
+    {
+      "route": "tencent",
+      "at": "2026-09-09T14:49:30.975073-03:00",
+      "returncode": 0,
+      "files": [
+        {
+          "sha256": "e0fc94b7be0e80b6d01a0655d4d02b3128c76a1b6c16aa2a1739064efc493056",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/de_dell.md"
+        },
+        {
+          "sha256": "1f6763fe50d2b0d4201fd4436b775902f97543b7a1cac21b172ec9a2d437b8a8",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/ledger/codex_miguel.md"
+        },
+        {
+          "sha256": "bf10240959d16ffd2f37957ae71e8779bef63644d53407193ca4e59d7764d29a",
+          "path": "/root/Cerebro/Espelhos/ponte_laura_completa/estado/codex_miguel.md"
+        }
+      ],
+      "mutation": false
+    }
+  ],
+  "copy_performed": false,
+  "dual_transport_ok": false,
+  "pending_transport": [
+    "de_dell.md",
+    "ledger/codex_miguel.md",
+    "estado/codex_miguel.md"
+  ],
+  "no_unread_source_deltas_at_close": true,
+  "validation": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "sha256": "7bb25d2b1d2a5f6a4f769dc93e86589c791f3e5ce832ec5e84c40e8fc526ff8d",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true,
+      "old_prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "sha256": "24337da4370691d7ea5b63fdd9957a63482feae91cf055283b27f51872e9bb82",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true,
+      "old_prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "sha256": "303208577597c63d84ecd32204af3117b5af208219bb1b1861779e7e5fb7c87c",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true,
+      "old_prefix_preserved": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_145128_ronda.md",
+      "sha256": "ef3f6fdc8cd971a4816774344247aad28b1ec1a495ce971800a62315df3c03ba",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true
+    },
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_145128_evidencias.json",
+      "sha256": "2e25a2f28ba5b8cd941e9bf07c17fccbdc843f3b49a7e87e32b5ae078686260f",
+      "utf8_without_bom": true,
+      "matches_operational_commit": true
+    }
+  ],
+  "closure_appends": [
+    {
+      "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_145128_ronda.md",
+      "previous_bytes": 3482,
+      "previous_sha256": "ef3f6fdc8cd971a4816774344247aad28b1ec1a495ce971800a62315df3c03ba",
+      "sha256": "e69f845ee01be933350b2eb117be18e8a1d27a49e03bda7315181d0017bdff00",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_bytes": 519910,
+      "previous_sha256": "7bb25d2b1d2a5f6a4f769dc93e86589c791f3e5ce832ec5e84c40e8fc526ff8d",
+      "sha256": "17194efdcf8d24a3ab51aae5a11914f133c45acdbec9b8256ac4878eafd833d1",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "previous_bytes": 85127,
+      "previous_sha256": "24337da4370691d7ea5b63fdd9957a63482feae91cf055283b27f51872e9bb82",
+      "sha256": "360a57a82ffa44bbb9ac1046e0b8d3bfac47f7f610194615b50133e4feb6369a",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "previous_bytes": 98383,
+      "previous_sha256": "303208577597c63d84ecd32204af3117b5af208219bb1b1861779e7e5fb7c87c",
+      "sha256": "8ad51dfded4858caa4e83fe9ec01f9ebb426380615e6856c85230a2903af07c5",
+      "prefix_preserved": true
+    }
+  ],
+  "supplemental_source": {
+    "path": "cerebro/Foruns/ideias/2026-09-09_v42mon_veredito_400651_arquiteto.md",
+    "sha256": "9bcaad5ad99f12109694e556fdfbb4b30393b55a8bb5b5f83af433c8b9d02cf9",
+    "classification": "relato lido integralmente; sem certificacao financeira XM"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "collection_request": {
+    "queries": [],
+    "reason": "Nenhuma coleta complementar obrigatoria detectada nesta fatia.",
+    "required_before": "none",
+    "status": "none"
+  },
+  "consequencia_material": {
+    "descricao": "os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica",
+    "evidencias_ref": [
+      "fatos_travados:IBGE",
+      "fatos_travados:setor_produtivo"
+    ],
+    "nivel_concretude": 4,
+    "quem_ganha": "leitor que acompanha a disputa sobre desenvolvimento produtivo",
+    "quem_perde": "leitura que reduz industria a numero mensal sem estrutura produtiva",
+    "tipo": "economica"
+  },
+  "conteudo": "A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural. A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras. O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas. O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.",
+  "created_at": "2026-07-10T15:04:08.816635+00:00",
+  "curadoria_id": "cur_b08a98f50f33804c",
+  "editoria": "v4_cultura",
+  "fatos_travados": [
+    {
+      "fato": "A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 0,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 1,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 2,
+      "obrigatorio_no_texto": true
+    },
+    {
+      "fato": "O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.",
+      "fonte_ref": [
+        "pauta_local_cafezinho:audiovisual_streaming_soberania_cultural"
+      ],
+      "idx": 3,
+      "obrigatorio_no_texto": true
+    }
+  ],
+  "frame_visual": {
+    "conflito_visual": "a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso",
+    "entidade_principal": "audiovisual brasileiro",
+    "evitar": "montagem generica, multidao indistinta, imagem sem relacao com a tese",
+    "prioridade": "pessoa"
+  },
+  "idempotency_key": "cd0c92f0a4d34d75c200c17518606919582c0949e4fc31c5505688ada7315b63",
+  "issues": [],
+  "item_id": "v4_real_007",
+  "llm_response": {
+    "content": "[MOCK V4/gemini/gemini-3.5-flash/v4_cultura/redacao] Audiovisual brasileiro disputa soberania cultural nas plataformas. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.. Tese escolhida: Quando os fatos auditados sobre audiovisual brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Audiovisual brasileiro disputa soberania cultural nas plataformas.\n\nFatos travados obrigatorios para cobrir no texto:\n- A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.\n- A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras.\n- O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas.\n- O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+    "cost_usd_estimated": 0.0002058,
+    "duration_ms_llm": 0,
+    "error_class": null,
+    "mode": "mock",
+    "model": "gemini-3.5-flash",
+    "model_parameters": {
+      "max_tokens": null,
+      "temperature": null,
+      "thinking_budget": null
+    },
+    "pricing_table_version": "2026-07-09-official-deepseek",
+    "prompt_hash": "d8af43d472440390338e6b576c44271e34779f1dcc780905fc27037427cb5739",
+    "provider": "gemini",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo",
+      "deepseek_luxo"
+    ],
+    "selected_tier": "gemini_luxo",
+    "selection_reason": "exploration: qualidade=1.000, custo=1.000, rota=0.250, samples=0",
+    "selection_strategy": "quality_cost_router",
+    "tokens_in": 344,
+    "tokens_out": 600
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "8e8f178c57a3d7e4cde3c1f4f66327bcbd1616d313add843e673f2b5809fad50",
+      "editoria": "v4_cultura",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "curadoria_id": "cur_b08a98f50f33804c",
+    "from": "curadoria",
+    "imagem_destacada_validada": false,
+    "manifesto_auditoria_final": true,
+    "manifesto_curadoria": false,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "curadoria_id",
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "manifesto_fact_check": null,
+  "manifesto_revisao": {
+    "agent": "revisor",
+    "contract": "contratos/v4_revisao_v1.json",
+    "curadoria_id": "cur_b08a98f50f33804c",
+    "issues": [],
+    "ok": true,
+    "promessa_ao_leitor": "O leitor vai entender por que o movimento de audiovisual brasileiro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso."
+  },
+  "primary_entity": "audiovisual brasileiro",
+  "promessa_ao_leitor": "O leitor vai entender por que o movimento de audiovisual brasileiro revela a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso.",
+  "schema_version_revisao": "v1",
+  "source_status": "curadoria_dry_run",
+  "status": "revisao_aprovada",
+  "tese_escolhida_idx": 0,
+  "texto_dry_run": "[MOCK V4/gemini/gemini-3.5-flash/v4_cultura/redacao] Audiovisual brasileiro disputa soberania cultural nas plataformas. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.. Tese escolhida: Quando os fatos auditados sobre audiovisual brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Audiovisual brasileiro disputa soberania cultural nas plataformas.\n\nFatos travados obrigatorios para cobrir no texto:\n- A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.\n- A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras.\n- O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas.\n- O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+  "texto_revisado": "[MOCK V4/gemini/gemini-3.5-flash/v4_cultura/redacao] Audiovisual brasileiro disputa soberania cultural nas plataformas. <p>O texto de laboratorio abre pela tese escolhida e evita transformar a pauta em simples resumo. A curadoria entregue ao produtor informa: Abrir pela contradicao, nao pelo resumo. Fato novo: A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.. Tese escolhida: Quando os fatos auditados sobre audiovisual brasileiro saem do placar declaratorio, revela-se que os dados do setor produtivo deslocam a pauta de indicador isolado para debate sobre industria, valor agregado e politica economica.. Desenvolver a consequencia concreta: a passagem da disputa de narrativa para uma consequencia material que muda a leitura do caso. Preservar fatos travados e evitar atribuicao de intencao nao provada. Titulo de referencia: Audiovisual brasileiro disputa soberania cultural nas plataformas.\n\nFatos travados obrigatorios para cobrir no texto:\n- A discussao sobre plataformas de streaming recoloca o audiovisual brasileiro diante de uma disputa de soberania cultural.\n- A pauta nao deve ser apenas defesa abstrata de cota: a questao material e quem captura valor, dados, distribuicao e visibilidade quando producoes locais dependem de algoritmos e plataformas estrangeiras.\n- O caso envolve setor produtivo cultural, empregos, memoria nacional e capacidade de exportar narrativas.\n- O texto deve evitar xenofobia e separar politica cultural de propaganda estatal.\n\nCollection request: none — Nenhuma coleta complementar obrigatoria detectada nesta fatia.</p>\n\n<p>A segunda passagem organiza o fato principal, a consequencia material e os atores envolvidos. O objetivo do mock e exercitar gates tecnicos de revisao, fact-check e auditoria final, sem chamada externa.</p>\n\n<p>A terceira passagem preserva prudencia factual: fatos sem fonte primaria ficam marcados como pendencia, enquanto fatos travados seguem atribuidos ao material auditado.</p>\n\n<p>A quarta passagem testa ritmo e tamanho minimo para o revisor local. O texto nao e amostra editorial final, mas precisa ter corpo suficiente para nao mascarar erro de pipeline.</p>\n\n<p>A conclusao tecnica reafirma que o V4 deve publicar menos, com mais tese, checagem e rastreabilidade. Se qualquer gate posterior falhar, o fluxo deve bloquear e registrar o motivo.</p>",
+  "timestamp_revisao": "2026-07-10T15:04:08.849752+00:00",
+  "titulo": "Audiovisual brasileiro disputa soberania cultural nas plataformas"
+}

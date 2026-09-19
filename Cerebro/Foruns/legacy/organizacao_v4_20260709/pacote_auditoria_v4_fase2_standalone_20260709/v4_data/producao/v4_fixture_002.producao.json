@@ -1,0 +1,48 @@
+{
+  "conteudo": "Material auditado minimo para validar o fluxo tecnico V4 com adaptador LLM mock, diretrizes externas e sem publicacao externa.",
+  "created_at": "2026-07-08T16:23:27.476416+00:00",
+  "editoria": "v4_ciencia_tecnologia_ia",
+  "idempotency_key": "8dc8326cc06b01fff45c95952124d93bdd3794fc88c9d5b13d5853035a775677",
+  "item_id": "v4_fixture_002",
+  "llm_response": {
+    "content": "[MOCK V4/v4_ciencia_tecnologia_ia/redacao] Fixture V4 valida producao com adaptador LLM mock. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar o fluxo tecnico V4 com adaptador LLM mock, diretrizes externas e sem publicacao externa.",
+    "mode": "mock",
+    "model": "v4-mock-local",
+    "prompt_hash": "1096e1e6f7b830f24da0ea7b092a5455d0ce0815855c72eea37834f2e12e0e41",
+    "provider": "mock",
+    "route_context": "v4_super_luxo_redacao",
+    "route_tiers": [
+      "openai_luxo",
+      "anthropic_luxo",
+      "gemini_luxo"
+    ]
+  },
+  "manifesto": {
+    "contrato_editorial_v4": {
+      "contexto_llm": "v4_super_luxo_redacao",
+      "diretriz_sha256": "2ee31aaa60af233d6611dd8389c5665087caca4c9e069aed8a4a1b4b3f98d98e",
+      "editoria": "v4_ciencia_tecnologia_ia",
+      "funcao": "redacao",
+      "nucleo_sha256": "f9dbc068921f5872b7deb5ea6741276b5b9d1b9e36f67d4e1672e5fd87ac81ef"
+    },
+    "from": "auditado",
+    "imagem_destacada_validada": true,
+    "manifesto_auditoria_final": true,
+    "manifesto_producao": true,
+    "manifesto_publicacao": true,
+    "qualidade_minima": true,
+    "requires": [
+      "manifesto_producao",
+      "contrato_editorial_v4",
+      "idempotency_key"
+    ],
+    "role": "produtor",
+    "step": "produzir_dry_run",
+    "texto_revisado": true,
+    "to": "producao"
+  },
+  "source_status": "auditado_fixture",
+  "status": "produzir_dry_run",
+  "texto_dry_run": "[MOCK V4/v4_ciencia_tecnologia_ia/redacao] Fixture V4 valida producao com adaptador LLM mock. Texto tecnico simulado a partir de material auditado: Material auditado minimo para validar o fluxo tecnico V4 com adaptador LLM mock, diretrizes externas e sem publicacao externa.",
+  "titulo": "Fixture V4 valida producao com adaptador LLM mock"
+}

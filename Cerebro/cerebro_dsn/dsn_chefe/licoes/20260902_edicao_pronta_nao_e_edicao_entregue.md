@@ -1,0 +1,11 @@
+# 2026-09-02 · Edição pronta ≠ edição entregue (Baleia manhã 02/09)
+
+**O quê:** A edição da manhã da Baleia Azul (fechamento 07:10) foi produzida e commitada às 07:07 (commit 6eb07184b) e aprovada pela Claude Laura sem ressalvas (CL-058, 07:15) — mas NÃO chegou ao Miguel: a sessão terminou logo após o commit, antes do envio ao Telegram. Quando retomei às 10:00, o arquivo existia, o repo estava limpo e a CL tinha aprovado: tudo parecia "feito". A única forma de ver o buraco foi procurar a PROVA DE ENTREGA (message_id na memória — o último registrado era msg 114 das ~03:30/04:00) e não achar nada para esta edição. Enviei então (msg 115, ok:true) e o Miguel recebeu a edição da manhã com ~3h de atraso.
+
+**Por quê:** O ciclo editorial tem dois atos separados: (1) PRODUZIR + COMMITAR (o arquivo no repo, que a CL audita) e (2) ENTREGAR (sendMessage ao Telegram, que só eu faço, com prova = message_id). O ato 1 acontece num momento; o ato 2 depende de a sessão continuar viva. Uma sessão que cai entre os dois deixa a edição "publicada no repo" e "aprovada" — mas invisível para o leitor final (o Miguel). O repo e a ponte mentem nesse caso: não registram a entrega.
+
+**Como aplicar:**
+1. Toda edição da Baleia = dois registros na memória: o commit E o message_id do envio (msg NNN). Se não houver message_id para a edição do turno, ela NÃO foi entregue — envie na 1ª ronda seguinte, mesmo que o arquivo exista e a CL já tenha aprovado (a régua "1ª ronda após o horário, se ainda não saiu, produza e envie" cobre também "produziu mas não entregou").
+2. Na volta de uma sessão interrompida, antes de marcar turno como "feito", conferir a sequência de message_ids na memória (os meus são 113, 114, 115... — o próximo envio herda o id seguinte).
+3. Se a sessão cair no meio do ritual (commit feito, resto não), a ronda de retomada deve: reenviar o que ficou pendente de ENTREGA + atualizar CONTEXTO_MINI + memória + CHECK na ponte (registrar a interrupção com honestidade — a caçada 19 do Ideias já tinha notado a ausência DS-Dell/Chefe na virada das 07:00).
+4. Nunca assumir "dupla via de envio" como motivo para não reenviar: segunda via é enviar VERSÕES DIFERENTES pelo mesmo canal ou o mesmo conteúdo por dois canais; reenviar A MESMA edição canônica quando a prova de entrega não existe é fechar o ciclo, não duplicar.

@@ -1,0 +1,45 @@
+{
+  "ref": "XM-20260910-039",
+  "at": "2026-09-10T20:52:44.926804-03:00",
+  "commit": "12bbd80578763ff941e814b0abeea0aa88fc4f87",
+  "attempts": [
+    {
+      "remote": "origin",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   859e3893a..12bbd8057  12bbd80578763ff941e814b0abeea0aa88fc4f87 -> main\n",
+      "at": "2026-09-10T20:52:49.940964-03:00"
+    },
+    {
+      "remote": "nyc",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            12bbd80578763ff941e814b0abeea0aa88fc4f87 -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because a pushed branch tip is behind its remote\nhint: counterpart. Check out this branch and integrate the remote changes\nhint: (e.g. 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "at": "2026-09-10T20:52:52.482320-03:00"
+    }
+  ],
+  "paths": {
+    "receipt": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_ronda.md",
+    "evidence": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_evidencias.json",
+    "editorial": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_editorial.md",
+    "transport": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_transporte.json",
+    "verification": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_verificacao.json",
+    "message": "/home/migueldorosario/cerebro-miguel/cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_mensagem.md"
+  },
+  "shared_append": true,
+  "script_ponte_push_used": false,
+  "prohibited_transport_actions_executed": [],
+  "precommit_pull": {
+    "rc": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  },
+  "commit_result": {
+    "rc": 0,
+    "stdout": "[detached HEAD 12bbd8057] XM-20260910-039: revisão editorial 3/8/0, cronologia e fontes, ACK Laura\n 7 files changed, 3121 insertions(+)\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_editorial.md\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_evidencias.json\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_mensagem.md\n create mode 100644 cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_205244_ronda.md\n",
+    "stderr": ""
+  },
+  "origin_remote_verified": "12bbd80578763ff941e814b0abeea0aa88fc4f87",
+  "verified_at": "2026-09-10T20:52:54.239410-03:00",
+  "state": "C1_ENTREGUE_C2_PENDENTE"
+}

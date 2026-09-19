@@ -1,0 +1,68 @@
+{
+  "at": "2026-09-10T16:18:32.046290-03:00",
+  "hostname": "novo",
+  "hooks_dir_exists": true,
+  "hooks_non_sample": [],
+  "core_hooksPath": {
+    "rc": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "zero_byte_loose_objects": 0,
+  "files": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "bytes": 1521459,
+      "sha256": "8b4ff14a3dc491a792f229afcc63d8440b9e804227c80c2c83c003777024cb87",
+      "previous_sha256": "c023c524d9c2038981189d22b5e3be899c78efee2a6170b8b144fd9a6983d6a6"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "bytes": 1521459,
+      "sha256": "8b4ff14a3dc491a792f229afcc63d8440b9e804227c80c2c83c003777024cb87",
+      "previous_sha256": "c023c524d9c2038981189d22b5e3be899c78efee2a6170b8b144fd9a6983d6a6"
+    },
+    {
+      "path": "cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "bytes": 366617,
+      "sha256": "6e81a2f0f0eafe395ee63b68d8fbb6fff48212cb67efa58526769d5b33de5806",
+      "previous_sha256": "6e81a2f0f0eafe395ee63b68d8fbb6fff48212cb67efa58526769d5b33de5806"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "bytes": 367821,
+      "sha256": "2f8cbcb03473ae721e32b6c137131d4f66cb92e7ffd8d9a52cdbaeb7ed9a4cd2",
+      "previous_sha256": "5cb7ec02c517cb365bd05907e483efc66a5f23dad6788edbd5ba6e567c303468"
+    },
+    {
+      "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "bytes": 702459,
+      "sha256": "292bae9d8e8c8affa143e8048fb88f51a1d29561901c3b37e8a7e78482bc8d41",
+      "previous_sha256": "835507358e71a7bf750153d945297561845d54a9142cb0543180812445d7389d"
+    },
+    {
+      "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+      "bytes": 140519,
+      "sha256": "dba9f0895b1850a190ce95fecffc7212c376d9086eae58c42962132f758d539a",
+      "previous_sha256": "dba9f0895b1850a190ce95fecffc7212c376d9086eae58c42962132f758d539a"
+    },
+    {
+      "path": "cerebro/Foruns/forum_atualizacao_reforma_v3_20260908.md",
+      "bytes": 67378,
+      "sha256": "a194d22fc25ace79c2bcb0271cf232077bc412b1cc85d14cb95f030c7c45fa12",
+      "previous_sha256": "0f8d165b965d3127793166a5c0360687757b37b978fc3e3020393fc8c6d444fd"
+    }
+  ],
+  "cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+    "ativo": "laura",
+    "desde": "2026-08-18T08:40:00-03:00",
+    "motivo": "ordem Miguel 18/08 ~08:35 — Laura primária, Miguel redundância (skip)",
+    "failover_para": "miguel"
+  },
+  "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json": {
+    "ativo": "laura",
+    "desde": "2026-09-09T22:55:05-03:00",
+    "motivo": "Laura fresca no GitHub por >= 20 min (reversão automática)",
+    "failover_para": null
+  }
+}

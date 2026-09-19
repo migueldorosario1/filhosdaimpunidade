@@ -1,0 +1,1382 @@
+{
+  "started_at": "2026-09-09T17:17:28.951651-03:00",
+  "captured_at": "2026-09-09T17:25:04.730369-03:00",
+  "previous_receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_165117_ronda.md",
+  "previous_commit": "707cda6f55a743165fd374906218f4cd1558aca2",
+  "previous_operational_cut": "68f10123f15228a3191e86b8de00e846c0de121c",
+  "head": "b903178bbe9c928edd95f05900debd2718fe12af",
+  "sources": [
+    {
+      "path": "cerebro/Foruns/canal_trindade.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 196908,
+      "lines": 1577,
+      "sha256": "2c28351ae65930681be07161a1c178585b40d3227f59fdf8a1a68da4b7e4c7bf",
+      "previous_sha256": "2c28351ae65930681be07161a1c178585b40d3227f59fdf8a1a68da4b7e4c7bf",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_0"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/canal_trindade.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 196908,
+      "lines": 1577,
+      "sha256": "2c28351ae65930681be07161a1c178585b40d3227f59fdf8a1a68da4b7e4c7bf",
+      "previous_sha256": "2c28351ae65930681be07161a1c178585b40d3227f59fdf8a1a68da4b7e4c7bf",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_1"
+    },
+    {
+      "path": "cerebro/Foruns/inbox_trindade/codex.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 11403,
+      "lines": 145,
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "previous_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_2"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/codex.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 11403,
+      "lines": 145,
+      "sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "previous_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_3"
+    },
+    {
+      "path": "cerebro/Foruns/inbox_trindade/zcode.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 48590,
+      "lines": 683,
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "previous_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_4"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/zcode.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 48590,
+      "lines": 683,
+      "sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "previous_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_5"
+    },
+    {
+      "path": "cerebro/Foruns/inbox_trindade/claude.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 39411,
+      "lines": 277,
+      "sha256": "eda2641d34adbd138347625bee9ff80a5e63b0d0af634a212982b52b893105ca",
+      "previous_sha256": "eda2641d34adbd138347625bee9ff80a5e63b0d0af634a212982b52b893105ca",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_6"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/claude.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 1729735,
+      "lines": 6454,
+      "sha256": "df55b14f9b1bcbc74a05a7a378d976f1f7d2522047dc4be1db5fc94f0b682e20",
+      "previous_sha256": "df55b14f9b1bcbc74a05a7a378d976f1f7d2522047dc4be1db5fc94f0b682e20",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_7"
+    },
+    {
+      "path": "cerebro/Foruns/inbox_trindade/grok.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 18816,
+      "lines": 188,
+      "sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "previous_sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_8"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/inbox_trindade/grok.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 9113,
+      "lines": 82,
+      "sha256": "338d7e3082b4de3a89664bbb04634e749e014c99348c821135e6639d00c4de2b",
+      "previous_sha256": "338d7e3082b4de3a89664bbb04634e749e014c99348c821135e6639d00c4de2b",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_9"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 652,
+      "lines": 15,
+      "sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "previous_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_10"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 652,
+      "lines": 15,
+      "sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "previous_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_11"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 29441,
+      "lines": 458,
+      "sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "previous_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_12"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 13223,
+      "lines": 224,
+      "sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+      "previous_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_13"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 627502,
+      "lines": 987,
+      "sha256": "a7b777f3b96fcb2a2de10d147e3562a0f6bdf4eb42a0da00103deafcb5e5998e",
+      "previous_sha256": "d5f1657ed226f36932914605b3692f8c634e25b1c21a447f8c356f719e0051d0",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_14",
+      "delta_file": "/tmp/xm_20260909_1717/delta_14.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 627502,
+      "lines": 987,
+      "sha256": "a7b777f3b96fcb2a2de10d147e3562a0f6bdf4eb42a0da00103deafcb5e5998e",
+      "previous_sha256": "d77e4450a58dc6304f96598208b32803b98b46c4646f92fe5d4900105fbe259c",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_15",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 270184,
+      "lines": 763,
+      "sha256": "3783c3d0052cf549db565154fc518bf40e71697cda7ceaa76097e056d9c0b901",
+      "previous_sha256": "a159ca184248650b6ad094f2600206d11a1866d748d32577a962b4ac0cfc86af",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_16",
+      "delta_file": "/tmp/xm_20260909_1717/delta_16.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 270184,
+      "lines": 763,
+      "sha256": "3783c3d0052cf549db565154fc518bf40e71697cda7ceaa76097e056d9c0b901",
+      "previous_sha256": "a159ca184248650b6ad094f2600206d11a1866d748d32577a962b4ac0cfc86af",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_17",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_ideias.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 1362513,
+      "lines": 2819,
+      "sha256": "bc4b174fa1b9d8a0d4f5131566d10b92d8f9f9147a645f1b308096e944e3fa94",
+      "previous_sha256": "18431ca50b386c69122591e22afb63cef41fb146a8c2f5360172c077e277040d",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_18",
+      "delta_file": "/tmp/xm_20260909_1717/delta_18.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_ideias.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 1357673,
+      "lines": 2807,
+      "sha256": "18431ca50b386c69122591e22afb63cef41fb146a8c2f5360172c077e277040d",
+      "previous_sha256": "d89fa96ff42824e761b9450d4dddf4063c27bf9ecc58c1346c3ff2eaffd7c151",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_19",
+      "delta_classification": "PASSIVE_SYNC_ALREADY_COVERED"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 13294,
+      "lines": 142,
+      "sha256": "8e8b24703248cef3988050bb9ff7605a237ad3a2b7774015023b6edd49c6f579",
+      "previous_sha256": "8e8b24703248cef3988050bb9ff7605a237ad3a2b7774015023b6edd49c6f579",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_20"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/estado/ponte_health.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 13294,
+      "lines": 142,
+      "sha256": "8e8b24703248cef3988050bb9ff7605a237ad3a2b7774015023b6edd49c6f579",
+      "previous_sha256": "8e8b24703248cef3988050bb9ff7605a237ad3a2b7774015023b6edd49c6f579",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_21"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/loop_ativo.json",
+      "source": "git",
+      "exists": true,
+      "bytes": 171,
+      "lines": 1,
+      "sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "previous_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_22"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/loop_ativo.json",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 154,
+      "lines": 1,
+      "sha256": "8f0acbce6ce30c4bc39e998fbc6c77133a8c0bba557e50001437423c6a0d449f",
+      "previous_sha256": "8f0acbce6ce30c4bc39e998fbc6c77133a8c0bba557e50001437423c6a0d449f",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_23"
+    },
+    {
+      "path": "cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 347699,
+      "lines": 835,
+      "sha256": "6417106b1b175af136b1247fa708f2e8aa3077d38560a933a49bdda617b8826d",
+      "previous_sha256": "b9dc29abd0cb22d1d845c08ffa992ee9a393135a325ff419d30fff1e5f981abf",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_24",
+      "delta_file": "/tmp/xm_20260909_1717/delta_24.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 347699,
+      "lines": 835,
+      "sha256": "6417106b1b175af136b1247fa708f2e8aa3077d38560a933a49bdda617b8826d",
+      "previous_sha256": "e31e16bca4cb1d019d69e449fc9262b0157a915b13547afcdaf5b476a10ed714",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_25",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/agy_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 28461,
+      "lines": 78,
+      "sha256": "8e9a9d3e834be993d17965bc44c0262e012363f32fd98c95963f2c9eb2a104a4",
+      "previous_sha256": "8e9a9d3e834be993d17965bc44c0262e012363f32fd98c95963f2c9eb2a104a4",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_26"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/agy_miguel.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 28461,
+      "lines": 78,
+      "sha256": "8e9a9d3e834be993d17965bc44c0262e012363f32fd98c95963f2c9eb2a104a4",
+      "previous_sha256": "8e9a9d3e834be993d17965bc44c0262e012363f32fd98c95963f2c9eb2a104a4",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_27"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 12984,
+      "lines": 77,
+      "sha256": "1f4f489db5583541efcbc0dba397f964eb35449f2c85a70a535eebd9583108c7",
+      "previous_sha256": "1f4f489db5583541efcbc0dba397f964eb35449f2c85a70a535eebd9583108c7",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_28"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/claude_miguel.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 12984,
+      "lines": 77,
+      "sha256": "1f4f489db5583541efcbc0dba397f964eb35449f2c85a70a535eebd9583108c7",
+      "previous_sha256": "1f4f489db5583541efcbc0dba397f964eb35449f2c85a70a535eebd9583108c7",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_29"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 191626,
+      "lines": 814,
+      "sha256": "243ea0d0559e9af85671c10014379df9d53b302bbecded5c33724b058214b6eb",
+      "previous_sha256": "243ea0d0559e9af85671c10014379df9d53b302bbecded5c33724b058214b6eb",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_30"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 191626,
+      "lines": 814,
+      "sha256": "243ea0d0559e9af85671c10014379df9d53b302bbecded5c33724b058214b6eb",
+      "previous_sha256": "243ea0d0559e9af85671c10014379df9d53b302bbecded5c33724b058214b6eb",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_31"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/grok_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 31954,
+      "lines": 305,
+      "sha256": "bea36e7c70eaa59d312b56fc20691b0addbc88ef24e6a08d2d5250c2076375e8",
+      "previous_sha256": "bea36e7c70eaa59d312b56fc20691b0addbc88ef24e6a08d2d5250c2076375e8",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_32"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/grok_miguel.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 2161,
+      "lines": 16,
+      "sha256": "df7f62ff5f18876109d76c9b17e61a7f2cf9727952a39d5062dd8ce2848da745",
+      "previous_sha256": "df7f62ff5f18876109d76c9b17e61a7f2cf9727952a39d5062dd8ce2848da745",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_33"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/zcode_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 113086,
+      "lines": 809,
+      "sha256": "936ba4338ef948601033fd6ae5ed4e0572da30f46c01dcad72ba45fa8a7a723b",
+      "previous_sha256": "936ba4338ef948601033fd6ae5ed4e0572da30f46c01dcad72ba45fa8a7a723b",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_34"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/zcode_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 113086,
+      "lines": 809,
+      "sha256": "936ba4338ef948601033fd6ae5ed4e0572da30f46c01dcad72ba45fa8a7a723b",
+      "previous_sha256": "936ba4338ef948601033fd6ae5ed4e0572da30f46c01dcad72ba45fa8a7a723b",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_35"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/grok_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 88654,
+      "lines": 864,
+      "sha256": "eb90bae51f28ec789598905b6eb96785623b33f93d0bfaf691f00a681514d313",
+      "previous_sha256": "eb90bae51f28ec789598905b6eb96785623b33f93d0bfaf691f00a681514d313",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_36"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/grok_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 88654,
+      "lines": 864,
+      "sha256": "eb90bae51f28ec789598905b6eb96785623b33f93d0bfaf691f00a681514d313",
+      "previous_sha256": "eb90bae51f28ec789598905b6eb96785623b33f93d0bfaf691f00a681514d313",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_37"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/zcode_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 14663,
+      "lines": 105,
+      "sha256": "4f022e8c2bb683eeed5835275a9be2d04f28386641ae71fde0aa397c050ed329",
+      "previous_sha256": "4f022e8c2bb683eeed5835275a9be2d04f28386641ae71fde0aa397c050ed329",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_38"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/zcode_miguel.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 14663,
+      "lines": 105,
+      "sha256": "4f022e8c2bb683eeed5835275a9be2d04f28386641ae71fde0aa397c050ed329",
+      "previous_sha256": "4f022e8c2bb683eeed5835275a9be2d04f28386641ae71fde0aa397c050ed329",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_39"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 1775,
+      "lines": 15,
+      "sha256": "e4911c345c2cc86459d6377cd97267eeb5e220103aa4d00ca6115b31dc5d2c47",
+      "previous_sha256": "e4911c345c2cc86459d6377cd97267eeb5e220103aa4d00ca6115b31dc5d2c47",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_40"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 1775,
+      "lines": 15,
+      "sha256": "e4911c345c2cc86459d6377cd97267eeb5e220103aa4d00ca6115b31dc5d2c47",
+      "previous_sha256": "e4911c345c2cc86459d6377cd97267eeb5e220103aa4d00ca6115b31dc5d2c47",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_41"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 659425,
+      "lines": 1097,
+      "sha256": "4cc73cfd24f76a62891ecd302b96a032e4897cca1a403b0f74b46f33f09bedb3",
+      "previous_sha256": "a034eea599460b69e5297df8c9f34dc54e8595caddd9c72cf2fc684434299ae1",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_42",
+      "delta_file": "/tmp/xm_20260909_1717/delta_42.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 659425,
+      "lines": 1097,
+      "sha256": "4cc73cfd24f76a62891ecd302b96a032e4897cca1a403b0f74b46f33f09bedb3",
+      "previous_sha256": "a034eea599460b69e5297df8c9f34dc54e8595caddd9c72cf2fc684434299ae1",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_43",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/astra.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 98617,
+      "lines": 1531,
+      "sha256": "abfb357fd59e783f2f2fdaae13eb970c6879e5a6ff203eda81c43af7a8bc0012",
+      "previous_sha256": "d1e410e2ebc07dfb3bd975707525dbeb27786a37ea85cf076358dec11cab6489",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_44",
+      "delta_file": "/tmp/xm_20260909_1717/delta_44.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/astra.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 98617,
+      "lines": 1531,
+      "sha256": "abfb357fd59e783f2f2fdaae13eb970c6879e5a6ff203eda81c43af7a8bc0012",
+      "previous_sha256": "d1e410e2ebc07dfb3bd975707525dbeb27786a37ea85cf076358dec11cab6489",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_45",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 790700,
+      "lines": 2601,
+      "sha256": "293feeed8d5e40048b8231254fae0cd49badbe035b4f1def7e61b081a702b724",
+      "previous_sha256": "a975cea53c7ce172682f0fe8a80cc099553a8d247922a26f43140a4358848d3b",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_46",
+      "delta_file": "/tmp/xm_20260909_1717/delta_46.txt"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 790700,
+      "lines": 2601,
+      "sha256": "293feeed8d5e40048b8231254fae0cd49badbe035b4f1def7e61b081a702b724",
+      "previous_sha256": "a975cea53c7ce172682f0fe8a80cc099553a8d247922a26f43140a4358848d3b",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_47",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 87696,
+      "lines": 287,
+      "sha256": "8d076aadc5787f0d32de8af18359642633c5ecb3869a0fe317cecd0c351e351e",
+      "previous_sha256": "8d076aadc5787f0d32de8af18359642633c5ecb3869a0fe317cecd0c351e351e",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_48"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 87696,
+      "lines": 287,
+      "sha256": "8d076aadc5787f0d32de8af18359642633c5ecb3869a0fe317cecd0c351e351e",
+      "previous_sha256": "97ee2f81bef67bd18dc33f185198c9a94e3c7b0788de1169fd16af85e2990114",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_49",
+      "delta_classification": "DEDUP_CURRENT_GIT"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/ds_celular.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 20441,
+      "lines": 62,
+      "sha256": "47fc592a5ec2ead1c3c4bd92d666ce2fba50c648ad525d2dfab9bc94c0872127",
+      "previous_sha256": "47fc592a5ec2ead1c3c4bd92d666ce2fba50c648ad525d2dfab9bc94c0872127",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_50"
+    },
+    {
+      "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/ds_celular.md",
+      "source": "canonico_local",
+      "exists": true,
+      "bytes": 20441,
+      "lines": 62,
+      "sha256": "47fc592a5ec2ead1c3c4bd92d666ce2fba50c648ad525d2dfab9bc94c0872127",
+      "previous_sha256": "47fc592a5ec2ead1c3c4bd92d666ce2fba50c648ad525d2dfab9bc94c0872127",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_51"
+    },
+    {
+      "path": ".dsn_ideias/estado.json",
+      "source": "git",
+      "exists": true,
+      "bytes": 1065171,
+      "lines": 310,
+      "sha256": "636241b57cfa942cb685e58a8c49430a07b714ee1181924246404422cd2808f9",
+      "previous_sha256": "e9b740e3087804ae4da66979a14b98685c1dea18632cff1169b549635a3b3286",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_52",
+      "delta_file": "/tmp/xm_20260909_1717/delta_52.txt"
+    },
+    {
+      "path": "cerebro/Foruns/GRADE_DE_CONTROLE_AGENTES.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 830846,
+      "lines": 462,
+      "sha256": "1429bc8bb4b13ce403b930f931eeb5438ec8ac70366253c650248a5a00e4a599",
+      "previous_sha256": "1429bc8bb4b13ce403b930f931eeb5438ec8ac70366253c650248a5a00e4a599",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_53"
+    },
+    {
+      "path": "cerebro/Foruns/ideias/2026-09-09_cacada_88_11_no_ar_7a_prova_269560_1000_fechada_269582_4o_editorial_cl011_109a_regua_v42_sem_veredito.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 15146,
+      "lines": 45,
+      "sha256": "8bd406d84de602b2f4af98ae46278ad0ab65490d1deb6a813c40ded55217c4f6",
+      "previous_sha256": "8bd406d84de602b2f4af98ae46278ad0ab65490d1deb6a813c40ded55217c4f6",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_54"
+    },
+    {
+      "path": "cerebro/Foruns/ideias/estado.json",
+      "source": "git",
+      "exists": true,
+      "bytes": 1065171,
+      "lines": 310,
+      "sha256": "636241b57cfa942cb685e58a8c49430a07b714ee1181924246404422cd2808f9",
+      "previous_sha256": "e9b740e3087804ae4da66979a14b98685c1dea18632cff1169b549635a3b3286",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_55",
+      "delta_file": "/tmp/xm_20260909_1717/delta_55.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 1710298,
+      "lines": 1576,
+      "sha256": "73ffcb02e1bcdb9c1beadb2fe5f81a79ec09ace89d90d77457ba7a09a7d5824e",
+      "previous_sha256": "b7e7330435c4bb8c08d890f2a9b10c5114e99dcdc8a1a040c3ac018d96093984",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_56",
+      "delta_file": "/tmp/xm_20260909_1717/delta_56.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 6617,
+      "lines": 12,
+      "sha256": "7375d64ef91d893e87233cd69027a356e26412e0625f1c46788365e5121acbdb",
+      "previous_sha256": "1c7f81f69cd65a825d19c1a8c7be25b9629d0a73947754e0c5369184ffda2872",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_57",
+      "delta_file": "/tmp/xm_20260909_1717/delta_57.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/agy_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 1025,
+      "lines": 12,
+      "sha256": "620a0a2b0bb5615b20b3d66a73a6e5e68ed910f0738cd6864fa223333c9233a8",
+      "previous_sha256": "620a0a2b0bb5615b20b3d66a73a6e5e68ed910f0738cd6864fa223333c9233a8",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_58"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/astra.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 56632,
+      "lines": 750,
+      "sha256": "819e59811fca20500fd25507708c9b0bf9591344895596f8ecf3faecc147481c",
+      "previous_sha256": "b62b6afaaef7f32bee8365919f2a9ee8eaa54db979143bdd5c6876f22b0dc6eb",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_59",
+      "delta_file": "/tmp/xm_20260909_1717/delta_59.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 4026,
+      "lines": 14,
+      "sha256": "c6d0cc5f12a811e4208edcec1575fc30b21b29f7bba5cf2b25206640dbf08816",
+      "previous_sha256": "c6d0cc5f12a811e4208edcec1575fc30b21b29f7bba5cf2b25206640dbf08816",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_60"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/claude_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 1668,
+      "lines": 39,
+      "sha256": "35f96d4ceaddd4e4e631e85ea90b433ec358e33c45a30363dfbf6bcddffab55e",
+      "previous_sha256": "35f96d4ceaddd4e4e631e85ea90b433ec358e33c45a30363dfbf6bcddffab55e",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_61"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 643,
+      "lines": 6,
+      "sha256": "8bcf550fe9ca76a7e587acbe8223e60aa59fdccb9a4b13a22e66ea1eae90c0a1",
+      "previous_sha256": "8bcf550fe9ca76a7e587acbe8223e60aa59fdccb9a4b13a22e66ea1eae90c0a1",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_62"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 99743,
+      "lines": 405,
+      "sha256": "3c1e5f4addff6251c98fc3265cf29132cf13aacacd1b1740099ef96eb3a92872",
+      "previous_sha256": "3c1e5f4addff6251c98fc3265cf29132cf13aacacd1b1740099ef96eb3a92872",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_63"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/ds_celular.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 2637,
+      "lines": 9,
+      "sha256": "2ed2d0a3d64a9017d64b94b2cc64ade5a6689ab61d6b715c61c1abce60cd01e6",
+      "previous_sha256": "2ed2d0a3d64a9017d64b94b2cc64ade5a6689ab61d6b715c61c1abce60cd01e6",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_64"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 681875,
+      "lines": 813,
+      "sha256": "13c512e3d100ca633b9bfb7e8c482bcf1430724f9387689f88cc2d24f3b0c4b9",
+      "previous_sha256": "68ef9dee5854db12eb05332ef961c4c6643da03acb28e8f7b53ff7f4acaff1af",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_65",
+      "delta_file": "/tmp/xm_20260909_1717/delta_65.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/grok_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 413,
+      "lines": 10,
+      "sha256": "0ea613ae6c639efe37b811a4e65c748f5db86cb9f8c8958301b66cc4d6cb8f82",
+      "previous_sha256": "0ea613ae6c639efe37b811a4e65c748f5db86cb9f8c8958301b66cc4d6cb8f82",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_66"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/grok_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 895,
+      "lines": 21,
+      "sha256": "35ba2f2e638a84baeedfd778f1f5db79c70380ea0536bb674736df0a86256a62",
+      "previous_sha256": "35ba2f2e638a84baeedfd778f1f5db79c70380ea0536bb674736df0a86256a62",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_67"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/zcode_laura.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 16116,
+      "lines": 108,
+      "sha256": "d122a1f1afc21fed6f25b0174d443b2c821e809c8dfbce788739bd57a48a3239",
+      "previous_sha256": "d122a1f1afc21fed6f25b0174d443b2c821e809c8dfbce788739bd57a48a3239",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_68"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/zcode_miguel.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 317,
+      "lines": 1,
+      "sha256": "516c6a77a90990cdd6d835f9fa3486e0351f0cbc6822215a792afb06047b4450",
+      "previous_sha256": "516c6a77a90990cdd6d835f9fa3486e0351f0cbc6822215a792afb06047b4450",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_69"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_astra.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 132676,
+      "lines": 1520,
+      "sha256": "51ebdb87d0667b0da04c18699c67abf7bbb3c1d2510f14416e3160e554dd1d2d",
+      "previous_sha256": "fc9f137cbdc271dd5ffafff9bfb9d7f4d8fc15202d4e0485904479bbd061adba",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_70",
+      "delta_file": "/tmp/xm_20260909_1717/delta_70.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_nuvem_publicador.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 49826,
+      "lines": 247,
+      "sha256": "b16fee1cb063344e6c51ca33bb7beab91715cd84bb48a8c8f9ab7ebc83390929",
+      "previous_sha256": "b16fee1cb063344e6c51ca33bb7beab91715cd84bb48a8c8f9ab7ebc83390929",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_71"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/memoria_comum/memoria_comum.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 7935,
+      "lines": 40,
+      "sha256": "b50f2b6dde044fb3c223b8980f060631256098e1c0dff1cbabfbaf26d36ee52d",
+      "previous_sha256": "b50f2b6dde044fb3c223b8980f060631256098e1c0dff1cbabfbaf26d36ee52d",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_72"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 1003200,
+      "lines": 829,
+      "sha256": "0226829718e915a9a4a770d30698431cfd08728e3a2fef5f8e0f20c5b706f99a",
+      "previous_sha256": "922d8720939a7262132c5516b7d15b0127c3f4e470c8f7bbccc327f892f46848",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_73",
+      "delta_file": "/tmp/xm_20260909_1717/delta_73.txt"
+    },
+    {
+      "path": "cerebro/Foruns/forum_ronda_zm_vigia_1h_20260903.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 60784,
+      "lines": 188,
+      "sha256": "492b1c5775d19a8338cda9cf4e1b918ed41ca9e8c67cbcae57d8b0ebaaf5615c",
+      "previous_sha256": "492b1c5775d19a8338cda9cf4e1b918ed41ca9e8c67cbcae57d8b0ebaaf5615c",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_74"
+    },
+    {
+      "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 661660,
+      "lines": 1626,
+      "sha256": "0ca97a1bc5531ead205d68211fba0ec3e3b1788fad10b6a651e7c482f3d41b86",
+      "previous_sha256": "d60cb8771e9a7ef5f5d283c9ebe063f924e5d5d926519aae580bc29d99cb834f",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_75",
+      "delta_file": "/tmp/xm_20260909_1717/delta_75.txt"
+    },
+    {
+      "path": "cerebro/Relatorios/astra/ronda_horaria/AST-20260909-130001-1788969602098450104.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 14284,
+      "lines": 77,
+      "sha256": "9202e2cf5fd98d40f22a4a29a0cf93d0e28e5aebadd01e9261fe3a23585f26bd",
+      "previous_sha256": "9202e2cf5fd98d40f22a4a29a0cf93d0e28e5aebadd01e9261fe3a23585f26bd",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_76"
+    },
+    {
+      "path": "cerebro/CEREBRO_NODE_BUGS_ATIVOS.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 844080,
+      "lines": 2765,
+      "sha256": "c886cd1e760ff5f9e0efec9090c56f266b1c579061eda1b1b4389e9e3e32e4b1",
+      "previous_sha256": "bd58a68e21500ce8a12fd7a85d14b4b2fdd008854a6bdc58e8a89a2d7cf5e9e6",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_77",
+      "delta_file": "/tmp/xm_20260909_1717/delta_77.txt"
+    },
+    {
+      "path": "cerebro/Relatorios/astra/ronda_horaria/AST-20260909-150001-1788976802019453517.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 15353,
+      "lines": 74,
+      "sha256": "ef36df8a278324f18141bf4eda047885fac20c54e4cd981804a8b7a39d4bcc7a",
+      "previous_sha256": "ef36df8a278324f18141bf4eda047885fac20c54e4cd981804a8b7a39d4bcc7a",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_78"
+    },
+    {
+      "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 134344,
+      "lines": 1295,
+      "sha256": "97fd848fe77c2136aaf155b2794b88dc5e9917a61602fff42d0087156abc2255",
+      "previous_sha256": "52b12a78ddf3ed4c81484fe0d3715091c9264fc695b2a16e636f94215aec5051",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_79",
+      "delta_file": "/tmp/xm_20260909_1717/delta_79.txt"
+    },
+    {
+      "path": "cerebro/Foruns/ideias/2026-09-09_cacada_91_17_no_ar_269588_11a_prova_no_espelho_fix_zm003_18a_prova_cl016_114a_regua_fechada_bug178_3a_ocorrencia_v42_sem_veredito.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 15110,
+      "lines": 40,
+      "sha256": "68657316837df9c49a30bee7b710dd9c897d747aeeead95fb8f534af90b995b8",
+      "previous_sha256": "68657316837df9c49a30bee7b710dd9c897d747aeeead95fb8f534af90b995b8",
+      "unchanged": true,
+      "snapshot": "/tmp/xm_20260909_1717/source_80"
+    },
+    {
+      "path": "cerebro/Relatorios/astra/ronda_horaria/AST-20260909-170002-1788984002223158652.md",
+      "source": "git",
+      "exists": true,
+      "bytes": 15350,
+      "lines": 80,
+      "sha256": "341f10ea92b56e4bde0318a96c2ab03535c8db153f6aef9ecb161699bc0d9673",
+      "previous_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": false,
+      "snapshot": "/tmp/xm_20260909_1717/source_81",
+      "delta_file": "/tmp/xm_20260909_1717/delta_81.txt"
+    }
+  ],
+  "operational_deltas": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "file": "/tmp/xm_20260909_1717/delta_14.txt",
+      "bytes": 31988,
+      "sha256": "a2ba589d65bb8adb4e29e21dde47f9e0ebe00c1d080572d06c0340bf5c917c47"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "file": "/tmp/xm_20260909_1717/delta_16.txt",
+      "bytes": 4137,
+      "sha256": "59b8af86cf3e147c9605ddc273784ced51f69d94780bfe32287a6d4ad76166e3"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_ideias.md",
+      "file": "/tmp/xm_20260909_1717/delta_18.txt",
+      "bytes": 4981,
+      "sha256": "488ca9f556a8751f93a638ee60ab2c2d65e64ca78ce0f89fd4672954772ff9de"
+    },
+    {
+      "path": "cerebro/MONITORAMENTO_DE_TRABALHO.md",
+      "file": "/tmp/xm_20260909_1717/delta_24.txt",
+      "bytes": 473,
+      "sha256": "6dd4a5964ed49432a3316b8cabffb7c2089f56456f95218dc1782e2b4c1982e1"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+      "file": "/tmp/xm_20260909_1717/delta_42.txt",
+      "bytes": 5037,
+      "sha256": "ab90c37fe28946442a6ec0734448244c0efd8794bc9a794e5f399c25d11531e9"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/astra.md",
+      "file": "/tmp/xm_20260909_1717/delta_44.txt",
+      "bytes": 2105,
+      "sha256": "e0ad804ac08499567c3b737982396d8dc241ac2af3cda14573b7d8cc8617f3b9"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+      "file": "/tmp/xm_20260909_1717/delta_46.txt",
+      "bytes": 3250,
+      "sha256": "af048060a8c563d161fa21984965189b5232f8c6f8e5412e07cc089ad0f944e5"
+    },
+    {
+      "path": ".dsn_ideias/estado.json",
+      "file": "/tmp/xm_20260909_1717/delta_52.txt",
+      "bytes": 12848,
+      "sha256": "7377e94cce470da42ca2d563892bfb57c70ab17b49f7d5553362fee766aedea8"
+    },
+    {
+      "path": "cerebro/Foruns/ideias/estado.json",
+      "file": "/tmp/xm_20260909_1717/delta_55.txt",
+      "bytes": 12868,
+      "sha256": "1e836de9d4806d4c7967db272eba1dbce0abdad9ce551862920dac4141d2fd68"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/dsn_ideias.md",
+      "file": "/tmp/xm_20260909_1717/delta_56.txt",
+      "bytes": 5728,
+      "sha256": "74cf81615d1ae2f82d727b1490b0cda935b37befc8f24eca76f35b7bb93d88bd"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md",
+      "file": "/tmp/xm_20260909_1717/delta_57.txt",
+      "bytes": 12609,
+      "sha256": "b11fe67a492cd3523dfbe02d3232426408afbb6463423b003bcc2d19689bfbcc"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/astra.md",
+      "file": "/tmp/xm_20260909_1717/delta_59.txt",
+      "bytes": 753,
+      "sha256": "8fdb0ec047c9c12ee7a25c01c388bb70ff379b3b91961ab48f2f6a63611446b5"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md",
+      "file": "/tmp/xm_20260909_1717/delta_65.txt",
+      "bytes": 4875,
+      "sha256": "7dfe3ac61ec077f298c3ee23c7a14856c3cb575538c6cca63584105a741964bd"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_astra.md",
+      "file": "/tmp/xm_20260909_1717/delta_70.txt",
+      "bytes": 1280,
+      "sha256": "cc3115cda33b5cda6331605543b5d6dfc21fa1c6814f58b946354d4f751b80e7"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/telegram_dsc/CONTEXTO_MINI.md",
+      "file": "/tmp/xm_20260909_1717/delta_73.txt",
+      "bytes": 21081,
+      "sha256": "e7f1fb80f903c828e66ee020d5651683bbd735e22201488583819de1d952a0c6"
+    },
+    {
+      "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+      "file": "/tmp/xm_20260909_1717/delta_75.txt",
+      "bytes": 987,
+      "sha256": "e689fdc76512088b1ab64b7a20faf0b7bb6b13fa09634c10f05a5779d328c2a5"
+    },
+    {
+      "path": "cerebro/CEREBRO_NODE_BUGS_ATIVOS.md",
+      "file": "/tmp/xm_20260909_1717/delta_77.txt",
+      "bytes": 1714,
+      "sha256": "e3fe4de74f9c2a714b77f7653a98654b03ac254969dfe00e01838750d5c5b05b"
+    },
+    {
+      "path": "projeto_cafezinho_agentes/foruns/canal_trindade.md",
+      "file": "/tmp/xm_20260909_1717/delta_79.txt",
+      "bytes": 753,
+      "sha256": "899ea8b0d37d7e59b4f98eb7bceab6a314fe26732f58aa4ca307efd0a730fc58"
+    },
+    {
+      "path": "cerebro/Relatorios/astra/ronda_horaria/AST-20260909-170002-1788984002223158652.md",
+      "file": "/tmp/xm_20260909_1717/delta_81.txt",
+      "bytes": 15619,
+      "sha256": "f7a220a0ae2a0ca3cf20526bb5beac8fc2fb7d43ee3f0d08071f35c59487e73d"
+    }
+  ],
+  "mandatory_source_sha256": {
+    "AGENTS.md": "a1cc20853fcdb4b9a02acffb31de06bfdf68668ec9f7a68d4208f896927606e1",
+    "LOOP_MIGUEL_CODEX.md": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+    "cerebro/MEMORY.md": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+    "cerebro/00_CEREBRO_CANONICO.md": "61f84f78a1d63ffa4281c00e9450a1c434bef79cb9bed9074892a9d8bd26fed8",
+    "cerebro/Foruns/CONSTITUICAO_DA_CASA_V3_MINUTA_FINAL_20260902.md": "80f9e1c5d7976e58bf9a696b78c4ee877e6078e19437f887b38462250beaa4da",
+    "cerebro/Foruns/ponte_laura_completa/CONTRATO_PONTE_COMPLETA.md": "8eed754b09ea8c2a66ad5cc29176c36742862d24c3527946a2e96c2b012da380",
+    "cerebro/Foruns/carta_para_agy_miguel_e_codex_miguel_ponte_correta_20260829.md": "2270de4f05626950b51833472e417a425045d4ec6a4787b70fa638f11a30aca1",
+    "cerebro/Estilo/MANUAL_DE_COMUNICACAO_INTERNA.md": "c2e4802129fe4c6d01cb03aad66f1130b977acc605401eccc59e89db0dab4753",
+    "scripts/ponte_push.sh": "da80dabe9487838615b8a1c55f77705708656fb998763107716d3444445b5085",
+    "cerebro/CONTRATO_GERAL_ECOSISTEMA.md": "52207f3d8fca172a38a1b4b14abc69775274787063f2238a1c0cd5cde13d43bc"
+  },
+  "mandatory_changed": [],
+  "ref": "XM-20260909-015",
+  "timestamp": "2026-09-09T17:26:10.901425-03:00",
+  "rounds_executed": 1,
+  "mode": "OBSERVACAO_FASE_2",
+  "result": "REPOSICOES_CONFIRMADAS_COM_ACHADO_HISTORICO",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "head_before_write": "b903178bbe9c928edd95f05900debd2718fe12af",
+  "git_audit": {
+    "at": "2026-09-09T17:25:06.276218-03:00",
+    "head": "b903178bbe9c928edd95f05900debd2718fe12af",
+    "restoration": [
+      {
+        "ref": "DS-N-20260909-023",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "d79760b78673b8f35ac3ff91fd0c98f93456b55c41d6ec618d2cad392e2414ae",
+        "header_count": 1,
+        "exact_original_substring_count": 0,
+        "nonblank_original_count": 14,
+        "nonblank_sequence_equal": true,
+        "nonblank_lines_present_in_own_block": 14,
+        "independent_missing_line_checks": []
+      },
+      {
+        "ref": "DS-Dell-20260909-023",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "d545c0b833d24a9ec197661ce911a4a253d0f37e20d5ea16c37cee5684022dbf",
+        "header_count": 1,
+        "exact_original_substring_count": 1,
+        "nonblank_original_count": 1,
+        "nonblank_sequence_equal": true,
+        "nonblank_lines_present_in_own_block": 1,
+        "independent_missing_line_checks": []
+      },
+      {
+        "ref": "CL-20260909-015",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "9c79041eb570c82878587deea6e3afb56376a459b26c36fa16f794f996675f08",
+        "header_count": 0,
+        "exact_original_substring_count": 0,
+        "nonblank_original_count": 1,
+        "nonblank_sequence_equal": false,
+        "nonblank_lines_present_in_own_block": 0,
+        "independent_missing_line_checks": []
+      },
+      {
+        "ref": "DS-N-20260909-024",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "99e32202ff2a99dccc5c5f23013117ca3b1af5b43f703100c58fbcd2e46b681d",
+        "header_count": 1,
+        "exact_original_substring_count": 1,
+        "nonblank_original_count": 14,
+        "nonblank_sequence_equal": true,
+        "nonblank_lines_present_in_own_block": 14,
+        "independent_missing_line_checks": [
+          {
+            "sha256": "7f76da4b3d37a6d47c16188f2754bd3a2b7970432528661102420814a403a961",
+            "present_in_current": true,
+            "git_grep_rc": 0
+          },
+          {
+            "sha256": "2782787c0d5bcfe648c4f4e56f6f2e706abebc0543677dc50366a446007e047f",
+            "present_in_current": true,
+            "git_grep_rc": 0
+          },
+          {
+            "sha256": "cb9ccd240ef3be5300eb52ef713c8e8dcb6e981ae5a3001988d2873df08e589e",
+            "present_in_current": true,
+            "git_grep_rc": 0
+          },
+          {
+            "sha256": "8e7ea2b6d1dfdf59fcbf178ca9e0100265894236e8e5c4f2fe801eee97bd0d4a",
+            "present_in_current": true,
+            "git_grep_rc": 0
+          },
+          {
+            "sha256": "e087706f813887e1558b79cb0a1e6354696568fb0e4861bbdb3166f4c3a9ec05",
+            "present_in_current": true,
+            "git_grep_rc": 0
+          },
+          {
+            "sha256": "d4d11992ef1e4766e29392553107d71bdf5e2926ff7a36dce7dfe55b50005350",
+            "present_in_current": true,
+            "git_grep_rc": 0
+          }
+        ]
+      },
+      {
+        "ref": "DS-Dell-20260909-024",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "23aae8be6e5e57f1253b8f5d7077727b58dec3a44fd4fe12185309cc7763150f",
+        "header_count": 1,
+        "exact_original_substring_count": 1,
+        "nonblank_original_count": 1,
+        "nonblank_sequence_equal": true,
+        "nonblank_lines_present_in_own_block": 1,
+        "independent_missing_line_checks": []
+      },
+      {
+        "ref": "DS-N-20260909-025",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "5ad0c9cdb87c089928a047ed5a79341d656577fa2b7784da022d45f34794546d",
+        "header_count": 1,
+        "exact_original_substring_count": 1,
+        "nonblank_original_count": 14,
+        "nonblank_sequence_equal": true,
+        "nonblank_lines_present_in_own_block": 14,
+        "independent_missing_line_checks": []
+      },
+      {
+        "ref": "DS-Dell-20260909-025",
+        "source_commit": "500b2c8958fbbb5ff651153b9284a8ae2fcd4e72",
+        "source_sha256_without_trailing_newlines": "2d5b26aa788dea8c91370b9e951c596f5da728a2b4251d309712c00ecb73149a",
+        "header_count": 1,
+        "exact_original_substring_count": 1,
+        "nonblank_original_count": 1,
+        "nonblank_sequence_equal": true,
+        "nonblank_lines_present_in_own_block": 1,
+        "independent_missing_line_checks": []
+      }
+    ],
+    "bridge_commits_since_cut": [
+      {
+        "commit": "0d92940f0c47b9de51a897873ecc66a5df9b1e48",
+        "parent": "ecaf5a62494a4766200dc75721fadcc1b8c099e7",
+        "prefix_preserved": false,
+        "lost_headers": [],
+        "new_header_count": 1
+      },
+      {
+        "commit": "c09605e70509bb33f7ec5119cbb78d366ce24ebc",
+        "parent": "f55be74ca204469e34b4d4b75e1e7261cada0e26",
+        "prefix_preserved": true,
+        "lost_headers": [],
+        "new_header_count": 2
+      }
+    ],
+    "historical_context_edits": [
+      {
+        "header": "> ATUALIZACAO DS Nuvem Chefe (DS-N Chefe) 08/09 17:00 (RONDA 30/30 - 341o CHECK - slot 17:00, NAO 4/4h - proximo relatorio 20:00",
+        "old_line": 76,
+        "new_line": 78,
+        "before_sha256": "4623598289c80ff8081621b00ab333ac8d6fde95c82693468011fc1b450d7749",
+        "after_sha256": "dafb39e52500ad477f5e7d4882c11f271632e87bd1f1157715b66908f0e4dc3e",
+        "all_changes_equal_17_0x_to_17_03": true,
+        "replacement_count": 5,
+        "changes": [
+          {
+            "old": "x",
+            "new": "3"
+          },
+          {
+            "old": "x",
+            "new": "3"
+          },
+          {
+            "old": "x",
+            "new": "3"
+          },
+          {
+            "old": "x",
+            "new": "3"
+          },
+          {
+            "old": "x",
+            "new": "3"
+          }
+        ]
+      },
+      {
+        "header": "> ATUALIZACAO DS Nuvem Chefe (DS-N Chefe) 07/09 17:00 (RONDA 30/30 - 293o CHECK - feriado 7 de Setembro",
+        "old_line": 160,
+        "new_line": 162,
+        "before_sha256": "5f66f344ddc8784f669b58c866979dfa1571563028df32ebddf83c29b1210b99",
+        "after_sha256": "9ebd7faaf4a82261d886ebb7168363f0345bfc6cc0be7829c04ca67cc3bb6320",
+        "all_changes_equal_17_0x_to_17_03": true,
+        "replacement_count": 1,
+        "changes": [
+          {
+            "old": "x",
+            "new": "3"
+          }
+        ]
+      },
+      {
+        "header": "> ATUALIZACAO DS Nuvem Chefe (DS-N Chefe) 04/09 17:00 (RONDA 30/30 - 152o CHECK) - NOVIDADES: 🏭 TOPO AGORA: 269009 «Argentina ameaca sancionar petroliferas por projeto nas Malvinas» NO AR 15:48:00 EM PONTO = 37a materia de 04/09, serie pos-hotfix ~23h42 sem recuo (57 posts REST 268797->269009 = NOVO RECORDE INCIDENTE-1154, 47a confirmacao DS-N; hoje 37/37 por lista de IDs, zero recuo, zero sumico; nada novo publicado 15:48-17:00 - hiato desenhado per CL-027, esteira aguarda cl143 do AGY 17:05 com o 269012 Moramo Bay/niquel para as 17:08) · CL-20260904-027 (16:39) LIDA: CL viva 16:35, fila vazia desde 15:48, 269012 checado -> cl143 AGY 17:05 (entra 17:08:00), 16:25 nacional mudo (5o do dia - dono ZM), CL registrou DS-N SEM_RELATORIO desde 15:00 (resposta: 150o CHECK 16:00:31 e 151o 16:34:48 estao na ponte - sync lag da leitura dela; 152o 17:00 fecha a cobranca, vivo), feedback CL 81 anotado, 268719 em edicao pelo Miguel (nao tocar), TSE sem decisao, nada enderecado a mim · 📊 VOLUME 17:00 (canonico REST www.ocafezinho.com, BRT naive",
+        "old_line": 423,
+        "new_line": 425,
+        "before_sha256": "59f3f4ce6d062b2f922bedbe7de7f50e80f511eb4b40c03f36aa3a8a5c629efc",
+        "after_sha256": "17615068c358470628013bc1bcff92d85f2e0b8f8ad7afc4e9b2e3ca934639f0",
+        "all_changes_equal_17_0x_to_17_03": true,
+        "replacement_count": 2,
+        "changes": [
+          {
+            "old": "x",
+            "new": "3"
+          },
+          {
+            "old": "x",
+            "new": "3"
+          }
+        ]
+      }
+    ],
+    "previous_artifacts": [
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_blocos_removidos.md",
+        "present_in_main": false,
+        "backup_commit": "a44b1cc684a34210df164d56c5f6f113463bee36",
+        "backup_sha256_matches": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_evidencias.json",
+        "present_in_main": false,
+        "backup_commit": "a44b1cc684a34210df164d56c5f6f113463bee36",
+        "backup_sha256_matches": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_ronda.md",
+        "present_in_main": false,
+        "backup_commit": "a44b1cc684a34210df164d56c5f6f113463bee36",
+        "backup_sha256_matches": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_152208_transporte.json",
+        "present_in_main": false,
+        "backup_commit": "a44b1cc684a34210df164d56c5f6f113463bee36",
+        "backup_sha256_matches": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_155030_evidencias.json",
+        "present_in_main": false,
+        "backup_commit": "a44b1cc684a34210df164d56c5f6f113463bee36",
+        "backup_sha256_matches": true
+      },
+      {
+        "path": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_155030_ronda.md",
+        "present_in_main": false,
+        "backup_commit": "a44b1cc684a34210df164d56c5f6f113463bee36",
+        "backup_sha256_matches": true
+      }
+    ],
+    "nyc": {
+      "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "is_ancestor_of_local": false,
+      "mutation": false,
+      "checked_at": "2026-09-09T17:18:05-03:00"
+    },
+    "historical_context_independent_diff": {
+      "commit": "0d92940f0c47b9de51a897873ecc66a5df9b1e48",
+      "changed_historical_lines": 3,
+      "replacements_17_0x_to_17_03": 8,
+      "all_replacements_match_added_lines": true,
+      "new_current_header_count": 1
+    }
+  },
+  "appends": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "previous_bytes": 627502,
+      "previous_sha256": "a7b777f3b96fcb2a2de10d147e3562a0f6bdf4eb42a0da00103deafcb5e5998e",
+      "appended_sha256": "08e6d19318140d0d29109967bcb8d0fd9c415bcba4fecdca5a6dde59618bf9b1",
+      "sha256": "a9be671a01c49f4d666c740adcff6829a00e7acef162d7ef855b56ac1593bc33",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "previous_bytes": 87696,
+      "previous_sha256": "8d076aadc5787f0d32de8af18359642633c5ecb3869a0fe317cecd0c351e351e",
+      "appended_sha256": "9ccbc028dc60d37503f85be7fbc779f908e0d1fabf09416828c1ee0675155032",
+      "sha256": "2821e02189c417ad1fca9dd2f5e3ed6c48efe10297f88db47a0ca364a629f57b",
+      "prefix_preserved": true
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "previous_bytes": 99743,
+      "previous_sha256": "3c1e5f4addff6251c98fc3265cf29132cf13aacacd1b1740099ef96eb3a92872",
+      "appended_sha256": "623c8900783722e1c6c655af777389b67982f0e986441bd7338c72702e9e32a8",
+      "sha256": "6922c070b4e8c7e159d6bebed9eab1cd27df88ab8f136e5e6edabe43fae43975",
+      "prefix_preserved": true
+    }
+  ],
+  "new_laura_queries": [],
+  "new_codex_orders": [],
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0
+  },
+  "prohibited_actions_executed": [],
+  "wordpress_calls": 0,
+  "untracked_preexisting_count": 219,
+  "late_delta": {
+    "commit": "b903178bbe9c928edd95f05900debd2718fe12af",
+    "read": "CHECK Ideias 17:16, ponte/estado e delta semântico JSON",
+    "old_count": 296,
+    "new_count": 297,
+    "added_entries": 1,
+    "removed_entries": 0,
+    "copies_equal": true
+  },
+  "transport": {
+    "origin": "aguarda comprovação no fecho",
+    "nyc": {
+      "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+      "is_ancestor_of_local": false,
+      "mutation": false,
+      "checked_at": "2026-09-09T17:18:05-03:00"
+    },
+    "gdrive": "não sondado; último rateLimitExceeded às 16:48 é histórico",
+    "tencent": "não sondado; divergência anterior é histórica",
+    "helper_not_executed": "rebase/autostash/cópia ampla incompatíveis com LOOP"
+  }
+}

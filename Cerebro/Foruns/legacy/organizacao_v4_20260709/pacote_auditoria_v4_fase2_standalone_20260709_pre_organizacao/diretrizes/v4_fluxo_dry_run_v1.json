@@ -1,0 +1,89 @@
+{
+    "_doc": "Contrato do fluxo V4 em dry-run, com curadoria de tese, LLM mock/local, imagem auditada obrigatoria e sem publicacao externa.",
+  "_version": "v1",
+  "_status": "rascunho_dry_run",
+  "_updated": "2026-07-09",
+  "principios": {
+        "sem_chamada_llm_real": true,
+        "sem_publicacao_externa": true,
+        "idempotente": true,
+        "manifestos_obrigatorios": true,
+        "respeita_camadas": true,
+        "imagem_auditada_obrigatoria_para_publicacao": true,
+        "curadoria_obrigatoria_para_producao_nobre": true,
+        "modo_experimento_sem_curadoria_apenas_dry_run": true
+    },
+    "fixture": {
+        "item_id": "v4_fixture_006",
+        "editoria": "v4_politica_economia",
+        "titulo": "Flavio Bolsonaro critica decisao do STF",
+        "primary_entity": "Flavio Bolsonaro",
+        "fonte": "fixture_local",
+        "conteudo": "Material auditado minimo para validar integracao de imagem destacada auditada no fluxo V4, sem publicacao externa.",
+        "leitura_corrente_timestamped": {
+            "fonte": "manual_editor",
+            "timestamp_brt": "2026-07-09T00:00:00-03:00",
+            "resumo_consenso": "A cobertura corrente resume o caso como disputa entre Lula e Flavio Bolsonaro sobre tarifa dos EUA.",
+            "fontes_consultadas": [
+                "fixture_local"
+            ]
+        }
+    },
+  "modo_experimento": {
+    "enabled": true,
+    "dry_run_only": true,
+    "external_publish": false,
+    "receipt_required": true
+  },
+  "steps": [
+    {
+      "name": "curadoria_dry_run",
+      "role": "curador",
+      "from": "auditado",
+      "to": "curadoria",
+      "requires": [
+        "manifesto_curadoria",
+        "leitura_corrente_timestamped",
+        "teses_candidatas",
+        "promessa_ao_leitor",
+        "frame_visual",
+        "idempotency_key"
+      ]
+    },
+    {
+      "name": "produzir_dry_run",
+      "role": "produtor",
+      "from": "curadoria",
+      "to": "producao",
+      "requires": [
+        "curadoria_id",
+        "manifesto_producao",
+        "contrato_editorial_v4",
+        "idempotency_key"
+      ]
+    },
+    {
+      "name": "auditar_final_dry_run",
+      "role": "auditor",
+      "from": "producao",
+      "to": "auditado",
+      "requires": [
+        "manifesto_auditoria_final",
+        "texto_revisado",
+        "imagem_destacada_validada",
+        "qualidade_minima"
+      ]
+    },
+    {
+      "name": "publicar_dry_run",
+      "role": "publicador",
+      "from": "auditado",
+      "to": "publicado",
+      "requires": [
+        "manifesto_publicacao",
+        "imagem_destacada_validada",
+        "idempotency_key"
+      ]
+    }
+  ]
+}

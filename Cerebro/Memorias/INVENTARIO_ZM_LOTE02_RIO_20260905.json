@@ -1,0 +1,1095 @@
+{
+ "hostname": "Rio-Carta-Agentes",
+ "capturado_epoch": 1788653010.6046352,
+ "capturado_utc": "2026-09-06T00:03:30Z",
+ "base": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010",
+ "operacao": "ZM_LOTE02_SNAPSHOT_20260905",
+ "ativo_preservado": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system.journal",
+ "abertos_excluidos_do_lote": [
+  "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018215419-00065abf25ab6f00.journal"
+ ],
+ "membros": [
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018012111-00065985d48e656a.journal",
+   "size": 50331648,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 549922,
+   "device": 64769,
+   "mtime_ns": 1787487924314226117,
+   "ctime_ns": 1787487924314226117,
+   "atime_ns": 1788604241925116789,
+   "sha256": "ca7d838d2e0c899c71c4b9414829dcddf1867cc333d1d7f8bc4c0b63c353d744",
+   "sha256_segunda_leitura": "ca7d838d2e0c899c71c4b9414829dcddf1867cc333d1d7f8bc4c0b63c353d744",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "+4uO1IVZBgA=",
+     "sha256": "ca0744063835860b93fd413ad1dc410d3507f9a5ba2f3e7cf10a821f559ce5cc"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001802217b-000659b5f6b98654.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 550533,
+   "device": 64769,
+   "mtime_ns": 1787619184849273640,
+   "ctime_ns": 1787619184849273640,
+   "atime_ns": 1788604241903116126,
+   "sha256": "4c0692e5053c696c543ea54090db0313f9f532b1153a928c3efdf8e1ee6c6f19",
+   "sha256_segunda_leitura": "4c0692e5053c696c543ea54090db0313f9f532b1153a928c3efdf8e1ee6c6f19",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "L7G59rVZBgA=",
+     "sha256": "f06775ae0447e95dbd9bf20aaaff1fbe771ac5e80b3eb488379be18aaf9da1a8"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018034fef-000659d4867996c0.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 550656,
+   "device": 64769,
+   "mtime_ns": 1787674637422010250,
+   "ctime_ns": 1787674637422010250,
+   "atime_ns": 1788604241987118657,
+   "sha256": "bc8d7054118c123ff788bd1f9b5c670a61cf845520188fcad74434f9b77beb32",
+   "sha256_segunda_leitura": "bc8d7054118c123ff788bd1f9b5c670a61cf845520188fcad74434f9b77beb32",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "srh5htRZBgA=",
+     "sha256": "707bff6664eb3bb5bc54d5cf30be2b022c990804bab6495e68ae836743beaa0c"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180497ca-000659e16fb4fd33.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 549751,
+   "device": 64769,
+   "mtime_ns": 1787728686202709774,
+   "ctime_ns": 1787728686202709774,
+   "atime_ns": 1788604241913116427,
+   "sha256": "dabeb2bfe55f76b0fe55972d62b4110ee2fb2486552918dff6361388b1be93d2",
+   "sha256_segunda_leitura": "dabeb2bfe55f76b0fe55972d62b4110ee2fb2486552918dff6361388b1be93d2",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "yh61b+FZBgA=",
+     "sha256": "347ef33377c1c1e30c16c8137a73f4a76cf902cc13aefaff13c6887ea3edf1b3"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001805dbe2-000659ee05447771.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 551523,
+   "device": 64769,
+   "mtime_ns": 1787773685209323943,
+   "ctime_ns": 1787773685209323943,
+   "atime_ns": 1788604241901116066,
+   "sha256": "72f11155fcc3465baf96759e66f3fff886d063b66037ab52e93f8e272b463c34",
+   "sha256_segunda_leitura": "72f11155fcc3465baf96759e66f3fff886d063b66037ab52e93f8e272b463c34",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "r5xEBe5ZBgA=",
+     "sha256": "69c119aa75cde680b99aed9c0fd9d68792c412af1fac0035c38c1ae5cb7284f7"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001807149a-000659f87f61898b.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 551665,
+   "device": 64769,
+   "mtime_ns": 1787826557612964777,
+   "ctime_ns": 1787826557612964777,
+   "atime_ns": 1788604241975118295,
+   "sha256": "b5e0b327485c7436eb64aaa09e73270edcf400a94d83b841db161682365256cb",
+   "sha256_segunda_leitura": "b5e0b327485c7436eb64aaa09e73270edcf400a94d83b841db161682365256cb",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "Htdhf/hZBgA=",
+     "sha256": "111bbf4ba43afab69d1143f7ad69dc1ef7f30d4e564bd11ab7c2e67b913e452d"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180857a7-00065a04ced62030.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 551885,
+   "device": 64769,
+   "mtime_ns": 1787880259739299279,
+   "ctime_ns": 1787880259739299279,
+   "atime_ns": 1788604241919116608,
+   "sha256": "e53ce8da41cb84378a38d76ed9ffe157fde33b6ab2d2d3fe29f13459f0961738",
+   "sha256_segunda_leitura": "e53ce8da41cb84378a38d76ed9ffe157fde33b6ab2d2d3fe29f13459f0961738",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "hkbWzgRaBgA=",
+     "sha256": "c7c68b243706635ee6460fec870044c58040467dc342a402b2d8794ea0a11812"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018099ba9-00065a114fb8040a.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 544811,
+   "device": 64769,
+   "mtime_ns": 1787923493416796672,
+   "ctime_ns": 1787923493416796672,
+   "atime_ns": 1788604241952117602,
+   "sha256": "d29f9a3ea53bc22d0762b40a8d96fc0e914a08535ad11e8dc03a84ff213924ad",
+   "sha256_segunda_leitura": "d29f9a3ea53bc22d0762b40a8d96fc0e914a08535ad11e8dc03a84ff213924ad",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "/Dq4TxFaBgA=",
+     "sha256": "6eabed6f628831e32c3f3e508ca53fc16b0e598807eb279c1a208ab3fd3a0dee"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180ad2d0-00065a1b609f5ca5.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 544793,
+   "device": 64769,
+   "mtime_ns": 1787966276678461770,
+   "ctime_ns": 1787966276678461770,
+   "atime_ns": 1788604241988118687,
+   "sha256": "8b0ba95ef7c40ab3d7a04c7ed4fc99195ee1a30ec66876d8ec8fe1a212c9d0c4",
+   "sha256_segunda_leitura": "8b0ba95ef7c40ab3d7a04c7ed4fc99195ee1a30ec66876d8ec8fe1a212c9d0c4",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "OpqgYBtaBgA=",
+     "sha256": "3089789e04cc997c93b35f9d46fa0a8a77e771030ab5912b79a6635bc64bef3a"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180c02a8-00065a2556c32c5b.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 553324,
+   "device": 64769,
+   "mtime_ns": 1788006531770864037,
+   "ctime_ns": 1788006531770864037,
+   "atime_ns": 1788604241978118386,
+   "sha256": "ed1345470cac1c2231c59d4e4f5658483218502a61bedd38f2c2fffe08179f0f",
+   "sha256_segunda_leitura": "ed1345470cac1c2231c59d4e4f5658483218502a61bedd38f2c2fffe08179f0f",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "03TDViVaBgA=",
+     "sha256": "3e5b7190f0b06ef3fdae80558ac1c3df6ceb3fb9fcd38a5364fe0d81705cb2dc"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180d31a6-00065a2eb625ecb3.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 553819,
+   "device": 64769,
+   "mtime_ns": 1788048498019058393,
+   "ctime_ns": 1788048498019058393,
+   "atime_ns": 1788604241930116940,
+   "sha256": "9b7cb59b8e2f84f6b28e747cbf0eced6e2bc4d325be1f74a4ca4b97407830162",
+   "sha256_segunda_leitura": "9b7cb59b8e2f84f6b28e747cbf0eced6e2bc4d325be1f74a4ca4b97407830162",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "HhAmti5aBgA=",
+     "sha256": "a5709eefe98167c74a6f4ace33cdee0fc8febededf1398d072192d2049e9626e"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180e66cb-00065a387b875944.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 555346,
+   "device": 64769,
+   "mtime_ns": 1788086289026657020,
+   "ctime_ns": 1788086289026657020,
+   "atime_ns": 1788604241961117874,
+   "sha256": "d516981247b79e00a64637b0200e45cbc431ac6040dd327042e68b4172eb9c47",
+   "sha256_segunda_leitura": "d516981247b79e00a64637b0200e45cbc431ac6040dd327042e68b4172eb9c47",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "upWHezhaBgA=",
+     "sha256": "8a7fdaf9f52dfe33ea60c88a1c500cf6e2ef86c2a234e2c1a021d6bf390da447"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000180f96e1-00065a41480e41bd.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 556202,
+   "device": 64769,
+   "mtime_ns": 1788116426586661557,
+   "ctime_ns": 1788116426586661557,
+   "atime_ns": 1788604241937117150,
+   "sha256": "8c48df2f5741a15f5958304834c2a06371dd600ea8b4d8fb81cd46b52cf4c15a",
+   "sha256_segunda_leitura": "8c48df2f5741a15f5958304834c2a06371dd600ea8b4d8fb81cd46b52cf4c15a",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "pF8OSEFaBgA=",
+     "sha256": "4dacef219fd5e8ec22bd8160bac5afe89fc38dbc5598ba5b4a6dc40974a07757"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001810bc80-00065a484c637afe.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 556749,
+   "device": 64769,
+   "mtime_ns": 1788154277621207038,
+   "ctime_ns": 1788154277621207038,
+   "atime_ns": 1788604241980118446,
+   "sha256": "d8d6417d070156d09fce874a7fff595d6e84e177c52789aabbc6cb567c68dfb5",
+   "sha256_segunda_leitura": "d8d6417d070156d09fce874a7fff595d6e84e177c52789aabbc6cb567c68dfb5",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "/LljTEhaBgA=",
+     "sha256": "8b80ca134f118ed7d0b3b6284d320f43406d05fdae17a104266f5652cc7daded"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001811eb3d-00065a511c7a5ce0.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 557122,
+   "device": 64769,
+   "mtime_ns": 1788208157190868418,
+   "ctime_ns": 1788208157190868418,
+   "atime_ns": 1788604241899116005,
+   "sha256": "8f6dd48e2837f3b631d7a401c983caf70303d3e94f9e17e6e44dfa00f2589f2a",
+   "sha256_segunda_leitura": "8f6dd48e2837f3b631d7a401c983caf70303d3e94f9e17e6e44dfa00f2589f2a",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "+696HFFaBgA=",
+     "sha256": "be778dc05d015f10f3f43d94dd56107b7757840f0055bda2c6bcb705134af87c"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018132e6e-00065a5da7f3ab22.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 582407,
+   "device": 64769,
+   "mtime_ns": 1788262143138583716,
+   "ctime_ns": 1788262143138583716,
+   "atime_ns": 1788604241906116216,
+   "sha256": "0f77929adcac7c78dd07c5fe793173679acd16fa6e58585cf6f8a545795e46ea",
+   "sha256_segunda_leitura": "0f77929adcac7c78dd07c5fe793173679acd16fa6e58585cf6f8a545795e46ea",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "+9Dzp11aBgA=",
+     "sha256": "edc95e35e27e71ad0b5c980ecae3cbd9270056912ece4f8f4bceb29f03146764"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181471fd-00065a6a39c43ca5.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 584730,
+   "device": 64769,
+   "mtime_ns": 1788289818202206639,
+   "ctime_ns": 1788289818202206639,
+   "atime_ns": 1788604241958117783,
+   "sha256": "c7a03641c1f74cb4da99ca61efe0726503aa76a918f72ff84fbbb72f27fca9ce",
+   "sha256_segunda_leitura": "c7a03641c1f74cb4da99ca61efe0726503aa76a918f72ff84fbbb72f27fca9ce",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "5p/EOWpaBgA=",
+     "sha256": "1d697ee94a388dc552e1e8419ecb6d946d2944cfe8c949fd0721b9f29dfc89cd"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018159721-00065a70ab562ac3.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 588798,
+   "device": 64769,
+   "mtime_ns": 1788317167744470511,
+   "ctime_ns": 1788317167744470511,
+   "atime_ns": 1788604241984118567,
+   "sha256": "2018903af067629732cd4147e97cc80892b24450c6b5a91ba805ab4e0cd41a72",
+   "sha256_segunda_leitura": "2018903af067629732cd4147e97cc80892b24450c6b5a91ba805ab4e0cd41a72",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "7XZWq3BaBgA=",
+     "sha256": "5b8378f30761255c10846db6dcb7f567fc2bdf8d4a6356366f9c7f01666eb812"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001816be39-00065a77097fb3ce.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 588953,
+   "device": 64769,
+   "mtime_ns": 1788346630118714656,
+   "ctime_ns": 1788346630118714656,
+   "atime_ns": 1788604241896115915,
+   "sha256": "9f25567b9675a1928784c348b644d3b80787642424ce1f1ca6eb6df9ae1a535f",
+   "sha256_segunda_leitura": "9f25567b9675a1928784c348b644d3b80787642424ce1f1ca6eb6df9ae1a535f",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "TNR/CXdaBgA=",
+     "sha256": "7853da7982637a4b01fee47d43f79fccd31ea2b11181d1f41d7ac175bbdceeda"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001817e75c-00065a7de596fd26.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 589209,
+   "device": 64769,
+   "mtime_ns": 1788379817058469810,
+   "ctime_ns": 1788379817058469810,
+   "atime_ns": 1788604241993118838,
+   "sha256": "ea69d28cef4c805110acd25530277214ce9b5283eaa3b39930cb7150ce6a0305",
+   "sha256_segunda_leitura": "ea69d28cef4c805110acd25530277214ce9b5283eaa3b39930cb7150ce6a0305",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "GxOX5X1aBgA=",
+     "sha256": "6d47218379f244291244400c420abe522d349e6c9ecfb69bfa7e8e4622abad33"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181912b1-00065a859fadc268.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 589500,
+   "device": 64769,
+   "mtime_ns": 1788415624704319196,
+   "ctime_ns": 1788415624704319196,
+   "atime_ns": 1788604241967118054,
+   "sha256": "886fd498bfb0e130c76e045601ce5003e815d174ff26ff4a9cacdadd18547ee7",
+   "sha256_segunda_leitura": "886fd498bfb0e130c76e045601ce5003e815d174ff26ff4a9cacdadd18547ee7",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "wxuun4VaBgA=",
+     "sha256": "f6da06551ee6e8ae49e34c710108a3215ba56e2891d304d1ea113545c23b94a8"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181a4038-00065a8df5fcf7f2.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 589821,
+   "device": 64769,
+   "mtime_ns": 1788453135213162017,
+   "ctime_ns": 1788453135213162017,
+   "atime_ns": 1788604241971118175,
+   "sha256": "fd9b2b15489b253f95c345a92613cf53cf5fc58d386fafb86fee5d017d1262c6",
+   "sha256_segunda_leitura": "fd9b2b15489b253f95c345a92613cf53cf5fc58d386fafb86fee5d017d1262c6",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "Xzj99Y1aBgA=",
+     "sha256": "4468e64f9981fa8e1606e925e628b48c37156e36b3680ebf0009826d42fdf99a"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181b6f03-00065a96b1ca3851.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 590174,
+   "device": 64769,
+   "mtime_ns": 1788500925191333355,
+   "ctime_ns": 1788500925191333355,
+   "atime_ns": 1788604241956117723,
+   "sha256": "363117b2c84e54330b4884e13d433cff9d32f1ff7804f074d7434541e1602069",
+   "sha256_segunda_leitura": "363117b2c84e54330b4884e13d433cff9d32f1ff7804f074d7434541e1602069",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "0F3KsZZaBgA=",
+     "sha256": "1b490325c7c910725a1871526a9b2bc62ac0f64d04145bbca2fd3e24abdc75bc"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181cb1fd-00065aa1d24c4d62.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 590525,
+   "device": 64769,
+   "mtime_ns": 1788553045405788425,
+   "ctime_ns": 1788553045405788425,
+   "atime_ns": 1788604241922116699,
+   "sha256": "8a31db09cf1bb1f0336a16e2e54f9f6e999dfe7aaf9aaff6ee094b0eb99f4468",
+   "sha256_segunda_leitura": "8a31db09cf1bb1f0336a16e2e54f9f6e999dfe7aaf9aaff6ee094b0eb99f4468",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "ooFM0qFaBgA=",
+     "sha256": "2c05502bf2a8ef64f1e313e63f814d17352bbf84739d92e188bea0ea74727854"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181dface-00065aadf4e76118.journal",
+   "size": 58720256,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 591019,
+   "device": 64769,
+   "mtime_ns": 1788592512395009854,
+   "ctime_ns": 1788592512395009854,
+   "atime_ns": 1788604241939117211,
+   "sha256": "daddad1ea054983ddd8c1966d48962a6068211de9bf8f587da82a4d2ad9e25ff",
+   "sha256_segunda_leitura": "daddad1ea054983ddd8c1966d48962a6068211de9bf8f587da82a4d2ad9e25ff",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "4Hzn9K1aBgA=",
+     "sha256": "3d0fb61c00fc92cecf8d59b01fd96e4aec2643aeb1105531e9285c5d218c802a"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000181f2ef4-00065ab725488add.journal",
+   "size": 50331648,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 524712,
+   "device": 64769,
+   "mtime_ns": 1788611148574189930,
+   "ctime_ns": 1788611148574189930,
+   "atime_ns": 1788650108943987986,
+   "sha256": "dd5c1222be199ac15d4907e6c2efc95488cc19d3e7680b03b2939d7773fbf956",
+   "sha256_segunda_leitura": "dd5c1222be199ac15d4907e6c2efc95488cc19d3e7680b03b2939d7773fbf956",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "K7ZIJbdaBgA=",
+     "sha256": "3087e383c27802b4499612057c809ffcd131be722e367b0c0d2e443b267bea94"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000182047c4-00065abb7c1a7aeb.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525263,
+   "device": 64769,
+   "mtime_ns": 1788613326890169700,
+   "ctime_ns": 1788613326890169700,
+   "atime_ns": 1788650108894986470,
+   "sha256": "33abed4f295e6c036ee35689f31133d2edd23b3206ff1c514a609b86e9e732b3",
+   "sha256_segunda_leitura": "33abed4f295e6c036ee35689f31133d2edd23b3206ff1c514a609b86e9e732b3",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "h6safLtaBgA=",
+     "sha256": "c419075f37af4bf62335e5db1250887eb6098fbdf26ddce4852d569d40cc8350"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018206204-00065abbfdf92321.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525264,
+   "device": 64769,
+   "mtime_ns": 1788615486889674706,
+   "ctime_ns": 1788615486889674706,
+   "atime_ns": 1788650108949988172,
+   "sha256": "ac6c4d9e568e847e4e2e55dda07e634f9814c88635a1b14c88cc7e4d896c9e65",
+   "sha256_segunda_leitura": "ac6c4d9e568e847e4e2e55dda07e634f9814c88635a1b14c88cc7e4d896c9e65",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "vUr5/btaBgA=",
+     "sha256": "01be108f2544a75115050657abf92e426bf5a33abda43793db1369d3a32d1ce5"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018207c8c-00065abc7eb75d50.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525316,
+   "device": 64769,
+   "mtime_ns": 1788617176590796818,
+   "ctime_ns": 1788617176590796818,
+   "atime_ns": 1788650108934987708,
+   "sha256": "95621c2fe3a8a7707422c1ac3cf0e8022094c60250fab05cd37240089d320397",
+   "sha256_segunda_leitura": "95621c2fe3a8a7707422c1ac3cf0e8022094c60250fab05cd37240089d320397",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "c563frxaBgA=",
+     "sha256": "08617aef7a60e962f07bf64bcedd715adda551ae561bad180439fc1d35902bf6"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018209722-00065abce36ee6ef.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525317,
+   "device": 64769,
+   "mtime_ns": 1788618676793169070,
+   "ctime_ns": 1788618676793169070,
+   "atime_ns": 1788650108913987058,
+   "sha256": "2d745f4303bf046c3adf0d15980844966ad53ad219cd28846295aa93620661f9",
+   "sha256_segunda_leitura": "2d745f4303bf046c3adf0d15980844966ad53ad219cd28846295aa93620661f9",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "8RNv47xaBgA=",
+     "sha256": "274e1059bd0200f8b68571f558fff13582f290f77ca67e2ffbbd3d9f780e5b28"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001820b1c6-00065abd3cdc4d32.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525346,
+   "device": 64769,
+   "mtime_ns": 1788620151009124743,
+   "ctime_ns": 1788620151009124743,
+   "atime_ns": 1788650108930987584,
+   "sha256": "1fc75d3e0fa309123babfda7c552865b853e137ccabfe9a832803098f9a57b59",
+   "sha256_segunda_leitura": "1fc75d3e0fa309123babfda7c552865b853e137ccabfe9a832803098f9a57b59",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "UnHcPL1aBgA=",
+     "sha256": "ba8b88584fb32332b98d745ccad1038426de5af067002cb13d2baaa078f601bc"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001820cc66-00065abd94bc1a26.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525347,
+   "device": 64769,
+   "mtime_ns": 1788621522890555263,
+   "ctime_ns": 1788621522890555263,
+   "atime_ns": 1788650108915987120,
+   "sha256": "128133a77a8235b748f47dda4d89f71273515f4ea09bf9fd80610b9ff093ed41",
+   "sha256_segunda_leitura": "128133a77a8235b748f47dda4d89f71273515f4ea09bf9fd80610b9ff093ed41",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "Tz28lL1aBgA=",
+     "sha256": "7a87e14f241b207848a125131ba0380f549d9f124101186744bbdd4c4a5f867d"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001820e781-00065abde67efa3f.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525348,
+   "device": 64769,
+   "mtime_ns": 1788622804729213293,
+   "ctime_ns": 1788622804729213293,
+   "atime_ns": 1788650108898986594,
+   "sha256": "f270b6b7d76c71ee2ac49d86c8caf50f0f48f381adfab6b9a49072995daf8904",
+   "sha256_segunda_leitura": "f270b6b7d76c71ee2ac49d86c8caf50f0f48f381adfab6b9a49072995daf8904",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "CRF/5r1aBgA=",
+     "sha256": "77fb570314d2df1e521b9fc6969a1506a37d3a9bbdb5454ec5b917c842929d70"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-00000000182102c1-00065abe32e3f1ec.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525377,
+   "device": 64769,
+   "mtime_ns": 1788624131102991666,
+   "ctime_ns": 1788624131102991666,
+   "atime_ns": 1788650108868985664,
+   "sha256": "ad6913e245b2146d2bf4b3e3fb0d696822220fa24c0f0715ccaa55019b54db0a",
+   "sha256_segunda_leitura": "ad6913e245b2146d2bf4b3e3fb0d696822220fa24c0f0715ccaa55019b54db0a",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "YCzkMr5aBgA=",
+     "sha256": "8a5a06228690281b810df62a0fa9097460a6e79c97039d2ce97ccd67bcbacb46"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-0000000018211ddb-00065abe81f73857.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 525378,
+   "device": 64769,
+   "mtime_ns": 1788625458715615257,
+   "ctime_ns": 1788625458715615257,
+   "atime_ns": 1788650108879986005,
+   "sha256": "d0d2126a3f97d0033ad102b0e06b2bbc317cb743dceb47a9acb054a23df5db02",
+   "sha256_segunda_leitura": "d0d2126a3f97d0033ad102b0e06b2bbc317cb743dceb47a9acb054a23df5db02",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "I0v3gb5aBgA=",
+     "sha256": "501f9ba9c781a185af781770b247d6e63d67d025bf82cf73b2d25b12df54d512"
+    }
+   }
+  },
+  {
+   "path": "/var/log/journal/524f4f88ab99d451c9ee123e69fd5010/system@370415200bca4186a213f511ff75317d-000000001821390a-00065abed115a7bf.journal",
+   "size": 8388608,
+   "uid": 0,
+   "gid": 999,
+   "mode_octal": "0o640",
+   "nlink": 1,
+   "inode": 526422,
+   "device": 64769,
+   "mtime_ns": 1788626877878138418,
+   "ctime_ns": 1788626877878138418,
+   "atime_ns": 1788650108918987212,
+   "sha256": "5deb90da66e3fefc8deea05af98803eda6caac34c36b095ec66125eb5f6d7cf1",
+   "sha256_segunda_leitura": "5deb90da66e3fefc8deea05af98803eda6caac34c36b095ec66125eb5f6d7cf1",
+   "hash_estavel": true,
+   "xattrs": {
+    "system.posix_acl_access": {
+     "bytes": 44,
+     "encoding": "base64",
+     "value_base64": "AgAAAAEABgD/////BAAFAP////8IAAUABAAAABAABAD/////IAAAAP////8=",
+     "sha256": "2b96e28f949842d85eab79bf31ae7c50953ff3e975163680d2eb4342d68fb8d4"
+    },
+    "user.crtime_usec": {
+     "bytes": 8,
+     "encoding": "base64",
+     "value_base64": "/MgV0b5aBgA=",
+     "sha256": "63323a99897813c6be48e065bd3b7ffa2f202a2e9aaebfb85591b0ef26fa518f"
+    }
+   }
+  }
+ ],
+ "todos_hash_estavel": true,
+ "total_bytes": 1593835520
+}

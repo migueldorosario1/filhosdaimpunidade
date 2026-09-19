@@ -1,0 +1,17 @@
+{
+  "conteudo": "Material bruto de teste para validar coleta, normalizacao, dedupe e promocao auditada no V4.",
+  "created_at": "2026-07-08T21:59:59.267280+00:00",
+  "editoria": "v4_politica_economia",
+  "fonte": "fixture_ingestao_local",
+  "item_id": "v4_ingest_001",
+  "manifesto_origem": {
+    "capturado_em": "2026-07-08T21:59:59.267325+00:00",
+    "fonte": "fixture_ingestao_local",
+    "source_agent": "v4_coletor",
+    "url": "https://controle.ocafezinho.com/teste-v4-ingestao"
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "status": "bruto_coletado",
+  "titulo": "Teste V4 de ingestao em tres camadas",
+  "url": "https://controle.ocafezinho.com/teste-v4-ingestao"
+}

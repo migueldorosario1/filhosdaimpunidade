@@ -1,0 +1,147 @@
+{
+  "ref": "XM-20260909-003",
+  "commit": "647fb3b1e2fea4efedb2b6d5a8014204a508fe38",
+  "started_at": "2026-09-09T11:24:50.932436-03:00",
+  "gdrive": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "destination": "gdrive:ponte_laura_completa/de_dell.md",
+      "at_start": "2026-09-09T11:24:54.089226-03:00",
+      "local_sha256": "22938e6d468fdd544d61d59e198f3a574506df5cfdd3c148832297abb9a110e1",
+      "preflight_rc": 1,
+      "remote_is_prefix": false,
+      "hold": "Leitura/prefixo nao comprovado; destino preservado",
+      "at_finish": "2026-09-09T11:24:56.855219-03:00"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "destination": "gdrive:ponte_laura_completa/ledger/codex_miguel.md",
+      "at_start": "2026-09-09T11:24:56.855777-03:00",
+      "local_sha256": "9d2ca0339c76e8d3ba4166777164f7f44903e23f48c460ad387d41d5016d8f81",
+      "preflight_rc": 1,
+      "remote_is_prefix": false,
+      "hold": "Leitura/prefixo nao comprovado; destino preservado",
+      "at_finish": "2026-09-09T11:24:59.550608-03:00"
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "destination": "gdrive:ponte_laura_completa/estado/codex_miguel.md",
+      "at_start": "2026-09-09T11:24:59.551740-03:00",
+      "local_sha256": "bd35aa19c3cbda28428eddade1c9f61a7da6f6acdaf0c7c37a4378e1f84b192c",
+      "preflight_rc": 1,
+      "remote_is_prefix": false,
+      "hold": "Leitura/prefixo nao comprovado; destino preservado",
+      "at_finish": "2026-09-09T11:25:04.983717-03:00"
+    }
+  ],
+  "gdrive_initial_preflight": [
+    {
+      "relative_path": "de_dell.md",
+      "destination": "gdrive:ponte_laura_completa/de_dell.md",
+      "at": "2026-09-09T11:20:11.454654-03:00",
+      "returncode": 1,
+      "remote_bytes": 0,
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_is_prefix_of_local": false,
+      "local_sha256": "b278f26ca5a94b6020f925c6ac7c45195ea3ac083b5e53301d02e442bcd67485",
+      "error": "gleapis.com/default\",\n      \"quota_unit\": \"1/min/{project}\",\n      \"service\": \"drive.googleapis.com\"\n    },\n    \"reason\": \"RATE_LIMIT_EXCEEDED\"\n  },\n  {\n    \"@type\": \"type.googleapis.com/google.rpc.Help\",\n    \"links\": [\n      {\n        \"description\": \"Request a higher quota limit.\",\n        \"url\": \"https://cloud.google.com/docs/quotas/help/request_increase\"\n      }\n    ]\n  }\n]\n, rateLimitExceeded\n"
+    },
+    {
+      "relative_path": "ledger/codex_miguel.md",
+      "destination": "gdrive:ponte_laura_completa/ledger/codex_miguel.md",
+      "at": "2026-09-09T11:20:11.975253-03:00",
+      "returncode": 3,
+      "remote_bytes": 0,
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_is_prefix_of_local": false,
+      "local_sha256": "f2221fdabf360bad5c5b1b7b19b23c0836c83a9633a0f45c219013b986facd63",
+      "error": "2026/09/09 11:20:11 NOTICE: Failed to cat: directory not found\n"
+    },
+    {
+      "relative_path": "estado/codex_miguel.md",
+      "destination": "gdrive:ponte_laura_completa/estado/codex_miguel.md",
+      "at": "2026-09-09T11:20:10.541156-03:00",
+      "returncode": 1,
+      "remote_bytes": 0,
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_is_prefix_of_local": false,
+      "local_sha256": "c18ae5477568db0e80dba012154426d649b7100eeb328fb783bc0c4a4dea2dd5",
+      "error": "gleapis.com/default\",\n      \"quota_unit\": \"1/min/{project}\",\n      \"service\": \"drive.googleapis.com\"\n    },\n    \"reason\": \"RATE_LIMIT_EXCEEDED\"\n  },\n  {\n    \"@type\": \"type.googleapis.com/google.rpc.Help\",\n    \"links\": [\n      {\n        \"description\": \"Request a higher quota limit.\",\n        \"url\": \"https://cloud.google.com/docs/quotas/help/request_increase\"\n      }\n    ]\n  }\n]\n, rateLimitExceeded\n"
+    }
+  ],
+  "gdrive_retry": {
+    "relative_path": "de_dell.md",
+    "returncode": 0,
+    "remote_is_prefix": true,
+    "remote_sha256": "3224555efa7eccd7c276039c80b3827778889a6bbda3eba0d81bee0289731c9e",
+    "remote_bytes": 366829,
+    "error": ""
+  },
+  "nyc": "preflight divergente; sem tentativa de force/merge/rebase",
+  "artifact_sha256": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": "22938e6d468fdd544d61d59e198f3a574506df5cfdd3c148832297abb9a110e1",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": "9d2ca0339c76e8d3ba4166777164f7f44903e23f48c460ad387d41d5016d8f81",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": "bd35aa19c3cbda28428eddade1c9f61a7da6f6acdaf0c7c37a4378e1f84b192c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_112417_ronda.md": "547659ab2e33e2a9f7990d59445b77d5b68b03396f7a9e60e506dfeb3e8e2124",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_112417_evidencias.json": "775fd724487bbca2de99bc55efba15c6cd7a908e67aeb9d7022dec5b16648970"
+  },
+  "github": {
+    "at": "2026-09-09T11:24:54.085057-03:00",
+    "ls_remote_returncode": 0,
+    "head": "647fb3b1e2fea4efedb2b6d5a8014204a508fe38",
+    "commit_verified": true
+  },
+  "finished_at": "2026-09-09T11:25:04.985181-03:00",
+  "dual_transport_ok": false,
+  "tencent_preflight": {
+    "returncode": 0,
+    "at": "2026-09-09T11:25:58.215939-03:00",
+    "files": [
+      {
+        "path": "de_dell.md",
+        "exists": true,
+        "remote_sha256": "e0fc94b7be0e80b6d01a0655d4d02b3128c76a1b6c16aa2a1739064efc493056",
+        "local_sha256": "22938e6d468fdd544d61d59e198f3a574506df5cfdd3c148832297abb9a110e1",
+        "remote_is_prefix": false,
+        "remote_bytes": 5698663
+      },
+      {
+        "path": "ledger/codex_miguel.md",
+        "exists": true,
+        "remote_sha256": "1f6763fe50d2b0d4201fd4436b775902f97543b7a1cac21b172ec9a2d437b8a8",
+        "local_sha256": "9d2ca0339c76e8d3ba4166777164f7f44903e23f48c460ad387d41d5016d8f81",
+        "remote_is_prefix": false,
+        "remote_bytes": 77500
+      },
+      {
+        "path": "estado/codex_miguel.md",
+        "exists": true,
+        "remote_sha256": "bf10240959d16ffd2f37957ae71e8779bef63644d53407193ca4e59d7764d29a",
+        "local_sha256": "bd35aa19c3cbda28428eddade1c9f61a7da6f6acdaf0c7c37a4378e1f84b192c",
+        "remote_is_prefix": false,
+        "remote_bytes": 94012
+      }
+    ]
+  },
+  "validation": {
+    "round": "XM-20260909-003",
+    "commit": "647fb3b1e2fea4efedb2b6d5a8014204a508fe38",
+    "files_exact": true,
+    "appends": {
+      "cerebro/Foruns/ponte_laura_completa/de_dell.md": true,
+      "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": true,
+      "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": true
+    },
+    "six_gets_only": true,
+    "category_fix": true,
+    "visual_zero": true,
+    "failover_inactive": true,
+    "one_round": true
+  },
+  "finalized_at": "2026-09-09T11:26:52.659877-03:00",
+  "result": "GITHUB_CONFIRMADO_SEGUNDA_VIA_HOLD",
+  "remote_mutations": [
+    "git push normal origin main"
+  ],
+  "preservation": "Nenhuma copia G-Drive/Tencent executada sem prefixo comprovado; NYC divergente sem push forçado. Failover DESENHADO_NAO_ATIVO."
+}

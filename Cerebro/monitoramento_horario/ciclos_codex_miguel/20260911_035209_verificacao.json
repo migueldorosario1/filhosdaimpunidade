@@ -1,0 +1,578 @@
+{
+  "ref": "XM-20260911-008",
+  "recorded_at": "2026-09-11T03:52:09.859535-03:00",
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T03:48:09.505192-03:00",
+      "since": "2026-09-11T03:18:43.048914-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "6271752fa81d7eb209594ccb52969e45e187693323915b547d8af54c79045b51",
+          "requests": 10,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "3c7236c48181ec532407a9179033387bde3fcc58525f2fb8ab7aac063451a4e0",
+          "requests": 5876,
+          "errors": {
+            "500": 4,
+            "502": 10
+          },
+          "by_minute": {
+            "03:25": 1,
+            "03:31": 13
+          },
+          "last_5xx": "2026-09-11T03:31:44-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "6dc2d8da76cfbd69fd00f248ada8ed44662ef333d953c424d6bb7a36a610a87c",
+        "total": 3,
+        "by_minute": {
+          "03:25": 3
+        }
+      },
+      "redis_info": {
+        "uptime_in_seconds": "989",
+        "used_memory": "890903984",
+        "used_memory_peak": "895216888",
+        "expired_keys": "19",
+        "evicted_keys": "0",
+        "db0": "keys=585997,expires=67,avg_ttl=441517940"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "reboot": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T03:49:21.166120-03:00",
+      "boot": {
+        "rc": 0,
+        "output": "2026-09-11 03:31:27\n"
+      },
+      "history": {
+        "rc": 0,
+        "output": "reboot   system boot  5.15.0-191-gener Fri Sep 11 03:31   still running\nreboot   system boot  5.15.0-191-gener Thu Sep 10 03:31 - 03:30  (23:59)\nreboot   system boot  5.15.0-191-gener Wed Sep  9 03:30 - 03:30  (23:59)\nreboot   system boot  5.15.0-191-gener Tue Sep  8 03:31 - 03:30  (23:59)\nreboot   system boot  5.15.0-191-gener Mon Sep  7 03:31 - 03:30  (23:59)\n\nwtmp begins Fri Jul  3 03:30:26 2026\n"
+      },
+      "nginx": {
+        "rc": 0,
+        "output": "ActiveEnterTimestamp=Fri 2026-09-11 03:31:41 -03\n"
+      },
+      "php": {
+        "rc": 0,
+        "output": "ActiveEnterTimestamp=Fri 2026-09-11 03:31:43 -03\n"
+      },
+      "maintenance": [
+        "30 3 * * *      root    service mysql stop && /sbin/reboot now"
+      ],
+      "error_events": [
+        {
+          "at": "2026/09/11 03:25:39",
+          "kind": "RedisException",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:25:40",
+          "kind": "RedisException",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:25:40",
+          "kind": "RedisException",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:41",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:41",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:41",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:41",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        },
+        {
+          "at": "2026/09/11 03:31:42",
+          "kind": "Connection refused",
+          "upstream_unix_php": false
+        }
+      ],
+      "commandstats": [
+        "cmdstat_del:calls=674,usec=4374,usec_per_call=6.49"
+      ]
+    }
+  },
+  "wordpress_readback": {
+    "at": "2026-09-11T03:48:29-03:00",
+    "ativo": "1",
+    "modo": "standby_contrato",
+    "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+    "future": [
+      {
+        "id": 269892,
+        "date": "2026-09-11 17:15:00",
+        "fm": 269898,
+        "events": 1,
+        "event_timestamps": [
+          1789157700
+        ],
+        "expected_utc": 1789157700,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269858,
+        "date": "2026-09-11 16:00:00",
+        "fm": 269873,
+        "events": 1,
+        "event_timestamps": [
+          1789153200
+        ],
+        "expected_utc": 1789153200,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269846,
+        "date": "2026-09-11 14:30:00",
+        "fm": 269855,
+        "events": 1,
+        "event_timestamps": [
+          1789147800
+        ],
+        "expected_utc": 1789147800,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269813,
+        "date": "2026-09-11 13:00:00",
+        "fm": 269842,
+        "events": 1,
+        "event_timestamps": [
+          1789142400
+        ],
+        "expected_utc": 1789142400,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269811,
+        "date": "2026-09-11 11:30:00",
+        "fm": 269812,
+        "events": 1,
+        "event_timestamps": [
+          1789137000
+        ],
+        "expected_utc": 1789137000,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269801,
+        "date": "2026-09-11 10:00:00",
+        "fm": 269803,
+        "events": 1,
+        "event_timestamps": [
+          1789131600
+        ],
+        "expected_utc": 1789131600,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269792,
+        "date": "2026-09-11 08:30:00",
+        "fm": 269796,
+        "events": 1,
+        "event_timestamps": [
+          1789126200
+        ],
+        "expected_utc": 1789126200,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269770,
+        "date": "2026-09-11 07:00:00",
+        "fm": 269774,
+        "events": 1,
+        "event_timestamps": [
+          1789120800
+        ],
+        "expected_utc": 1789120800,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269719,
+        "date": "2026-09-11 05:30:00",
+        "fm": 269762,
+        "events": 1,
+        "event_timestamps": [
+          1789115400
+        ],
+        "expected_utc": 1789115400,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      }
+    ],
+    "posts": [
+      {
+        "id": 269491,
+        "hash": "ffeb124a56de45e4144aacdfedfb8139e77c18ef089f196f44c1191001934579",
+        "status": "publish",
+        "title": "Osasco e Bauru disputam o Mundial de Clubes de vôlei em São Paulo, em dezembro",
+        "author": "5470",
+        "date": "2026-09-08 18:30:00",
+        "slug": "osasco-e-bauru-disputam-o-mundial-de-clubes-de-volei-em-sao-paulo-em-dezembro",
+        "fm": 269492,
+        "categories": [
+          1271,
+          2403,
+          4986,
+          4988,
+          21070
+        ],
+        "edit_lock": "",
+        "protection": ""
+      },
+      {
+        "id": 269498,
+        "hash": "c8bb89ecd33b7c423cc7622dcced01769686264f19eb8b30d2e216340f1885fe",
+        "status": "publish",
+        "title": "Nova Real Time Big Data é banho de água fria na campanha de Ciro Gomes",
+        "author": "2018",
+        "date": "2026-09-08 18:18:07",
+        "slug": "nova-real-time-big-data-e-banho-de-agua-fria-na-campanha-de-ciro-gomes",
+        "fm": 269493,
+        "categories": [
+          4968,
+          4984,
+          22,
+          4986
+        ],
+        "edit_lock": "1788904265:2018",
+        "protection": "post_publicado_por_humano"
+      },
+      {
+        "id": 269482,
+        "hash": "7c1f92e8066b5dcd43b060f6d72df01911a8ea9182930df8dfc980fccece851c",
+        "status": "publish",
+        "title": "Inter entra na Argentina com conta em dólar em meio à austeridade de Milei",
+        "author": "5470",
+        "date": "2026-09-08 17:45:00",
+        "slug": "inter-entra-na-argentina-com-conta-em-dolar-em-meio-a-austeridade-de-milei",
+        "fm": 269488,
+        "categories": [
+          43,
+          15,
+          2403
+        ],
+        "edit_lock": "",
+        "protection": ""
+      }
+    ]
+  },
+  "targeted_metadata": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T03:49:23-03:00",
+      "redis_constants": {
+        "WP_REDIS_GRACEFUL": null,
+        "WP_REDIS_TIMEOUT": null,
+        "WP_REDIS_READ_TIMEOUT": null
+      },
+      "posts": [
+        {
+          "id": 269858,
+          "status": "future",
+          "modified_gmt": "2026-09-11 05:20:30",
+          "author": "5470",
+          "title": "Fachin pede levantamento parcial do sigilo no caso Master",
+          "first_paragraph": "O presidente do Supremo Tribunal Federal (STF), Edson Fachin, pediu nesta quinta-feira (10) ao ministro André Mendonça o levantamento do sigilo dos procedimentos ligados às investigações do caso Banco Master que tramitam na Corte. Relator do processo, Mendonça decidirá quais informações poderão ser divulgadas.\nFachin propôs manter sob reserva apenas os dados cuja publicação possa comprometer diligências necessárias a futuras operações.\nO pedido não retira automaticamente o sigilo nem alcança informações protegidas por razões investigativas.\nA iniciativa antecede a sessão extraordinária convocada pelo presidente do STF para terça-feira, 15 de setembro. O plenário examinará um relatório da Polícia Federal (PF) e discutirá como deverá ser conduzida uma eventual investigação envolvendo o ministro Alexandre de Moraes.\nDecisão passa ao plenário\nO relatório r",
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / dia da semana:** o rascunho diz que Fachin pediu o levantamento do sigilo \\\"nesta quinta-feira (10)\\\". As evidências confirmam o pedido em 10/09/2026 (quinta-feira), mas hoje é sexta-feira, 11/09/2026 — o texto narra fato de ONTEM com \\\"nesta quinta-feira\\\", o que é aceitável, porém o título/abertura não declara o gancho de atualidade (a sessão de 15/09 é o desdobramento). Ajustar para \\\"quinta-feira (10)\\\" ou \\\"ontem (10)\\\" e explicitar o gancho (sessão extraordinária de terça, 15/09). Fonte: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/ | https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/\", \"**INCERTO — sessão extraordinária do plenário para \\\"terça-feira, 15 de setembro\\\":** as evidências desta busca NÃO confirmam a data da sessão extraordinária convocada por Fachin nem que o plenário examinará \\\"relatório da PF\\\" sobre Moraes nessa data. As fontes falam de crise no STF, suspensão de decisões rivais e prazo de sexta-feira, mas não cobrem a convocação do plenário para 15/09. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — confirmar com fonte primária (STF) ou reportagem específica antes de publicar.\", \"**INCERTO — \\\"relatório da PF a pedido de Mendonça\\\" com mensagens entre Moraes e Daniel Vorcaro:** as evidências mencionam o escândalo Banco Master, tensões entre ministros e vazamentos policiais, mas NÃO confirmam que exista relatório da PF registrando mensagens trocadas entre Alexandre de Moraes e o ex-banqueiro Daniel Vorcaro, nem que tenha sido elaborado a pedido de Mendonça. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — verificar antes de publicar.\", \"**INCERTO — \\\"Petição 15.556\\\":** o rascunho não cita o número, mas a fonte da Tribuna do Norte cita \\\"Petição 15.556\\\" como objeto do pedido de Fachin. Se o post for mencionar o número do processo, usar essa referência; caso contrário, manter genérico como está. Fonte: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/\", \"FONTES: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/ | https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/ | https://valorinternational.globo.com/politics/news/2026/09/10/top-court-chief-takes-over-fake-news-probe-to-contain-crisis.ghtml | https://www.msn.com/en-us/news/other/brazils-top-judge-suspends-justices-rulings-in-supreme-court-power-struggle/ar-AA2bUISk\"], \"fontes\": [\"https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/\", \"https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/\", \"https://valorinternational.globo.com/politics/news/2026/09/10/top-court-chief-takes-over-fake-news-probe-to-contain-crisis.ghtml\", \"https://www.msn.com/en-us/news/other/brazils-top-judge-suspends-justices-rulings-in-supreme-court-power-struggle/ar-AA2bUISk\"], \"sha\": \"e5f14c5f01aeced3252dee4316d77b95f7025876\", \"ts\": \"11/09/2026 01:05\", \"ts_iso\": \"2026-09-11T04:05:40.570968+00:00\"}, \"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [], \"sugestao_titulo\": \"Fachin pede levantamento do sigilo no caso Banco Master\\nCATEGORIA_SUGERIDA: cat 43, cat 2403\", \"categoria_sugerida\": \"cat 43, cat 2403\", \"sha\": \"41f247f32e1f4db73088c18d46405f364c07be5b\", \"ts\": \"11/09/2026 02:20\", \"ts_iso\": \"2026-09-11T05:20:29.083199+00:00\"}, \"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260911-002\", \"fontes\": \"Pedido de Edson Fachin, presidente do STF, ao ministro Andre Mendonca em 10/09/2026, para levantamento PARCIAL do sigilo nos procedimentos do caso Banco Master que tramitam na Corte — mantendo sob reserva apenas o que possa comprometer diligencias futuras; o pedido nao retira o sigilo automaticamente (a decisao e do relator) e antecede a sessao extraordinaria de terca, 15/09, que examinara relatorio da PF; a casa vem cobrindo a serie (269650 de 09/09 e 268973 de 04/09), e esta e continuacao, nao repeticao; CORRIGI um defeito de formatacao da fabrica: o corpo abria com <p><p> duplicado\", \"ts\": \"11/09/2026 01:22\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}}"
+        },
+        {
+          "id": 269868,
+          "status": "draft",
+          "modified_gmt": "2026-09-11 06:21:18",
+          "author": "5470",
+          "title": "Exclusivo: Dinheiro do PCC ajudou a financiar Dark Horse",
+          "first_paragraph": "A quebra de sigilo da Petição 15.556, a investigação-mãe da Operação Compliance Zero que estava trancada no Supremo Tribunal Federal sob a relatoria do ministro André Mendonça, trouxe à tona o que pode ser o maior escândalo de financiamento político e lavagem de dinheiro da história recente do Brasil.\n\n\n\nA imprensa já havia noticiado, em fragmentos, as fraudes bilionárias do Banco Master, comandado por Daniel Vorcaro, e a megaoperação da Polícia Federal contra o PCC (Operação Carbono Oculto), que revelou como a facção criminosa lavava dinheiro através de fintechs e fundos de investimento.\n\n\n\nO que faltava era amarrar as pontas. E os documentos sigilosos do STF, aos quais O Cafezinho teve acesso na íntegra, trazem a prova documental que faltava: a máquina de lavar do PCC, a gestora da família Vorcaro e o financiamento da propaganda bolsonarista são peças da mes",
+          "txt_check": "{\"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"TÍTULO viola EMU-2: usa dois-pontos e sigla não consagrada (PCC), agente abstrato (“dinheiro”) e ambiguidade; requer troca.\", \"DIVERGENCIA: título e texto afirmam financiamento com “dinheiro do PCC”; as evidências atuais indicam investigação de elo/repasses, não confirmação do uso de dinheiro do PCC (https://www.msn.com/pt-br/noticias/brasil/dark-horse-filme-de-bolsonaro-entra-na-mira-da-pf-por-elo-com-master-e-lavagem-de-dinheiro-do-pcc/ar-AA25sko0; https://www.msn.com/pt-br/dinheiro/geral/dark-horse-financiadora-usada-por-vorcaro-para-filme-liderou-repasses-a-empresa-investigada-por-lavar-dinheiro-do-pcc/ar-AA27O2wF).\", \"DATA_DO_FATO: faltam datas claras da quebra de sigilo e dos atos investigados; explicar por que é notícia hoje.\", \"OLHO truncado no final (“…do Br”); corrigir para frase completa.\", \"SUGESTAO_TITULO: Polícia Federal apura elo de Dark Horse com o Primeiro Comando da Capital\", \"CATEGORIA_SUGERIDA:\"], \"sugestao_titulo\": \"Polícia Federal apura elo de Dark Horse com o Primeiro Comando da Capital\\nCATEGORIA_SUGERIDA:\", \"categoria_sugerida\": \"\", \"sha\": \"29f155c05d095701e460b838c22434503eb87088\", \"ts\": \"11/09/2026 03:21\", \"ts_iso\": \"2026-09-11T06:21:17.398223+00:00\"}, \"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**INCERTO — \\\"Petição 15.556\\\" como \\\"investigação-mãe da Operação Compliance Zero\\\" sob relatoria de André Mendonça:** as evidências desta busca não mencionam a Petição 15.556, nem a Operação Compliance Zero, nem a relatoria de Mendonça sobre esse inquérito. Não confirmo nem nego — não coberto pelas evidências desta busca.\", \"**INCERTO — \\\"Operação Carbono Oculto\\\" da PF contra o PCC:** as evidências citam \\\"lavagem de dinheiro do PCC\\\" ligada ao filme Dark Horse, mas não nomeiam a operação como \\\"Carbono Oculto\\\". Não coberto pelas evidências desta busca.\", \"**INCERTO — repasse de \\\"US$ 24 milhões (cerca de R$ 134 milhões)\\\" negociado por Flávio Bolsonaro com Daniel Vorcaro:** nenhuma das evidências traz esse valor nem essa negociação direta. CIFRA não confirmada pelas fontes desta busca — não pode ir para título/afirmação sem fonte que a sustente.\", \"**INCERTO — visita presencial de Flávio Bolsonaro a Daniel Vorcaro \\\"no final de 2025, enquanto este cumpria prisão domiciliar\\\":** não coberto pelas evidências desta busca.\", \"**INCERTO — \\\"e-Doc. 330 da Petição 15.556\\\" e \\\"linhas 1667 a 1695 do documento\\\" com notícia-crime:** referências documentais específicas não verificáveis pelas evidências desta busca.\", \"**INCERTO — afastamento do Diretor-Geral da PF por André Mendonça sob acusação de \\\"arapongagem\\\":** não coberto pelas evidências desta busca.\"], \"fontes\": [\"https://www.msn.com/pt-br/noticias/brasil/dark-horse-filme-de-bolsonaro-entra-na-mira-da-pf-por-elo-com-master-e-lavagem-de-dinheiro-do-pcc/ar-AA25sko0\", \"https://www.msn.com/pt-br/dinheiro/geral/dark-horse-financiadora-usada-por-vorcaro-para-filme-liderou-repasses-a-empresa-investigada-por-lavar-dinheiro-do-pcc/ar-AA27O2wF\"], \"sha\": \"0568cb2801c4276e508baea4f75bc46726be5b5e\", \"ts\": \"11/09/2026 03:05\", \"ts_iso\": \"2026-09-11T06:05:50.065161+00:00\"}}"
+        },
+        {
+          "id": 269892,
+          "status": "future",
+          "modified_gmt": "2026-09-11 06:24:15",
+          "author": "5470",
+          "title": "Defesa de Cilia Flores pede prisão domiciliar por problemas cardíacos",
+          "first_paragraph": "A defesa da primeira-dama venezuelana Cilia Flores pediu na quarta-feira (9) que a Justiça dos Estados Unidos substitua sua detenção em Nova York por prisão domiciliar. Aos 69 anos, ela perdeu mais de 11 quilos e enfrenta arritmias, dores no peito e dificuldade para respirar, de acordo com a petição apresentada pelos advogados.\nFlores está no Centro Metropolitano de Detenção de Brooklyn desde que forças norte-americanas a capturaram com o presidente Nicolás Maduro durante a operação militar realizada em Caracas em 3 de janeiro. O pedido ainda não foi julgado.\nQuadro cardíaco\nOs advogados relatam que Flores sofreu em 29 de julho um episódio de forte pressão no peito durante cerca de 30 minutos. Ela toma quatro medicamentos por dia e carrega nitroglicerina, usada segundo a defesa para prevenir um infarto.\nA permanência no presídio eleva o risco de agravamento do quadro c",
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / dia da semana incoerente:** o texto diz que a defesa pediu prisão domiciliar \\\"nesta quarta-feira (9)\\\". Hoje é sexta-feira, 11/09/2026 — o dia 9 de setembro de 2026 foi uma QUARTA-feira (coerente), mas as evidências datam o pedido em 10/09/2026 (quinta), com as matérias publicadas na quinta-feira 10/09 (Metrópoles 11:25 GMT e SBT News 17:00 GMT). Ou seja: o pedido foi noticiado em 10/09, não em 09/09. Corrigir a data/dia da semana ou confirmar a data exata da petição antes de publicar. Fontes: https://www.metropoles.com/mundo/esposa-de-maduro-pede-prisao-domiciliar-devido-a-problemas-cardiacos | https://sbtnews.sbt.com.br/noticia/mundo/esposa-de-maduro-pede-prisao-domiciliar-nos-eua\", \"**INCERTO — captura de Maduro e Cilia Flores em Caracas em 3 de janeiro:** as evidências desta busca NÃO cobrem a operação militar de 3 de janeiro nem a captura do casal. Não confirmo nem nego. Registro como NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA (aviso de cobertura), não como fato incorreto.\", \"**INCERTO — números clínicos (perda de 11 kg, 69 anos, episódio de 29 de julho, quatro medicamentos, nitroglicerina):** as evidências apenas mencionam genericamente \\\"problemas cardíacos\\\" (Metrópoles/SBT), sem os números específicos da petição. Não confirmo nem nego — INCERTO.\", \"**INCERTO — datas processuais (audiência em 17/11/2026; julgamento em 1º/06/2027; juiz Alvin Hellerstein):** não cobertas pelas evidências desta busca. INCERTO.\", \"**INCERTO — empresa Guidepost e detalhes da proposta (vigilância 24h, tornozeleira, retenção de passaporte):** as evidências citam \\\"vigilância armada\\\" (SBT), mas não nomeiam a Guidepost nem os demais detalhes. INCERTO.\", \"**INCERTO — pedido de arquivamento por imunidade soberana:** as evidências cobrem pedido de arquivamento por tráfico de drogas (RedeTV, 03/09/2026), mas não o fundamento de imunidade soberana do chefe de Estado. INCERTO.\"], \"fontes\": [\"https://www.metropoles.com/mundo/esposa-de-maduro-pede-prisao-domiciliar-devido-a-problemas-cardiacos\", \"https://sbtnews.sbt.com.br/noticia/mundo/esposa-de-maduro-pede-prisao-domiciliar-nos-eua\", \"https://www.metropoles.com/mundo/esposa-de-maduro-pede-prisao-domiciliar-devido-a-problemas-cardiacos\", \"https://sbtnews.sbt.com.br/noticia/mundo/esposa-de-maduro-pede-prisao-domiciliar-nos-eua\"], \"sha\": \"4ad1a817746cd6a3d2116e0dd5fdec0df2b69760\", \"ts\": \"11/09/2026 03:05\", \"ts_iso\": \"2026-09-11T06:05:18.936568+00:00\"}, \"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA: não há lastro nas evidências fornecidas para a captura de Nicolás Maduro e Cilia Flores por forças dos EUA em 3 de janeiro, a custódia atual de Flores em Nova York nem para o pedido de prisão domiciliar feito em 9/9.\", \"SUGESTAO_TITULO: Advogados da primeira-dama da Venezuela pedem prisão domiciliar em Nova York\"], \"sugestao_titulo\": \"Advogados da primeira-dama da Venezuela pedem prisão domiciliar em Nova York\", \"categoria_sugerida\": \"\", \"sha\": \"735b988fbdb8e3b615afb6b3c4b1b78856ea3b57\", \"ts\": \"11/09/2026 03:22\", \"ts_iso\": \"2026-09-11T06:22:02.137803+00:00\"}, \"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260911-004\", \"fontes\": \"Peticao da defesa de Cilia Flores apresentada a Justica dos EUA na quarta-feira (9), pedindo substituicao da detencao no Centro Metropolitano de Detencao de Brooklyn por prisao domiciliar: 69 anos, perda de mais de 11 quilos, arritmias, dores no peito e dificuldade para respirar, com episodio de pressao no peito em 29 de julho e quatro medicamentos diarios, segundo os advogados; o pedido AINDA NAO FOI JULGADO e a peca diz isso; ela esta presa desde a operacao militar americana em Caracas de 3 de janeiro, quando foi capturada junto com Nicolas Maduro. CRITERIO: o fato e de quarta, mas processo pendente nao envelhece como evento — ontem barrei um jogo de futebol com dois dias pela razao inversa; marca temporal ajustada de «nesta quarta-feira» para «na quarta-feira (9)»\", \"ts\": \"11/09/2026 03:23\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}}"
+        }
+      ]
+    }
+  },
+  "public": [
+    {
+      "post_id": 269491,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/osasco-e-bauru-disputam-o-mundial-de-clubes-de-volei-em-sao-paulo-em-dezembro/",
+      "at": "2026-09-11T03:48:30.770352-03:00",
+      "sha256_html": "516de4d48d0fda9928709466af85fb1426a335cecee02af72580b9cd19c1ddc7",
+      "paragraphs": 17,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 2,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269498,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/nova-real-time-big-data-e-banho-de-agua-fria-na-campanha-de-ciro-gomes/",
+      "at": "2026-09-11T03:48:30.815299-03:00",
+      "sha256_html": "4ce2d4544f26e57c9d7a528279c04f335c01e793a81144b199e7bd7293ecd793",
+      "paragraphs": 21,
+      "all_paragraphs_present": false,
+      "missing": [
+        "A gestão de Elmano ostenta uma aprovação de nada menos que 58%. Quando detalhada, 40% a consideram \"Ótima ou Boa\" e 35% a classificam como \"Regular\", enquanto apenas 23% a rejeitam como \"Ruim ou Péssima\".",
+        "Esse gráfico de aprovação é fundamental porque desmonta a tese principal da campanha de Ciro Gomes. A retórica tucana insiste que o Ceará estaria \"acabando\" e que existiria um enorme sentimento de mudança no estado.",
+        "É inegável que toda eleição traz consigo algum desejo natural de renovação por parte dos eleitores. No entanto, um governo que ostenta quase 60% de aprovação não configura o ambiente de \"mudança total\" que a oposição tenta vender."
+      ],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 2,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269482,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/inter-entra-na-argentina-com-conta-em-dolar-em-meio-a-austeridade-de-milei/",
+      "at": "2026-09-11T03:48:30.858777-03:00",
+      "sha256_html": "f2f476d264d2ce2de5035f1e7d0d6e90cce5678b02f81f0efea8de1980d1515a",
+      "paragraphs": 11,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "checks": {
+    "rounds": 1,
+    "writes_wordpress": 0,
+    "editorial_proposals": 14,
+    "future_correct": true
+  }
+}

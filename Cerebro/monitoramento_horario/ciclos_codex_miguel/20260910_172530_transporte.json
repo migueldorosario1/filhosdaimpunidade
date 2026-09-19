@@ -1,0 +1,42 @@
+{
+  "ref": "XM-20260910-033",
+  "commit": "d77d805ce76761da3132bf0cc9bbf4946f2d1baa",
+  "started_at": "2026-09-10T17:25:49.878324-03:00",
+  "attempts": [
+    {
+      "remote": "origin",
+      "at": "2026-09-10T17:25:59.998882-03:00",
+      "rc": 0,
+      "stdout": "",
+      "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   cacbc0e59..d77d805ce  d77d805ce76761da3132bf0cc9bbf4946f2d1baa -> main\n",
+      "readback": {
+        "rc": 0,
+        "stdout": "d77d805ce76761da3132bf0cc9bbf4946f2d1baa\trefs/heads/main\n",
+        "stderr": ""
+      },
+      "exact_commit_confirmed": true
+    },
+    {
+      "remote": "nyc",
+      "at": "2026-09-10T17:26:11.145892-03:00",
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\nTo nyc:/home/ubuntu/cerebro-miguel-mirror.git\n ! [rejected]            d77d805ce76761da3132bf0cc9bbf4946f2d1baa -> main (non-fast-forward)\nerror: failed to push some refs to 'nyc:/home/ubuntu/cerebro-miguel-mirror.git'\nhint: Updates were rejected because a pushed branch tip is behind its remote\nhint: counterpart. Check out this branch and integrate the remote changes\nhint: (e.g. 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+      "readback": {
+        "rc": 0,
+        "stdout": "a5ca4f801ed04115aea75aebeca4da032f159f81\trefs/heads/main\n",
+        "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n"
+      },
+      "exact_commit_confirmed": false
+    }
+  ],
+  "recorded_at": "2026-09-10T17:26:41.559750-03:00",
+  "status": "C1_CONFIRMADA_C2_NON_FF",
+  "verification_path": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260910-033/verification.json",
+  "git_concurrency": {
+    "ref": "XM-20260910-033",
+    "commit": "d77d805ce76761da3132bf0cc9bbf4946f2d1baa",
+    "git_status": "## HEAD (sem ramo)\n",
+    "rebase_dirs": []
+  }
+}

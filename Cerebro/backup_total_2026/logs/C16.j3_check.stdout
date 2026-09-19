@@ -1,0 +1,13 @@
+[2026-08-08 17:55:11] INICIANDO: C16 verificação final (rclone check em todos os destinos da FASE 1)
+[2026-08-08 17:55:11] CHECK: Cerebro
+[2026-08-08 17:56:24] INICIANDO: C16 verificação final (rclone check --one-way em todos os destinos da FASE 1)
+[2026-08-08 17:56:24] CHECK: Cerebro
+[2026-08-08 17:56:35] FIM CHECK Cerebro (rc=1)
+[2026-08-08 17:56:35] CHECK: ProjetoCafezinho
+[2026-08-08 18:21:35] FIM CHECK ProjetoCafezinho (rc=124)
+[2026-08-08 18:21:35] CHECK: novoLivro
+[2026-08-08 18:21:55] FIM CHECK novoLivro (rc=0)
+[2026-08-08 18:21:55] CHECK: Outros
+[2026-08-08 18:26:55] FIM CHECK Outros (rc=1)
+[2026-08-08 18:26:55] TERMINADO: verificação final (fail=1)
+EXIT=1

@@ -1,0 +1,127 @@
+{
+  "ref": "XM-20260905-004",
+  "captured_brt": "2026-09-05T02:49:38.564138-03:00",
+  "mode": "HOLD_GIT_DIVERGENTE",
+  "anchor_preserved": "a4a9378b08e4da1171bab240052c0b22fe61fc74",
+  "head": "06770be8b1224f147095246b23c718168b9b79a1",
+  "origin": "9e3d07adae9c265d52fda17f14302886470ff2bf",
+  "divergence": "6\t19",
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit": 128,
+    "error": "Not possible to fast-forward, aborting."
+  },
+  "sources": {
+    "MEMORY.md": {
+      "canonical_bytes": 7251,
+      "canonical_sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "git_sha256": "cef849d035d9b753cd2cc64fbeb58e918516a42a9d751d1a33bf96a2b94771e8",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "MONITORAMENTO_DE_TRABALHO.md": {
+      "canonical_bytes": 229618,
+      "canonical_sha256": "3dced43eccd821d9ef90ddc98edf16637b4eed4d163d0166b062b4efff59ccd7",
+      "git_sha256": "e72a67f83e4ff5fe47f8f6638221a16f7c0977f8a73ed79ee0df6ab07f025773",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": false
+    },
+    "Foruns/inbox_trindade/codex.md": {
+      "canonical_bytes": 11403,
+      "canonical_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "git_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/inbox_trindade/zcode.md": {
+      "canonical_bytes": 48590,
+      "canonical_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "git_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/inbox_trindade/claude.md": {
+      "canonical_bytes": 35767,
+      "canonical_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "git_sha256": "f6bee9f2c1cd23178c62e556dd4670c0f52d6543b1526318689f5df9e657b741",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/inbox_trindade/grok.md": {
+      "canonical_bytes": 18816,
+      "canonical_sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "git_sha256": "04247842020ae48e987ed1e925e7ae343b51f5f53100bcd842bd66dc0f98fac4",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/canal_trindade.md": {
+      "canonical_bytes": 34534,
+      "canonical_sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "git_sha256": "92a8b90ef2c61cc757780f297b2228a37fd9435043b567e0b50d65c007dd01e2",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md": {
+      "canonical_bytes": 652,
+      "canonical_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "git_sha256": "9272612856e4a92973997603d23a42009edff647e8127292113a24b949ab78ac",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md": {
+      "canonical_bytes": 29441,
+      "canonical_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "git_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_laura_completa/de_laura.md": {
+      "canonical_bytes": 2100827,
+      "canonical_sha256": "5af488047520c82fbca23ed027c8a026085dbf89f9c234b3b8d89eb3e81fce90",
+      "git_sha256": "5af488047520c82fbca23ed027c8a026085dbf89f9c234b3b8d89eb3e81fce90",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_laura_completa/de_dell.md": {
+      "canonical_bytes": 5804113,
+      "canonical_sha256": "1af0b4a8c2744b1e76bed582dadf9bd4a02161fd0623186b9e6925edb38f6399",
+      "git_sha256": "1af0b4a8c2744b1e76bed582dadf9bd4a02161fd0623186b9e6925edb38f6399",
+      "changed_since_previous_capture": true,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "canonical_bytes": 77115,
+      "canonical_sha256": "cb8dd8c295bac1407970c1d1c8c02b8f517a480d83c61a75bb4cdf21af314249",
+      "git_sha256": "cb8dd8c295bac1407970c1d1c8c02b8f517a480d83c61a75bb4cdf21af314249",
+      "changed_since_previous_capture": true,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "canonical_bytes": 93622,
+      "canonical_sha256": "3bf7d21802b02e1c43317250897b3a650c4cb836df305cc15757bdeba14c0990",
+      "git_sha256": "3bf7d21802b02e1c43317250897b3a650c4cb836df305cc15757bdeba14c0990",
+      "changed_since_previous_capture": true,
+      "equal_to_consumed_anchor": true
+    },
+    "Foruns/ponte_laura_completa/loop_ativo.json": {
+      "canonical_bytes": 154,
+      "canonical_sha256": "d54bb0fc1c15cd375cbd3dabf348bbaf25afb740a7c14f193d7089498ddc0b14",
+      "git_sha256": "078929ac8f50c321b1ab21bfc825520bf22a0a611b6d3208cda6bc8454154284",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": false
+    },
+    "Foruns/ponte_laura_completa/estado/ponte_health.md": {
+      "canonical_bytes": 12668,
+      "canonical_sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+      "git_sha256": "8de8ecc759c4a90352005f631bfeeff96dda3206b60c9b104d8d68efae1424df",
+      "changed_since_previous_capture": false,
+      "equal_to_consumed_anchor": true
+    }
+  },
+  "transport": "Sem push; entrega externa não confirmada.",
+  "visual": [
+    0,
+    0,
+    0
+  ]
+}

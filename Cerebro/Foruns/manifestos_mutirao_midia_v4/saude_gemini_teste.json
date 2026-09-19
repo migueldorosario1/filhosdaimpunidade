@@ -1,0 +1,21 @@
+{
+  "teste": "saude_rota_gemini",
+  "timestamp_utc": "2026-08-09T20:20:59Z",
+  "modelo": "gemini-2.5-flash",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+  "provider": "gemini (google)",
+  "imagem_teste": "pixel vermelho 1x1 (não dos 412; mínimo possível)",
+  "tem_chave": "sim",
+  "chave_hash_sha8": "62a36df0",
+  "status_http": 200,
+  "latencia_ms": 1910,
+  "resposta": "Am",
+  "recibo_usage": {
+    "tokens_prompt": 271,
+    "tokens_candidates": 1,
+    "tokens_total": 277,
+    "model_version": "gemini-2.5-flash"
+  },
+  "erro": "",
+  "saude": "OK"
+}

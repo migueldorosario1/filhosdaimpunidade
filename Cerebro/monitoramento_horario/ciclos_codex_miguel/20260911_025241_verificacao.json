@@ -1,0 +1,981 @@
+{
+  "wp_verify.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:48:20.585346-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:48:19-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269758,
+          "hash": "0d4330da7664b8955f893b5b032eca0cac3facd23e51db8b4781270bb6c9f064",
+          "status": "publish",
+          "title": "Governo unifica biometria em aeroportos, portos e hidrovias",
+          "author": "5470",
+          "date": "2026-09-11 02:30:00",
+          "slug": "governo-unifica-biometria-em-aeroportos-portos-e-hidrovias",
+          "fm": 269761,
+          "categories": [
+            43,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269519,
+          "hash": "4520d697f4d963f25a129f4913a0d6df3c97e417728ed3638b8196e07946dd54",
+          "status": "publish",
+          "title": "Enquanto Lula e Flávio travam empate, um nome quase desconhecido dá o salto da rodada",
+          "author": "5780",
+          "date": "2026-09-08 21:16:39",
+          "slug": "enquanto-lula-e-flavio-travam-empate-um-nome-quase-desconhecido-da-o-salto-da-rodada",
+          "fm": 269522,
+          "categories": [
+            22
+          ],
+          "edit_lock": "1788915031:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269511,
+          "hash": "48c53cad883bccc7e404347802c76bc7673e90a9977744fda6590bb47dee2021",
+          "status": "publish",
+          "title": "Imposto Seletivo pode encarecer aeronaves em 6,5%, diz Embraer",
+          "author": "5470",
+          "date": "2026-09-08 21:15:00",
+          "slug": "imposto-seletivo-pode-encarecer-aeronaves-em-65-diz-embraer",
+          "fm": 269512,
+          "categories": [
+            43,
+            22,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "editorial_readback.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:50:00.139331-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:50:00-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269758,
+          "hash": "0d4330da7664b8955f893b5b032eca0cac3facd23e51db8b4781270bb6c9f064",
+          "status": "publish",
+          "title": "Governo unifica biometria em aeroportos, portos e hidrovias",
+          "author": "5470",
+          "date": "2026-09-11 02:30:00",
+          "slug": "governo-unifica-biometria-em-aeroportos-portos-e-hidrovias",
+          "fm": 269761,
+          "categories": [
+            43,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269519,
+          "hash": "4520d697f4d963f25a129f4913a0d6df3c97e417728ed3638b8196e07946dd54",
+          "status": "publish",
+          "title": "Enquanto Lula e Flávio travam empate, um nome quase desconhecido dá o salto da rodada",
+          "author": "5780",
+          "date": "2026-09-08 21:16:39",
+          "slug": "enquanto-lula-e-flavio-travam-empate-um-nome-quase-desconhecido-da-o-salto-da-rodada",
+          "fm": 269522,
+          "categories": [
+            22
+          ],
+          "edit_lock": "1788915031:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269511,
+          "hash": "48c53cad883bccc7e404347802c76bc7673e90a9977744fda6590bb47dee2021",
+          "status": "publish",
+          "title": "Imposto Seletivo pode encarecer aeronaves em 6,5%, diz Embraer",
+          "author": "5470",
+          "date": "2026-09-08 21:15:00",
+          "slug": "imposto-seletivo-pode-encarecer-aeronaves-em-65-diz-embraer",
+          "fm": 269512,
+          "categories": [
+            43,
+            22,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "public_verified.json": [
+    {
+      "post_id": 269758,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/11/governo-unifica-biometria-em-aeroportos-portos-e-hidrovias/",
+      "at": "2026-09-11T02:48:53.104881-03:00",
+      "sha256_html": "2ece7cc4f589544190ca4cd7d818a85992b9c73c2905f0e1984faf040deeb90e",
+      "paragraphs": 15,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269519,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/enquanto-lula-e-flavio-travam-empate-um-nome-quase-desconhecido-da-o-salto-da-rodada/",
+      "at": "2026-09-11T02:48:53.148958-03:00",
+      "sha256_html": "a1af60b54227f1a59524056075c86e9dfef2e8ed3812c9776a51e86be0658d6d",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 8,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269511,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/imposto-seletivo-pode-encarecer-aeronaves-em-65-diz-embraer/",
+      "at": "2026-09-11T02:48:53.194720-03:00",
+      "sha256_html": "f998a0936466b9df5f2a74d97b8957a1c60e6141f92d77ccc68d70983d1f0c57",
+      "paragraphs": 14,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "china_verify.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:48:17.644733-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:48:17.528309-03:00",
+      "state": {
+        "path": "/home/ubuntu/ds_nuvem_chefe/estado_casa.md",
+        "mtime": "2026-09-04T01:36:19.845217-03:00",
+        "sha256": "263050638eb119d035edc7a2d423e83a53e593b6842b71e1508d3245a1e648d5",
+        "first_lines": [
+          "# ESTADO DA CASA — memória do plantão do Telegram",
+          "> Mantida pelo DS Nuvem Chefe (DS-N Chefe) na ronda 30/30 (quando o estado mudar, atualize aqui com a data — é o que o plantão usa pra conversar com o Miguel). Semente inicial: ZM/ZCode GLM-5.3 · 20260830 16:30 BRT.",
+          "",
+          "## Como o sistema funciona (resumo pra conversa)",
+          "- Casa = O Cafezinho (ocafezinho.com, jornal) + ecossistema MOKA (Moka Reader mokareader.com, Moka Vídeo, Moka Writer mokawriter.vercel.app) + Global South News (GSN, em inglês).",
+          "- Cérebro = repositório central de memória e decisões (fóruns, memórias, ponte). Ponte = canal oficial dos agentes.",
+          "- Quem é quem: DS Nuvem Chefe (DS-N Chefe) (agente completo na Tencent, ronda :00/:30, acesso ao Cérebro e à ponte) · ZCode Miguel (ZM, GLM-5.3, no Dell — hoje chefe da obra MOKA) · DS Laura · Claude Laura (gate editorial) · AGY (motor de publicação) · Codex Miguel · DSC (consolidador). Grok Miguel e Grok Laura estão sem crédito.",
+          "- O plantão (eu, quem responde rápido no Telegram) NÃO é o chefe: só conversa leve e informação rápida; pergunta séria vai pro chefe, que responde na ronda.",
+          ""
+        ]
+      },
+      "consumer": {
+        "sha256": "fce91bb8cefa355d721b593e1cb6c1ebc1f87ba76287d458316e04f2f0822fc9",
+        "lines": [
+          {
+            "line": 19,
+            "text": "ESTADO = f'{BASE}/estado_casa.md'        # estado da casa, mantido pelo DS-N Chefe (ronda)"
+          },
+          {
+            "line": 96,
+            "text": "        + '## Estado da casa (mantido pelo DS Nuvem Chefe (DS-N Chefe) na ronda):\\n' + _ler(ESTADO, 2500)"
+          }
+        ]
+      },
+      "p11_code_sha256": "276452aff61b41a2a7f670d3d7a0a836536eac7eae23f9c30b6fd89039900f38",
+      "p11_state": {
+        "ultimo_saldo": 13.59,
+        "falhas": 0,
+        "aviso_ts": 1789070401.4936125,
+        "critico_ts": 1789075803.3206332
+      },
+      "p11_log_cursor_before": 2511,
+      "p11_log_delta": "11/09/2026 02:30:03 verde: saldo 14.01\n11/09/2026 02:45:02 verde: saldo 13.59\n",
+      "p11_log_size": 2589,
+      "p11_flag_exists": false
+    }
+  },
+  "factory_delta.json": {
+    "rc": 0,
+    "at": "2026-09-11T02:48:15.396410-03:00",
+    "stderr": "Warning: Permanently added '198.199.121.136' (ECDSA) to the list of known hosts.\n",
+    "data": {
+      "at": "2026-09-11T05:48:15.354373+00:00",
+      "cursor_before": "20260911_0152.json",
+      "cycles": [
+        {
+          "path": "/root/v4_labs/dados/v41_ciclo/20260911_0235.json",
+          "sha256": "19e416f039737d7283541fb47fc3e70327aa1f8e378af3fe634c8d5df8846f9b",
+          "data": {
+            "ts": "20260911_0235",
+            "vertical": "economia",
+            "status": "sem_tese_ancorada_nao_escreve",
+            "post_id": null,
+            "curadoria_estado": "juiz_qualidade:Declaração forte de Lula sobre mandatos no STF e sigilo do c"
+          }
+        }
+      ]
+    }
+  },
+  "incident208.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:48:17.127867-03:00",
+      "access": [
+        {
+          "path": "/var/log/nginx/access.log",
+          "bytes": 30535,
+          "sha256": "197881d07d0db472884518563b2393145d463772a6332eed704da750f7a9f388",
+          "matched_hour": 6,
+          "status_0200_0204": {},
+          "total_0200_0204": 0,
+          "by_minute": {
+            "02:21": {
+              "requests": 2
+            },
+            "02:35": {
+              "requests": 1
+            },
+            "02:42": {
+              "requests": 2
+            },
+            "02:43": {
+              "requests": 1
+            }
+          },
+          "errors_since_0205": {},
+          "last_5xx": [],
+          "public_paths": {}
+        },
+        {
+          "path": "/var/log/nginx/access.ocafezinho.com.log",
+          "bytes": 10431703,
+          "sha256": "75179e61e1eb1da14068e8eaba74bca3b90e126bb45f13aca3689cc66763a4a1",
+          "matched_hour": 7089,
+          "status_0200_0204": {},
+          "total_0200_0204": 0,
+          "by_minute": {
+            "02:19": {
+              "requests": 242
+            },
+            "02:20": {
+              "requests": 197
+            },
+            "02:21": {
+              "requests": 182
+            },
+            "02:22": {
+              "requests": 247
+            },
+            "02:23": {
+              "requests": 226
+            },
+            "02:24": {
+              "requests": 228
+            },
+            "02:25": {
+              "requests": 222,
+              "5xx": 8
+            },
+            "02:26": {
+              "requests": 200
+            },
+            "02:27": {
+              "requests": 206
+            },
+            "02:28": {
+              "requests": 217
+            },
+            "02:29": {
+              "requests": 288
+            },
+            "02:30": {
+              "requests": 220
+            },
+            "02:31": {
+              "requests": 266
+            },
+            "02:32": {
+              "requests": 281
+            },
+            "02:33": {
+              "requests": 274
+            },
+            "02:34": {
+              "requests": 283
+            },
+            "02:35": {
+              "requests": 257
+            },
+            "02:36": {
+              "requests": 214
+            },
+            "02:37": {
+              "requests": 217
+            },
+            "02:38": {
+              "requests": 223
+            },
+            "02:39": {
+              "requests": 272
+            },
+            "02:40": {
+              "requests": 331
+            },
+            "02:41": {
+              "requests": 279
+            },
+            "02:42": {
+              "requests": 225
+            },
+            "02:43": {
+              "requests": 236
+            },
+            "02:44": {
+              "requests": 236
+            },
+            "02:45": {
+              "requests": 379,
+              "5xx": 19
+            },
+            "02:46": {
+              "requests": 191
+            },
+            "02:47": {
+              "requests": 171
+            },
+            "02:48": {
+              "requests": 79
+            }
+          },
+          "errors_since_0205": {
+            "500": 27
+          },
+          "last_5xx": [
+            "11/Sep/2026:02:45:23 -0300"
+          ],
+          "public_paths": {}
+        }
+      ],
+      "error_log": {
+        "bytes": 672475,
+        "sha256": "60aea27f64ce43237f579aaaff54cc3a79cb8f407aa58aa9c9170a3a34e16d9a",
+        "redis_exceptions_hour": 31,
+        "times": {
+          "2026/09/11 02:25": 11,
+          "2026/09/11 02:45": 20
+        },
+        "examples": [
+          {
+            "time": "2026/09/11 02:25:25",
+            "object_cache_1936": false,
+            "handle_exception": false,
+            "wp_die": false,
+            "show_error_and_die": false
+          },
+          {
+            "time": "2026/09/11 02:25:25",
+            "object_cache_1936": false,
+            "handle_exception": false,
+            "wp_die": false,
+            "show_error_and_die": false
+          },
+          {
+            "time": "2026/09/11 02:25:26",
+            "object_cache_1936": false,
+            "handle_exception": false,
+            "wp_die": false,
+            "show_error_and_die": false
+          }
+        ]
+      },
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "selected_lines": [
+          {
+            "line": 2920,
+            "text": ""
+          },
+          {
+            "line": 2921,
+            "text": "error_log( $exception ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log"
+          },
+          {
+            "line": 2922,
+            "text": ""
+          },
+          {
+            "line": 2923,
+            "text": "if ( function_exists( 'do_action' ) ) {"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          },
+          {
+            "line": 2939,
+            "text": "}"
+          },
+          {
+            "line": 2940,
+            "text": ""
+          },
+          {
+            "line": 2941,
+            "text": "/**"
+          },
+          {
+            "line": 2942,
+            "text": "* Show Redis connection error screen, or load custom `/redis-error.php`."
+          },
+          {
+            "line": 2943,
+            "text": "*"
+          },
+          {
+            "line": 2944,
+            "text": "* @return void"
+          },
+          {
+            "line": 2945,
+            "text": "*/"
+          },
+          {
+            "line": 2980,
+            "text": ") . \"</p>\\n\";"
+          },
+          {
+            "line": 2981,
+            "text": ""
+          },
+          {
+            "line": 2982,
+            "text": "$message .= \"<ul>\\n\";"
+          },
+          {
+            "line": 2983,
+            "text": "$message .= '<li>' . __( 'Is the correct Redis host and port set?', 'redis-cache' ) . \"</li>\\n\";"
+          },
+          {
+            "line": 2984,
+            "text": "$message .= '<li>' . __( 'Is the Redis server running?', 'redis-cache' ) . \"</li>\\n\";"
+          },
+          {
+            "line": 2985,
+            "text": "$message .= \"</ul>\\n\";"
+          },
+          {
+            "line": 2986,
+            "text": ""
+          },
+          {
+            "line": 2987,
+            "text": "$message .= '<p>' . sprintf("
+          },
+          {
+            "line": 2988,
+            "text": "// translators: %s = Link to installation instructions."
+          },
+          {
+            "line": 2989,
+            "text": "__( 'If you need help, please read the <a href=\"%s\">installation instructions</a>.', 'redis-cache' ),"
+          },
+          {
+            "line": 2990,
+            "text": "'https://github.com/rhubarbgroup/redis-cache/blob/develop/INSTALL.md'"
+          },
+          {
+            "line": 2991,
+            "text": ") . \"</p>\\n\";"
+          },
+          {
+            "line": 2992,
+            "text": "}"
+          },
+          {
+            "line": 2993,
+            "text": ""
+          },
+          {
+            "line": 2994,
+            "text": "$message .= '<p>' . sprintf("
+          },
+          {
+            "line": 2995,
+            "text": "// translators: %1$s = Formatted object-cache.php file name, %2$s = Formatted wp-content directory name."
+          },
+          {
+            "line": 2996,
+            "text": "__( 'To disable Redis, delete the %1$s file in the %2$s directory.', 'redis-cache' ),"
+          },
+          {
+            "line": 2997,
+            "text": "'<code>object-cache.php</code>',"
+          },
+          {
+            "line": 2998,
+            "text": "'<code>/wp-content/</code>'"
+          },
+          {
+            "line": 2999,
+            "text": ") . \"</p>\\n\";"
+          },
+          {
+            "line": 3000,
+            "text": ""
+          },
+          {
+            "line": 3001,
+            "text": "// phpcs:disable WordPress.Security.EscapeOutput"
+          },
+          {
+            "line": 3002,
+            "text": "wp_die( $message );"
+          },
+          {
+            "line": 3003,
+            "text": "// phpcs:enable"
+          },
+          {
+            "line": 3004,
+            "text": "}"
+          },
+          {
+            "line": 3005,
+            "text": ""
+          },
+          {
+            "line": 3006,
+            "text": "/**"
+          },
+          {
+            "line": 3007,
+            "text": "* Builds a clean connection array out of redis clusters array."
+          },
+          {
+            "line": 3008,
+            "text": "*"
+          }
+        ]
+      }
+    }
+  },
+  "targeted.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T02:51:17-03:00",
+      "posts": [
+        {
+          "id": 269858,
+          "status": "future",
+          "modified_gmt": "2026-09-11 05:20:30",
+          "author": "5470",
+          "title": "Fachin pede levantamento parcial do sigilo no caso Master",
+          "first_paragraph": "O presidente do Supremo Tribunal Federal (STF), Edson Fachin, pediu nesta quinta-feira (10) ao ministro André Mendonça o levantamento do sigilo dos procedimentos ligados às investigações do caso Banco Master que tramitam na Corte. Relator do processo, Mendonça decidirá quais informações poderão ser divulgadas.\nFachin propôs manter sob reserva apenas os dados cuja publicação possa comprometer diligências necessárias a futuras operações.\nO pedido não retira automaticamente o sigilo nem alcança informações protegidas por razões investigativas.\nA iniciativa antecede a sessão extraordinária convocada pelo presidente do STF para terça-feira, 15 de setembro. O plenário examinará um relatório da Polícia Federal (PF) e discutirá como deverá ser conduzida uma eventual investigação envolvendo o ministro Alexandre de Moraes.\nDecisão passa ao plenário\nO relatório r",
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / dia da semana:** o rascunho diz que Fachin pediu o levantamento do sigilo \\\"nesta quinta-feira (10)\\\". As evidências confirmam o pedido em 10/09/2026 (quinta-feira), mas hoje é sexta-feira, 11/09/2026 — o texto narra fato de ONTEM com \\\"nesta quinta-feira\\\", o que é aceitável, porém o título/abertura não declara o gancho de atualidade (a sessão de 15/09 é o desdobramento). Ajustar para \\\"quinta-feira (10)\\\" ou \\\"ontem (10)\\\" e explicitar o gancho (sessão extraordinária de terça, 15/09). Fonte: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/ | https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/\", \"**INCERTO — sessão extraordinária do plenário para \\\"terça-feira, 15 de setembro\\\":** as evidências desta busca NÃO confirmam a data da sessão extraordinária convocada por Fachin nem que o plenário examinará \\\"relatório da PF\\\" sobre Moraes nessa data. As fontes falam de crise no STF, suspensão de decisões rivais e prazo de sexta-feira, mas não cobrem a convocação do plenário para 15/09. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — confirmar com fonte primária (STF) ou reportagem específica antes de publicar.\", \"**INCERTO — \\\"relatório da PF a pedido de Mendonça\\\" com mensagens entre Moraes e Daniel Vorcaro:** as evidências mencionam o escândalo Banco Master, tensões entre ministros e vazamentos policiais, mas NÃO confirmam que exista relatório da PF registrando mensagens trocadas entre Alexandre de Moraes e o ex-banqueiro Daniel Vorcaro, nem que tenha sido elaborado a pedido de Mendonça. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — verificar antes de publicar.\", \"**INCERTO — \\\"Petição 15.556\\\":** o rascunho não cita o número, mas a fonte da Tribuna do Norte cita \\\"Petição 15.556\\\" como objeto do pedido de Fachin. Se o post for mencionar o número do processo, usar essa referência; caso contrário, manter genérico como está. Fonte: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/\", \"FONTES: https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/ | https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/ | https://valorinternational.globo.com/politics/news/2026/09/10/top-court-chief-takes-over-fake-news-probe-to-contain-crisis.ghtml | https://www.msn.com/en-us/news/other/brazils-top-judge-suspends-justices-rulings-in-supreme-court-power-struggle/ar-AA2bUISk\"], \"fontes\": [\"https://tribunadonorte.com.br/politica/fachin-pede-retirada-de-sigilo-do-caso-master-no-stf/\", \"https://gazetabrasil.com.br/brasil/2026/09/10/fachin-pede-que-mendonca-derrube-o-sigilo-de-todo-o-caso-master-e-envie-autos-aos-ministros/\", \"https://valorinternational.globo.com/politics/news/2026/09/10/top-court-chief-takes-over-fake-news-probe-to-contain-crisis.ghtml\", \"https://www.msn.com/en-us/news/other/brazils-top-judge-suspends-justices-rulings-in-supreme-court-power-struggle/ar-AA2bUISk\"], \"sha\": \"e5f14c5f01aeced3252dee4316d77b95f7025876\", \"ts\": \"11/09/2026 01:05\", \"ts_iso\": \"2026-09-11T04:05:40.570968+00:00\"}, \"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [], \"sugestao_titulo\": \"Fachin pede levantamento do sigilo no caso Banco Master\\nCATEGORIA_SUGERIDA: cat 43, cat 2403\", \"categoria_sugerida\": \"cat 43, cat 2403\", \"sha\": \"41f247f32e1f4db73088c18d46405f364c07be5b\", \"ts\": \"11/09/2026 02:20\", \"ts_iso\": \"2026-09-11T05:20:29.083199+00:00\"}, \"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260911-002\", \"fontes\": \"Pedido de Edson Fachin, presidente do STF, ao ministro Andre Mendonca em 10/09/2026, para levantamento PARCIAL do sigilo nos procedimentos do caso Banco Master que tramitam na Corte — mantendo sob reserva apenas o que possa comprometer diligencias futuras; o pedido nao retira o sigilo automaticamente (a decisao e do relator) e antecede a sessao extraordinaria de terca, 15/09, que examinara relatorio da PF; a casa vem cobrindo a serie (269650 de 09/09 e 268973 de 04/09), e esta e continuacao, nao repeticao; CORRIGI um defeito de formatacao da fabrica: o corpo abria com <p><p> duplicado\", \"ts\": \"11/09/2026 01:22\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}}"
+        },
+        {
+          "id": 269868,
+          "status": "draft",
+          "modified_gmt": "2026-09-11 05:37:51",
+          "author": "5470",
+          "title": "Exclusivo: Dinheiro do PCC ajudou a financiar Dark Horse",
+          "first_paragraph": "A quebra de sigilo da Petição 15.556, a investigação-mãe da Operação Compliance Zero que estava trancada no Supremo Tribunal Federal sob a relatoria do ministro André Mendonça, trouxe à tona o que pode ser o maior escândalo de financiamento político e lavagem de dinheiro da história recente do Brasil.\n\n\n\nA imprensa já havia noticiado, em fragmentos, as fraudes bilionárias do Banco Master, comandado por Daniel Vorcaro, e a megaoperação da Polícia Federal contra o PCC (Operação Carbono Oculto), que revelou como a facção criminosa lavava dinheiro através de fintechs e fundos de investimento.\n\n\n\nO que faltava era amarrar as pontas. E os documentos sigilosos do STF, aos quais O Cafezinho teve acesso na íntegra, trazem a prova documental que faltava: a máquina de lavar do PCC, a gestora da família Vorcaro e o financiamento da propaganda bolsonarista são peças da mes",
+          "txt_check": "{\"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [\"TÍTULO viola EMU-2: uso de “Exclusivo:” com dois-pontos, verbo com complemento coloquial (“escapar da CPI”) e identificação incompleta do agente/atingido\", \"OLHO incoerente/truncado: começa uma frase e corta no meio, além de não dialogar diretamente com o fato do título\", \"SUGESTAO_TITULO: Mendonça dispensa Ibaneis Rocha de depor na CPI do Crime Organizado com habeas corpus\", \"CATEGORIA_SUGERIDA:\"], \"sugestao_titulo\": \"Mendonça dispensa Ibaneis Rocha de depor na CPI do Crime Organizado com habeas corpus\\nCATEGORIA_SUGERIDA:\", \"categoria_sugerida\": \"\", \"sha\": \"c57dd556d6a9bfbb777a0e56cd1347795bdac892\", \"ts\": \"11/09/2026 02:23\", \"ts_iso\": \"2026-09-11T05:23:11.346610+00:00\"}, \"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**Cargo de Ibaneis Rocha desatualizado/incorreto:** o rascunho o trata como \\\"governador do Distrito Federal\\\" (presente), mas as fontes de abril/2026 o chamam de **ex-governador** do DF. Ex.: O Globo (\\\"liberou o ex-governador do Distrito Federal Ibaneis Rocha\\\"), CartaCapital (\\\"O ex-governador do Distrito Federal Ibaneis Rocha (MDB)\\\"), R7, IstoÉ e Correio Braziliense — todos usam \\\"ex-governador\\\". Fonte: https://oglobo.globo.com/politica/noticia/2026/04/03/mendonca-libera-ibaneis-de-comparecer-a-cpi-do-crime-organizado.ghtml | https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/\", \"**DATA_DO_FATO:** o núcleo da matéria (decisão de Mendonça que torna facultativo o comparecimento de Ibaneis à CPI) é de **2-3 de abril de 2026** (O Tempo: \\\"decidiu nesta quinta-feira (2/4)\\\"; O Globo/R7/IstoÉ: 03/04/2026), e a falta de Ibaneis à CPI ocorreu em **7 de abril de 2026** (CartaCapital). O rascunho narra o episódio como se fosse revelação \\\"desta semana\\\" (11/09/2026), sem gancho atual declarado (nova decisão, desdobramento, quebra de sigilo recente). Fato verdadeiro de ~5 meses atrás apresentado como notícia de hoje = pauta velha. Fonte: https://www.otempo.com.br/politica/judiciario/2026/4/3/mendonca-libera-ibaneis-e-torna-opcional-presenca-em-cpi | https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/\", \"**INCERTO — quebra de sigilo por Edson Fachin / Petição 15.556 / Operação Compliance Zero / afastamento de Andrei Rodrigues:** as evidências desta busca cobrem apenas a decisão de Mendonça sobre Ibaneis (abril/2026) e não confirmam nem negam: (a) que Fachin, como presidente do STF, determinou a quebra do sigilo da Petição 15.556; (b) a existência/nome da \\\"Operação Compliance Zero\\\"; (c) o afastamento do Diretor-Geral da PF Andrei Rodrigues por Mendonça; (d) as investigações sobre ACM Neto e Antonio Rueda. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA — não aprovo fato duvidoso. (Obs.: o Correio Braziliense confirma apenas que Mendonça é \\\"relator do caso Master no STF\\\" e que concedeu habeas corpus a Ibaneis.)\", \"**INCERTO — citação textual atribuída a Mendonça:** o trecho entre aspas (\\\"restando configurada... afasto a obrigatoriedade de comparecimento...\\\") não pôde ser conferido contra as fontes desta busca; as evidências confirmam o *teor* da decisão (tornar facultativo o comparecimento), mas não o texto literal citado. NÃO COBERTO PELAS EVIDÊNCIAS DESTA BUSCA.\", \"FONTES: https://oglobo.globo.com/politica/noticia/2026/04/03/mendonca-libera-ibaneis-de-comparecer-a-cpi-do-crime-organizado.ghtml | https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/ | https://noticias.r7.com/brasilia/mendonca-desobriga-ibaneis-rocha-de-comparecer-a-cpi-do-crime-organizado-03042026/ | https://www.otempo.com.br/politica/judiciario/2026/4/3/mendonca\"], \"fontes\": [\"https://oglobo.globo.com/politica/noticia/2026/04/03/mendonca-libera-ibaneis-de-comparecer-a-cpi-do-crime-organizado.ghtml\", \"https://www.cartacapital.com.br/politica/autorizado-por-mendonca-ibaneis-falta-a-convocacao-da-cpmi-do-crime-organizado/\", \"https://noticias.r7.com/brasilia/mendonca-desobriga-ibaneis-rocha-de-comparecer-a-cpi-do-crime-organizado-03042026/\", \"https://www.otempo.com.br/politica/judiciario/2026/4/3/mendonca\"], \"sha\": \"36695ead469508c41fc232f68f6f7c3c2c47f13c\", \"ts\": \"11/09/2026 02:05\", \"ts_iso\": \"2026-09-11T05:05:52.494684+00:00\"}}"
+        },
+        {
+          "id": 269881,
+          "status": "draft",
+          "modified_gmt": "2026-09-11 05:05:23",
+          "author": "5470",
+          "title": "Documentário mostra câmera como ferramenta de autoria indígena",
+          "first_paragraph": "O CineSesc, na capital paulista, exibiu na quinta-feira (10), às 20h, o documentário Arquivo Vivo, dirigido por Vincent Carelli e Ana Carvalho. Integrante do festival Amor ao Cinema, o filme percorre a formação do Vídeo nas Aldeias, projeto que reúne mais de 70 obras realizadas com a participação direta de povos originários.\nO acervo nasceu de uma mudança concreta no lugar ocupado pelos indígenas no cinema. Em vez de permanecerem apenas diante das lentes de pesquisadores e documentaristas, integrantes das comunidades passaram a operar câmeras, escolher enquadramentos e construir narrativas sobre a própria vida.\nA primeira viagem\nFranco-brasileiro, Carelli conheceu ainda adolescente as imagens dos Mẽbengôkre Xikrin, também conhecidos como Kayapó Xikrin, apresentadas em seu colégio por um missionário dominicano que visitava comunidades no Pará. Aos 16 anos, pediu para ",
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / exibição não confirmada:** o rascunho afirma que o CineSesc exibiu *Arquivo Vivo* \\\"na quinta-feira (10), às 20h\\\", mas nenhuma das evidências desta busca cobre essa sessão nem o festival \\\"Amor ao Cinema\\\". Não há fonte que confirme a data, o horário ou o local da exibição — fato central da abertura, sem cobertura declarada. (NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA)\", \"**INCERTO — \\\"mais de 70 obras\\\" do Vídeo nas Aldeias:** a cifra não é confirmada por nenhuma das fontes desta busca. Sem fonte que a sustente, a cifra não pode ir ao corpo como fato (regra CIFRA).\", \"**INCERTO — biografia de Carelli (nascimento na França, USP, formação de indigenista em Brasília, trabalho na Funai nos anos 1970, fundação do CTI, parceria com Andrea Tonacci no projeto Inter Povos, trabalho como repórter fotográfico em *IstoÉ*, *Repórter Três* e *Movimento*, e no Projeto Povos Indígenas no Brasil/CEDI):** nenhuma das evidências desta busca cobre esses pontos. Não há como confirmar nem negar — registrado como INCERTO, não como incorreto.\", \"**INCERTO — fundação do Vídeo nas Aldeias em 1986 por Carelli e Virgínia Valadão:** sem cobertura nas evidências desta busca.\", \"**INCERTO — citações atribuídas a Carelli** (\\\"A sensação de ter adentrado em outro momento da humanidade...\\\", \\\"Para mim, foi uma experiência definitiva...\\\", \\\"A questão da apropriação da imagem tem várias dimensões...\\\"): não localizadas nas fontes desta busca; atribuição não verificável aqui.\", \"FONTES: https://www.correiobraziliense.com.br/diversao-e-arte/2026/09/7497886-documentario-que-relembra-o-programa-da-radio-nacional-estreia-nos-cinemas.html | https://oglobo.globo.com/rio/noticia/2026/09/10/documentario-sobre-cruz-da-primeira-missa-no-brasil-estreia-no-globoplay-filme-tera-sessao-no-rio.ghtml\"], \"fontes\": [\"https://www.correiobraziliense.com.br/diversao-e-arte/2026/09/7497886-documentario-que-relembra-o-programa-da-radio-nacional-estreia-nos-cinemas.html\", \"https://oglobo.globo.com/rio/noticia/2026/09/10/documentario-sobre-cruz-da-primeira-missa-no-brasil-estreia-no-globoplay-filme-tera-sessao-no-rio.ghtml\"], \"sha\": \"d813ebcf2f4209432e3c1638ac6fc5d961101389\", \"ts\": \"11/09/2026 02:05\", \"ts_iso\": \"2026-09-11T05:05:22.635637+00:00\"}}"
+        }
+      ]
+    }
+  },
+  "remote_integrity.json": [
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+      "baseline_remote": "9ddad681382377fc440796586b0e8c9c0098e281",
+      "remote": "ea3858a198ae24cc3b4231db3a86ad63cd816040",
+      "removed_nonblank": 0
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+      "baseline_remote": "9ddad681382377fc440796586b0e8c9c0098e281",
+      "remote": "ea3858a198ae24cc3b4231db3a86ad63cd816040",
+      "removed_nonblank": 0
+    },
+    {
+      "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "baseline_remote": "9ddad681382377fc440796586b0e8c9c0098e281",
+      "remote": "ea3858a198ae24cc3b4231db3a86ad63cd816040",
+      "removed_nonblank": 0
+    }
+  ],
+  "integrity.json": {
+    "at": "2026-09-11T02:48:20.589070-03:00",
+    "head": "683eeb8785855aabae8ffe91492590ecab4b1d94",
+    "baseline_commit": "7e8a2ba572333a2f7cb1f93a08a132c93a88368e",
+    "bridge_audit": [
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "removed_nonblank": 0,
+        "sha256": "eb3f6c84481eb26c62d860e97ec9201e0ba357c7a321f2f6d02ed441ff8080a3",
+        "xm039_present": false
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+        "removed_nonblank": 0,
+        "sha256": "b9999a9d3e997de999a82d2bd51baef1e7f0a572fc02b70922c818250b341d76",
+        "xm039_present": false
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "removed_nonblank": 0,
+        "sha256": "5c7d159ade387cb2c59d2ab25d6c7ce4a23d7ea49f756f4afa53feff52f34050",
+        "xm039_present": false
+      }
+    ],
+    "active_hooks": []
+  },
+  "incident_window": {
+    "from": "2026-09-11T02:19:07-03:00",
+    "to": "2026-09-11T02:48:17.127867-03:00",
+    "http500": 27,
+    "by_minute": {
+      "02:25": 8,
+      "02:45": 19
+    },
+    "last_5xx": "2026-09-11T02:45:23-03:00",
+    "redis_exception_records": 31,
+    "meaning": "Requisições e registros de log, não usuários únicos. Campos hour no script reutilizado estão limitados ao filtro from declarado."
+  }
+}

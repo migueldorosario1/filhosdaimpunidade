@@ -1,0 +1,806 @@
+{
+  "incident208.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T04:48:00.747978-03:00",
+      "since": "2026-09-11T04:17:57.218393-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "2224da318d87ad7192d91f1d6d21ede1ea4171b31167285bc03c1274c91995ed",
+          "requests": 7,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "b355eb16f9f6e7039b86d0b1be9950c7c7de3c9acfc543a9b678a6975162954e",
+          "requests": 6575,
+          "errors": {
+            "500": 22
+          },
+          "by_minute": {
+            "04:25": 22
+          },
+          "last_5xx": "2026-09-11T04:25:29-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "ad9518271ad6386d00f0f10a62b2747b031e3719657c4e66976ad1ed8b2a681e",
+        "total": 25,
+        "by_minute": {
+          "04:25": 25
+        }
+      },
+      "redis_info": {
+        "uptime_in_seconds": "4581",
+        "used_memory": "483377464",
+        "used_memory_peak": "1019700616",
+        "expired_keys": "136",
+        "evicted_keys": "0",
+        "db0": "keys=349738,expires=58,avg_ttl=457705711"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "causal_check.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T04:50:02.876789-03:00",
+      "responses": [
+        {
+          "time": "11/Sep/2026:04:25:23 -0300",
+          "status": 500,
+          "body_bytes_sent": 376
+        },
+        {
+          "time": "11/Sep/2026:04:25:23 -0300",
+          "status": 500,
+          "body_bytes_sent": 2657
+        },
+        {
+          "time": "11/Sep/2026:04:25:23 -0300",
+          "status": 500,
+          "body_bytes_sent": 117264
+        },
+        {
+          "time": "11/Sep/2026:04:25:23 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:24 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:25 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:25 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:25 -0300",
+          "status": 500,
+          "body_bytes_sent": 245
+        },
+        {
+          "time": "11/Sep/2026:04:25:25 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:26 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:26 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:26 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:26 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:27 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:27 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:27 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:27 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:28 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:29 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:29 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:29 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        },
+        {
+          "time": "11/Sep/2026:04:25:29 -0300",
+          "status": 500,
+          "body_bytes_sent": 2605
+        }
+      ],
+      "access_sha256": "0501ab05b870d3f8c4da0a063cce25f41a8e31701d02ec73a6fc0d6e9c6f64b5",
+      "save_policy": {
+        "rc": 0,
+        "value": [
+          "save",
+          "900 1 300 10 60 10000"
+        ]
+      },
+      "redis_log_sha256": "936318f87d908fb1fefc6ae25dadfc94b6f13c366b3a43003b75c4f42da446cf",
+      "save_0425": [
+        "673:M 11 Sep 2026 04:25:04.038 * 10000 changes in 60 seconds. Saving...",
+        "673:M 11 Sep 2026 04:25:04.063 * Background saving started by pid 14492",
+        "14492:C 11 Sep 2026 04:25:37.058 * DB saved on disk",
+        "14492:C 11 Sep 2026 04:25:37.082 * RDB: 413 MB of memory used by copy-on-write",
+        "673:M 11 Sep 2026 04:25:37.341 * Background saving terminated with success"
+      ]
+    }
+  },
+  "factory_verified.json": {
+    "cycles": [
+      {
+        "path": "/root/v4_labs/dados/v41_ciclo/20260911_0435.json",
+        "sha256": "1f7057887193cd90fb3c12a6d6c8240fa97891a9ba0eb9665f020f637e159c60",
+        "data": {
+          "ts": "20260911_0435",
+          "vertical": "economia",
+          "status": "rascunho_v41_criado",
+          "post_id": 269908,
+          "curadoria_estado": "tese_dinamica_aprovada"
+        }
+      }
+    ],
+    "prompt9": [
+      {
+        "path": "/root/v4_labs/dados/v41_ciclo/20260910_1145.json",
+        "sha256": "f689d5d208d26841af65965ad243efb98206255eb521671418ffc231d70a21a3",
+        "item_key": "a2712c5fe8d6ae55",
+        "pauta_sha256": "76ef82ea6f316ddc579e5932831971f036f2685f0144e40949f0bc2d5d819ea8",
+        "judge": {
+          "notas": {
+            "clareza": 7.0,
+            "interesse_br": 4.0,
+            "importancia_global": 4.0,
+            "importancia_economia": 3.0,
+            "audiencia": 3.0,
+            "encaixe_vertical": 2.0,
+            "linha_casa": 4.0
+          },
+          "total": 3.74,
+          "aprova": false,
+          "motivo": "Ensaio conceitual sobre 'meat proxy' sem fato, nome ou consequência concreta para o leitor brasileiro, e fora da vertica",
+          "modelo": "deepseek:deepseek-chat"
+        },
+        "status": "sem_tese_ancorada_nao_escreve"
+      },
+      {
+        "path": "/root/v4_labs/dados/v41_ciclo/20260910_1945.json",
+        "sha256": "1a55c8573c531deb44b02dafbe2f8575a0ae087056e2e8d83cd8652f78a8a788",
+        "item_key": "a2712c5fe8d6ae55",
+        "pauta_sha256": "76ef82ea6f316ddc579e5932831971f036f2685f0144e40949f0bc2d5d819ea8",
+        "judge": {
+          "notas": {
+            "clareza": 9.0,
+            "interesse_br": 6.0,
+            "importancia_global": 7.0,
+            "importancia_economia": 8.0,
+            "audiencia": 5.0,
+            "encaixe_vertical": 2.0,
+            "linha_casa": 7.0
+          },
+          "total": 5.92,
+          "aprova": false,
+          "motivo": "Pauta de IA com peso conceitual e ético, mas ciência não é a vertical adequada — é digital/geopolítica/tecnologia com vi",
+          "modelo": "qwen:qwen-plus"
+        },
+        "status": "sem_tese_ancorada_nao_escreve"
+      },
+      {
+        "path": "/root/v4_labs/dados/v41_ciclo/20260911_0345.json",
+        "sha256": "07583f1bcf42bfc8d32b802f1089f804cc6e0504bbbf15b414ac4e3c0d3fadd6",
+        "item_key": "a2712c5fe8d6ae55",
+        "pauta_sha256": "76ef82ea6f316ddc579e5932831971f036f2685f0144e40949f0bc2d5d819ea8",
+        "judge": {
+          "notas": {
+            "clareza": 7.0,
+            "interesse_br": 4.0,
+            "importancia_global": 4.0,
+            "importancia_economia": 3.0,
+            "audiencia": 3.0,
+            "encaixe_vertical": 2.0,
+            "linha_casa": 4.0
+          },
+          "total": 3.74,
+          "aprova": false,
+          "motivo": "Coluna de opinião sobre conceito estrangeiro de 'meat proxy' sem fato, dado ou gancho brasileiro concreto, fora da verti",
+          "modelo": "deepseek:deepseek-chat"
+        },
+        "status": "sem_tese_ancorada_nao_escreve"
+      }
+    ]
+  },
+  "editorial_readback.json": {
+    "rc": 0,
+    "at": "2026-09-11T04:48:39.932087-03:00",
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T04:48:39-03:00",
+      "ativo": "1",
+      "modo": "standby_contrato",
+      "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+      "future": [
+        {
+          "id": 269892,
+          "date": "2026-09-11 17:15:00",
+          "fm": 269898,
+          "events": 1,
+          "event_timestamps": [
+            1789157700
+          ],
+          "expected_utc": 1789157700,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269858,
+          "date": "2026-09-11 16:00:00",
+          "fm": 269873,
+          "events": 1,
+          "event_timestamps": [
+            1789153200
+          ],
+          "expected_utc": 1789153200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269846,
+          "date": "2026-09-11 14:30:00",
+          "fm": 269855,
+          "events": 1,
+          "event_timestamps": [
+            1789147800
+          ],
+          "expected_utc": 1789147800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269813,
+          "date": "2026-09-11 13:00:00",
+          "fm": 269842,
+          "events": 1,
+          "event_timestamps": [
+            1789142400
+          ],
+          "expected_utc": 1789142400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269811,
+          "date": "2026-09-11 11:30:00",
+          "fm": 269812,
+          "events": 1,
+          "event_timestamps": [
+            1789137000
+          ],
+          "expected_utc": 1789137000,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269801,
+          "date": "2026-09-11 10:00:00",
+          "fm": 269803,
+          "events": 1,
+          "event_timestamps": [
+            1789131600
+          ],
+          "expected_utc": 1789131600,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269792,
+          "date": "2026-09-11 08:30:00",
+          "fm": 269796,
+          "events": 1,
+          "event_timestamps": [
+            1789126200
+          ],
+          "expected_utc": 1789126200,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269770,
+          "date": "2026-09-11 07:00:00",
+          "fm": 269774,
+          "events": 1,
+          "event_timestamps": [
+            1789120800
+          ],
+          "expected_utc": 1789120800,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        },
+        {
+          "id": 269719,
+          "date": "2026-09-11 05:30:00",
+          "fm": 269762,
+          "events": 1,
+          "event_timestamps": [
+            1789115400
+          ],
+          "expected_utc": 1789115400,
+          "delta_seconds": [
+            0
+          ],
+          "late_20m": false
+        }
+      ],
+      "posts": [
+        {
+          "id": 269449,
+          "hash": "cfdc520e4504431004c2c7d39baa6aa1e93700fe60f50cf63765afc1c6bf47c0",
+          "status": "publish",
+          "title": "Recusa da família impede 45% das doações de órgãos no Brasil",
+          "author": "5470",
+          "date": "2026-09-08 14:30:00",
+          "slug": "recusa-da-familia-impede-45-das-doacoes-de-orgaos-no-brasil",
+          "fm": 269452,
+          "categories": [
+            2403,
+            258
+          ],
+          "edit_lock": "",
+          "protection": ""
+        },
+        {
+          "id": 269463,
+          "hash": "d0f147253b3e717423f6e19e408d6577eac13d8459642a9b360aea6e3f777a73",
+          "status": "publish",
+          "title": "Mendonça ganha Fux e Nunes Marques e abre maioria no STF para afastar chefe da PF",
+          "author": "5780",
+          "date": "2026-09-08 14:03:54",
+          "slug": "mendonca-ganha-fux-e-nunes-marques-e-abre-maioria-no-stf-para-afastar-chefe-da-pf",
+          "fm": 268923,
+          "categories": [
+            2403
+          ],
+          "edit_lock": "1788889823:5735",
+          "protection": "post_publicado_por_humano"
+        },
+        {
+          "id": 269438,
+          "hash": "7114ab7dc35668f15ab24e993ca2da6eb4a994bcfa4092eca056aa832b20390c",
+          "status": "publish",
+          "title": "Vini Jr, Marquinhos e Gabriel Magalhães disputam a Bola de Ouro 2026",
+          "author": "5470",
+          "date": "2026-09-08 13:45:00",
+          "slug": "vini-jr-marquinhos-e-gabriel-magalhaes-disputam-a-bola-de-ouro-2026",
+          "fm": 269447,
+          "categories": [
+            1271,
+            20124,
+            2403
+          ],
+          "edit_lock": "",
+          "protection": ""
+        }
+      ]
+    }
+  },
+  "targeted.json": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T04:51:50-03:00",
+      "posts": [
+        {
+          "id": 269438,
+          "status": "publish",
+          "title": "Vini Jr, Marquinhos e Gabriel Magalhães disputam a Bola de Ouro 2026",
+          "author": "5470",
+          "excerpt": "Vini Jr e Raphinha estão entre os 30 indicados à Bola de Ouro 2026, que considera a temporada 2025/26 e a Copa do Mundo.",
+          "modified_gmt": "2026-09-08 15:20:31",
+          "fm": 269447,
+          "txt_check": "{\"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260908-016\", \"fontes\": \"Rascunho da fabrica CORRIGIDO NO GATE — ERRO FACTUAL GRAVE: o texto e o titulo diziam que RAPHINHA estava entre os 30 indicados a Bola de Ouro 2026 e que ele 'concorre pelo Barcelona'. CHECAGEM PROPRIA CL 11:5x na lista oficial (Metropoles, lista completa dos 30; conferida contra Exame, Olympics.com e Jovem Pan): Raphinha NAO esta na lista de 2026 — o rascunho aparentemente contaminou-se com a lista de 2025, em que ele figurava. Os brasileiros indicados sao TRES: Vinicius Junior (Real Madrid, 5a indicacao), Marquinhos (Paris Saint-Germain) e Gabriel Magalhaes (Arsenal). Corrigidos os quatro trechos afetados e o titulo; corrigido tambem 'outros 28 jogadores' para 'outros 27'. CONFERIDO e mantido o que estava certo: lista divulgada hoje 08/09; vencedor em 26/10 em Londres; 70a edicao fora de Paris em homenagem a Stanley Matthews, primeiro vencedor em 1956 pelo Blackpool; France Football em parceria com a UEFA desde 2024. DEDUPE MANUAL (10 dias, banco): nenhum post da casa sobre Bola de Ouro, Vini, Raphinha, Real Madrid ou Barcelona — zero repeticao. EMU-10: esporte estrangeiro COM brasileiro e futebol — passa duas vezes. NAO e listicle: e reportagem sobre os brasileiros na disputa, nao 'veja a lista'. Juiz 1: 7,51 (encaixe 10, interesse_br 8, audiencia 8), tese_dinamica_aprovada. Titulo sem sigla, 68 caracteres, nomeando os tres. Esporte + Futebol. Capa: Vinicius Junior, protagonista, foto de arquivo de abril/2025 (CC BY-SA 2.0), arquivo declarado na legenda. Frescor 10/10. Vaga 13:45\", \"ts\": \"08/09/2026 11:59\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}, \"r2\": {\"ok\": false, \"modelo\": \"gpt-5\", \"pendencias\": [\"OLHO incoerente com o texto: cita Raphinha em vez de Marquinhos e Gabriel Magalhães\", \"PENDENCIAS: - TÍTULO pouco específico; ação correta é a indicação entre os 30\", \"SUGESTAO_TITULO: Vini Jr, Marquinhos e Gabriel Magalhães são indicados à Bola de Ouro 2026\"], \"sugestao_titulo\": \"Vini Jr, Marquinhos e Gabriel Magalhães são indicados à Bola de Ouro 2026\", \"categoria_sugerida\": \"\", \"sha\": \"b9b5ec673cb765bd3aaaa753a50cc1d301e9baf3\", \"ts\": \"08/09/2026 12:20\", \"ts_iso\": \"2026-09-08T15:20:30.130839+00:00\"}}"
+        },
+        {
+          "id": 269908,
+          "status": "draft",
+          "title": "Brasil busca parceria plena com Asean para ampliar comércio asiático",
+          "author": "5470",
+          "excerpt": "Governo busca elevar sua relação com a Asean após cinco mercados do bloco comprarem US$ 68,5 bilhões do Brasil e gerarem superávit de US$ 36 bilhões entre 2023 e 2025.",
+          "modified_gmt": "2026-09-11 07:37:53",
+          "fm": 0,
+          "txt_check": ""
+        }
+      ]
+    }
+  },
+  "integrity.json": {
+    "head": "d1e711487dcc08df1de8aaf77fa378bc3c090936",
+    "from_head": "d7ca6f45d91abeaeaf5aab8ed4a711161aec902b",
+    "integrity": [
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "rc": 0,
+        "removed_nonblank": 1,
+        "delta_sha256": "de0f0f24ce563b617eaaccc611f97ddc84f67c4978deeafed9e4208def5a0c6c",
+        "removed_nonblank_content": 0,
+        "explanation": "Uma linha removida e reinserida idêntica (assinatura DS-Dell-009), apenas inclusão de newline EOF. Nenhuma perda textual."
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/de_laura.md",
+        "rc": 0,
+        "removed_nonblank": 0,
+        "delta_sha256": "9b0f21e79345eb998c5c581d47c7655b88362b01ded20a24cb7aac5bd071e74a"
+      },
+      {
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "rc": 0,
+        "removed_nonblank": 0,
+        "delta_sha256": "a1556873c6dee175a2db2e4bf5175297b6086423e54cad551f142f69e50465ad"
+      }
+    ],
+    "observed_delta": [
+      {
+        "i": 15,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_dell.md",
+        "chars": 132051
+      },
+      {
+        "i": 17,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/de_laura.md",
+        "chars": 56482
+      },
+      {
+        "i": 25,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/MONITORAMENTO_DE_TRABALHO.md",
+        "chars": 3274
+      },
+      {
+        "i": 31,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/claude_laura.md",
+        "chars": 3928
+      },
+      {
+        "i": 43,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/agy_laura.md",
+        "chars": 28361
+      },
+      {
+        "i": 45,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/astra.md",
+        "chars": 5824
+      },
+      {
+        "i": 47,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/ds_laura.md",
+        "chars": 10976
+      },
+      {
+        "i": 48,
+        "path": "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "chars": 5204
+      },
+      {
+        "i": 49,
+        "path": "/home/migueldorosario/Downloads/Antigravity Google/Cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+        "chars": 745
+      },
+      {
+        "i": 57,
+        "path": "cerebro/Foruns/ponte_laura_completa/estado/agy_laura.md",
+        "chars": 10649
+      },
+      {
+        "i": 60,
+        "path": "cerebro/Foruns/ponte_laura_completa/estado/claude_laura.md",
+        "chars": 4726
+      },
+      {
+        "i": 63,
+        "path": "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+        "chars": 4685
+      },
+      {
+        "i": 65,
+        "path": "cerebro/Foruns/ponte_laura_completa/estado/ds_laura.md",
+        "chars": 4607
+      },
+      {
+        "i": 75,
+        "path": "cerebro/Foruns/revisao/canal_dsn_revisores.md",
+        "chars": 0
+      },
+      {
+        "i": 77,
+        "path": "cerebro/CEREBRO_NODE_BUGS_ATIVOS.md",
+        "chars": 4112
+      }
+    ],
+    "pairs": [
+      {
+        "a": 14,
+        "b": 15,
+        "same": true
+      },
+      {
+        "a": 16,
+        "b": 17,
+        "same": true
+      },
+      {
+        "a": 10,
+        "b": 11,
+        "same": false
+      },
+      {
+        "a": 12,
+        "b": 13,
+        "same": false
+      },
+      {
+        "a": 22,
+        "b": 23,
+        "same": false
+      }
+    ],
+    "guard_exists": false,
+    "XM039_header_present": false,
+    "monitor_delta_since_previous_observation": "Dois blocos Astra reapareceram; sem nova remoção de linhas ZM no intervalo observado. As doze linhas ZM ausentes continuam pendentes."
+  },
+  "public_verified.json": [
+    {
+      "post_id": 269449,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/recusa-da-familia-impede-45-das-doacoes-de-orgaos-no-brasil/",
+      "at": "2026-09-11T04:48:42.049825-03:00",
+      "sha256_html": "acfd70939749dd7cddc67d3803574a158799fc6f8e923614c330606a48a814c2",
+      "paragraphs": 14,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269463,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/mendonca-ganha-fux-e-nunes-marques-e-abre-maioria-no-stf-para-afastar-chefe-da-pf/",
+      "at": "2026-09-11T04:48:42.092792-03:00",
+      "sha256_html": "ea2fa6c6f8b0fc5fe8d6d2abd41243afbc046ceda1ab8d7bd209c52506a756a0",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 35,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269438,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/vini-jr-marquinhos-e-gabriel-magalhaes-disputam-a-bola-de-ouro-2026/",
+      "at": "2026-09-11T04:48:42.136036-03:00",
+      "sha256_html": "c1736475d0aff9385c6adae17c63e56b5380d37f7b6fee18cf8f9da7aa3f1bb2",
+      "paragraphs": 8,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "technical_source": {
+    "url": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+    "scope": "RDB advantages/disadvantages and How it works: fork/child distinction; no causal proof of this incident."
+  },
+  "read_scope": "Resultados de consultas de leitura; nenhum comando de configuração, reserva ou alteração WordPress."
+}

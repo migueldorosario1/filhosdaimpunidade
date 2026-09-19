@@ -1,0 +1,57 @@
+{
+  "ref": "XM-20260910-006",
+  "timestamp_brt": "2026-09-10T02:53:44.189870-03:00",
+  "commit": "d63cbd46f5ec7fc5963b0fdba3fe910c539fa1a7",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_025336_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_025336_evidencias.json",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_025336_revisao_prompts.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_025336_blocos_removidos_original.txt",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_025336_fixture_hook.py"
+  ],
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_025336_ronda.md",
+  "evidence_sha256": "19fc0cdb05b13b196095f2d74a68ea26035b4a6b771a80a10046f3a14f0fc17b",
+  "push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   6206f342a..d63cbd46f  main -> main\n"
+  },
+  "origin_verification": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "d63cbd46f5ec7fc5963b0fdba3fe910c539fa1a7\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "nyc": {
+    "remote_main": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "remote_read_method": "git ls-remote nyc refs/heads/main, RC 0 nesta ronda",
+    "is_ancestor_rc": 1,
+    "action": "HOLD_NON_FF",
+    "push_attempted": false
+  },
+  "checks": {
+    "rounds": 1,
+    "append_only_prefix_verified": true,
+    "utf8_without_bom": true,
+    "selective_staging_verified": true,
+    "preexisting_untracked_preserved": true,
+    "synthetic_hook_cases": 6,
+    "append_only_violations_reproduced": 4
+  },
+  "closing_note": "Fecho documental da mesma ronda; não inicia outra. Transporte em commit seletivo próprio."
+}

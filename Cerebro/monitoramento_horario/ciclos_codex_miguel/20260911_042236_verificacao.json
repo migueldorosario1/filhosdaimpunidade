@@ -1,0 +1,566 @@
+{
+  "ref": "XM-20260911-009",
+  "recorded_at": "2026-09-11T04:22:36.305051-03:00",
+  "incident": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T04:17:57.218393-03:00",
+      "since": "2026-09-11T03:48:09.505192-03:00",
+      "access": [
+        {
+          "file": "/var/log/nginx/access.log",
+          "sha256": "9ef8e04eb49a9dd1602f3b453954b500bd54e4aa9fac51eb692a739e72f5124d",
+          "requests": 8,
+          "errors": {},
+          "by_minute": {},
+          "last_5xx": null
+        },
+        {
+          "file": "/var/log/nginx/access.ocafezinho.com.log",
+          "sha256": "7d15dabdd5018a91af26f117bcb7344b4d71f1187f787571a28769ca43ee6588",
+          "requests": 6351,
+          "errors": {
+            "504": 6
+          },
+          "by_minute": {
+            "04:01": 4,
+            "04:02": 2
+          },
+          "last_5xx": "2026-09-11T04:02:09-03:00"
+        }
+      ],
+      "redis_errors": {
+        "sha256": "a1754e88fd011c7afdb5797616830b3c9851473968ef72d6b0394203ef802cdc",
+        "total": 0,
+        "by_minute": {}
+      },
+      "redis_info": {
+        "uptime_in_seconds": "2777",
+        "used_memory": "974198184",
+        "used_memory_peak": "976714304",
+        "expired_keys": "72",
+        "evicted_keys": "0",
+        "db0": "keys=693399,expires=71,avg_ttl=50494979058"
+      },
+      "redis_info_rc": 0,
+      "dropin": {
+        "sha256": "713e9a12018e865f7daf71d84e6257b7756251560f04aac6cc6b5b15bf9d0b33",
+        "lines": [
+          {
+            "line": 253,
+            "text": "$fail_gracefully = defined( 'WP_REDIS_GRACEFUL' ) && WP_REDIS_GRACEFUL;"
+          },
+          {
+            "line": 620,
+            "text": "*/"
+          },
+          {
+            "line": 621,
+            "text": "protected function build_parameters() {"
+          },
+          {
+            "line": 622,
+            "text": "$parameters = ["
+          },
+          {
+            "line": 623,
+            "text": "'scheme' => 'tcp',"
+          },
+          {
+            "line": 624,
+            "text": "'host' => '127.0.0.1',"
+          },
+          {
+            "line": 625,
+            "text": "'port' => 6379,"
+          },
+          {
+            "line": 626,
+            "text": "'database' => 0,"
+          },
+          {
+            "line": 627,
+            "text": "'timeout' => 1,"
+          },
+          {
+            "line": 628,
+            "text": "'read_timeout' => 1,"
+          },
+          {
+            "line": 629,
+            "text": "'retry_interval' => null,"
+          },
+          {
+            "line": 630,
+            "text": "'persistent' => false,"
+          },
+          {
+            "line": 2924,
+            "text": "/**"
+          },
+          {
+            "line": 2925,
+            "text": "* Fires when an object cache related error occurs."
+          },
+          {
+            "line": 2926,
+            "text": "*"
+          },
+          {
+            "line": 2927,
+            "text": "* @since 1.5.0"
+          },
+          {
+            "line": 2928,
+            "text": "* @param \\Exception $exception The exception."
+          },
+          {
+            "line": 2929,
+            "text": "* @param string     $message   The exception message."
+          },
+          {
+            "line": 2930,
+            "text": "*/"
+          },
+          {
+            "line": 2931,
+            "text": "do_action( 'redis_object_cache_error', $exception, $exception->getMessage() );"
+          },
+          {
+            "line": 2932,
+            "text": "}"
+          },
+          {
+            "line": 2933,
+            "text": ""
+          },
+          {
+            "line": 2934,
+            "text": "if ( ! $this->fail_gracefully ) {"
+          },
+          {
+            "line": 2935,
+            "text": "$this->show_error_and_die( $exception );"
+          },
+          {
+            "line": 2936,
+            "text": "}"
+          },
+          {
+            "line": 2937,
+            "text": ""
+          },
+          {
+            "line": 2938,
+            "text": "$this->errors[] = $exception->getMessage();"
+          }
+        ]
+      },
+      "wp_config_defines": {
+        "WP_REDIS_GRACEFUL": false,
+        "WP_REDIS_TIMEOUT": false,
+        "WP_REDIS_READ_TIMEOUT": false
+      },
+      "redis_error_php_exists": false
+    }
+  },
+  "log_identity": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "since": "2026-09-11T03:48:09.505192-03:00",
+      "through": "2026-09-11T04:17:57.218393-03:00",
+      "config": [
+        {
+          "path": "/etc/nginx/nginx.conf",
+          "sha256": "7b85b7f783164a03e42176174c94145525cd19720e2df1a99c17d7b6ede2ff17",
+          "lines": [
+            {
+              "line": 18,
+              "text": "log_format  main  '$remote_addr - $remote_user [$time_local] \"$request\" '"
+            }
+          ]
+        },
+        {
+          "path": "/etc/nginx/sites-enabled/ocafezinho.com.conf",
+          "sha256": "faebdf53260b7120492f0e602592cc0f994d18111af9bbb9746fc4110ead6617",
+          "lines": [
+            {
+              "line": 1,
+              "text": "log_format contador_ipreal \"$http_cf_connecting_ip|$remote_addr|$time_iso8601|$request_method|$status|$host|$request_uri|$http_user_agent\";"
+            },
+            {
+              "line": 15,
+              "text": "access_log /var/log/nginx/access.ocafezinho.com.log;"
+            },
+            {
+              "line": 16,
+              "text": "access_log /var/log/nginx/access.ocafezinho.contador.log contador_ipreal;"
+            },
+            {
+              "line": 86,
+              "text": "access_log /var/log/nginx/access.ocafezinho.com.log;"
+            },
+            {
+              "line": 87,
+              "text": "access_log /var/log/nginx/access.ocafezinho.contador.log contador_ipreal;"
+            }
+          ]
+        },
+        {
+          "path": "/etc/nginx/sites-available/ocafezinho.com.conf",
+          "sha256": "fe8de12b80a074f9e489d72ed60e93bc5fddbf600073ad918381883be0281957",
+          "lines": [
+            {
+              "line": 1,
+              "text": "log_format contador_ipreal \"$http_cf_connecting_ip|$remote_addr|$time_iso8601|$request_method|$status|$host|$request_uri|$http_user_agent\";"
+            },
+            {
+              "line": 15,
+              "text": "access_log /var/log/nginx/access.ocafezinho.com.log;"
+            },
+            {
+              "line": 16,
+              "text": "access_log /var/log/nginx/access.ocafezinho.contador.log contador_ipreal;"
+            },
+            {
+              "line": 77,
+              "text": "access_log /var/log/nginx/access.ocafezinho.com.log;"
+            },
+            {
+              "line": 78,
+              "text": "access_log /var/log/nginx/access.ocafezinho.contador.log contador_ipreal;"
+            }
+          ]
+        }
+      ],
+      "main": {
+        "requests": 6353,
+        "distinct_remote_addr": 4,
+        "errors": [
+          {
+            "method": "POST",
+            "path": "/wp-json/wp-statistics/v2/hit",
+            "status": "504",
+            "count": 6
+          }
+        ],
+        "first_5xx": "2026-09-11T04:01:28-03:00",
+        "last_5xx": "2026-09-11T04:02:09-03:00"
+      },
+      "contador": {
+        "path": "/var/log/nginx/access.ocafezinho.contador.log",
+        "sha256": "9345cd1830520db62b0a318fb6dfac8ede87c829f49fe03829d06e28c5dfa46d",
+        "delimiter": "|",
+        "fields": [
+          "cf_connecting_ip",
+          "remote_addr",
+          "time_iso8601",
+          "method",
+          "status",
+          "host",
+          "uri",
+          "ua"
+        ],
+        "requests": 6353,
+        "distinct_nonempty_cf_connecting_ip": 1572,
+        "missing_cf_connecting_ip": 398,
+        "declared_bot_ua_requests": 2711,
+        "errors": {
+          "504": 6
+        },
+        "malformed_lines_whole_file": 0,
+        "caveat": "Cabeçalho e UA não autenticam pessoa nem humano; somente metadados recebidos. Universos de logs podem diferir."
+      }
+    }
+  },
+  "monitor_integrity": {
+    "removed_zcode_rows": 14,
+    "absent_anywhere": 14,
+    "backup": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-007/source_25",
+    "observed": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-009/source_25",
+    "old_sha": "31143bee453e9da48558781a8ca7a5a9053011203a7ff3508390f8a1e0d28200",
+    "new_sha": "12783c7daa83985d4b9b82e7b0028cfd2f95133f75d10dd1fde7f0804d82067e",
+    "claim": "Diferença entre snapshots; sem atribuição de ator, intenção ou conclusão operacional."
+  },
+  "wordpress_readback": {
+    "at": "2026-09-11T04:18:23-03:00",
+    "ativo": "1",
+    "modo": "standby_contrato",
+    "gate_sha256": "a7e1a2c6068d6e5b22c80caba2bc896553904dc478953e9de9b2eecdfcdb23b4",
+    "future": [
+      {
+        "id": 269892,
+        "date": "2026-09-11 17:15:00",
+        "fm": 269898,
+        "events": 1,
+        "event_timestamps": [
+          1789157700
+        ],
+        "expected_utc": 1789157700,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269858,
+        "date": "2026-09-11 16:00:00",
+        "fm": 269873,
+        "events": 1,
+        "event_timestamps": [
+          1789153200
+        ],
+        "expected_utc": 1789153200,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269846,
+        "date": "2026-09-11 14:30:00",
+        "fm": 269855,
+        "events": 1,
+        "event_timestamps": [
+          1789147800
+        ],
+        "expected_utc": 1789147800,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269813,
+        "date": "2026-09-11 13:00:00",
+        "fm": 269842,
+        "events": 1,
+        "event_timestamps": [
+          1789142400
+        ],
+        "expected_utc": 1789142400,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269811,
+        "date": "2026-09-11 11:30:00",
+        "fm": 269812,
+        "events": 1,
+        "event_timestamps": [
+          1789137000
+        ],
+        "expected_utc": 1789137000,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269801,
+        "date": "2026-09-11 10:00:00",
+        "fm": 269803,
+        "events": 1,
+        "event_timestamps": [
+          1789131600
+        ],
+        "expected_utc": 1789131600,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269792,
+        "date": "2026-09-11 08:30:00",
+        "fm": 269796,
+        "events": 1,
+        "event_timestamps": [
+          1789126200
+        ],
+        "expected_utc": 1789126200,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269770,
+        "date": "2026-09-11 07:00:00",
+        "fm": 269774,
+        "events": 1,
+        "event_timestamps": [
+          1789120800
+        ],
+        "expected_utc": 1789120800,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      },
+      {
+        "id": 269719,
+        "date": "2026-09-11 05:30:00",
+        "fm": 269762,
+        "events": 1,
+        "event_timestamps": [
+          1789115400
+        ],
+        "expected_utc": 1789115400,
+        "delta_seconds": [
+          0
+        ],
+        "late_20m": false
+      }
+    ],
+    "posts": [
+      {
+        "id": 269451,
+        "hash": "34e9f132bbd5bd611845802102bfbd9a671e7dbd323ca331feb2b9a4384089eb",
+        "status": "publish",
+        "title": "BTG/Nexus: Lula amplia vantagem na espontânea para oito pontos",
+        "author": "2018",
+        "date": "2026-09-08 17:14:09",
+        "slug": "btg-nexus-lula-amplia-vantagem-na-espontanea-para-oito-pontos",
+        "fm": 269459,
+        "categories": [
+          5088,
+          21141,
+          22
+        ],
+        "edit_lock": "1788903106:2018",
+        "protection": "post_publicado_por_humano"
+      },
+      {
+        "id": 269476,
+        "hash": "b551c7cfdf81c7ba1994ff76d68e262d3baaa83798a41b077c43f21e986191fc",
+        "status": "publish",
+        "title": "Brecha em licenças do Peru leva fauna amazônica a mercado de Bangkok",
+        "author": "5470",
+        "date": "2026-09-08 17:00:00",
+        "slug": "brecha-em-licencas-do-peru-leva-fauna-amazonica-a-mercado-de-bangkok",
+        "fm": 269478,
+        "categories": [
+          15,
+          582,
+          2403
+        ],
+        "edit_lock": "",
+        "protection": ""
+      },
+      {
+        "id": 269467,
+        "hash": "087cd1b14fd2f0ec813ff4a453d68300b7594ced4a43f54f8e56dc0ca35ce48d",
+        "status": "publish",
+        "title": "Cúpula da PF reage em bloco a Mendonça e coloca cargos à disposição após afastamento de Andrei",
+        "author": "5780",
+        "date": "2026-09-08 14:55:08",
+        "slug": "cupula-da-pf-reage-em-bloco-a-mendonca-e-coloca-cargos-a-disposicao-apos-afastamento-de-andrei",
+        "fm": 269468,
+        "categories": [
+          2403
+        ],
+        "edit_lock": "1788895663:5735",
+        "protection": "post_publicado_por_humano"
+      }
+    ]
+  },
+  "targeted_metadata": {
+    "rc": 0,
+    "stderr": "",
+    "data": {
+      "at": "2026-09-11T04:21:24-03:00",
+      "redis_constants": {
+        "WP_REDIS_GRACEFUL": null,
+        "WP_REDIS_TIMEOUT": null,
+        "WP_REDIS_READ_TIMEOUT": null
+      },
+      "posts": [
+        {
+          "id": 269892,
+          "status": "future",
+          "modified_gmt": "2026-09-11 07:20:33",
+          "author": "5470",
+          "title": "Defesa de Cilia Flores pede prisão domiciliar por problemas cardíacos",
+          "first_paragraph": "A defesa da primeira-dama venezuelana Cilia Flores pediu na quarta-feira (9) que a Justiça dos Estados Unidos substitua sua detenção em Nova York por prisão domiciliar. Aos 69 anos, ela perdeu mais de 11 quilos e enfrenta arritmias, dores no peito e dificuldade para respirar, de acordo com a petição apresentada pelos advogados.\nFlores está no Centro Metropolitano de Detenção de Brooklyn desde que forças norte-americanas a capturaram com o presidente Nicolás Maduro durante a operação militar realizada em Caracas em 3 de janeiro. O pedido ainda não foi julgado.\nQuadro cardíaco\nOs advogados relatam que Flores sofreu em 29 de julho um episódio de forte pressão no peito durante cerca de 30 minutos. Ela toma quatro medicamentos por dia e carrega nitroglicerina, usada segundo a defesa para prevenir um infarto.\nA permanência no presídio eleva o risco de agravamento do quadro c",
+          "txt_check": "{\"r1\": {\"ok\": false, \"modelo\": \"bing-rss+deepseek\", \"busca\": true, \"pendencias\": [\"**DATA_DO_FATO / dia da semana incoerente:** o texto diz que a defesa pediu prisão domiciliar \\\"nesta quarta-feira (9)\\\". Hoje é sexta-feira, 11/09/2026 — o dia 9 de setembro de 2026 foi uma QUARTA-feira (coerente), mas as evidências datam o pedido em 10/09/2026 (quinta), com as matérias publicadas na quinta-feira 10/09 (Metrópoles 11:25 GMT e SBT News 17:00 GMT). Ou seja: o pedido foi noticiado em 10/09, não em 09/09. Corrigir a data/dia da semana ou confirmar a data exata da petição antes de publicar. Fontes: https://www.metropoles.com/mundo/esposa-de-maduro-pede-prisao-domiciliar-devido-a-problemas-cardiacos | https://sbtnews.sbt.com.br/noticia/mundo/esposa-de-maduro-pede-prisao-domiciliar-nos-eua\", \"**INCERTO — captura de Maduro e Cilia Flores em Caracas em 3 de janeiro:** as evidências desta busca NÃO cobrem a operação militar de 3 de janeiro nem a captura do casal. Não confirmo nem nego. Registro como NAO COBERTO PELAS EVIDENCIAS DESTA BUSCA (aviso de cobertura), não como fato incorreto.\", \"**INCERTO — números clínicos (perda de 11 kg, 69 anos, episódio de 29 de julho, quatro medicamentos, nitroglicerina):** as evidências apenas mencionam genericamente \\\"problemas cardíacos\\\" (Metrópoles/SBT), sem os números específicos da petição. Não confirmo nem nego — INCERTO.\", \"**INCERTO — datas processuais (audiência em 17/11/2026; julgamento em 1º/06/2027; juiz Alvin Hellerstein):** não cobertas pelas evidências desta busca. INCERTO.\", \"**INCERTO — empresa Guidepost e detalhes da proposta (vigilância 24h, tornozeleira, retenção de passaporte):** as evidências citam \\\"vigilância armada\\\" (SBT), mas não nomeiam a Guidepost nem os demais detalhes. INCERTO.\", \"**INCERTO — pedido de arquivamento por imunidade soberana:** as evidências cobrem pedido de arquivamento por tráfico de drogas (RedeTV, 03/09/2026), mas não o fundamento de imunidade soberana do chefe de Estado. INCERTO.\"], \"fontes\": [\"https://www.metropoles.com/mundo/esposa-de-maduro-pede-prisao-domiciliar-devido-a-problemas-cardiacos\", \"https://sbtnews.sbt.com.br/noticia/mundo/esposa-de-maduro-pede-prisao-domiciliar-nos-eua\", \"https://www.metropoles.com/mundo/esposa-de-maduro-pede-prisao-domiciliar-devido-a-problemas-cardiacos\", \"https://sbtnews.sbt.com.br/noticia/mundo/esposa-de-maduro-pede-prisao-domiciliar-nos-eua\"], \"sha\": \"4ad1a817746cd6a3d2116e0dd5fdec0df2b69760\", \"ts\": \"11/09/2026 03:05\", \"ts_iso\": \"2026-09-11T06:05:18.936568+00:00\"}, \"r2\": {\"ok\": true, \"modelo\": \"gpt-5\", \"grounding\": \"bing-rss\", \"pendencias\": [], \"sugestao_titulo\": \"\", \"categoria_sugerida\": \"\", \"sha\": \"7f2578a4672d34502484c9db8674bbed20b71002\", \"ts\": \"11/09/2026 04:20\", \"ts_iso\": \"2026-09-11T07:20:32.388076+00:00\"}, \"cl_manual\": {\"ok\": true, \"revisor\": \"CL\", \"ref\": \"CL-20260911-004\", \"fontes\": \"Peticao da defesa de Cilia Flores apresentada a Justica dos EUA na quarta-feira (9), pedindo substituicao da detencao no Centro Metropolitano de Detencao de Brooklyn por prisao domiciliar: 69 anos, perda de mais de 11 quilos, arritmias, dores no peito e dificuldade para respirar, com episodio de pressao no peito em 29 de julho e quatro medicamentos diarios, segundo os advogados; o pedido AINDA NAO FOI JULGADO e a peca diz isso; ela esta presa desde a operacao militar americana em Caracas de 3 de janeiro, quando foi capturada junto com Nicolas Maduro. CRITERIO: o fato e de quarta, mas processo pendente nao envelhece como evento — ontem barrei um jogo de futebol com dois dias pela razao inversa; marca temporal ajustada de «nesta quarta-feira» para «na quarta-feira (9)»\", \"ts\": \"11/09/2026 03:23\", \"metodo\": \"leitura integral + busca web propria + juiz V4.1 lido + titulo sem sigla + padrao Metropoles/Forum + nota de frescor + dedupe contra o site\"}}"
+        }
+      ]
+    }
+  },
+  "public": [
+    {
+      "post_id": 269451,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/btg-nexus-lula-amplia-vantagem-na-espontanea-para-oito-pontos/",
+      "at": "2026-09-11T04:18:34.274005-03:00",
+      "sha256_html": "fb580cf01317c30ba8c0facef97bb85e5d90959f931cd0d35ec67b5b8635786f",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 21,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269476,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/brecha-em-licencas-do-peru-leva-fauna-amazonica-a-mercado-de-bangkok/",
+      "at": "2026-09-11T04:18:34.318557-03:00",
+      "sha256_html": "c016523826cec1f73ec50d1c9ee36714d3c4ae5e4ead99736634692ac3763bbc",
+      "paragraphs": 17,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 1,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    },
+    {
+      "post_id": 269467,
+      "http": 200,
+      "url": "https://www.ocafezinho.com/2026/09/08/cupula-da-pf-reage-em-bloco-a-mendonca-e-coloca-cargos-a-disposicao-apos-afastamento-de-andrei/",
+      "at": "2026-09-11T04:18:34.361512-03:00",
+      "sha256_html": "6efdfe75cd79b6906882e861ca116e3e7dc0e143ffb173aed19a87978b5017eb",
+      "paragraphs": 0,
+      "all_paragraphs_present": true,
+      "missing": [],
+      "comments": [
+        " utils ",
+        " apoie & google ",
+        " latest news ",
+        " sidebar "
+      ],
+      "internal_markers": [],
+      "text_blocks": 37,
+      "all_text_blocks_present": true,
+      "missing_blocks": [],
+      "comparison": "full raw blocks, HTML decoded and typographic quotes normalized"
+    }
+  ],
+  "checks": {
+    "rounds": 1,
+    "writes_wordpress": 0,
+    "editorial_proposals": 12,
+    "future_correct": true
+  }
+}

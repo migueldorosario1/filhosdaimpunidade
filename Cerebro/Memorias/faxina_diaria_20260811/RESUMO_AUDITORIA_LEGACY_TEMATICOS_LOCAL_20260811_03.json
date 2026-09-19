@@ -1,0 +1,93 @@
+{
+  "schema": "cafezinho.faxina.audit-summary.v1",
+  "created_utc": "2026-08-11T08:30:30.644971+00:00",
+  "candidate": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR",
+  "classification": "eligible_for_miguel_consultation_not_authorized_for_action",
+  "decision": "preserve_in_place",
+  "documented_legacy_since": "2026-07-24T18:00:00-03:00",
+  "latest_file_or_symlink_mtime_utc": "2026-07-24T20:38:18.705330+00:00",
+  "elapsed_days_since_latest_file_or_symlink_mtime": 17.495,
+  "latest_directory_metadata_mtime_utc": "2026-08-11T08:29:45.586732+00:00",
+  "directory_mtime_note": "Consultas Git podem atualizar mtime de diretórios .git sem alterar arquivos; elegibilidade usa arquivo/symlink e provas operacionais.",
+  "eligibility_rule": "Mais de 15 dias permite somente consulta; mover ou descartar exige autorização explícita de Miguel.",
+  "activity_proof": {
+    "running_process_references": 0,
+    "cron_or_user_systemd_references": 0,
+    "external_symlinks_into_tree": 0,
+    "external_operational_text_references": 0,
+    "note": "Quatro referências textuais externas encontradas são fóruns/memórias históricos, não consumidores operacionais."
+  },
+  "inventory_counts": {
+    "directory": 10757,
+    "file": 84935,
+    "symlink": 140,
+    "special": 0
+  },
+  "indexed_logical_file_bytes": 3543345181,
+  "sensitive_metadata_only_count": 274,
+  "git_repositories": [
+    {
+      "path": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR/cafezinhomediagroup",
+      "head": "2343fb86011fff0e56e1538a8162f53995000ac8",
+      "branch": "main",
+      "status_clean": true,
+      "status_entry_count": 0,
+      "status_paths": [],
+      "origin": "git@github.com:migueldorosario1/cafezinhomediagroup.git",
+      "latest_commit_utc": "2026-07-13T17:48:07-03:00"
+    },
+    {
+      "path": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR/ceara-digital",
+      "head": "865b85ec783423383a5b661e3e95b4c2eaa311a3",
+      "branch": "main",
+      "status_clean": true,
+      "status_entry_count": 0,
+      "status_paths": [],
+      "origin": "https://github.com/migueldorosario1/ceara-digital.git",
+      "latest_commit_utc": "2026-07-13T16:35:15-03:00"
+    },
+    {
+      "path": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR/discover_brazil",
+      "head": "b32268c432e0a791ac519e3153a1326793abfdf8",
+      "branch": "main",
+      "status_clean": true,
+      "status_entry_count": 0,
+      "status_paths": [],
+      "origin": "git@github.com:migueldorosario1/discover-brazil.git",
+      "latest_commit_utc": "2026-07-14T02:23:03+00:00"
+    },
+    {
+      "path": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR/global_south_news",
+      "head": "57f76bf3f06603e2654e64df4c2cb2d9b86c593c",
+      "branch": "main",
+      "status_clean": false,
+      "status_entry_count": 1,
+      "status_paths": [
+        "scripts/gsn_publish_hourly_batch.mjs"
+      ],
+      "origin": "git@github.com:migueldorosario1/global-south-news.git",
+      "latest_commit_utc": "2026-07-09T03:47:31-03:00"
+    },
+    {
+      "path": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR/mundo_trilhos",
+      "head": "9314c2927a78950e472860b5cf3a3e5aafb267c5",
+      "branch": "main",
+      "status_clean": true,
+      "status_entry_count": 0,
+      "status_paths": [],
+      "origin": "git@github.com:migueldorosario1/mundo-trilhos.git",
+      "latest_commit_utc": "2026-07-14T02:10:43+00:00"
+    },
+    {
+      "path": "Projeto Cafezinho Agentes/sites-tematicos_LEGADO_NAO_USAR/rail_post",
+      "head": "bc17f9c913be3887ecd4c8c86ef91957cf4cea4b",
+      "branch": "main",
+      "status_clean": true,
+      "status_entry_count": 0,
+      "status_paths": [],
+      "origin": "git@github.com:migueldorosario1/rail-post.git",
+      "latest_commit_utc": "2026-07-14T02:10:45+00:00"
+    }
+  ],
+  "mutation_to_candidate": "none"
+}

@@ -1,0 +1,127 @@
+{
+  "at": "2026-09-11T14:17:37.743655-03:00",
+  "base": "32bd908784f290c6012096a5892911178c6be663",
+  "sources": [
+    {
+      "path": "Foruns/ponte_laura_completa/de_laura.md",
+      "remote_sha256": "40580d81caee392d6b9aff611d6bbe402f1a602329b2899df6c7ce01449937a3",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_0",
+      "remote_delta_bytes": 9869,
+      "canonical_sha256": "6f571584eae77909c238061d7071c3988c76c88bb690deb2589891ae6c62f107",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_0",
+      "canonical_delta_bytes": 0,
+      "matches": false
+    },
+    {
+      "path": "Foruns/ponte_laura_completa/de_dell.md",
+      "remote_sha256": "3272a931a550b54998d4135934b8afd09e2afab17a78c1415431c22adaae9f3a",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_1",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "40f157763dabf980017bbf34ecca410416627486f521b1ee7065541e39a55dec",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_1",
+      "canonical_delta_bytes": 798,
+      "matches": false
+    },
+    {
+      "path": "Foruns/canal_trindade.md",
+      "remote_sha256": "1fa3a9abd8d7a3e23b80b2fe00d9624467eff128f084fd4860317802335b113d",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_2",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "175cecc658b272f544b7e58c394fa9bc4a638715cac4481bccad9804d8a3b518",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_2",
+      "canonical_delta_bytes": 0,
+      "matches": false
+    },
+    {
+      "path": "Foruns/inbox_trindade/codex.md",
+      "remote_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_3",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "447d83242418add0da7acb3e498849b9c2762f2a354f9a37a6a8313694ef4689",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_3",
+      "canonical_delta_bytes": 0,
+      "matches": true
+    },
+    {
+      "path": "Foruns/inbox_trindade/zcode.md",
+      "remote_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_4",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "1ad2898066c97d22c737d9936df31fde84accf0430d96aaa80cec7a943e1c7bf",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_4",
+      "canonical_delta_bytes": 0,
+      "matches": true
+    },
+    {
+      "path": "Foruns/inbox_trindade/claude.md",
+      "remote_sha256": "eda2641d34adbd138347625bee9ff80a5e63b0d0af634a212982b52b893105ca",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_5",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "a69269f364130f85f371f97d50767a48432400761b723287a3d8cd075834e6e4",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_5",
+      "canonical_delta_bytes": 0,
+      "matches": false
+    },
+    {
+      "path": "Foruns/ponte_trindade_daemon/RESERVA_TRABALHO.md",
+      "remote_sha256": "9040773c2547695f1398ee4ad1c294ae9ee66ddffe01fa17f650a403a348cad9",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_6",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "9040773c2547695f1398ee4ad1c294ae9ee66ddffe01fa17f650a403a348cad9",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_6",
+      "canonical_delta_bytes": 0,
+      "matches": true
+    },
+    {
+      "path": "Foruns/ponte_trindade_daemon/ponte_imagens_RESERVA.md",
+      "remote_sha256": "816aebe1de47d507f0aebc3e048363bc6f698f77fde72550461bfd866fa36a1b",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_7",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "8982cccc7840c336ea2af443f9e6ead4e5b6042c4400d26dfbbd929e93e39bb6",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_7",
+      "canonical_delta_bytes": 0,
+      "matches": false
+    },
+    {
+      "path": "Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+      "remote_sha256": "a2d916c46423e588bff5ce472616de86a8c2d7a2fd0bc95f892e55f8aa1c638b",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_8",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "af6b03638f019646fef87c952a9443bdf3fe4de24f85500ea52afb168cef1c53",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_8",
+      "canonical_delta_bytes": 408,
+      "matches": false
+    },
+    {
+      "path": "Foruns/ponte_laura_completa/estado/codex_miguel.md",
+      "remote_sha256": "dc8aa826d83ce3a30331befffec3b04ab1ead55c94b3c92b66bad7846fe9d4bc",
+      "snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/remote_9",
+      "remote_delta_bytes": 0,
+      "canonical_sha256": "4b7261dc7b368edfd964d4e22cf5b26c98b7912cc9bf2e899369e6f87f07b146",
+      "canonical_snapshot": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026/canonical_9",
+      "canonical_delta_bytes": 311,
+      "matches": false
+    }
+  ],
+  "ref": "XM-20260911-026",
+  "receipt": "20260911_141854_ronda.md",
+  "previous_receipt": "20260911_135024_ronda.md",
+  "dir": "/home/migueldorosario/log/loop_codex_miguel/evidencias/XM-20260911-026",
+  "mode": "OBSERVACAO_HOLD_CONTROLES",
+  "failover": "DESENHADO_NAO_ATIVO",
+  "git_pull": {
+    "rc": 128,
+    "ahead": 1,
+    "behind": 12
+  },
+  "editorial_report": "/home/migueldorosario/Downloads/Antigravity Google/astra_operacoes/state/ronda_horaria/editorial/reports/XM-20260911-026-EDITORIAL.md",
+  "mutations": {
+    "wordpress": 0,
+    "reservations": 0,
+    "publish": 0,
+    "schedule": 0,
+    "git_commit": 0,
+    "git_push": 0,
+    "failover": 0
+  }
+}

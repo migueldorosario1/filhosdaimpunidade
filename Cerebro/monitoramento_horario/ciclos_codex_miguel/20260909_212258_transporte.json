@@ -1,0 +1,88 @@
+{
+  "ref": "XM-20260909-023",
+  "timestamp_brt": "2026-09-09T21:23:03.547689-03:00",
+  "commit": "2d3e62549e3676e7b882120d8de3eeba05c689b0",
+  "files": [
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md",
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_212258_ronda.md",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_212258_evidencias.json"
+  ],
+  "push": {
+    "command": "git push origin main",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n   2f0437927..2d3e62549  main -> main\n"
+  },
+  "origin_verification": {
+    "command": "git ls-remote origin refs/heads/main",
+    "exit_code": 0,
+    "stdout": "2d3e62549e3676e7b882120d8de3eeba05c689b0\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "github_confirmed": true,
+  "receipt": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_212258_ronda.md",
+  "transport": "cerebro/monitoramento_horario/ciclos_codex_miguel/20260909_212258_transporte.json",
+  "evidence_sha256": "7705e4cb729aaad850134b407e2f6c7cbc932a912ce42fb64fdc6148735a355c",
+  "nyc": {
+    "timestamp_brt": "2026-09-09T21:20:04-03:00",
+    "command": "git ls-remote nyc refs/heads/main",
+    "exit_code": 0,
+    "head": "a5ca4f801ed04115aea75aebeca4da032f159f81",
+    "is_ancestor_of_head_rc": 1,
+    "action": "HOLD_NON_FF; sem push divergente"
+  },
+  "prewrite_pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  },
+  "append_prefixes": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 800964,
+      "sha256": "5cbeea94f9157d2b96de2210a99ddf700c3fdc1d8bca1299b85c4808aa538b2b"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 93867,
+      "sha256": "e189165f3f2fb96d80b633a2bd87d5f9cc2a6f655e3fe3c1a8fa5bc7572e6849"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "bytes": 102823,
+      "sha256": "3199158562c8ea4f3dd84a46c18734a523215bac5479f19b76bc5bbe5fa5a584"
+    }
+  },
+  "checks": {
+    "utf8_without_bom": true,
+    "append_only_prefix_verified": true,
+    "git_diff_check_exit_code": 0,
+    "selective_staging_verified": true,
+    "preexisting_untracked_preserved": true,
+    "rounds": 1
+  },
+  "total_distinct_round_files": 6,
+  "close_timestamp_brt": "2026-09-09T21:23:38.311439-03:00",
+  "closing_pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 0,
+    "stdout": "Already up to date.\n",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n"
+  },
+  "close_base": "2d3e62549e3676e7b882120d8de3eeba05c689b0",
+  "receipt_before_close_sha256": "8d89b140be2b81387b5e1396d6fe11ddc041615ca3fc71a591db9754b657e0b9",
+  "preexisting_untracked_preserved": true,
+  "bridge_originals_verified_after_delivery": [
+    {
+      "ref": "DS-N-20260909-031",
+      "sha256": "02dee511278e156b7da7387e7958c7af767fca50247d63811cc0c1c96e8548e7",
+      "exact_occurrences_at_delivery": 1
+    },
+    {
+      "ref": "DS-Dell-20260909-031",
+      "sha256": "a6264a8fca86d90afc77916c90c420d7358528664777a2ce6f2696c774de7e4f",
+      "exact_occurrences_at_delivery": 1
+    }
+  ],
+  "commit_identity": "Codex Miguel <codex-miguel@localhost>"
+}

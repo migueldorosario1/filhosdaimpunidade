@@ -1,0 +1,36 @@
+{
+  "ref": "XM-HOLD-20260905_034834",
+  "time_brt": "2026-09-05T03:48:34.044996-03:00",
+  "mode": "HOLD_GIT_NON_FAST_FORWARD",
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "head": "02cf0c9a2944d5dcf05806a25caa54c80b33063e",
+  "origin_main": "0435b6651c035a24111e89c33f34b79a01fe2593",
+  "head_origin_counts": "1\t19",
+  "git_state": {
+    "rebase-apply": true,
+    "rebase-merge": false,
+    "index.lock": false
+  },
+  "status_before_receipt": "M cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_031906_evidencias.json\n M cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_031906_ronda.md\n?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_evidencias.json\n?? cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_004838_ronda.md",
+  "pull": {
+    "command": "git pull --ff-only origin main",
+    "exit_code": 128,
+    "error": "fatal: Not possible to fast-forward, aborting."
+  },
+  "last_receipt": "20260905_031906_ronda.md",
+  "read_cut_preserved": "100543c45ecde74e7d00ebe2640588e264eda70d",
+  "operational_deltas_consumed": false,
+  "visual": {
+    "examined": 0,
+    "reserved": 0,
+    "applied": 0
+  },
+  "sources": {
+    "LOOP_MIGUEL_CODEX.md": "ff1ebe3c12094666e1be5e96ef30e4af20081caf0797e8753dd08b162953a23a",
+    "cerebro/CONTRATO_MINUTA_LEITURA_OBRIGATORIA.md": "e64e58f1129908117b8b32931f69cded3c7e335aa1ae52ff7c47e4df64827acb",
+    "cerebro/claude_memory/project_cadencias_trindade_20260817.md": "abdfb302a33eca1b296334e86171a8849bd37ed604df88ec6501bc7707ce8280",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_031906_ronda.md": "77307c0acda68c03cdaa67d312675b885a88ff7bd6cb7d44bc6142a384b19e3c",
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260905_031906_evidencias.json": "1398e241674129235c12bb8d6b6b79e953e3ba0ec372dde9a8836f6121953649"
+  },
+  "commit_push": "NOT_EXECUTED_HOLD_PREEXISTING_REBASE"
+}

@@ -1,0 +1,22 @@
+{
+  "conteudo_normalizado": "Material bruto de teste para validar coleta, normalizacao, dedupe e promocao auditada no V4.",
+  "created_at": "2026-07-08T21:59:59.268295+00:00",
+  "dedupe_check": {
+    "duplicate_paths": [],
+    "hash_conteudo": "56f38e250465449c1056b1bee1d2d83c213842054126b8d75da06ca49bedf40e",
+    "is_duplicate": false
+  },
+  "editoria": "v4_politica_economia",
+  "fonte": "fixture_ingestao_local",
+  "hash_conteudo": "56f38e250465449c1056b1bee1d2d83c213842054126b8d75da06ca49bedf40e",
+  "item_id": "v4_ingest_001",
+  "manifesto_processamento": {
+    "hash_algorithm": "sha256",
+    "normalizacao": "strip_spaces",
+    "source_agent": "v4_processador"
+  },
+  "primary_entity": "Flavio Bolsonaro",
+  "status": "intermediario_processado",
+  "titulo": "Teste V4 de ingestao em tres camadas",
+  "url": "https://controle.ocafezinho.com/teste-v4-ingestao"
+}

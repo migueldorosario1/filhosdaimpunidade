@@ -1,0 +1,81 @@
+{
+  "ref": "XM-20260910-021",
+  "content_commit": "cb4f71be019ba7d55b00348d79bf67982d8773b8",
+  "github_push": {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "To github.com:migueldorosario1/cerebro-miguel.git\n ! [rejected]            main -> main (fetch first)\nerror: failed to push some refs to 'git@github.com:migueldorosario1/cerebro-miguel.git'\nhint: Updates were rejected because the remote contains work that you do\nhint: not have locally. This is usually caused by another repository pushing\nhint: to the same ref. You may want to first integrate the remote changes\nhint: (e.g., 'git pull ...') before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n",
+    "timestamp_brt": "2026-09-10T10:24:16.512107-03:00"
+  },
+  "github_remote": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit_code": 0,
+    "stdout": "445c1ab4c54ce1351a835b66abb43c2eb4e091cc\trefs/heads/main\n",
+    "stderr": "",
+    "timestamp_brt": "2026-09-10T10:24:18.946087-03:00"
+  },
+  "github_delivery_confirmed": false,
+  "nyc": "HOLD_NON_FF",
+  "gdrive": "NAO_TESTADO",
+  "tencent_reserva": "NAO_TESTADO",
+  "rounds_executed": 1,
+  "failover_laura": "DESENHADO_NAO_ATIVO",
+  "closing_pull": {
+    "command": [
+      "git",
+      "pull",
+      "--ff-only",
+      "origin",
+      "main"
+    ],
+    "exit_code": 128,
+    "stdout": "",
+    "stderr": "From github.com:migueldorosario1/cerebro-miguel\n * branch                main       -> FETCH_HEAD\n   71a22fd83..445c1ab4c  main       -> origin/main\nfatal: Not possible to fast-forward, aborting.\n",
+    "timestamp_brt": "2026-09-10T10:24:45.989312-03:00"
+  },
+  "final_transport_status": "HOLD_NON_FF",
+  "local_head": "cb4f71be019ba7d55b00348d79bf67982d8773b8",
+  "origin_head": "445c1ab4c54ce1351a835b66abb43c2eb4e091cc",
+  "ahead_behind": "1\t1",
+  "closed_at": "2026-09-10T10:25:25.245831-03:00",
+  "closing_read_cut": "71a22fd8346e2a9cb38cae2da23825f06d3548cb",
+  "append_prefixes_verified": true,
+  "preexisting_untracked_preserved": 221,
+  "late_remote_delta": "445c1ab4c posterior ao corte: nao integrado nem processado apos HOLD",
+  "receipt_before_closing_sha256": "ce9be39bb9c15fba426d1720c772299f170f32b25df4969493d788e5d0e9abe4",
+  "source_commit_preservation": {
+    "path": "cerebro/Foruns/ponte_laura_completa/de_dell.md",
+    "exact_parent_byte_prefix": true,
+    "git_diff_minus_one_explained": "Arquivo anterior terminava sem LF; append preservou todos os bytes, acrescentando LF antes do novo bloco. Nao houve remocao de conteudo."
+  },
+  "rebase_merge_reset_force_push_used": false,
+  "closure_append_prefixes": {
+    "cerebro/Foruns/ponte_laura_completa/de_dell.md": {
+      "bytes": 1265665,
+      "sha256": "3d5fbdc42081cd9d3259e65b3fe58500fb242e2698c2fa07a2ed4ce47c1a6672"
+    },
+    "cerebro/Foruns/ponte_laura_completa/ledger/codex_miguel.md": {
+      "bytes": 121191,
+      "sha256": "5b03119ec8df7b5b8ef41ea554d06f07b3ef456271dd5c8d485898ffe4ff48ac"
+    },
+    "cerebro/Foruns/ponte_laura_completa/estado/codex_miguel.md": {
+      "bytes": 115180,
+      "sha256": "6a12e550e8da65e39d26b332efef942ec86902bcdbe23f19e40c617ab94c6831"
+    },
+    "cerebro/monitoramento_horario/ciclos_codex_miguel/20260910_102335_ronda.md": {
+      "bytes": 5723,
+      "sha256": "ce9be39bb9c15fba426d1720c772299f170f32b25df4969493d788e5d0e9abe4"
+    }
+  }
+}

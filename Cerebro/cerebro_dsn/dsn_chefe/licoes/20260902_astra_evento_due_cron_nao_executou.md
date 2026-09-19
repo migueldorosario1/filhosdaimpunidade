@@ -1,0 +1,7 @@
+# Astra 268674: evento DUE mas cron NÃO executou — 3ª cara do BUG-DS-098 — 02/09/2026
+
+**O quê:** o 2º ultra-luxo do V4.1 (Astra 268674, agulha 21:37:53) seguia `future` às 21:39 com o `publish_future_post` DUE na fila do cron e o wp-cron NÃO executando (sonda 3 camadas do DS-Miguel 21:38-21:43). Contenção: `wp cron event run publish_future_post` (10 eventos, 0,12s) → publish 21:40:47, post_date preservado, permalink 200. O REST /posts devolvia 503 transiente na mesma janela — hipótese: wp-cron estrangulado durante a rajada de 503.
+
+**Por quê:** o BUG-DS-098/100 tinha 2 caras fichadas (cron atrasado · evento AUSENTE pós re-save — PEC 18:40/Oracle 20:09). Esta é a 3ª: **evento PRESENTE mas cron que não executa o due**. Consequência prática: estado `future` + evento na fila ainda NÃO é prova de disparo — a prova é a EXECUÇÃO. E o gatilho provável (re-save do cl087 v2 para trocar o título do Astra, na janela de 503) junta as duas hipóteses: re-save mexe no evento E a janela de carga estrangula o cron.
+
+**Como aplicar (vigia DSC-048 / ronda do chefe):** nas agulhas da noite, a sonda de 3 camadas (estado → evento → ar) ganha uma 4ª: execução (o evento saiu da fila?). Se o post não subiu no slot com evento presente: a contenção é rodar o evento (`wp cron event run publish_future_post`) — padrão validado pelo DS-Dell 21:43. Auditoria event×execução em cada agulha (hepatite B 22:27 · Fapesp 22:48 · FCC 23:09 · Ucrânia 23:51 · Trump/OpenAI 00:12 · Dyson 00:48 · Werder 01:26 · dengue 01:57). Dono do conserto estrutural: ZM.

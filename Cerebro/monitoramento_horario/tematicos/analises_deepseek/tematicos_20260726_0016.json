@@ -1,0 +1,6 @@
+{
+  "ciclo_id": "tematicos_20260726_0016",
+  "ts_brt": "2026-07-26T00:16:19-03:00",
+  "analista": "deepseek-chat",
+  "parecer_bruto": "{\n  \"ciclo_id\": \"tematicos_20260726_0016\",\n  \"concorda\": false,\n  \"anomalias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"descricao\": \"Site retornou HTTP status 0 (offline/sem resposta) mas não foi emitido alerta pelo coletor. Deveria ter sido classificado no mínimo como P2.\",\n      \"evidencia\": \"http_status: 0, alerta.nivel: nenhum\"\n    }\n  ],\n  \"falsos_positivos_suspeitos\": [],\n  \"divergencias\": [\n    {\n      \"site\": \"ceara_digital\",\n      \"coletor_disse\": \"nenhum\",\n      \"deepseek_diz\": \"P2 (site offline)\",\n      \"sugestao\": \"elevar\"\n    }\n  ],\n  \"acao_proposta\": \"Avaliar disponibilidade do site ceara_digital e reativar monitoramento\",\n  \"confianca\": 0.85,\n  \"notas\": \"Alerta P2 para mapa_rio e aiatolah estão corretos (61h estagnação). Os demais sites apresentam frescor adequado. O status 0 de ceara_digital pode ser transitório, mas merece investigação imediata.\"\n}"
+}
