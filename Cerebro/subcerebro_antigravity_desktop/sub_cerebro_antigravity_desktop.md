@@ -1191,5 +1191,5 @@ Este é o meu sub-cérebro exclusivo, projetado para ser o diário de bordo e í
 - **INCIDENTE DE SEGURANÇA — chave GCP_AGENT_PLATFORM_KEY vazada e rotacionada:**
   - A chave anotada aqui em 19/06 (formato `AQ.`) foi exposta publicamente no GitHub (repo `filhosdaimpunidade`, commit `8007d2a`, 19/09 16:19) porque o Cérebro inteiro sobe para o repo público pelo fluxo deploy-main.
   - O Google a detectou e a **deletou automaticamente** às ~16:26 (política de exposure response), avisando por e-mail.
-  - **Chave NOVA** criada pelo ZCode/GLM-5.3 via gcloud (uid `4ca21f6b`, restrita a generativelanguage.googleapis.com, projeto Cafezinho Canonico): valor SOMENTE nos cofres (`~/cofore_intake` → `~/cofre_intake/cofre_intake.env` + 2 `.env.unificado`, variável `GCP_AGENT_PLATFORM_KEY`).
+  - **Chave NOVA** criada pelo ZCode/GLM-5.3 via gcloud (uid `4ca21f6b`, restrita a generativelanguage.googleapis.com, projeto Cafezinho Canonico): valor SOMENTE nos cofres (`~/cofre_intake/cofre_intake.env` + 2 `.env.unificado`, variável `GCP_AGENT_PLATFORM_KEY`).
   - **LIÇÃO PERMANENTE:** valor de chave JAMAIS neste arquivo — só no Cofre + ponteiro (regra da casa reforçada; ver `Cerebro/CEREBRO_NODE_COFRE_CHAVES.md` e `Cerebro/Foruns/forum_incidente_chave_gemini_gcp_20260919.md`).
