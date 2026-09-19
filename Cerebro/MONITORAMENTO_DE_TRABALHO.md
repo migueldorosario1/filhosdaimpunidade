@@ -21,7 +21,7 @@
 > **Ciclo atual:** aberto em **2026-09-15 18:16 BRT** (renovação executada — o ciclo anterior estava vencido desde 31/08, com 39 linhas ✅ acumuladas; histórico completo em `MONITORAMENTO_DE_TRABALHO_2026_09_15_1815.md`).
 
 ## 📌 Em andamento AGORA
-| ZM-GLM-PREPAGO-20260919 · ZCode (Kimi K3) Testar chave GLM pré-paga nova do Miguel + configurar no ZCode (~/.zcode/v2/config.json) + espelhar cofres Regra 4 | 19/09 15:41 | ⏳ |
+| ZM-GLM-PREPAGO-20260919 · 19/09 15:41 | 19/09 15:54 | ✅ |
 | ZM-MOKA-ARQUIVA-ZEMOCA-20260919 · ✅ promovido aos 3 (canônico 8cb83ed FF + espelho afcb642 merge, provado nos 2 domínios) | 19/09 13:11 | ⏳ |
 | ZM-MOKA-IG-SABADO-20260919 · 19/09 10:18 | 19/09 10:18 | ✅ |
 | ZM-MOKA-TELE-ACOES-20260919 · ✅ promovido aos 3 (canônico c645799 FF + espelho abf1693 merge, provado nos 2 domínios) | 19/09 10:22 | ⏳ |
