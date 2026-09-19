@@ -21,7 +21,8 @@
 > **Ciclo atual:** aberto em **2026-09-15 18:16 BRT** (renovação executada — o ciclo anterior estava vencido desde 31/08, com 39 linhas ✅ acumuladas; histórico completo em `MONITORAMENTO_DE_TRABALHO_2026_09_15_1815.md`).
 
 ## 📌 Em andamento AGORA
-| ZM-GLM-PREPAGO-20260919 · 19/09 15:41 | 19/09 15:54 | ✅ |
+| ZM-GSN-BRICS-PONTE-20260919 · 19/09 15:55 | 19/09 16:00 | ✅ |
+| ZM-GLM-PREPAGO-20260919 · adendo: seletor limpo — 6 providers Z.ai/BigModel mortos apagados, restou só Z.ai API — PRÉ-PAGO; cli/config repontado | 19/09 16:05 | ⏳ |
 | ZM-MOKA-ARQUIVA-ZEMOCA-20260919 · ✅ promovido aos 3 (canônico 8cb83ed FF + espelho afcb642 merge, provado nos 2 domínios) | 19/09 13:11 | ⏳ |
 | ZM-MOKA-IG-SABADO-20260919 · 19/09 10:18 | 19/09 10:18 | ✅ |
 | ZM-MOKA-TELE-ACOES-20260919 · ✅ promovido aos 3 (canônico c645799 FF + espelho abf1693 merge, provado nos 2 domínios) | 19/09 10:22 | ⏳ |
