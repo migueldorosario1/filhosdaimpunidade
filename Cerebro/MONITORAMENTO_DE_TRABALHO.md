@@ -22,7 +22,7 @@
 
 ## 📌 Em andamento AGORA
 | ZM-GSN-BRICS-PONTE-20260919 · 19/09 15:55 | 19/09 16:00 | ✅ |
-| ZM-GLM-PREPAGO-20260919 · adendo: seletor limpo — 6 providers Z.ai/BigModel mortos apagados, restou só Z.ai API — PRÉ-PAGO; cli/config repontado | 19/09 16:05 | ⏳ |
+| ZM-GLM-PREPAGO-20260919 · adendo2: duplicata era provider_config.json (GUI); zai-api fora, e488030c c/ base paas/v4 + 3 modelos; resta 1 Z.ai | 19/09 16:20 | ⏳ |
 | ZM-MOKA-ARQUIVA-ZEMOCA-20260919 · ✅ promovido aos 3 (canônico 8cb83ed FF + espelho afcb642 merge, provado nos 2 domínios) | 19/09 13:11 | ⏳ |
 | ZM-MOKA-IG-SABADO-20260919 · 19/09 10:18 | 19/09 10:18 | ✅ |
 | ZM-MOKA-TELE-ACOES-20260919 · ✅ promovido aos 3 (canônico c645799 FF + espelho abf1693 merge, provado nos 2 domínios) | 19/09 10:22 | ⏳ |
