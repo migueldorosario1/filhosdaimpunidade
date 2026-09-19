@@ -21,6 +21,9 @@
 > **Ciclo atual:** aberto em **2026-09-15 18:16 BRT** (renovação executada — o ciclo anterior estava vencido desde 31/08, com 39 linhas ✅ acumuladas; histórico completo em `MONITORAMENTO_DE_TRABALHO_2026_09_15_1815.md`).
 
 ## 📌 Em andamento AGORA
+| ZM-GCP-CHAVE-20260919 · 19/09 17:05 | 19/09 17:19 | ✅ |
+| ZM-FIOS-GLMPREP-20260919 · 19/09 16:51 | 19/09 17:08 | ✅ |
+| ZM-GSN-BRICS-EXEC-20260919 · ✅ +adendo 17:04: ritmo byline curado nos 2 portais (ordem Miguel) — GSN commit 3398fa6 c/ byline em parágrafo próprio + Cafezinho 272244 byline em <em>; provado ao vivo nos 2; detalhe no §5 do fórum GSN | 19/09 17:04 | ⏳ |
 | ZM-GSN-BRICS-PONTE-20260919 · 19/09 15:55 | 19/09 16:00 | ✅ |
 | ZM-GLM-PREPAGO-20260919 · adendo2: duplicata era provider_config.json (GUI); zai-api fora, e488030c c/ base paas/v4 + 3 modelos; resta 1 Z.ai | 19/09 16:20 | ⏳ |
 | ZM-MOKA-ARQUIVA-ZEMOCA-20260919 · ✅ promovido aos 3 (canônico 8cb83ed FF + espelho afcb642 merge, provado nos 2 domínios) | 19/09 13:11 | ⏳ |

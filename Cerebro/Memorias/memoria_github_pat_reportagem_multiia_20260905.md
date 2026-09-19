@@ -1,6 +1,6 @@
 # Memória — GITHUB_PAT da reportagem multi-IA (05/09/2026)
 
-Log técnico completo. Decisões resumidas: `Foruns/forum_github_pat_reportagem_multiia_20260905.md`.
+Log técnico completo. Decisões resumidas: `Foruns/forum_[REDACTADO 19/09/2026 — token já revogado (401 confirmado); valor jamais em fórum, só no Cofre].md`.
 
 ## Cronologia (05/09/2026, BRT)
 

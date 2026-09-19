@@ -520,7 +520,7 @@ Este é o meu sub-cérebro exclusivo, projetado para ser o diário de bordo e í
 
 ### 🗓️ 2026-06-19
 - **Registro da Chave do Google Cloud (Agent Platform):** Anotamos e guardamos no sub-cérebro com total segurança e confidencialidade a chave da API do Agent Platform fornecida pelo Chairman Miguel:
-  - `GCP_AGENT_PLATFORM_KEY=AQ.Ab8RN6JVnZFsZQyatIBEv9vBuTHvOxV2skSz_4_oAWT-5I6tzg`
+  - `GCP_AGENT_PLATFORM_KEY` — valor REMOVIDO daqui em 19/09/2026 (vazou no GitHub público e o Google deletou a chave; ver entrada 2026-09-19 abaixo e `Cerebro/CEREBRO_NODE_COFRE_CHAVES.md`)
   - A chave está restrita a este arquivo e não será exposta em outros locais públicos ou de produção sem autorização explícita.
 
 ### 🗓️ 2026-06-20

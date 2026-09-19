@@ -911,3 +911,12 @@ Adendo05/09 ~01:30: consumidor exclusivo ponte-astra.service efetivamente ativad
 - **17/09 11:3x — TOKEN FB NOVO (pages_manage_engagement) + COFRE DE REDES NO TENCENT:** o FB_PAGE_ACCESS_TOKEN antigo publicava mas não comentava como página (403 #200). Miguel regenerou no Graph API Explorer (app Cafezinho Ressurrection 2026, +pages_manage_engagement) → page token PERMANENTE (expires_at=0, via oauth/access_token_info). Espelhado nos 5 cofres (2 Dell + tencent /root/.env + /root/.env.unificado + /home/ubuntu/root_copy/.env.unificado; backups .bak_pre_fb_engagement_20260917; hash 0f1222e20c). NOVO cofre-irmão: `tencent:/home/ubuntu/cafezinho/redes/.env_redes` (600 ubuntu; 7 chaves X+FB da esteira de fios). Como testar: GET /me com o token → {"name":"O Cafezinho"}; comentário de teste POST /{post_id}/comments.
 
 - **17/09 12:0x — DIVERGÊNCIA DEEPSEEK resolvida + limite regional:** DEEPSEEK_API_KEY dos cofres tencent (/root/.env, /root/.env.unificado, root_copy) estava morta (401) — trocada pela viva do cofre Dell (hash 2fb569764b; backups .bak_pre_deepseek_sync_20260917). 🔴 Mesmo viva, a API DeepSeek REJEITA chamadas do IP do tencent (401 "api key invalid" com chave correta — bloqueio regional); funciona do Dell. Para robôs no tencent usar GLM/ZAI (glm-5.3-flash OK), Kimi, ou rotear via outro servidor.
+
+
+## 🔑 GCP Agent Platform (Gemini) — rotação pós-vazamento 19/09/2026 (ZM-GCP-CHAVE-20260919)
+
+- **Incidente:** chave `AQ.` (formato SA-bound) do projeto **Cafezinho Canonico** (`gen-lang-client-0200069757`) exposta no repo público `filhosdaimpunidade` (commit `8007d2a`, arquivo do sub-cérebro do Antigravity Desktop); Google a deletou sozinho (org policy) e avisou por e-mail 16:26.
+- **Chave NOVA:** display "Agent Platform Antigravity 20260919", uid `4ca21f6b-5f50-4e76-9414-f72cd532c4dc`, restrita a `generativelanguage.googleapis.com`, criada via gcloud pela sessão. Valor nos cofres: `~/cofre_intake/cofre_intake.env` + 2 `.env.unificado` (variável `GCP_AGENT_PLATFORM_KEY`; backups `.bak_pre_gcp_agent_platform_20260919`; sha8 da chave `e5d3f5e7` idêntico nos 3).
+- **🔴 Projeto SEM crédito pré-pago:** geração devolve 402 (todas as chaves do projeto); listing 200. Recarga: https://ai.studio/usage — decisão do Miguel.
+- **Consumidores:** nenhum código lia a variável até hoje (reserva do Antigravity Desktop); zero quebra pela troca.
+- Fórum: `Foruns/forum_incidente_chave_gemini_gcp_20260919.md` · Memória: `Memorias/memoria_incidente_chave_gemini_gcp_20260919.md`

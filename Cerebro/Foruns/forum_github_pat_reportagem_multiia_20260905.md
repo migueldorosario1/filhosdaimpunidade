@@ -16,4 +16,4 @@
 - **Falta:** nada bloqueante. Se a reportagem tiver um repo específico, me dizer qual — aí valido um push de verdade nele.
 - **Preciso de você:** nada urgente. Opcional: rotação do PAT por ter passado no chat; renovação antes de 05/10/2026.
 
-**Log técnico completo:** `Memorias/memoria_github_pat_reportagem_multiia_20260905.md`.
+**Log técnico completo:** `Memorias/memoria_[REDACTADO 19/09/2026 — token já revogado (401 confirmado); valor jamais em fórum, só no Cofre].md`.
