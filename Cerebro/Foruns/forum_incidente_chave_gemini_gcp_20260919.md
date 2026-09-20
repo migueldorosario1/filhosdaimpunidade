@@ -47,3 +47,29 @@ Ordem do Miguel ("vai") após o incidente. Duas frentes:
   - **MORTAS de verdade (401 no endpoint certo) → depreciadas:** DEEPSEEK_TEMATICOS `…6690`, DEEPSEEK_DS_LAURA `…6907`, DEEPSEEK_CAFEZINHO_CANONICO `…8762` — renomeadas `_DEPRECADA_20260920_*` no `cofre_intake.env` (únicas ocorrências; os 2 .env.unificado não as tinham), backup `.bak_pre_deprecada_deepseek_20260920`.
   - `sk-…ZMHw/7gxI/72d2`: só existem em logs/artefatos de sessão ZCode (não em cofres) — sem ação.
 - **Lição:** testar chave no endpoint do provedor certo; 401 no endpoint errado ≠ chave morta (quase depreciamos Kimi/Claude vivas).
+
+
+---
+
+## Adendo 20/09 ~08:3x BRT (ZCode/Kimi K3) — AUDITORIA DO TRIBUNAL VISUAL: fallback do Gemini mapeado e testado ao vivo
+
+Pergunta do Miguel: "qual o fallback do Gemini Vision para o Cafezinho? está funcionando?".
+
+**Existem DUAS vias de visão no ecossistema (não confundir):**
+
+**A) Worker V4 (rascunhos) — `v4_vision_router.py`, COM escada de fallback** (contrato `/root/v4_labs/contratos/v4_rotas_visao_v1.json` no NYC; cooldowns em `agent_data/v4_verticals/vision_router_state.json`):
+
+| Prio | Rota | Modelo | Teste ao vivo 20/09 08:3x |
+|---|---|---|---|
+| 10 | kimi_assinatura (KIMI_VISION_API_KEY, api.kimi.com/coding) | kimi-for-coding | ✅ **200 — respondeu corretamente** (leu imagem-teste) |
+| 20 | kimi_paygo (KIMI_PAYGO_API_KEY, moonshot.ai) | kimi-k2.5 | ❌ 429 (conta paygo sem saldo/rate limit) |
+| 30 | qwen_vision (QWEN_API_KEY, DashScope) | qwen-vl-plus | ❌ 400/403 "account not in good standing" (24 falhas no estado) |
+| 40 | gemini_vision (GEMINI_API_KEY) | gemini-3.6-flash | ❌ **402 prepayment depleted** (mesmo projeto sem crédito do incidente) |
+
+→ **O Gemini é o ÚLTIMO degrau, não o primeiro.** A esteira de rascunhos está DE PÉ porque o degrau 1 (Kimi assinatura) funciona. Degraus 2-4 todos quebrados agora; o router aguenta (failover automático com cooldown), mas a redundância real hoje = 1 só juiz.
+
+**B) Portal/tribunal das capas — `analisar_imagem_gemini_vision` em `agente_roteador_llm.py` (gerenciador_imagens.py → publicador_tematicos/gerador_imagem_editorial):** **GEMINI-ONLY, SEM fallback no código.** Falha → retorna "REPROVADA" (fail-closed). Com o 402 atual, essa via reprova TUDO que julga. Cross-check interno também é Gemini.
+
+**Cura proposta (aguarda "vai" do Miguel):**
+1. Curto prazo (grátis): na função do portal, aceitar `GCP_AGENT_PLATFORM_KEY` como alternativa — MESMO projeto, mesmo 402; não resolve. **A cura real = recarregar crédito no AI Studio** (projeto gen-lang-client-0200069757) — 1 clique do Miguel em https://ai.studio/usage.
+2. Estrutural: trocar a chamada do portal para usar o mesmo `v4_vision_router` (escada Kimi→Qwen→Gemini) em vez da função Gemini-only — elimina o ponto único de falha.
