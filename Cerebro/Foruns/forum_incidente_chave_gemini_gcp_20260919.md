@@ -27,3 +27,23 @@
 - Console de credenciais do projeto: https://console.cloud.google.com/apis/credentials?project=gen-lang-client-0200069757
 - Créditos/billing AI Studio: https://ai.studio/usage
 - Commit da exposição (chave morta, histórico): https://github.com/migueldorosario1/filhosdaimpunidade/commit/8007d2a833b6127a34ffb90c57bbc0f13f5b7b14
+
+
+---
+
+## Adendo 20/09 ~08:1x BRT (ZCode/GLM-5.3) — GATE ANTI-SEGREDO instalado + auditoria de chaves sk- dos cofres
+
+Ordem do Miguel ("vai") após o incidente. Duas frentes:
+
+**1. Gate anti-segredo (pre-push hook) — `Cerebro/Ferramentas/gate_secrets_prepush.py`**
+- Instalado em `.git/hooks/pre-push` dos 2 repos que empurram ao GitHub público: `Antigravity Google` (deploy-main) e `Outros/novo livro` (main). O sync automático do cerebro-miguel passa pelo mesmo script (o hook é chamado pelo `git push`).
+- Varre APENAS as linhas adicionadas nos commits do push; padrões: Google (AIzaSy/AQ.), sk- (OpenAI/DeepSeek), sk-ant-, sk-or-v1-, ghp_/gho_/github_pat_, xai-, AKIA. Allowlist: linhas com REDACT/…/exemplo/fake/fixture/dummy/placeholder; fixture `test_contracts.py` excluída. NUNCA imprime valores — só arquivo + tipo.
+- Testado 3 cenários: passa limpo sem segredo; BLOQUEIA isca `sk-` (exit 1); BLOQUEIA isca `AIzaSy` (exit 1). Primeira versão da isca com a palavra "FAKE" passou — allowlist a absorveu; isca sem palavra da lista bloqueou certinho.
+- Limitação conhecida: cobre o push a partir desta máquina; a barreira de servidor (GitHub push protection) já estava `enabled` no repo público, mas NÃO detectou a chave `AQ.` nova geração — o gate local cobre essa lacuna.
+
+**2. Auditoria das chaves sk- dos cofres (Regra 4) — com correção de método**
+- Primeira varredura testou tudo só em api.openai.com e marcou 13 como mortas — ERRADO de método: endpoint errado por provedor. Refeito por provedor:
+  - **VIVAS:** OPENAI_API_KEY `sk-…ddAA` (a "ovo-cafezinho" que o Miguel confirmou — única em uso no painel OpenAI, $55.33 gasto acumulado; criada 20/07, sem expiração) · ZCODE_OPENAI `sk-…qOoA` · DEEPSEEK_API_KEY `sk-…bef7` · DEEPSEEK_API_KEY_DSN `sk-…9578` · KIMI_PAYGO `sk-…BD06` (viva em moonshot.ai, 401 em .cn) · KIMI_CODE_ZCODE `sk-…Czs4` e KIMI_VISION `sk-…c9eh` (vivas em kimi.com/coding, 401 em moonshot) · CLAUDE/ANTHROPIC `sk-…1AAA` (200 em anthropic.com) · ZCODE `sk-…3183` (200 em openrouter.ai).
+  - **MORTAS de verdade (401 no endpoint certo) → depreciadas:** DEEPSEEK_TEMATICOS `…6690`, DEEPSEEK_DS_LAURA `…6907`, DEEPSEEK_CAFEZINHO_CANONICO `…8762` — renomeadas `_DEPRECADA_20260920_*` no `cofre_intake.env` (únicas ocorrências; os 2 .env.unificado não as tinham), backup `.bak_pre_deprecada_deepseek_20260920`.
+  - `sk-…ZMHw/7gxI/72d2`: só existem em logs/artefatos de sessão ZCode (não em cofres) — sem ação.
+- **Lição:** testar chave no endpoint do provedor certo; 401 no endpoint errado ≠ chave morta (quase depreciamos Kimi/Claude vivas).
