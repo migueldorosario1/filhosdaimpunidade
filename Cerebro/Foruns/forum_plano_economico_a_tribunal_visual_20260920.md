@@ -77,3 +77,18 @@ Miguel recarrega o AI Studio (https://ai.studio/usage) → Gemini volta → `PLA
 - [ ] AÇÃO 1 — aguardando "vai" do Miguel
 - [ ] AÇÃO 2 — aguardando "vai" do Miguel
 - [x] AÇÃO 3 — regra editorial: vale a partir da indexação deste plano
+
+
+---
+
+## Adendo 20/09 ~10:0x BRT (ZCode/DeepSeek) — 2ª rodada: TODOS os emissores do bot CEO Antigravidade assinados
+
+Nova mensagem preocupante do Miguel (sem assinatura, via @cafezinhoantigravitybot). Caça completa aos emissores:
+
+**Identificados e corrigidos (todos com backup .bak_pre_assinatura_20260920):**
+- **Retenção da Baleia (a mensagem de hoje):** `~/bin/enviar_baleia_azul_ponte.sh` (Dell) → `ponte_cafezinho.py --send` — sem assinatura. O `--send` da ponte agora **assina por padrão** (`— ponte_cafezinho @ host`) e aceita `--de origem`; o wrapper da Baleia passa `--de baleia_azul_ponte`. Teste real enviado ao Telegram do Miguel (exit 0).
+- **Watchdog da Baleia (tencent, 07:45/19:45):** `baleia_watchdog_telegram.sh` mandava "🔴 Baleia Azul ... ainda nao saiu ... O Dell parece desligado" SEM assinatura (bot DSN_CHEFE). Agora assina `— baleia_watchdog @ tencent`. bash -n OK.
+- **Anteriores (rodada 1):** nucleo_telegram.py (NYC) — assinatura automática com módulo chamador; nucleo_visao.py (alerta "Juiz visual V4 fora do ar") — coberto pela mesma ponte.
+- **Não-emissores confirmados:** fiscal_tokens NYC (token silenciado por ordem Miguel 24/08; telemetria_ceo_diaria.py no tencent está PAUSADA desde 03/09); bots interativos Augusto/Mayra (respondem comandos, não enviam proativos; polling com NetworkError hoje).
+
+**Padrão novo vigente:** toda mensagem de sistema → assinatura `— módulo @ host` no fim. Canais: ponte central NYC (nucleo_telegram), ponte Dell (ponte_cafezinho --send), watchdog tencent.
