@@ -68,3 +68,12 @@
 - 200/50 modelos da chave nova (listing) + 402 generateContent (ambas as chaves do projeto).
 - sha8 da chave `e5d3f5e7` idêntico nos 3 cofres.
 - `git grep` pós-redação: 0 ocorrências de `AQ.Ab8RN6` e do PAT nos arquivos tratados.
+
+
+---
+
+## Adendo técnico 20/09 ~08:1x BRT (ZCode/GLM-5.3) — gate anti-segredo + auditoria sk-
+
+**Gate:** `Cerebro/Ferramentas/gate_secrets_prepush.py` (hook pre-push nos repos `Antigravity Google` e `Outros/novo livro`). Lê stdin do pre-push (`<local ref> <local sha> <remote ref> <remote sha>`), calcula base (remote_sha ou merge-base), varre `git diff --unified=0` — SÓ linhas `+`. 10 padrões (AIzaSy{33}, AQ.{40+}, sk-ant-, sk-or-v1-, sk-{20+}, ghp_/gho_{30+}, github_pat_{20+}, xai-{20+}, AKIA{16}). Allowlist regex: REDACT|…|...|exemplo|fake|fixture|dummy|placeholder|xxxx (case-insens) + path exclusion (test_contracts.py). Saída: exit 1 + arquivo + tipo, nunca valor. Testes: limpo=0, isca sk-=1, isca AIzaSy=1; pegadinha encontrada: isca contendo a palavra FAKE passou (allowlist) — aceito, allowlist documentada. Push real passou (24376e03) = dogfooding. GitHub push protection do repo já estava enabled mas não detectou formato AQ. — lacuna coberta localmente.
+
+**Auditoria sk- dos 3 cofres (Regra 4):** 15 chaves sk- distintas. MÉTODO ERRADO primeiro (só api.openai.com → 13 "mortas"); correto = testar no endpoint do provedor dono da variável. Resultado final: VIVAS — ddAA (OPENAI_API_KEY = "ovo-cafezinho" do painel, $55.33 acumulado, confirmada pelo Miguel como única em uso), qOoA (ZCODE_OPENAI), bef7 (DEEPSEEK_API_KEY), 9578 (DEEPSEEK_API_KEY_DSN), BD06 (KIMI_PAYGO — viva só em moonshot.ai, .cn dá 401), Czs4 (KIMI_CODE_ZCODE) e c9eh (KIMI_VISION — vivas só em kimi.com/coding), 1AAA (CLAUDE/ANTHROPIC — 200 anthropic.com), 3183 (ZCODE — 200 openrouter.ai). MORTAS (401 no endpoint correto) → renomeadas `_DEPRECADA_20260920_*` no cofre_intake.env c/ backup `.bak_pre_deprecada_deepseek_20260920`: DEEPSEEK_TEMATICOS …6690, DEEPSEEK_DS_LAURA …6907, DEEPSEEK_CAFEZINHO_CANONICO …8762 (os 2 .env.unificado não continham essas). ZMHw/7gxI/72d2 existem só em artefatos de sessão ZCode (logs/rollout/sqlite-wal) — não são cofre, sem ação. **Lição permanente:** 401 no endpoint errado ≠ chave morta; mapear variável→provedor→endpoint antes de depreciar.

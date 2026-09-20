@@ -21,6 +21,7 @@
 > **Ciclo atual:** aberto em **2026-09-15 18:16 BRT** (renovação executada — o ciclo anterior estava vencido desde 31/08, com 39 linhas ✅ acumuladas; histórico completo em `MONITORAMENTO_DE_TRABALHO_2026_09_15_1815.md`).
 
 ## 📌 Em andamento AGORA
+| ZM-GATE-SCAN-20260920 · 20/09 08:23 | 20/09 08:23 | ✅ |
 | ZM-GCP-CHAVE-20260919 · 19/09 17:05 | 19/09 17:19 | ✅ |
 | ZM-FIOS-GLMPREP-20260919 · 19/09 16:51 | 19/09 17:08 | ✅ |
 | ZM-GSN-BRICS-EXEC-20260919 · ✅ +adendo 17:04: ritmo byline curado nos 2 portais (ordem Miguel) — GSN commit 3398fa6 c/ byline em parágrafo próprio + Cafezinho 272244 byline em <em>; provado ao vivo nos 2; detalhe no §5 do fórum GSN | 19/09 17:04 | ⏳ |
