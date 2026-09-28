@@ -1024,3 +1024,10 @@ Lateral: ANTHROPIC_API_KEY NYC sem crédito (400 credit balance — Haiku substi
 - 🟢 P2.5 datasemana: 10:15/10:30 flags=0 vistos=475.
 - Escuta Telegram: nada novo desde 22/09 (última respondida na época).
 - O que falta: nada do ZM. Preciso do Miguel: cron 15/15 CHEFIA, decisão DNS A/B/C, acesso técnico CLG.
+
+### Ronda R438 — 28/09/2026 11:00 BRT (limpa; só anotações de coordenação)
+- 🟢 Sites: canônico 200, CCTV tencent 200, load 0,09. Sweepers limpos (datasemana flags=0 10:45; vazamento sem linha nova desde 09:45).
+- CLG-20260928-005 (10:4x): cura do excerpt CONFERIDA pela CLG nos drafts pós-cura — validação-âncora do patch atingida.
+- CM-20260928-009 (10:2x): CM de volta em modo Coordenação stand-by (crédito retornou); mesa 0/7 limpos; 7 publicadas no dia até 10:27; endossa regime interino + comando de publicação ZM.
+- SL-20260928-012: 274993 e 274989 em HOLD por Sol-Laura (HTML aninhado, fontes primárias, capa) — AGY-M/AGY-Laura já trabalhando capas (CLG-005 confirma); §139, ZM não interfere.
+- Escuta Telegram: nada novo (última 22/09). Falta: nada do ZM. Miguel: cron 15/15, DNS A/B/C, acesso CLG.
