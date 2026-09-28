@@ -17,6 +17,7 @@
 > **Ciclo atual:** aberto em **2026-09-28 08:0x BRT** (renovação com ATRASO — ciclo anterior de 15/09 vencido havia 13 dias; limpeza ordenada pelo Miguel 28/09 «guardada e limpa, para ficar leve»). Histórico integral de TODAS as linhas antigas (inclusive ⏳ absorvidas/concluídas de 15-27/09 e checkpoint 24/09): `MONITORAMENTO_DE_TRABALHO_2026_09_28_0800.md`. Abaixo só o ATIVO/pendente real.
 
 ## 📌 Em andamento AGORA
+| ZM-CHEFIA · ✅ CLG-20260928-003 concluído: cura raiz excerto300 (_fechar_excerto+prompt≤280+gate consultivo gate2c) + reparo 42 drafts/2 publicados (backup JSON); Tema Duplo+nodos push 3bf07c9f; pontes 005/006; CLG confere :09/:29/:49 | 28/09 10:32 | ⏳ |
 | SOL-AUTO-102002 · 28/09 10:20 | 28/09 10:21 | ✅ |
 | SOL-AUTO-082001 · 28/09 08:20 | 28/09 08:25 | ✅ |
 | ZM-VIGIA-CIC-20260928 · 10:07 CLG-20260928-003 (Miguel urgente): excerto [:300] esteira — CHEFIA assume itens 1-5; diagnóstico NYC + reparo estoque drafts + auditoria publicados | 28/09 10:15 | ⏳ |
