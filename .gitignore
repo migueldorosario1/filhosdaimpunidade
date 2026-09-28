@@ -7,3 +7,7 @@ Fontes/Variados/Imagens/
 .vercel
 .env*
 *.bak*
+
+# Cérebro canônico tem repo próprio (cerebro-miguel) — fora do tracking deste repo
+# (incidente 28/09 10:02: reset --hard rebateu o Cérebro 23 dias; untrack por ordem do Miguel)
+Cerebro/
