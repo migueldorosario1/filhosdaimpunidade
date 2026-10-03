@@ -308,6 +308,9 @@
           <div class="flex items-center gap-2">
             <span class="text-xs uppercase tracking-widest font-mono text-amber-950 dark:text-amber-400 font-extrabold">Filhos da Impunidade</span>
             <span id="volume-badge-tag" class="text-xs bg-amber-200 text-amber-950 border-2 border-amber-400 dark:bg-amber-400/20 dark:text-amber-300 dark:border-amber-400/40 px-2.5 py-0.5 rounded-md font-mono font-black shadow-sm">Vol. 1 V8 (23 Caps)</span>
+            <button id="provenance-status-badge" type="button" onclick="openProvenanceModal()" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md border text-[10px] font-mono font-black shadow-sm transition cursor-pointer" title="Ver a origem e o estado editorial deste texto">
+              <span id="provenance-status-icon" aria-hidden="true">✅</span><span id="provenance-status-label">Publicado</span>
+            </button>
           </div>
           <h1 id="volume-title-display" class="text-lg md:text-xl font-black font-display tracking-tight text-slate-900 dark:text-slate-100">Vol. 1: O Foragido (Eduardo)</h1>
         </div>
@@ -3628,8 +3631,203 @@ Solução: ative cookies/dados de sites para este endereço e tente de novo. A e
       if (warnModal) warnModal.classList.add('hidden');
     }
 
+    // ========================================================================
+    // PROVENIÊNCIA EDITORIAL — GitHub/main vs. estado local do navegador
+    // ========================================================================
+    const PROVENANCE_PUBLISHED_REVISIONS_KEY = 'fdi_published_revisions_v1';
+
+    function getPublishedRevisionKeys(vol, chapKey) {
+      try {
+        const raw = localStorage.getItem(PROVENANCE_PUBLISHED_REVISIONS_KEY);
+        const index = raw ? JSON.parse(raw) : {};
+        const keys = index && index[vol] && index[vol][chapKey];
+        return Array.isArray(keys) ? keys : [];
+      } catch (e) { return []; }
+    }
+
+    function recordPublishedRevisionIndex(vol, revData) {
+      try {
+        const raw = localStorage.getItem(PROVENANCE_PUBLISHED_REVISIONS_KEY);
+        const index = raw ? JSON.parse(raw) : {};
+        index[vol] = {};
+        Object.keys(revData || {}).forEach(chapKey => {
+          const chapterRevs = revData[chapKey];
+          index[vol][chapKey] = chapterRevs && typeof chapterRevs === 'object' ? Object.keys(chapterRevs) : [];
+        });
+        safeLocalSet(PROVENANCE_PUBLISHED_REVISIONS_KEY, JSON.stringify(index));
+      } catch (e) {}
+    }
+
+    function getProvenanceState() {
+      const isFullBook = currentChapterKey === 'full_book';
+      const dataset = getCurrentVolumeDataset();
+      const chapter = isFullBook ? null : dataset[currentChapterKey];
+      const canonicalKey = isFullBook ? null : getCanonicalVersionKey(currentChapterKey);
+      const revs = isFullBook ? {} : getSavedRevisions(currentChapterKey);
+      const activeRevision = (!isFullBook && currentVersionKey !== 'oficial') ? revs[currentVersionKey] : null;
+      const localSignals = [];
+      let hasCanonicalOverride = false;
+      let hasLocalRevision = false;
+
+      if (isFullBook) {
+        const fullEdit = localStorage.getItem('miguel_fullbook_manual_edit_' + currentVolume);
+        if (fullEdit && fullEdit.trim()) localSignals.push('edição manual do livro inteiro');
+        Object.keys(dataset).forEach(k => {
+          const ck = getCanonicalVersionKey(k);
+          const persistent = localStorage.getItem('miguel_book_persistent_content_' + currentVolume + '_' + k);
+          if (ck && ck !== 'oficial') hasCanonicalOverride = true;
+          if (persistent && persistent.trim()) hasCanonicalOverride = true;
+        });
+        if (fullEdit && fullEdit.trim()) hasCanonicalOverride = true;
+        const kind = hasCanonicalOverride ? 'divergent' : 'published';
+        return {
+          kind,
+          icon: kind === 'divergent' ? '⚠️' : '✅',
+          label: kind === 'divergent' ? 'Divergente' : 'Publicado',
+          title: 'Proveniência do livro inteiro',
+          chapterLabel: 'Livro inteiro compilado',
+          activeLabel: 'Compilação canônica dinâmica',
+          canonicalLabel: hasCanonicalOverride ? 'Há capítulos com estado canônico local' : 'Compilação a partir do GitHub/main',
+          localSignals: localSignals.length ? localSignals : ['nenhum estado local detectado'],
+          message: kind === 'divergent'
+            ? 'A compilação inclui estado salvo neste navegador. Ela não representa necessariamente o conteúdo publicado no GitHub/main.'
+            : 'A compilação é gerada a partir do conteúdo publicado e das versões canônicas disponíveis neste navegador.'
+        };
+      }
+
+      const persistentKey = 'miguel_book_persistent_content_' + currentVolume + '_' + currentChapterKey;
+      const persistent = localStorage.getItem(persistentKey);
+      if (persistent && persistent.trim()) {
+        hasCanonicalOverride = true;
+        localSignals.push('texto editado salvo neste navegador');
+      }
+      if (canonicalKey && canonicalKey !== 'oficial') {
+        hasCanonicalOverride = true;
+        localSignals.push('ponteiro canônico local: ' + canonicalKey);
+      }
+      const publishedRevisionKeys = getPublishedRevisionKeys(currentVolume, currentChapterKey);
+      const isCurrentRevisionPublished = currentVersionKey !== 'oficial' && publishedRevisionKeys.includes(currentVersionKey);
+      if (!isFullBook && currentVersionKey !== 'oficial' && !isCurrentRevisionPublished) {
+        hasLocalRevision = true;
+        localSignals.push('versão ativa: ' + currentVersionKey);
+      }
+      const draftKey = storageKeyVol('miguel_book_draft_revision', currentChapterKey);
+      if (localStorage.getItem(draftKey)) {
+        hasLocalRevision = true;
+        localSignals.push('rascunho não gravado');
+      }
+
+      const kind = hasCanonicalOverride ? 'divergent' : (hasLocalRevision ? 'local' : 'published');
+      const activeLabel = currentVersionKey === 'oficial'
+        ? ((chapter && chapter.versionTag) || 'Oficial')
+        : ((activeRevision && (activeRevision.versionTag || activeRevision.title)) || currentVersionKey);
+      const canonicalLabel = canonicalKey === 'oficial'
+        ? 'Oficial publicada'
+        : ('Canônica local: ' + (canonicalKey || 'não identificada'));
+      let localDate = '';
+      if (activeRevision && !isCurrentRevisionPublished) localDate = activeRevision.createdAt || activeRevision.timestamp || activeRevision.date || '';
+      if (localDate && /^\d{4}-\d{2}-\d{2}$/.test(localDate)) localDate = 'registrada em ' + localDate;
+
+      return {
+        kind,
+        icon: kind === 'divergent' ? '⚠️' : (kind === 'local' ? '✎' : '✅'),
+        label: kind === 'divergent' ? 'Divergente' : (kind === 'local' ? 'R# local' : 'Publicado'),
+        title: 'Proveniência editorial do capítulo',
+        chapterLabel: (chapter && chapter.title) || currentChapterKey,
+        activeLabel,
+        canonicalLabel,
+        localSignals: localSignals.length ? localSignals : ['nenhum estado local detectado'],
+        localDate: localDate || 'não disponível',
+        message: kind === 'divergent'
+          ? 'O navegador está exibindo um estado canônico local que pode divergir do conteúdo publicado no GitHub/main.'
+          : (kind === 'local'
+            ? 'A versão exibida existe apenas como revisão/rascunho local até ser integrada ao repositório canônico.'
+            : 'O texto exibido corresponde à versão publicada no GitHub/main e disponibilizada pela Vercel.')
+      };
+    }
+
+    function getProvenanceTone(kind) {
+      return kind === 'divergent'
+        ? 'bg-rose-100 text-rose-900 border-rose-300 dark:bg-rose-900/40 dark:text-rose-200 dark:border-rose-700'
+        : (kind === 'local'
+          ? 'bg-amber-100 text-amber-950 border-amber-300 dark:bg-amber-900/40 dark:text-amber-200 dark:border-amber-700'
+          : 'bg-emerald-100 text-emerald-900 border-emerald-300 dark:bg-emerald-900/40 dark:text-emerald-200 dark:border-emerald-700');
+    }
+
+    function renderProvenanceStatus() {
+      const badge = document.getElementById('provenance-status-badge');
+      const icon = document.getElementById('provenance-status-icon');
+      const label = document.getElementById('provenance-status-label');
+      if (!badge || !icon || !label) return;
+      try {
+        const state = getProvenanceState();
+        badge.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md border text-[10px] font-mono font-black shadow-sm transition cursor-pointer ' + getProvenanceTone(state.kind);
+        icon.textContent = state.icon;
+        label.textContent = state.label;
+        badge.title = state.message + ' Clique para ver os detalhes.';
+      } catch (e) {
+        badge.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md border text-[10px] font-mono font-black shadow-sm transition cursor-pointer bg-slate-100 text-slate-700 border-slate-300';
+        icon.textContent = '◌';
+        label.textContent = 'Origem';
+        badge.title = 'Não foi possível calcular a proveniência agora.';
+      }
+    }
+
+    function openProvenanceModal() {
+      const modal = document.getElementById('modal-provenance');
+      const content = document.getElementById('provenance-modal-content');
+      if (!modal || !content) return;
+      const state = getProvenanceState();
+      const safe = s => (typeof fdiEsc === 'function' ? fdiEsc(String(s == null ? '' : s)) : String(s == null ? '' : s));
+      const tone = getProvenanceTone(state.kind);
+      content.innerHTML = `
+        <div class="flex items-start gap-3 p-4 rounded-2xl border ${tone}">
+          <span class="text-2xl" aria-hidden="true">${safe(state.icon)}</span>
+          <div>
+            <div class="text-[10px] uppercase tracking-wider font-mono font-black opacity-75">Estado detectado</div>
+            <div class="text-lg font-black">${safe(state.label)}</div>
+            <p class="mt-1 text-xs leading-relaxed font-semibold">${safe(state.message)}</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-[10px] uppercase tracking-wider font-mono font-black text-slate-500">Texto / capítulo</div>
+            <div class="mt-1 text-sm font-bold text-slate-900">${safe(state.chapterLabel)}</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-[10px] uppercase tracking-wider font-mono font-black text-slate-500">Origem publicada</div>
+            <div class="mt-1 text-sm font-bold text-slate-900">GitHub/main → Vercel</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-[10px] uppercase tracking-wider font-mono font-black text-slate-500">Versão ativa</div>
+            <div class="mt-1 text-sm font-bold text-slate-900">${safe(state.activeLabel)}</div>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-[10px] uppercase tracking-wider font-mono font-black text-slate-500">Referência canônica</div>
+            <div class="mt-1 text-sm font-bold text-slate-900">${safe(state.canonicalLabel)}</div>
+          </div>
+        </div>
+        <div class="mt-4 p-4 rounded-2xl bg-white border border-slate-200">
+          <div class="text-[10px] uppercase tracking-wider font-mono font-black text-slate-500">Sinais locais encontrados</div>
+          <ul class="mt-2 space-y-1 text-xs font-semibold text-slate-700">${state.localSignals.map(s => '<li>• ' + safe(s) + '</li>').join('')}</ul>
+          <div class="mt-3 text-[11px] text-slate-500 font-semibold">Registro local: ${safe(state.localDate || 'não aplicável')}</div>
+        </div>
+        <div class="mt-4 p-3 rounded-xl bg-sky-50 border border-sky-200 text-xs text-sky-950 leading-relaxed font-semibold">
+          <strong>Próximo passo:</strong> se o estado for local ou divergente, exporte a revisão para a ponte ou abra uma branch <code>manus/&lt;tema&gt;</code>. O selo é informativo e não publica nada automaticamente.
+        </div>
+      `;
+      modal.classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function closeProvenanceModal() {
+      const modal = document.getElementById('modal-provenance');
+      if (modal) modal.classList.add('hidden');
+    }
+
     function renderMetrics() {
       const dataset = getCurrentVolumeDataset();
+      renderProvenanceStatus();
       const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
       if (currentChapterKey === 'full_book') {
         const fullData = getCompiledFullBookData();
@@ -8520,6 +8718,7 @@ Isso descarta apenas as edições da sessão atual (rascunho em cache) e volta a
         const resRev = await fetch('./revisions.json?t=' + Date.now());
         if (resRev.ok) {
           const revData = await resRev.json();
+          recordPublishedRevisionIndex(currentVolume, revData);
           Object.keys(revData).forEach(chapKey => {
             const localRevs = getSavedRevisions(chapKey);
             const merged = { ...revData[chapKey], ...localRevs };
@@ -8745,5 +8944,23 @@ Isso descarta apenas as edições da sessão atual (rascunho em cache) e volta a
       syncWithGitHubRepository();
     });
   </script>
+  <!-- PROVENIENCE MODAL: explica a diferença entre GitHub/main e estado local -->
+  <div id="modal-provenance" class="hidden fixed inset-0 z-[100] bg-slate-950/70 backdrop-blur-sm p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="provenance-modal-title">
+    <div class="w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white text-slate-900 border-2 border-slate-300 shadow-2xl">
+      <div class="flex items-start justify-between gap-4 p-5 border-b border-slate-200 bg-slate-50 rounded-t-3xl">
+        <div>
+          <div class="text-[10px] uppercase tracking-[0.18em] font-mono font-black text-slate-500">Transparência do texto</div>
+          <h2 id="provenance-modal-title" class="mt-1 text-xl font-black font-display">Proveniência editorial</h2>
+          <p class="mt-1 text-xs text-slate-600 font-semibold">O selo informa o estado deste navegador; o cânone do projeto continua no GitHub.</p>
+        </div>
+        <button type="button" onclick="closeProvenanceModal()" class="shrink-0 px-3 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-black cursor-pointer" aria-label="Fechar proveniência">✕</button>
+      </div>
+      <div id="provenance-modal-content" class="p-5"></div>
+      <div class="flex justify-end gap-2 px-5 pb-5">
+        <button type="button" onclick="closeProvenanceModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-black cursor-pointer">Fechar</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
